@@ -1,0 +1,2798 @@
+/* =============================================================================
+   Base layer — element defaults and accessibility behaviour.
+   Everything here is deliberate; there are no cosmetic resets beyond
+   Tailwind Preflight.
+   ========================================================================== */
+
+@layer base {
+  /* Text-size preference control (GIGW, architecture §11.2).
+     Scaling the root font size means the entire rem-based type and spacing
+     scale moves together, rather than only body copy — which is what users
+     of this control actually want. */
+  :root {
+    font-size: 100%;
+    /*
+     * Total sticky header height, used by scroll-padding-top so an anchored
+     * heading is not hidden behind it. Mobile omits the primary nav row.
+     */
+    --header-height: 7rem;
+  }
+  @media (min-width: 1024px) {
+    :root {
+      --header-height: 10.5rem;
+    }
+  }
+  :root[data-text-size='large'] {
+    font-size: 112.5%;
+  }
+  :root[data-text-size='x-large'] {
+    font-size: 125%;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Anchored headings clear the sticky header instead of hiding beneath it. */
+    scroll-padding-top: var(--header-height, 6rem);
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    /* Slightly open tracking at body size reads as considered rather than dense. */
+    letter-spacing: 0.005em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Headings default to the serif display face and tighten as they grow.
+     Size is applied per-use via the Heading primitive (Phase 1), so semantic
+     level stays decoupled from visual weight. */
+  /*
+   * Headings carry the serif face and their typographic treatment, but
+   * deliberately NOT a colour.
+   *
+   * Colour is a property of the surface, not of the heading level. Hard-setting
+   * `color: ink-strong` here means every heading placed on a dark surface
+   * renders near-black on navy — which is exactly what happened to the footer
+   * before this comment existed. Letting colour inherit means `text-ink-inverse`
+   * on a section cascades correctly to raw headings, and the `Heading` primitive
+   * sets the colour explicitly for everything else.
+   */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Focus: visible, generous, and blue. Never green — the accent measures
+     1.74:1 against white and cannot serve as a focus indicator. */
+  :focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+  /* Only suppress the default ring where :focus-visible is supported, so
+     keyboard users never lose the indicator. */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Hairline dividers inherit the semantic border token rather than a raw grey. */
+  hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Images never overflow their container or contribute unexpected CLS. */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Honour the platform's reduced-motion preference completely.
+     The architecture calls for subtle motion; "subtle" includes "absent when
+     the user has asked for that". */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Skip link — visually hidden until focused, then unmistakable.
+     Required by GIGW and by WCAG 2.4.1 Bypass Blocks. */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-brand);
+    color: var(--color-ink-inverse);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+  }
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+  }
+}
+
+@layer components {
+  /**
+   * Controls that only work with JavaScript. Hidden until the pre-paint script
+   * in features/preferences stamps `data-js` on <html>, so a no-JS visitor is
+   * never offered a control that cannot function — and because the script runs
+   * before first paint, there is no flash and no layout shift for anyone else.
+   */
+  /*
+   * Only ever *hides*; never forces a display value.
+   *
+   * The obvious formulation — `.js-only { display: none }` plus
+   * `:root[data-js] .js-only { display: flex }` — is wrong, and wrong in a way
+   * that is invisible on a desktop screen. That second rule has specificity
+   * (0,2,0) and so beats every Tailwind display utility (0,1,0), including
+   * `hidden` and responsive variants like `md:flex`. The preference controls,
+   * marked `hidden md:flex`, therefore rendered at every width — pushing the
+   * menu button off-screen on a phone and forcing the whole page into
+   * horizontal overflow, which is a WCAG 1.4.10 reflow failure.
+   *
+   * Inverting it leaves responsive visibility entirely to the utility classes
+   * and confines this rule to the one thing it is for.
+   */
+  :root:not([data-js]) .js-only {
+    display: none;
+  }
+}
+
+@layer components {
+  /**
+   * Mega-menu reveal.
+   *
+   * Two coordinated animations: the panel itself, then its columns staggered
+   * behind it. The effect is the panel unfolding rather than snapping — the
+   * "gentle reveal" the brief asks for, at a scale nobody consciously notices.
+   *
+   * Driven by `data-open` rather than a class applied at mount, so the
+   * animation replays every time the panel opens. The panel stays in the DOM
+   * throughout; only the attribute changes, which is enough for the newly
+   * matching rules to start their animations.
+   *
+   * Transform and opacity only — animating height would force layout on every
+   * frame, and the panel is absolutely positioned so it contributes nothing to
+   * CLS either way.
+   */
+  @keyframes panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes column-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    [data-mega-panel][data-open='true'] {
+      animation: panel-in var(--duration-base) var(--ease-out-soft) both;
+    }
+
+    /* Columns follow the panel, each ~70ms behind the last. The total for a
+       four-column panel is 180 + 210 + 240 = well under half a second, which
+       keeps it feeling immediate rather than choreographed. */
+    [data-mega-panel][data-open='true'] .mega-column {
+      animation: column-in 240ms var(--ease-out-soft) both;
+      animation-delay: calc(120ms + var(--stagger, 0) * 70ms);
+    }
+  }
+}
+
+@layer components {
+  /**
+   * Mobile navigation sheet.
+   *
+   * A native <details> that becomes a full-height panel when open. Doing the
+   * positioning in CSS rather than JavaScript is what lets the whole navigation
+   * work before hydration and with scripting disabled — the browser handles the
+   * open/close state and these rules handle the presentation.
+   */
+  .mobile-nav > summary {
+    /* Firefox needs both to suppress the default disclosure triangle. */
+    display: inline-flex;
+    list-style: none;
+  }
+  /*
+   * These rules own `display` outright — the markup must not also carry a
+   * Tailwind display utility.
+   *
+   * Tailwind's `utilities` layer is ordered after `components`, so a utility
+   * wins over anything here regardless of specificity. An `inline-flex` class on
+   * these spans therefore defeats `display: none` and both the open and closed
+   * icons render at once. This has now bitten three separate controls; when a
+   * component-layer rule toggles visibility, it must set every display value
+   * itself.
+   */
+  .mobile-nav .mobile-nav-closed {
+    display: inline-flex;
+  }
+  .mobile-nav .mobile-nav-open {
+    display: none;
+  }
+  .mobile-nav[open] .mobile-nav-closed {
+    display: none;
+  }
+  .mobile-nav[open] .mobile-nav-open {
+    display: inline-flex;
+  }
+
+  .mobile-nav-sheet {
+    position: fixed;
+    /* Sits below the utility row, which is the sheet's own close affordance. */
+    inset: 4rem 0 0 0;
+    z-index: 40;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .mobile-nav[open] .mobile-nav-sheet {
+      animation: panel-in 180ms var(--ease-out-soft) both;
+    }
+  }
+}
+
+@layer components {
+  /**
+   * Notices ticker (Layer 3 of the header).
+   *
+   * Entirely CSS — including the pause control, which is a checkbox reached by a
+   * sibling combinator. That matters: a JavaScript pause button would leave the
+   * ticker moving and unstoppable between first paint and hydration, which is
+   * exactly the window in which a WCAG 2.2.2 control has to work.
+   */
+  .notice-marquee {
+    overflow: hidden;
+  }
+
+  .notice-track {
+    display: flex;
+    width: max-content;
+    /* Translating exactly -50% lands the duplicate copy where the first began,
+       so the loop has no visible seam. */
+    animation: notice-scroll var(--notice-duration, 48s) linear infinite;
+  }
+
+  /* Never make someone chase a moving link. */
+  .notice-marquee:hover .notice-track,
+  .notice-marquee:focus-within .notice-track {
+    animation-play-state: paused;
+  }
+
+  /* The explicit control required by WCAG 2.2.2. */
+  .notice-pause:checked ~ .notice-marquee .notice-track {
+    animation-play-state: paused;
+  }
+
+  /* The label swaps between Pause and Play without any script. */
+  /* Same ownership rule as the mobile-nav icons above: no display utilities on
+     these spans, or both states render simultaneously. */
+  .notice-when-running {
+    display: inline-flex;
+    align-items: center;
+  }
+  .notice-when-paused {
+    display: none;
+  }
+  .notice-pause:checked ~ .notice-pause-label .notice-when-running {
+    display: none;
+  }
+  .notice-pause:checked ~ .notice-pause-label .notice-when-paused {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* The input is visually hidden but still focusable, so surface its focus
+     ring on the label the user can actually see. */
+  .notice-pause:focus-visible ~ .notice-pause-label {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  @keyframes notice-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /**
+   * Reduced motion: no animation at all. The strip becomes an ordinary
+   * horizontally-scrollable list, and the duplicate copy is removed so the
+   * content is not repeated to someone reading it statically.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    .notice-track {
+      animation: none;
+      width: auto;
+    }
+    .notice-marquee {
+      overflow-x: auto;
+    }
+  }
+}
+
+@layer components {
+  /**
+   * Hero scrim.
+   *
+   * Lives here rather than as inline styles so the raw colour values stay in the
+   * styles layer, and so the breakpoint behaviour is expressible at all.
+   *
+   * The opacity is derived, not chosen by eye. Solving for the worst case — a
+   * pure-white pixel underneath — white text over a brand-950 scrim needs alpha
+   * **0.615** for AA (4.5:1) and 0.750 for AAA (7:1).
+   *
+   * That worst case is not hypothetical here. Sampling the actual video's pixels
+   * in the headline's bounding box across its whole loop, the region behind the
+   * text reaches luminance 1.000 — blown-out sky — for roughly the first four
+   * seconds of thirteen. So 0.615 is a genuine floor, not a safety margin, and
+   * every stop that sits under text is set at or above **0.62**.
+   *
+   * ## Why it is no heavier than that
+   *
+   * An earlier version ran the plateau at 0.94 and held 0.78 out to 66%. That
+   * was roughly a third more opacity than the contrast maths asks for, and the
+   * cost was the video: at 0.94 there is essentially nothing to see behind the
+   * headline, which defeats the point of having motion there at all. The stops
+   * below are the minimum that keeps the guarantee.
+   *
+   * ## Where the falloff starts
+   *
+   * Measured, not estimated: at 1440 the text column occupies x 128–802, i.e.
+   * **8.9% to 55.7%** of the viewport. The plateau therefore holds to 58% — past
+   * the last glyph — and only then releases.
+   *
+   * It can release hard, because the spotlight card that occupies the right side
+   * carries its own `rgb(8 35 77 / 0.75)` tint. Over a pure-white frame that
+   * alone measures 7.0:1, so the card does not need the scrim's help and the
+   * photograph is allowed through behind it.
+   *
+   * Below `lg` the text column spans almost the full width, so the wash stays
+   * uniform and sits just above the floor.
+   *
+   * The vertical layer only ever *adds* opacity, so it cannot undercut the
+   * guarantee; it exists to seat the composition top and bottom.
+   */
+  .hero-scrim {
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgb(8 35 77 / 0.3) 0%,
+        rgb(8 35 77 / 0.12) 45%,
+        rgb(8 35 77 / 0.34) 100%
+      ),
+      linear-gradient(rgb(8 35 77 / 0.64), rgb(8 35 77 / 0.64));
+  }
+
+  @media (min-width: 1024px) {
+    .hero-scrim {
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgb(8 35 77 / 0.3) 0%,
+          rgb(8 35 77 / 0) 40%,
+          rgb(8 35 77 / 0.4) 100%
+        ),
+        linear-gradient(
+          to right,
+          rgb(8 35 77 / 0.68) 0%,
+          rgb(8 35 77 / 0.66) 40%,
+          rgb(8 35 77 / 0.63) 58%,
+          rgb(8 35 77 / 0.3) 74%,
+          rgb(8 35 77 / 0.1) 88%,
+          rgb(8 35 77 / 0.04) 100%
+        );
+    }
+  }
+
+  /**
+   * Statement-of-purpose band.
+   *
+   * Flat navy across a full-bleed band reads as a coloured rectangle. Two very
+   * wide, very soft radial washes give it depth instead — a cool one rising
+   * from the left, and a whisper of the accent green at the right, so the
+   * surface has a direction of light rather than being a fill.
+   *
+   * The ellipses are wide and shallow (60rem × 16rem) because the band is now
+   * short. Sized for the tall version they were 45rem high, which on a ~14rem
+   * band put both centres far outside it — all that reached the surface was a
+   * flat slice of the falloff, which is to say no gradient at all.
+   *
+   * Both are far too faint to affect contrast: the lighter of the two is
+   * brand-700 at 0.30 over brand-950, which lands around 13:1 against white
+   * text where the floor is 4.5.
+   *
+   * Raw values rather than tokens because these need alpha and a token cannot
+   * carry it — the same reason `.hero-scrim` above is written this way.
+   */
+  .purpose-band {
+    background-color: var(--color-surface-inverse);
+    background-image:
+      radial-gradient(60rem 16rem at 8% 50%, rgb(35 95 187 / 0.3), transparent 70%),
+      radial-gradient(45rem 14rem at 100% 100%, rgb(188 207 21 / 0.1), transparent 65%);
+  }
+
+  /*
+   * High contrast trades the depth for certainty: the surface becomes pure
+   * black and every wash is removed, so nothing sits between the text and its
+   * background.
+   */
+  :root[data-contrast='high'] .purpose-band {
+    background-image: none;
+  }
+}
+
+@layer components {
+  /**
+   * Hero spotlight card.
+   *
+   * The progress bar is the point: an auto-advancing carousel that gives no
+   * sign of when it will move is unsettling to read, because you cannot tell
+   * whether you have time to finish the sentence. A bar that visibly drains
+   * turns the rotation from something that happens *to* the reader into
+   * something they can see coming.
+   *
+   * `scaleX` rather than `width` — animating width lays out on every frame,
+   * a transform does not.
+   */
+  @keyframes spotlight-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .spotlight-progress {
+    transform-origin: left center;
+    animation: spotlight-progress var(--spotlight-duration, 7000ms) linear both;
+  }
+
+  /* The vertical sibling, for the motto stepper's track. Same idea, rotated:
+     the segment beside the active word fills downward over the interval. */
+  @keyframes spotlight-progress-y {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  .spotlight-progress-y {
+    transform-origin: top center;
+    animation: spotlight-progress-y var(--spotlight-duration, 5000ms) linear both;
+  }
+
+  @keyframes spotlight-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /*
+   * Driven by the attribute rather than a class applied at mount, so the
+   * transition replays every time a slide becomes active.
+   */
+  @media (prefers-reduced-motion: no-preference) {
+    [data-spotlight-slide][data-active='true'] {
+      animation: spotlight-slide-in 420ms var(--ease-out-soft) both;
+    }
+  }
+}
+
+@layer components {
+  /**
+   * Frosted glass for the hero spotlight card.
+   *
+   * Conventional glassmorphism sets the surface at 10–30% opacity. Over a
+   * playing video that is unusable: measured against a blown-out frame, white
+   * body text lands at 2.1:1 at alpha 0.35 and 3.7:1 at alpha 0.55 — both below
+   * the 4.5:1 floor, and failing precisely when a bright frame passes behind.
+   *
+   * So the transparency is not what makes this read as glass. The tint sits at
+   * **0.75**, the derived AAA floor, and the glass quality comes from three
+   * things that cost nothing in contrast:
+   *
+   *   • a heavy backdrop blur, which smears the moving footage behind it
+   *   • raised saturation, so the colour behind bleeds through as tone
+   *   • a lit top edge and a faint inner highlight, which is what the eye
+   *     actually reads as "a pane of something"
+   *
+   * The result is closer to macOS vibrancy than to a translucent overlay —
+   * heavily tinted, unmistakably glass, and legible on every frame.
+   *
+   * `backdrop-filter` re-blurs its region on every frame the video paints, which
+   * is real GPU work. It is therefore applied from `md` upwards only; small
+   * screens get the same tint flat, where the effect would be least visible and
+   * most expensive.
+   */
+  .glass-card {
+    position: relative;
+    background-color: rgb(8 35 77 / 0.75);
+    border: 1px solid rgb(255 255 255 / 0.18);
+  }
+
+  /*
+   * The blur itself is applied with Tailwind's `md:backdrop-blur-xl` and
+   * `md:backdrop-saturate-150` on the element, not here. Written by hand in this
+   * layer, Lightning CSS emitted only the `-webkit-` prefixed property and
+   * dropped the standard one — so the effect silently did nothing in Chrome.
+   * The utilities generate both.
+   */
+
+  /* The lit edge. A single hairline along the top and left, brighter than the
+     border, is what sells the material — panes catch light on one side. */
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgb(255 255 255 / 0.35) 0%,
+      rgb(255 255 255 / 0.06) 38%,
+      rgb(255 255 255 / 0) 60%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* A faint sheen across the upper body, so the surface is not uniformly flat. */
+  .glass-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(160deg, rgb(255 255 255 / 0.07) 0%, rgb(255 255 255 / 0) 45%);
+    pointer-events: none;
+  }
+
+  /* Some readers ask the OS to reduce transparency; honour it by going opaque. */
+  @media (prefers-reduced-transparency: reduce) {
+    .glass-card {
+      background-color: rgb(8 35 77 / 0.97);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+  }
+}
+
+@layer components {
+  /**
+   * Scroll-linked reveals.
+   *
+   * Driven by `animation-timeline: view()` — the animation is tied to the
+   * element's own position in the scrollport, so this needs **no JavaScript at
+   * all**: no IntersectionObserver, no scroll listener, no hydration, and no
+   * jank, because it runs off the main thread.
+   *
+   * Guarded twice over, and the order matters:
+   *
+   *   1. `@supports (animation-timeline: view())` — in a browser without it, the
+   *      rules never apply and the content is simply *there*. Nothing is hidden
+   *      by default and then revealed, which is the flaw in almost every
+   *      JS-driven reveal: if the script fails, the page stays blank.
+   *   2. `prefers-reduced-motion` — content that slides in on scroll is exactly
+   *      what that preference exists to stop.
+   *
+   * `--reveal-start` staggers siblings by shifting where each animation begins
+   * along the scroll range, rather than with a time delay. Scroll-driven
+   * animations have no notion of elapsed time — they are a function of
+   * position — so a delay would do nothing.
+   */
+  @keyframes reveal-rise {
+    from {
+      opacity: 0;
+      transform: translateY(26px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes reveal-draw {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  /* The horizontal sibling of `reveal-draw`. Used for the hairlines between
+     mission commitments, which draw left-to-right as each row arrives. */
+  @keyframes reveal-draw-x {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  /* ---------------------------------------------------------------------------
+     Ranges.
+
+     ## The bug these values fix
+
+     Every range here used to *end* in `cover` units — `cover 26%`, `cover 34%`,
+     `cover 46%`. That is a fraction of the **scrollport**, not of the element,
+     and it is why a 44px button finished its reveal in a completely different
+     place from a 414px block.
+
+     `cover` runs from the element first touching the scrollport to it fully
+     leaving, so its length is `scrollport + element`. On a 1000px viewport that
+     is ~1044px for the button and ~1414px for the block. Ending at 26% meant
+     the button had to travel **271px** before it was fully opaque, by which
+     time it was still near the bottom of the screen — while the block, which is
+     414px tall, was long since comfortably in view at its own 26%.
+
+     The symptom: scroll until a short element appears, stop, and it sits there
+     at half opacity indefinitely. Measured on the "Explore all programmes"
+     button: computed opacity 0.503, painting rgb(200 215 238) where brand blue
+     is rgb(35 95 187). It was not mid-animation. It was finished being animated
+     and simply parked, because the range's end was still hundreds of pixels of
+     scrolling away.
+
+     ## The rule now
+
+     Ranges end at `entry 100%` — the moment the element is **fully inside the
+     scrollport for the first time**. That is the only completion point that
+     means the same thing at every element size: an element is done revealing
+     exactly when it has finished appearing. A 44px button takes 44px of scroll;
+     a 480px panel takes 480px. Both are opaque the instant they are whole.
+
+     `--reveal-start` keeps its stagger, now measured against the element's own
+     entry. The offset is smaller in absolute terms than it was, which is the
+     correct trade: siblings in a grid already reveal at slightly different
+     scroll positions because they sit at different heights, and the stagger is
+     seasoning rather than the effect.
+     ------------------------------------------------------------------------ */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        animation: reveal-rise linear both;
+        animation-timeline: view();
+        animation-range: entry var(--reveal-start, 4%) entry 100%;
+      }
+
+      .reveal-rule {
+        transform-origin: top center;
+        animation: reveal-draw linear both;
+        animation-timeline: view();
+        animation-range: entry 8% entry 100%;
+      }
+
+      /*
+        The horizontal rules are the exception, and they have to be.
+
+        They are 1–3px tall, so `entry 100%` is three pixels of scroll — the
+        line would not draw, it would simply be there. A hairline is the one
+        case where the element is too small to time anything against itself, so
+        these stay on `cover`. The end is 16%, not the 34% they carried before:
+        at 34% a rule needed ~350px of travel to finish, which is why the
+        hairlines between the mission commitments were routinely caught
+        half-drawn. 16% completes them roughly a fifth of the way up the
+        viewport, which is comfortably before anyone reads the row.
+      */
+      .reveal-rule-x {
+        transform-origin: left center;
+        animation: reveal-draw-x linear both;
+        animation-timeline: view();
+        animation-range: entry var(--reveal-start, 6%) cover 16%;
+      }
+
+      /* The centred sibling, for rules under a centred heading. Same animation;
+         only the origin differs, so the rule opens from its middle outward
+         rather than sliding in from one end — which is what a left-origin rule
+         looks like when the thing above it is centred. */
+      .reveal-rule-cx {
+        transform-origin: center;
+        animation: reveal-draw-x linear both;
+        animation-timeline: view();
+        animation-range: entry var(--reveal-start, 6%) cover 16%;
+      }
+    }
+  }
+
+  /**
+   * Mission commitment indices.
+   *
+   * Generated with a CSS counter rather than written into the content, because
+   * they are presentation: the same five commitments in a CMS should not carry
+   * hard-coded numbers that break the moment one is added or reordered.
+   *
+   * `decimal-leading-zero` gives 01–05. The span that carries them is
+   * `aria-hidden`, which suppresses the generated content too — the list is an
+   * `<ol>`, so a screen reader already announces position and would otherwise
+   * hear it twice.
+   */
+  .mission-list {
+    counter-reset: mission;
+  }
+  .mission-list > li {
+    counter-increment: mission;
+  }
+  .mission-index::before {
+    content: counter(mission, decimal-leading-zero);
+  }
+
+  /**
+   * The Vision panel scrim.
+   *
+   * The vision now sits on a photograph, so the wash has to guarantee contrast
+   * rather than merely darken. The text occupies the bottom of the panel, so
+   * the gradient is heaviest there and releases upward — the picture stays
+   * readable as a picture in its top half.
+   *
+   * Derived, not eyeballed, on the same basis as `.hero-scrim`: white text over
+   * brand-950 needs alpha 0.615 for AA over a pure-white pixel. Everywhere text
+   * lands this holds at 0.86 or above, which is 9.8:1 against a blown-out sky.
+   */
+  .vision-scrim {
+    background-image: linear-gradient(
+      to top,
+      rgb(8 35 77 / 0.95) 0%,
+      rgb(8 35 77 / 0.88) 38%,
+      rgb(8 35 77 / 0.6) 66%,
+      rgb(8 35 77 / 0.34) 100%
+    );
+  }
+
+  /* High contrast: the photograph becomes a texture behind near-solid black
+     rather than an image with text over it. */
+  :root[data-contrast='high'] .vision-scrim {
+    background-image: linear-gradient(to top, rgb(0 0 0 / 0.97), rgb(0 0 0 / 0.92));
+  }
+
+  /**
+   * Mission commitment cards.
+   *
+   * The hover sheen is a gradient that wipes across the card, not an opacity
+   * fade on a block colour — a flat tint appearing on hover reads as a
+   * selection state, a raking highlight reads as a surface catching light.
+   */
+  .mission-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background-image: linear-gradient(
+      110deg,
+      rgb(28 78 155 / 0.06) 0%,
+      rgb(28 78 155 / 0) 46%,
+      rgb(188 207 21 / 0.09) 100%
+    );
+    transition: opacity var(--duration-base, 240ms) ease-out;
+  }
+  .mission-card:hover::after {
+    opacity: 1;
+  }
+  :root[data-contrast='high'] .mission-card::after {
+    display: none;
+  }
+
+  /**
+   * The motto band.
+   *
+   * A light ground, not the deep navy this started on. Two consequences worth
+   * knowing, because they are not cosmetic:
+   *
+   *  1. The accent green cannot appear as **text** here at all — it measures
+   *     1.74:1 on white. On the navy version it carried the active word at
+   *     8.89:1; on light, that job passes to the brand blue and the green is
+   *     demoted to a wash it cannot damage.
+   *  2. Both tab states are now dark-on-light, so the *idle* word is real text
+   *     rather than a dimmed one. It gets a token with a measured floor rather
+   *     than an opacity.
+   *
+   * The washes are barely there — 7% blue from the upper left, 10% accent from
+   * the lower right — enough that the band is not flat white, far too little to
+   * move the contrast of anything on it. The top hairline is what separates it
+   * from the white section above; without it the two run together.
+   */
+  .motto-band {
+    background-color: var(--color-surface);
+    background-image:
+      radial-gradient(60rem 40rem at 6% -6%, rgb(28 78 155 / 0.07), transparent 62%),
+      radial-gradient(46rem 34rem at 98% 106%, rgb(188 207 21 / 0.1), transparent 60%);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* High contrast flattens tinted surfaces by policy — at that setting a subtle
+     wash is noise rather than information. */
+  :root[data-contrast='high'] .motto-band {
+    background-image: none;
+  }
+
+  /**
+   * The offset frame behind the About images.
+   *
+   * A hairline rectangle displaced down and right, so the photograph sits
+   * proud of it — an old editorial device for giving a picture weight without
+   * a drop shadow. Drawn with a pseudo-element rather than a wrapper so it adds
+   * nothing to the DOM, and `aria-hidden` by nature since pseudo-elements carry
+   * no semantics.
+   *
+   * The accent green is legal here: it is a non-informational rule (§2.5), not
+   * text and not a control.
+   */
+  .offset-frame {
+    position: relative;
+    /*
+     * `z-index: 0` is load-bearing, not tidying. It creates a stacking context,
+     * which keeps the `z-index: -1` frame below the photograph but *above* the
+     * section's own background. Without it the negative index escapes to the
+     * root stacking context and the section's white background paints straight
+     * over the frame — it renders, occupies layout, and is completely invisible.
+     */
+    z-index: 0;
+  }
+  .offset-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    translate: 1.15rem 1.15rem;
+    border: 1px solid var(--color-accent-surface);
+    border-radius: var(--radius-sm);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+@layer components {
+  /* ===========================================================================
+     Insights — student testimonials.
+
+     ## The deep blue band is gone
+
+     This section spent one pass on `--surface-inverse` with two radial washes
+     and a grain over it. It was the only dark block on an otherwise white,
+     airy page, and a dark block in the middle of a light document reads as
+     weight rather than as emphasis — it made the section look like a widget
+     dropped into the page rather than part of it.
+
+     The ground is now white with one very soft green wash. (It carried the
+     same drafting grid the Academics and Events bands used; all three grids
+     have since been removed.) Same treatment, same measure, same restraint.
+
+     One consequence worth knowing: the accent green seed is legal as a state
+     indicator on a deep field (6.45:1) and is not on white (1.74:1). Every
+     indicator that used the seed while this band was dark now uses
+     `--accent-ink`, the same green at 5.83:1.
+     ======================================================================== */
+
+  /**
+   * The ground.
+   *
+   * Two soft washes rather than flat white — a cool one from the upper left and
+   * the accent pooling lower right, the same device the motto band uses. On a
+   * section whose content is one sentence and four small faces, a completely
+   * flat ground is what makes it read as empty rather than as spacious.
+   */
+  .insights-band {
+    background-color: var(--color-surface);
+    background-image:
+      radial-gradient(
+        52rem 30rem at 12% 0%,
+        color-mix(in srgb, var(--color-brand) 7%, transparent),
+        transparent 66%
+      ),
+      radial-gradient(
+        44rem 26rem at 92% 100%,
+        color-mix(in srgb, var(--color-accent-surface) 14%, transparent),
+        transparent 64%
+      );
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* ---------------------------------------------------------------------------
+     Student testimonials — the portrait showcase.
+
+     The one section on the page not built from cards. See
+     `testimonial-showcase.tsx` for why.
+     ------------------------------------------------------------------------ */
+
+  /* Initials, where the source publishes no portrait. */
+  .testimonial-initials {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    color: var(--color-brand);
+    background-color: var(--color-brand-surface);
+  }
+
+  .testimonial-initials-lg {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    letter-spacing: -0.03em;
+  }
+
+  /**
+   * The quote stack.
+   *
+   * Every quote occupies the same grid cell, so the block is as tall as the
+   * longest one and nothing below it moves between steps. `visibility` rather
+   * than `display` on the inactive ones: a `display: none` element cannot be
+   * transitioned, and it also drops out of the height calculation, which is the
+   * whole reason they are stacked.
+   */
+  .testimonial-stack {
+    display: grid;
+  }
+
+  .testimonial-quote {
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+      opacity 500ms var(--ease-out-soft),
+      transform 500ms var(--ease-out-soft),
+      visibility 0s linear 500ms;
+  }
+
+  .testimonial-quote[data-active='true'] {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0s;
+  }
+
+  /**
+   * A face in the rail.
+   *
+   * Inactive faces are desaturated and dimmed, so the active one is the only
+   * person in colour — the rail reads as "these are the others" without needing
+   * a caption.
+   */
+  .testimonial-avatar {
+    position: relative;
+    display: block;
+    width: 3.25rem;
+    height: 3.25rem;
+    overflow: hidden;
+    border-radius: var(--radius-full);
+    background-color: var(--color-brand-surface);
+    cursor: pointer;
+    filter: grayscale(1);
+    opacity: 0.55;
+    transition:
+      filter 300ms ease,
+      opacity 300ms ease,
+      transform 300ms var(--ease-out-soft);
+  }
+
+  .testimonial-avatar:hover,
+  .testimonial-avatar:focus-visible {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  .testimonial-avatar[data-active='true'] {
+    filter: grayscale(0);
+    opacity: 1;
+    /* The ring needs room to sit outside the face without being clipped. */
+    overflow: visible;
+  }
+
+  .testimonial-avatar-image {
+    object-fit: cover;
+    border-radius: var(--radius-full);
+  }
+
+  /**
+   * The countdown ring.
+   *
+   * Circular progress on a circular avatar. Everywhere else on this page
+   * progress is a draining horizontal bar; here the shape of the object
+   * dictates the shape of the indicator, and it is the detail that stops this
+   * section reading as another carousel with a different skin.
+   *
+   * `--accent-ink`, never `--accent-surface`. The ring says which student you
+   * are reading, so it is a meaningful graphic and WCAG 1.4.11 asks 3:1 of it —
+   * the seed green manages 1.74:1 on white, its darkened sibling 5.83:1.
+   */
+  .testimonial-ring {
+    position: absolute;
+    inset: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    pointer-events: none;
+    /* Start the sweep at twelve o'clock rather than three. */
+    transform: rotate(-90deg);
+  }
+
+  .testimonial-ring circle {
+    fill: none;
+    stroke: var(--color-accent-ink);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: var(--ring);
+    stroke-dashoffset: 0;
+  }
+
+  @keyframes testimonial-ring-drain {
+    from {
+      stroke-dashoffset: var(--ring);
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .testimonial-ring-track {
+    animation: testimonial-ring-drain var(--ring-duration, 7000ms) linear both;
+  }
+
+  /* No travel and no push for anyone who asked not to have any. The crossfades
+     stay — they are how the content changes, not decoration on top of it. */
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-avatar,
+    .testimonial-avatar:hover,
+    .testimonial-quote,
+    .testimonial-quote[data-active='true'] {
+      transform: none;
+    }
+  }
+
+  :root[data-contrast='high'] .testimonial-avatar {
+    border: 1px solid var(--color-ink);
+    box-shadow: none;
+  }
+
+  :root[data-contrast='high'] .insights-band {
+    background-image: none;
+  }
+
+  /* ===========================================================================
+     The header, compacted on scroll.
+     ======================================================================== */
+
+  /**
+   * The masthead scrolls away; the navigation stays.
+   *
+   * ## Why this is a transform and not a height
+   *
+   * The obvious implementation shrinks the header — animate its height, or the
+   * masthead's padding, as the page scrolls. Two problems with that.
+   *
+   * Height is a layout property, so every frame of the scroll would run layout
+   * on a sticky element that spans the viewport. Transform is composited and
+   * costs nothing.
+   *
+   * Worse, shrinking a header in normal flow shortens the document, which
+   * changes the scroll offset, which drives the animation that shrinks the
+   * header. A percentage-based range would feed back on itself. Translating
+   * leaves the header's flow box exactly where it was — 185px, always — and
+   * only moves where it paints.
+   *
+   * ## The distance
+   *
+   * Exactly the masthead's height, so the navigation lands flush against the
+   * top of the viewport. It is `calc(2rem + 45px)` rather than a measured 77px
+   * because that is what the row is actually made of: `py-4` twice, a 44px
+   * wordmark, and the 1px rule beneath it. Change the wordmark's height in
+   * `site-header.tsx` and this has to change with it — hence the arithmetic
+   * rather than the total.
+   */
+  .site-header {
+    --masthead-height: calc(2rem + 45px);
+  }
+
+  /*
+   * `lg` and up only, and this is not a nicety.
+   *
+   * Below `lg` the navigation row does not exist — it is `hidden lg:block`, and
+   * the menu button lives in the masthead instead. Collapsing the masthead
+   * there does not compact the header, it deletes it: measured at 390px, after
+   * 600px of scrolling the header was a 41px notice ticker and the hamburger
+   * had been translated to `top: -61px`, entirely off screen. The only way to
+   * navigate the site on a phone was gone.
+   *
+   * The collapse is worth having exactly where there is a second row to fall
+   * back to, which is `lg` and above.
+   */
+  @media (min-width: 1024px) {
+    @supports (animation-timeline: scroll()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .site-header {
+          animation: header-compact linear both;
+          animation-timeline: scroll(root block);
+          /* Absolute lengths, not percentages: the range must depend on how far
+             the reader has scrolled, never on how long the document is. */
+          animation-range: 0 140px;
+        }
+
+        @keyframes header-compact {
+          to {
+            transform: translateY(calc(-1 * var(--masthead-height)));
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Without scroll-timeline support, or under reduced motion, the header simply
+   * stays at its full 185px — which is the correct failure, because nothing is
+   * hidden that was not already visible.
+   */
+
+  /**
+   * A progress-track segment.
+   *
+   * The visible bar is 3px — a hairline that drains is the whole point of the
+   * device — but a 3px pointer target is not usable, and WCAG 2.2's Target Size
+   * (Minimum) asks for 24x24 CSS pixels.
+   *
+   * ## Padding, not a pseudo-element
+   *
+   * The obvious fix is an invisible 24px band laid over the bar with
+   * `::before`. I wrote that first and hit-tested it: **zero** hittable pixels,
+   * at any offset. The segment carries `overflow: hidden` — it has to, that is
+   * what clips the draining fill to the rounded track — and `overflow: hidden`
+   * clips pseudo-elements too. The band was there, 24px tall, and cropped
+   * straight back to 3px.
+   *
+   * So the target is made of real padding on the button, cancelled by an equal
+   * negative margin so the row's layout is untouched, with the clipped track
+   * moved to an inner span. 10.5px above and below a 3px bar is exactly 24px.
+   */
+  .track-segment {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-block: 10.5px;
+    margin-block: -10.5px;
+  }
+
+  .track-segment-bar {
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-full);
+  }
+
+  /* ===========================================================================
+     404.
+     ======================================================================== */
+
+  /**
+   * The ground.
+   *
+   * The same two-wash device the motto band and the testimonials use — a cool
+   * one from the upper left, the accent pooling lower right. A page with a lot
+   * of white space in it needs the ground to have a direction of light, or the
+   * space reads as an unfinished layout rather than a composed one.
+   */
+  .notfound-band {
+    background-color: var(--color-surface);
+    background-image:
+      radial-gradient(
+        58rem 34rem at 6% -6%,
+        color-mix(in srgb, var(--color-brand) 8%, transparent),
+        transparent 64%
+      ),
+      radial-gradient(
+        44rem 28rem at 98% 104%,
+        color-mix(in srgb, var(--color-accent-surface) 12%, transparent),
+        transparent 60%
+      );
+  }
+
+  /**
+   * The ghost numeral.
+   *
+   * Absolutely positioned and `aria-hidden`, so it contributes nothing to the
+   * document and nothing to layout — it is ground, not content. At 4% of the
+   * brand blue it reads as texture behind the heading rather than as the
+   * shouted "404" a page like this usually leads with.
+   *
+   * `user-select: none` because selecting the page's text should not drag a
+   * decorative numeral along with it.
+   */
+  .notfound-ghost {
+    position: absolute;
+    top: -2.5rem;
+    left: -1.5rem;
+    z-index: -1;
+    font-family: var(--font-serif);
+    font-size: clamp(12rem, 30vw, 26rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    color: color-mix(in srgb, var(--color-brand) 4%, transparent);
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /**
+   * The photograph.
+   *
+   * 4:5, which is the shape that fills a narrow column without either cropping
+   * the approach road out of the frame or running past the copy beside it.
+   */
+  .notfound-figure {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: var(--radius-2xl);
+    background-color: var(--color-surface-subtle);
+    box-shadow: var(--shadow-raised);
+  }
+
+  :root[data-contrast='high'] .notfound-band {
+    background-image: none;
+  }
+
+  /* The numeral is decoration standing behind text — at high contrast it goes,
+     for the same reason every other wash on the site does (§11.2). */
+  :root[data-contrast='high'] .notfound-ghost {
+    display: none;
+  }
+
+  /* ===========================================================================
+     Route loading screen.
+     ======================================================================== */
+
+  /**
+   * The ground.
+   *
+   * `100dvh`, not `100vh`. On a phone `vh` is the *largest* viewport height —
+   * the one you get with the browser chrome retracted — so a `100vh` panel is
+   * taller than the screen the moment the address bar is showing, and the mark
+   * meant to be centred sits low with the page scrollable. `dvh` tracks the
+   * viewport as it actually is.
+   */
+  .loading-screen {
+    /*
+     * Fixed, covering the viewport — including the header.
+     *
+     * `loading.tsx` renders *inside* `layout.tsx`, so by default it is a block
+     * in the page slot with the header above it and the footer below: measured
+     * that way, the mark sat 92px below the true centre of the screen. Fixed
+     * positioning is what makes "full screen" actually mean the screen.
+     *
+     * z-index 60 clears the sticky header's 50. That is deliberate — a
+     * full-screen loader that the navigation punches through is neither one
+     * thing nor the other.
+     */
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background-color: var(--color-surface);
+    background-image:
+      radial-gradient(
+        50rem 30rem at 50% 34%,
+        color-mix(in srgb, var(--color-brand) 8%, transparent),
+        transparent 62%
+      ),
+      radial-gradient(
+        36rem 24rem at 88% 96%,
+        color-mix(in srgb, var(--color-accent-surface) 12%, transparent),
+        transparent 60%
+      );
+  }
+
+  .loading-mark {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: clamp(15rem, 52vw, 26rem);
+    aspect-ratio: 1;
+  }
+
+  /**
+   * The lockup, and the light passing across it.
+   *
+   * The sweep is an animated `mask-position`: a narrow transparent band inside
+   * an otherwise opaque mask, travelling left to right. Because it is a mask, it
+   * modulates the artwork itself — the highlight follows the shield and the
+   * letterforms rather than being a shape drawn over them.
+   *
+   * The mask is 300% wide so the band has somewhere to travel from and to;
+   * animating `mask-position` rather than `mask-image` keeps it on the
+   * compositor.
+   */
+  .loading-mark-image {
+    position: relative;
+    z-index: 1;
+    width: 62%;
+    height: auto;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .loading-mark-image {
+      -webkit-mask-image: linear-gradient(
+        100deg,
+        #000 38%,
+        color-mix(in srgb, #000 45%, transparent) 50%,
+        #000 62%
+      );
+      mask-image: linear-gradient(
+        100deg,
+        #000 38%,
+        color-mix(in srgb, #000 45%, transparent) 50%,
+        #000 62%
+      );
+      -webkit-mask-size: 300% 100%;
+      mask-size: 300% 100%;
+      animation: loading-sweep 2.2s var(--ease-out-soft) infinite;
+    }
+  }
+
+  @keyframes loading-sweep {
+    from {
+      -webkit-mask-position: 150% 0;
+      mask-position: 150% 0;
+    }
+    to {
+      -webkit-mask-position: -50% 0;
+      mask-position: -50% 0;
+    }
+  }
+
+  /**
+   * The arc.
+   *
+   * Both circles are drawn against `pathLength="100"`, so every dash value below
+   * is a percentage of the circumference. Change the radius and nothing here
+   * needs recalculating — which is the usual way a hand-built arc breaks.
+   */
+  .loading-arc {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    /* Start the sweep at twelve o'clock rather than three. */
+    transform: rotate(-90deg);
+  }
+
+  .loading-arc-track {
+    fill: none;
+    stroke: var(--color-border);
+    stroke-width: 1.5;
+  }
+
+  .loading-arc-head {
+    fill: none;
+    stroke: var(--color-accent-ink);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    /* The resting state, and the reduced-motion state: three quarters of a
+       ring, static. Visibly a loading indicator without moving. */
+    stroke-dasharray: 75 25;
+    stroke-dashoffset: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .loading-arc-head {
+      animation: loading-arc-draw 1.6s var(--ease-out-soft) infinite;
+    }
+  }
+
+  /*
+   * The dash *length* breathes while the offset runs, so the arc grows, sweeps
+   * and retracts rather than a fixed segment going round and round. It is the
+   * difference between a loading indicator and a spinning tyre.
+   */
+  @keyframes loading-arc-draw {
+    0% {
+      stroke-dasharray: 4 96;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 62 38;
+      stroke-dashoffset: -22;
+    }
+    100% {
+      stroke-dasharray: 4 96;
+      stroke-dashoffset: -100;
+    }
+  }
+
+  /* ===========================================================================
+     Site footer.
+     ======================================================================== */
+
+  /**
+   * The ground.
+   *
+   * Deep navy with one very faint wash rising from the left, so the largest
+   * block of flat colour on the page is not literally flat. Far too weak to
+   * affect the contrast of anything on it — white on brand-950 is 15.47:1 and
+   * the wash lifts it by a fraction of a stop.
+   */
+  .footer-band {
+    background-color: var(--color-surface-inverse);
+    background-image: radial-gradient(
+      60rem 34rem at 8% 0%,
+      color-mix(in srgb, var(--color-brand) 22%, transparent),
+      transparent 62%
+    );
+  }
+
+  .footer-group-heading {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: 1.2;
+    color: var(--color-ink-inverse);
+  }
+
+  /**
+   * A footer link.
+   *
+   * 75% white on the navy is 9.6:1 — comfortably past AA, and the drop from
+   * full white is what separates a list of links from the headings above them
+   * without needing a second type size.
+   *
+   * The underline appears on hover *and* on focus. A keyboard user gets the
+   * same acknowledgement a mouse does; that is the whole of the rule.
+   */
+  .footer-link {
+    display: inline-block;
+    font-size: var(--text-sm);
+    /*
+     * 1.35, not the inherited body leading.
+     *
+     * Two columns on a phone means labels like "Leadership & Governance" wrap
+     * to two lines, and at body leading the two halves sat far enough apart to
+     * read as two separate links. Tightening the line box is what makes a
+     * wrapped label look like one item.
+     */
+    line-height: 1.35;
+    color: color-mix(in srgb, var(--color-ink-inverse) 75%, transparent);
+    transition: color 200ms ease;
+  }
+
+  .footer-link:hover,
+  .footer-link:focus-visible {
+    color: var(--color-ink-inverse);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  :root[data-contrast='high'] .footer-band {
+    background-image: none;
+  }
+
+  /* At high contrast every footer link goes to full white — the muted tier is
+     a hierarchy device, and hierarchy is what that setting trades away. */
+  :root[data-contrast='high'] .footer-link {
+    color: var(--color-ink-inverse);
+  }
+
+  /* ===========================================================================
+     Section headers.
+
+     ## Why these are classes
+
+     Six sections carried six hand-written heading strings, and they had drifted
+     into **five different sizes** — 68px, 52px, 46px, 46px, 32px, 30px — across
+     **two different colours**, ink-strong on two and brand blue on four. None of
+     that was decided; it accumulated, one section at a time, each written to
+     look right on its own.
+
+     A heading is not a per-section decision. It is the thing that tells a
+     reader "this is a new part of the same document", and it can only do that
+     if it looks the same every time. One class, used six times.
+
+     ## The scale
+
+     `clamp(1.75rem, 3.2vw, 2.75rem)` — 44px at 1440, 28px on a phone. That is
+     deliberately below where About sat: at 68px it was competing with the hero
+     rather than with its own siblings, and the page had two things claiming to
+     be the largest type on it.
+     ======================================================================== */
+
+  .section-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+    line-height: 1.06;
+    letter-spacing: -0.035em;
+    color: var(--color-brand);
+  }
+
+  /**
+   * The eyebrow above a section heading.
+   *
+   * Not every section has one — an eyebrow that repeats its heading is worse
+   * than none, which is why Events lost its "Latest events" above "Latest
+   * Events". Where one exists it is set identically: the same size, the same
+   * 0.28em tracking, the same muted ink, and the same short accent rule to its
+   * left.
+   */
+  .section-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    flex: none;
+    background-color: var(--color-accent-surface);
+  }
+
+  /**
+   * Justified body prose.
+   *
+   * Applied to running paragraphs only — never to headings, captions, chips or
+   * quotes, where justification stretches a fragment across a measure it was
+   * never meant to fill.
+   *
+   * `hyphens: auto` is not optional here. Justified text works by widening word
+   * spaces to flush both margins; without hyphenation a long word forced to the
+   * next line leaves the one above it stretched into rivers of white. Hyphens
+   * let the breaks fall inside words instead, which is what keeps the spacing
+   * even. Justification without them is the reason justified text on the web
+   * usually looks worse than ragged-right.
+   */
+  .prose-justify {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* ===========================================================================
+     The section CTA pill.
+
+     Shared by "Explore all programmes" and "View all events" — one class rather
+     than two, because they are specified identically and two copies of an
+     identical button drift apart the first time only one of them is edited.
+
+     ## Why this is not the system Button
+
+     The design system's button has no pill and no 48px size: `md` is 44px and
+     every variant is `rounded-sm` (the radius policy in theme.css is
+     deliberate). Layering `h-12 rounded-full` over `buttonClasses` would put two
+     utilities setting the same property in the same cascade layer, and which one
+     wins is then Tailwind's internal sort rather than anything readable here.
+
+     So this is a component class that owns its own geometry. It is not a licence
+     to bypass `Button` elsewhere — the per-programme "Learn more" links still
+     use `buttonClasses`, because those *are* the system's button.
+     ======================================================================== */
+
+  /**
+   * The split pill.
+   *
+   * A label and a circular arrow in one control. The pattern was already on the
+   * homepage twice — About and News each had their own inline copy, at 44px and
+   * 36px with different paddings — so this is as much a consolidation as a
+   * redesign: four secondary CTAs, one definition.
+   *
+   * ## The geometry nests exactly
+   *
+   * The button is 48px tall with a 1px border, so its content box is 46px. The
+   * circle is 46px, which makes its radius 23px and the border's inner radius
+   * 24 − 1 = 23px. The two curves are concentric rather than approximately
+   * aligned, which is the difference between a circle sitting in a pill and a
+   * circle that looks like it was measured.
+   */
+  .cta-split {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 3rem;
+    padding-inline: 1.5rem 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background-color: var(--color-surface);
+    color: var(--color-ink-strong);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+      border-color 220ms ease,
+      box-shadow 220ms ease,
+      transform 220ms ease;
+  }
+
+  /* The gap between the label and the circle. On the label rather than the
+     container, so the circle stays flush to the border. */
+  .cta-split-label {
+    padding-inline-end: 1rem;
+  }
+
+  /**
+   * The circle.
+   *
+   * Brand blue with a white arrow at rest — 10.24:1, and the element the whole
+   * pattern is recognised by.
+   */
+  .cta-split-icon {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.875rem;
+    height: 2.875rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-brand);
+    color: var(--color-ink-inverse);
+    transition:
+      background-color 220ms ease,
+      color 220ms ease;
+  }
+
+  .cta-split-arrow {
+    transition: translate 220ms ease;
+  }
+
+  /**
+   * The green underline.
+   *
+   * Runs from the label's left edge to just short of the circle, so it tracks
+   * the text rather than passing behind the arrow. `scaleX` from the left on the
+   * way in and out to the right on the way out: shrinking back the way it came
+   * would run the animation backwards, while continuing off the far edge reads
+   * as the line moving on.
+   */
+  .cta-split::after {
+    content: '';
+    position: absolute;
+    inset-inline: 1.5rem 3.5rem;
+    bottom: 0.5rem;
+    height: 1.5px;
+    background-color: var(--color-accent-surface);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 220ms var(--ease-out-soft);
+    pointer-events: none;
+  }
+
+  .cta-split:hover,
+  .cta-split:focus-visible {
+    border-color: var(--color-accent-surface);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px -8px rgb(0 0 0 / 0.14);
+  }
+
+  .cta-split:hover::after,
+  .cta-split:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  /**
+   * The circle turns green — and the arrow has to turn with it.
+   *
+   * A white arrow on `--accent-surface` measures **1.74:1**: the hover state
+   * would erase the arrow it is meant to highlight. `--ink-strong` on that same
+   * green is **8.67:1**, and it is the pairing `theme.css` names when it
+   * describes the accent as "a block background that pairs with ink-strong".
+   *
+   * So the circle takes the real XLRI green rather than a darkened stand-in,
+   * and the arrow inside it darkens instead. The green a visitor sees on hover
+   * is the brand's own.
+   */
+  .cta-split:hover .cta-split-icon,
+  .cta-split:focus-visible .cta-split-icon {
+    background-color: var(--color-accent-surface);
+    color: var(--color-ink-strong);
+  }
+
+  .cta-split:hover .cta-split-arrow,
+  .cta-split:focus-visible .cta-split-arrow {
+    translate: 3px;
+  }
+
+  /* Pressed: back down to the page, and the shadow all but gone. The label
+     colour never changes in any state, so there is one contrast figure to
+     reason about rather than three. */
+  .cta-split:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  }
+
+  /**
+   * Focus.
+   *
+   * Green, replacing the site-wide blue ring for these four buttons — the brief
+   * asks for it, and `base.css` sets that global rule with the note "Never
+   * green — the accent measures 1.74:1 against white". That objection is about
+   * the *seed*: `--accent-ink` is 5.83:1 and clears the 3:1 floor a focus
+   * indicator needs (WCAG 1.4.11).
+   *
+   * The same local exception the carousel controls already make. Delete this
+   * rule and the global blue ring returns.
+   */
+  .cta-split:focus-visible {
+    outline: 2px solid var(--color-accent-ink);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cta-split:hover,
+    .cta-split:focus-visible,
+    .cta-split:active {
+      transform: none;
+    }
+
+    .cta-split:hover .cta-split-arrow,
+    .cta-split:focus-visible .cta-split-arrow {
+      translate: none;
+    }
+
+    .cta-split::after {
+      transition: none;
+    }
+  }
+
+  :root[data-contrast='high'] .cta-split {
+    border-color: var(--color-ink);
+  }
+
+  /* ===========================================================================
+     Latest events — the card carousel.
+
+     A native scroll container rather than a transformed track. The visible card
+     count changes across breakpoints (4 / 2 / 1), which means the last valid
+     position changes too; a transform has to measure the viewport to know it,
+     and a scroll container already does. Everything responsive below is one
+     `flex-basis` per media query.
+     ======================================================================== */
+
+  /**
+   * The ground.
+   *
+   * White, as the rest of the homepage is — it was `--surface-subtle`, and a
+   * grey band under white cards gave the section a tray to sit in that no other
+   * section has. The only tint is a very wide, very faint green wash behind the
+   * cards. It is far too weak to move the contrast of anything on it.
+   */
+  .events-band {
+    background-color: var(--color-surface);
+    background-image: radial-gradient(
+      58rem 26rem at 50% 62%,
+      color-mix(in srgb, var(--color-accent-surface) 9%, transparent),
+      transparent 72%
+    );
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  :root[data-contrast='high'] .events-band {
+    background-image: none;
+  }
+
+  /**
+   * The track.
+   *
+   * `scroll-padding-inline` keeps a snapped card clear of the container edge.
+   * The scrollbar is hidden because the arrows, drag, swipe and keyboard all do
+   * the same job, and a scrollbar under a row of cards is the one detail that
+   * makes a designed section look like a file listing.
+   */
+  .events-track {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Room for the cards' hover lift and shadow, which would otherwise be
+       clipped by the scroll container's own bounds. */
+    padding-block: 0.5rem;
+    margin-block: -0.5rem;
+  }
+
+  .events-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .events-track[data-dragging='true'] {
+    scroll-behavior: auto;
+    cursor: grabbing;
+    scroll-snap-type: none;
+  }
+
+  @media (min-width: 768px) {
+    .events-track {
+      cursor: grab;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .events-track {
+      scroll-behavior: auto;
+    }
+  }
+
+  /**
+   * The card, and the whole of the responsive behaviour.
+   *
+   * One per view on a phone, two at `md`, four at `lg`. The `calc` subtracts the
+   * share of the 1.5rem gap each card is responsible for, so four cards and
+   * three gaps come to exactly the track width instead of overflowing by the
+   * gutters.
+   */
+  .events-card {
+    flex: 0 0 84%;
+    scroll-snap-align: start;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    /* Rounds the banner's top corners with the card, clips the green rule to
+       them, and stops the image's hover scale spilling past the border. */
+    overflow: hidden;
+    /* The card is a link in its entirety — see `.events-link::after`. */
+    cursor: pointer;
+    /*
+     * Three layers at increasing blur and decreasing opacity: a contact shadow
+     * that keeps the bottom edge off the page, a mid layer for body, and a wide
+     * soft one that reads as ambient light. One shadow at a big blur always
+     * looks like a drop shadow; three at different distances is how an object
+     * sits on a surface.
+     */
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.04),
+      0 5px 14px -10px rgb(0 0 0 / 0.1),
+      0 16px 32px -26px rgb(0 0 0 / 0.16);
+    transition:
+      transform 300ms ease,
+      box-shadow 300ms ease,
+      border-color 300ms ease;
+  }
+
+  /* The gaps between cards are the only part of the track left to drag by, so
+     the grab cursor belongs there rather than on the cards. */
+  @media (min-width: 768px) {
+    .events-card {
+      flex-basis: calc((100% - 2rem) / 2);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .events-card {
+      flex-basis: calc((100% - 6rem) / 4);
+    }
+  }
+
+  /**
+   * The green accent rule.
+   *
+   * 3px across the top edge, grown from the left on hover and retracted the
+   * same way when the pointer leaves — `scaleX` on a fixed bar, so nothing
+   * reflows and the whole thing stays on the compositor.
+   *
+   * `transform-origin` flips between the two states on purpose. Growing from
+   * the left and then *shrinking* to the left would run the animation backwards;
+   * shrinking to the right instead reads as the line continuing on its way out.
+   */
+  .events-card::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 3px;
+    z-index: 1;
+    background-color: var(--color-accent-surface);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 300ms var(--ease-out-soft);
+    pointer-events: none;
+  }
+
+  .events-card:hover::before,
+  .events-card:focus-within::before {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  /* Hover *or* keyboard focus — the card is a link, and a keyboard user should
+     get the same acknowledgement a mouse does. */
+  .events-card:hover,
+  .events-card:focus-within {
+    transform: translateY(-6px);
+    border-color: color-mix(in srgb, var(--color-accent-surface) 45%, transparent);
+    box-shadow:
+      0 2px 5px rgb(0 0 0 / 0.05),
+      0 10px 24px -14px rgb(0 0 0 / 0.14),
+      0 24px 48px -32px rgb(0 0 0 / 0.2);
+  }
+
+  /**
+   * The banner.
+   *
+   * A fixed 4:3 window. The source posters run from 724×1024 to 1024×720 — a
+   * portrait flyer beside a landscape photograph — so without this the cards
+   * would be six different heights and the row would not read as a set.
+   */
+  .events-media {
+    aspect-ratio: 4 / 3;
+    background-color: var(--color-surface-subtle);
+    /*
+     * An inset hairline rather than a drop shadow. The banner is clipped by the
+     * card's `overflow: hidden`, so a shadow *on* the image would be cut off at
+     * the same edge it was meant to fall past — an inset ring is the only kind
+     * of edge that survives the clip, and it does the actual job: separating a
+     * pale poster from a white card.
+     */
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-ink-strong) 4%, transparent);
+  }
+
+  .events-image {
+    transition:
+      transform 300ms ease,
+      filter 300ms ease;
+  }
+
+  .events-card:hover .events-image,
+  .events-card:focus-within .events-image {
+    transform: scale(1.04);
+    filter: brightness(1.03);
+  }
+
+  /**
+   * The title, and the card's single link.
+   *
+   * `::after` covers the entire card, which is what makes the whole card
+   * clickable. Doing it this way rather than wrapping the card in an anchor
+   * keeps one link per card whose accessible name is the event title, instead
+   * of an outer link that swallows the heading and a "Read more" that says
+   * nothing (WCAG 2.4.4).
+   *
+   * Two lines, then an ellipsis. Six titles ranging from "MAXI Mela 2026" to
+   * "X-CELERATE 2026 — The XLRI Business Leadership Conclave" would otherwise
+   * set the body of every card to the height of the longest.
+   */
+  /**
+   * Three lines, not two.
+   *
+   * At two, half the titles ended in an ellipsis — "EvolvX – XLRI's Premier
+   * Startup Conclave…", "X-CELERATE 2026 — The XLRI Business…" — which is the
+   * one thing an event card must not do. The whole card exists to say what the
+   * event *is*, and a truncated name makes that unanswerable without a click.
+   *
+   * Three lines clears every title currently published. The clamp stays as a
+   * backstop so one exceptional title cannot set the height of the whole row.
+   */
+  .events-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /**
+   * The date badge.
+   *
+   * A solid block on the poster's lower-left, not text over a gradient. The
+   * banners run from near-black (X-CELERATE) to bright yellow (MAXI Mela), and
+   * there is no scrim that keeps text legible over both — an opaque block is
+   * the only treatment that holds at every poster.
+   *
+   * The accent rule along its top edge is the same 3px the card wears on hover,
+   * which ties the badge to the card rather than making it look applied.
+   */
+  .events-datechip {
+    position: absolute;
+    /*
+     * Inset from the corner, not flush to it.
+     *
+     * Flush, the badge shares two edges with the card body directly beneath —
+     * both white — so it reads as a notch bitten out of the poster rather than
+     * an object sitting on it. Held a little clear of both edges, with its own
+     * shadow, it is unambiguously a badge.
+     */
+    bottom: 0.75rem;
+    left: 0.75rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 3.75rem;
+    padding: 0.5rem 0.625rem 0.5rem;
+    border-top: 3px solid var(--color-accent-surface);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-raised);
+    line-height: 1;
+  }
+
+  .events-datechip-day {
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    letter-spacing: -0.02em;
+    color: var(--color-brand);
+  }
+
+  .events-datechip-month {
+    margin-top: 0.25rem;
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-accent-ink);
+  }
+
+  .events-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+  }
+
+  /* The focus ring belongs on the card, not on two lines of text inside it —
+     the click target is the card, so that is what should be outlined. */
+  .events-link:focus-visible {
+    outline: none;
+  }
+
+  .events-card:focus-within {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  /**
+   * The date label.
+   *
+   * `--accent-ink`, the darkened XLRI green, not the seed. This is text — the
+   * seed measures 1.74:1 on white, and a date nobody can read is not a premium
+   * detail. `--accent-ink` is 5.83:1 and is the same green.
+   */
+  .events-date {
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent-ink);
+  }
+
+  /**
+   * "Read more".
+   *
+   * The label takes the brand blue on hover and grows a green underline from
+   * the left; the arrow moves 6px on the same curve and duration. Three things
+   * moving one distance each, on one curve, read as a single gesture rather
+   * than three effects that happen to fire together.
+   */
+  .events-more-label {
+    position: relative;
+    transition: color 300ms ease;
+  }
+
+  .events-more-label::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: -4px;
+    height: 2px;
+    background-color: var(--color-accent-surface);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 300ms var(--ease-out-soft);
+  }
+
+  .events-card:hover .events-more-label,
+  .events-card:focus-within .events-more-label {
+    color: var(--color-brand);
+  }
+
+  .events-card:hover .events-more-label::after,
+  .events-card:focus-within .events-more-label::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  .events-arrow {
+    transition: transform 300ms ease;
+  }
+
+  .events-card:hover .events-arrow,
+  .events-card:focus-within .events-arrow {
+    transform: translateX(4px);
+    color: var(--color-brand);
+  }
+
+  .events-title {
+    transition: color 300ms ease;
+  }
+
+  .events-card:hover .events-title,
+  .events-card:focus-within .events-title {
+    color: var(--color-brand);
+  }
+
+  /**
+   * Carousel controls — shared by Latest Events, Academic Programmes and the
+   * News feature card.
+   *
+   * ## Why this is one class and not three
+   *
+   * It was three. Events carried a 48px disc with a backdrop blur, a soft
+   * shadow, blue arrows and a hover that filled light blue and lifted 2px;
+   * Academics and News carried a 44px disc with a plain border, grey arrows and
+   * a hover that just recoloured the border. Same job, same page, visibly
+   * different objects — which is exactly what a reader notices even when they
+   * cannot say what is wrong.
+   *
+   * The blur went with it. `backdrop-filter` over a white section samples and
+   * blurs a white ground on every painted frame to produce white, which is real
+   * compositor work for no visible result.
+   *
+   * ## The disabled state is deliberate, not a bug
+   *
+   * At either end of a track the corresponding arrow is genuinely inert, and it
+   * says so: 40% opacity and `not-allowed`. A control that looks live and does
+   * nothing is the worse failure — the button has to look unavailable *before*
+   * it is pressed, not after.
+   */
+  .carousel-control {
+    flex: none;
+    display: inline-flex;
+    height: 2.75rem;
+    width: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background-color: var(--color-surface);
+    color: var(--color-ink-muted);
+    cursor: pointer;
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease,
+      color 250ms ease,
+      box-shadow 250ms ease,
+      transform 250ms ease;
+  }
+
+  .carousel-control:hover:not(:disabled) {
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px -8px rgb(0 0 0 / 0.16);
+  }
+
+  /**
+   * The 2px arrow travel.
+   *
+   * On the `translate` property, not `transform`. The previous button's icon
+   * carries Tailwind's `rotate-180`, which in v4 is the individual `rotate`
+   * property — a `transform` here would replace nothing but would compose in
+   * the wrong order, sliding the back arrow forwards. `translate` is its own
+   * channel and each button sets its own sign.
+   */
+  .carousel-control-arrow {
+    transition: translate 250ms ease;
+  }
+
+  .carousel-control[data-dir='next']:hover:not(:disabled) .carousel-control-arrow {
+    translate: 2px;
+  }
+
+  .carousel-control[data-dir='prev']:hover:not(:disabled) .carousel-control-arrow {
+    translate: -2px;
+  }
+
+  .carousel-control:active:not(:disabled) {
+    background-color: var(--color-brand-surface);
+    transform: translateY(0) scale(0.97);
+  }
+
+  .carousel-control:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /*
+   * `.events-cta` used to live here — a pill that filled with brand blue and
+   * turned its text white on hover. It is gone, and so is the section-specific
+   * class: the closing CTA now uses the shared `.cta-split` above, which stays
+   * white and marks hover with a green border, a green underline and a green
+   * arrow circle instead.
+   *
+   * That class serves all four secondary CTAs on the homepage — About,
+   * Academics, Events and News.
+   */
+
+  /* No travel for anyone who asked not to have any. The colour changes stay —
+     they are the part that says the card is live. The green rule and the
+     underline are scale transforms, so they resolve to their end state rather
+     than animating. */
+  @media (prefers-reduced-motion: reduce) {
+    .events-card,
+    .events-card:hover,
+    .events-card:focus-within,
+    .events-card:hover .events-image,
+    .events-card:focus-within .events-image,
+    .events-card:hover .events-arrow,
+    .events-card:focus-within .events-arrow,
+    .carousel-control:hover:not(:disabled),
+    .carousel-control:active:not(:disabled) {
+      transform: none;
+    }
+
+    .carousel-control[data-dir='next']:hover:not(:disabled) .carousel-control-arrow,
+    .carousel-control[data-dir='prev']:hover:not(:disabled) .carousel-control-arrow {
+      translate: none;
+    }
+
+    .events-card::before,
+    .events-more-label::after {
+      transition: none;
+    }
+  }
+
+  :root[data-contrast='high'] .events-card,
+  :root[data-contrast='high'] .carousel-control {
+    border-color: var(--color-ink);
+    box-shadow: none;
+  }
+
+  /* ===========================================================================
+     Academic programmes — the featured-programme showcase.
+
+     White ground, its own drafting grid, one very soft green glow behind the
+     featured photograph. (The grid used to be shared with the accreditation
+     band; that band is a plain strip now and no longer carries one.) Everything resolves to a
+     token; where a layer needs transparency the alpha is derived with
+     `color-mix()` against the token, except neutral drop shadows, which are
+     `rgb(0 0 0 / a)` exactly as `--shadow-raised` in theme.css is written.
+     ======================================================================== */
+
+  .academics-band {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /**
+   * A fact chip.
+   *
+   * A hairline pill, not a filled badge. These restate a programme's level and
+   * format; a saturated chip would give that the visual weight of a
+   * credential, which is a claim the content layer deliberately does not make.
+   */
+  .academics-chip {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    padding: 0.375rem 0.75rem;
+    font-size: var(--text-2xs);
+    line-height: 1.4;
+    color: var(--color-ink);
+    background-color: var(--color-surface);
+    transition:
+      border-color var(--duration-base) var(--ease-out-soft),
+      background-color var(--duration-base) var(--ease-out-soft);
+  }
+
+  /**
+   * The carousel viewport and track.
+   *
+   * `--per-view` is the number of cards visible, and it is a *CSS* value rather
+   * than a JavaScript one on purpose. The component writes only `--index`; the
+   * stylesheet turns that into a distance. A pixel value measured in JS cannot
+   * exist during server rendering, so the card would be laid out at one width
+   * in the HTML and jump to another a frame after hydration — which is exactly
+   * what the previous showcase did.
+   */
+  .programme-viewport {
+    --per-view: 1;
+    --gap: 1.25rem;
+    overflow: hidden;
+    /* Room for the cards' hover lift and shadow, which would otherwise be
+       clipped by `overflow: hidden`. */
+    margin: -0.75rem;
+    padding: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .programme-viewport {
+      --per-view: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .programme-viewport {
+      --per-view: 3;
+      --gap: 1.5rem;
+    }
+  }
+
+  .programme-track {
+    display: flex;
+    gap: var(--gap);
+    transform: translateX(calc(var(--index, 0) * -1 * (100% + var(--gap)) / var(--per-view)));
+    transition: transform 620ms var(--ease-out-soft);
+  }
+
+  /* Reduced motion cuts rather than glides. The arrows still work — the
+     preference is about travel, not about function. */
+  .programme-track[data-reduced='true'] {
+    transition: none;
+  }
+
+  .programme-slide {
+    flex: 0 0 calc((100% - (var(--per-view) - 1) * var(--gap)) / var(--per-view));
+    min-width: 0;
+  }
+
+  /**
+   * A programme card.
+   *
+   * The whole card is an anchor, so the interactive states belong to it rather
+   * than to a button inside it. It is a flex column with the description set to
+   * `grow`, which keeps the chips and the "Learn more" line flush with the
+   * bottom edge across a row — programme names run to one line or two, and
+   * without it every card in a row would sit its footer at a different height.
+   *
+   * `height: 100%` is what makes that work inside the flex track: without it a
+   * card only grows to its own content and the row loses its shared baseline.
+   *
+   * The lift is 2px. Enough to read as a response, small enough that a row of
+   * them moving under a cursor does not make the track feel loose.
+   */
+  .programme-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    transition:
+      transform var(--duration-base) var(--ease-out-soft),
+      border-color var(--duration-base) var(--ease-out-soft),
+      box-shadow var(--duration-base) var(--ease-out-soft);
+  }
+
+  .programme-figure {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: var(--color-surface-subtle);
+  }
+
+  .programme-image {
+    object-fit: cover;
+    transition: transform 700ms var(--ease-out-soft);
+  }
+
+  /* The photograph moves, not the frame. A scale on the card would drag its
+     border and shadow with it; scaling the image inside a clipped frame is the
+     move that reads as a camera push rather than a UI zoom. */
+  .programme-card:hover .programme-image {
+    transform: scale(1.04);
+  }
+
+  .programme-body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+
+  .programme-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--color-brand) 35%, transparent);
+    box-shadow: var(--shadow-raised);
+  }
+
+  /* The chips follow the card, not their own hover — they are inside the
+     anchor, so a separate state on them would fire from the same pointer and
+     read as two things reacting to one gesture. */
+  .programme-card:hover .academics-chip {
+    border-color: color-mix(in srgb, var(--color-accent-surface) 55%, transparent);
+  }
+
+  /* No travel for anyone who asked not to have any. The border and shadow
+     changes stay — they are the part that says the card is interactive. */
+  @media (prefers-reduced-motion: reduce) {
+    .programme-card,
+    .programme-card:hover,
+    .programme-card:hover .programme-image {
+      transform: none;
+    }
+  }
+
+  :root[data-contrast='high'] .academics-chip,
+  :root[data-contrast='high'] .programme-card {
+    border-color: var(--color-ink);
+    box-shadow: none;
+  }
+
+  /* ===========================================================================
+     Global accreditations.
+
+     Almost nothing is left here, and that is the point.
+
+     This block used to run ~150 lines: a sliding track, three glass cards with
+     hover and active states, two arrow controls with their own focus and
+     disabled treatments, an underline animation, a drag cursor, a noise layer,
+     a drafting grid, and reduced-motion overrides for each. All of it existed
+     to present three logos.
+
+     The section is a row now, so the only thing it still needs from CSS is a
+     ground. Everything else is Tailwind utilities on the markup, which is where
+     one-off layout belongs — a bespoke class per element is how a stylesheet
+     grows a private language nobody else can read.
+
+     What went with it: `.accreditation-noise` and `.accreditation-rules` (a
+     grain and a drafting grid — texture for a 590px stage, noise on a 190px
+     strip), and `.accreditation-glow`, which had already been superseded by the
+     band's own wash.
+     ======================================================================== */
+
+  /**
+   * The ground.
+   *
+   * White, as the rest of the homepage is. The only tint is a wide, very faint
+   * green wash — depth, not colour, and far too weak to move the contrast of
+   * anything on it. The alpha is derived with `color-mix()` against the token
+   * rather than hand-typed, which is what keeps the high-contrast theme
+   * reaching it instead of stepping around a literal.
+   */
+  .accreditation-band {
+    background-color: var(--color-surface);
+    background-image: radial-gradient(
+      52rem 20rem at 50% 56%,
+      color-mix(in srgb, var(--color-accent-surface) 8%, transparent),
+      transparent 70%
+    );
+  }
+
+  /* High contrast strips the atmosphere: the wash is decoration standing
+     between the reader and the text — §11.2. */
+  :root[data-contrast='high'] .accreditation-band {
+    background-image: none;
+  }
+}
+
+@layer components {
+  /* ===========================================================================
+     Brand motif — the triangle artwork as a ground.
+
+     `public/brand/motif-triangles.svg` placed six times across the homepage and
+     the footer, at 5–10% opacity, behind everything. It is a signature, not an
+     illustration: at these strengths nobody looks *at* it, they only notice
+     that the page has a texture and that the texture is the same one throughout.
+
+     ## Why this is an attribute and not an element
+
+     Every placement is a `::before` (and, in the footer, an `::after`) on the
+     section that already exists. There is no wrapper div, no component, no
+     import — a section opts in by carrying `data-motif="<placement>"` and
+     nothing else changes. That matters for three reasons:
+
+       • **Nothing to expose.** A pseudo-element with `content: ''` is not in the
+         accessibility tree at all. A decorative `<span>` would have needed
+         `aria-hidden` on it, and would have needed it to stay there.
+       • **Nothing to ship.** No markup, no JavaScript, one cached SVG for all
+         six placements.
+       • **Nothing to conflict.** The diff on each section is one attribute, so
+         a section can be rewritten around it without the motif being in the way.
+
+     ## Every placement is different, deliberately
+
+     The brief that asked for this asked for it *not* to repeat, and the failure
+     mode of a motif like this is five identical corners that read as a
+     watermark. So each instance changes position, size, rotation, mirroring and
+     how much of it the edge cuts off. The variation is the whole point; the
+     placements below are a composition, not a set of defaults to reuse.
+
+     ## Light grounds only
+
+     Every host is white or near-white, which is why one `background-image` is
+     the whole colour story. The footer briefly carried a pair of these and
+     needed a second technique to do it — the artwork masked and repainted with
+     `--color-ink-inverse`, because its fills are mid-to-deep ramp steps that
+     would have subtracted from navy rather than lifting it. That pair was
+     removed and the mask went with it. If a dark host is ever wanted again,
+     that is the approach; do not simply raise the opacity.
+
+     ## Placement rules, not layout rules
+
+     Each instance sets exactly one inset per axis. Setting both would
+     over-constrain the box and defeat `aspect-ratio`, which is what derives the
+     height from the width — so the artwork can never be stretched out of its own
+     proportions by a placement.
+     ======================================================================== */
+
+  /**
+   * The shared paint. Position, size and orientation are the placement's job.
+   *
+   * `z-index: -1` puts this behind the section's content but still in front of
+   * the section's own background, which is only reliable because every host
+   * carries `isolate`: without a stacking context the negative index escapes
+   * upward and the motif disappears behind the band it is meant to sit on.
+   *
+   * The host also carries `overflow-hidden`. That is not tidiness — it is how
+   * the artwork gets cropped by its host's edge, which is what stops each
+   * placement from reading as a sticker centred in a corner. Note what that
+   * costs: `overflow: hidden` makes an element a scroll container, and a scroll
+   * container breaks `position: sticky` in its descendants. Check for one before
+   * adding a placement.
+   */
+  [data-motif]::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    /* Decoration only: it cannot be clicked, dragged, or caught by a selection
+       that starts above it and ends below. */
+    pointer-events: none;
+    user-select: none;
+    /* Stated rather than assumed. A blend mode is the quickest way to make a
+       motif like this go muddy over a photograph or a gradient wash, and three
+       of the five hosts have a gradient. */
+    mix-blend-mode: normal;
+
+    background-image: url('/brand/motif-triangles.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    /*
+     * The artwork's own ratio, so a placement sets `--motif-w` and the height
+     * follows. `min(…, 58vw)` is the whole of the responsive story: the motif
+     * shrinks with the viewport instead of swallowing a phone screen, and no
+     * placement needs a breakpoint of its own.
+     */
+    --motif-w: 18rem;
+    width: min(var(--motif-w), 58vw);
+    aspect-ratio: 150 / 200;
+  }
+
+  /* ---------------------------------------------------------------------------
+     The six placements.
+     ------------------------------------------------------------------------ */
+
+  /**
+   * Academic programmes — top-right, above and behind the section's own action.
+   *
+   * Pushed far enough out that the top edge takes the widest part of the
+   * artwork and only the sparse lower half reaches the content. The pill it
+   * passes behind is an opaque white surface, so it interrupts the motif rather
+   * than competing with it.
+   */
+  [data-motif='academics']::before {
+    --motif-w: 19rem;
+    --motif-drift: 0 -1.1rem;
+    inset-block-start: -7rem;
+    inset-inline-end: -5.5rem;
+    rotate: 14deg;
+    opacity: 0.11;
+  }
+
+  /**
+   * News — bottom-left, mirrored and the largest of the six, with well over half
+   * of it outside the band.
+   *
+   * This is the "floating between sections" instance: it sits at the foot of the
+   * one grey band on the page, so it reads as belonging to the seam between News
+   * and Accreditations rather than to either section. Lowest opacity of the six
+   * because `--surface-subtle` is already a tint and the motif is a second one
+   * on top of it.
+   */
+  [data-motif='news']::before {
+    --motif-w: 27rem;
+    --motif-drift: 0.9rem -0.6rem;
+    inset-block-end: -9rem;
+    inset-inline-start: -8rem;
+    rotate: -6deg;
+    scale: -1 1;
+    opacity: 0.09;
+  }
+
+  /**
+   * Latest events — bottom-right, flipped vertically, and the smallest.
+   *
+   * One corner only, and the corner nothing else uses: the closing call to
+   * action is centred and the carousel controls sit in the header. Vertical
+   * mirroring turns the cascade upside down, so this instance does not read as
+   * the Academics one moved.
+   */
+  [data-motif='events']::before {
+    --motif-w: 15rem;
+    --motif-drift: -0.7rem -0.9rem;
+    inset-block-end: -4.5rem;
+    inset-inline-end: -3.5rem;
+    rotate: -20deg;
+    scale: 1 -1;
+    opacity: 0.1;
+  }
+
+  /**
+   * Student testimonials — top-left, mirrored, mostly outside the container.
+   *
+   * The section's content starts well inside the measure — a portrait column
+   * capped at 22rem beside a quote — which leaves the left gutter genuinely
+   * empty. This fills it and lets the section edge cut the artwork vertically,
+   * a different crop from every other placement.
+   */
+  [data-motif='insights']::before {
+    --motif-w: 21rem;
+    --motif-drift: 0.6rem 1rem;
+    inset-block-start: -4rem;
+    inset-inline-start: -9rem;
+    rotate: 8deg;
+    scale: -1 1;
+    opacity: 0.11;
+  }
+
+  /**
+   * About — bottom-left of the intro block, cropped by the purpose band.
+   *
+   * The only instance whose host is not a whole section. `overflow: hidden`
+   * makes an element a scroll container and that kills `position: sticky` in
+   * any descendant, and About's vision column is sticky — so the motif sits on
+   * the intro block instead, which contains no sticky and ends exactly where
+   * the navy purpose band begins.
+   *
+   * That boundary is the point. Every other placement is cut off by a section
+   * edge against more white; this one is cut off against a dark band, so the
+   * crop reads as deliberate rather than as the page running out.
+   *
+   * Un-mirrored and barely rotated: it is the calmest of the five, because it
+   * is also the one sitting closest to a full column of body text.
+   */
+  [data-motif='about']::before {
+    --motif-w: 22rem;
+    --motif-drift: 0.5rem -0.8rem;
+    inset-block-end: -6rem;
+    inset-inline-start: -2rem;
+    rotate: -4deg;
+    opacity: 0.1;
+  }
+
+  /* ---------------------------------------------------------------------------
+     Motion.
+     ------------------------------------------------------------------------ */
+
+  /**
+   * A slow float. `translate` only — never `transform`.
+   *
+   * Five of the six placements are oriented with `rotate` and `scale`, and the
+   * three are separate properties that compose. Animating the `transform`
+   * shorthand instead would overwrite that orientation on the first frame and
+   * snap every mirrored instance back the right way round.
+   */
+  @keyframes motif-drift {
+    to {
+      translate: var(--motif-drift, 0 -1rem);
+    }
+  }
+
+  /*
+   * Desktop only, and only if the platform has not asked for less motion.
+   *
+   * `alternate` rather than a loop back to the start, so there is no jump at the
+   * end of a cycle, and the durations are all different — five elements sharing
+   * one duration would drift in unison and turn a texture into a pulse. The
+   * negative delays start each one part-way through its own cycle so they are
+   * already out of phase on the first frame rather than converging on it.
+   *
+   * The global `prefers-reduced-motion` reset at the top of this file already
+   * covers `*::before`; the query is repeated here so the intent is legible
+   * where the animation is declared rather than only 2,000 lines above it.
+   */
+  @media (min-width: 1024px) {
+    @media (prefers-reduced-motion: no-preference) {
+      [data-motif]::before {
+        animation: motif-drift var(--motif-drift-time, 11s) ease-in-out infinite alternate;
+        animation-delay: var(--motif-drift-offset, 0s);
+      }
+
+      [data-motif='about']::before {
+        --motif-drift-time: 10s;
+        --motif-drift-offset: -5s;
+      }
+      [data-motif='academics']::before {
+        --motif-drift-time: 9s;
+        --motif-drift-offset: -2s;
+      }
+      [data-motif='news']::before {
+        --motif-drift-time: 12s;
+        --motif-drift-offset: -7s;
+      }
+      [data-motif='events']::before {
+        --motif-drift-time: 8s;
+        --motif-drift-offset: -4s;
+      }
+      [data-motif='insights']::before {
+        --motif-drift-time: 11s;
+        --motif-drift-offset: -1s;
+      }
+    }
+  }
+
+  /* ---------------------------------------------------------------------------
+     High contrast.
+     ------------------------------------------------------------------------ */
+
+  /*
+   * Removed outright rather than strengthened. Every other decorative ground on
+   * the page — the band washes, the card grain — is dropped at high contrast for
+   * the same reason (§11.2): a texture between the reader and the text is
+   * precisely what that setting exists to take away, and a motif that survived
+   * it would be the only one left.
+   */
+  :root[data-contrast='high'] [data-motif]::before {
+    display: none;
+  }
+}

@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A new push to the same PR cancels the previous run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # Ordered cheapest-first so a trivial failure reports in seconds rather
+      # than after a full production build.
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Format
+        run: npm run format:check
+
+      # Asserts the architectural boundary rules actually reject violations.
+      # eslint-plugin-boundaries fails silently when its element patterns stop
+      # matching — lint exits 0 while enforcing nothing. See ADR-0003.
+      - name: Boundary self-test
+        run: npm run check:boundaries
+
+      # Includes tests/unit/tokens.test.ts, which holds the colour system to its
+      # measured WCAG floors. Under D9 (GIGW) this is a compliance control, not a
+      # quality nicety — it does not get skipped to unblock a release.
+      - name: Unit tests
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+        env:
+          SITE_URL: https://example.invalid
+
+# Gates deliberately not yet present, so their absence is a decision rather than
+# an oversight (docs/architecture.md §12):
+#
+#   • Lighthouse CI with asserted budgets — added in Phase 2. Running it against
+#     a scaffold measures nothing and produces a number that only ever falls.
+#   • axe-core accessibility sweeps — added in Phase 2, once real page templates
+#     and the navigation exist to sweep.
+#   • size-limit per route — added in Phase 2, for the same reason.
+#   • Playwright E2E (mega-menu keyboard flows, mobile nav) — added in Phase 2.

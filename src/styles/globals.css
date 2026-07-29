@@ -1,0 +1,6 @@
+/* Stylesheet entry point. Imported once, from the root layout.
+   Order is load-bearing: Tailwind first, then tokens, then base defaults that
+   consume those tokens. */
+@import 'tailwindcss';
+@import './theme.css';
+@import './base.css';
