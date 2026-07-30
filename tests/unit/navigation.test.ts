@@ -96,21 +96,32 @@ describe('cross-property links (Q11 / §16 F1)', () => {
   });
 });
 
-describe('GIGW obligations (§11.2)', () => {
-  it('lists every mandated policy page in the footer', () => {
+describe('footer policy links', () => {
+  it('lists the policy pages the footer is meant to surface', () => {
     const hrefs = POLICY_NAV.map((i) => i.href);
     for (const required of [
       routes.policies.privacy,
       routes.policies.terms,
       routes.policies.copyright,
-      routes.policies.hyperlinking,
-      routes.policies.disclaimer,
-      routes.policies.accessibility,
-      routes.policies.screenReaderAccess,
       routes.policies.help,
       routes.sitemap,
     ]) {
       expect(hrefs, `${required} must appear in the footer policy list`).toContain(required);
+    }
+  });
+
+  // Removed from the footer at the institute's request. The pages still exist
+  // and `routes.policies` still names them; this asserts the footer no longer
+  // links to them, so a well-meaning restore has to be deliberate.
+  it('omits the four links that were withdrawn', () => {
+    const hrefs = POLICY_NAV.map((i) => i.href);
+    for (const removed of [
+      routes.policies.hyperlinking,
+      routes.policies.disclaimer,
+      routes.policies.accessibility,
+      routes.policies.screenReaderAccess,
+    ]) {
+      expect(hrefs, `${removed} must not appear in the footer policy list`).not.toContain(removed);
     }
   });
 });

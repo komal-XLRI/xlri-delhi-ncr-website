@@ -17,21 +17,20 @@ import { site } from '@/config/site';
  *  1. **An orphaned identity block.** The wordmark, legal name and institute
  *     link sat alone in a full-width row with Quick Links and Policies pushed to
  *     the far right, leaving ~450px of bare ground between them.
- *  2. **Policies as a vertical column.** Nine GIGW-mandated links stacked one
- *     per line set the height of the entire lower half on their own.
+ *  2. **Policies as a vertical column.** The mandated links stacked one per
+ *     line set the height of the entire lower half on their own.
  *  3. **Eight nav groups in a four-column grid**, wrapping to two rows of
  *     uneven height with the gaps that implies.
  *
  * Now the identity is the first column *of the same grid* as the sitemap, so
  * there is no orphan row; the audience links run inline on one rule; and the
- * policies run inline in the bottom bar. Same links, no losses — the count is
- * unchanged.
+ * policies run inline in the bottom bar.
  *
  * ## The obligation this carries
  *
- * The GIGW policy links (§11.2) appear on every page. Laying them out
- * horizontally is a presentation change, not a reduction: all nine are still
- * here, still real links, still in the document.
+ * The policy links appear on every page, and laying them out horizontally is a
+ * presentation change rather than a reduction. The list has since been shortened
+ * on instruction — see the note on `POLICY_NAV` for what came out and why.
  *
  * (An earlier version of this note claimed the footer also carried a
  * full-colour accreditation strip. It does not, and has not since the marks
@@ -159,8 +158,10 @@ export function SiteFooter() {
         {/* ================= bottom bar ================= */}
         <div className="mt-8 flex flex-col gap-5 border-t border-ink-inverse/15 pt-8 lg:flex-row-reverse lg:items-baseline lg:justify-between lg:gap-10">
           {/*
-            The GIGW links, inline. All nine, unchanged — a wrapped row rather
-            than a nine-line column.
+            The policy links, inline — a wrapped row rather than a column, which
+            is what kept them out of the footer's height. The list itself is
+            `POLICY_NAV`; the separator is drawn before every item but the first,
+            so shortening the list leaves no dangling interpunct or gap.
           */}
           <nav aria-label="Policies">
             <ul className="flex flex-wrap items-baseline gap-x-3 gap-y-2">

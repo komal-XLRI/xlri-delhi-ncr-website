@@ -502,19 +502,19 @@ export const UTILITY_NAV: readonly UtilityNavItem[] = [
   { id: 'utility-giving', label: 'Giving', href: 'https://xlri.ac.in/giving-to-xlri' },
 ];
 
-/** GIGW-mandated links, rendered in the footer on every page (§11.2). */
+/**
+ * Policy links rendered in the footer on every page.
+ *
+ * Note: the Hyperlinking Policy, Disclaimer, Accessibility Statement and Screen
+ * Reader Access links were removed from the footer at the institute's request.
+ * The pages themselves and their entries in `routes.policies` are untouched, so
+ * the destinations still resolve — they are simply no longer surfaced here. If
+ * GIGW §11.2 conformance is re-audited, this is the list to restore.
+ */
 export const POLICY_NAV: readonly UtilityNavItem[] = [
   { id: 'policy-privacy', label: 'Privacy Policy', href: '/policies/privacy' },
   { id: 'policy-terms', label: 'Terms & Conditions', href: '/policies/terms' },
   { id: 'policy-copyright', label: 'Copyright Policy', href: '/policies/copyright' },
-  { id: 'policy-hyperlinking', label: 'Hyperlinking Policy', href: '/policies/hyperlinking' },
-  { id: 'policy-disclaimer', label: 'Disclaimer', href: '/policies/disclaimer' },
-  { id: 'policy-accessibility', label: 'Accessibility Statement', href: '/policies/accessibility' },
-  {
-    id: 'policy-screen-reader',
-    label: 'Screen Reader Access',
-    href: '/policies/screen-reader-access',
-  },
   { id: 'policy-sitemap', label: 'Sitemap', href: '/sitemap' },
   { id: 'policy-help', label: 'Help', href: '/policies/help' },
 ];
