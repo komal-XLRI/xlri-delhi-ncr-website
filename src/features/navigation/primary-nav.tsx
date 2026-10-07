@@ -174,7 +174,7 @@ export function PrimaryNav({ items }: { items: PrimaryNavEntry[] }) {
               <li key={item.id}>
                 <NextLink
                   href={item.href ?? '#'}
-                  className="inline-flex h-full items-center border-b-[3px] border-transparent px-4 py-5 text-sm font-medium text-nav-ink transition-colors duration-200 hover:border-nav-indicator hover:text-nav-ink-hover xl:px-5"
+                  className="inline-flex h-full items-center border-b-[3px] border-transparent px-3 py-5 text-sm font-medium text-nav-ink transition-colors duration-200 hover:border-nav-indicator hover:text-nav-ink-hover xl:px-2.5 xl:whitespace-nowrap"
                   onPointerEnter={closeNow}
                 >
                   {item.label}
@@ -200,7 +200,13 @@ export function PrimaryNav({ items }: { items: PrimaryNavEntry[] }) {
                   if (event.pointerType === 'mouse') scheduleOpen(item.id);
                 }}
                 className={cn(
-                  'inline-flex h-full items-center gap-1.5 px-4 py-5 text-sm font-medium xl:px-5',
+                  // Ten items since Centres and Sustainability were promoted (D4
+                  // revisited). From `xl` up every label holds one line at 10px a
+                  // side: ~1,216px for the whole bar, measured. At 12px it was
+                  // 1,256px and ran to within 12px of the screen edge at 1280.
+                  // Between `lg` and `xl` the two-word labels wrap to two lines,
+                  // as they could before.
+                  'inline-flex h-full items-center gap-1.5 px-3 py-5 text-sm font-medium xl:px-2.5 xl:whitespace-nowrap',
                   // A rule along the bottom edge that fills in on hover and turns
                   // accent green when the panel opens. On the dark field the
                   // accent finally has somewhere legal to live: 6.45:1 here
