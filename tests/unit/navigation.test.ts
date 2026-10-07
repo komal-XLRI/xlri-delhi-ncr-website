@@ -17,11 +17,20 @@ describe('tree integrity', () => {
     expect(findNavTreeProblems(PRIMARY_NAV)).toEqual([]);
   });
 
-  it('has exactly eight primary items (D4)', () => {
+  it('has exactly ten primary items (D4, revisited)', () => {
     // Not arbitrary: §2.2 found that twelve items cannot sit balanced at 1280px
-    // with premium type. If this fails, the IA decision is being reopened —
-    // which is fine, but it should be deliberate.
-    expect(PRIMARY_NAV).toHaveLength(8);
+    // with premium type. The agreed eight became nine when Centres was promoted
+    // to the top level to match the Delhi-NCR site (2026-10-07), and ten when
+    // Sustainability followed it the same day — each time after checking the
+    // bar still fits at 1280px. If this fails, the IA decision is being
+    // reopened again — which is fine, but it should be deliberate.
+    expect(PRIMARY_NAV).toHaveLength(10);
+  });
+
+  it('gives Centres its own primary item, not a column under Faculty & Research', () => {
+    expect(PRIMARY_NAV.map((i) => i.id)).toContain('centres');
+    const faculty = PRIMARY_NAV.find((i) => i.id === 'faculty-research');
+    expect(faculty?.children?.map((c) => c.id)).not.toContain('centres-group');
   });
 
   it('gives every node a unique id, since ids drive aria-controls', () => {
@@ -49,10 +58,11 @@ describe('agreed information architecture', () => {
     expect(PRIMARY_NAV.map((i) => i.id)).toContain('admissions');
   });
 
-  it('places Sustainability under About, not at top level (Q12)', () => {
-    expect(PRIMARY_NAV.map((i) => i.id)).not.toContain('sustainability');
+  it('gives Sustainability its own primary item, after Centres, not a column under About', () => {
+    const ids = PRIMARY_NAV.map((i) => i.id);
+    expect(ids.indexOf('sustainability')).toBe(ids.indexOf('centres') + 1);
     const about = PRIMARY_NAV.find((i) => i.id === 'about');
-    expect(about?.children?.map((c) => c.id)).toContain('about-sustainability');
+    expect(about?.children?.map((c) => c.id)).not.toContain('about-sustainability');
   });
 
   it('gives News & Events the eighth primary slot (Q12)', () => {
@@ -61,7 +71,7 @@ describe('agreed information architecture', () => {
 
   it('surfaces the two orphaned legacy sections found in the audit (§16 F4)', () => {
     const ids = walkNavTree(PRIMARY_NAV).map((n) => n.id);
-    expect(ids).toContain('about-sustainability'); // 15 orphaned legacy pages
+    expect(ids).toContain('sustainability-group'); // 15 orphaned legacy pages
     expect(ids).toContain('academics-library'); // ~10 scattered legacy pages
   });
 });
@@ -141,6 +151,7 @@ describe('internal links match the typed route map', () => {
         routes.research.index,
         routes.campusLife.index,
         routes.placements.index,
+        routes.sustainability.index,
         routes.news.index,
         routes.events.index,
         routes.contact,

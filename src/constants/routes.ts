@@ -21,6 +21,11 @@ export const routes = {
   about: {
     index: '/about',
     accreditation: '/about/accreditation',
+    directorsDesk: '/about/directors-desk',
+    visionMission: '/about/vision-mission',
+    heritage: '/about/heritage',
+    foundingFathers: '/about/jesuit-founding-fathers',
+    boardOfGovernors: '/about/board-of-governors',
     leadership: '/about/leadership',
     mandatoryDisclosure: '/about/mandatory-disclosure',
   },
@@ -60,6 +65,7 @@ export const routes = {
 
   sustainability: {
     index: '/sustainability',
+    team: '/sustainability/team',
   },
 
   news: {

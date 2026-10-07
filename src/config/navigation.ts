@@ -10,11 +10,17 @@ import type { NavNode, PrimaryNavItem, UtilityNavItem } from '@/types/navigation
  *
  * Decisions encoded here:
  *
- *  • **D4 / Q12** — eight primary items. Sustainability sits under *About*, and
- *    *News & Events* takes the eighth slot, since events are by far the more
- *    active channel (42 events against 10 posts). Moving Sustainability back to
- *    top level later is a data edit in this file: cut the node, paste it into
- *    `PRIMARY_NAV`. Nothing else changes.
+ *  • **D4 / Q12** — originally eight primary items. Sustainability sits under
+ *    *About*, and *News & Events* took the eighth slot, since events are by far
+ *    the more active channel (42 events against 10 posts).
+ *
+ *  • **D4 revisited** — nine. *Centres* was promoted from a column inside
+ *    Faculty & Research to its own primary item, matching the Delhi-NCR site's
+ *    menu, at the client's request (2026-10-07).
+ *
+ *  • **D4 revisited again** — ten. *Sustainability* moved from under About to
+ *    its own primary item, after Centres, as on the Delhi-NCR site (same day).
+ *    Ten was checked at 1280px; see the test in `tests/unit/navigation.test.ts`.
  *
  *  • **Q11** — Admissions stays primary. Delhi-NCR-specific admissions content
  *    is hosted here; shared institute information (XAT, procedure, eligibility)
@@ -73,31 +79,6 @@ const about: PrimaryNavItem = {
           label: 'Mandatory Disclosure',
           href: '/about/mandatory-disclosure',
           description: 'AICTE regulatory publication',
-        },
-      ],
-    },
-    {
-      // Q12: Sustainability lives here for now. Fifteen legacy pages sat at the
-      // root of the old site with no section to belong to (§16 F4).
-      id: 'about-sustainability',
-      label: 'Sustainability',
-      children: [
-        { id: 'sustainability-overview', label: 'Overview', href: '/about/sustainability' },
-        { id: 'sustainability-courses', label: 'Courses', href: '/about/sustainability/courses' },
-        {
-          id: 'sustainability-research',
-          label: 'Research & Publications',
-          href: '/about/sustainability/research',
-        },
-        {
-          id: 'sustainability-immersion',
-          label: 'Rural Immersion',
-          href: '/about/sustainability/rural-immersion',
-        },
-        {
-          id: 'sustainability-committees',
-          label: 'Committees',
-          href: '/about/sustainability/committees',
         },
       ],
     },
@@ -306,7 +287,7 @@ const facultyResearch: PrimaryNavItem = {
   id: 'faculty-research',
   label: 'Faculty & Research',
   href: '/faculty',
-  layout: 'columns-3',
+  layout: 'columns-2',
   children: [
     {
       id: 'faculty-directory-group',
@@ -329,25 +310,98 @@ const facultyResearch: PrimaryNavItem = {
         { id: 'research-conferences', label: 'Conferences', href: '/research/conferences' },
       ],
     },
+  ],
+};
+
+/**
+ * Centres — a primary item of its own, as on the Delhi-NCR site, rather than a
+ * column inside Faculty & Research. Lists the five centres in the Delhi menu's
+ * own order. XCEED has its own site, so it links out (the Link primitive marks
+ * it external automatically).
+ *
+ * No overview page: the item has no href and no featured "All Centres" card,
+ * so it only opens the panel, and the footer heading is plain text.
+ */
+const centres: PrimaryNavItem = {
+  id: 'centres',
+  label: 'Centres',
+  layout: 'columns-2',
+  children: [
     {
       id: 'centres-group',
       label: 'Centres of Excellence',
       children: [
-        { id: 'centres-overview', label: 'All Centres', href: '/research/centres' },
         {
-          id: 'centre-healthcare',
-          label: 'Centre for Healthcare Management',
-          href: '/research/centres/healthcare-management',
+          id: 'centre-gender',
+          label: 'Centre for Gender Equality & Inclusive Leadership',
+          href: '/research/centres/gender-equality',
         },
+        { id: 'centre-xceed', label: 'XCEED – XLRI Incubator', href: 'https://xceed.xlri.ac.in/' },
         {
           id: 'centre-public-policy',
           label: 'Centre for Public Policy & Public Affairs',
           href: '/research/centres/public-policy',
         },
         {
-          id: 'centre-gender',
-          label: 'Centre for Gender Equality & Inclusive Leadership',
-          href: '/research/centres/gender-equality',
+          id: 'centre-automobiles',
+          label: 'Indian School for Design of Automobiles',
+          href: '/research/centres/design-of-automobiles',
+        },
+        {
+          id: 'centre-healthcare',
+          label: 'Centre for Healthcare Management',
+          href: '/research/centres/healthcare-management',
+        },
+      ],
+    },
+  ],
+};
+
+/**
+ * Sustainability — a primary item of its own, as on the Delhi-NCR site, at the
+ * client's request (2026-10-07). It sat under About (Q12); the nine links are
+ * the Delhi menu's, in its order. The column heading links to the overview.
+ * Delhi's panel also carries a campus photograph; at the client's request it is
+ * left out here.
+ */
+const sustainability: PrimaryNavItem = {
+  id: 'sustainability',
+  label: 'Sustainability',
+  layout: 'columns-2',
+  children: [
+    {
+      id: 'sustainability-group',
+      label: 'Sustainability',
+      href: '/sustainability',
+      children: [
+        { id: 'sustainability-team', label: 'Team', href: '/sustainability/team' },
+        { id: 'sustainability-history', label: 'History', href: '/sustainability/history' },
+        {
+          id: 'sustainability-student-committees',
+          label: 'Student Committees',
+          href: '/sustainability/student-committees',
+        },
+        { id: 'sustainability-courses', label: 'Courses', href: '/sustainability/courses' },
+        { id: 'sustainability-events', label: 'Events', href: '/sustainability/events' },
+        {
+          id: 'sustainability-government-committees',
+          label: 'Government Committees',
+          href: '/sustainability/government-committees',
+        },
+        {
+          id: 'sustainability-rural-immersion',
+          label: 'Rural Immersion',
+          href: '/sustainability/rural-immersion',
+        },
+        {
+          id: 'sustainability-research-projects',
+          label: 'Research Projects',
+          href: '/sustainability/research-projects',
+        },
+        {
+          id: 'sustainability-research-publications-cases',
+          label: 'Research Publications & Cases',
+          href: '/sustainability/research-publications-cases',
         },
       ],
     },
@@ -484,6 +538,8 @@ export const PRIMARY_NAV: readonly PrimaryNavItem[] = [
   executiveEducation,
   admissions,
   facultyResearch,
+  centres,
+  sustainability,
   campusLife,
   placements,
   newsEvents,
