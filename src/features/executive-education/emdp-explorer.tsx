@@ -11,17 +11,13 @@ const TABS: readonly { readonly id: EmdpStatus; readonly label: string }[] = [
   { id: 'ongoing', label: 'On-going programmes' },
 ];
 
-const delay = (ms: number) => ({ ['--enter-delay' as string]: `${String(ms)}ms` });
-
 /**
  * Upcoming and on-going programmes as WAI-ARIA tabs.
  *
  * Both panels are server-rendered and stay in the DOM (`hidden` on the
  * inactive one), so every programme is in the HTML for search and for a
  * reader with scripts off. Roving tabindex and arrow keys, as on the
- * leadership committees. The sliding underline is a transform on one element;
- * the cards replay their `.enter` animation because they leave `display:
- * none` when their panel is shown.
+ * leadership committees. The sliding pill is a transform on one element.
  */
 export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramme[] }) {
   const [active, setActive] = useState<EmdpStatus>('upcoming');
@@ -49,7 +45,7 @@ export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramm
       <div
         role="tablist"
         aria-label="Programmes"
-        className="relative inline-grid grid-cols-2 rounded-full border border-border bg-surface p-1 shadow-raised"
+        className="relative inline-grid grid-cols-2 rounded-full border border-border bg-surface-subtle p-1"
       >
         {/* The pill that slides between the two tabs. */}
         <span
@@ -108,8 +104,8 @@ export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramm
                 upcoming ? 'md:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'
               }`}
             >
-              {list.map((programme, i) => (
-                <li key={programme.id} className="enter" style={delay(Math.min(i, 8) * 70)}>
+              {list.map((programme) => (
+                <li key={programme.id}>
                   <ProgrammeCard programme={programme} featured={upcoming} />
                 </li>
               ))}
@@ -148,7 +144,6 @@ function ProgrammeCard({ programme, featured }: { programme: EmdpProgramme; feat
         {featured ? (
           <p className="mb-3 inline-flex items-center gap-2 self-start rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold tracking-[0.08em] text-accent-700 uppercase">
             <span aria-hidden="true" className="relative flex size-2">
-              <span className="absolute inset-0 rounded-full bg-accent-surface opacity-70 motion-safe:animate-ping" />
               <span className="relative size-2 rounded-full bg-accent-700" />
             </span>
             Admissions open

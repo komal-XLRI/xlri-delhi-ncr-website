@@ -16,6 +16,7 @@ import type { MdpPage as MdpContent } from '@/types/mdp';
 const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
 const H2 =
   'font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-ink-strong';
+const EYEBROW = 'text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase';
 
 const PILLAR_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
   format: MapPinIcon,
@@ -24,30 +25,30 @@ const PILLAR_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
   curriculum: CompassIcon,
 };
 
-const delay = (ms: number) => ({ ['--enter-delay' as string]: `${String(ms)}ms` });
+function Rule({ className = '' }: { className?: string }) {
+  return (
+    <span aria-hidden="true" className={`block h-[3px] w-10 bg-accent-surface ${className}`} />
+  );
+}
 
 /**
  * Executive Education › Management Development Programmes.
  *
  * ## The model
  *
- * The same visual language as EMDP, its sibling under XLEAD, so the section
- * reads as one: a navy hero with the brand colours drifting behind it, then
- * light sections.
+ * The light treatment of the programme and About pages, shared with EMDP and
+ * In-Company Programmes:
  *
- *  1. **Hero** — the name with "(MDPs)" in the accent, the tagline as a pull
- *     line, the refresh note, and the calendar as the primary action, beside
- *     the MDP Block on the Delhi-NCR campus.
- *  2. **Overview** — the paragraph, with its four claims lifted out as tiles.
- *  3. **The 2025–26 calendar at a glance** (navy) — the year's figures and
- *     where the programmes ran, counted from the calendar, with the
- *     document itself. Every date in it has passed, so the page summarises
- *     and links rather than listing them.
+ *  1. **Introduction** — the name, the tagline, the refresh note, and the
+ *     calendar as the primary action, beside the MDP Block on the Delhi-NCR
+ *     campus.
+ *  2. **Overview** — the paragraph, with its four claims lifted out as cards.
+ *  3. **The 2025–26 calendar at a glance** — the year's figures and where the
+ *     programmes ran, counted from the calendar, with the document itself.
+ *     Every date in it has passed, so the page summarises and links rather
+ *     than listing them.
  *  4. **Practicalities** — residential rates and rules, the group discount,
  *     and the MDP office.
- *
- * Motion on load only (`.enter`, `.drift` in styles/base.css), never on
- * scroll, and none under `prefers-reduced-motion`.
  */
 export function MdpPage({ content }: { content: MdpContent }) {
   const { overview, calendar, stay, discounts, contact } = content;
@@ -55,24 +56,10 @@ export function MdpPage({ content }: { content: MdpContent }) {
 
   return (
     <article aria-labelledby="mdp-heading">
-      {/* ---------------- hero ---------------- */}
-      <section className="relative isolate overflow-hidden bg-brand-950 text-ink-inverse">
-        <span
-          aria-hidden="true"
-          className="drift absolute -top-40 -left-32 -z-10 size-[34rem] rounded-full bg-brand opacity-60 blur-3xl"
-        />
-        <span
-          aria-hidden="true"
-          className="drift absolute -right-24 -bottom-48 -z-10 size-[28rem] rounded-full bg-accent-surface opacity-25 blur-3xl [animation-delay:-8s]"
-        />
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.08)_1px,transparent_0)] [background-size:28px_28px]"
-        />
-
-        <div className={`${MEASURE} pt-8 pb-16 md:pt-10 md:pb-24`}>
+      {/* ---------------- introduction ---------------- */}
+      <section className="bg-surface">
+        <div className={`${MEASURE} pt-10 pb-14 md:pt-14 md:pb-20`}>
           <Breadcrumbs
-            className="[&_a]:text-white/70 [&_a:hover]:text-white [&_span]:text-white"
             items={[
               { label: 'Home', href: routes.home },
               { label: 'Executive Education' },
@@ -80,44 +67,30 @@ export function MdpPage({ content }: { content: MdpContent }) {
             ]}
           />
 
-          <div className="mt-10 grid grid-cols-1 items-center gap-12 md:mt-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-16">
+          <div className="mt-8 grid grid-cols-1 items-center gap-10 md:mt-10 lg:grid-cols-2 lg:gap-14">
             <div>
-              <p
-                className="enter text-sm font-semibold tracking-[0.18em] text-accent-surface uppercase"
-                style={delay(0)}
-              >
-                {content.eyebrow}
-              </p>
+              <p className={EYEBROW}>{content.eyebrow}</p>
               <h1
                 id="mdp-heading"
-                className="enter mt-4 font-serif text-[clamp(2.5rem,5.4vw,4.25rem)] leading-[1.02] tracking-[-0.035em] text-balance text-white"
-                style={delay(90)}
+                className="mt-3 font-serif text-[clamp(2.25rem,4.6vw,3.5rem)] leading-[1.04] tracking-[-0.03em] text-balance text-brand"
               >
-                {content.title}{' '}
-                <span className="bg-gradient-to-r from-accent-surface to-white bg-clip-text text-transparent">
-                  ({content.abbreviation})
-                </span>
+                {content.title} <span className="text-accent-700">({content.abbreviation})</span>
               </h1>
-              <p
-                className="enter mt-6 border-l-[3px] border-accent-surface pl-5 font-serif text-xl leading-snug text-white/95 md:text-2xl"
-                style={delay(180)}
-              >
+              <p className="mt-4 font-serif text-xl leading-snug text-ink-strong md:text-[1.375rem]">
                 {content.tagline}
               </p>
-              <p
-                className="enter mt-6 max-w-[38rem] text-base leading-[1.8] text-white/75"
-                style={delay(240)}
-              >
+              <Rule className="mt-6 w-14" />
+              <p className="mt-6 text-base leading-[1.85] text-ink md:text-[1.0625rem]">
                 {content.refresh}
               </p>
-              <div className="enter mt-9 flex flex-wrap items-center gap-3" style={delay(300)}>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
                   href={calendar.href}
                   target="_blank"
                   rel="noopener"
-                  className="group inline-flex items-center gap-3 rounded-full bg-accent-surface py-2.5 pr-5 pl-2.5 text-[0.9375rem] font-semibold text-brand-950 transition-colors duration-200 hover:bg-white"
+                  className="inline-flex items-center gap-3 rounded-full bg-brand py-2.5 pr-5 pl-2.5 text-[0.9375rem] font-semibold text-white transition-colors duration-200 hover:bg-brand-950"
                 >
-                  <span className="flex size-8 items-center justify-center rounded-full bg-brand-950 text-accent-surface">
+                  <span className="flex size-8 items-center justify-center rounded-full bg-accent-surface text-brand-950">
                     <BookIcon size={15} aria-hidden="true" />
                   </span>
                   {calendar.label}
@@ -125,19 +98,19 @@ export function MdpPage({ content }: { content: MdpContent }) {
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex items-center rounded-full border border-white/35 px-5 py-3 text-[0.9375rem] font-semibold text-white transition-colors duration-200 hover:border-accent-surface hover:bg-white/10"
+                  className="inline-flex items-center rounded-full border border-border-strong px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-200 hover:border-brand hover:text-brand"
                 >
                   Contact the MDP office
                 </a>
               </div>
             </div>
 
-            <div className="enter relative" style={delay(200)}>
+            <div className="relative">
               <span
                 aria-hidden="true"
-                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[10px] border-2 border-accent-surface/70 md:block"
+                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 md:block"
               />
-              <div className="group relative aspect-[5/3] overflow-hidden rounded-[10px] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/15">
+              <div className="relative aspect-[5/3] overflow-hidden rounded-[8px] shadow-raised">
                 <Image
                   src={content.image.src}
                   alt={content.image.alt}
@@ -145,12 +118,9 @@ export function MdpPage({ content }: { content: MdpContent }) {
                   // Above the fold — the LCP element. `preload` replaces the
                   // deprecated `priority` in Next 16.
                   preload
-                  sizes="(min-width: 1280px) 540px, (min-width: 1024px) 44vw, 100vw"
-                  className="object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
+                  sizes="(min-width: 1280px) 568px, (min-width: 1024px) 46vw, 100vw"
+                  className="object-cover"
                 />
-                <span className="absolute bottom-3 left-3 rounded-full bg-brand-950/85 px-3 py-1 text-xs font-semibold tracking-[0.08em] text-white uppercase backdrop-blur">
-                  MDP Block · Delhi-NCR campus
-                </span>
               </div>
             </div>
           </div>
@@ -158,38 +128,33 @@ export function MdpPage({ content }: { content: MdpContent }) {
       </section>
 
       {/* ---------------- overview ---------------- */}
-      <section aria-labelledby="overview-heading" className="bg-surface">
+      <section aria-labelledby="overview-heading" className="bg-surface-subtle">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-16">
             <div>
               <h2 id="overview-heading" className={H2}>
                 {overview.heading}
               </h2>
-              <span
-                aria-hidden="true"
-                className="mt-4 block h-1 w-14 rounded-full bg-gradient-to-r from-brand to-accent-surface"
-              />
+              <Rule className="mt-4" />
             </div>
             <p className="text-base leading-[1.9] text-ink md:text-justify md:text-[1.0625rem] md:hyphens-auto">
               {overview.text}
             </p>
           </div>
 
-          <ul className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+          <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {overview.pillars.map((pillar) => {
               const Icon = PILLAR_ICONS[pillar.id] ?? BookIcon;
               return (
                 <li
                   key={pillar.id}
-                  className="group rounded-[10px] border border-border bg-surface p-6 transition-[transform,border-color,box-shadow,background-color] duration-300 ease-out hover:-translate-y-1 hover:border-brand hover:bg-brand hover:shadow-raised"
+                  className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-accent-surface">
-                    <Icon size={22} aria-hidden="true" />
+                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700">
+                    <Icon size={20} aria-hidden="true" />
                   </span>
-                  <h3 className="mt-5 font-serif text-xl text-ink-strong transition-colors duration-300 group-hover:text-white">
-                    {pillar.title}
-                  </h3>
-                  <p className="mt-2 text-[0.9375rem] leading-[1.65] text-ink-muted transition-colors duration-300 group-hover:text-white/80">
+                  <h3 className="mt-4 font-serif text-xl text-ink-strong">{pillar.title}</h3>
+                  <p className="mt-2 text-[0.9375rem] leading-[1.65] text-ink-muted">
                     {pillar.text}
                   </p>
                 </li>
@@ -200,31 +165,29 @@ export function MdpPage({ content }: { content: MdpContent }) {
       </section>
 
       {/* ---------------- calendar ---------------- */}
-      <section aria-labelledby="calendar-heading" className="purpose-band text-ink-inverse">
+      <section aria-labelledby="calendar-heading" className="bg-surface">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-16">
             <div>
-              <p className="text-sm font-semibold tracking-[0.18em] text-accent-surface uppercase">
-                At a glance
-              </p>
-              <h2
-                id="calendar-heading"
-                className="mt-2 font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-white"
-              >
+              <p className={EYEBROW}>At a glance</p>
+              <h2 id="calendar-heading" className={`${H2} mt-2`}>
                 {calendar.heading}
               </h2>
-              <p className="mt-4 max-w-[34rem] leading-[1.75] text-white/80">{calendar.note}</p>
+              <Rule className="mt-4" />
+              <p className="mt-6 max-w-[34rem] leading-[1.75] text-ink">{calendar.note}</p>
 
-              <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-[10px] bg-white/15">
-                {calendar.facts.map((fact) => (
+              <dl className="mt-8 grid grid-cols-2 overflow-hidden rounded-[8px] border border-border">
+                {calendar.facts.map((fact, index) => (
                   // Label first in the DOM (a <dt> must precede its <dd>),
                   // figure first on screen.
                   <div
                     key={fact.id}
-                    className="flex flex-col-reverse justify-end bg-brand-950/60 px-5 py-6"
+                    className={`flex flex-col-reverse justify-end bg-surface-subtle px-5 py-6 ${
+                      index % 2 === 1 ? 'border-l border-border' : ''
+                    } ${index >= 2 ? 'border-t border-border' : ''}`}
                   >
-                    <dt className="mt-2 text-sm leading-snug text-white/70">{fact.label}</dt>
-                    <dd className="font-serif text-[2.5rem] leading-none text-accent-surface">
+                    <dt className="mt-2 text-sm leading-snug text-ink-muted">{fact.label}</dt>
+                    <dd className="font-serif text-[2.25rem] leading-none text-brand">
                       {fact.value}
                     </dd>
                   </div>
@@ -235,18 +198,16 @@ export function MdpPage({ content }: { content: MdpContent }) {
                 href={calendar.href}
                 target="_blank"
                 rel="noopener"
-                className="mt-8 inline-flex items-center gap-2 font-semibold text-accent-surface hover:text-white"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-brand hover:text-brand-950"
               >
                 Download the calendar
-                <span className="font-normal text-white/60">{calendar.meta}</span>
+                <span className="font-normal text-ink-muted">{calendar.meta}</span>
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
 
-            <div className="self-start rounded-[10px] bg-white p-6 text-ink shadow-raised md:p-8">
-              <h3 className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
-                Where the programmes ran
-              </h3>
+            <div className="self-start rounded-[8px] border border-border bg-surface p-6 md:p-8">
+              <h3 className={EYEBROW}>Where the programmes ran</h3>
               <ul className="mt-6 space-y-5">
                 {calendar.venues.map((venue) => (
                   <li key={venue.id}>
@@ -257,9 +218,9 @@ export function MdpPage({ content }: { content: MdpContent }) {
                         {venue.count === 1 ? 'programme' : 'programmes'}
                       </span>
                     </div>
-                    <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-surface-subtle">
+                    <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-subtle">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-brand to-accent-surface"
+                        className="h-full rounded-full bg-brand"
                         style={{ width: `${String((venue.count / most) * 100)}%` }}
                       />
                     </div>
@@ -272,28 +233,25 @@ export function MdpPage({ content }: { content: MdpContent }) {
       </section>
 
       {/* ---------------- practicalities ---------------- */}
-      <section aria-labelledby="stay-heading" className="bg-surface">
+      <section aria-labelledby="stay-heading" className="bg-surface-subtle">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-14">
             <div>
               <h2 id="stay-heading" className={H2}>
                 {stay.heading}
               </h2>
-              <p className="mt-4 leading-[1.75] text-ink">{stay.intro}</p>
+              <Rule className="mt-4" />
+              <p className="mt-6 leading-[1.75] text-ink">{stay.intro}</p>
               <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {stay.rates.map((rate) => (
                   <li
                     key={rate.id}
-                    className="relative overflow-hidden rounded-[10px] border border-border bg-surface-subtle p-6"
+                    className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6"
                   >
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand to-accent-surface"
-                    />
                     <p className="text-sm font-semibold tracking-[0.12em] text-accent-700 uppercase">
                       {rate.label}
                     </p>
-                    <p className="mt-3 font-serif text-[2.5rem] leading-none text-brand">
+                    <p className="mt-3 font-serif text-[2.25rem] leading-none text-brand">
                       {rate.value}
                     </p>
                     <p className="mt-2 text-sm text-ink-muted">{rate.note}</p>
@@ -318,7 +276,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
             <div className="space-y-6">
               <section
                 aria-labelledby="discount-heading"
-                className="rounded-[10px] border border-border bg-surface p-6 md:p-7"
+                className="rounded-[8px] border border-border bg-surface p-6 md:p-7"
               >
                 <h2 id="discount-heading" className="font-serif text-2xl text-ink-strong">
                   {discounts.heading}
@@ -327,7 +285,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
                   {discounts.tiers.map((tier) => (
                     <li
                       key={tier.id}
-                      className="flex items-center gap-4 rounded-[8px] bg-accent-50 p-4"
+                      className="flex items-center gap-4 rounded-[8px] bg-surface-subtle p-4"
                     >
                       <span className="font-serif text-3xl leading-none text-brand">
                         {tier.discount}
@@ -344,45 +302,43 @@ export function MdpPage({ content }: { content: MdpContent }) {
               <section
                 id="contact"
                 aria-labelledby="contact-heading"
-                className="scroll-mt-40 rounded-[10px] bg-brand-950 p-6 text-white md:p-7"
+                className="scroll-mt-40 rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 md:p-7"
               >
-                <h2 id="contact-heading" className="font-serif text-2xl">
+                <h2 id="contact-heading" className="font-serif text-2xl text-ink-strong">
                   {contact.heading}
                 </h2>
-                <ul className="mt-5 space-y-3 text-[0.9375rem]">
-                  <li>
-                    <span className="block text-xs tracking-[0.14em] text-white/60 uppercase">
-                      Phone
-                    </span>
-                    <span className="font-semibold">{contact.phone}</span>
-                  </li>
-                  <li>
-                    <span className="block text-xs tracking-[0.14em] text-white/60 uppercase">
-                      Email
-                    </span>
-                    <a
-                      href={`mailto:${contact.email}`}
-                      className="font-semibold text-accent-surface hover:text-white"
-                    >
-                      {contact.email}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="block text-xs tracking-[0.14em] text-white/60 uppercase">
-                      Website
-                    </span>
-                    <a
-                      href={contact.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-semibold text-accent-surface hover:text-white"
-                    >
-                      {contact.website.replace(/^https?:\/\//, '')}
-                      <ExternalIcon size={13} aria-hidden="true" />
-                      <span className="sr-only"> (opens in a new tab)</span>
-                    </a>
-                  </li>
-                </ul>
+                <dl className="mt-5 space-y-3 text-[0.9375rem]">
+                  <div>
+                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Phone</dt>
+                    <dd className="font-semibold text-ink-strong">{contact.phone}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Email</dt>
+                    <dd>
+                      <a
+                        href={`mailto:${contact.email}`}
+                        className="font-semibold text-brand hover:underline"
+                      >
+                        {contact.email}
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Website</dt>
+                    <dd>
+                      <a
+                        href={contact.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-semibold text-brand hover:underline"
+                      >
+                        {contact.website.replace(/^https?:\/\//, '')}
+                        <ExternalIcon size={13} aria-hidden="true" />
+                        <span className="sr-only"> (opens in a new tab)</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
               </section>
             </div>
           </div>

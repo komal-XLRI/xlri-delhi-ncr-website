@@ -61,13 +61,13 @@ const SECTIONS = [
  * the incubator around the programme — and runs to fourteen sections. The
  * design makes that length navigable rather than cutting it:
  *
- *  1. **Hero** (navy) — the full name, Apply and Brochure as the two primary
+ *  1. **Hero** — the full name, Apply and Brochure as the two primary
  *     actions, beside the cohort photograph; then an index of the page's
  *     sections, as the Delhi page has, set as chips.
  *  2. **About** — the introduction beside the IEV intro video, with four facts
  *     the text states.
  *  3. **Admissions** — who should apply, then eligibility, the three selection
- *     rounds as numbered steps, and the important dates (navy band).
+ *     rounds as numbered steps, and the important dates.
  *  4. **People** — the program team, student representatives.
  *  5. **Ecosystem** — XCEED and its benefits, partners, events (with the
  *     ElevateX recap), activities, and the startups the programme produced.
@@ -97,10 +97,9 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
   return (
     <article aria-labelledby="programme-heading">
       {/* ---------------- hero ---------------- */}
-      <section className="purpose-band text-ink-inverse">
-        <div className={`${MEASURE} pt-8 pb-12 md:pt-10 md:pb-16`}>
+      <section className="bg-surface">
+        <div className={`${MEASURE} pt-10 pb-12 md:pt-14 md:pb-16`}>
           <Breadcrumbs
-            className="[&_a]:text-white/70 [&_a:hover]:text-white [&_span]:text-white"
             items={[
               { label: 'Home', href: routes.home },
               { label: 'Academics' },
@@ -110,15 +109,13 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
 
           <div className="mt-10 grid grid-cols-1 items-center gap-10 md:mt-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-14">
             <div>
-              <p className="text-sm font-semibold tracking-[0.18em] text-accent-surface uppercase">
-                {content.school} · PGDMIEV
-              </p>
+              <p className={EYEBROW}>{content.school} · PGDMIEV</p>
               <h1
                 id="programme-heading"
-                className="mt-4 font-serif text-[clamp(2.25rem,4.6vw,3.5rem)] leading-[1.04] tracking-[-0.03em] text-balance text-white"
+                className="mt-3 font-serif text-[clamp(2.25rem,4.6vw,3.5rem)] leading-[1.04] tracking-[-0.03em] text-balance text-brand"
               >
                 {content.title}
-                <span className="mt-2 block text-[0.62em] leading-[1.15] text-accent-surface">
+                <span className="mt-3 block text-[0.56em] leading-[1.2] text-ink-strong">
                   {content.subtitle}
                 </span>
               </h1>
@@ -129,9 +126,9 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   href={content.apply.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-full bg-accent-surface py-2.5 pr-5 pl-2.5 text-[0.9375rem] font-semibold text-brand-950 transition-colors duration-200 hover:bg-white"
+                  className="group inline-flex items-center gap-3 rounded-full bg-brand py-2.5 pr-5 pl-2.5 text-[0.9375rem] font-semibold text-white transition-colors duration-200 hover:bg-brand-950"
                 >
-                  <span className="flex size-8 items-center justify-center rounded-full bg-brand-950 text-accent-surface">
+                  <span className="flex size-8 items-center justify-center rounded-full bg-accent-surface text-brand-950">
                     <ArrowRightIcon
                       size={15}
                       aria-hidden="true"
@@ -145,10 +142,10 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   href={content.brochure.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/35 px-5 py-3 text-[0.9375rem] font-semibold text-white transition-colors duration-200 hover:border-accent-surface hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-full border border-border-strong px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-200 hover:border-brand hover:text-brand"
                 >
                   {content.brochure.label}
-                  <span className="font-normal text-white/70">{content.brochure.meta}</span>
+                  <span className="font-normal text-ink-muted">{content.brochure.meta}</span>
                   <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </div>
@@ -174,13 +171,13 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             </div>
           </div>
 
-          <nav aria-label="On this page" className="mt-12 border-t border-white/15 pt-6 md:mt-14">
+          <nav aria-label="On this page" className="mt-12 border-t border-border pt-6 md:mt-14">
             <ul className="flex flex-wrap gap-2">
               {SECTIONS.map((section) => (
                 <li key={section.id}>
                   <a
                     href={`#${section.id}`}
-                    className="inline-block rounded-full border border-white/20 px-3.5 py-1.5 text-sm text-white/85 transition-colors duration-200 hover:border-accent-surface hover:text-white"
+                    className="inline-block rounded-full border border-border px-3.5 py-1.5 text-sm text-ink transition-colors duration-200 hover:border-brand hover:text-brand"
                   >
                     {section.label}
                   </a>
@@ -322,27 +319,27 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
       <section
         id="important-dates"
         aria-labelledby="dates-heading"
-        className="purpose-band scroll-mt-40 text-ink-inverse"
+        className="scroll-mt-40 bg-surface-subtle"
       >
         <div className={`${MEASURE} py-14 md:py-16`}>
-          <h2
-            id="dates-heading"
-            className="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-white"
-          >
+          <h2 id="dates-heading" className={H2}>
             {dates.heading}
           </h2>
+          <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <ol className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             {dates.items.map((item) => (
               <li
                 key={item.id}
-                className="rounded-[8px] border border-white/15 bg-white/[0.06] p-6 md:p-7"
+                className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 md:p-7"
               >
-                <p className="text-sm font-semibold tracking-[0.14em] text-accent-surface uppercase">
+                <p className="text-sm font-semibold tracking-[0.14em] text-accent-700 uppercase">
                   {item.label}
                 </p>
-                <p className="mt-3 font-serif text-2xl leading-snug text-white">{item.value}</p>
+                <p className="mt-3 font-serif text-2xl leading-snug text-ink-strong">
+                  {item.value}
+                </p>
                 {item.tentative ? (
-                  <p className="mt-2 text-sm text-white/65 italic">Tentative</p>
+                  <p className="mt-2 text-sm text-ink-muted italic">Tentative</p>
                 ) : null}
               </li>
             ))}
@@ -351,7 +348,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             href={content.apply.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-accent-surface hover:text-white"
+            className="mt-8 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-brand hover:text-brand-950"
           >
             {content.apply.label}
             <ExternalIcon size={14} aria-hidden="true" />
@@ -626,28 +623,26 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
       </section>
 
       {/* ---------------- alumni ---------------- */}
-      <section aria-labelledby="alumni-heading" className="purpose-band text-ink-inverse">
+      <section aria-labelledby="alumni-heading" className="bg-surface-subtle">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-16">
             <div>
-              <h2
-                id="alumni-heading"
-                className="font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-white"
-              >
+              <h2 id="alumni-heading" className={H2}>
                 {alumni.heading}
               </h2>
-              <p className="mt-4 text-white/80">{alumni.lead}</p>
+              <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
+              <p className="mt-5 text-ink-muted">{alumni.lead}</p>
             </div>
             <ul className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
               {alumni.benefits.map((benefit) => (
                 <li
                   key={benefit}
-                  className="flex gap-3 text-[0.9375rem] leading-[1.65] text-white/90"
+                  className="flex gap-3 rounded-[8px] border border-border bg-surface p-4 text-[0.9375rem] leading-[1.65] text-ink"
                 >
                   <CheckIcon
                     size={16}
                     aria-hidden="true"
-                    className="mt-1 shrink-0 text-accent-surface"
+                    className="mt-1 shrink-0 text-accent-700"
                   />
                   <span>{benefit}</span>
                 </li>
