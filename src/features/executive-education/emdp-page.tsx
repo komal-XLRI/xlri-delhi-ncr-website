@@ -7,65 +7,36 @@ import { EmdpExplorer } from '@/features/executive-education/emdp-explorer';
 import type { EmdpPage as EmdpContent } from '@/types/emdp';
 
 const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
-
-const delay = (ms: number) => ({ ['--enter-delay' as string]: `${String(ms)}ms` });
-
-/** Fan positions for the three hero posters: back, middle, front. */
-const FAN = [
-  'rotate-[-8deg] -translate-x-[9%] translate-y-[5%] group-hover:rotate-[-12deg] group-hover:-translate-x-[16%]',
-  'rotate-[5deg] translate-x-[8%] -translate-y-[4%] group-hover:rotate-[9deg] group-hover:translate-x-[15%]',
-  'rotate-0 group-hover:-translate-y-[6%]',
-];
+const H2 =
+  'font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-ink-strong';
 
 /**
  * Executive Education › EMDP.
  *
  * ## The model
  *
- * The Delhi page is an introduction and two lists of programme posters. The
- * design gives that more voice in the brand's own palette:
+ * The light treatment of the programme and About pages:
  *
- *  1. **Hero** (navy, with brand-blue and accent-green light drifting behind
- *     it) — "EMDP" large in a white-to-green gradient, the expansion, the
- *     introduction, and the live counts. On the right, three upcoming posters
- *     fanned like cards, which spread on hover.
+ *  1. **Introduction** — "EMDP", the expansion and the introduction, with the
+ *     live counts, beside the poster of the next upcoming programme.
  *  2. **Offerings** — the introduction's three kinds of programme, as three
- *     numbered tiles.
- *  3. **Programmes** — upcoming and on-going as tabs with a sliding pill.
- *     Upcoming programmes are larger and marked "Admissions open"; each card
- *     lifts on hover, draws a brand-to-accent rule across its top, and puts
- *     Apply and Know More where the eye lands.
+ *     cards on the tinted band.
+ *  3. **Programmes** — upcoming and on-going as tabs; each card carries its
+ *     poster, details, and Apply and Know More.
  *
- * Motion plays on load or on interaction, never on scroll (the client asked
- * for no scroll reveals outside the homepage), and all of it stops under
- * `prefers-reduced-motion`. See `.enter` and `.drift` in styles/base.css.
+ * No scroll or load animation; hover states only.
  */
 export function EmdpPage({ content }: { content: EmdpContent }) {
   const upcoming = content.programmes.filter((p) => p.status === 'upcoming');
   const ongoing = content.programmes.length - upcoming.length;
-  const fan = upcoming.slice(0, 3).reverse();
+  const featured = upcoming[0] ?? content.programmes[0];
 
   return (
     <article aria-labelledby="emdp-heading">
-      {/* ---------------- hero ---------------- */}
-      <section className="relative isolate overflow-hidden bg-brand-950 text-ink-inverse">
-        {/* Ambient light: two blurred discs in the brand colours, drifting. */}
-        <span
-          aria-hidden="true"
-          className="drift absolute -top-40 -left-32 -z-10 size-[34rem] rounded-full bg-brand opacity-60 blur-3xl"
-        />
-        <span
-          aria-hidden="true"
-          className="drift absolute -right-24 -bottom-48 -z-10 size-[28rem] rounded-full bg-accent-surface opacity-25 blur-3xl [animation-delay:-8s]"
-        />
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.08)_1px,transparent_0)] [background-size:28px_28px]"
-        />
-
-        <div className={`${MEASURE} pt-8 pb-16 md:pt-10 md:pb-24`}>
+      {/* ---------------- introduction ---------------- */}
+      <section className="bg-surface">
+        <div className={`${MEASURE} pt-10 pb-14 md:pt-14 md:pb-20`}>
           <Breadcrumbs
-            className="[&_a]:text-white/70 [&_a:hover]:text-white [&_span]:text-white"
             items={[
               { label: 'Home', href: routes.home },
               { label: 'Executive Education' },
@@ -73,110 +44,87 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
             ]}
           />
 
-          <div className="mt-10 grid grid-cols-1 items-center gap-14 md:mt-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+          <div className="mt-8 grid grid-cols-1 items-center gap-10 md:mt-10 lg:grid-cols-2 lg:gap-14">
             <div>
-              <p
-                className="enter text-sm font-semibold tracking-[0.18em] text-accent-surface uppercase"
-                style={delay(0)}
-              >
+              <p className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
                 {content.eyebrow}
               </p>
-              <h1
-                id="emdp-heading"
-                className="enter mt-4 font-serif leading-none tracking-[-0.04em]"
-                style={delay(90)}
-              >
-                <span className="block bg-gradient-to-r from-white via-white to-accent-surface bg-clip-text text-[clamp(4rem,11vw,7.5rem)] text-transparent">
+              <h1 id="emdp-heading" className="mt-3 font-serif tracking-[-0.035em]">
+                <span className="block text-[clamp(2.75rem,6vw,4.5rem)] leading-none text-brand">
                   {content.title}
                 </span>
-                <span className="mt-3 block text-[clamp(1.375rem,2.6vw,2rem)] leading-tight tracking-[-0.02em] text-white">
+                <span className="mt-3 block text-xl leading-snug tracking-[-0.01em] text-ink-strong md:text-[1.375rem]">
                   {content.expansion}
                 </span>
               </h1>
-              <p
-                className="enter mt-7 max-w-[38rem] text-base leading-[1.85] text-white/80 md:text-lg"
-                style={delay(180)}
-              >
+              <span aria-hidden="true" className="mt-6 block h-[3px] w-14 bg-accent-surface" />
+              <p className="mt-6 text-base leading-[1.85] text-ink md:text-justify md:text-[1.0625rem] md:hyphens-auto">
                 {content.intro}
               </p>
 
-              <div className="enter mt-9 flex flex-wrap items-center gap-4" style={delay(270)}>
+              <div className="mt-8 flex flex-wrap items-center gap-5">
                 <a
                   href="#programmes"
-                  className="group inline-flex items-center gap-3 rounded-full bg-accent-surface py-2.5 pr-5 pl-2.5 text-[0.9375rem] font-semibold text-brand-950 transition-colors duration-200 hover:bg-white"
+                  className="inline-flex items-center gap-3 rounded-full bg-brand py-2.5 pr-5 pl-2.5 text-[0.9375rem] font-semibold text-white transition-colors duration-200 hover:bg-brand-950"
                 >
-                  <span className="flex size-8 items-center justify-center rounded-full bg-brand-950 text-accent-surface">
-                    <ArrowRightIcon
-                      size={15}
-                      aria-hidden="true"
-                      className="rotate-90 transition-transform duration-200 group-hover:translate-y-0.5"
-                    />
+                  <span className="flex size-8 items-center justify-center rounded-full bg-accent-surface text-brand-950">
+                    <ArrowRightIcon size={15} aria-hidden="true" className="rotate-90" />
                   </span>
                   Explore programmes
                 </a>
-                <p className="flex items-center gap-4 text-sm text-white/75">
+                <p className="flex items-center gap-4 text-sm text-ink-muted">
                   <span>
-                    <span className="font-serif text-2xl text-white">{upcoming.length}</span>{' '}
+                    <span className="font-serif text-2xl text-brand">{upcoming.length}</span>{' '}
                     upcoming
                   </span>
-                  <span aria-hidden="true" className="h-6 w-px bg-white/25" />
+                  <span aria-hidden="true" className="h-6 w-px bg-border-strong" />
                   <span>
-                    <span className="font-serif text-2xl text-white">{ongoing}</span> on-going
+                    <span className="font-serif text-2xl text-brand">{ongoing}</span> on-going
                   </span>
                 </p>
               </div>
             </div>
 
-            {/* The poster fan. Decorative: every poster is in the list below. */}
-            <div
-              aria-hidden="true"
-              className="enter group relative mx-auto hidden aspect-[861/520] w-[78%] max-w-[28rem] sm:block lg:mr-[6%]"
-              style={delay(200)}
-            >
-              {fan.map((programme, i) => (
-                <div
-                  key={programme.id}
-                  className={`absolute inset-0 overflow-hidden rounded-[10px] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/20 transition-transform duration-700 ease-[cubic-bezier(0.2,0.7,0.2,1)] ${FAN[i] ?? ''}`}
-                >
+            {featured ? (
+              <div className="relative">
+                <span
+                  aria-hidden="true"
+                  className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 md:block"
+                />
+                <div className="relative overflow-hidden rounded-[8px] shadow-raised">
                   <Image
-                    src={programme.poster.src}
-                    width={programme.poster.width}
-                    height={programme.poster.height}
+                    src={featured.poster.src}
+                    width={featured.poster.width}
+                    height={featured.poster.height}
+                    // The poster is repeated, with its title, in the list below.
                     alt=""
-                    preload={i === fan.length - 1}
-                    sizes="480px"
-                    className="h-full w-full object-cover"
+                    // Above the fold — the LCP element. `preload` replaces the
+                    // deprecated `priority` in Next 16.
+                    preload
+                    sizes="(min-width: 1280px) 568px, (min-width: 1024px) 46vw, 100vw"
+                    className="h-auto w-full"
                   />
                 </div>
-              ))}
-            </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
 
       {/* ---------------- offerings ---------------- */}
-      <section aria-label="What the programmes offer" className="bg-surface">
-        <div className={`${MEASURE} -mt-8 pb-4 md:-mt-12`}>
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
-            {content.offerings.map((offering, i) => (
+      <section aria-labelledby="offerings-heading" className="bg-surface-subtle">
+        <div className={`${MEASURE} py-14 md:py-20`}>
+          <h2 id="offerings-heading" className={H2}>
+            What we offer
+          </h2>
+          <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
+          <ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {content.offerings.map((offering) => (
               <li
                 key={offering.id}
-                className="enter group relative overflow-hidden rounded-[10px] border border-border bg-surface p-6 shadow-raised transition-colors duration-300 hover:border-brand md:p-7"
-                style={delay(320 + i * 90)}
+                className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 md:p-7"
               >
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand to-accent-surface"
-                />
-                <span
-                  aria-hidden="true"
-                  className="font-serif text-4xl leading-none text-brand/15 transition-colors duration-300 group-hover:text-accent-surface"
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <h2 className="mt-3 font-serif text-xl text-ink-strong md:text-2xl">
-                  {offering.title}
-                </h2>
+                <h3 className="font-serif text-xl text-ink-strong md:text-2xl">{offering.title}</h3>
                 <p className="mt-2 text-[0.9375rem] leading-[1.7] text-ink">{offering.text}</p>
               </li>
             ))}
@@ -191,19 +139,10 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
         className="scroll-mt-40 bg-surface"
       >
         <div className={`${MEASURE} py-14 md:py-20`}>
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <p className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
-                Programmes
-              </p>
-              <h2
-                id="programmes-heading"
-                className="mt-2 font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-ink-strong"
-              >
-                Find your programme
-              </h2>
-            </div>
-          </div>
+          <h2 id="programmes-heading" className={H2}>
+            Programmes
+          </h2>
+          <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <div className="mt-8">
             <EmdpExplorer programmes={content.programmes} />
           </div>
