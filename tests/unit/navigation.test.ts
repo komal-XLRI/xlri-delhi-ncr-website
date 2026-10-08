@@ -72,7 +72,7 @@ describe('agreed information architecture', () => {
   it('surfaces the two orphaned legacy sections found in the audit (§16 F4)', () => {
     const ids = walkNavTree(PRIMARY_NAV).map((n) => n.id);
     expect(ids).toContain('sustainability-group'); // 15 orphaned legacy pages
-    expect(ids).toContain('academics-library'); // ~10 scattered legacy pages
+    expect(ids).toContain('campus-library'); // ~10 scattered legacy pages
   });
 });
 
@@ -165,7 +165,7 @@ describe('internal links match the typed route map', () => {
     for (const node of allNavLinks()) {
       const href = node.href ?? '';
       if (classifyHref(href, SITE) !== 'internal') continue;
-      const root = href.split('?')[0]?.split('/')[1] ?? '';
+      const root = href.split(/[?#]/)[0]?.split('/')[1] ?? '';
       expect(knownRoots, `"${node.id}" points at an unknown section: ${href}`).toContain(root);
     }
   });

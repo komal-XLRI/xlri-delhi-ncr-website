@@ -85,6 +85,13 @@ const about: PrimaryNavItem = {
   ],
 };
 
+/**
+ * Academics — the Delhi-NCR site's "Academic Programmes" menu (2026-10-08):
+ * its two programmes, each under its school, and the admission process. The
+ * admission links go to the institute site (xlri.ac.in), where that
+ * information is maintained once for both campuses; the Link primitive marks
+ * them external automatically. Library & Resources moved to Campus Life.
+ */
 const academics: PrimaryNavItem = {
   id: 'academics',
   label: 'Academics',
@@ -92,132 +99,81 @@ const academics: PrimaryNavItem = {
   layout: 'columns-3',
   children: [
     {
-      id: 'academics-postgraduate',
-      label: 'Postgraduate Programmes',
+      id: 'academics-business',
+      label: 'School of Business',
       children: [
-        { id: 'academics-overview', label: 'All Programmes', href: '/academics' },
         {
           id: 'programme-pgdm-bm',
-          label: 'PGDM (Business Management)',
+          label: 'PGDM BM',
           href: '/academics/programmes/pgdm-business-management',
         },
-        { id: 'programme-mba', label: 'MBA', href: '/academics/programmes/mba' },
-        {
-          id: 'programme-pgdm-wp',
-          label: 'PGDM for Working Professionals',
-          href: '/academics/programmes/pgdm-working-professionals',
-        },
+      ],
+    },
+    {
+      id: 'academics-entrepreneurship',
+      label: 'XLRI – Entrepreneurship',
+      children: [
         {
           id: 'programme-pgdm-ie',
-          label: 'PGDM (Innovation & Entrepreneurship)',
+          label: 'PGDM - IEV',
           href: '/academics/programmes/pgdm-innovation-entrepreneurship',
         },
-        {
-          id: 'programme-pgp-hr',
-          label: 'PGP (Digital HR & People Analytics)',
-          href: '/academics/programmes/pgp-digital-hr-people-analytics',
-        },
       ],
     },
     {
-      id: 'academics-doctoral',
-      label: 'Doctoral',
+      id: 'academics-admission-process',
+      label: 'XLRI Admission Process',
       children: [
         {
-          id: 'programme-dba',
-          label: 'Doctor of Business Administration',
-          href: '/academics/programmes/dba',
+          id: 'admission-process-overview',
+          label: 'Overview',
+          href: 'https://xlri.ac.in/academic-programmes/admission-procedure/overview',
         },
-        { id: 'programme-fpm', label: 'Fellow Programme (FPM)', href: '/academics/programmes/fpm' },
-      ],
-    },
-    {
-      id: 'academics-library',
-      label: 'Library & Resources',
-      children: [
-        { id: 'library-home', label: 'Library', href: '/academics/library' },
-        { id: 'library-databases', label: 'Databases', href: '/academics/library/databases' },
-        { id: 'library-ejournals', label: 'E-Journals', href: '/academics/library/e-journals' },
-        { id: 'library-ebooks', label: 'E-Books & E-Learning', href: '/academics/library/e-books' },
         {
-          id: 'library-research-tools',
-          label: 'Research Support Tools',
-          href: '/academics/library/research-support',
+          id: 'admission-process-prospectus',
+          label: 'Admission Prospectus',
+          href: 'https://firebasestorage.googleapis.com/v0/b/xlri-firebase-e5d2d.appspot.com/o/CMS_MediaLibrary%2FAdmissions%20e-Prospectus%202026.pdf2025-11-21T06%3A05%3A55.041Z?alt=media&token=7a67a83e-b077-4dd4-a16e-a7fa02df3875',
         },
-        { id: 'academics-calendar', label: 'Academic Calendar', href: '/academics/calendar' },
+        {
+          id: 'admission-process-xat-bulletin',
+          label: 'XAT Bulletin',
+          href: 'https://xlri.ac.in/academic-programmes/admission-procedure/xat-bulletin',
+        },
+        {
+          id: 'admission-process-xat-papers',
+          label: 'XAT Question Papers',
+          href: 'https://xlri.ac.in/academic-programmes/xat-question-papers',
+        },
       ],
     },
   ],
 };
 
+/**
+ * Executive Education — the Delhi-NCR site's menu (2026-10-08): its three
+ * offerings under XLEAD. Delhi's panel also carries a photograph of the MDP
+ * block; it is left out, as on the other panels.
+ */
 const executiveEducation: PrimaryNavItem = {
   id: 'executive-education',
   label: 'Executive Education',
   href: '/executive-education',
-  layout: 'columns-3',
-  featured: {
-    eyebrow: 'For organisations',
-    title: 'Custom programmes',
-    description: 'Programmes designed around a single organisation’s needs.',
-    href: '/executive-education/custom',
-  },
+  layout: 'columns-2',
   children: [
     {
-      id: 'exec-leadership',
-      label: 'Leadership & Strategy',
+      id: 'exec-xlead',
+      label: 'XLEAD – XLRI Leadership Education and Development',
       children: [
-        { id: 'exec-overview', label: 'All Programmes', href: '/executive-education' },
+        { id: 'exec-emdp', label: 'EMDP', href: '/executive-education/emdp' },
         {
-          id: 'exec-strategy-leadership',
-          label: 'Strategy & Leadership',
-          href: '/executive-education/strategy-leadership',
+          id: 'exec-mdp',
+          label: 'Management Development Programmes',
+          href: '/executive-education/management-development-programmes',
         },
         {
-          id: 'exec-general-management',
-          label: 'General Management',
-          href: '/executive-education/general-management',
-        },
-      ],
-    },
-    {
-      id: 'exec-people',
-      label: 'People & Analytics',
-      children: [
-        {
-          id: 'exec-strategic-hr',
-          label: 'Strategic HR Leadership',
-          href: '/executive-education/strategic-hr-leadership',
-        },
-        {
-          id: 'exec-digital-hr',
-          label: 'Digital HR & People Analytics',
-          href: '/executive-education/digital-hr-people-analytics',
-        },
-      ],
-    },
-    {
-      id: 'exec-sector',
-      label: 'Finance & Healthcare',
-      children: [
-        {
-          id: 'exec-applied-finance',
-          label: 'Applied Business Finance',
-          href: '/executive-education/applied-business-finance',
-        },
-        {
-          id: 'exec-financial-analytics',
-          label: 'Financial Data Analytics & ML',
-          href: '/executive-education/financial-data-analytics',
-        },
-        {
-          id: 'exec-healthcare-strategy',
-          label: 'Global Strategy & Leadership for Healthcare',
-          href: '/executive-education/healthcare-strategy-leadership',
-        },
-        {
-          id: 'exec-healthcare-digital',
-          label: 'Digital Transformation in Healthcare',
-          href: '/executive-education/healthcare-digital-transformation',
+          id: 'exec-in-company',
+          label: 'In-Company Programmes',
+          href: '/executive-education/in-company-programmes',
         },
       ],
     },
@@ -412,7 +368,7 @@ const campusLife: PrimaryNavItem = {
   id: 'campus-life',
   label: 'Campus Life',
   href: '/campus-life',
-  layout: 'columns-3',
+  layout: 'columns-4',
   children: [
     {
       id: 'campus-experience',
@@ -472,6 +428,22 @@ const campusLife: PrimaryNavItem = {
         },
       ],
     },
+    {
+      id: 'campus-library',
+      label: 'Library & Resources',
+      children: [
+        { id: 'library-home', label: 'Library', href: '/academics/library' },
+        { id: 'library-databases', label: 'Databases', href: '/academics/library/databases' },
+        { id: 'library-ejournals', label: 'E-Journals', href: '/academics/library/e-journals' },
+        { id: 'library-ebooks', label: 'E-Books & E-Learning', href: '/academics/library/e-books' },
+        {
+          id: 'library-research-tools',
+          label: 'Research Support Tools',
+          href: '/academics/library/research-support',
+        },
+        { id: 'academics-calendar', label: 'Academic Calendar', href: '/academics/calendar' },
+      ],
+    },
   ],
 };
 
@@ -483,23 +455,35 @@ const placements: PrimaryNavItem = {
   children: [
     {
       id: 'placements-outcomes',
-      label: 'Outcomes',
+      label: 'Placements',
       children: [
         { id: 'placements-overview', label: 'Overview', href: '/placements' },
-        { id: 'placements-reports', label: 'Placement Reports', href: '/placements/reports' },
-        { id: 'placements-record', label: 'Student Placement Record', href: '/placements/record' },
+        {
+          id: 'placements-final',
+          label: 'Final Placements 2024–26',
+          href: '/placements/final-placements',
+        },
+        {
+          id: 'placements-summer',
+          label: 'Summer Internships 2025',
+          href: '/placements/summer-internships',
+        },
       ],
     },
     {
-      id: 'placements-recruiters',
-      label: 'For Recruiters',
+      id: 'placements-archive',
+      label: 'Reports',
       children: [
         {
-          id: 'placements-recruit',
-          label: 'Recruit at XLRI Delhi-NCR',
-          href: '/placements/recruit',
+          id: 'placements-reports',
+          label: 'Placement Reports & Audits',
+          href: '/placements/reports',
         },
-        { id: 'placements-contact', label: 'Placement Office', href: '/placements/contact' },
+        {
+          id: 'placements-recruiters',
+          label: 'Our Recruiters',
+          href: '/placements#recruiters',
+        },
       ],
     },
   ],
@@ -554,7 +538,7 @@ export const UTILITY_NAV: readonly UtilityNavItem[] = [
   { id: 'utility-students', label: 'Students', href: '/students' },
   { id: 'utility-faculty-staff', label: 'Faculty & Staff', href: '/faculty' },
   { id: 'utility-alumni', label: 'Alumni', href: 'https://xlrialumni.xlri.ac.in/' },
-  { id: 'utility-recruiters', label: 'Recruiters', href: '/placements/recruit' },
+  { id: 'utility-recruiters', label: 'Recruiters', href: '/placements#recruiters' },
   { id: 'utility-giving', label: 'Giving', href: 'https://xlri.ac.in/giving-to-xlri' },
 ];
 

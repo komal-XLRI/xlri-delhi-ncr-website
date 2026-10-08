@@ -61,6 +61,9 @@ export const routes = {
 
   placements: {
     index: '/placements',
+    final: '/placements/final-placements',
+    summer: '/placements/summer-internships',
+    reports: '/placements/reports',
   },
 
   sustainability: {
