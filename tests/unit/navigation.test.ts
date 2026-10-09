@@ -21,7 +21,9 @@ describe('tree integrity', () => {
     // Not arbitrary: §2.2 found that twelve items cannot sit balanced at 1280px
     // with premium type. The agreed eight became nine when Centres was promoted
     // to the top level to match the Delhi-NCR site (2026-10-07), and ten when
-    // Sustainability followed it the same day — each time after checking the
+    // Sustainability followed it the same day, and eleven when Admissions gave
+    // way to Giving to XLRI and Alumni Portal joined, and ten again when News &
+    // Events was removed (both 2026-10-09) — each time after checking the
     // bar still fits at 1280px. If this fails, the IA decision is being
     // reopened again — which is fine, but it should be deliberate.
     expect(PRIMARY_NAV).toHaveLength(10);
@@ -54,8 +56,18 @@ describe('tree integrity', () => {
 });
 
 describe('agreed information architecture', () => {
-  it('keeps Admissions in the primary bar (Q11)', () => {
-    expect(PRIMARY_NAV.map((i) => i.id)).toContain('admissions');
+  it('replaces Admissions with Giving to XLRI, last in the bar (2026-10-09)', () => {
+    const ids = PRIMARY_NAV.map((i) => i.id);
+    expect(ids).not.toContain('admissions');
+    expect(ids.at(-1)).toBe('giving');
+  });
+
+  it('links Alumni Portal straight to the alumni site, just before Giving', () => {
+    const ids = PRIMARY_NAV.map((i) => i.id);
+    expect(ids.indexOf('alumni-portal')).toBe(ids.indexOf('giving') - 1);
+    const portal = PRIMARY_NAV.find((i) => i.id === 'alumni-portal');
+    expect(portal?.children).toBeUndefined();
+    expect(classifyHref(portal?.href ?? '', SITE)).toBe('sibling');
   });
 
   it('gives Sustainability its own primary item, after Centres, not a column under About', () => {
@@ -65,8 +77,8 @@ describe('agreed information architecture', () => {
     expect(about?.children?.map((c) => c.id)).not.toContain('about-sustainability');
   });
 
-  it('gives News & Events the eighth primary slot (Q12)', () => {
-    expect(PRIMARY_NAV.map((i) => i.id)).toContain('news-events');
+  it('has no News & Events item (removed 2026-10-09, superseding Q12)', () => {
+    expect(PRIMARY_NAV.map((i) => i.id)).not.toContain('news-events');
   });
 
   it('surfaces the two orphaned legacy sections found in the audit (§16 F4)', () => {
@@ -77,25 +89,20 @@ describe('agreed information architecture', () => {
 });
 
 describe('cross-property links (Q11 / §16 F1)', () => {
-  it('sends shared admissions information to the institute site rather than duplicating it', () => {
-    const admissions = PRIMARY_NAV.find((i) => i.id === 'admissions');
-    const institute = admissions?.children?.find((c) => c.id === 'admissions-institute');
-    expect(institute).toBeDefined();
-
-    const links = institute?.children ?? [];
-    expect(links.length).toBeGreaterThan(0);
+  it('sends every Giving to XLRI link to the institute site', () => {
+    const giving = PRIMARY_NAV.find((i) => i.id === 'giving');
+    const links = giving?.children?.flatMap((group) => group.children ?? []) ?? [];
+    expect(links.map((l) => l.label)).toEqual([
+      'Donation',
+      'Scholarship Fund',
+      'Endowment Fund',
+      'Committee',
+      'Future Plans',
+    ]);
     for (const link of links) {
       expect(classifyHref(link.href ?? '', SITE), `${link.id} should leave for xlri.ac.in`).toBe(
         'sibling',
       );
-    }
-  });
-
-  it('keeps Delhi-NCR-specific admissions content on this site', () => {
-    const admissions = PRIMARY_NAV.find((i) => i.id === 'admissions');
-    const local = admissions?.children?.find((c) => c.id === 'admissions-delhi');
-    for (const link of local?.children ?? []) {
-      expect(classifyHref(link.href ?? '', SITE), `${link.id} should be internal`).toBe('internal');
     }
   });
 
@@ -155,7 +162,6 @@ describe('internal links match the typed route map', () => {
         routes.news.index,
         routes.events.index,
         routes.contact,
-        routes.search,
         routes.sitemap,
         '/students',
         '/policies',

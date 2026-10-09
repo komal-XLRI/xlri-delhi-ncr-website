@@ -46,13 +46,17 @@ export function FoundingFathersGrid({ fathers }: { fathers: readonly FoundingFat
   return (
     <>
       <ul className="-mx-2.5 flex flex-wrap justify-center md:-mx-4 xl:-mx-7">
-        {fathers.map((father) => (
-          <li key={father.id} className="mb-8 w-1/2 px-2.5 md:mb-12 md:px-4 lg:w-1/4 xl:px-7">
+        {fathers.map((father, index) => (
+          <li
+            key={father.id}
+            className="rise-in mb-8 w-1/2 px-2.5 md:mb-12 md:px-4 lg:w-1/4 xl:px-7"
+            style={{ ['--rise-delay' as string]: `${String(200 + index * 140)}ms` }}
+          >
             <button
               type="button"
               onClick={() => setSelected(father)}
               aria-haspopup="dialog"
-              className="group block w-full cursor-pointer rounded-sm text-left"
+              className="group block w-full cursor-pointer rounded-sm text-left transition-transform duration-500 ease-out motion-safe:hover:-translate-y-1"
             >
               {/*
                 Square, not the portraits' native 270×315. At the native ratio
@@ -60,17 +64,29 @@ export function FoundingFathersGrid({ fathers }: { fathers: readonly FoundingFat
                 "Know More" links fell off the bottom of a laptop screen. The
                 crop sits a little above centre so it trims chest, not hair.
               */}
-              <span className="block aspect-square overflow-hidden rounded-[5px] bg-surface-subtle">
-                <Image
-                  src={father.portrait.src}
-                  width={father.portrait.width}
-                  height={father.portrait.height}
-                  alt=""
-                  sizes="(min-width: 1280px) 240px, (min-width: 1024px) 22vw, 45vw"
-                  className="size-full object-cover object-[center_30%] transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.04]"
+              <span className="relative block">
+                {/* A lime frame that slides out from behind the photograph. */}
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 translate-x-1 translate-y-1 rounded-[5px] border-2 border-accent-surface opacity-0 transition-[opacity,translate] duration-500 ease-out group-hover:translate-x-2.5 group-hover:translate-y-2.5 group-hover:opacity-100 group-focus-visible:translate-x-2.5 group-focus-visible:translate-y-2.5 group-focus-visible:opacity-100"
                 />
+                <span className="relative block aspect-square overflow-hidden rounded-[5px] bg-surface-subtle">
+                  <Image
+                    src={father.portrait.src}
+                    width={father.portrait.width}
+                    height={father.portrait.height}
+                    alt=""
+                    sizes="(min-width: 1280px) 240px, (min-width: 1024px) 22vw, 45vw"
+                    className="size-full object-cover object-[center_30%] transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
+                  />
+                  {/* A lime bar across the foot. */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100"
+                  />
+                </span>
               </span>
-              <span className="mt-4 block font-serif text-lg leading-tight text-ink-strong md:text-[1.375rem]">
+              <span className="mt-4 block font-serif text-lg leading-tight text-ink-strong transition-colors duration-500 group-hover:text-brand group-focus-visible:text-brand md:text-[1.375rem]">
                 {father.name}
               </span>
               <span className="mt-1.5 block text-sm font-medium text-ink-muted md:text-base">
@@ -97,7 +113,7 @@ export function FoundingFathersGrid({ fathers }: { fathers: readonly FoundingFat
         className="m-0 size-full max-h-none max-w-none items-center justify-center bg-transparent p-4 backdrop:bg-black/55 open:flex"
       >
         {selected ? (
-          <div className="relative z-10 max-h-full w-full max-w-[43.75rem] overflow-y-auto rounded-[5px] bg-surface p-6 text-ink shadow-raised sm:px-12 sm:py-10">
+          <div className="rise-in relative z-10 max-h-full w-full max-w-[43.75rem] overflow-y-auto rounded-[5px] border-t-4 border-accent-surface bg-surface p-6 text-ink shadow-raised sm:px-12 sm:py-10">
             <button
               type="button"
               onClick={() => dialog.current?.close()}

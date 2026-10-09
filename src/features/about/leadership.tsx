@@ -31,6 +31,11 @@ const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
  * does not have yet; a card that leads to a 404 is worse than one that leads
  * nowhere. Add the `href` when `/faculty/[slug]` exists.
  *
+ * Motion is light and slow, in the brand colours: the title rule draws and
+ * the leaders rise in on load (`.rule-draw`, `.rise-in`), and a portrait
+ * slides a lime frame out from behind it on hover. None of it plays under
+ * `prefers-reduced-motion`.
+ *
  * A Server Component; only the tabs hydrate.
  */
 export function LeadershipPage({ content }: { content: Leadership }) {
@@ -55,6 +60,10 @@ export function LeadershipPage({ content }: { content: Leadership }) {
           >
             {content.title}
           </h1>
+          <span
+            aria-hidden="true"
+            className="rule-draw mt-4 block h-[3px] w-14 origin-left bg-accent-surface"
+          />
 
           <h2
             id="core-team-heading"
@@ -72,22 +81,35 @@ export function LeadershipPage({ content }: { content: Leadership }) {
             {coreTeam.leaders.map((leader, index) => (
               <li
                 key={leader.id}
-                className="group grid grid-cols-[6.5rem_1fr] items-center gap-5 sm:block"
+                className="rise-in group grid grid-cols-[6.5rem_1fr] items-center gap-5 sm:block"
+                style={{ ['--rise-delay' as string]: `${String(200 + index * 160)}ms` }}
               >
-                <div className="overflow-hidden rounded-[5px] bg-surface-subtle">
-                  <Image
-                    src={leader.portrait.src}
-                    width={leader.portrait.width}
-                    height={leader.portrait.height}
-                    alt={`Portrait of ${leader.name}`}
-                    // The first card is above the fold on every viewport.
-                    {...(index === 0 ? { preload: true } : {})}
-                    sizes="(min-width: 1280px) 370px, (min-width: 640px) 30vw, 104px"
-                    className="aspect-square w-full object-cover object-[center_20%] transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.04]"
+                <div className="relative">
+                  {/* A lime frame that slides out from behind the portrait. */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 hidden translate-x-1 translate-y-1 rounded-[5px] border-2 border-accent-surface opacity-0 transition-[opacity,translate] duration-700 ease-out group-hover:translate-x-3 group-hover:translate-y-3 group-hover:opacity-100 sm:block"
                   />
+                  <div className="relative overflow-hidden rounded-[5px] bg-surface-subtle">
+                    <Image
+                      src={leader.portrait.src}
+                      width={leader.portrait.width}
+                      height={leader.portrait.height}
+                      alt={`Portrait of ${leader.name}`}
+                      // The first card is above the fold on every viewport.
+                      {...(index === 0 ? { preload: true } : {})}
+                      sizes="(min-width: 1280px) 370px, (min-width: 640px) 30vw, 104px"
+                      className="aspect-square w-full object-cover object-[center_20%] transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
+                    />
+                    {/* A lime bar across the foot. */}
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <p className="font-serif text-lg leading-tight text-ink-strong sm:mt-4 md:text-[1.375rem]">
+                  <p className="font-serif text-lg leading-tight text-ink-strong transition-colors duration-500 group-hover:text-brand sm:mt-4 md:text-[1.375rem]">
                     {leader.name}
                   </p>
                   <p className="mt-1.5 text-sm font-medium text-ink-muted md:text-base">
@@ -109,6 +131,7 @@ export function LeadershipPage({ content }: { content: Leadership }) {
           >
             {committees.heading}
           </h2>
+          <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <div className="mt-8 md:mt-10">
             <CommitteeTabs groups={committees.groups} />
           </div>

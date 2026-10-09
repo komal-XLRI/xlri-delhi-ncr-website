@@ -54,8 +54,12 @@ export function PdfCard({ doc }: { doc: PlacementDocument }) {
       href={doc.href}
       target="_blank"
       rel={doc.local ? 'noopener' : 'noopener noreferrer'}
-      className="group flex h-full flex-col items-center rounded-[8px] border border-border bg-surface px-5 pt-7 pb-6 text-center transition-[transform,border-color,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:shadow-raised"
+      className="group relative flex h-full flex-col items-center overflow-hidden rounded-[8px] border border-border bg-surface px-5 pt-7 pb-6 text-center transition-[translate,border-color,box-shadow] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1"
     >
+      <span
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
+      />
       <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-300 group-hover:bg-brand group-hover:text-white">
         <BookIcon size={18} aria-hidden="true" />
       </span>

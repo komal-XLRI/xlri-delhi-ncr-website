@@ -24,7 +24,10 @@ const H2 =
  *  3. **Programmes** — upcoming and on-going as tabs; each card carries its
  *     poster, details, and Apply and Know More.
  *
- * No scroll or load animation; hover states only.
+ * Motion is light and slow, in the brand colours, as on the About pages: the
+ * title rule draws and the poster rises in on load (`.rule-draw`,
+ * `.rise-in`), and cards lift on hover. Nothing plays on scroll, and none of
+ * it under `prefers-reduced-motion`.
  */
 export function EmdpPage({ content }: { content: EmdpContent }) {
   const upcoming = content.programmes.filter((p) => p.status === 'upcoming');
@@ -57,7 +60,10 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
                   {content.expansion}
                 </span>
               </h1>
-              <span aria-hidden="true" className="mt-6 block h-[3px] w-14 bg-accent-surface" />
+              <span
+                aria-hidden="true"
+                className="rule-draw mt-6 block h-[3px] w-14 origin-left bg-accent-surface"
+              />
               <p className="mt-6 text-base leading-[1.85] text-ink md:text-justify md:text-[1.0625rem] md:hyphens-auto">
                 {content.intro}
               </p>
@@ -86,10 +92,13 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
             </div>
 
             {featured ? (
-              <div className="relative">
+              <div
+                className="rise-in group relative"
+                style={{ ['--rise-delay' as string]: '200ms' }}
+              >
                 <span
                   aria-hidden="true"
-                  className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 md:block"
+                  className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
                 />
                 <div className="relative overflow-hidden rounded-[8px] shadow-raised">
                   <Image
@@ -102,7 +111,7 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
                     // deprecated `priority` in Next 16.
                     preload
                     sizes="(min-width: 1280px) 568px, (min-width: 1024px) 46vw, 100vw"
-                    className="h-auto w-full"
+                    className="h-auto w-full transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.03]"
                   />
                 </div>
               </div>
@@ -119,12 +128,20 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
           </h2>
           <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
-            {content.offerings.map((offering) => (
+            {content.offerings.map((offering, index) => (
               <li
                 key={offering.id}
-                className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 md:p-7"
+                className="group rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:border-t-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1 md:p-7"
               >
-                <h3 className="font-serif text-xl text-ink-strong md:text-2xl">{offering.title}</h3>
+                <span
+                  aria-hidden="true"
+                  className="font-serif text-3xl leading-none text-accent-700/40 transition-colors duration-500 group-hover:text-accent-700"
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h3 className="mt-3 font-serif text-xl text-ink-strong transition-colors duration-500 group-hover:text-brand md:text-2xl">
+                  {offering.title}
+                </h3>
                 <p className="mt-2 text-[0.9375rem] leading-[1.7] text-ink">{offering.text}</p>
               </li>
             ))}

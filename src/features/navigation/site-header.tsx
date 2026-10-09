@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 
-import { MenuIcon, SearchIcon } from '@/components/ui/icon';
+import { MenuIcon } from '@/components/ui/icon';
 import { Link } from '@/components/ui/link';
 import { PRIMARY_NAV, UTILITY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
@@ -10,7 +10,9 @@ import { MegaMenuPanel } from '@/features/navigation/mega-menu-panel';
 import { MobileNavEnhancer } from '@/features/navigation/mobile-nav';
 import { NoticeMarquee } from '@/features/navigation/notice-marquee';
 import { PrimaryNav } from '@/features/navigation/primary-nav';
+import { SiteSearch } from '@/features/search/site-search';
 import { SiteWordmark } from '@/features/navigation/site-wordmark';
+import { getSearchIndex } from '@/services/search';
 import type { NavNode } from '@/types/navigation';
 
 /**
@@ -137,14 +139,6 @@ function MobileNavSheet() {
             ))}
           </ul>
 
-          <NextLink
-            href="/search"
-            className="mt-6 flex items-center gap-2 border-t border-border pt-6 text-base font-medium text-ink-strong"
-          >
-            <SearchIcon size={18} />
-            Search this site
-          </NextLink>
-
           <ul className="mt-6 space-y-2 border-t border-border pt-6">
             {UTILITY_NAV.map((item) => (
               <li key={`m-${item.id}`}>
@@ -160,7 +154,9 @@ function MobileNavSheet() {
   );
 }
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  // Built once at build time; searched in the browser (see services/search).
+  const searchIndex = await getSearchIndex();
   const entries = PRIMARY_NAV.map((item) => ({
     id: item.id,
     label: item.label,
@@ -192,15 +188,10 @@ export function SiteHeader() {
               Present at every width. Below lg the label collapses to
               `sr-only`, leaving an icon-only control that keeps its accessible
               name — search is a primary way into a site this size and must not
-              disappear on a phone.
+              disappear on a phone. It opens a panel beneath it, as on the
+              institute site; there is no results page.
             */}
-            <NextLink
-              href="/search"
-              className="inline-flex h-11 items-center gap-2 rounded-sm text-xs font-medium text-ink-strong transition-colors hover:text-brand lg:h-9 lg:border lg:border-border lg:px-3 lg:hover:border-brand"
-            >
-              <SearchIcon size={18} />
-              <span className="sr-only lg:not-sr-only">Search</span>
-            </NextLink>
+            <SiteSearch index={searchIndex} />
 
             <MobileNavSheet />
             <MobileNavEnhancer detailsId="mobile-nav" />

@@ -88,8 +88,8 @@ export function CommitteeTabs({ groups }: { groups: readonly CommitteeGroup[] })
                 <span
                   aria-hidden="true"
                   className={cn(
-                    'absolute inset-x-0 bottom-0 h-[3px] rounded-full bg-accent-surface transition-opacity',
-                    selected ? 'opacity-100' : 'opacity-0',
+                    'absolute inset-x-0 bottom-0 h-[3px] origin-left rounded-full bg-accent-surface transition-[scale] duration-500 ease-out',
+                    selected ? 'scale-x-100' : 'scale-x-0',
                   )}
                 />
               </button>
@@ -111,8 +111,8 @@ export function CommitteeTabs({ groups }: { groups: readonly CommitteeGroup[] })
             {group.code}. {group.title}
           </h3>
           <div className="mt-6 columns-1 gap-6 md:columns-2 xl:columns-3">
-            {group.committees.map((committee) => (
-              <CommitteeCard key={committee.code} committee={committee} />
+            {group.committees.map((committee, order) => (
+              <CommitteeCard key={committee.code} committee={committee} order={order} />
             ))}
           </div>
         </div>
@@ -121,61 +121,69 @@ export function CommitteeTabs({ groups }: { groups: readonly CommitteeGroup[] })
   );
 }
 
-function CommitteeCard({ committee }: { committee: Committee }) {
+function CommitteeCard({ committee, order }: { committee: Committee; order: number }) {
   const paired = committee.members.some((member) => typeof member !== 'string');
 
   return (
-    <section
-      aria-labelledby={`committee-${committee.code}`}
-      className="mb-6 break-inside-avoid rounded-[5px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-5 md:p-6"
+    // The wrapper rises in each time its tab is shown (an animation restarts
+    // when its element comes back from `display: none`); the card inside lifts
+    // on hover. Separate elements, because both use `translate`.
+    <div
+      className="rise-in mb-6 break-inside-avoid"
+      style={{ ['--rise-delay' as string]: `${String(Math.min(order, 8) * 90)}ms` }}
     >
-      <h4
-        id={`committee-${committee.code}`}
-        className="flex gap-2.5 text-sm leading-snug font-semibold tracking-[0.06em] text-ink-strong uppercase"
+      <section
+        aria-labelledby={`committee-${committee.code}`}
+        className="rounded-[5px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-5 transition-[translate,box-shadow] duration-500 ease-out hover:shadow-raised motion-safe:hover:-translate-y-0.5 md:p-6"
       >
-        <span className="shrink-0 text-brand">{committee.code}</span>
-        <span>{committee.name}</span>
-      </h4>
+        <h4
+          id={`committee-${committee.code}`}
+          className="flex gap-2.5 text-sm leading-snug font-semibold tracking-[0.06em] text-ink-strong uppercase"
+        >
+          <span className="shrink-0 text-brand">{committee.code}</span>
+          <span>{committee.name}</span>
+        </h4>
 
-      {paired ? (
-        <dl className="mt-4 divide-y divide-border">
-          {committee.members.map((member) =>
-            typeof member === 'string' ? null : (
-              <div key={`${member.role}-${member.name}`} className="py-2.5 first:pt-0 last:pb-0">
-                <dt className="text-xs font-medium tracking-wide text-ink-muted uppercase">
-                  {member.role}
-                </dt>
-                <dd
+        {paired ? (
+          <dl className="mt-4 divide-y divide-border">
+            {committee.members.map((member) =>
+              typeof member === 'string' ? null : (
+                <div key={`${member.role}-${member.name}`} className="py-2.5 first:pt-0 last:pb-0">
+                  <dt className="text-xs font-medium tracking-wide text-ink-muted uppercase">
+                    {member.role}
+                  </dt>
+                  <dd
+                    className={cn(
+                      'mt-0.5 text-[0.9375rem] text-ink',
+                      isConvenor(member.name) && 'font-semibold text-ink-strong',
+                    )}
+                  >
+                    {member.name}
+                  </dd>
+                </div>
+              ),
+            )}
+          </dl>
+        ) : (
+          <ol className="mt-4 divide-y divide-border">
+            {committee.members.map((member, index) => {
+              const text = typeof member === 'string' ? member : `${member.role} — ${member.name}`;
+              return (
+                <li
+                  key={`${index}-${text}`}
                   className={cn(
-                    'mt-0.5 text-[0.9375rem] text-ink',
-                    isConvenor(member.name) && 'font-semibold text-ink-strong',
+                    'py-2 text-[0.9375rem] leading-snug text-ink first:pt-0 last:pb-0',
+                    isConvenor(text) && 'font-semibold text-ink-strong',
                   )}
                 >
-                  {member.name}
-                </dd>
-              </div>
-            ),
-          )}
-        </dl>
-      ) : (
-        <ol className="mt-4 divide-y divide-border">
-          {committee.members.map((member, index) => {
-            const text = typeof member === 'string' ? member : `${member.role} — ${member.name}`;
-            return (
-              <li
-                key={`${index}-${text}`}
-                className={cn(
-                  'py-2 text-[0.9375rem] leading-snug text-ink first:pt-0 last:pb-0',
-                  isConvenor(text) && 'font-semibold text-ink-strong',
-                )}
-              >
-                {text}
-              </li>
-            );
-          })}
-        </ol>
-      )}
-    </section>
+                  {text}
+                </li>
+              );
+            })}
+          </ol>
+        )}
+      </section>
+    </div>
   );
 }
 

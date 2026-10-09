@@ -28,6 +28,11 @@ const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
  *     Excellence instead: the same heading and row of cards, pointing
  *     somewhere true.
  *
+ * Motion is light and slow, in the brand colours, as on the other pages: the
+ * title rule draws and the banner, text and panel rise in on load
+ * (`.rule-draw`, `.rise-in`); the banner zooms and the cards lift on hover.
+ * Nothing plays on scroll, and none of it under `prefers-reduced-motion`.
+ *
  * Server Component; no client JavaScript.
  */
 export function CentreBriefPage({ centre }: { centre: CentreBrief }) {
@@ -50,24 +55,40 @@ export function CentreBriefPage({ centre }: { centre: CentreBrief }) {
           >
             {centre.title}
           </h1>
-          <span aria-hidden="true" className="mx-auto mt-6 block h-[3px] w-14 bg-accent-surface" />
+          <span
+            aria-hidden="true"
+            className="rule-draw mx-auto mt-6 block h-[3px] w-14 bg-accent-surface"
+          />
 
-          <div className="group relative mt-10 aspect-[4/3] overflow-hidden rounded-[8px] sm:aspect-[16/9] md:mt-12 lg:aspect-[11/4]">
-            <Image
-              src={centre.image.src}
-              alt={centre.image.alt}
-              fill
-              // Above the fold — the LCP element. `preload` replaces the
-              // deprecated `priority` in Next 16.
-              preload
-              sizes="(min-width: 1280px) 1184px, 100vw"
-              style={{ objectPosition: centre.imagePosition }}
-              className="object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.03]"
+          <div
+            className="rise-in group relative mt-10 md:mt-12"
+            style={{ ['--rise-delay' as string]: '200ms' }}
+          >
+            {/* The offset lime frame used on the other page photographs. */}
+            <span
+              aria-hidden="true"
+              className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
             />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] sm:aspect-[16/9] lg:aspect-[11/4]">
+              <Image
+                src={centre.image.src}
+                alt={centre.image.alt}
+                fill
+                // Above the fold — the LCP element. `preload` replaces the
+                // deprecated `priority` in Next 16.
+                preload
+                sizes="(min-width: 1280px) 1184px, 100vw"
+                style={{ objectPosition: centre.imagePosition }}
+                className="object-cover transition-transform duration-[1200ms] ease-out motion-safe:group-hover:scale-[1.03]"
+              />
+            </div>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-10 md:mt-14 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-16">
-            <div className="space-y-5 text-base leading-[1.9] text-ink md:text-justify md:text-[1.0625rem] md:hyphens-auto">
+            <div
+              className="rise-in space-y-5 text-base leading-[1.9] text-ink md:text-justify md:text-[1.0625rem] md:hyphens-auto"
+              style={{ ['--rise-delay' as string]: '350ms' }}
+            >
               {centre.paragraphs.map((paragraph, index) => (
                 <p
                   key={paragraph.slice(0, 40)}
@@ -84,7 +105,8 @@ export function CentreBriefPage({ centre }: { centre: CentreBrief }) {
 
             <aside
               aria-labelledby="glance-heading"
-              className="self-start rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface-subtle p-6 md:p-8"
+              className="rise-in self-start rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface-subtle p-6 transition-[box-shadow] duration-500 hover:shadow-raised md:p-8"
+              style={{ ['--rise-delay' as string]: '450ms' }}
             >
               <h2
                 id="glance-heading"
@@ -119,23 +141,29 @@ export function CentreBriefPage({ centre }: { centre: CentreBrief }) {
             >
               {centre.related.heading}
             </h2>
+            <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           </div>
 
           <ul className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-10 lg:grid-cols-4">
             {centre.related.items.map((item, index) => {
               const external = /^https?:\/\//.test(item.href);
               const card =
-                'group flex h-full flex-col justify-between gap-8 rounded-[8px] border border-border bg-surface p-6 transition-[border-color,box-shadow] duration-300 hover:border-brand hover:shadow-raised';
+                'group relative flex h-full flex-col justify-between gap-8 overflow-hidden rounded-[8px] border border-border bg-surface p-6 transition-[translate,border-color,box-shadow] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1';
               const body = (
                 <>
+                  {/* A lime bar that sweeps across the top of the card on hover. */}
                   <span
                     aria-hidden="true"
-                    className="font-serif text-3xl leading-none text-border-strong/70"
+                    className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="font-serif text-3xl leading-none text-border-strong/70 transition-colors duration-500 group-hover:text-accent-700"
                   >
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <span className="flex items-end justify-between gap-4">
-                    <span className="font-serif text-xl leading-snug text-ink-strong">
+                    <span className="font-serif text-xl leading-snug text-ink-strong transition-colors duration-500 group-hover:text-brand">
                       {item.label}
                     </span>
                     {external ? (

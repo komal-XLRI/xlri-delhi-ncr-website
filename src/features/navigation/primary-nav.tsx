@@ -174,7 +174,7 @@ export function PrimaryNav({ items }: { items: PrimaryNavEntry[] }) {
               <li key={item.id}>
                 <NextLink
                   href={item.href ?? '#'}
-                  className="inline-flex h-full items-center border-b-[3px] border-transparent px-3 py-5 text-sm font-medium text-nav-ink transition-colors duration-200 hover:border-nav-indicator hover:text-nav-ink-hover xl:px-2.5 xl:whitespace-nowrap"
+                  className="inline-flex h-full items-center border-b-[3px] border-transparent px-3 py-5 text-sm font-medium text-nav-ink transition-colors duration-200 hover:border-nav-indicator hover:text-nav-ink-hover xl:px-2 xl:text-[0.8125rem] xl:whitespace-nowrap 2xl:px-2.5 2xl:text-sm"
                   onPointerEnter={closeNow}
                 >
                   {item.label}
@@ -200,13 +200,13 @@ export function PrimaryNav({ items }: { items: PrimaryNavEntry[] }) {
                   if (event.pointerType === 'mouse') scheduleOpen(item.id);
                 }}
                 className={cn(
-                  // Ten items since Centres and Sustainability were promoted (D4
-                  // revisited). From `xl` up every label holds one line at 10px a
-                  // side: ~1,216px for the whole bar, measured. At 12px it was
-                  // 1,256px and ran to within 12px of the screen edge at 1280.
+                  // Eleven items since Alumni Portal joined (D4 revisited,
+                  // 2026-10-09). From `2xl` up every label holds one line at 14px
+                  // and 10px a side. Between `xl` and `2xl` that bar ran ~27px past
+                  // the screen edge, so there it steps down to 13px and 8px a side.
                   // Between `lg` and `xl` the two-word labels wrap to two lines,
                   // as they could before.
-                  'inline-flex h-full items-center gap-1.5 px-3 py-5 text-sm font-medium xl:px-2.5 xl:whitespace-nowrap',
+                  'inline-flex h-full items-center gap-1.5 px-3 py-5 text-sm font-medium xl:px-2 xl:text-[0.8125rem] xl:whitespace-nowrap 2xl:px-2.5 2xl:text-sm',
                   // A rule along the bottom edge that fills in on hover and turns
                   // accent green when the panel opens. On the dark field the
                   // accent finally has somewhere legal to live: 6.45:1 here

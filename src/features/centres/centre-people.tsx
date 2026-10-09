@@ -98,17 +98,17 @@ export function CentrePeople({
                 aria-haspopup="dialog"
                 className="group flex w-full flex-col items-center text-center"
               >
-                <span className="block w-28 overflow-hidden rounded-full bg-surface-subtle ring-1 ring-border transition-shadow duration-300 group-hover:ring-4 group-hover:ring-accent-surface md:w-36">
+                <span className="block w-28 overflow-hidden rounded-full bg-surface-subtle ring-1 ring-border transition-shadow duration-500 group-hover:ring-4 group-hover:ring-accent-surface md:w-36">
                   <Image
                     src={person.portrait.src}
                     width={person.portrait.width}
                     height={person.portrait.height}
                     alt=""
                     sizes="144px"
-                    className="aspect-square w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.05]"
+                    className="aspect-square w-full object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.05]"
                   />
                 </span>
-                <span className="mt-4 block font-serif text-lg leading-tight text-ink-strong">
+                <span className="mt-4 block font-serif text-lg leading-tight text-ink-strong transition-colors duration-500 group-hover:text-brand">
                   {person.name}
                 </span>
                 <span className="mt-1.5 block text-[0.8125rem] leading-snug text-ink-muted md:text-sm">

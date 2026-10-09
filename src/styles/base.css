@@ -2528,10 +2528,10 @@
   /* ===========================================================================
      Brand motif — the triangle artwork as a ground.
 
-     `public/brand/motif-triangles.svg` placed six times across the homepage and
-     the footer, at 5–10% opacity, behind everything. It is a signature, not an
-     illustration: at these strengths nobody looks *at* it, they only notice
-     that the page has a texture and that the texture is the same one throughout.
+     `public/brand/motif-triangles.svg` — the triangle cluster from the
+     institute's own homepage, redrawn — placed five times across the homepage,
+     small and at the artwork's own translucency. It is a signature: the same
+     mark, the same way up, in the empty corners of the page.
 
      ## Why this is an attribute and not an element
 
@@ -2548,13 +2548,12 @@
        • **Nothing to conflict.** The diff on each section is one attribute, so
          a section can be rewritten around it without the motif being in the way.
 
-     ## Every placement is different, deliberately
+     ## Same mark, different corners
 
-     The brief that asked for this asked for it *not* to repeat, and the failure
-     mode of a motif like this is five identical corners that read as a
-     watermark. So each instance changes position, size, rotation, mirroring and
-     how much of it the edge cuts off. The variation is the whole point; the
-     placements below are a composition, not a set of defaults to reuse.
+     The artwork is never rotated or mirrored — it is a mark, and it reads
+     the right way up, as on xlri.ac.in. What changes is the corner, the size,
+     and how much of it the section edge cuts off, so five instances do not
+     read as one watermark.
 
      ## Light grounds only
 
@@ -2613,111 +2612,86 @@
      * shrinks with the viewport instead of swallowing a phone screen, and no
      * placement needs a breakpoint of its own.
      */
-    --motif-w: 18rem;
-    width: min(var(--motif-w), 58vw);
-    aspect-ratio: 150 / 200;
+    --motif-w: 7.5rem;
+    width: min(var(--motif-w), 24vw);
+    aspect-ratio: 122 / 170;
   }
 
   /* ---------------------------------------------------------------------------
-     The six placements.
+     The five placements.
+
+     All the same way up, as on the institute's site: no rotation, no
+     mirroring. Each sits in empty space at a section edge and is cut by that
+     edge, never laid over body text.
      ------------------------------------------------------------------------ */
 
-  /**
-   * Academic programmes — top-right, above and behind the section's own action.
-   *
-   * Pushed far enough out that the top edge takes the widest part of the
-   * artwork and only the sparse lower half reaches the content. The pill it
-   * passes behind is an opaque white surface, so it interrupts the motif rather
-   * than competing with it.
+  /*
+   * Wide screens only. The placements sit in the page's side gutters, and
+   * below `lg` there are no gutters to sit in: the cluster would land on the
+   * content.
    */
+  @media (max-width: 1023.98px) {
+    [data-motif]::before {
+      display: none;
+    }
+  }
+
+  /** Academic programmes — top-right, in the gutter beside the heading. */
   [data-motif='academics']::before {
-    --motif-w: 19rem;
-    --motif-drift: 0 -1.1rem;
-    inset-block-start: -7rem;
-    inset-inline-end: -5.5rem;
-    rotate: 14deg;
-    opacity: 0.11;
+    --motif-w: 7.5rem;
+    --motif-drift: 0 -0.6rem;
+    inset-block-start: 2.5rem;
+    inset-inline-end: 0;
   }
 
-  /**
-   * News — bottom-left, mirrored and the largest of the six, with well over half
-   * of it outside the band.
-   *
-   * This is the "floating between sections" instance: it sits at the foot of the
-   * one grey band on the page, so it reads as belonging to the seam between News
-   * and Accreditations rather than to either section. Lowest opacity of the six
-   * because `--surface-subtle` is already a tint and the motif is a second one
-   * on top of it.
-   */
+  /** News — bottom-left, cut by the foot of the grey band. */
   [data-motif='news']::before {
-    --motif-w: 27rem;
-    --motif-drift: 0.9rem -0.6rem;
-    inset-block-end: -9rem;
-    inset-inline-start: -8rem;
-    rotate: -6deg;
-    scale: -1 1;
-    opacity: 0.09;
+    --motif-w: 8.5rem;
+    --motif-drift: 0.4rem -0.4rem;
+    inset-block-end: -1.5rem;
+    inset-inline-start: 0;
   }
 
-  /**
-   * Latest events — bottom-right, flipped vertically, and the smallest.
-   *
-   * One corner only, and the corner nothing else uses: the closing call to
-   * action is centred and the carousel controls sit in the header. Vertical
-   * mirroring turns the cascade upside down, so this instance does not read as
-   * the Academics one moved.
-   */
+  /** Latest events — bottom-right, the smallest. */
   [data-motif='events']::before {
-    --motif-w: 15rem;
-    --motif-drift: -0.7rem -0.9rem;
-    inset-block-end: -4.5rem;
-    inset-inline-end: -3.5rem;
-    rotate: -20deg;
-    scale: 1 -1;
-    opacity: 0.1;
+    --motif-w: 6.5rem;
+    --motif-drift: -0.4rem -0.5rem;
+    inset-block-end: 0;
+    inset-inline-end: 0;
   }
 
-  /**
-   * Student testimonials — top-left, mirrored, mostly outside the container.
-   *
-   * The section's content starts well inside the measure — a portrait column
-   * capped at 22rem beside a quote — which leaves the left gutter genuinely
-   * empty. This fills it and lets the section edge cut the artwork vertically,
-   * a different crop from every other placement.
-   */
+  /** Student testimonials — top-left, in the empty left gutter. */
   [data-motif='insights']::before {
-    --motif-w: 21rem;
-    --motif-drift: 0.6rem 1rem;
-    inset-block-start: -4rem;
-    inset-inline-start: -9rem;
-    rotate: 8deg;
-    scale: -1 1;
-    opacity: 0.11;
+    --motif-w: 7.5rem;
+    --motif-drift: 0.3rem 0.5rem;
+    inset-block-start: 2rem;
+    inset-inline-start: 0;
   }
 
   /**
-   * About — bottom-left of the intro block, cropped by the purpose band.
-   *
-   * The only instance whose host is not a whole section. `overflow: hidden`
-   * makes an element a scroll container and that kills `position: sticky` in
-   * any descendant, and About's vision column is sticky — so the motif sits on
-   * the intro block instead, which contains no sticky and ends exactly where
-   * the navy purpose band begins.
-   *
-   * That boundary is the point. Every other placement is cut off by a section
-   * edge against more white; this one is cut off against a dark band, so the
-   * crop reads as deliberate rather than as the page running out.
-   *
-   * Un-mirrored and barely rotated: it is the calmest of the five, because it
-   * is also the one sitting closest to a full column of body text.
+   * About — bottom-right of the intro block, under the photograph's caption,
+   * cut by the purpose band below. The host is the intro block rather than
+   * the section because the vision column further down is sticky, and
+   * `overflow: hidden` on the section would break it.
    */
   [data-motif='about']::before {
-    --motif-w: 22rem;
-    --motif-drift: 0.5rem -0.8rem;
-    inset-block-end: -6rem;
-    inset-inline-start: -2rem;
-    rotate: -4deg;
-    opacity: 0.1;
+    --motif-w: 7.5rem;
+    --motif-drift: 0 -0.5rem;
+    inset-block-end: 0;
+    inset-inline-end: 0;
+  }
+
+  /**
+   * Faculty profile — bottom-left, in the empty gutter under the Brief Profile,
+   * cut by the foot of the page as on the institute's profile pages. The host
+   * clips with `overflow: clip` rather than `hidden`: clip makes no scroll
+   * container, so the sticky Brief Profile column inside keeps working.
+   */
+  [data-motif='profile']::before {
+    --motif-w: 8.5rem;
+    --motif-drift: 0.3rem -0.5rem;
+    inset-block-end: -1.25rem;
+    inset-inline-start: 0;
   }
 
   /* ---------------------------------------------------------------------------
@@ -2725,12 +2699,8 @@
      ------------------------------------------------------------------------ */
 
   /**
-   * A slow float. `translate` only — never `transform`.
-   *
-   * Five of the six placements are oriented with `rotate` and `scale`, and the
-   * three are separate properties that compose. Animating the `transform`
-   * shorthand instead would overwrite that orientation on the first frame and
-   * snap every mirrored instance back the right way round.
+   * A slow float, a few pixels each way. `translate` only, so a placement can
+   * still add its own `transform` without the animation overwriting it.
    */
   @keyframes motif-drift {
     to {
@@ -2778,6 +2748,10 @@
         --motif-drift-time: 11s;
         --motif-drift-offset: -1s;
       }
+      [data-motif='profile']::before {
+        --motif-drift-time: 10s;
+        --motif-drift-offset: -3s;
+      }
     }
   }
 
@@ -2794,5 +2768,90 @@
    */
   :root[data-contrast='high'] [data-motif]::before {
     display: none;
+  }
+}
+
+@layer components {
+  /**
+   * Page-load entrances for the About pages: `.rise-in` lifts an element into
+   * place once (stagger with `--rise-delay`), `.rule-draw` draws a short rule
+   * out from its centre. Load only, never on scroll, and skipped entirely
+   * under `prefers-reduced-motion`. `translate` and `scale` rather than
+   * `transform`, so a hover transform on the same element still composes.
+   */
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      translate: 0 14px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  @keyframes rule-draw {
+    from {
+      scale: 0 1;
+    }
+    to {
+      scale: 1 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .rise-in {
+      animation: rise-in 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+      animation-delay: var(--rise-delay, 0ms);
+    }
+
+    .rule-draw {
+      animation: rule-draw 1.1s 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+  }
+}
+
+@layer components {
+  /**
+   * A slim scrollbar for small scrolling lists (the header search panel): a
+   * thin rounded thumb in a soft brand blue that firms up on hover, no track,
+   * no arrow buttons.
+   *
+   * Chrome, Edge and Safari get the -webkit- rules, which are the only way to
+   * drop the arrow buttons on Windows. Firefox, which has no -webkit- scrollbar,
+   * gets the standard properties instead — and only Firefox, because Chrome
+   * ignores every -webkit- rule once `scrollbar-color` is set and would bring
+   * the arrows back.
+   */
+  @supports not selector(::-webkit-scrollbar) {
+    .scroll-slim {
+      scrollbar-width: thin;
+      scrollbar-color: color-mix(in srgb, var(--color-brand) 35%, transparent) transparent;
+    }
+
+    .scroll-slim:hover {
+      scrollbar-color: color-mix(in srgb, var(--color-brand) 65%, transparent) transparent;
+    }
+  }
+
+  .scroll-slim::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scroll-slim::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .scroll-slim::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scroll-slim::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-brand) 35%, transparent);
+  }
+
+  .scroll-slim:hover::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--color-brand) 65%, transparent);
   }
 }

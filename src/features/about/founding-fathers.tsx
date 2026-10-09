@@ -31,7 +31,11 @@ export function FoundingFathersPage({ content }: { content: FoundingFathers }) {
           >
             {content.title}
           </h1>
-          <p className="mt-3 text-lg font-semibold text-ink-strong md:text-xl">
+          <span
+            aria-hidden="true"
+            className="rule-draw mx-auto mt-4 block h-[3px] w-14 bg-accent-surface"
+          />
+          <p className="mt-4 text-lg font-semibold text-ink-strong md:text-xl">
             {content.subtitle}
           </p>
           <p className="mt-2 text-base leading-[1.75] text-ink md:text-[1.0625rem]">

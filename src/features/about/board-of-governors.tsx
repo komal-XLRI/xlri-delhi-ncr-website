@@ -5,6 +5,11 @@ import { routes } from '@/constants/routes';
 import type { BoardMember, BoardOfGovernors } from '@/types/board-of-governors';
 
 const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
+/** Load stagger for the cards, capped so a long board does not keep arriving. */
+const rise = (index: number) => ({
+  ['--rise-delay' as string]: `${String(200 + Math.min(index, 10) * 110)}ms`,
+});
+
 const GRID = 'grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-3 md:gap-x-6 lg:grid-cols-4 lg:gap-x-7';
 
 /**
@@ -29,7 +34,15 @@ const GRID = 'grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-3 md:gap-x-6 lg:grid
  *
  * The text block has a minimum height so the rule beneath each card lines up
  * across a row even when one designation runs to four lines and the next to
- * two. Server Component; no client JavaScript.
+ * two.
+ *
+ * Motion is light and slow, in the brand colours: the title rule draws and
+ * the cards rise in on load (`.rule-draw`, `.rise-in` — on the list item,
+ * because the card itself lifts on hover and both use `translate`), and a
+ * card lifts, turns its border lime and sweeps a lime bar under its photo on
+ * hover. None of it plays under `prefers-reduced-motion`.
+ *
+ * Server Component; no client JavaScript.
  */
 export function BoardOfGovernorsPage({ content }: { content: BoardOfGovernors }) {
   const { officeBearers, members, invitees } = content;
@@ -51,11 +64,15 @@ export function BoardOfGovernorsPage({ content }: { content: BoardOfGovernors })
         >
           {content.title}
         </h1>
+        <span
+          aria-hidden="true"
+          className="rule-draw mt-4 block h-[3px] w-14 origin-left bg-accent-surface"
+        />
 
         {/* ---------------- office-bearers ---------------- */}
         <ul aria-label="Office-bearers" className={`${GRID} mt-8 md:mt-10`}>
           {officeBearers.map(({ position, member }, index) => (
-            <li key={position} className="flex flex-col">
+            <li key={position} className="rise-in flex flex-col" style={rise(index)}>
               <p className="mb-3 font-serif text-lg text-ink-strong md:text-xl">{position}</p>
               <MemberCard member={member} preload={index === 0} />
             </li>
@@ -70,9 +87,10 @@ export function BoardOfGovernorsPage({ content }: { content: BoardOfGovernors })
           >
             {members.heading}
           </h2>
+          <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <ul className={`${GRID} mt-6 md:mt-8`}>
-            {members.people.map((member) => (
-              <li key={member.id} className="flex">
+            {members.people.map((member, index) => (
+              <li key={member.id} className="rise-in flex" style={rise(index + 4)}>
                 <MemberCard member={member} />
               </li>
             ))}
@@ -88,9 +106,10 @@ export function BoardOfGovernorsPage({ content }: { content: BoardOfGovernors })
             >
               {invitees.heading}
             </h2>
+            <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
             <ul className={`${GRID} mt-6 md:mt-8`}>
-              {invitees.people.map((member) => (
-                <li key={member.id} className="flex">
+              {invitees.people.map((member, index) => (
+                <li key={member.id} className="rise-in flex" style={rise(index + 4)}>
                   <MemberCard member={member} />
                 </li>
               ))}
@@ -104,8 +123,8 @@ export function BoardOfGovernorsPage({ content }: { content: BoardOfGovernors })
 
 function MemberCard({ member, preload = false }: { member: BoardMember; preload?: boolean }) {
   return (
-    <div className="group flex w-full flex-1 flex-col overflow-hidden rounded-[5px] border border-border bg-surface">
-      <div className="overflow-hidden border-b border-border bg-surface-subtle">
+    <div className="group flex w-full flex-1 flex-col overflow-hidden rounded-[5px] border border-border bg-surface transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1">
+      <div className="relative overflow-hidden border-b border-border bg-surface-subtle">
         <Image
           src={member.portrait.src}
           width={member.portrait.width}
@@ -113,11 +132,16 @@ function MemberCard({ member, preload = false }: { member: BoardMember; preload?
           alt={`Portrait of ${member.name}`}
           {...(preload ? { preload: true } : {})}
           sizes="(min-width: 1280px) 280px, (min-width: 1024px) 23vw, (min-width: 768px) 30vw, 46vw"
-          className="aspect-square w-full object-cover object-[center_25%] transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.04]"
+          className="aspect-square w-full object-cover object-[center_25%] transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
+        />
+        {/* A lime bar along the rule. */}
+        <span
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
         />
       </div>
       <div className="flex-1 p-4 md:min-h-[8.75rem] md:p-5">
-        <p className="text-[0.9375rem] leading-snug font-semibold text-ink-strong md:text-base">
+        <p className="text-[0.9375rem] leading-snug font-semibold text-ink-strong transition-colors duration-500 group-hover:text-brand md:text-base">
           {member.name}
         </p>
         <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-ink-muted md:text-sm">

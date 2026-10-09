@@ -76,6 +76,12 @@ const SECTIONS = [
  * Both videos are `preload="none"`: at 45 MB and 103 MB, nothing is fetched
  * until a visitor presses play.
  *
+ * Motion is light and slow, in the brand colours, as on the About pages: the
+ * title rule draws and the photograph and facts rise in on load (`.rule-draw`,
+ * `.rise-in`); cards lift with a soft shadow on hover, some drawing a lime bar
+ * across the top; photographs zoom slightly. None of it plays under
+ * `prefers-reduced-motion`.
+ *
  * Server Component; no client JavaScript. The FAQ is native `<details>`.
  */
 export function PgdmIevPage({ content }: { content: IevContent }) {
@@ -119,7 +125,10 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   {content.subtitle}
                 </span>
               </h1>
-              <span aria-hidden="true" className="mt-7 block h-[3px] w-14 bg-accent-surface" />
+              <span
+                aria-hidden="true"
+                className="rule-draw mt-7 block h-[3px] w-14 origin-left bg-accent-surface"
+              />
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
@@ -151,10 +160,10 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="rise-in group relative" style={{ ['--rise-delay' as string]: '200ms' }}>
               <span
                 aria-hidden="true"
-                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 md:block"
+                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
               />
               <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-raised">
                 <Image
@@ -165,7 +174,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   // deprecated `priority` in Next 16.
                   preload
                   sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 100vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
                 />
               </div>
             </div>
@@ -196,7 +205,10 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             <Video video={content.introVideo} />
           </div>
 
-          <dl className="mt-12 grid grid-cols-2 overflow-hidden rounded-[8px] border border-border lg:grid-cols-4">
+          <dl
+            className="rise-in mt-12 grid grid-cols-2 overflow-hidden rounded-[8px] border border-border lg:grid-cols-4"
+            style={{ ['--rise-delay' as string]: '350ms' }}
+          >
             {content.facts.map((fact, index) => (
               // Label first in the DOM (a <dt> must precede its <dd>), figure
               // first on screen.
@@ -227,6 +239,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             <h2 id="why-heading" className={H2}>
               {whyApply.heading}
             </h2>
+            <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
             <p className="mt-4 font-serif text-xl leading-snug text-ink-strong">{whyApply.lead}</p>
             <p className="mt-3 text-ink-muted">{whyApply.note}</p>
           </div>
@@ -236,9 +249,13 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
               return (
                 <li
                   key={audience.id}
-                  className="flex gap-5 rounded-[8px] border border-border bg-surface p-6 md:p-7"
+                  className="group relative flex gap-5 overflow-hidden rounded-[8px] border border-border bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1 md:p-7"
                 >
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent-700">
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
+                  />
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-500 group-hover:bg-brand group-hover:text-white">
                     <Icon size={22} aria-hidden="true" />
                   </span>
                   <p className="text-[0.9375rem] leading-[1.75] text-ink">{audience.text}</p>
@@ -330,7 +347,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             {dates.items.map((item) => (
               <li
                 key={item.id}
-                className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 md:p-7"
+                className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:border-t-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1 md:p-7"
               >
                 <p className="text-sm font-semibold tracking-[0.14em] text-accent-700 uppercase">
                   {item.label}
@@ -369,7 +386,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             {team.people.map((person) => (
               <li
                 key={person.id}
-                className="grid grid-cols-1 gap-6 rounded-[8px] border border-border bg-surface p-6 sm:grid-cols-[9rem_minmax(0,1fr)] md:p-8"
+                className="group grid grid-cols-1 gap-6 rounded-[8px] border border-border bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1 sm:grid-cols-[9rem_minmax(0,1fr)] md:p-8"
               >
                 <div className="mx-auto w-36 overflow-hidden rounded-[6px] sm:mx-0 sm:w-full">
                   <Image
@@ -378,7 +395,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                     height={person.portrait.height}
                     alt={person.portrait.alt}
                     sizes="144px"
-                    className="aspect-[3/4] w-full object-cover object-top"
+                    className="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.05]"
                   />
                 </div>
                 <div>
@@ -445,9 +462,9 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
               return (
                 <li
                   key={benefit.id}
-                  className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6"
+                  className="group rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:border-t-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1"
                 >
-                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700">
+                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-500 group-hover:bg-brand group-hover:text-white">
                     <Icon size={20} aria-hidden="true" />
                   </span>
                   <h3 className="mt-4 font-serif text-xl text-ink-strong">{benefit.title}</h3>
@@ -471,7 +488,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             {xceed.partners.map((partner) => (
               <li
                 key={partner.id}
-                className="flex h-28 items-center justify-center rounded-[8px] border border-border bg-white px-3 py-2"
+                className="flex h-28 items-center justify-center rounded-[8px] border border-border bg-white px-3 py-2 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1"
               >
                 <Image
                   src={partner.logo.src}
@@ -503,7 +520,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                 className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14"
               >
                 <div
-                  className={`overflow-hidden rounded-[8px] shadow-raised ${
+                  className={`group overflow-hidden rounded-[8px] shadow-raised ${
                     index % 2 === 1 ? 'lg:order-2' : ''
                   }`}
                 >
@@ -513,7 +530,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                     height={event.image.height}
                     alt={event.image.alt}
                     sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 100vw"
-                    className="h-auto w-full"
+                    className="h-auto w-full transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
                   />
                 </div>
                 <div>
@@ -545,11 +562,12 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
           <h2 id="activities-heading" className={H2}>
             {activities.heading}
           </h2>
+          <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <ul className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
             {activities.items.map((activity) => (
               <li
                 key={activity.id}
-                className="overflow-hidden rounded-[8px] border border-border bg-surface"
+                className="group overflow-hidden rounded-[8px] border border-border bg-surface transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1"
               >
                 <Image
                   src={activity.image.src}
@@ -557,7 +575,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   height={activity.image.height}
                   alt={activity.image.alt}
                   sizes="(min-width: 1280px) 580px, (min-width: 768px) 46vw, 100vw"
-                  className="aspect-video h-auto w-full object-cover"
+                  className="aspect-video h-auto w-full object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
                 />
                 <div className="p-6 md:p-7">
                   <h3 className="font-serif text-xl text-ink-strong md:text-2xl">
@@ -637,7 +655,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
               {alumni.benefits.map((benefit) => (
                 <li
                   key={benefit}
-                  className="flex gap-3 rounded-[8px] border border-border bg-surface p-4 text-[0.9375rem] leading-[1.65] text-ink"
+                  className="flex gap-3 rounded-[8px] border border-border bg-surface p-4 text-[0.9375rem] leading-[1.65] text-ink transition-colors duration-500 hover:border-accent-surface"
                 >
                   <CheckIcon
                     size={16}
@@ -663,7 +681,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             {contacts.people.map((person) => (
               <li
                 key={person.id}
-                className="rounded-[8px] border border-border bg-surface-subtle p-6"
+                className="rounded-[8px] border border-border bg-surface-subtle p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1"
               >
                 <p className="font-serif text-xl leading-snug text-ink-strong">{person.name}</p>
                 <p className="mt-1 text-sm text-ink-muted">{person.department}</p>
@@ -699,7 +717,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
             <div className="divide-y divide-border rounded-[8px] border border-border bg-surface">
               {faq.items.map((item, index) => (
                 <details key={item.id} open={index === 0} className="group">
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 p-5 font-serif text-lg leading-snug text-ink-strong md:p-6 [&::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 p-5 font-serif text-lg leading-snug text-ink-strong transition-colors duration-300 hover:text-brand md:p-6 [&::-webkit-details-marker]:hidden">
                     {item.question}
                     <ChevronDownIcon
                       size={18}
@@ -740,9 +758,8 @@ function Video({ video }: { video: IevVideo }) {
           <a href={video.src}>Download {video.title}</a>
         </video>
       </div>
-      <figcaption className="mt-3 flex items-center justify-between gap-4 text-sm">
+      <figcaption className="mt-3 text-sm">
         <span className="font-semibold text-ink-strong">{video.title}</span>
-        <span className="text-ink-muted">Video · {video.size}</span>
       </figcaption>
     </figure>
   );

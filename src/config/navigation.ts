@@ -22,11 +22,14 @@ import type { NavNode, PrimaryNavItem, UtilityNavItem } from '@/types/navigation
  *    its own primary item, after Centres, as on the Delhi-NCR site (same day).
  *    Ten was checked at 1280px; see the test in `tests/unit/navigation.test.ts`.
  *
- *  • **Q11** — Admissions stays primary. Delhi-NCR-specific admissions content
- *    is hosted here; shared institute information (XAT, procedure, eligibility)
- *    deep-links to xlri.ac.in rather than being duplicated. Those links are
- *    marked automatically by the Link primitive, which classifies destinations
- *    itself — see `lib/url.ts`.
+ *  • **Q12, superseded (2026-10-09)** — News & Events was removed from the
+ *    bar at the client's request; it had no pages built yet.
+ *
+ *  • **Q11, superseded (2026-10-09)** — Admissions was a primary item; the
+ *    client replaced it with *Giving to XLRI*, last in the bar as on the
+ *    Delhi-NCR site. The admission-process links still live under Academics.
+ *    Giving's links all leave for xlri.ac.in; the Link primitive marks them
+ *    external automatically — see `lib/url.ts`.
  *
  *  • **§16 F2** — Executive Education programmes are listed once each, not once
  *    per cohort. The legacy site mints a new URL per batch
@@ -181,64 +184,9 @@ const executiveEducation: PrimaryNavItem = {
 };
 
 /**
- * Q11. Two columns of content we own, one column that leaves for the institute
- * site. The split is explicit in the data so nobody has to remember which is
- * which — and the Link primitive marks the offsite ones automatically.
+ * Faculty & Research — the Delhi-NCR site's menu (2026-10-09): its six
+ * links, in its order, as one list.
  */
-const admissions: PrimaryNavItem = {
-  id: 'admissions',
-  label: 'Admissions',
-  href: '/admissions',
-  layout: 'columns-3',
-  children: [
-    {
-      id: 'admissions-delhi',
-      label: 'Delhi-NCR Admissions',
-      children: [
-        { id: 'admissions-overview', label: 'Overview', href: '/admissions' },
-        { id: 'admissions-how-to-apply', label: 'How to Apply', href: '/admissions/how-to-apply' },
-        { id: 'admissions-fees', label: 'Fees & Financial Aid', href: '/admissions/fees' },
-        { id: 'admissions-faq', label: 'Frequently Asked Questions', href: '/admissions/faq' },
-      ],
-    },
-    {
-      id: 'admissions-visit',
-      label: 'Visit & Enquire',
-      children: [
-        { id: 'admissions-campus-tour', label: 'Campus Tour', href: '/campus-life/campus-tour' },
-        { id: 'admissions-enquiry', label: 'Admissions Enquiry', href: '/admissions/enquiry' },
-        { id: 'admissions-contact', label: 'Contact the Admissions Office', href: '/contact' },
-      ],
-    },
-    {
-      id: 'admissions-institute',
-      label: 'On the Institute Site',
-      children: [
-        {
-          id: 'admissions-procedure',
-          label: 'Admission Procedure',
-          href: 'https://xlri.ac.in/academic-programmes/admission-procedure/overview',
-        },
-        {
-          id: 'admissions-xat',
-          label: 'XAT Bulletin',
-          href: 'https://xlri.ac.in/academic-programmes/admission-procedure/xat-bulletin',
-        },
-        {
-          id: 'admissions-xat-papers',
-          label: 'XAT Question Papers',
-          href: 'https://xlri.ac.in/academic-programmes/xat-question-papers',
-        },
-        {
-          id: 'admissions-scholarships',
-          label: 'Scholarships',
-          href: 'https://xlri.ac.in/scholarships',
-        },
-      ],
-    },
-  ],
-};
-
 const facultyResearch: PrimaryNavItem = {
   id: 'faculty-research',
   label: 'Faculty & Research',
@@ -246,24 +194,23 @@ const facultyResearch: PrimaryNavItem = {
   layout: 'columns-2',
   children: [
     {
-      id: 'faculty-directory-group',
-      label: 'Faculty',
+      id: 'faculty-research-group',
+      label: 'Faculty & Research',
       children: [
-        { id: 'faculty-directory', label: 'Faculty Directory', href: '/faculty' },
-        { id: 'faculty-core', label: 'Core Faculty', href: '/faculty?type=core' },
-        { id: 'faculty-adjunct', label: 'Adjunct Faculty', href: '/faculty?type=adjunct' },
-        { id: 'faculty-visiting', label: 'Visiting Faculty', href: '/faculty?type=visiting' },
-        { id: 'faculty-staff', label: 'Administrative Staff', href: '/about/staff' },
-      ],
-    },
-    {
-      id: 'research-group',
-      label: 'Research',
-      children: [
-        { id: 'research-overview', label: 'Research at XLRI', href: '/research' },
-        { id: 'research-publications', label: 'Publications', href: '/research/publications' },
-        { id: 'research-cases', label: 'Articles & Cases', href: '/research/articles-cases' },
-        { id: 'research-conferences', label: 'Conferences', href: '/research/conferences' },
+        { id: 'faculty-full-time', label: 'Full Time Faculty', href: '/faculty/full-time' },
+        { id: 'faculty-adjunct', label: 'Adjunct Faculty', href: '/faculty/adjunct' },
+        { id: 'faculty-visiting', label: 'Visiting Faculty', href: '/faculty/visiting' },
+        { id: 'faculty-staff', label: 'Staff', href: '/faculty/staff' },
+        {
+          id: 'faculty-innovation-teaching',
+          label: 'Faculty Innovation in Teaching',
+          href: 'https://xlri.ac.in/faculty-research/innovation-in-teaching',
+        },
+        {
+          id: 'research-publications',
+          label: 'Publication – Research Articles & Cases',
+          href: '/research/publications',
+        },
       ],
     },
   ],
@@ -489,44 +436,70 @@ const placements: PrimaryNavItem = {
   ],
 };
 
-const newsEvents: PrimaryNavItem = {
-  id: 'news-events',
-  label: 'News & Events',
-  href: '/news',
+/**
+ * Giving to XLRI — the Delhi-NCR site's menu (2026-10-09), in its order. Every
+ * link goes to the institute site (xlri.ac.in), where giving is run for both
+ * campuses; the Link primitive marks them external automatically. Like
+ * Centres, the item has no overview page of its own, so it only opens the
+ * panel. It replaced Admissions in the bar at the client's request.
+ */
+const giving: PrimaryNavItem = {
+  id: 'giving',
+  label: 'Giving to XLRI',
   layout: 'columns-2',
   children: [
     {
-      id: 'news-group',
-      label: 'Newsroom',
+      id: 'giving-group',
+      label: 'Giving to XLRI',
       children: [
-        { id: 'news-index', label: 'Latest News', href: '/news' },
-        { id: 'news-announcements', label: 'Announcements', href: '/news/announcements' },
-        { id: 'news-media', label: 'XLRI in the Media', href: '/news/media' },
-      ],
-    },
-    {
-      id: 'events-group',
-      label: 'Events',
-      children: [
-        { id: 'events-index', label: 'Upcoming Events', href: '/events' },
-        { id: 'events-convocation', label: 'Convocation', href: '/events/convocation' },
-        { id: 'events-conferences', label: 'Conferences', href: '/research/conferences' },
+        { id: 'giving-donation', label: 'Donation', href: 'https://xlri.ac.in/donation' },
+        {
+          id: 'giving-scholarship-fund',
+          label: 'Scholarship Fund',
+          href: 'https://xlri.ac.in/scholarships',
+        },
+        {
+          id: 'giving-endowment-fund',
+          label: 'Endowment Fund',
+          href: 'https://xlri.ac.in/giving-to-xlri/endowment-fund',
+        },
+        {
+          id: 'giving-committee',
+          label: 'Committee',
+          href: 'https://xlri.ac.in/giving-to-xlri/committee',
+        },
+        {
+          id: 'giving-future-plans',
+          label: 'Future Plans',
+          href: 'https://xlri.ac.in/giving-to-xlri/future-plans',
+        },
       ],
     },
   ],
+};
+
+/**
+ * Alumni Portal — a plain link, no panel, as on the Delhi-NCR site, where it
+ * sits just before Giving to XLRI. The portal is its own property, so the
+ * Link primitive marks it external automatically.
+ */
+const alumniPortal: PrimaryNavItem = {
+  id: 'alumni-portal',
+  label: 'Alumni Portal',
+  href: 'https://xlrialumni.xlri.ac.in/',
 };
 
 export const PRIMARY_NAV: readonly PrimaryNavItem[] = [
   about,
   academics,
   executiveEducation,
-  admissions,
   facultyResearch,
   centres,
   sustainability,
   campusLife,
   placements,
-  newsEvents,
+  alumniPortal,
+  giving,
 ];
 
 /**

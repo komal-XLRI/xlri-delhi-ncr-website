@@ -49,6 +49,11 @@ function Rule({ className = '' }: { className?: string }) {
  *     than listing them.
  *  4. **Practicalities** — residential rates and rules, the group discount,
  *     and the MDP office.
+ *
+ * Motion is light and slow, in the brand colours, as on the About pages: the
+ * title rule and the venue bars draw and the photograph rises in on load
+ * (`.rule-draw`, `.rise-in`); cards lift on hover. Nothing plays on scroll,
+ * and none of it under `prefers-reduced-motion`.
  */
 export function MdpPage({ content }: { content: MdpContent }) {
   const { overview, calendar, stay, discounts, contact } = content;
@@ -74,12 +79,13 @@ export function MdpPage({ content }: { content: MdpContent }) {
                 id="mdp-heading"
                 className="mt-3 font-serif text-[clamp(2.25rem,4.6vw,3.5rem)] leading-[1.04] tracking-[-0.03em] text-balance text-brand"
               >
-                {content.title} <span className="text-accent-700">({content.abbreviation})</span>
+                {content.title}{' '}
+                <span className="text-accent-surface">({content.abbreviation})</span>
               </h1>
               <p className="mt-4 font-serif text-xl leading-snug text-ink-strong md:text-[1.375rem]">
                 {content.tagline}
               </p>
-              <Rule className="mt-6 w-14" />
+              <Rule className="rule-draw mt-6 w-14 origin-left" />
               <p className="mt-6 text-base leading-[1.85] text-ink md:text-[1.0625rem]">
                 {content.refresh}
               </p>
@@ -105,10 +111,10 @@ export function MdpPage({ content }: { content: MdpContent }) {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="rise-in group relative" style={{ ['--rise-delay' as string]: '200ms' }}>
               <span
                 aria-hidden="true"
-                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 md:block"
+                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
               />
               <div className="relative aspect-[5/3] overflow-hidden rounded-[8px] shadow-raised">
                 <Image
@@ -119,7 +125,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
                   // deprecated `priority` in Next 16.
                   preload
                   sizes="(min-width: 1280px) 568px, (min-width: 1024px) 46vw, 100vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
                 />
               </div>
             </div>
@@ -148,9 +154,9 @@ export function MdpPage({ content }: { content: MdpContent }) {
               return (
                 <li
                   key={pillar.id}
-                  className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6"
+                  className="group rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:border-t-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1"
                 >
-                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700">
+                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-500 group-hover:bg-brand group-hover:text-white">
                     <Icon size={20} aria-hidden="true" />
                   </span>
                   <h3 className="mt-4 font-serif text-xl text-ink-strong">{pillar.title}</h3>
@@ -220,7 +226,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
                     </div>
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-subtle">
                       <div
-                        className="h-full rounded-full bg-brand"
+                        className="rule-draw h-full origin-left rounded-full bg-brand"
                         style={{ width: `${String((venue.count / most) * 100)}%` }}
                       />
                     </div>
@@ -246,7 +252,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
                 {stay.rates.map((rate) => (
                   <li
                     key={rate.id}
-                    className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6"
+                    className="rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:border-t-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1"
                   >
                     <p className="text-sm font-semibold tracking-[0.12em] text-accent-700 uppercase">
                       {rate.label}
@@ -285,7 +291,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
                   {discounts.tiers.map((tier) => (
                     <li
                       key={tier.id}
-                      className="flex items-center gap-4 rounded-[8px] bg-surface-subtle p-4"
+                      className="flex items-center gap-4 rounded-[8px] bg-surface-subtle p-4 transition-colors duration-500 hover:bg-accent-50"
                     >
                       <span className="font-serif text-3xl leading-none text-brand">
                         {tier.discount}

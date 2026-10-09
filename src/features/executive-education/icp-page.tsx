@@ -38,6 +38,11 @@ function Rule({ className = '' }: { className?: string }) {
  *     participant counts the Delhi page gives are shown as chips.
  *  4. **Get in touch** — the campus contact and the two sibling XLEAD
  *     programmes.
+ *
+ * Motion is light and slow, in the brand colours, as on the About pages: the
+ * banner and figures rise in and the title rule draws on load (`.rise-in`,
+ * `.rule-draw`); cards lift and rows grow a lime marker on hover. Nothing
+ * plays on scroll, and none of it under `prefers-reduced-motion`.
  */
 export function IcpPage({ content }: { content: IcpContent }) {
   const { clients, programmes, related, contact } = content;
@@ -64,17 +69,24 @@ export function IcpPage({ content }: { content: IcpContent }) {
             ]}
           />
 
-          <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-[8px] md:mt-10 md:aspect-[21/8]">
-            <Image
-              src={content.image.src}
-              alt={content.image.alt}
-              fill
-              // Above the fold — the LCP element. `preload` replaces the
-              // deprecated `priority` in Next 16.
-              preload
-              sizes="(min-width: 1280px) 1184px, 100vw"
-              className="object-cover object-[center_40%]"
+          <div className="rise-in group relative mt-8 md:mt-10">
+            {/* The offset lime frame used on the other page photographs. */}
+            <span
+              aria-hidden="true"
+              className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
             />
+            <div className="relative aspect-[16/9] overflow-hidden rounded-[8px] md:aspect-[21/8]">
+              <Image
+                src={content.image.src}
+                alt={content.image.alt}
+                fill
+                // Above the fold — the LCP element. `preload` replaces the
+                // deprecated `priority` in Next 16.
+                preload
+                sizes="(min-width: 1280px) 1184px, 100vw"
+                className="object-cover object-[center_40%] transition-transform duration-[1200ms] ease-out motion-safe:group-hover:scale-[1.03]"
+              />
+            </div>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-10 md:mt-12 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-end lg:gap-14">
@@ -86,15 +98,19 @@ export function IcpPage({ content }: { content: IcpContent }) {
                 id="icp-heading"
                 className="mt-3 font-serif text-[clamp(2.25rem,4.6vw,3.5rem)] leading-[1.04] tracking-[-0.03em] text-balance text-brand"
               >
-                {content.title} <span className="text-accent-700">({content.abbreviation})</span>
+                {content.title}{' '}
+                <span className="text-accent-surface">({content.abbreviation})</span>
               </h1>
-              <Rule className="mt-6 w-14" />
+              <Rule className="rule-draw mt-6 w-14 origin-left" />
               <p className="mt-6 text-base leading-[1.85] text-ink md:text-[1.0625rem]">
                 {content.summary}
               </p>
             </div>
 
-            <dl className="grid grid-cols-3 overflow-hidden rounded-[8px] border border-border">
+            <dl
+              className="rise-in grid grid-cols-3 overflow-hidden rounded-[8px] border border-border"
+              style={{ ['--rise-delay' as string]: '300ms' }}
+            >
               {facts.map((fact, index) => (
                 // Label first in the DOM (a <dt> must precede its <dd>),
                 // figure first on screen.
@@ -130,12 +146,12 @@ export function IcpPage({ content }: { content: IcpContent }) {
               return (
                 <li
                   key={client.id}
-                  className="flex flex-col rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6"
+                  className="group flex flex-col rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface p-6 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:border-t-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1"
                 >
-                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700">
+                  <span className="flex size-11 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-500 group-hover:bg-brand group-hover:text-white">
                     <Icon size={20} aria-hidden="true" />
                   </span>
-                  <h3 className="mt-4 font-serif text-xl leading-snug text-ink-strong">
+                  <h3 className="mt-4 font-serif text-xl leading-snug text-ink-strong transition-colors duration-500 group-hover:text-brand">
                     {client.name}
                   </h3>
                   <p className="mt-auto flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 pt-5 text-sm text-ink-muted">
@@ -166,13 +182,18 @@ export function IcpPage({ content }: { content: IcpContent }) {
               return (
                 <li
                   key={item.id}
-                  className="grid grid-cols-[3rem_minmax(0,1fr)] gap-x-5 gap-y-3 py-6 md:grid-cols-[4rem_minmax(0,1fr)_auto] md:items-center md:gap-x-8"
+                  className="group relative grid grid-cols-[3rem_minmax(0,1fr)] gap-x-5 gap-y-3 py-6 md:grid-cols-[4rem_minmax(0,1fr)_auto] md:items-center md:gap-x-8"
                 >
+                  {/* A lime marker that grows down the row's left edge on hover. */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute top-4 bottom-4 -left-3 w-[3px] origin-top scale-y-0 rounded-full bg-accent-surface transition-transform duration-500 ease-out group-hover:scale-y-100 md:-left-5"
+                  />
                   <span aria-hidden="true" className="font-serif text-3xl leading-none text-brand">
                     {pad(index + 1)}
                   </span>
                   <div>
-                    <h3 className="font-serif text-xl leading-snug text-ink-strong">
+                    <h3 className="font-serif text-xl leading-snug text-ink-strong transition-colors duration-500 group-hover:text-brand">
                       {item.title}
                     </h3>
                     <p className="mt-1.5 text-[0.9375rem] text-ink-muted">{item.audience}</p>

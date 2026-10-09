@@ -28,7 +28,11 @@ export function MandatoryDisclosurePage({ content }: { content: MandatoryDisclos
         >
           {content.title}
         </h1>
-        <p className="mt-3 text-lg font-semibold text-ink-strong md:text-xl">{content.subtitle}</p>
+        <span
+          aria-hidden="true"
+          className="rule-draw mt-4 block h-[3px] w-14 origin-left bg-accent-surface"
+        />
+        <p className="mt-4 text-lg font-semibold text-ink-strong md:text-xl">{content.subtitle}</p>
 
         <div className="mt-10 md:mt-12">
           <DisclosureViewer documents={content.documents} />
