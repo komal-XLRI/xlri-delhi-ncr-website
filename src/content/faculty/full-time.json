@@ -1,0 +1,258 @@
+{
+  "title": "Full Time Faculty",
+  "intro": [],
+  "faculty": [
+    {
+      "id": "fr-antony-uvari-s-j",
+      "name": "Fr. Antony R Uvari, SJ",
+      "designation": "Director",
+      "qualification": "Ph.D., University of Madras",
+      "areas": ["Organisational Behaviour"],
+      "email": "tony@xlri.ac.in",
+      "photo": "/media/faculty/fr-antony-uvari-s-j.jpg"
+    },
+    {
+      "id": "fr-alwyn-rodrigues-sj",
+      "name": "Fr. Alwyn Rodrigues, SJ",
+      "designation": "Dean Admin & Finance",
+      "qualification": "PhD, Social Media and Ethics (XUB)",
+      "areas": ["General Management"],
+      "email": "alwynsj@xlri.ac.in",
+      "photo": "/media/faculty/fr-alwyn-rodrigues-sj.jpg"
+    },
+    {
+      "id": "dr-ankit",
+      "name": "Dr. Ankit",
+      "designation": "Assistant Professor",
+      "qualification": "PhD (IIM Lucknow)",
+      "areas": ["Organisational Behaviour"],
+      "email": "ankit@xlri.ac.in",
+      "photo": "/media/faculty/dr-ankit-portrait.jpg"
+    },
+    {
+      "id": "dr-arpit-kumar-parija",
+      "name": "Dr. Arpit Kumar Parija",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. in Economics, IIM Calcutta",
+      "areas": ["Economics"],
+      "email": "arpitkp@xlri.ac.in",
+      "photo": "/media/faculty/dr-arpit-kumar-parija.jpg"
+    },
+    {
+      "id": "dr-deepika-dixit",
+      "name": "Dr. Deepika Dixit",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. Strategic Management (IIM Kozhikode)",
+      "areas": ["Strategic Management"],
+      "email": "deepika@xlri.ac.in",
+      "photo": "/media/faculty/dr-deepika-dixit.jpg"
+    },
+    {
+      "id": "dr-dibyendu-sharma",
+      "name": "Dr. Dibyendu Sharma",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. in Strategy, IIM Ahmedabad",
+      "areas": ["Strategic Management"],
+      "email": "dibyendu@xlri.ac.in",
+      "photo": "/media/faculty/dr-dibyendu-sharma.jpg"
+    },
+    {
+      "id": "dr-faisal-ahsan",
+      "name": "Dr. Faisal Ahsan",
+      "designation": "Associate Professor",
+      "qualification": "FPM/PhD (IIM Lucknow)",
+      "areas": ["Strategic Management"],
+      "email": "faisal@xlri.ac.in",
+      "photo": "/media/faculty/dr-faisal-ahsan.jpg"
+    },
+    {
+      "id": "dr-gourav-vallabh",
+      "name": "Dr. Gourav Vallabh",
+      "designation": "Professor",
+      "qualification": "Ph.D. (UoR, India)",
+      "areas": ["Finance"],
+      "email": "gvallabh@xlri.ac.in",
+      "photo": "/media/faculty/dr-gourav-vallabh.jpg"
+    },
+    {
+      "id": "dr-m-srimannarayana",
+      "name": "Dr. M Srimannarayana",
+      "designation": "Professor",
+      "qualification": "Ph.D. (Utkal)",
+      "areas": ["Human Resource Management"],
+      "email": "sriman@xlri.ac.in",
+      "photo": "/media/faculty/dr-m-srimannarayana.jpg"
+    },
+    {
+      "id": "dr-madhu-mandal",
+      "name": "Dr. Madhu Mandal",
+      "designation": "Associate Professor",
+      "qualification": "PhD (IIM Lucknow)",
+      "areas": ["Marketing"],
+      "email": "madhu.mandal@xlri.ac.in",
+      "photo": "/media/faculty/dr-madhu-mandal.jpg"
+    },
+    {
+      "id": "dr-malvika-chhatwani",
+      "name": "Dr. Malvika Chhatwani",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. in Finance and Accounting, IIM Indore",
+      "areas": ["Finance"],
+      "email": "malvika@xlri.ac.in",
+      "photo": "/media/faculty/dr-malvika-chhatwani.jpg"
+    },
+    {
+      "id": "dr-manas-tripathi",
+      "name": "Dr. Manas Tripathi",
+      "designation": "Associate Professor",
+      "qualification": "FPM/PhD (IT & Systems), IIM Lucknow",
+      "areas": ["Information Systems"],
+      "email": "manas.tripathi@xlri.ac.in",
+      "photo": "/media/faculty/dr-manas-tripathi.jpg"
+    },
+    {
+      "id": "dr-megha-bharti",
+      "name": "Dr. Megha Bharti",
+      "designation": "Assistant Professor",
+      "qualification": "PhD (FMS, Delhi)",
+      "areas": ["Marketing"],
+      "email": "meghabharti@xlri.ac.in",
+      "photo": "/media/faculty/dr-megha-bharti.jpg"
+    },
+    {
+      "id": "dr-mohit-malhan",
+      "name": "Dr. Mohit Malhan",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. (IIM Lucknow)",
+      "areas": ["Marketing"],
+      "email": "mohit@xlri.ac.in",
+      "photo": "/media/faculty/dr-mohit-malhan.jpg"
+    },
+    {
+      "id": "dr-munish-kumar-thakur",
+      "name": "Dr. Munish Kumar Thakur",
+      "designation": "Dean (Academics)",
+      "qualification": "Fellow, IIM Calcutta",
+      "areas": ["Strategic Management"],
+      "email": "munish@xlri.ac.in",
+      "photo": "/media/faculty/dr-munish-kumar-thakur.jpg"
+    },
+    {
+      "id": "dr-narasimhan-rajkumar",
+      "name": "Dr. Narasimhan Rajkumar",
+      "designation": "Associate Professor",
+      "qualification": "Ph.D. (Utkal University)",
+      "areas": ["Marketing"],
+      "email": "rajkumar@xlri.ac.in",
+      "photo": "/media/faculty/dr-narasimhan-rajkumar.jpg"
+    },
+    {
+      "id": "dr-pankaj-kumar-agarwal",
+      "name": "Dr. Pankaj Kumar Agarwal",
+      "designation": "Associate Professor",
+      "qualification": "Fellow (XLRI Jamshedpur)",
+      "areas": ["Finance"],
+      "email": "pankaj@xlri.ac.in",
+      "photo": "/media/faculty/dr-pankaj-kumar-agarwal.jpg"
+    },
+    {
+      "id": "dr-pratik-tarafdar",
+      "name": "Dr. Pratik Tarafdar",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. (IIM Calcutta)",
+      "areas": ["Information Systems"],
+      "email": "pratik@xlri.ac.in",
+      "photo": "/media/faculty/dr-pratik-tarafdar.jpg"
+    },
+    {
+      "id": "prof-rajiv-misra",
+      "name": "Prof. Rajiv Misra",
+      "designation": "Professor",
+      "qualification": "M.S. (Industrial), State University of New York, Buffalo",
+      "areas": ["Production, Operations & Decision Sciences"],
+      "email": "rajiv@xlri.ac.in",
+      "photo": "/media/faculty/prof-rajiv-misra.jpg"
+    },
+    {
+      "id": "dr-sakhhi-chhabra",
+      "name": "Dr. Sakhhi Chhabra",
+      "designation": "Assistant Professor",
+      "qualification": "PhD (MDI Gurgaon)",
+      "areas": ["Marketing"],
+      "email": "sakhhichhabra@xlri.ac.in",
+      "photo": "/media/faculty/dr-sakhhi-chhabra.jpg"
+    },
+    {
+      "id": "dr-sanchayan-nath",
+      "name": "Dr. Sanchayan Nath",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. in Public Policy, Indiana University Bloomington",
+      "areas": ["Strategic Management"],
+      "email": "sanchayan@xlri.ac.in",
+      "photo": "/media/faculty/dr-sanchayan-nath.jpg"
+    },
+    {
+      "id": "dr-sayan-mukherjee",
+      "name": "Dr. Sayan Mukherjee",
+      "designation": "Associate Professor",
+      "qualification": "FPM (XLRI Jamshedpur)",
+      "areas": ["Production, Operations & Decision Sciences"],
+      "email": "sayanmukherjee@xlri.ac.in",
+      "photo": "/media/faculty/dr-sayan-mukherjee.jpg"
+    },
+    {
+      "id": "dr-shakshi-singhal",
+      "name": "Dr. Shakshi Singhal",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D. (Operational Research, University of Delhi)",
+      "areas": ["Production, Operations & Decision Sciences"],
+      "email": "shakshi@xlri.ac.in",
+      "photo": "/media/faculty/dr-shakshi-singhal.jpg"
+    },
+    {
+      "id": "dr-shubhomoy-banerjee",
+      "name": "Dr. Shubhomoy Banerjee",
+      "designation": "Assistant Professor",
+      "qualification": "PhD (IRMA, Anand)",
+      "areas": ["Marketing"],
+      "email": "shubhomoy@xlri.ac.in",
+      "photo": "/media/faculty/dr-shubhomoy-banerjee.jpg"
+    },
+    {
+      "id": "dr-smriti-das",
+      "name": "Dr. Smriti Das",
+      "designation": "Associate Professor",
+      "qualification": "PhD (IRMA)",
+      "areas": ["Strategic Management"],
+      "email": "smriti.das@xlri.ac.in",
+      "photo": "/media/faculty/dr-smriti-das.jpg"
+    },
+    {
+      "id": "dr-soumyatanu-mukherjee",
+      "name": "Dr. Soumyatanu Mukherjee",
+      "designation": "Associate Professor",
+      "qualification": "PhD International Economics (University of Nottingham)",
+      "areas": ["Economics", "Production, Operations & Decision Sciences"],
+      "email": "soumya.mukherjee@xlri.ac.in",
+      "photo": "/media/faculty/dr-soumyatanu-mukherjee-portrait.jpg"
+    },
+    {
+      "id": "dr-vaibhav-lalwani",
+      "name": "Dr. Vaibhav Lalwani",
+      "designation": "Associate Professor",
+      "qualification": "Ph.D. in Finance and Accounting, IIM Lucknow",
+      "areas": ["Finance"],
+      "email": "vaibhav@xlri.ac.in",
+      "photo": "/media/faculty/dr-vaibhav-lalwani.jpg"
+    },
+    {
+      "id": "dr-vincent-pereppadan-sj",
+      "name": "Dr. Vincent Pereppadan, SJ",
+      "designation": "Assistant Professor",
+      "qualification": "Ph.D., University of San Francisco",
+      "areas": ["Organisational Behaviour"],
+      "email": "vincent@xlri.ac.in",
+      "photo": "/media/faculty/dr-vincent-pereppadan-sj.jpg"
+    }
+  ]
+}

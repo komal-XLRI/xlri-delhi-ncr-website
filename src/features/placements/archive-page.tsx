@@ -56,20 +56,29 @@ export function PlacementsArchivePage({ archive, final, summer }: Props) {
           >
             Placement Reports &amp; Audits
           </h1>
-          <Rule className="mt-6" />
-          <p className="mt-6 max-w-[44rem] text-base leading-[1.85] text-ink md:text-[1.0625rem]">
+          <Rule className="rule-draw mt-6 origin-left" />
+          <p
+            className="rise-in mt-6 max-w-[44rem] text-base leading-[1.85] text-ink md:text-[1.0625rem]"
+            style={{ ['--rise-delay' as string]: '150ms' }}
+          >
             {total} final placement and summer internship reports and placement audit reports, from
             2014 to the latest season.
           </p>
-          <nav aria-label="Seasons" className="mt-6 flex flex-wrap gap-3">
+          <nav
+            aria-label="Seasons"
+            className="rise-in mt-6 flex flex-wrap gap-3"
+            style={{ ['--rise-delay' as string]: '300ms' }}
+          >
             {sections.map((section) => (
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="inline-flex items-center rounded-full border border-border-strong px-5 py-2.5 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-200 hover:border-brand hover:text-brand"
+                className="group inline-flex items-center gap-3 rounded-full border border-border-strong py-1.5 pr-1.5 pl-5 text-[0.9375rem] font-semibold text-ink-strong transition-[translate,color,border-color,box-shadow] duration-500 ease-out hover:border-accent-surface hover:text-brand hover:shadow-raised motion-safe:hover:-translate-y-0.5"
               >
                 {section.heading}
-                <span className="ml-2 font-normal text-ink-muted">{section.docs.length}</span>
+                <span className="flex h-8 min-w-8 items-center justify-center rounded-full bg-accent-50 px-2 text-sm text-accent-700 transition-colors duration-500 group-hover:bg-brand group-hover:text-white">
+                  {section.docs.length}
+                </span>
               </a>
             ))}
           </nav>
@@ -94,26 +103,43 @@ export function PlacementsArchivePage({ archive, final, summer }: Props) {
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.9375rem] font-semibold">
                 <Link
                   href={section.href}
-                  className="inline-flex items-center gap-2 text-brand hover:text-brand-950"
+                  className="group inline-flex items-center gap-2 text-brand transition-colors duration-500 hover:text-brand-950"
                 >
                   {section.report.title}
-                  <ArrowRightIcon size={14} aria-hidden="true" />
+                  <span
+                    aria-hidden="true"
+                    className="flex size-7 items-center justify-center rounded-full bg-accent-surface text-brand-950 transition-transform duration-500 ease-out motion-safe:group-hover:translate-x-1"
+                  >
+                    <ArrowRightIcon size={13} />
+                  </span>
                 </Link>
                 <a
                   href={section.report.more}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-ink-muted hover:text-brand"
+                  className="group inline-flex items-center gap-1.5 text-ink-muted transition-colors duration-500 hover:text-brand"
                 >
                   More details
-                  <ExternalIcon size={13} aria-hidden="true" />
+                  <ExternalIcon
+                    size={13}
+                    aria-hidden="true"
+                    className="transition-transform duration-500 ease-out motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5"
+                  />
                   <span className="sr-only"> (xlri.ac.in, opens in a new tab)</span>
                 </a>
               </div>
             </div>
             <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-              {byYear(section.docs).map((doc) => (
-                <li key={doc.id}>
+              {byYear(section.docs).map((doc, i) => (
+                <li
+                  key={doc.id}
+                  className={index === 0 ? 'rise-in' : undefined}
+                  style={
+                    index === 0
+                      ? { ['--rise-delay' as string]: `${400 + Math.min(i, 9) * 80}ms` }
+                      : undefined
+                  }
+                >
                   <PdfCard doc={doc} />
                 </li>
               ))}

@@ -1,37 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  XLRI Delhi-NCR geometric triangle motif. Used as a page ground, never as an
-  illustration. Placement, opacity, masking and motion all live in the "Brand
-  motif" block of src/styles/base.css, which also explains why the fills are
-  saturated rather than pastel. Read that before editing this.
+  XLRI triangle motif, redrawn from the cluster on the institute's own
+  homepage (xlri.ac.in, beside Our Important Links) so the two sites share
+  one mark. Six translucent triangles; the overlap of the bottom pair is part
+  of the artwork. Placement and motion live in the "Brand motif" block of
+  src/styles/base.css.
 
-  CAUTION: this is XML, and an XML comment may not contain two hyphens in a row.
-  Naming a CSS custom property in prose here silently breaks the whole file: a
-  browser rejects the document outright and the motif renders as nothing at all.
-  That is why the notes are in the stylesheet and this comment is deliberately
-  short. Write "color-brand-800", never the property name with its own prefix.
+  CAUTION: this is XML, and an XML comment may not contain two hyphens in a
+  row. Naming a CSS custom property in prose here silently breaks the file.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" fill="none">
-  <!-- Top left, apex down. color-accent-600, the stronger of the two greens. -->
-  <path fill="#758200" d="M4 4 L52 4 L28 50 Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 170" fill="none">
+  <!-- Top left, apex up. Olive green. -->
+  <path fill="rgb(153,177,0)" fill-opacity="0.51" d="M0 30 L34 30 L17 0 Z" />
 
-  <!-- Top right, apex down. color-brand-500, the lightest shape here. -->
-  <path fill="#4d8ef5" d="M84 2 L128 2 L106 44 Z" />
+  <!-- Top right, apex up. Pale sky blue. -->
+  <path fill="rgb(141,200,249)" fill-opacity="0.33" d="M60 33 L97 33 L78.5 0 Z" />
 
-  <!-- Centre left, apex up. color-brand-700. -->
-  <path fill="#235fbb" d="M36 110 L84 110 L60 62 Z" />
+  <!-- Middle, apex up. Bright blue. -->
+  <path fill="rgb(29,153,255)" fill-opacity="0.42" d="M24 84 L64 84 L44 50 Z" />
 
-  <!-- Bottom left, apex up. color-accent-500, the softer green. -->
-  <path fill="#8c9b00" d="M26 196 L90 196 L58 132 Z" />
+  <!-- Right, apex down. Steel blue, the largest. -->
+  <path fill="rgb(32,118,190)" fill-opacity="0.43" d="M73 85 L121 85 L97 127 Z" />
 
-  <!-- Bottom right, apex up. color-brand-600. -->
-  <path fill="#3575d9" d="M86 196 L148 196 L117 134 Z" />
+  <!-- Bottom, apex down. Lime. -->
+  <path fill="rgb(196,219,46)" fill-opacity="0.48" d="M49 128 L97 128 L73 170 Z" />
 
-  <!--
-    Right, apex down. color-brand-800, and the largest shape. Painted last so it
-    reads over the triangle it overlaps, which is the relationship in the source
-    artwork. The opacity lives on the pseudo element rather than on each path,
-    so that overlap does not double up into a darker patch.
-  -->
-  <path fill="#1c4e9b" d="M78 80 L146 80 L112 148 Z" />
+  <!-- Bottom right, apex up, over the lime. Steel blue, lighter. -->
+  <path fill="rgb(32,119,190)" fill-opacity="0.31" d="M71 170 L121 170 L96 128 Z" />
 </svg>

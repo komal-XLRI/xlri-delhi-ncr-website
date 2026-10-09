@@ -6,6 +6,7 @@ import { Container } from '@/components/layout/container';
 import { Link } from '@/components/ui/link';
 import { PRIMARY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
+import { OpenSearchButton } from '@/features/search/site-search';
 
 /**
  * 404.
@@ -23,11 +24,12 @@ import { site } from '@/config/site';
  * a broken link on the page you land on *because* of a broken link would be a
  * poor joke.
  *
- * ## Why the search box is a link and not an input
+ * ## Why search is a button and not a box
  *
- * There is no client-side search on this page and a text field that does
- * nothing until JavaScript arrives is worse than no field at all. It is a link
- * to `/search`, styled as the header's control so it reads as the same thing.
+ * Search lives in the header, as a panel under its Search button; there is no
+ * results page. "Search the site" here opens that same panel rather than
+ * duplicating it, so there is one search on the site and it behaves the same
+ * everywhere.
  *
  * ## Heading level
  *
@@ -89,13 +91,10 @@ export default function NotFound() {
                 </span>
               </NextLink>
 
-              <NextLink
-                href="/search"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-border-strong px-5 text-sm font-medium text-ink-strong transition-colors hover:border-brand hover:text-brand"
-              >
+              <OpenSearchButton className="inline-flex h-12 items-center gap-2 rounded-full border border-border-strong px-5 text-sm font-medium text-ink-strong transition-colors hover:border-brand hover:text-brand">
                 <SearchIcon size={18} aria-hidden="true" />
                 Search the site
-              </NextLink>
+              </OpenSearchButton>
             </div>
           </div>
 

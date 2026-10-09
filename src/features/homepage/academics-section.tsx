@@ -64,6 +64,7 @@ import type { Academics } from '@/types/homepage';
 export function AcademicsSection({ academics }: { academics: Academics }) {
   return (
     <section
+      id="academics"
       aria-labelledby="academics-heading"
       /*
         The brand motif, top-right — see the "Brand motif" block in base.css.

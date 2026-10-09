@@ -124,20 +124,20 @@ export function HeritagePage({ content }: { content: Heritage }) {
       {/* ---------------- XL Journey ---------------- */}
       <section
         aria-labelledby="journey-heading"
-        className="bg-surface-inverse py-14 text-ink-inverse md:py-24"
+        className="bg-surface-subtle py-14 text-ink md:py-24"
       >
         <div className={MEASURE}>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold tracking-[0.2em] text-accent-surface uppercase">
+            <p className="text-sm font-semibold tracking-[0.2em] text-accent-700 uppercase">
               {timeline.eyebrow}
             </p>
             <h2
               id="journey-heading"
-              className="mt-3 font-serif text-[clamp(2.25rem,5vw,4.25rem)] leading-[1.05] tracking-[-0.03em] text-white"
+              className="mt-3 font-serif text-[clamp(2.25rem,5vw,4.25rem)] leading-[1.05] tracking-[-0.03em] text-brand"
             >
               {timeline.heading}
             </h2>
-            <p className="mt-6 text-base leading-[1.85] text-white/85 md:text-[1.0625rem]">
+            <p className="mt-6 text-base leading-[1.85] text-ink md:text-[1.0625rem]">
               {timeline.intro}
             </p>
           </div>

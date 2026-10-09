@@ -55,16 +55,16 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
               >
                 {overview.title}
               </h1>
-              <Rule className="mt-6" />
+              <Rule className="rule-draw mt-6 origin-left" />
               <p className="mt-6 text-base leading-[1.85] text-ink md:text-[1.0625rem]">
                 {overview.intro}
               </p>
             </div>
 
-            <div className="relative">
+            <div className="rise-in group relative" style={{ ['--rise-delay' as string]: '200ms' }}>
               <span
                 aria-hidden="true"
-                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 md:block"
+                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
               />
               <div className="relative overflow-hidden rounded-[8px] shadow-raised">
                 <Image
@@ -76,7 +76,7 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
                   // deprecated `priority` in Next 16.
                   preload
                   sizes="(min-width: 1280px) 568px, (min-width: 1024px) 46vw, 100vw"
-                  className="h-auto w-full"
+                  className="h-auto w-full transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
                 />
               </div>
             </div>
@@ -96,12 +96,16 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
               <li key={report.season}>
                 <Link
                   href={href}
-                  className="group flex h-full flex-col rounded-[8px] border border-border bg-surface p-6 transition-[transform,border-color,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:shadow-raised md:p-8"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-[8px] border border-border bg-surface p-6 transition-[translate,border-color,box-shadow] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1 md:p-8"
                 >
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
+                  />
                   <span className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
                     {report.eyebrow}
                   </span>
-                  <span className="mt-2 block font-serif text-[1.75rem] leading-tight text-ink-strong group-hover:text-brand">
+                  <span className="mt-2 block font-serif text-[1.75rem] leading-tight text-ink-strong transition-colors duration-500 group-hover:text-brand">
                     {report.title}
                   </span>
                   <span className="mt-1 block text-sm text-ink-muted">{report.batch}</span>
@@ -149,7 +153,7 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
               {recruiters.map((name) => (
                 <li
                   key={name}
-                  className="flex min-h-[4.5rem] items-center justify-center rounded-[8px] border border-border bg-surface-subtle px-4 py-3 text-center font-serif text-[1.0625rem] leading-snug text-ink-strong transition-colors duration-300 hover:border-brand hover:bg-surface hover:text-brand"
+                  className="flex min-h-[4.5rem] items-center justify-center rounded-[8px] border border-border bg-surface-subtle px-4 py-3 text-center font-serif text-[1.0625rem] leading-snug text-ink-strong transition-[translate,color,border-color,background-color] duration-500 ease-out hover:border-accent-surface hover:bg-surface hover:text-brand motion-safe:hover:-translate-y-0.5"
                 >
                   {name}
                 </li>

@@ -14,7 +14,8 @@ import type { ProgrammePage } from '@/types/programme';
  *   curriculum paragraph and the Programme Design and Requirements areas. The
  *   course names were checked against Delhi's own BM syllabus, which contains
  *   them. The institute page lists an "Environment, Society and Governance"
- *   area with no courses under it; it is left out rather than shown empty.
+ *   area with no courses under it; it is shown in the same place, and its
+ *   card points to the BM Courses document rather than inventing courses.
  *   Area names are in title case here; the institute page sets most in
  *   capitals and misspells "Managment".
  *
@@ -59,6 +60,11 @@ export const pgdmBm: ProgrammePage = {
         id: 'economics',
         name: 'Economics',
         courses: ['Macroeconomic Theory and Policy', 'Managerial Economics'],
+      },
+      {
+        id: 'environment-society-governance',
+        name: 'Environment, Society and Governance',
+        courses: [],
       },
       {
         id: 'finance',

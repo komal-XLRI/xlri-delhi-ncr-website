@@ -83,14 +83,14 @@ export function AboutLanding({ content }: { content: AboutPage }) {
               className="object-cover object-[center_15%]"
             />
           </div>
-          {/* Jamshedpur's green disc, made useful: it skips to the first section. */}
-          <a
-            href="#about-intro"
-            aria-label="Skip to the introduction"
+          {/* Jamshedpur's green disc: it opens the homepage's academic programmes. */}
+          <NextLink
+            href={`${routes.home}#academics`}
+            aria-label="See our academic programmes"
             className="absolute -bottom-12 left-[calc(1.5rem+4%)] hidden size-24 items-center justify-center rounded-full bg-accent-surface text-brand-950 shadow-raised transition-transform duration-300 hover:scale-105 lg:flex"
           >
             <ArrowRightIcon size={26} className="rotate-90" />
-          </a>
+          </NextLink>
         </div>
       </section>
 
@@ -227,16 +227,16 @@ export function AboutLanding({ content }: { content: AboutPage }) {
                         href={link.href}
                         className="group flex items-center justify-between gap-6 py-5 md:py-6"
                       >
-                        <span className="font-serif text-xl text-ink-strong transition-colors group-hover:text-accent-700 md:text-[1.5625rem]">
+                        <span className="font-serif text-xl text-ink-strong transition-[color,translate] duration-300 ease-out group-hover:text-brand group-focus-visible:text-brand motion-safe:group-hover:translate-x-1.5 md:text-[1.5625rem]">
                           {link.label}
                         </span>
                         <span
                           aria-hidden="true"
-                          className="flex size-9 shrink-0 items-center justify-center rounded-full bg-ink-strong text-white transition-colors group-hover:bg-accent-700 md:size-12"
+                          className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand text-white transition-[background-color,color,scale,box-shadow] duration-300 ease-out group-hover:bg-accent-surface group-hover:text-brand-950 group-hover:shadow-raised group-focus-visible:bg-accent-surface group-focus-visible:text-brand-950 motion-safe:group-hover:scale-110 md:size-12"
                         >
                           <ArrowRightIcon
                             size={16}
-                            className="-rotate-45 transition-transform duration-300 group-hover:rotate-0"
+                            className="-rotate-45 transition-transform duration-300 group-hover:rotate-0 group-focus-visible:rotate-0"
                           />
                         </span>
                       </NextLink>

@@ -46,6 +46,11 @@ const SECTION_HEADING =
  * would silently turn the sticky off; the hover zoom is clipped on the image
  * frame itself for that reason.
  *
+ * Motion is light and slow, in the brand colours: the title rule draws and
+ * the two columns rise in on load (`.rule-draw`, `.rise-in`), and the
+ * portrait slides a lime frame out from behind it on hover. None of it plays
+ * under `prefers-reduced-motion`.
+ *
  * A Server Component with no client JavaScript.
  */
 export function DirectorsDeskPage({ content }: { content: DirectorsDesk }) {
@@ -68,27 +73,42 @@ export function DirectorsDeskPage({ content }: { content: DirectorsDesk }) {
         >
           {content.title}
         </h1>
+        <span
+          aria-hidden="true"
+          className="rule-draw mt-4 block h-[3px] w-14 origin-left bg-accent-surface"
+        />
 
         <div className="mt-8 flex flex-col gap-10 md:mt-10 lg:flex-row lg:gap-12">
           {/* ---------------- portrait: the pinned quarter ---------------- */}
           <aside aria-label="The Director" className="lg:w-1/4 lg:shrink-0">
             <div className="lg:sticky lg:top-[13.5rem]">
-              <figure className="group max-w-sm lg:max-w-none">
-                <div className="overflow-hidden rounded-sm bg-surface-subtle">
-                  <Image
-                    src={director.portrait.src}
-                    width={director.portrait.width}
-                    height={director.portrait.height}
-                    alt={director.portrait.alt}
-                    // Above the fold on every viewport — the LCP element.
-                    // `preload`, not `priority`: the latter is deprecated in Next 16.
-                    preload
-                    sizes="(min-width: 1280px) 296px, (min-width: 1024px) 22vw, 384px"
-                    className="aspect-[3/4] w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.04]"
+              <figure className="rise-in group max-w-sm lg:max-w-none">
+                <div className="relative">
+                  {/* A lime frame that slides out from behind the portrait. */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 translate-x-1 translate-y-1 rounded-sm border-2 border-accent-surface opacity-0 transition-[opacity,translate] duration-700 ease-out group-hover:translate-x-3 group-hover:translate-y-3 group-hover:opacity-100"
                   />
+                  <div className="relative overflow-hidden rounded-sm bg-surface-subtle">
+                    <Image
+                      src={director.portrait.src}
+                      width={director.portrait.width}
+                      height={director.portrait.height}
+                      alt={director.portrait.alt}
+                      // Above the fold on every viewport — the LCP element.
+                      // `preload`, not `priority`: the latter is deprecated in Next 16.
+                      preload
+                      sizes="(min-width: 1280px) 296px, (min-width: 1024px) 22vw, 384px"
+                      className="aspect-[3/4] w-full object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
+                    />
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
+                    />
+                  </div>
                 </div>
                 <figcaption className="mt-5">
-                  <span className="block font-serif text-xl text-ink-strong md:text-2xl">
+                  <span className="block font-serif text-xl text-ink-strong transition-colors duration-500 group-hover:text-brand md:text-2xl">
                     {director.name}
                   </span>
                   <span className="mt-1 block text-ink-muted">{director.designation}</span>
@@ -98,11 +118,12 @@ export function DirectorsDeskPage({ content }: { content: DirectorsDesk }) {
           </aside>
 
           {/* ---------------- text: the remaining three quarters ---------------- */}
-          <div className="min-w-0 flex-1">
+          <div className="rise-in min-w-0 flex-1" style={{ ['--rise-delay' as string]: '300ms' }}>
             <section aria-labelledby="about-director-heading">
               <h2 id="about-director-heading" className={SECTION_HEADING}>
                 {biography.heading}
               </h2>
+              <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
               <div className={`${PROSE} mt-6`}>
                 {biography.paragraphs.map((paragraph) => (
                   <p key={paragraph.slice(0, 48)}>{paragraph}</p>
@@ -117,13 +138,17 @@ export function DirectorsDeskPage({ content }: { content: DirectorsDesk }) {
               <h2 id="director-message-heading" className={SECTION_HEADING}>
                 {message.heading}
               </h2>
+              <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
               <div className={`${PROSE} mt-6`}>
                 {message.opening.map((paragraph) => (
                   <p key={paragraph.slice(0, 32)}>{paragraph}</p>
                 ))}
 
                 {message.hallmarks.map((hallmark) => (
-                  <p key={hallmark.id}>
+                  <p
+                    key={hallmark.id}
+                    className="border-l-[3px] border-accent-surface pl-5 transition-colors duration-500 hover:border-brand"
+                  >
                     <strong className="block font-semibold text-ink-strong">
                       {hallmark.title}
                       {hallmark.subtitle ? ` – ${hallmark.subtitle}` : null}

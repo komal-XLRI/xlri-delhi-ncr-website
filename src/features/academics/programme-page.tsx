@@ -12,6 +12,7 @@ import {
   ExternalIcon,
   GlobeIcon,
   LandmarkIcon,
+  LeafIcon,
   LightbulbIcon,
   SparkIcon,
   type IconProps,
@@ -23,9 +24,10 @@ const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
 const H2 =
   'font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-ink-strong';
 
-/** One mark per area, so nine cards read as nine things at a glance. */
+/** One mark per area, so the cards read as separate things at a glance. */
 const AREA_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
   economics: GlobeIcon,
+  'environment-society-governance': LeafIcon,
   finance: LandmarkIcon,
   'general-management': CompassIcon,
   'human-resource-management': BriefcaseIcon,
@@ -53,7 +55,7 @@ const AREA_ICONS: Record<string, (props: IconProps) => React.ReactElement> = {
  *  3. **Programme Design and Requirements** — Jamshedpur's grid of subject
  *     areas. There, the courses appear only on hover over a stock photograph,
  *     so touch and keyboard users never see them; here every card shows its
- *     courses outright, on the brand blue the institute uses for that band.
+ *     courses outright, on white cards that lift and draw a lime bar on hover.
  *  4. **Related Programmes** — Jamshedpur's tinted band; Delhi-NCR offers one
  *     other programme, PGDM - IEV.
  *
@@ -89,7 +91,10 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
               <p className="mt-3 font-serif text-xl leading-snug text-ink-strong md:text-[1.375rem]">
                 {content.title}
               </p>
-              <span aria-hidden="true" className="mt-6 block h-[3px] w-14 bg-accent-surface" />
+              <span
+                aria-hidden="true"
+                className="rule-draw mt-6 block h-[3px] w-14 origin-left bg-accent-surface"
+              />
               <p className="mt-6 text-base leading-[1.85] text-ink md:text-justify md:text-[1.0625rem] md:hyphens-auto">
                 {content.intro}
               </p>
@@ -123,10 +128,10 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="rise-in group relative" style={{ ['--rise-delay' as string]: '200ms' }}>
               <span
                 aria-hidden="true"
-                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 md:block"
+                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
               />
               <div className="relative overflow-hidden rounded-[8px] shadow-raised">
                 <Image
@@ -138,13 +143,16 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
                   // deprecated `priority` in Next 16.
                   preload
                   sizes="(min-width: 1280px) 568px, (min-width: 1024px) 46vw, 100vw"
-                  className="h-auto w-full"
+                  className="h-auto w-full transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
                 />
               </div>
             </div>
           </div>
 
-          <dl className="mt-12 grid grid-cols-1 overflow-hidden rounded-[8px] border border-border sm:grid-cols-3 md:mt-16">
+          <dl
+            className="rise-in mt-12 grid grid-cols-1 overflow-hidden rounded-[8px] border border-border sm:grid-cols-3 md:mt-16"
+            style={{ ['--rise-delay' as string]: '350ms' }}
+          >
             {content.facts.map((fact, index) => (
               // Label first in the DOM (a <dt> must precede its <dd>), figure
               // first on screen.
@@ -192,28 +200,53 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
               return (
                 <li
                   key={area.id}
-                  className="group flex flex-col rounded-[8px] bg-brand p-6 text-white transition-[background-color,transform] duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-950 md:p-7"
+                  className="group relative flex flex-col overflow-hidden rounded-[8px] border border-border bg-surface p-6 transition-[translate,border-color,box-shadow] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1 md:p-7"
                 >
+                  {/* A lime bar that sweeps across the top of the card on hover. */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-x-100"
+                  />
                   <span className="flex items-center gap-4">
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-accent-surface">
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-500 group-hover:bg-brand group-hover:text-white">
                       <Icon size={20} aria-hidden="true" />
                     </span>
-                    <h3 className="font-serif text-xl leading-snug text-white">{area.name}</h3>
+                    <h3 className="font-serif text-xl leading-snug text-ink-strong transition-colors duration-500 group-hover:text-brand">
+                      {area.name}
+                    </h3>
                   </span>
-                  <ul className="mt-5 space-y-2 border-t border-white/15 pt-5">
-                    {area.courses.map((course) => (
-                      <li
-                        key={course}
-                        className="flex gap-2.5 text-[0.9375rem] leading-snug text-white/90"
+                  {area.courses.length > 0 ? (
+                    <ul className="mt-5 space-y-2 border-t border-border pt-5">
+                      {area.courses.map((course) => (
+                        <li
+                          key={course}
+                          className="flex gap-2.5 text-[0.9375rem] leading-snug text-ink"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="mt-[0.45em] size-1.5 shrink-0 rounded-full bg-accent-surface"
+                          />
+                          <span>{course}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    // The institute lists this area without its courses; point to
+                    // the document that has them rather than leave the card empty.
+                    <p className="mt-5 border-t border-border pt-5 text-[0.9375rem] leading-snug text-ink-muted">
+                      Courses in this area are listed in the{' '}
+                      <a
+                        href={actions.courses.href}
+                        target="_blank"
+                        rel="noopener"
+                        className="font-semibold text-brand underline underline-offset-[3px] hover:text-brand-950"
                       >
-                        <span
-                          aria-hidden="true"
-                          className="mt-[0.45em] size-1.5 shrink-0 rounded-full bg-accent-surface"
-                        />
-                        <span>{course}</span>
-                      </li>
-                    ))}
-                  </ul>
+                        {actions.courses.label} document
+                        <span className="sr-only"> (PDF, opens in a new tab)</span>
+                      </a>
+                      .
+                    </p>
+                  )}
                 </li>
               );
             })}

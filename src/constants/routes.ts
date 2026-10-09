@@ -47,6 +47,8 @@ export const routes = {
 
   faculty: {
     index: '/faculty',
+    fullTime: '/faculty/full-time',
+    fullTimeProfile: (slug: string) => `/faculty/full-time/${slug}` as const,
     profile: (slug: string) => `/faculty/${slug}` as const,
   },
 
@@ -95,7 +97,6 @@ export const routes = {
 
   /** HTML sitemap — a GIGW requirement, and the 7th consumer of the nav tree. */
   sitemap: '/sitemap',
-  search: '/search',
   contact: '/contact',
 } as const;
 

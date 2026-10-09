@@ -24,6 +24,24 @@ const nextConfig: NextConfig = {
      */
     formats: ['image/avif', 'image/webp'],
   },
+
+  /**
+   * Search is a panel in the header, not a page. The `/search` page it
+   * replaced is gone; an old link to it lands on the homepage, where the panel
+   * opens with the query (Next carries `?q=` through the redirect).
+   */
+  redirects() {
+    return [
+      { source: '/search', destination: '/', permanent: true },
+      // Faculty Innovation in Teaching is published on the institute site for
+      // both campuses; this address forwards there.
+      {
+        source: '/faculty/innovation-in-teaching',
+        destination: 'https://xlri.ac.in/faculty-research/innovation-in-teaching',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

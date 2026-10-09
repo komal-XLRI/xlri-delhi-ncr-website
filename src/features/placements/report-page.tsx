@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
-import { ArrowRightIcon, BookIcon, CheckIcon, ExternalIcon } from '@/components/ui/icon';
+import { ArrowRightIcon, CheckIcon, ExternalIcon } from '@/components/ui/icon';
 import { routes } from '@/constants/routes';
 import type { PlacementDocument, PlacementReport } from '@/types/placements';
 
@@ -55,17 +55,23 @@ export function PlacementReportPage({ report, documents }: Props) {
           />
 
           {report.image ? (
-            <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-[8px] md:mt-10 md:aspect-[21/8]">
-              <Image
-                src={report.image.src}
-                alt={report.image.alt}
-                fill
-                // Above the fold — the LCP element. `preload` replaces the
-                // deprecated `priority` in Next 16.
-                preload
-                sizes="(min-width: 1280px) 1184px, 100vw"
-                className="object-cover object-[center_45%]"
+            <div className="rise-in group relative mt-8 md:mt-10">
+              <span
+                aria-hidden="true"
+                className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[8px] border-2 border-accent-surface/70 transition-[translate,border-color] duration-700 ease-out group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-accent-surface md:block"
               />
+              <div className="relative aspect-[16/9] overflow-hidden rounded-[8px] md:aspect-[21/8]">
+                <Image
+                  src={report.image.src}
+                  alt={report.image.alt}
+                  fill
+                  // Above the fold — the LCP element. `preload` replaces the
+                  // deprecated `priority` in Next 16.
+                  preload
+                  sizes="(min-width: 1280px) 1184px, 100vw"
+                  className="object-cover object-[center_45%] transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.04]"
+                />
+              </div>
             </div>
           ) : null}
 
@@ -81,7 +87,7 @@ export function PlacementReportPage({ report, documents }: Props) {
                 {report.title}
               </h1>
               <p className="mt-3 font-serif text-xl leading-snug text-ink-strong">{report.batch}</p>
-              <Rule className="mt-6" />
+              <Rule className="rule-draw mt-6 origin-left" />
               <div className="mt-6 space-y-5 text-base leading-[1.85] text-ink md:text-[1.0625rem]">
                 {report.intro.map((paragraph) => (
                   <p key={paragraph.slice(0, 32)}>
@@ -91,20 +97,31 @@ export function PlacementReportPage({ report, documents }: Props) {
               </div>
             </div>
 
-            <aside aria-label="At a glance" className="lg:pt-10">
+            <aside
+              aria-label="At a glance"
+              className="rise-in lg:pt-10"
+              style={{ ['--rise-delay' as string]: '250ms' }}
+            >
               <dl className="overflow-hidden rounded-[8px] border border-border">
                 {headline.map((stat, index) => (
                   // Label first in the DOM (a <dt> must precede its <dd>),
                   // figure first on screen.
                   <div
                     key={stat.id}
-                    className={`flex flex-col-reverse justify-end bg-surface-subtle px-6 py-5 ${
+                    className={`group relative flex flex-col-reverse justify-end bg-surface-subtle px-6 py-5 transition-colors duration-500 hover:bg-surface ${
                       index > 0 ? 'border-t border-border' : ''
                     }`}
                   >
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-accent-surface transition-transform duration-700 ease-out group-hover:scale-y-100"
+                    />
                     <dt className="mt-1.5 text-sm leading-snug text-ink-muted">{stat.label}</dt>
                     <dd>
-                      <Figure stat={stat} className="text-[2rem] text-brand" />
+                      <Figure
+                        stat={stat}
+                        className="inline-block text-[2rem] text-brand transition-transform duration-500 ease-out motion-safe:group-hover:translate-x-1"
+                      />
                     </dd>
                   </div>
                 ))}
@@ -114,22 +131,45 @@ export function PlacementReportPage({ report, documents }: Props) {
                   href={report.document.href}
                   target="_blank"
                   rel="noopener"
-                  className="group mt-5 flex items-center gap-3 rounded-full bg-brand py-2.5 pr-5 pl-2.5 text-[0.9375rem] font-semibold text-white transition-colors duration-200 hover:bg-brand-950"
+                  className="group relative mt-5 flex items-center gap-4 overflow-hidden rounded-[8px] border border-border bg-surface py-4 pr-4 pl-5 transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-0.5"
                 >
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent-surface text-brand-950">
-                    <BookIcon size={16} aria-hidden="true" />
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-y-0 left-0 w-1 bg-accent-surface"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="flex h-12 w-10 shrink-0 items-center justify-center rounded-[4px] bg-brand text-[0.6875rem] font-bold tracking-[0.06em] text-white"
+                  >
+                    PDF
                   </span>
-                  <span>
-                    Download the report
-                    <span className="ml-2 font-normal text-white/75">{report.document.meta}</span>
+                  <span className="flex-1">
+                    <span className="block text-xs font-semibold tracking-[0.14em] text-accent-700 uppercase">
+                      Full report
+                    </span>
+                    <span className="mt-0.5 block text-base font-semibold text-ink-strong transition-colors duration-500 group-hover:text-brand">
+                      Download the report
+                    </span>
                   </span>
-                  <span className="sr-only"> (opens in a new tab)</span>
+                  <span
+                    aria-hidden="true"
+                    className="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand text-white transition-colors duration-500 group-hover:bg-accent-surface group-hover:text-brand-950"
+                  >
+                    <ArrowRightIcon
+                      size={16}
+                      className="rotate-90 transition-transform duration-500 ease-out motion-safe:group-hover:translate-y-0.5"
+                    />
+                  </span>
+                  <span className="sr-only"> (PDF, opens in a new tab)</span>
                 </a>
               ) : null}
             </aside>
           </div>
 
-          <figure className="mt-12 border-l-[3px] border-accent-surface pl-6 md:mt-14 md:pl-10">
+          <figure
+            className="rise-in mt-12 border-l-[3px] border-accent-surface pl-6 md:mt-14 md:pl-10"
+            style={{ ['--rise-delay' as string]: '400ms' }}
+          >
             <blockquote className="font-serif text-lg leading-[1.7] text-ink-strong md:text-xl">
               <p>“{quote.text}”</p>
             </blockquote>
@@ -152,9 +192,9 @@ export function PlacementReportPage({ report, documents }: Props) {
             {highlights.items.map((item) => (
               <li
                 key={item.slice(0, 32)}
-                className="flex gap-4 rounded-[8px] bg-surface p-5 text-[0.9375rem] leading-[1.7] text-ink"
+                className="group flex gap-4 rounded-[8px] border border-transparent bg-surface p-5 text-[0.9375rem] leading-[1.7] text-ink transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-accent-surface hover:shadow-raised motion-safe:hover:-translate-y-1"
               >
-                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent-700">
+                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent-700 transition-colors duration-500 group-hover:bg-brand group-hover:text-white">
                   <CheckIcon size={13} aria-hidden="true" />
                 </span>
                 <span>
@@ -181,10 +221,10 @@ export function PlacementReportPage({ report, documents }: Props) {
 
           <div className="mt-10 grid grid-cols-1 gap-x-14 gap-y-10 lg:grid-cols-2">
             {sectors.items.map((sector) => (
-              <section key={sector.id} aria-labelledby={`sector-${sector.id}`}>
+              <section key={sector.id} aria-labelledby={`sector-${sector.id}`} className="group">
                 <h3
                   id={`sector-${sector.id}`}
-                  className="border-l-[3px] border-brand pl-4 font-serif text-xl leading-snug text-ink-strong"
+                  className="border-l-[3px] border-brand pl-4 font-serif text-xl leading-snug text-ink-strong transition-[border-color,color,padding] duration-500 ease-out group-hover:border-accent-surface group-hover:pl-5 group-hover:text-brand"
                 >
                   {sector.name}
                 </h3>
@@ -213,19 +253,27 @@ export function PlacementReportPage({ report, documents }: Props) {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Link
               href={other.href}
-              className="inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-200 hover:border-brand hover:text-brand"
+              className="group inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-500 hover:border-accent-surface hover:text-brand"
             >
               {other.label}
-              <ArrowRightIcon size={14} aria-hidden="true" className="text-accent-700" />
+              <ArrowRightIcon
+                size={14}
+                aria-hidden="true"
+                className="text-accent-700 transition-transform duration-500 ease-out motion-safe:group-hover:translate-x-0.5"
+              />
             </Link>
             <a
               href={report.more}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-200 hover:border-brand hover:text-brand"
+              className="group inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-500 hover:border-accent-surface hover:text-brand"
             >
               More details
-              <ExternalIcon size={14} aria-hidden="true" className="text-accent-700" />
+              <ExternalIcon
+                size={14}
+                aria-hidden="true"
+                className="text-accent-700 transition-transform duration-500 ease-out motion-safe:group-hover:translate-x-0.5"
+              />
               <span className="sr-only"> (xlri.ac.in, opens in a new tab)</span>
             </a>
           </div>

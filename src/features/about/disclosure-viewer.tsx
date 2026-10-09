@@ -25,11 +25,21 @@ import type { DisclosureDocument } from '@/types/mandatory-disclosure';
  * everywhere. Open and Download stay above the frame on desktop too: a
  * statutory document should be one click from being saved or printed.
  *
+ * ## The preview frame
+ *
+ * The browser's own PDF viewer brings a dark toolbar and a thumbnail rail
+ * that no page can style. Both are switched off with the PDF open parameters
+ * (`toolbar=0`, `navpanes=0`) so the pages sit alone as a white sheet inside
+ * our own frame: a lime top edge, a slim header with the page count, and a
+ * Full screen control. The full viewer is still one click away through Open
+ * in new tab.
+ *
  * Tabs follow the WAI-ARIA pattern (Left/Right, Home/End, roving tabindex).
  */
 export function DisclosureViewer({ documents }: { documents: readonly DisclosureDocument[] }) {
   const [active, setActive] = useState(0);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
+  const frame = useRef<HTMLDivElement>(null);
   const last = documents.length - 1;
   const showTabs = documents.length > 1;
 
@@ -111,49 +121,102 @@ export function DisclosureViewer({ documents }: { documents: readonly Disclosure
           hidden={index !== active}
           className={showTabs ? 'pt-8' : undefined}
         >
-          <div className="flex flex-col gap-5 border-b border-border pb-6 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="font-serif text-2xl leading-tight text-ink-strong md:text-[1.75rem]">
-                {doc.title}
-              </h2>
-              <p className="mt-1.5 text-sm text-ink-muted">
-                PDF · {doc.pages} pages · {doc.sizeLabel}
-              </p>
+          <div className="rise-in flex flex-col gap-5 rounded-[5px] border-l-4 border-accent-surface bg-surface-subtle p-5 sm:flex-row sm:items-center sm:justify-between md:p-6">
+            <div className="flex items-center gap-4">
+              <span
+                aria-hidden="true"
+                className="flex h-12 w-10 shrink-0 items-center justify-center rounded-[4px] bg-brand text-[0.6875rem] font-bold tracking-[0.06em] text-white"
+              >
+                PDF
+              </span>
+              <div>
+                <h2 className="font-serif text-2xl leading-tight text-ink-strong md:text-[1.75rem]">
+                  {doc.title}
+                </h2>
+              </div>
             </div>
             <div className="flex flex-wrap gap-3">
               <a
                 href={doc.src}
                 target="_blank"
                 rel="noopener"
-                className="inline-flex items-center gap-2 rounded-full border border-border-strong px-5 py-2.5 text-sm font-semibold text-ink-strong transition-colors hover:border-brand hover:text-brand"
+                className="group inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-5 py-2.5 text-sm font-semibold text-ink-strong transition-colors duration-300 hover:border-brand hover:text-brand"
               >
                 Open in new tab
                 <span className="sr-only"> (PDF)</span>
-                <ExternalIcon size={15} aria-hidden="true" />
+                <ExternalIcon
+                  size={15}
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </a>
               <a
                 href={doc.src}
                 download
-                className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-brand py-1.5 pr-1.5 pl-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-brand-950"
               >
                 Download
                 <span className="sr-only">
                   {' '}
                   {doc.title}, PDF, {doc.sizeLabel}
                 </span>
-                <ArrowRightIcon size={15} aria-hidden="true" className="rotate-90" />
+                <span
+                  aria-hidden="true"
+                  className="flex size-8 items-center justify-center rounded-full bg-accent-surface text-brand-950"
+                >
+                  <ArrowRightIcon
+                    size={14}
+                    className="rotate-90 transition-transform duration-300 group-hover:translate-y-0.5"
+                  />
+                </span>
               </a>
             </div>
           </div>
 
           {/* The embed, from `md` up. Only the visible document's frame is mounted. */}
           {index === active ? (
-            <div className="mt-6 hidden overflow-hidden rounded-[5px] border border-border bg-surface-subtle md:block">
-              <iframe
-                src={`${doc.src}#view=FitH`}
-                title={`${doc.title} (PDF)`}
-                className="block h-[min(80vh,56rem)] min-h-[37.5rem] w-full"
-              />
+            <div
+              ref={frame}
+              className="rise-in mt-6 hidden overflow-hidden rounded-[8px] border border-t-4 border-border border-t-accent-surface bg-surface-subtle md:block"
+              style={{ ['--rise-delay' as string]: '250ms' }}
+            >
+              <div className="flex items-center justify-between gap-4 border-b border-border bg-surface px-5 py-3">
+                <p className="flex items-center gap-3 text-sm">
+                  <span className="font-semibold tracking-[0.14em] text-accent-700 uppercase">
+                    Document preview
+                  </span>
+                  <span aria-hidden="true" className="h-4 w-px bg-border-strong" />
+                  <span className="text-ink-muted">{doc.pages} pages · scroll to read</span>
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    void frame.current?.requestFullscreen();
+                  }}
+                  className="group inline-flex items-center gap-2 rounded-full border border-border-strong px-3.5 py-1.5 text-sm font-semibold text-ink-strong transition-colors duration-300 hover:border-brand hover:text-brand"
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    className="size-3.5 transition-transform duration-300 group-hover:scale-110"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                  >
+                    <path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" />
+                  </svg>
+                  Full screen
+                </button>
+              </div>
+              {/* In full screen the frame fills the display, so the sheet grows with it. */}
+              <div className="p-4 lg:p-6 [:fullscreen_&]:h-[calc(100%-3.25rem)]">
+                <iframe
+                  src={`${doc.src}#toolbar=0&navpanes=0&view=FitH`}
+                  title={`${doc.title} (PDF)`}
+                  className="block h-[min(78vh,54rem)] min-h-[36rem] w-full rounded-[4px] bg-surface shadow-raised ring-1 ring-border [:fullscreen_&]:h-full"
+                />
+              </div>
             </div>
           ) : null}
         </div>
