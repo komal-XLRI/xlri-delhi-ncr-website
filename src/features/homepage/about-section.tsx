@@ -101,55 +101,58 @@ export function AboutSection({ about }: { about: About }) {
         Here it also means the crop lands on the purpose band's top edge — a
         real colour boundary rather than a section seam, which is a different
         cut from every other placement on the page.
+
+        The host is full width, with the measure inside it, so the motif sits
+        in the page's right-hand margin. On the measured block it sat inside
+        the content column and covered the gallery's thumbnails.
       */}
-      <div
-        data-motif="about"
-        className={`${measure} relative isolate overflow-hidden pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24`}
-      >
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
-          <div className="reveal lg:col-span-7">
-            <h2 id="about-heading" className="section-heading">
-              {about.heading}
-            </h2>
+      <div data-motif="about" className="relative isolate overflow-hidden">
+        <div className={`${measure} pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24`}>
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
+            <div className="reveal lg:col-span-7">
+              <h2 id="about-heading" className="section-heading">
+                {about.heading}
+              </h2>
 
-            <span aria-hidden="true" className="mt-8 mb-9 block h-[3px] w-14 bg-accent-surface" />
+              <span aria-hidden="true" className="mt-8 mb-9 block h-[3px] w-14 bg-accent-surface" />
 
-            {/*
+              {/*
               The opening paragraph carries the visual weight a heading normally
               would — set at lead size, with a capped measure so it stays
               readable at that scale.
             */}
-            <div className="prose-justify max-w-[38rem] space-y-6 text-lg leading-relaxed text-ink">
-              {about.body.map((paragraph) => (
-                <p key={paragraph.slice(0, 32)}>{paragraph}</p>
-              ))}
-            </div>
+              <div className="prose-justify max-w-[38rem] space-y-6 text-lg leading-relaxed text-ink">
+                {about.body.map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                ))}
+              </div>
 
-            {/*
+              {/*
               A pill with the arrow carried in its own filled disc. The label
               and the disc move toward each other on hover — the padding on the
               right closes as the disc slides — so the control feels like it is
               already going somewhere. Cheaper and quieter than a colour change,
               and it keeps the button legible against the white surface at rest.
             */}
-            {/*
+              {/*
               `.cta-split`, shared with the Academics, Events and News CTAs.
               This button and the News one each carried their own inline copy of
               the pattern — at 44px and 36px, with different paddings — which is
               exactly how four buttons meant to look identical end up not
               matching. The class owns the geometry now.
             */}
-            <NextLink href={about.action.href} className="cta-split mt-10">
-              <span className="cta-split-label">{about.action.label}</span>
-              <span aria-hidden="true" className="cta-split-icon">
-                <ArrowRightIcon size={18} className="cta-split-arrow" />
-              </span>
-            </NextLink>
-          </div>
+              <NextLink href={about.action.href} className="cta-split mt-10">
+                <span className="cta-split-label">{about.action.label}</span>
+                <span aria-hidden="true" className="cta-split-icon">
+                  <ArrowRightIcon size={18} className="cta-split-arrow" />
+                </span>
+              </NextLink>
+            </div>
 
-          {/* ---------------- gallery ---------------- */}
-          <div className="reveal lg:col-span-5" style={{ ['--reveal-start' as string]: '10%' }}>
-            <AboutGallery images={about.gallery} />
+            {/* ---------------- gallery ---------------- */}
+            <div className="reveal lg:col-span-5" style={{ ['--reveal-start' as string]: '10%' }}>
+              <AboutGallery images={about.gallery} />
+            </div>
           </div>
         </div>
       </div>
