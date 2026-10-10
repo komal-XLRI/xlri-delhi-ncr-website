@@ -947,7 +947,7 @@
         color-mix(in srgb, var(--color-accent-surface) 14%, transparent),
         transparent 64%
       );
-    border-top: 1px solid var(--color-border);
+    /* No divider lines between homepage sections, at the client's request. */
   }
 
   /* ---------------------------------------------------------------------------
@@ -1820,20 +1820,19 @@
   /**
    * The ground.
    *
-   * White, as the rest of the homepage is — it was `--surface-subtle`, and a
-   * grey band under white cards gave the section a tray to sit in that no other
-   * section has. The only tint is a very wide, very faint green wash behind the
-   * cards. It is far too weak to move the contrast of anything on it.
+   * The light grey of the News band, so the homepage alternates — white About,
+   * grey News, lime Accreditations, white Academic Programmes, grey Events,
+   * white testimonials — and no two neighbouring sections share a ground now
+   * that the divider lines are gone. The white event cards stand out on it.
+   * A very faint green wash behind the cards keeps it from reading flat.
    */
   .events-band {
-    background-color: var(--color-surface);
+    background-color: var(--color-surface-subtle);
     background-image: radial-gradient(
       58rem 26rem at 50% 62%,
-      color-mix(in srgb, var(--color-accent-surface) 9%, transparent),
+      color-mix(in srgb, var(--color-accent-surface) 7%, transparent),
       transparent 72%
     );
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
   }
 
   :root[data-contrast='high'] .events-band {
@@ -2316,9 +2315,10 @@
      `rgb(0 0 0 / a)` exactly as `--shadow-raised` in theme.css is written.
      ======================================================================== */
 
+  /* No rule along the top: the accreditation band above is white too, and the
+     two now run together without a divider, at the client's request. */
   .academics-band {
     background-color: var(--color-surface);
-    border-top: 1px solid var(--color-border);
   }
 
   /**
@@ -2502,17 +2502,18 @@
   /**
    * The ground.
    *
-   * White, as the rest of the homepage is. The only tint is a wide, very faint
-   * green wash — depth, not colour, and far too weak to move the contrast of
-   * anything on it. The alpha is derived with `color-mix()` against the token
-   * rather than hand-typed, which is what keeps the high-contrast theme
-   * reaching it instead of stepping around a literal.
+   * A very light lime band — the brand's green at a whisper. It sits between
+   * the grey News band and the white Academic Programmes band, and with the
+   * divider lines gone it needs a ground of its own to read as a separate
+   * section from both. A slightly stronger pool of the same green behind the
+   * marks gives it depth. Alphas are derived with `color-mix()` against the
+   * token rather than hand-typed, so the high-contrast theme still reaches it.
    */
   .accreditation-band {
-    background-color: var(--color-surface);
+    background-color: color-mix(in srgb, var(--color-accent-surface) 7%, var(--color-surface));
     background-image: radial-gradient(
       52rem 20rem at 50% 56%,
-      color-mix(in srgb, var(--color-accent-surface) 8%, transparent),
+      color-mix(in srgb, var(--color-accent-surface) 10%, transparent),
       transparent 70%
     );
   }
@@ -2669,16 +2670,26 @@
   }
 
   /**
-   * About — bottom-right of the intro block, under the photograph's caption,
-   * cut by the purpose band below. The host is the intro block rather than
-   * the section because the vision column further down is sticky, and
-   * `overflow: hidden` on the section would break it.
+   * About — bottom-right corner of the intro block, in the page's right-hand
+   * margin beside the photograph's caption, cut by the purpose band below.
+   * The host is the full-width intro wrapper rather than the section, because
+   * the vision column further down is sticky and `overflow: hidden` on the
+   * section would break it.
+   *
+   * Only from 1440px, where the margin beside the 80rem measure is wide
+   * enough to hold it. Narrower, it would sit on the gallery thumbnails.
    */
   [data-motif='about']::before {
-    --motif-w: 7.5rem;
+    --motif-w: 7rem;
     --motif-drift: 0 -0.5rem;
     inset-block-end: 0;
     inset-inline-end: 0;
+  }
+
+  @media (max-width: 1439.98px) {
+    [data-motif='about']::before {
+      display: none;
+    }
   }
 
   /**

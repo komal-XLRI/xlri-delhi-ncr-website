@@ -59,6 +59,7 @@ export const sustainabilityTeam: SustainabilityTeamPage = {
         },
         portrait: portrait('sanchayan-nath'),
         profileHref: 'https://xlridelhi.ac.in/wps-members/dr-sanchayan-nath/',
+        facultyId: 'dr-sanchayan-nath',
       },
       {
         id: 'smriti-das',
@@ -67,6 +68,7 @@ export const sustainabilityTeam: SustainabilityTeamPage = {
         focus: { label: 'Functional Area', items: ['Strategic Management'] },
         portrait: portrait('smriti-das'),
         profileHref: 'https://xlridelhi.ac.in/wps-members/dr-smriti-das/',
+        facultyId: 'dr-smriti-das',
       },
       {
         id: 'tata-l-raghu-ram',
@@ -89,16 +91,38 @@ export const sustainabilityTeam: SustainabilityTeamPage = {
   committee: {
     heading: 'Campus Sustainability Committee',
     members: [
-      { id: 'sakshi-singhal', name: 'Dr. Sakshi Singhal', role: 'Convenor' },
-      { id: 'alwyn-rodrigues', name: 'Fr. Alwyn Rodrigues, SJ', role: 'Member' },
+      {
+        id: 'sakshi-singhal',
+        name: 'Dr. Sakshi Singhal',
+        role: 'Convenor',
+        facultyId: 'dr-shakshi-singhal',
+      },
+      {
+        id: 'alwyn-rodrigues',
+        name: 'Fr. Alwyn Rodrigues, SJ',
+        role: 'Member',
+        facultyId: 'fr-alwyn-rodrigues-sj',
+      },
       { id: 'j-dayal', name: 'Fr. J. Dayal, SJ', role: 'Member' },
-      { id: 'smriti-das', name: 'Dr. Smriti Das', role: 'Member', coreTeamId: 'smriti-das' },
-      { id: 'madhu-mandal', name: 'Dr. Madhu Mandal', role: 'Member' },
+      {
+        id: 'smriti-das',
+        name: 'Dr. Smriti Das',
+        role: 'Member',
+        coreTeamId: 'smriti-das',
+        facultyId: 'dr-smriti-das',
+      },
+      {
+        id: 'madhu-mandal',
+        name: 'Dr. Madhu Mandal',
+        role: 'Member',
+        facultyId: 'dr-madhu-mandal',
+      },
       {
         id: 'sanchayan-nath',
         name: 'Dr. Sanchayan Nath',
         role: 'Member',
         coreTeamId: 'sanchayan-nath',
+        facultyId: 'dr-sanchayan-nath',
       },
       { id: 'sanjiv-bhatia', name: 'Mr. Sanjiv Bhatia', role: 'Member' },
     ],

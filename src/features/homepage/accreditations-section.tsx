@@ -58,7 +58,7 @@ export function AccreditationsSection({ accreditations }: { accreditations: Accr
   return (
     <section
       aria-labelledby="accreditations-heading"
-      className="accreditation-band relative isolate border-y border-border py-10 md:py-12"
+      className="accreditation-band relative isolate py-10 md:py-12"
     >
       <Container>
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
