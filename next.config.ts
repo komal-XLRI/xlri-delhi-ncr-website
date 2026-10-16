@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next';
 
+import legacyUploads from './src/config/legacy-uploads.json';
+
 const nextConfig: NextConfig = {
   images: {
     /**
@@ -51,6 +53,9 @@ const nextConfig: NextConfig = {
       },
       { source: '/home-xlri', destination: '/', permanent: true },
       { source: '/home-old-2', destination: '/', permanent: true },
+      // Files the WordPress site served from /wp-content/uploads/ now live in
+      // public/; old links to them, and search results, forward to the copies.
+      ...legacyUploads.redirects.map((redirect) => ({ ...redirect, permanent: true })),
     ];
   },
 };

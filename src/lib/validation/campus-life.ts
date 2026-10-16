@@ -10,6 +10,9 @@ import type { StudentSocietiesPage } from '@/types/student-societies';
 const kebab = z.string().regex(/^[a-z0-9-]+$/, 'ids must be lowercase kebab-case');
 const line = z.string().min(1);
 
+/** A document: an https link, or a file this site serves from `public/`, by its path. */
+const documentHref = z.union([z.url({ protocol: /^https$/ }), z.string().regex(/^\/[^/]/)]);
+
 /** The browser-tab title (without the site suffix) and meta description. */
 const metaSchema = z.object({ title: line, description: line });
 
@@ -224,7 +227,7 @@ const facilitySchema = z.object({
     .optional(),
   documentsTitle: line.optional(),
   documents: z
-    .array(z.object({ title: z.string().min(1), href: z.url({ protocol: /^https$/ }) }))
+    .array(z.object({ title: z.string().min(1), href: documentHref }))
     .min(1)
     .optional(),
   gallery: z
@@ -344,10 +347,10 @@ function defined<T extends object>(value: T): { [K in keyof T]: Exclude<T[K], un
 
 /**
  * Runtime validation for `content/campus-life/internal-complaints-committee.json`.
- * Every FAQ needs an answer or a list, and documents must be https links.
+ * Every FAQ needs an answer or a list, and documents must be https links or
+ * files on this site.
  */
 const titled = z.object({ title: z.string().min(1), text: z.string().min(1) });
-const httpsUrl = z.url({ protocol: /^https$/ });
 const committeeSchema = z.object({
   meta: metaSchema,
   eyebrow: line,
@@ -396,7 +399,7 @@ const committeeSchema = z.object({
     sourceLine: template('source'),
     diagram: photoSchema,
     diagramLink: line,
-    handbook: httpsUrl,
+    handbook: documentHref,
     handbookLink: line,
   }),
   sessions: titled.extend({ eyebrow: line, photos: z.array(photoSchema) }),
@@ -427,7 +430,7 @@ const committeeSchema = z.object({
     )
     .min(1),
   documentsSection: headingSchema,
-  documents: z.array(z.object({ title: z.string().min(1), href: httpsUrl })),
+  documents: z.array(z.object({ title: z.string().min(1), href: documentHref })),
   contact: titled,
 });
 
