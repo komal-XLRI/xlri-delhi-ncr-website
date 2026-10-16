@@ -8,6 +8,24 @@ grouped by file and by the field they describe.
 When you change a field that has a note, read the note first, and update or
 remove it if it no longer applies.
 
+## Search (meta titles and descriptions)
+
+Every page's `meta.title` and `meta.description` are what search engines show
+for it. Two lengths matter:
+
+- **Description: 120–160 characters.** Longer is cut off in results; shorter
+  says too little. Say what the page is and who it is for, in plain words.
+- **Title: short.** The site adds " | XLRI Delhi-NCR" when the whole fits in
+  about 65 characters, and leaves it off when it does not, so a long title is
+  shown without the site's name rather than cut. A `meta.title` may be shorter
+  than the page's heading (the EMDP programmes' are).
+
+A policy page with no text yet (privacy, terms, copyright) asks search engines
+not to list it, and is left out of `/sitemap.xml`, until its text is added.
+The sitemap, `robots.txt`, the share card (`public/brand/share-default.jpg`)
+and the structured data search engines read are all built from the content,
+so there is nothing else to update when a page is added.
+
 ## about.json
 
 **about**

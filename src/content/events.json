@@ -22,6 +22,7 @@
     "moreDetails": "More Details"
   },
   "detail": {
+    "metaTitle": "{title} ({date})",
     "metaDescription": "{title} — an event at XLRI Delhi-NCR, {date}.",
     "eyebrow": "Event",
     "back": "All events",

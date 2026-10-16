@@ -27,7 +27,15 @@ export async function generateMetadata({
   if (!content) return {};
   const { event, copy } = content;
   return buildMetadata(site, {
-    title: event.title,
+    title: fill(copy.metaTitle, {
+      title: event.title,
+      date: new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'UTC',
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+      }).format(new Date(`${event.dateTime}T00:00:00Z`)),
+    }),
     description: fill(copy.metaDescription, {
       title: event.title,
       date: longDate(event.dateTime),

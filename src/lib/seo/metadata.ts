@@ -19,11 +19,26 @@ export interface SiteIdentity {
   readonly url: string;
   readonly locale: string;
   readonly description: string;
+  /**
+   * The share card for pages without a picture of their own, so a link to
+   * any page shows the campus rather than a blank box.
+   */
+  readonly shareImage?: {
+    readonly src: string;
+    readonly alt: string;
+    readonly width: number;
+    readonly height: number;
+  };
 }
 
 export interface PageMetadataInput {
   /** Page title, without the site suffix — the factory appends it. */
   readonly title?: string;
+  /**
+   * The whole title, used as is — for the homepage, whose title leads with
+   * the site's name and so needs no suffix.
+   */
+  readonly fullTitle?: string;
   readonly description?: string;
   /** Root-relative path, e.g. `/faculty/jane-doe`. Drives the canonical URL. */
   readonly path: string;
@@ -45,11 +60,36 @@ export function absoluteUrl(origin: string, path: string): string {
   return suffix === '/' ? base : `${base}${suffix}`;
 }
 
+/**
+ * Search results show about 60–65 characters of a title. The site's name is
+ * added after the page's own title when both fit; when they do not, the
+ * page's words matter more, so the name is left off rather than cut.
+ */
+const TITLE_FITS = 65;
+
+function withSuffix(title: string, siteName: string): string {
+  const suffixed = `${title} | ${siteName}`;
+  return suffixed.length <= TITLE_FITS ? suffixed : title;
+}
+
 export function buildMetadata(site: SiteIdentity, page: PageMetadataInput): Metadata {
-  const title = page.title ? `${page.title} | ${site.name}` : site.name;
+  const title = page.fullTitle ?? (page.title ? withSuffix(page.title, site.name) : site.name);
   const description = page.description ?? site.description;
   const canonical = absoluteUrl(site.url, page.path);
-  const image = page.image ? absoluteUrl(site.url, page.image) : undefined;
+  const own = page.image ? absoluteUrl(site.url, page.image) : undefined;
+  const fallback = site.shareImage;
+  const images = own
+    ? [{ url: own, alt: page.imageAlt ?? title }]
+    : fallback
+      ? [
+          {
+            url: absoluteUrl(site.url, fallback.src),
+            alt: fallback.alt,
+            width: fallback.width,
+            height: fallback.height,
+          },
+        ]
+      : [];
 
   return {
     metadataBase: new URL(site.url),
@@ -76,16 +116,16 @@ export function buildMetadata(site: SiteIdentity, page: PageMetadataInput): Meta
       title,
       description,
       url: canonical,
-      ...(image ? { images: [{ url: image, alt: page.imageAlt ?? title }] } : {}),
+      ...(images.length > 0 ? { images } : {}),
       ...(page.publishedTime ? { publishedTime: page.publishedTime } : {}),
       ...(page.modifiedTime ? { modifiedTime: page.modifiedTime } : {}),
     },
 
     twitter: {
-      card: image ? 'summary_large_image' : 'summary',
+      card: images.length > 0 ? 'summary_large_image' : 'summary',
       title,
       description,
-      ...(image ? { images: [image] } : {}),
+      ...(images.length > 0 ? { images: images.map((entry) => entry.url) } : {}),
     },
   };
 }

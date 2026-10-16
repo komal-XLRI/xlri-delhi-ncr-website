@@ -168,8 +168,11 @@ export interface LibraryPagesCopy {
   };
   /** Every e-resource page; each collection gives its own title and intro. */
   readonly collection: {
-    /** `{label}` is the collection's; `{items}` lists its resources. */
-    readonly meta: PageMeta;
+    /**
+     * `{label}` is the collection's; `{items}` lists its first few resources,
+     * then `andMore` ("and more") when there are others.
+     */
+    readonly meta: PageMeta & { readonly andMore: string };
     /** After the count of resources. */
     readonly countLabel: string;
     /** Beside the sign-in tag, when a resource needs it. */

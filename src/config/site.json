@@ -3,5 +3,13 @@
   "legalName": "XLRI — Xavier School of Management, Delhi-NCR Campus",
   "shortName": "XLRI Delhi",
   "description": "XLRI Delhi-NCR — Xavier School of Management. Postgraduate management education, executive programmes, and research at the Jhajjar campus.",
-  "parentOrganizationName": "XLRI — Xavier School of Management"
+  "parentOrganizationName": "XLRI — Xavier School of Management",
+  "shareImageAlt": "XLRI – Xavier School of Management logo over an aerial view of the Delhi-NCR campus",
+  "postalAddress": {
+    "streetAddress": "Aurangpur, Dadri Toe",
+    "addressLocality": "Jhajjar",
+    "addressRegion": "Haryana",
+    "postalCode": "124515",
+    "addressCountry": "IN"
+  }
 }

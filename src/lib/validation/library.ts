@@ -77,7 +77,11 @@ const pages = z.object({
     remoteLink: template('remote'),
   }),
   collection: z.object({
-    meta: z.object({ title: template('label'), description: template('label', 'items') }),
+    meta: z.object({
+      title: template('label'),
+      description: template('label', 'items'),
+      andMore: text,
+    }),
     countLabel: text,
     signInNote: text,
     access: z.object({ open: text, 'sign-in': text, 'on-campus': text }),

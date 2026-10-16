@@ -45,6 +45,8 @@ export async function generateMetadata({
     image: story.image.src,
     imageAlt: story.title,
     path: routes.news.article(slug),
+    type: 'article',
+    publishedTime: story.date,
   });
 }
 

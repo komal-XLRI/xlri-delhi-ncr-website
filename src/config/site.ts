@@ -23,6 +23,18 @@ export const site = {
   description: siteJson.description,
   url: env.SITE_URL,
   locale: 'en_IN',
+  /** The share card for pages without a picture of their own (built from `media/campus-aerial.jpg`). */
+  shareImage: {
+    src: '/brand/share-default.jpg',
+    alt: siteJson.shareImageAlt,
+    width: 1200,
+    height: 630,
+  },
+  /** The logo, for structured data. */
+  logo: '/brand/xlri-logo.svg',
+  /** The campus's postal address, for structured data; the footer shows it as lines. */
+  postalAddress: siteJson.postalAddress,
+
   /** Single-locale by decision D6. Kept as a named constant so the assumption is greppable. */
   languages: ['en'] as const,
 

@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRightIcon, CalendarIcon } from '@/components/ui/icon';
+import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
+import { event as eventData } from '@/lib/seo/structured-data';
 import type { EventDetailPage } from '@/types/events';
 
 import { EventCard } from './event-card';
@@ -23,6 +26,16 @@ export function EventDetail({ content }: { content: EventDetailPage }) {
 
   return (
     <article aria-labelledby="event-heading">
+      <JsonLd
+        data={eventData(site.url, {
+          name: event.title,
+          path: event.href,
+          startDate: event.dateTime,
+          image: event.image.src,
+          description: event.title,
+          place: { name: site.name, address: site.postalAddress },
+        })}
+      />
       <section data-motif="hero" className="relative isolate overflow-hidden bg-surface">
         <div className={`${MEASURE} pt-8 pb-16 md:pt-10 md:pb-20`}>
           <Breadcrumbs

@@ -7,8 +7,13 @@ import { buildMetadata } from '@/lib/seo/metadata';
 import { getPolicy } from '@/services/policies';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { meta } = await getPolicy('privacy');
-  return buildMetadata(site, { ...meta, path: routes.policies.privacy });
+  const { meta, sections } = await getPolicy('privacy');
+  // Not listed in search while it has no text yet (see `emptyNote`).
+  return buildMetadata(site, {
+    ...meta,
+    path: routes.policies.privacy,
+    noIndex: !sections?.length,
+  });
 }
 
 export default async function PrivacyPolicyRoute() {

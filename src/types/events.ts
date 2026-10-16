@@ -40,6 +40,8 @@ export interface LatestEventsCopy {
 }
 
 export interface EventDetailCopy {
+  /** "{title} ({date})": the date keeps an event's title apart from a news story's. */
+  readonly metaTitle: string;
   /** "{title} — an event at XLRI Delhi-NCR, {date}." */
   readonly metaDescription: string;
   readonly eyebrow: string;
