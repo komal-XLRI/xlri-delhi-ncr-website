@@ -1,0 +1,2271 @@
+{
+  "labels": {
+    "eyebrow": "XLEAD · Executive Education",
+    "brochure": "Brochure",
+    "qualification": "Qualification",
+    "functionalArea": "Functional Area",
+    "profileLink": "View profile",
+    "backToEmdp": "All EMDP programmes"
+  },
+  "programmes": {
+    "digital-hr-people-analytics-batch-8": {
+      "meta": {
+        "title": "Executive Development Program in Digital HR Leadership & People Analytics (Batch 8)",
+        "description": "A 10-month online executive programme from XLRI Delhi-NCR in digital HR strategy, people analytics and digital HR leadership, with a two-day campus immersion. Batch 8 starts September 2026."
+      },
+      "title": "Executive Development Program in Digital HR Leadership & People Analytics",
+      "batch": "Batch 8",
+      "poster": {
+        "src": "/media/executive-education/emdp/digital-hr-people-analytics-batch-8.jpg",
+        "alt": "Executive Development Program in Digital HR Leadership & People Analytics (Batch 8) — 10 Months | Online | Top Faculty Led — Starts Sept 2026",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Course Details",
+          "paragraphs": [
+            "In the workplace of the future, HR is not expected to just report metrics on what happened, but to l participate in the business actively by leveraging data to build business cases, make choices from among conflicting options, and predict possible scenarios. Attending the Executive Development Programme in Digital HR and People Analytics would equip you with the required capabilities for achieving this future. Immersion in digital mindset and design thinking, analytical problem solving, and visualization and associated techniques will enable you to fuel business innovations, enhance employee experience and make informed decisions in a data-driven culture.",
+            "Unlock your leadership potential with the Digital HR and People Analytics Program. Ideal for emerging leaders and ambitious professionals. Gain a profound understanding of Digital HR and elevate your leadership skills.Accelerate your career as an HR leader by mastering digital HR strategy,people analytics, and digital HR leadership."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Why choose XLRI Digital HR Leadership Program?",
+          "points": [
+            "Highly Reputed Business School",
+            "Comprehensive Management Education",
+            "Strong Executive Alumni Network",
+            "Gain Competitive Professional Edge",
+            "Advance Your Career",
+            "Experienced Faculty"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "value": "10 months",
+              "label": "Comprehensive Learning"
+            },
+            {
+              "value": "120+",
+              "label": "Hours of Live Classes"
+            },
+            {
+              "value": "11",
+              "label": "Modules"
+            },
+            {
+              "value": "2 Days",
+              "label": "Campus Immersion"
+            },
+            {
+              "value": "6",
+              "label": "Career Assistance Sessions"
+            },
+            {
+              "label": "Be a Part of India’s Premier Institution"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Program Fee",
+              "value": "INR 2,40,000 + GST"
+            },
+            {
+              "label": "Application Fee",
+              "value": "INR 10,000 + GST"
+            }
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Immersion",
+          "lead": "Network, Interact & Connect at Campus of Prestigious XLRI Delhi-NCR",
+          "points": [
+            "Networking with Peers",
+            "Interaction with Faculty",
+            "Offline Classes",
+            "Valedictory Ceremony"
+          ],
+          "paragraphs": [
+            "Get a unique opportunity to participate in Two Day Campus Immersion at the beautiful campus of XLRI Delhi-NCR. Build lifetime connections with your peers, participate in workshops & experience student life at one of the top Business schools in India. Some unique features you can expect in the immersion include:"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Program Director(s)",
+          "members": [
+            {
+              "facultyId": "fr-alwyn-rodrigues-sj",
+              "name": "Fr. Alwyn Rodrigues, SJ",
+              "designation": "Dean Admin & Finance",
+              "qualification": "Doctor of Philosophy – PhD, Social Media and Ethics (XUB), M Sc , Electronic Media (Anna University Chennai)",
+              "functionalArea": "General Management"
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "designation": "Assistant Professor",
+              "qualification": "PhD (IIM Lucknow), PGDM, BE",
+              "functionalArea": "Organizational Behaviour"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "lines": ["10 Months", "9 AM – 12 PM IST on Sundays*"],
+          "headline": "10 Months"
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "lines": [
+            "Tech Orientation: 27th September 2026",
+            "Batch Inauguration: 25th October 2026"
+          ],
+          "headline": "Batch Inauguration: 25th October 2026"
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2026/08/XLRI-Executive-Development-Program-in-Digital-HR-Leadership-People-Analytics-Batch-8.pdf"
+      },
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://vilcorpadmissions.xlri.ac.in/lp/edphrpa.html"
+      }
+    },
+    "strategy-leadership-batch-4": {
+      "meta": {
+        "title": "Executive Development Program in Strategy & Leadership (Batch 4)",
+        "description": "An 11-month, multi-modal executive programme from XLRI Delhi-NCR in strategy and leadership for mid-career professionals, with one-on-one mentoring and a three-day campus immersion. Batch 4 starts July 2026."
+      },
+      "title": "Executive Development Program in Strategy & Leadership",
+      "batch": "Batch 4",
+      "poster": {
+        "src": "/media/executive-education/emdp/strategy-leadership-batch-4.jpg",
+        "alt": "Executive Development Program in Strategy & Leadership (Batch 4) — 11 Months | Online | Top Faculty Led — Starts July 2026",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Program Overview",
+          "paragraphs": [
+            "The Executive Development Program in Strategy & Leadership is a comprehensive, multi-modal program designed for mid-career professionals looking to broaden their understanding of strategy and leadership roles. This unique program offers a holistic view of strategy, leadership and, integrating key management functions to help participants develop both strategic and operational insights.Through a blend of theoretical knowledge and practical application, participants will engage with modern management tools in a collaborative learning environment, alongside distinguished academicians,industry leaders, and peers. The program also includes one-on-one mentoring sessions with industry experts and the opportunity to work on real-world business challenges."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this Program for?",
+          "points": [
+            "Mid Career Professionals",
+            "General Managers",
+            "Entrepreneurs",
+            "Consultants",
+            "Business Heads",
+            "Directors/VP",
+            "Strategic Leaders",
+            "Project Managers",
+            "Marketing Managers"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "value": "11 months",
+              "label": "Comprehensive Learning"
+            },
+            {
+              "value": "130+",
+              "label": "Hours of Live Classes"
+            },
+            {
+              "value": "14",
+              "label": "Modules"
+            },
+            {
+              "value": "3 days",
+              "label": "Campus Immersion"
+            },
+            {
+              "value": "6",
+              "label": "Career Assistance Sessions"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Academic Fees",
+              "value": "INR 280000 +GST"
+            }
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Immersion",
+          "points": [
+            "Networking with Peers",
+            "Interaction with Faculty",
+            "Offline Classes",
+            "Valedictory Ceremony"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Faculty",
+          "members": [
+            {
+              "facultyId": "dr-faisal-ahsan",
+              "name": "Dr. Faisal Ahsan",
+              "designation": "XLRI",
+              "qualification": "FPM/PhD (IIM Lucknow), M.Tech (IIT Delhi), B.Tech (AMU, Aligarh)"
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "designation": "XLRI",
+              "qualification": "PhD (IIM Lucknow), PGDM, BE"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "lines": ["11 Months", "Sundays – 9:00 a.m. to 12:00 p.m. IST"],
+          "headline": "11 Months"
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "lines": ["Technical Orientation: 5th July 2026", "Batch Inauguration: 26th July 2026"],
+          "headline": "Batch Inauguration: 26th July 2026"
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2026/04/XLRI-Delhi-NCR-Executive-Development-Program-in-Strategy-Leadership-Batch-4.pdf"
+      },
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://vilcorpadmissions.xlri.ac.in/lp/edpshl.html"
+      }
+    },
+    "strategic-hr-leadership-batch-7": {
+      "meta": {
+        "title": "Executive Development Programme in Strategic HR Leadership (Batch 7)",
+        "description": "A 10-month, multi-modal executive programme from XLRI Delhi-NCR in strategic HR leadership for HR professionals, with one-on-one mentoring and a two-day campus immersion. Batch 7 starts June 2026."
+      },
+      "title": "Executive Development Programme in Strategic HR Leadership",
+      "batch": "Batch 7",
+      "poster": {
+        "src": "/media/executive-education/emdp/strategic-hr-leadership-batch-7.jpg",
+        "alt": "Executive Development Programme in Strategic HR Leadership (Batch 7) — 10 Months | Online | Top Faculty Led — Starts June 2026",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Program Overview",
+          "paragraphs": [
+            "The Executive Development Programme in Strategic HR Leadership is a comprehensive, long-term,multi-modal program designed for HR professionals. It offers a unique opportunity to gain a holistic understanding of human resource management while integrating key business functions. This program blends both theoretical insights and practical knowledge, equipping participants with the latest tools and frameworks in HR leadership.The program provides an immersive learning environment that includes interactions with esteemed academicians, industry leaders, and peers. Additionally, participants will benefit from personalized one-on-one mentoring sessions with industry experts, and the opportunity to work on their own HR strategies and organizational development plans."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this Program for?",
+          "points": [
+            "People Managers",
+            "General Managers",
+            "Entrepreneurs",
+            "L&D Heads",
+            "HR Managers",
+            "CHROs",
+            "VP - HR",
+            "HRBP",
+            "Talent Acquisition Managers"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "value": "10 months",
+              "label": "Comprehensive Learning"
+            },
+            {
+              "value": "120+",
+              "label": "Hours of Live Classes"
+            },
+            {
+              "value": "10",
+              "label": "Modules"
+            },
+            {
+              "value": "2 days",
+              "label": "Campus Immersion"
+            },
+            {
+              "value": "6",
+              "label": "Career Assistance Sessions"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Academic Fees",
+              "value": "INR 240000 +GST"
+            }
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Immersion",
+          "points": [
+            "Networking with Peers",
+            "Interaction with Faculty",
+            "Offline Classes",
+            "Valedictory Ceremony"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Faculty",
+          "members": [
+            {
+              "facultyId": "dr-faisal-ahsan",
+              "name": "Dr. Faisal Ahsan",
+              "designation": "XLRI",
+              "qualification": "FPM/PhD (IIM Lucknow), M.Tech (IIT Delhi), B.Tech (AMU, Aligarh)"
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "designation": "XLRI",
+              "qualification": "PhD (IIM Lucknow), PGDM, BE"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "lines": ["10 months", "Sundays – 3pm – 6pm IST"],
+          "headline": "10 months"
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "lines": ["Technical Orientation: 28th June 2026", "Batch Inauguration: 5th July 2026"],
+          "headline": "Batch Inauguration: 5th July 2026"
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2026/04/XLRI-Executive-Development-Program-in-Strategic-HR-Leadership-Batch-7.pdf"
+      },
+      "apply": {
+        "label": "Application Closed"
+      }
+    },
+    "global-strategy-healthcare-batch-1": {
+      "meta": {
+        "title": "Executive Development Programme in Global Strategy & Leadership for Healthcare Professionals (Batch 1)",
+        "description": "Lead the future of healthcare India’s healthcare industry is rapidly evolving. Once valued at US$110 billion in 2016, it's on track to soar to US$638 billion by 2025. Employing over 7.5 million professionals, this sector is experiencing unprecedented transformation. Public healthcare investment is rising, projected to reach 2.5% of GDP by 2025. This growth is fuelled by technological innovations, a drive for accessible healthcare, and advancements in telemedicine, data analytics, and allied services. At the same time, new players and business models are intensifying competition."
+      },
+      "title": "Executive Development Programme in Global Strategy & Leadership for Healthcare Professionals",
+      "batch": "Batch 1",
+      "note": "In collaboration with Sorbonne Business School, Paris",
+      "poster": {
+        "src": "/media/executive-education/emdp/global-strategy-healthcare-batch-1.jpg",
+        "alt": "Executive Development Programme in Global Strategy & Leadership for Healthcare Professionals (in collaboration with Sorbonne Business School, Paris) — Batch 1 — 10 Months | Online | Top Faculty Led — Starts July 2026",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "About the programme",
+          "paragraphs": [
+            "The Global Strategy & Leadership for Healthcare Professionals programme by XLRI and IAE Paris – Sorbonne Business School is a transformative 10th -month executive learning journey designed for senior healthcare professionals, entrepreneurs, and policy leaders. In an era where the healthcare ecosystem is evolving through technological disruption, policy reforms, and rising global integration, this programme empowers participants to think strategically, lead effectively, and manage complexity with confidence. Through a balanced blend of strategic management, financial acumen, digital transformation, governance, and ethical leadership, the programme develops next-generation healthcare leaders who can drive sustainable growth, innovation, and patient-centric transformation in their organizations. Delivered through live online sessions, real-world case studies, simulations, and a campus immersion, it offers a truly global perspective — combining the academic excellence of XLRI, India’s oldest management school, and the international expertise of Sorbonne Business School, France."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Why This Programme?",
+          "points": [
+            "Strategic Transformation for Healthcare Leaders",
+            "Learn to design visionary strategies and lead organizations through change.",
+            "Understand global healthcare dynamics and governance frameworks.",
+            "Leverage technology to drive digital transformation and operational excellence.",
+            "Global Academic Collaboration Experience a cross-continental learning journey combining XLRI’s excellence in management education and Sorbonne’s global academic legacy.",
+            "Balanced Learning for the C-Suite Experience a cross-contGain expertise across the five pillars of modern healthcare leadership — Strategy, Finance, Governance, Technology, and Ethics — through case studies, simulations, and capstone projects curated from real-world healthcare scenarios.",
+            "inental learning journey combining XLRI’s excellence in management education and Sorbonne’s global academic legacy."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who Should Enroll?",
+          "points": [
+            "Owners, Directors, and Promoters of Hospitals",
+            "Clinics & Allied Healthcare Organizations C-suite Executives (CXOs, CTOs, CHROs, CFOs, CROs, CSOs, etc.)",
+            "Senior Doctors and Healthcare Consultants Policy Makers and Pharma Leaders Senior Professionals from Healthcare, Lifesciences, and MedTech sectors."
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Programme Fee",
+          "items": [
+            {
+              "label": "Programme Fee",
+              "value": "INR 4,00,000 + GST"
+            },
+            {
+              "label": "Application Fee",
+              "value": "INR 3,000 + GST"
+            }
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Programme Certificates",
+          "text": "XLRI shall carry out the examination and evaluation required for certification. XLRI and Sorbonne will directly award a certificate to participants who complete the programme successfully.",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil-healthcare.jpg",
+              "alt": "Sample XLRI Virtual Interactive Learning certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 755,
+              "height": 549
+            },
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-iae-paris-sorbonne.jpg",
+              "alt": "Sample IAE Paris – Sorbonne Business School programme certificate, in French with English translation",
+              "width": 759,
+              "height": 561
+            }
+          ]
+        },
+        {
+          "kind": "panel",
+          "heading": "XLRI Executive Education Alumni Status",
+          "points": [
+            "Access to Alumni Newsletters, Magazines, and participation in other Alumni events and schemes organised by the Alumni Association of XLRI",
+            "Online login access to the Alumni portal as per the rules and procedures of the Alumni Association of XLRI, including the ability to download a virtual ID card of Associate Alumni",
+            "Discount on program fees for subsequent programs at rates determined and reviewed by the Corporate Programmes & VIL Committee",
+            "Invitation to special online lectures, talks, and seminars organised by the institute"
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Program Director(s)",
+          "members": [
+            {
+              "facultyId": "dr-munish-kumar-thakur",
+              "name": "Prof. Munish Thakur",
+              "bio": [
+                "Dr. Thakur is currently the Dean (Academics) of XLRI Delhi-NCR Campus. He is part of the Strategic Management Area at XLRI and holds expertise in several domains, including Strategic Thinking, Business Policy, and Corporate Governance. His teaching and research interests focus on strategic management, organisational theory, and decision-making processes. With both academic and professional experience, Dr. Thakur plays a significant role in bridging theory with practice, offering valuable insights to his students and contributing to thought leadership in management education. His profile reflects a commitment to fostering analytical and leadership skills through rigorous academic practices."
+              ]
+            },
+            {
+              "name": "Dr. Santosh Sangem",
+              "photo": "/media/executive-education/emdp-programmes/dr-santosh-sangem.jpg",
+              "bio": [
+                "Dr. Santosh Sangem has been associated with XLRI Jamshedpur for the last 15 years. He has provided corporate training and consultancy for reputed organizations in both the private sector and the public sector which include L&T, Viacom18, Pepsi, Meril Life, Accenture, Ultratech, Adani Airports, HDFC Bank, Capgemini, NTPC, ONGC, IOCL, and many other highly reputed organizations. His primary teaching and training and research interests include Corporate Governance, Business Model Design, Healthcare Financial Decision Making, Financial Performance Analysis & Management, Management Control Systems, Decision Thinking & Decision Making, and Corporate Finance. He is currently the Chairperson of the XLRI Center for Healthcare Management and the Chairperson of International Relations & Collaborations at XLRI."
+              ]
+            },
+            {
+              "name": "Dr. Rajeev Sharma",
+              "photo": "/media/executive-education/emdp-programmes/dr-rajeev-sharma.jpg",
+              "bio": [
+                "Dr. Sharma is an accomplished business leader with extensive experience in strategy, innovation, and digital transformation. Over his career, he has held leadership roles across various industries, focusing on driving growth, operational excellence, and technological advancements. Dr. Rajeev is known for building high-performance teams and delivering sustainable business solutions, leveraging his expertise in strategic planning and change management."
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "lines": ["10 Months", "3-Hours on Sunday", "(06:00 PM to 09:00 PM)"],
+          "headline": "10 Months"
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "lines": ["Technical Orientation: 27th July 2026", "Academic Session: 2nd Aug 2026"],
+          "headline": "Academic Session: 2nd Aug 2026"
+        }
+      ],
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://vilcorpadmissions.xlri.ac.in/lp/gslhp.html"
+      }
+    },
+    "dba-ipag": {
+      "meta": {
+        "title": "Doctor of Business Administration (DBA)",
+        "description": "A three-year Doctor of Business Administration from IPAG Business School (AACSB-accredited) with a certificate from XLRI, for mid- to senior-career professionals: live online sessions and three five-day XLRI campus immersions."
+      },
+      "title": "Doctor of Business Administration (DBA)",
+      "note": "Earn a DBA from IPAG Business School (AACSB-accredited) and a certificate from XLRI",
+      "poster": {
+        "src": "/media/executive-education/emdp/dba-ipag.jpg",
+        "alt": "Doctor of Business Administration (DBA) — earn a DBA from IPAG Business School (AACSB-accredited) and a certificate from XLRI — 3 years | Live Online | Top Faculty Led — Starts 1st April 2026",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Program Overview",
+          "paragraphs": [
+            "Introducing the IPAG Doctorate Degree with XLRI Certificate The IPAG Doctorate Degree with XLRI Certificate is more than just a doctorate; it is a transformative leadership journey for senior professionals seeking to translate research into real-world impact. Unlike traditional executive programmes, this DBA lets you build and choose your own specialisation, guided by immersive research seminars that help you define and refine the topic you want to explore. This approach ensures your research is directly aligned with your career ambitions and focused on solving the challenges you are most passionate about. Graduates of the IPAG Doctor of Business Administration are prepared to excel across both industry and academia, leveraging the “Dr.” title to command authority, shape organisational strategy, and drive transformative leadership at the highest levels."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this Program for?",
+          "points": [
+            "Mid- to Senior-Career Professionals",
+            "Senior Professionals and Industry Veterans"
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Program Highlights - Doctor of Business Administration",
+          "points": [
+            "A world-class doctoral degree designed for India’s next generation of thought leaders.",
+            "Earn a DBA from IPAG Business School (AACSB-accredited) and a certificate from XLRI Jamshedpur.",
+            "Faculty-led research seminars help you choose a specialisation perfectly aligned with your thesis focus",
+            "For visionary leaders aiming to earn a prestigious doctorate, expand global impact, and solve real-world challenges.",
+            "Lifelong alumni status with access to two elite alumni networks, along with exclusive alumni benefits",
+            "Learn on campus through three 5-day XLRI immersions and an optional IPAG Paris/Nice immersion.",
+            "Live online sessions led by distinguished XLRI and IPAG faculty."
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Academic Fees",
+              "value": "INR 13,20000 + GST"
+            }
+          ]
+        },
+        {
+          "kind": "bullets",
+          "heading": "Learning Pedagogy",
+          "points": [
+            "Engage in real-time interactions with professors and peers.",
+            "Get instant feedback and resolve queries during sessions.",
+            "Participate in case discussions, simulations, role plays, and live problem-solving.",
+            "Build authentic connections with world-class faculty."
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-xlead-ipag.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 679,
+              "height": 488
+            },
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-ipag-mba.jpg",
+              "alt": "Sample IPAG Paris – Nice Master of Business Administration degree certificate, specialisation Finance and Investments",
+              "width": 636,
+              "height": 470
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Programme Directors",
+          "members": [
+            {
+              "name": "Dr. Santoshkumar Prakash Sangem",
+              "designation": "Faculty of Finance, XLRI Jamshedpur",
+              "photo": "/media/executive-education/emdp-programmes/dr-santosh-sangem.jpg"
+            },
+            {
+              "name": "Dr. Ashwani Kumar Goel",
+              "designation": "Director, French Consortium",
+              "photo": "/media/executive-education/emdp-programmes/dr-ashwani-kumar-goel.jpg"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "3 years",
+          "lines": [
+            "3 years",
+            "First Year (Tentative):",
+            "Saturday- 3:00 PM to 5:00 PM",
+            "Sunday – 3:00 PM to 5:00 PM",
+            "Second Year Onwards:",
+            "One-on-one interaction with the Supervisor"
+          ]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "Academic start date: 1st April 2026",
+          "lines": ["Technical Launch: 18th March 2026", "Academic start date: 1st April 2026"]
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://ipagbusinessschool.emeritus.org/ipag-doctor-of-business-administration?utm_source=xlri&utm_campaign=school_website&utm_medium=website"
+      },
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://ipagbusinessschool.emeritus.org/ipag-doctor-of-business-administration?utm_source=xlri&utm_campaign=school_website&utm_medium=website"
+      }
+    },
+    "mba-ipag": {
+      "meta": {
+        "title": "Master of Business Administration (MBA)",
+        "description": "The IPAG MBA with XLRI Certification Programme: a 15-month live online MBA from IPAG Business School Paris with XLRI certification, for mid- to senior-career professionals, with immersions in India and Paris/Nice."
+      },
+      "title": "Master of Business Administration (MBA)",
+      "poster": {
+        "src": "/media/executive-education/emdp/mba-ipag.jpg",
+        "alt": "Master of Business Administration (MBA) — IPAG MBA with XLRI Certification Programme — 15 Months | Live Online | Top Faculty Led — Starts 29th March 2026",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Program Overview",
+          "paragraphs": [
+            "Today’s career landscape is fast-changing, driven by AI, GenAI, and global business shifts. The need is clear: organisations want leaders who can adapt, innovate, and deliver impact across industries. For mid- to senior-level professionals, the challenge is gaining future-ready skills, recognition, and global exposure — without pausing their careers.",
+            "The IPAG MBA with XLRI Certification Programme, offered in collaboration with XLRI Jamshedpur and IPAG Business School Paris, answers this need. With dual credentials, it strengthens your professional credibility in India and abroad while preparing you to lead with confidence in a world of transformation."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this Program for?",
+          "points": ["Mid- to Senior-Career Professionals", "Experienced Leaders & Entrepreneurs"]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "label": "Dual Credentials, Global Recognition"
+            },
+            {
+              "label": "Renowned Faculty from Two Continents"
+            },
+            {
+              "label": "Immersions in India & Paris/Nice"
+            },
+            {
+              "label": "Future-Ready Curriculum"
+            },
+            {
+              "label": "Accelerated Format, Flexible Learning"
+            },
+            {
+              "label": "Dual Alumni Advantage"
+            },
+            {
+              "label": "Career Growth Without Disruption"
+            },
+            {
+              "label": "Collaborative Learning & Connections"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Academic Fees",
+              "value": "INR 10,45,000 + GST"
+            }
+          ]
+        },
+        {
+          "kind": "bullets",
+          "heading": "Learning Pedagogy",
+          "points": [
+            "Engage in real-time interactions with professors and peers.",
+            "Get instant feedback and resolve queries during sessions.",
+            "Participate in case discussions, simulations, role plays, and live problem-solving.",
+            "Build authentic connections with world-class faculty."
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-xlead-ipag.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 679,
+              "height": 488
+            },
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-ipag-mba.jpg",
+              "alt": "Sample IPAG Paris – Nice Master of Business Administration degree certificate, specialisation Finance and Investments",
+              "width": 636,
+              "height": 470
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Programme Directors",
+          "members": [
+            {
+              "name": "Dr. Santoshkumar Prakash Sangem",
+              "designation": "Faculty of Finance, XLRI Jamshedpur",
+              "photo": "/media/executive-education/emdp-programmes/dr-santosh-sangem.jpg"
+            },
+            {
+              "name": "Dr. Ashwani Kumar Goel",
+              "designation": "Director, French Consortium",
+              "photo": "/media/executive-education/emdp-programmes/dr-ashwani-kumar-goel.jpg"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "15 Months",
+          "lines": [
+            "15 Months",
+            "Wednesday- 7:30 PM to 9:30 PM",
+            "Saturday – 7:30 PM to 9:30 PM",
+            "Sunday – 11:30 AM to 1:30 PM"
+          ]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "Start Date: 29th March 2026",
+          "lines": ["Start Date: 29th March 2026", "Academic Start Date: March 2026"]
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://ipagbusinessschool.emeritus.org/ipag-mba-with-xlri-certification-programme?utm_source=xlri&utm_campaign=school_website&utm_medium=website"
+      },
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://ipagbusinessschool.emeritus.org/ipag-mba-with-xlri-certification-programme?utm_source=xlri&utm_campaign=school_website&utm_medium=website"
+      }
+    },
+    "digital-hr-people-analytics-batch-7": {
+      "meta": {
+        "title": "Executive Development Program in Digital HR Leadership & People Analytics (Batch 7)",
+        "description": "A 10-month online executive programme from XLRI Delhi-NCR in digital HR strategy, people analytics and digital HR leadership, with a two-day campus immersion. Batch 7 began in February 2026."
+      },
+      "title": "Executive Development Program in Digital HR Leadership & People Analytics",
+      "batch": "Batch 7",
+      "poster": {
+        "src": "/media/executive-education/emdp/digital-hr-people-analytics-batch-7.jpg",
+        "alt": "Executive Development Program in Digital HR Leadership & People Analytics (Batch 7) — 10 Months | Online | Top Faculty Led — Starts February 2026",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Course Details",
+          "paragraphs": [
+            "In the workplace of the future, HR is not expected to just report metrics on what happened, but to l participate in the business actively by leveraging data to build business cases, make choices from among conflicting options, and predict possible scenarios. Attending the Executive Development Programme in Digital HR and People Analytics would equip you with the required capabilities for achieving this future. Immersion in digital mindset and design thinking, analytical problem solving, and visualization and associated techniques will enable you to fuel business innovations, enhance employee experience and make informed decisions in a data-driven culture.",
+            "Unlock your leadership potential with the Digital HR and People Analytics Program. Ideal for emerging leaders and ambitious professionals. Gain a profound understanding of Digital HR and elevate your leadership skills.Accelerate your career as an HR leader by mastering digital HR strategy,people analytics, and digital HR leadership."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Why choose XLRI Digital HR Leadership Program?",
+          "points": [
+            "Highly Reputed Business School",
+            "Comprehensive Management Education",
+            "Strong Executive Alumni Network",
+            "Gain Competitive Professional Edge",
+            "Advance Your Career",
+            "Experienced Faculty"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "value": "10 months",
+              "label": "Comprehensive Learning"
+            },
+            {
+              "value": "120+",
+              "label": "Hours of Live Classes"
+            },
+            {
+              "value": "11",
+              "label": "Modules"
+            },
+            {
+              "value": "2 Days",
+              "label": "Campus Immersion"
+            },
+            {
+              "value": "6",
+              "label": "Career Assistance Sessions"
+            },
+            {
+              "label": "Be a Part of India’s Premier Institution"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Program Fee",
+              "value": "INR 2,40,000 + GST"
+            },
+            {
+              "label": "Application Fee",
+              "value": "INR 10,000 + GST"
+            }
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Immersion",
+          "lead": "Network, Interact & Connect at Campus of Prestigious XLRI Delhi-NCR",
+          "points": [
+            "Networking with Peers",
+            "Interaction with Faculty",
+            "Offline Classes",
+            "Valedictory Ceremony"
+          ],
+          "paragraphs": [
+            "Get a unique opportunity to participate in Two Day Campus Immersion at the beautiful campus of XLRI Delhi-NCR. Build lifetime connections with your peers, participate in workshops & experience student life at one of the top Business schools in India. Some unique features you can expect in the immersion include:"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Program Director(s)",
+          "members": [
+            {
+              "name": "Fr. PT Joseph, SJ",
+              "designation": "Dean Admin & Finance",
+              "qualification": "Ph.D. (Marquette University, USA), MBA (Saint Joseph University, phildelphia, USA), MSc (Madras University)",
+              "functionalArea": "Organizational Behaviour",
+              "photo": "/media/executive-education/emdp-programmes/fr-pt-joseph-sj.jpg"
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "designation": "Assistant Professor",
+              "qualification": "PhD (IIM Lucknow), PGDM, BE",
+              "functionalArea": "Organizational Behaviour"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "10 Months",
+          "lines": ["10 Months", "9 AM – 12 PM IST on Sundays*"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "Batch Inauguration: 8th March 2026",
+          "lines": ["Tech Orientation: 15th Feb 2026", "Batch Inauguration: 8th March 2026"]
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2026/01/XLRI-DHRL-Batch-7-1.pdf"
+      }
+    },
+    "strategy-leadership-batch-3": {
+      "meta": {
+        "title": "Executive Development Program in Strategy & Leadership (Batch 3)",
+        "description": "An 11-month, multi-modal executive programme from XLRI Delhi-NCR in strategy and leadership for mid-career professionals, with one-on-one mentoring and a three-day campus immersion. Batch 3 began in November 2025."
+      },
+      "title": "Executive Development Program in Strategy & Leadership",
+      "batch": "Batch 3",
+      "poster": {
+        "src": "/media/executive-education/emdp/strategy-leadership-batch-3.jpg",
+        "alt": "Executive Development Program in Strategy & Leadership (Batch 3) — 11 Months | Online | Top Faculty Led — Starts November 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Program Overview",
+          "paragraphs": [
+            "The Executive Development Program in Strategy & Leadership is a comprehensive, multi-modal program designed for mid-career professionals looking to broaden their understanding of strategy and leadership roles. This unique program offers a holistic view of strategy, leadership and, integrating key management functions to help participants develop both strategic and operational insights.Through a blend of theoretical knowledge and practical application, participants will engage with modern management tools in a collaborative learning environment, alongside distinguished academicians,industry leaders, and peers. The program also includes one-on-one mentoring sessions with industry experts and the opportunity to work on real-world business challenges."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this Program for?",
+          "points": [
+            "Mid Career Professionals",
+            "General Managers",
+            "Entrepreneurs",
+            "Consultants",
+            "Business Heads",
+            "Directors/VP",
+            "Strategic Leaders",
+            "Project Managers",
+            "Marketing Managers"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "value": "11 months",
+              "label": "Comprehensive Learning"
+            },
+            {
+              "value": "130+",
+              "label": "Hours of Live Classes"
+            },
+            {
+              "value": "14",
+              "label": "Modules"
+            },
+            {
+              "value": "3 days",
+              "label": "Campus Immersion"
+            },
+            {
+              "value": "6",
+              "label": "Career Assistance Sessions"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Academic Fees",
+              "value": "INR 280000 +GST"
+            }
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Immersion",
+          "points": [
+            "Networking with Peers",
+            "Interaction with Faculty",
+            "Offline Classes",
+            "Valedictory Ceremony"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Faculty",
+          "members": [
+            {
+              "facultyId": "dr-faisal-ahsan",
+              "name": "Dr. Faisal Ahsan",
+              "designation": "XLRI",
+              "qualification": "FPM/PhD (IIM Lucknow), M.Tech (IIT Delhi), B.Tech (AMU, Aligarh)"
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "designation": "XLRI",
+              "qualification": "PhD (IIM Lucknow), PGDM, BE"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "11 Months",
+          "lines": ["11 Months", "Sundays – 9:00 a.m. to 12:00 p.m. IST"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "Batch Inauguration: 7th December 2025",
+          "lines": [
+            "Technical Orientation: 23rd November 2025",
+            "Batch Inauguration: 7th December 2025"
+          ]
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2025/07/XLRI-Strategy-Leadership.pdf"
+      }
+    },
+    "strategic-hr-leadership-batch-6": {
+      "meta": {
+        "title": "Executive Development Programme in Strategic HR Leadership (Batch 6)",
+        "description": "A 10-month, multi-modal executive programme from XLRI Delhi-NCR in strategic HR leadership for HR professionals, with one-on-one mentoring and a two-day campus immersion. Batch 6 began in October 2025."
+      },
+      "title": "Executive Development Programme in Strategic HR Leadership",
+      "batch": "Batch 6",
+      "poster": {
+        "src": "/media/executive-education/emdp/strategic-hr-leadership-batch-6.jpg",
+        "alt": "Executive Development Programme in Strategic HR Leadership (Batch 6) — 10 Months | Online | Top Faculty Led — Starts October 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Program Overview",
+          "paragraphs": [
+            "The Executive Development Programme in Strategic HR Leadership is a comprehensive, long-term,multi-modal program designed for HR professionals. It offers a unique opportunity to gain a holistic understanding of human resource management while integrating key business functions. This program blends both theoretical insights and practical knowledge, equipping participants with the latest tools and frameworks in HR leadership.The program provides an immersive learning environment that includes interactions with esteemed academicians, industry leaders, and peers. Additionally, participants will benefit from personalized one-on-one mentoring sessions with industry experts, and the opportunity to work on their own HR strategies and organizational development plans."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this Program for?",
+          "points": [
+            "People Managers",
+            "General Managers",
+            "Entrepreneurs",
+            "L&D Heads",
+            "HR Managers",
+            "CHROs",
+            "VP - HR",
+            "HRBP",
+            "Talent Acquisition Managers"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "value": "10 months",
+              "label": "Comprehensive Learning"
+            },
+            {
+              "value": "120+",
+              "label": "Hours of Live Classes"
+            },
+            {
+              "value": "10",
+              "label": "Modules"
+            },
+            {
+              "value": "2 days",
+              "label": "Campus Immersion"
+            },
+            {
+              "value": "6",
+              "label": "Career Assistance Sessions"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Academic Fees",
+              "value": "INR 240000 +GST"
+            }
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Immersion",
+          "points": [
+            "Networking with Peers",
+            "Interaction with Faculty",
+            "Offline Classes",
+            "Valedictory Ceremony"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Faculty",
+          "members": [
+            {
+              "facultyId": "dr-faisal-ahsan",
+              "name": "Dr. Faisal Ahsan",
+              "designation": "XLRI",
+              "qualification": "FPM/PhD (IIM Lucknow), M.Tech (IIT Delhi), B.Tech (AMU, Aligarh)"
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "designation": "XLRI",
+              "qualification": "PhD (IIM Lucknow), PGDM, BE"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "10 months",
+          "lines": ["10 months", "Sundays – 12:00 p.m. to 3:00 p.m. IST"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "Batch Inauguration: 16th November 2025",
+          "lines": [
+            "Technical Orientation: 26th October 2025",
+            "Batch Inauguration: 16th November 2025"
+          ]
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2025/07/XLRI-Strategic-HR-Leadership.pdf"
+      }
+    },
+    "digital-transformation-healthcare-batch-1": {
+      "meta": {
+        "title": "Executive Development Program in Digital Transformation and Business Models in Healthcare (Batch 1)",
+        "description": "A 9-month executive programme from XLRI Delhi-NCR and SRIHER in digital transformation and business models in healthcare, for mid-career hospital and allied healthcare professionals, with a residential campus component."
+      },
+      "title": "Executive Development Program in Digital Transformation and Business Models in Healthcare",
+      "batch": "Batch 1",
+      "poster": {
+        "src": "/media/executive-education/emdp/digital-transformation-healthcare-batch-1.jpg",
+        "alt": "Executive Development Program in Digital Transformation and Business Models in Healthcare (Batch 1) — 9 Months | Online | Top Faculty Led — Starts August 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Program Overview",
+          "paragraphs": [
+            "The healthcare industry is undergoing a rapid evolution driven by digital transformation, the pandemic, demographic changes, and rising patient expectations. To navigate this complex landscape, it’s imperative for healthcare professionals, startups, and entrepreneurs to stay abreast of emerging trends and distinguish between viable solutions and mere ideas.",
+            "Technology is revolutionizing healthcare, from diagnosis and treatment to patient communication. Electronic records, health tracking apps, and telemedicine are enhancing clinical outcomes, reducing errors; all while improving accessibility.",
+            "The global healthcare IT market, valued at USD 760 billion in 2024, is projected to soar to USD 3.4 trillion by 2034, driven by digital advancements and data-driven healthcare. With a CAGR of 15.83%, the sector is set to transform patient care and medical innovation worldwide. Hospitals and healthcare organizations that embrace technology are experiencing improved patient outcomes, reduced costs, and enhanced staff efficiency.",
+            "By understanding and effectively implementing digital business models and transformation strategies, healthcare organizations can fully utilize technology to deliver innovative, patient-centered care while achieving sustainable growth."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this Program for?",
+          "points": [
+            "Mid-career professionals with at least 5 years of experience in hospitals or allied healthcare services",
+            "Managers and Leaders seeking to adapt and support effective decision-making",
+            "Professionals who want to acquire managerial skills and tools for the digital age"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "label": "XLRI Executive Education Alumni Status"
+            },
+            {
+              "label": "Co-branded Certificate by XLRI and SRIHER"
+            },
+            {
+              "label": "Hands- on Capstone Projects"
+            },
+            {
+              "label": "Access to Learning Material for Up to 3 Months"
+            },
+            {
+              "label": "Residential Campus Component"
+            },
+            {
+              "label": "Course Delivery & Mentorship by XLRI & SRIHER Faculty"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Academic Fees",
+              "value": "INR 230,000 + GST"
+            }
+          ]
+        },
+        {
+          "kind": "bullets",
+          "heading": "Program Pedagogy",
+          "points": [
+            "Live Online Sessions",
+            "Pre-recorded Lectures",
+            "Cohort Learning",
+            "Case studies",
+            "Real World Scenarios",
+            "Capstone Projects"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-xlri-sriher.jpg",
+              "alt": "Sample XLRI Leadership Education and Development certificate for an Executive Development Program offered jointly with Sri Ramachandra Institute of Higher Education & Research",
+              "width": 685,
+              "height": 526
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Faculty",
+          "members": [
+            {
+              "name": "Dr. Rajeev Sharma",
+              "designation": "XLRI",
+              "photo": "/media/executive-education/emdp-programmes/dr-rajeev-sharma.jpg",
+              "qualification": "PhD (IIM Bangalore), MBA (Devi Ahilya University, Indore)"
+            },
+            {
+              "name": "Dr. Selvam Jesiah",
+              "designation": "SRIHER",
+              "photo": "/media/executive-education/emdp-programmes/dr-selvam-jesiah.jpg",
+              "qualification": "PhD (Manonmaniam Sundaranar University)"
+            },
+            {
+              "name": "Dr. Santosh Sangem",
+              "designation": "XLRI",
+              "photo": "/media/executive-education/emdp-programmes/dr-santosh-sangem.jpg",
+              "qualification": "PhD (IIM Calcutta), Chartered Accountant, M.Com"
+            },
+            {
+              "name": "Dr. S. Dinesh",
+              "designation": "SRIHER",
+              "photo": "/media/executive-education/emdp-programmes/dr-s-dinesh.jpg",
+              "qualification": "PhD in Business Administration (Madurai Kamaraj University)"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "9 Months",
+          "lines": ["9 Months", "Tuesdays – 7:30 PM to 9:30 PM", "Fridays – 7:30 PM to 9:30 PM"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "26 Aug 2025",
+          "lines": ["26 Aug 2025"]
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2025/06/XLRI-DT-2025-June-1.pdf"
+      },
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://forms.zohopublic.in/tech17/form/DigitalTransformationandBusinessModelsforHealthcar1/formperma/-E9ZzH9h0GvIpa413rd0NuOKz7OPQ675_kQI1sb2bwU"
+      }
+    },
+    "general-management-batch-5": {
+      "meta": {
+        "title": "Executive Program In General Management (Batch 5)",
+        "description": "Enhance your leadership skills with XLRI's Executive Program in General Management, designed for dynamic professionals. Apply now!"
+      },
+      "title": "Executive Program In General Management",
+      "batch": "Batch 5",
+      "poster": {
+        "src": "/media/executive-education/emdp/general-management-batch-5.jpg",
+        "alt": "Executive Development Program in General Management (Batch 5) — 11 Months | Online | Top Faculty Led — Starts July 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Course Details",
+          "paragraphs": [
+            "This is a comprehensive 11-month program designed for Managers, Entrepreneurs, and professionals offered by XLRI | Delhi-NCR and ACCREDIAN. The program covers a wide range of topics, including leadership principles, strategic thinking, and business acumen to equip participants with the skills and knowledge necessary to excel in the field of management. The program is delivered through a blend of live online sessions, case studies, and assignments, and is taught by industry experts with extensive experience in different aspects of management."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Program Overview",
+          "points": [
+            "Comprehensive 11-month program.",
+            "Designed for managers, entrepreneurs, and professionals in the industry.",
+            "Covers a wide range of topics including leadership basics, strategic thinking, business acumen and more.",
+            "Blended learning approach with live online sessions, case studies, and assignments.",
+            "Industry-relevant curriculum taught by experienced management practitioners.",
+            "Opportunity to network with peers from diverse industries and backgrounds.",
+            "Interactive sessions and group activities to facilitate learning and collaboration.",
+            "Program designed to build skills for career advancement and growth in the field of management.",
+            "Corporate Challenge and Virtual Boardroom Simulation for an all round exposure to the field with live problem solving.",
+            "Course material and resources accessible online for self-paced learning."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Program Highlights",
+          "points": [
+            "Industry-relevant curriculum designed to build advanced general management skills.",
+            "Taught by industry experts with extensive experience in general management.",
+            "Blended learning approach with live online sessions, case studies, and assignments for immersive learning experience.",
+            "Opportunity to network with peers from diverse industries and backgrounds.",
+            "Interactive sessions and group activities to facilitate learning and collaboration."
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "text": "The total program fee is Rs. 2,60,000 + 18% GST. Attractive EMI options with flexible tenures available."
+        },
+        {
+          "kind": "text",
+          "heading": "Assessment And Evaluation",
+          "paragraphs": [
+            "The examination and evaluation required for certification shall be carried out online by XLRI | Delhi-NCR. The faculty members teaching their respective courses will choose the method of evaluation most appropriate to the course."
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Visit",
+          "paragraphs": [
+            "Participants get the opportunity of staying at the XLRI | Delhi – NCR campus for immersion programs. The dates for in-campus immersion sessions will be communicated well in advance. Attendance to the in-campus module is MANDATORY for all participants subject to prevailing regulatory stipulations pertaining to the pandemic."
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Program Director",
+          "members": [
+            {
+              "facultyId": "dr-faisal-ahsan",
+              "name": "Dr. Faisal Ahsan",
+              "bio": [
+                "Dr. Faisal Ahsan holds an FPM/Ph.D. from IIM Lucknow, an M.Tech from IIT Delhi, and a B.Tech from AMU, Aligarh. Currently an Assistant Professor at XLRI Delhi-NCR, he previously taught at IIM Ranchi. With over a decade at TATA Motors, he combines academic excellence with extensive industry experience."
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "11 Months (132 Hours)",
+          "lines": ["11 Months (132 Hours)"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "Batch Inauguration: 17th August 2025",
+          "lines": ["Tech Orientation: 27th July 2025", "Batch Inauguration: 17th August 2025"]
+        },
+        {
+          "icon": "clock",
+          "label": "Class Timings",
+          "lines": ["Sunday, 03:00 pm to 06:00 pm"]
+        }
+      ],
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://erp.xlri.ac.in/applicantLogins.htm?link=175aafbed0c4a8e84b14c615ab33b99d&bscId=473"
+      }
+    },
+    "digital-hr-people-analytics-batch-6": {
+      "meta": {
+        "title": "Executive Development Program in Digital HR Leadership & People Analytics (Batch 6)",
+        "description": "A 10-month online executive programme from XLRI Delhi-NCR in digital HR strategy, people analytics and digital HR leadership, with a two-day campus immersion. Batch 6 began in July 2025."
+      },
+      "title": "Executive Development Program in Digital HR Leadership & People Analytics",
+      "batch": "Batch 6",
+      "poster": {
+        "src": "/media/executive-education/emdp/digital-hr-people-analytics-batch-6.jpg",
+        "alt": "Executive Development Program in Digital HR Leadership & People Analytics (Batch 6) — 10 Months | Online | Top Faculty Led — Starts July 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Course Details",
+          "paragraphs": [
+            "Unlock your leadership potential with XLRI Delhi-NCR’s Executive Development Program in Digital HR Leadership & People Analytics. Designed for emerging and seasoned HR professionals, this program equips participants with advanced digital HR strategies, people analytics skills, and leadership capabilities. Through expert-led sessions, real-world applications, and peer collaboration, the course empowers you to drive innovation and lead HR transformation in today’s dynamic business landscape."
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Why choose XLRI Digital HR Leadership Program?",
+          "points": [
+            "Highly Reputed Business School",
+            "Comprehensive Management Education",
+            "Strong Executive Alumni Network",
+            "Gain Competitive Professional Edge",
+            "Advance Your Career",
+            "Experienced Faculty"
+          ]
+        },
+        {
+          "kind": "highlights",
+          "heading": "Program Highlights",
+          "items": [
+            {
+              "value": "10 months",
+              "label": "Comprehensive Learning"
+            },
+            {
+              "value": "120+",
+              "label": "Hours of Live Classes"
+            },
+            {
+              "value": "11",
+              "label": "Modules"
+            },
+            {
+              "value": "2 Days",
+              "label": "Campus Immersion"
+            },
+            {
+              "value": "6",
+              "label": "Career Assistance Sessions"
+            },
+            {
+              "label": "Be a Part of India’s Premier Institution"
+            }
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "items": [
+            {
+              "label": "Program Fee",
+              "value": "INR 2,40,000 + GST"
+            },
+            {
+              "label": "Application Fee",
+              "value": "INR 10,000 + GST"
+            }
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Visit",
+          "lead": "Network, Interact & Connect at Campus of Prestigious XLRI Delhi-NCR",
+          "points": [
+            "Networking with Peers",
+            "Interaction with Faculty",
+            "Offline Classes",
+            "Valedictory Ceremony"
+          ],
+          "paragraphs": [
+            "Get a unique opportunity to participate in Two Day Campus Immersion at the beautiful campus of XLRI Delhi-NCR. Build lifetime connections with your peers, participate in workshops & experience student life at one of the top Business schools in India. Some unique features you can expect in the immersion include:"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certificate Sample",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-vil.jpg",
+              "alt": "Sample XLRI Leadership Education and Development (XLEAD) certificate for a programme completed through the VIL platform, signed by the Program Director and the Associate Dean",
+              "width": 553,
+              "height": 401
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Program Director(s)",
+          "members": [
+            {
+              "name": "Fr. PT Joseph, SJ",
+              "designation": "Dean Admin & Finance",
+              "qualification": "Ph.D. (Marquette University, USA), MBA (Saint Joseph University, phildelphia, USA), MSc (Madras University)",
+              "functionalArea": "Organizational Behaviour",
+              "photo": "/media/executive-education/emdp-programmes/fr-pt-joseph-sj.jpg"
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "designation": "Assistant Professor",
+              "qualification": "PhD (IIM Lucknow), PGDM, BE",
+              "functionalArea": "Organizational Behaviour"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "10 Months (120+ Hours)",
+          "lines": ["10 Months (120+ Hours)", "3 PM – 6 PM IST on Sundays*"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "Batch Inauguration: 31st August 2025",
+          "lines": [
+            "July 2025",
+            "Tech Orientation: 27th July 2025",
+            "Batch Inauguration: 31st August 2025"
+          ]
+        }
+      ],
+      "brochure": {
+        "label": "Download Brochure",
+        "href": "https://xlridelhi.ac.in/wp-content/uploads/2025/05/DHRL-1-1.pdf"
+      },
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://erp.xlri.ac.in/applicantLogins.htm?link=751659d900ee3d7fe82846ab987238fd&bscId=485"
+      }
+    },
+    "applied-business-finance": {
+      "meta": {
+        "title": "Executive Development Programme in Applied Business Finance",
+        "description": "Designed and Delivered by KPMG in India and XLRI to enhance your expertise to address intricate corporate issues"
+      },
+      "title": "Executive Development Programme in Applied Business Finance",
+      "poster": {
+        "src": "/media/executive-education/emdp/applied-business-finance.jpg",
+        "alt": "Executive Development Programme in Applied Business Finance — 11 Months | Online | Top Faculty Led — Starts May 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "About the programme",
+          "paragraphs": [
+            "Bridge the gap between theory and practice with KPMG in India and XLRI’s ‘Executive Development Programme in Applied Business Finance’.",
+            "Our 11-month immersive programme, tailored for ambitious early-career professionals, is designed to not only help you build solid financial acumen but also equip you with future-focused business skills, preparing you for a promising career in finance. The programme blends rigorous academic coursework with real-world industry insights, empowering you with the tools, knowledge, and strategic mindset needed to excel in managerial positions."
+          ],
+          "features": [
+            {
+              "title": "Holistic new-age curriculum",
+              "text": "Curriculum that prepares you to adapt to emerging trends and equips you with the skills and knowledge needed to navigate new challenges and opportunities."
+            },
+            {
+              "title": "Knowledge sessions by subject-matter experts",
+              "text": "Masterclasses by leading industry practitioners with years of practical and global experience across domains such as financial investing, ESG, digital transformation, and more."
+            },
+            {
+              "title": "Effective learning pedagogy",
+              "text": "Blended learning experience through live online sessions on weekends, and a three-day, residential campus immersion."
+            },
+            {
+              "title": "Delivered by highly experienced faculty",
+              "text": "Learn directly from XLRI faculty and KPMG in India seasoned practitioners."
+            },
+            {
+              "title": "Application-oriented and collaborative learning",
+              "text": "Group capstone projects for the application of concepts via scenarios that mimic the complexities and ever-evolving trends of the real-world."
+            },
+            {
+              "title": "Access to boardroom simulations",
+              "text": "Simulated boardroom discussions to apply learnings and enhance executive decision-making and strategic thinking."
+            }
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Why should you invest in this programme?",
+          "points": [
+            "Learn how to align your work with the broader financial strategy of the organisation, enabling cohesive and effective financial management",
+            "Understand how to leverage fintech and gain insights into tools that standardise data and streamline processes",
+            "Build on leadership skills to inspire across functions, fostering a culture of innovation and cooperation to achieve organisational goals",
+            "Stay informed about industry trends and dynamics that influence value creation",
+            "Gain expertise in investment strategy and portfolio management to enhance returns and achieve financial goals",
+            "Integrate ESG principles into your financial planning and analysis to drive sustainable business practices",
+            "Learn advanced techniques in financial risk management and treasury operations to safeguard your organisation’s assets",
+            "Master the intricacies of treasury operations to effectively manage liquidity, funding, and financial risks"
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Who is this programme for?",
+          "points": [
+            "Holding a Bachelor’s degree (10+2+3 or equivalent) or Diploma (10+2+3) or Master’s degree or equivalent in any discipline, with 50 per cent marks, who aspires to build their career in finance",
+            "Working in the corporate sector with a minimum of two years of relevant experience, seeking to develop their career in business finance"
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Programme Fee",
+          "points": [
+            "Batches will start from May 2025",
+            "Programme fee: 3,00,000 plus GST",
+            "EMI options available"
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certification",
+          "images": [
+            {
+              "src": "/media/executive-education/emdp-programmes/certificate-sample-xlri-kpmg.jpg",
+              "alt": "Sample XLRI Leadership Education and Development certificate with KPMG as academic partner, signed by an Associate Partner of KPMG in India and the Associate Dean, Executive programmes, XLRI Delhi/NCR",
+              "width": 1024,
+              "height": 738
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "online",
+          "label": "Virtual classroom",
+          "lines": []
+        },
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "11 months 170+ hours",
+          "lines": ["11 months 170+ hours"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "May 2025",
+          "lines": ["May 2025"]
+        }
+      ],
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://kpmg.com/in/en/services/advisory/consulting/business-consulting/human-capital-solutions/learning-academy/executive-development-programme-in-applied-business-finance.html"
+      }
+    },
+    "strategic-hr-leadership-cohort-5": {
+      "meta": {
+        "title": "Executive Development Program in Strategic HR Leadership (Cohort 5)",
+        "description": "XLRI Delhi-NCR's EMDP offers advanced learning in Strategic HR Leadership for senior professionals."
+      },
+      "title": "Executive Development Program in Strategic HR Leadership",
+      "batch": "Cohort 5",
+      "poster": {
+        "src": "/media/executive-education/emdp/strategic-hr-leadership-cohort-5.jpg",
+        "alt": "Executive Development Programme in Strategic HR Leadership — Cohort 05 — Batch Start Date: 27 Apr 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Course Details",
+          "paragraphs": [
+            "The Strategic HR Leadership program teaches participants how to align HR strategies with the overall goals and objectives of the organization, and addresses the challenges faced in today’s business landscape.",
+            "It covers leadership and strategic management skills, managing a diverse workforce that includes multiple generations, gig workers, contractual and remote workers, and quiet quitters, and addresses employee wellness and mental well-being, diversity and inclusivity, and the future of industrial relations and labour laws. It also emphasizes the impact of digitalization on HRM, including how to use technology to enhance HR processes and improve efficiency.",
+            "The program aims to build experts in these critical areas which lead to the success of modern-era HR professionals and the organizations they serve."
+          ]
+        },
+        {
+          "kind": "modules",
+          "heading": "Course Content",
+          "modules": [
+            {
+              "title": "Module 1: Future of the workplace - Introduction to new-age HRM",
+              "points": [
+                "Setting the context for digital change in HR",
+                "Developing an ability to look into the future",
+                "Industry 4.0 and the skilling challenges",
+                "Digital transformation in business",
+                "Digital: Future of HR",
+                "Managing the transformation",
+                "Impact of organizational design on strategy",
+                "New-age organization design and structures",
+                "Impact of work from anywhere",
+                "Managing Organisation Culture in Hybrid Workmode-Cha11enges and Stragies",
+                "Social Media & Employer Branding"
+              ]
+            },
+            {
+              "title": "Module 2: Strategic HRM",
+              "points": [
+                "Aligning business strategy with organisation objectives",
+                "Strategic staffng and resource allocation",
+                "Managing remote contractual workforce",
+                "Talent management: attraction, retention: and development",
+                "Contemporary issues in HRM — GIG economy and workers, contemporary concerns for work and workers",
+                "Building leaming organizations",
+                "Corporate Govemance",
+                "SHRM Frameworks"
+              ]
+            },
+            {
+              "title": "Module 3: Understanding HR Metrics",
+              "points": [
+                "Framework for Problem Solving — Define Problem, Collect Data: Build the model, Evaluate and Critique the model, Present Results and Benefits: Deploy Model",
+                "People Analytics — Basics",
+                "Steps to workforce planning- supply, demand, gap and solution analysis (Markov chain, scatter plot, trend analysis)",
+                "Strategic HR Metrics",
+                "Employee training and development analytics",
+                "Talent engagement analytics",
+                "HR Scorecards",
+                "HR Maturity Framework",
+                "HR Analytics Framework"
+              ]
+            },
+            {
+              "title": "Module 4: Digitalization, AI and HRM",
+              "points": [
+                "Interpreting data for actionable insights",
+                "Behavioral Modeling and Predictive analytics – Case Discussion",
+                "GenAI and its applications in HR strategy & planning and Recruitment & Selection",
+                "GenAI and its applications in Learning and Develoment and Performance & Career Management",
+                "Developing learning experience platforms",
+                "Ethical issues in the digitalization of HRM"
+              ]
+            },
+            {
+              "title": "Module 5: Motivating next-gen employees - Managing varied generations",
+              "points": [
+                "Reimagine careers and succession planning",
+                "Performance management and appraisal for the next-generation employees",
+                "Compensation Management including Rewards & Recognition"
+              ]
+            },
+            {
+              "title": "Module 6: Leadership",
+              "points": [
+                "Self-leadership, servant leadership & Emotional Intelligence",
+                "Building Leadership through uncertain times; Leadership and communication",
+                "Employee counseling, coaching, and mentoring for leadership development",
+                "Leading innovation",
+                "Leading start-ups",
+                "Conflict management and negotiation"
+              ]
+            },
+            {
+              "title": "Module 7: Employee wellness and mental well-being",
+              "points": [
+                "Future of work: post-pandemic perspectives",
+                "Understanding and managing stress in the workplace",
+                "Mental health and well-being"
+              ]
+            },
+            {
+              "title": "Module 8: Diversity, Equity and inclusivity",
+              "points": [
+                "Relevance in the present time and context",
+                "Diversity: A strong business case",
+                "Types: Cultural, Racial, Religious, Age, Sex, Sexual orientation, Physical, Mental, Caste, Regional",
+                "Psychological foundations",
+                "Leading a diverse workforce",
+                "Team diversity",
+                "Diversity at the top: diverse leadership styles",
+                "Fostering a culture that embraces and leverages diversity"
+              ]
+            },
+            {
+              "title": "Module 9: Future of industrial relations and the new labor laws",
+              "points": ["Labour laws", "HR Compliance", "New policies"]
+            },
+            {
+              "title": "Module 10: Campus Immersion",
+              "points": [
+                "Critical concepts of Marketing",
+                "Role of HR as a Business Growth Enabler",
+                "Understanding the business landscape – competitive advantage, supply demand, value chain, product positioning",
+                "Capstone Project Presentations"
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "bullets",
+          "heading": "Course Pedagogy",
+          "points": [
+            "Virtual classroom sessions by expert XLRI faculty & industry practitioners.",
+            "Individual & group activities to sharpen analytics & problem-solving skills.",
+            "Workshops on technology tools, visualization & design thinking.",
+            "Sessions with CHROs/Digital experts from India with global exposure."
+          ]
+        },
+        {
+          "kind": "bullets",
+          "heading": "Technical Requirements",
+          "points": [
+            "Laptop/Desktop with Win-7 and above or a corresponding Apple laptop/Desktop",
+            "Google Chrome (83 and above)/Safari /Firefox (77+) browser updated to the latest version",
+            "Stable internet connectivity of 512 Kbps or higher",
+            "Working Camera and Mic"
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "text": "The total course fee is Rs.2,40,000 + 18% GST. Attractive EMI options with flexible tenures available."
+        },
+        {
+          "kind": "bullets",
+          "heading": "Eligibility",
+          "points": [
+            "Graduate (10+2+3 or 10+2+4)",
+            "Minimum 5 years of experience in HR roles",
+            "Submission of a Statement of Purpose"
+          ]
+        },
+        {
+          "kind": "text",
+          "heading": "Assessment And Evaluation",
+          "paragraphs": [
+            "The examination and evaluation required for certification shall be carried out online by XLRI Delhi-NCR. The faculty members teaching their respective courses will choose the method of evaluation most appropriate to the course."
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Visit",
+          "paragraphs": [
+            "Participants get the opportunity of staying at the XLRI Delhi-NCR campus for 2 days for immersion programs.",
+            "The dates for in-campus immersion sessions will be communicated well in advance. Attendance to the in-campus module is MANDATORY for all participants subject to prevailing regulatory stipulations pertaining to the pandemic."
+          ]
+        },
+        {
+          "kind": "certificate",
+          "heading": "Certification",
+          "text": "After successful completion of this program, students will receive a certificate of completion of “Executive Development Program in Strategic HR Leadership” from XLEAD | XLRI."
+        },
+        {
+          "kind": "panel",
+          "heading": "*Alumni Status",
+          "text": "Upon successful completion of the program, you will receive the Executive Education Alumni (optional). An Additional Rs. 20,000 + GST payable to XLRI Alumni Association."
+        },
+        {
+          "kind": "people",
+          "heading": "Program Director",
+          "members": [
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "bio": [
+                "Dr. Ankit is an Assistant Professor at XLRI Delhi-NCR. He holds a PhD from IIM Lucknow and is an expert in the field of organizational behaviour. He has multiple journal publications to his name and is a prominent name at global HR conferences."
+              ]
+            },
+            {
+              "facultyId": "dr-faisal-ahsan",
+              "name": "Dr. Faisal Ahsan",
+              "bio": [
+                "Dr. Faisal Ahsan holds an FPM/Ph.D. from IIM Lucknow, an M.Tech from IIT Delhi, and a B.Tech from AMU, Aligarh. Currently an Assistant Professor at XLRI Delhi-NCR, he previously taught at IIM Ranchi. With over a decade at TATA Motors, he combines academic excellence with extensive industry experience."
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Program Faculty",
+          "members": [
+            {
+              "name": "Dr. Keith C. D'Souza",
+              "photo": "/media/executive-education/emdp-programmes/dr-keith-c-dsouza.jpg",
+              "bio": [
+                "Currently, Visiting Professor of Organizational Behaviour & Human Resources - S.P. Jain Institute of Management Studies and Research and XLRI Delhi Centre, and Director, Keith D'Souza & Associates HR and OD Services, Mumbai."
+              ]
+            },
+            {
+              "name": "Dr. Snigdha Pattnaik",
+              "photo": "/media/executive-education/emdp-programmes/dr-snigdha-pattnaik.jpg",
+              "bio": [
+                "Dr. Pattnaik has been Pro Vice Chancellor at Delhi Skill and Entrepreneurship University. She has also served as Professor in HRM and Founding Dean of the School of HRM at XIM University, Bhubaneswar. She is a visiting faculty at the Indian Institute of Management, Ahmedabad and at the Universidad Loyola Andalucia, Seville, Spain."
+              ]
+            },
+            {
+              "name": "Prof. Vinit Thakur",
+              "photo": "/media/executive-education/emdp-programmes/prof-vinit-thakur.jpg",
+              "bio": [
+                "Teacher, trainer & consultant, Prof. Vinit is a certified Psychometric Analyst with over 20+ years of domain experience in project management, banking & trade organizations. A prominent consultant for 3M India, SAP, GE, Ernst & Young and other blue-chip firms."
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "10 Months (120 Hours) Hybrid",
+          "lines": ["10 Months (120 Hours) Hybrid"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "27th April 2025",
+          "lines": ["27th April 2025"]
+        },
+        {
+          "icon": "clock",
+          "label": "Class Timings",
+          "lines": ["Sundays 10 AM to 1 PM"]
+        }
+      ],
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://accredian.com/programs/executive-development-program-strategic-hr-leadership"
+      }
+    },
+    "strategy-leadership-cohort-2": {
+      "meta": {
+        "title": "Executive Program in Strategy & Leadership (Cohort 2)",
+        "description": "XLRI Delhi-NCR's Executive Program in Strategy & Leadership enhances strategic thinking for industry leaders."
+      },
+      "title": "Executive Program in Strategy & Leadership",
+      "batch": "Cohort 2",
+      "poster": {
+        "src": "/media/executive-education/emdp/strategy-leadership-cohort-2.jpg",
+        "alt": "Executive Development Program in Strategy & Leadership — Cohort 02 — Batch Start Date: 27 Apr 2025",
+        "width": 861,
+        "height": 520
+      },
+      "sections": [
+        {
+          "kind": "text",
+          "heading": "Course Details",
+          "paragraphs": [
+            "This is a comprehensive 11-month program designed for Senior Managers, Entrepreneurs, and professionals offered by XLRI Delhi-NCR and ACCREDIAN. The program covers a wide range of topics, including competitive strategy, corporate strategy, AI leadership, digital leadership and crisis management to equip participants with the skills and knowledge necessary to excel in the field of Strategic Leadership. The program is delivered through a blend of live online sessions, case studies, and assignments, and is taught by industry experts with extensive experience in different aspects of management."
+          ]
+        },
+        {
+          "kind": "modules",
+          "heading": "Course Content",
+          "modules": [
+            {
+              "title": "Module 1: Competitive Strategy for Leaders",
+              "points": [
+                "Porter’s Five Forces Analysis",
+                "Competitive Benchmarking",
+                "Game theory in Strategy"
+              ]
+            },
+            {
+              "title": "Module 2: Corporate & Business Strategy",
+              "points": [
+                "Strategic Thinking and Analysis",
+                "Environmental Scanning and Industry Analysis",
+                "SWOT Analysis and Competitive Positioning",
+                "Scenario Planning and Risk Management"
+              ]
+            },
+            {
+              "title": "Module 3: Strategy Execution and Change Management",
+              "points": [
+                "Strategy Implementation and Action Planning",
+                "Change Management and Organizational Transformation",
+                "Performance Metrics and Balanced Scorecards",
+                "Communication and Stakeholder Management",
+                "Strategy Simulation: Engage in dynamic simulation to enhance strategic thinking. This simulation will help you formulate strategy in a risk free environment."
+              ]
+            },
+            {
+              "title": "Module 4: Global Expansion and International Strategy",
+              "points": [
+                "Global Business Environment",
+                "Entry Modes and International Expansion Selection",
+                "Cross-Cultural Management",
+                "Inorganic growth strategies"
+              ]
+            },
+            {
+              "title": "Module 5: Foundations of Strategic Leadership",
+              "points": [
+                "Introduction to Strategic Leadership",
+                "Leadership Theories and Models",
+                "Emotional Intelligence and Leadership",
+                "Vision, Mission, and Values in Leadership"
+              ]
+            },
+            {
+              "title": "Module 6: Leading Organizations & Building Culture",
+              "points": [
+                "Leadership and Organizational Culture",
+                "Shaping and influencing organizational culture",
+                "Building a culture of innovation and adaptability"
+              ]
+            },
+            {
+              "title": "Module 7: Strategic Communication for Leaders",
+              "points": [
+                "Strategic Communication Basics",
+                "Effective communication strategies for leaders",
+                "Communicating the strategic vision to various stakeholders"
+              ]
+            },
+            {
+              "title": "Module 8: Leading High-Performance Teams",
+              "points": [
+                "Team Dynamics and Leadership",
+                "Forming and leading high-performance teams",
+                "Motivating and empowering team members",
+                "Conflict Resolution and Team Building"
+              ]
+            },
+            {
+              "title": "Module 9: Decision-Making for Leaders",
+              "points": [
+                "Decision-making models in strategic leadership",
+                "Managing uncertainty and ambiguity in decision-making",
+                "Group decision-making and consensus building",
+                "Ethical considerations in strategic decision-making"
+              ]
+            },
+            {
+              "title": "Module 10: Strategic Negotiation for Leaders",
+              "points": [
+                "Strategic Negotiation Planning",
+                "Developing strong verbal and non-verbal communication skills.",
+                "Building trust and rapport with counterparts.",
+                "Creating Win-Win Solutions"
+              ]
+            },
+            {
+              "title": "Module 11: Crisis Management for Leaders",
+              "points": [
+                "Crisis Preparedness and Planning",
+                "Effective Communication During Crises",
+                "Decision-Making Under Pressure",
+                "Recovery and Learning from Crises",
+                "Leadership Simulation: Participate in Leadership Simulation to hone your leadership & decision making ability as a leaders"
+              ]
+            },
+            {
+              "title": "Module 12: Global Leadership",
+              "points": [
+                "Global Leadership Challenges",
+                "Leading in a globalized context",
+                "Cultural intelligence and cross-cultural leadership"
+              ]
+            },
+            {
+              "title": "Module 13: Strategic Leadership in the Digital Age",
+              "points": [
+                "Digital Transformation and Strategy",
+                "Data-Driven Decision Making",
+                "Leading in a Tech-Driven World"
+              ]
+            },
+            {
+              "title": "Module 14: Leadership with AI",
+              "points": [
+                "Introduction to AI and Leadership",
+                "Foundations of AI Technology",
+                "Strategic Implementation of AI in Leadership",
+                "Innovation Simulation: The Innovation Simulation aims to cultivate an idea-driven mindset, encouraging participants to collaboratively brainstorm innovative"
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "checklist",
+          "heading": "Program Overview",
+          "points": [
+            "Comprehensive 11-month program.",
+            "Designed for managers, entrepreneurs, and professionals in the industry.",
+            "Covers a wide range of topics including competitive strategy, corporate strategy, AI leadership, digital leadership, crisis management and more.",
+            "Blended learning approach with live online sessions, simulations, and assignments.",
+            "Industry-relevant curriculum taught by experienced management practitioners.",
+            "Opportunity to network with peers from diverse industries and backgrounds.",
+            "Interactive sessions and group activities to facilitate learning and collaboration.",
+            "Program designed to build skills for career advancement and growth in the field of Strategic Leadership.",
+            "CXO Coaching and Simulations for an all round exposure to the field with live problem solving.",
+            "Course material and resources accessible online for self-paced learning.",
+            "Certification from XLRI Delhi-NCR upon successful completion of the program."
+          ]
+        },
+        {
+          "kind": "fees",
+          "heading": "Fee Structure",
+          "text": "The total course fee is Rs.2,80,000 + 18% GST. Attractive EMI options with flexible tenures available."
+        },
+        {
+          "kind": "text",
+          "heading": "Assessment And Evaluation",
+          "paragraphs": [
+            "The examination and evaluation required for certification shall be carried out online by XLRI Delhi-NCR. The faculty members teaching their respective courses will choose the method of evaluation most appropriate to the course."
+          ]
+        },
+        {
+          "kind": "immersion",
+          "heading": "Campus Visit",
+          "paragraphs": [
+            "Participants get the opportunity of staying at the XLRI | Delhi – NCR campus for immersion programs. The dates for in-campus immersion sessions will be communicated well in advance. Attendance to the in-campus module is MANDATORY for all participants subject to prevailing regulatory stipulations pertaining to the pandemic."
+          ]
+        },
+        {
+          "kind": "people",
+          "heading": "Program Director",
+          "members": [
+            {
+              "facultyId": "dr-faisal-ahsan",
+              "name": "Dr. Faisal Ahsan",
+              "bio": [
+                "Dr. Faisal Ahsan holds an FPM/Ph.D. from IIM Lucknow, an M.Tech from IIT Delhi, and a B.Tech from AMU, Aligarh. Currently an Assistant Professor at XLRI Delhi-NCR, he previously taught at IIM Ranchi. With over a decade at TATA Motors, he combines academic excellence with extensive industry experience."
+              ]
+            },
+            {
+              "facultyId": "dr-ankit",
+              "name": "Dr. Ankit",
+              "bio": [
+                "Dr. Ankit is an Assistant Professor at XLRI Delhi-NCR. He holds a PhD from IIM Lucknow and is an expert in the field of organizational behaviour. He has multiple journal publications to his name and is a prominent name at global HR conferences."
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "icon": "clock",
+          "label": "Duration",
+          "headline": "11 Months (132+ hours)",
+          "lines": ["11 Months (132+ hours)"]
+        },
+        {
+          "icon": "calendar",
+          "label": "Batch Commencement",
+          "headline": "27th April, 2025",
+          "lines": ["27th April, 2025"]
+        },
+        {
+          "icon": "clock",
+          "label": "Class Timings",
+          "lines": ["Sundays 3 PM – 6 PM"]
+        }
+      ],
+      "apply": {
+        "label": "Apply Now",
+        "href": "https://accredian.com/programs/executive-program-in-strategy-leadership"
+      }
+    }
+  }
+}

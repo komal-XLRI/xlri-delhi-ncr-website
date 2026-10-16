@@ -57,11 +57,6 @@
               "href": "/about-xlri/board-of-governors"
             },
             {
-              "id": "about-committees",
-              "label": "Committees & Personnel",
-              "href": "/about-xlri/committees"
-            },
-            {
               "id": "about-disclosure",
               "label": "Mandatory Disclosure",
               "href": "/about-xlri/mandatory-disclosure",
@@ -450,6 +445,16 @@
               "id": "student-complaints",
               "label": "Internal Complaints Committee",
               "href": "/internal-complaints-committee"
+            },
+            {
+              "id": "student-latest-events",
+              "label": "Latest Events",
+              "href": "/latest-events"
+            },
+            {
+              "id": "student-latest-news",
+              "label": "Latest News",
+              "href": "/latest-news"
             }
           ]
         }

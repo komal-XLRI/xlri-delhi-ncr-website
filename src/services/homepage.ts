@@ -9,11 +9,13 @@ import type {
   News,
 } from '@/types/homepage';
 import { fromJson } from '@/lib/validation/json-content';
+import { getRecentEvents } from '@/services/events';
 
 const about = fromJson<About>(homepageJson.about);
 const academics = fromJson<Academics>(homepageJson.academics);
 const accreditations = fromJson<Accreditations>(homepageJson.accreditations);
-const events = fromJson<Events>(homepageJson.events);
+/** The strip's copy; its events are the newest `count` from `content/events.json`. */
+const events = fromJson<Omit<Events, 'items'> & { readonly count: number }>(homepageJson.events);
 const hero = fromJson<Hero>(homepageJson.hero);
 const insights = fromJson<Insights>(homepageJson.insights);
 const news = fromJson<News>(homepageJson.news);
@@ -47,7 +49,8 @@ export async function getAccreditations(): Promise<Accreditations> {
 }
 
 export async function getEvents(): Promise<Events> {
-  return Promise.resolve(events);
+  const { count, ...copy } = events;
+  return { ...copy, items: await getRecentEvents(count) };
 }
 
 export async function getInsights(): Promise<Insights> {
