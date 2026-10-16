@@ -16,7 +16,7 @@ export default async function FullTimeFacultyRoute() {
 
   return (
     <main id="main">
-      <FacultyDirectoryPage directory={directory} profileBase={routes.faculty.fullTime} />
+      <FacultyDirectoryPage directory={directory} profileBase={routes.faculty.index} />
     </main>
   );
 }

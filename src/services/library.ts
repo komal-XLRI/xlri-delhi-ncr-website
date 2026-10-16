@@ -34,8 +34,3 @@ export async function getLibrary(): Promise<LibraryContent> {
     personnel: stored.personnel.map(resolve),
   };
 }
-
-/** The e-resource collection slugs, for `generateStaticParams`. */
-export function getLibraryCollectionIds(): readonly string[] {
-  return stored.collections.map((collection) => collection.id);
-}

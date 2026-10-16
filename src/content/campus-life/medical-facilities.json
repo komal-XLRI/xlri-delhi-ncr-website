@@ -63,17 +63,17 @@
     {
       "label": "Mobility Within Campus",
       "description": "The hostel gym, banks, salon and the free student shuttle.",
-      "href": "/campus-life/mobility-within-campus"
+      "href": "/resources/mobility-within-campus"
     },
     {
       "label": "Internal Complaints Committee",
       "description": "Confidential support and guidance on concerns about sexual harassment.",
-      "href": "/campus-life/internal-complaints-committee"
+      "href": "/internal-complaints-committee"
     },
     {
       "label": "Counselling Services",
       "description": "Confidential support from the campus counsellor, and 24/7 online help through YourDOST.",
-      "href": "/campus-life/counselling-services"
+      "href": "/resources/counselling-services"
     }
   ]
 }

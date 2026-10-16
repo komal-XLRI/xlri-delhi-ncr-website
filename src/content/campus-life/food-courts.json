@@ -124,17 +124,17 @@
     {
       "label": "Student Hostel",
       "description": "Furnished rooms, a gym in the hostel, and the mess close by.",
-      "href": "/campus-life/students-hostel"
+      "href": "/resources/students-hostel"
     },
     {
       "label": "Daily Needs Store",
       "description": "Fresh produce, groceries and personal care on campus.",
-      "href": "/campus-life/daily-needs-store"
+      "href": "/resources/daily-needs-store"
     },
     {
       "label": "Medical Facilities",
       "description": "A qualified doctor on campus for everyday health concerns.",
-      "href": "/campus-life/medical-facilities"
+      "href": "/resources/medical-facilities"
     }
   ]
 }

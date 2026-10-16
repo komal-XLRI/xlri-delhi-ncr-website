@@ -22,8 +22,8 @@
       },
       "nav": "academics",
       "notes": {
-        "/academics/programmes/pgdm-business-management": "The two-year flagship postgraduate programme in business management.",
-        "/academics/programmes/pgdm-innovation-entrepreneurship": "Innovation, entrepreneurship and venture development — for founders and builders.",
+        "/pgdm-bm": "The two-year flagship postgraduate programme in business management.",
+        "/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development": "Innovation, entrepreneurship and venture development — for founders and builders.",
         "https://xlri.ac.in/academic-programmes/admission-procedure/overview": "How admission works, step by step.",
         "https://xlri.ac.in/academic-programmes/xat-bulletin": "Dates, eligibility and the XAT test pattern.",
         "https://xlri.ac.in/academic-programmes/admission-procedure/xat-bulletin": "Dates, eligibility and the XAT test pattern.",
@@ -46,9 +46,9 @@
       },
       "nav": "executive-education",
       "notes": {
-        "/executive-education/emdp": "Executive Management Development Programmes — upcoming and on-going batches.",
-        "/executive-education/management-development-programmes": "Short open programmes on campus, with the calendar and venues.",
-        "/executive-education/in-company-programmes": "Programmes designed for a single organisation, its people and its goals."
+        "/emdp-2": "Executive Management Development Programmes — upcoming and on-going batches.",
+        "/mdp": "Short open programmes on campus, with the calendar and venues.",
+        "/icp": "Programmes designed for a single organisation, its people and its goals."
       }
     },
     "faculty": {
@@ -67,12 +67,12 @@
       },
       "nav": "faculty-research",
       "notes": {
-        "/faculty/full-time": "Profiles of the full-time faculty, by functional area.",
-        "/faculty/adjunct": "Practitioners and scholars who teach as adjunct faculty.",
-        "/faculty/visiting": "Visiting faculty from India and abroad.",
-        "/faculty/staff": "The administrative and support staff of the campus.",
+        "/core-faculty": "Profiles of the full-time faculty, by functional area.",
+        "/adjunct-faculty": "Practitioners and scholars who teach as adjunct faculty.",
+        "/visiting-faculty": "Visiting faculty from India and abroad.",
+        "/staff-xlri-delhi": "The administrative and support staff of the campus.",
         "https://xlri.ac.in/faculty-research/innovation-in-teaching": "How XLRI faculty bring new methods into the classroom.",
-        "/research/publications": "Research articles and cases by the Delhi-NCR faculty."
+        "/publication-research-articles-cases": "Research articles and cases by the Delhi-NCR faculty."
       }
     },
     "sustainability": {
@@ -91,15 +91,15 @@
       },
       "nav": "sustainability",
       "notes": {
-        "/sustainability/team": "The core team and committee who lead sustainability on campus.",
-        "/sustainability/history": "How sustainability became part of XLRI, year by year.",
-        "/sustainability/student-committees": "The student committees that run sustainability work.",
-        "/sustainability/courses": "Courses on sustainability in the programmes.",
-        "/sustainability/events": "Orations, talks and events on sustainability.",
-        "/sustainability/government-committees": "Faculty appointed to government committees and bodies.",
-        "/sustainability/rural-immersion": "Students living and learning in rural India.",
-        "/sustainability/research-projects": "Funded research projects and their partners.",
-        "/sustainability/research-publications-cases": "Publications and teaching cases on sustainability."
+        "/sustainability-core-team-2": "The core team and committee who lead sustainability on campus.",
+        "/sustainability-history": "How sustainability became part of XLRI, year by year.",
+        "/sustainability-student-committees": "The student committees that run sustainability work.",
+        "/sustainability-courses": "Courses on sustainability in the programmes.",
+        "/sustainability-events": "Orations, talks and events on sustainability.",
+        "/sustainability-government-committees": "Faculty appointed to government committees and bodies.",
+        "/sustainability-rural-immersion": "Students living and learning in rural India.",
+        "/sustainability-research-projects": "Funded research projects and their partners.",
+        "/sustainability-research-publications": "Publications and teaching cases on sustainability."
       }
     },
     "campus-life": {
@@ -118,30 +118,30 @@
       },
       "nav": "campus-life",
       "notes": {
-        "/campus-life/library": "The Learning Resource Centre — books, e-resources, open 24×7.",
-        "/campus-life/classrooms": "Lecture theatres and discussion rooms.",
-        "/campus-life/computer-labs": "Computer labs for coursework and analytics.",
-        "/campus-life/it-infrastructure": "Campus network, Wi-Fi and IT support.",
-        "/campus-life/studio": "The recording studio for lectures and media.",
-        "/campus-life/conference-rooms": "Boardrooms, meeting rooms and lounges.",
-        "/campus-life/xavier-hall": "The auditorium for convocations and large events.",
-        "/campus-life/xceed-facilities": "Workspaces for the XLRI incubator’s start-ups.",
-        "/campus-life/students-hostel": "Student rooms and hostel life.",
-        "/campus-life/faculty-staff-residences": "Homes on campus for faculty and staff.",
-        "/campus-life/guest-accommodation": "Rooms for visitors and guests of the institute.",
-        "/campus-life/food-courts": "The mess, cafés and food courts.",
-        "/campus-life/daily-needs-store": "Groceries and everyday essentials on campus.",
-        "/campus-life/laundry-facilities": "Laundry services for residents.",
-        "/campus-life/medical-facilities": "The medical room, doctor and emergency care.",
-        "/campus-life/counselling-services": "Confidential counselling for students.",
-        "/campus-life/sports-recreation": "Courts, fields, the gym and games.",
-        "/campus-life/gardens-parks": "Lawns, gardens and green open spaces.",
-        "/campus-life/campus-tour": "A video tour of the campus, stop by stop.",
-        "/campus-life/mobility-within-campus": "Getting around the campus.",
-        "/campus-life/parking-areas": "Where to park on campus.",
-        "/campus-life/societies": "Student committees, clubs and societies.",
-        "/campus-life/student-events": "Fests, celebrations and events through the year.",
-        "/campus-life/internal-complaints-committee": "Reporting and redressal of sexual harassment complaints."
+        "/resources/library-home-new": "The Learning Resource Centre — books, e-resources, open 24×7.",
+        "/resources/classrooms": "Lecture theatres and discussion rooms.",
+        "/resources/computer-labs": "Computer labs for coursework and analytics.",
+        "/resources/it-infrastructure": "Campus network, Wi-Fi and IT support.",
+        "/resources/studio": "The recording studio for lectures and media.",
+        "/resources/conference-rooms": "Boardrooms, meeting rooms and lounges.",
+        "/resources/xavier-hall": "The auditorium for convocations and large events.",
+        "/resources/xceed-facilities": "Workspaces for the XLRI incubator’s start-ups.",
+        "/resources/students-hostel": "Student rooms and hostel life.",
+        "/resources/faculty-staff-residences": "Homes on campus for faculty and staff.",
+        "/resources/guest-accomodations": "Rooms for visitors and guests of the institute.",
+        "/resources/food-courts": "The mess, cafés and food courts.",
+        "/resources/daily-needs-store": "Groceries and everyday essentials on campus.",
+        "/resources/laundry-facilities": "Laundry services for residents.",
+        "/resources/medical-facilities": "The medical room, doctor and emergency care.",
+        "/resources/counselling-services": "Confidential counselling for students.",
+        "/resources/sports-recreation": "Courts, fields, the gym and games.",
+        "/resources/gardens-parks": "Lawns, gardens and green open spaces.",
+        "/campus-tour": "A video tour of the campus, stop by stop.",
+        "/resources/mobility-within-campus": "Getting around the campus.",
+        "/resources/parking-areas": "Where to park on campus.",
+        "/student-societies": "Student committees, clubs and societies.",
+        "/student-events": "Fests, celebrations and events through the year.",
+        "/internal-complaints-committee": "Reporting and redressal of sexual harassment complaints."
       }
     },
     "students": {
@@ -164,19 +164,19 @@
           "links": [
             {
               "label": "PGDM BM",
-              "href": "/academics/programmes/pgdm-business-management"
+              "href": "/pgdm-bm"
             },
             {
               "label": "PGDM - IEV",
-              "href": "/academics/programmes/pgdm-innovation-entrepreneurship"
+              "href": "/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development"
             },
             {
               "label": "Library",
-              "href": "/campus-life/library"
+              "href": "/resources/library-home-new"
             },
             {
               "label": "Faculty directory",
-              "href": "/faculty/full-time"
+              "href": "/core-faculty"
             }
           ]
         },
@@ -185,19 +185,19 @@
           "links": [
             {
               "label": "Student Hostel",
-              "href": "/campus-life/students-hostel"
+              "href": "/resources/students-hostel"
             },
             {
               "label": "Food Courts",
-              "href": "/campus-life/food-courts"
+              "href": "/resources/food-courts"
             },
             {
               "label": "Daily Needs Store",
-              "href": "/campus-life/daily-needs-store"
+              "href": "/resources/daily-needs-store"
             },
             {
               "label": "Laundry Facilities",
-              "href": "/campus-life/laundry-facilities"
+              "href": "/resources/laundry-facilities"
             }
           ]
         },
@@ -206,19 +206,19 @@
           "links": [
             {
               "label": "Medical Facilities",
-              "href": "/campus-life/medical-facilities"
+              "href": "/resources/medical-facilities"
             },
             {
               "label": "Counselling Services",
-              "href": "/campus-life/counselling-services"
+              "href": "/resources/counselling-services"
             },
             {
               "label": "Internal Complaints Committee",
-              "href": "/campus-life/internal-complaints-committee"
+              "href": "/internal-complaints-committee"
             },
             {
               "label": "Sports & Recreation",
-              "href": "/campus-life/sports-recreation"
+              "href": "/resources/sports-recreation"
             }
           ]
         },
@@ -227,40 +227,40 @@
           "links": [
             {
               "label": "Student Societies",
-              "href": "/campus-life/societies"
+              "href": "/student-societies"
             },
             {
               "label": "Student Events",
-              "href": "/campus-life/student-events"
+              "href": "/student-events"
             },
             {
               "label": "Placements",
-              "href": "/placements"
+              "href": "/placement"
             },
             {
               "label": "Summer Internships",
-              "href": "/placements/summer-internships"
+              "href": "/placement/summer-internships"
             }
           ]
         }
       ],
       "notes": {
-        "/academics/programmes/pgdm-business-management": "The two-year flagship postgraduate programme.",
-        "/academics/programmes/pgdm-innovation-entrepreneurship": "Innovation, entrepreneurship and venture development.",
-        "/campus-life/library": "Books, e-resources and remote access, open 24×7.",
-        "/faculty/full-time": "Find a professor, their area and their email.",
-        "/campus-life/students-hostel": "Student rooms and hostel life.",
-        "/campus-life/food-courts": "The mess, cafés and food courts.",
-        "/campus-life/daily-needs-store": "Groceries and everyday essentials.",
-        "/campus-life/laundry-facilities": "Laundry services for residents.",
-        "/campus-life/medical-facilities": "The medical room, doctor and emergency care.",
-        "/campus-life/counselling-services": "Confidential counselling, when you need to talk.",
-        "/campus-life/internal-complaints-committee": "Reporting and redressal of sexual harassment complaints.",
-        "/campus-life/sports-recreation": "Courts, fields, the gym and games.",
-        "/campus-life/societies": "Student committees, clubs and societies.",
-        "/campus-life/student-events": "Fests, celebrations and events through the year.",
-        "/placements": "Placement outcomes and the placement process.",
-        "/placements/summer-internships": "Summer internship placements and recruiters."
+        "/pgdm-bm": "The two-year flagship postgraduate programme.",
+        "/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development": "Innovation, entrepreneurship and venture development.",
+        "/resources/library-home-new": "Books, e-resources and remote access, open 24×7.",
+        "/core-faculty": "Find a professor, their area and their email.",
+        "/resources/students-hostel": "Student rooms and hostel life.",
+        "/resources/food-courts": "The mess, cafés and food courts.",
+        "/resources/daily-needs-store": "Groceries and everyday essentials.",
+        "/resources/laundry-facilities": "Laundry services for residents.",
+        "/resources/medical-facilities": "The medical room, doctor and emergency care.",
+        "/resources/counselling-services": "Confidential counselling, when you need to talk.",
+        "/internal-complaints-committee": "Reporting and redressal of sexual harassment complaints.",
+        "/resources/sports-recreation": "Courts, fields, the gym and games.",
+        "/student-societies": "Student committees, clubs and societies.",
+        "/student-events": "Fests, celebrations and events through the year.",
+        "/placement": "Placement outcomes and the placement process.",
+        "/placement/summer-internships": "Summer internship placements and recruiters."
       }
     }
   }

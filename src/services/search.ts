@@ -48,32 +48,32 @@ import type { SearchEntry } from '@/types/search';
  */
 
 const KEYWORDS: Record<string, string> = {
-  '/about': 'overview institute xlri delhi ncr campus jesuit',
-  '/about/directors-desk': 'director message fr antony uvari',
-  '/about/mandatory-disclosure': 'aicte disclosure statutory pdf',
-  '/about/accreditation': 'aacsb amba equis nirf ranking accredited',
-  '/about/leadership': 'administration dean registrar',
-  '/about/board-of-governors': 'board governance',
-  '/academics/programmes/pgdm-business-management':
-    'mba pgdm bm business management programme course two year admission',
-  '/academics/programmes/pgdm-innovation-entrepreneurship':
+  '/about-xlri': 'overview institute xlri delhi ncr campus jesuit',
+  '/about-xlri/from-the-directors-desk': 'director message fr antony uvari',
+  '/about-xlri/mandatory-disclosure': 'aicte disclosure statutory pdf',
+  '/about-xlri/accreditation': 'aacsb amba equis nirf ranking accredited',
+  '/about-xlri/leadership-administration': 'administration dean registrar',
+  '/about-xlri/board-of-governors': 'board governance',
+  '/pgdm-bm': 'mba pgdm bm business management programme course two year admission',
+  '/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development':
     'mba pgdm iev innovation entrepreneurship venture startup programme',
-  '/executive-education/emdp': 'executive mba working professionals management development',
-  '/executive-education/management-development-programmes': 'mdp short course training executives',
-  '/executive-education/in-company-programmes': 'icp corporate training custom programmes',
-  '/faculty/full-time': 'faculty professors teachers directory staff',
-  '/placements': 'placement jobs recruiters salary ctc careers',
-  '/placements/final-placements': 'final placement report salary ctc offers 2024-26',
-  '/placements/summer-internships': 'summer internship stipend 2025',
-  '/placements/reports': 'placement audit reports pdf archive',
-  '/sustainability/team': 'sustainability green environment team',
-  '/research/centres/gender-equality': 'gender women inclusion diversity leadership centre',
-  '/research/centres/public-policy': 'policy government public affairs centre',
-  '/research/centres/design-of-automobiles': 'automobile car automotive design gandini centre',
-  '/research/centres/healthcare-management': 'health hospital healthcare centre',
+  '/emdp-2': 'executive mba working professionals management development',
+  '/mdp': 'mdp short course training executives',
+  '/icp': 'icp corporate training custom programmes',
+  '/core-faculty': 'faculty professors teachers directory staff',
+  '/placement': 'placement jobs recruiters salary ctc careers',
+  '/placement/final-placements': 'final placement report salary ctc offers 2024-26',
+  '/placement/summer-internships': 'summer internship stipend 2025',
+  '/placement/reports': 'placement audit reports pdf archive',
+  '/sustainability-core-team-2': 'sustainability green environment team',
+  '/centre-for-gender-equality-inclusive-leadership':
+    'gender women inclusion diversity leadership centre',
+  '/center-for-public-policy-and-public-affairs': 'policy government public affairs centre',
+  '/indian-school-for-design-of-automobiles': 'automobile car automotive design gandini centre',
+  '/xlri-center-for-healthcare-management': 'health hospital healthcare centre',
 };
 
-/** "/placements#recruiters" → "/placements". */
+/** "/placement#recruiters" → "/placement". */
 const pathOf = (href: string) => href.split(/[?#]/)[0] ?? href;
 
 /** Whether `src/app` has a page for this path (static segments only). */
@@ -140,8 +140,8 @@ export async function getSearchIndex(): Promise<readonly SearchEntry[]> {
   });
 
   const listings = [
-    { directory: await getFullTimeFaculty(), base: '/faculty/full-time' },
-    { directory: await getAdjunctFaculty(), base: '/faculty/adjunct' },
+    { directory: await getFullTimeFaculty(), base: routes.faculty.index },
+    { directory: await getAdjunctFaculty(), base: routes.faculty.adjunct },
   ];
   for (const { directory, base } of listings) {
     for (const member of directory.faculty) {
@@ -164,7 +164,7 @@ export async function getSearchIndex(): Promise<readonly SearchEntry[]> {
       id: `person:${member.id}`,
       kind: 'person',
       title: member.name,
-      href: `/faculty/visiting#${member.id}`,
+      href: `${routes.faculty.visiting}#${member.id}`,
       trail: visiting.title,
       summary: `${member.designation} · ${member.organisation}`,
       keywords: 'visiting faculty',
@@ -178,7 +178,7 @@ export async function getSearchIndex(): Promise<readonly SearchEntry[]> {
       id: `staff:${member.id}`,
       kind: 'person',
       title: member.name,
-      href: `/faculty/staff#${member.id}`,
+      href: `${routes.faculty.staff}#${member.id}`,
       trail: staff.title,
       summary: member.designation,
       keywords: 'staff',

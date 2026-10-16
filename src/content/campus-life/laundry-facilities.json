@@ -41,17 +41,17 @@
     {
       "label": "Student Hostel",
       "description": "Furnished rooms, a gym in the hostel, and the mess close by.",
-      "href": "/campus-life/students-hostel"
+      "href": "/resources/students-hostel"
     },
     {
       "label": "Daily Needs Store",
       "description": "Fresh produce, groceries and personal care on campus.",
-      "href": "/campus-life/daily-needs-store"
+      "href": "/resources/daily-needs-store"
     },
     {
       "label": "Mobility Within Campus",
       "description": "The free student shuttle, banks, gym and salon.",
-      "href": "/campus-life/mobility-within-campus"
+      "href": "/resources/mobility-within-campus"
     }
   ]
 }

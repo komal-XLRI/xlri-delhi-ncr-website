@@ -361,7 +361,7 @@ export default function DesignSystemPage() {
                   </Text>
                 </CardBody>
                 <CardFooter>
-                  <Link href="/academics" siteUrl={site.url} variant="standalone">
+                  <Link href="/academic-programmes" siteUrl={site.url} variant="standalone">
                     Programme details
                   </Link>
                 </CardFooter>
@@ -398,7 +398,7 @@ export default function DesignSystemPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
-              { label: 'Academics', href: '/academics' },
+              { label: 'Academics', href: '/academic-programmes' },
               { label: 'PGDM (Business Management)' },
             ]}
           />

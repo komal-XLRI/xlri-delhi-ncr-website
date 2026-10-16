@@ -29,6 +29,8 @@ export interface FooterLinkGroup {
 export type SocialNetwork = 'linkedin' | 'instagram' | 'youtube' | 'facebook' | 'x';
 
 export interface FooterCopy {
+  /** Under the logo, which carries no campus of its own: "Delhi-NCR Campus". */
+  readonly campusLabel: string;
   /** Under the name, beside the "Visit the campus" panel. */
   readonly description: string;
   /** Link to the parent institute, in the bottom bar. */

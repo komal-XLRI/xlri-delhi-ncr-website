@@ -44,7 +44,7 @@ export function AccreditationLogos({
 }) {
   return (
     <NextLink
-      href="/about/accreditation"
+      href="/about-xlri/accreditation"
       className={cn(
         'group flex items-center gap-6 rounded-xs',
         // The link exists to explain the marks; it should not add visual weight.

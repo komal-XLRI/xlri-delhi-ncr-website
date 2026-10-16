@@ -67,17 +67,17 @@
     {
       "label": "Computer Labs",
       "description": "Rows of workstations for hands-on work with business software.",
-      "href": "/campus-life/computer-labs"
+      "href": "/resources/computer-labs"
     },
     {
       "label": "Classrooms",
       "description": "Tiered lecture theatres and case-discussion rooms.",
-      "href": "/campus-life/classrooms"
+      "href": "/resources/classrooms"
     },
     {
       "label": "Studio",
       "description": "A branded studio set for photos, videos and recordings.",
-      "href": "/campus-life/studio"
+      "href": "/resources/studio"
     }
   ]
 }

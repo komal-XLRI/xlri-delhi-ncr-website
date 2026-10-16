@@ -89,17 +89,17 @@
     {
       "label": "Student Societies",
       "description": "E-Cell and the other committees and clubs at XL.",
-      "href": "/campus-life/societies#e-cell"
+      "href": "/student-societies#e-cell"
     },
     {
       "label": "Studio",
       "description": "A branded studio set for photos, videos and recordings.",
-      "href": "/campus-life/studio"
+      "href": "/resources/studio"
     },
     {
       "label": "Conference Rooms",
       "description": "Boardrooms and meeting spaces for faculty, guests and committees.",
-      "href": "/campus-life/conference-rooms"
+      "href": "/resources/conference-rooms"
     }
   ]
 }

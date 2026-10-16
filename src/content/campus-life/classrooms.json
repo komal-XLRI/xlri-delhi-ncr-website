@@ -89,17 +89,17 @@
     {
       "label": "Computer Labs",
       "description": "Rows of workstations for hands-on work with business software.",
-      "href": "/campus-life/computer-labs"
+      "href": "/resources/computer-labs"
     },
     {
       "label": "IT Infrastructure",
       "description": "A gigabit fibre backbone, 1500 Mbps of bandwidth and campus-wide access.",
-      "href": "/campus-life/it-infrastructure"
+      "href": "/resources/it-infrastructure"
     },
     {
       "label": "Conference Rooms",
       "description": "Boardrooms and meeting spaces for faculty, guests and committees.",
-      "href": "/campus-life/conference-rooms"
+      "href": "/resources/conference-rooms"
     }
   ]
 }

@@ -53,17 +53,17 @@
     {
       "label": "Food Courts",
       "description": "A 24×7 cafeteria, The Daily Spot, the mess and NESCAFE Break Zone.",
-      "href": "/campus-life/food-courts"
+      "href": "/resources/food-courts"
     },
     {
       "label": "Laundry Facilities",
       "description": "Washing, ironing and dry cleaning for students.",
-      "href": "/campus-life/laundry-facilities"
+      "href": "/resources/laundry-facilities"
     },
     {
       "label": "Daily Needs Store",
       "description": "Fresh produce, groceries and personal care on campus.",
-      "href": "/campus-life/daily-needs-store"
+      "href": "/resources/daily-needs-store"
     }
   ]
 }

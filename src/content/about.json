@@ -24,28 +24,28 @@
         "icon": "landmark",
         "title": "Heritage",
         "body": "XLRI was founded in 1949 by Fr. Quinn Enright, SJ in the Steel City of Jamshedpur — the oldest management school in India.",
-        "href": "/about/heritage"
+        "href": "/heritage"
       },
       {
         "id": "vision-mission",
         "icon": "compass",
         "title": "Vision & Mission",
         "body": "To be an institution of excellence nurturing responsible global leaders for the greater common good and a sustainable future.",
-        "href": "/about/vision-mission"
+        "href": "/about-xlri/vision-mission"
       },
       {
         "id": "accreditation",
         "icon": "seal",
         "title": "Accreditation",
         "body": "AMBA accreditation for the third consecutive time, and BGA accreditation for the first time, each for 2025-2030.",
-        "href": "/about/accreditation"
+        "href": "/about-xlri/accreditation"
       },
       {
         "id": "founding-fathers",
         "icon": "book",
         "title": "Jesuit Founding Fathers",
         "body": "The visionaries whose commitment and adherence to the Jesuit spirit of Magis shaped this centre of excellence.",
-        "href": "/about/jesuit-founding-fathers"
+        "href": "/about-xlri/jesuit-founding-fathers"
       }
     ]
   },
@@ -56,7 +56,7 @@
       {
         "id": "directors-desk",
         "label": "From the Director’s Desk",
-        "href": "/about/directors-desk",
+        "href": "/about-xlri/from-the-directors-desk",
         "image": {
           "src": "/media/about/main-building.jpg",
           "width": 1200,
@@ -67,7 +67,7 @@
       {
         "id": "leadership",
         "label": "Leadership & Administration",
-        "href": "/about/leadership",
+        "href": "/about-xlri/leadership-administration",
         "image": {
           "src": "/media/about/academic-blocks-sunlit.jpg",
           "width": 1200,
@@ -78,7 +78,7 @@
       {
         "id": "board",
         "label": "Board of Governors",
-        "href": "/about/board-of-governors",
+        "href": "/about-xlri/board-of-governors",
         "image": {
           "src": "/media/about/academic-block-angled.jpg",
           "width": 1200,
@@ -104,7 +104,7 @@
       {
         "id": "campus-life",
         "label": "Campus Life",
-        "href": "/campus-life"
+        "href": "/resources"
       },
       {
         "id": "admissions",
@@ -114,7 +114,7 @@
       {
         "id": "disclosure",
         "label": "Mandatory Disclosure",
-        "href": "/about/mandatory-disclosure"
+        "href": "/about-xlri/mandatory-disclosure"
       },
       {
         "id": "contact",

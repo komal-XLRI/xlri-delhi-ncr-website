@@ -9,25 +9,25 @@
   {
     "id": "notice-placement-report",
     "label": "Final Placement Report 2024–26 published",
-    "href": "/placements/reports",
+    "href": "/placement/reports",
     "date": "2026-07-12"
   },
   {
     "id": "notice-convocation",
     "label": "6th Annual Convocation — registration now open",
-    "href": "/events/convocation",
+    "href": "/event/convocation",
     "date": "2026-07-05"
   },
   {
     "id": "notice-mandatory-disclosure",
     "label": "AICTE Mandatory Disclosure updated",
-    "href": "/about/mandatory-disclosure",
+    "href": "/about-xlri/mandatory-disclosure",
     "date": "2026-06-28"
   },
   {
     "id": "notice-edp-healthcare",
     "label": "Executive Development Programme in Healthcare Strategy — applications close 30 August",
-    "href": "/executive-education/healthcare-strategy-leadership",
+    "href": "/executive-development-programme-in-global-strategy-leadership-for-healthcare-professionals",
     "date": "2026-06-15"
   }
 ]

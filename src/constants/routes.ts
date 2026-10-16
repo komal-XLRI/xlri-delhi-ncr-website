@@ -13,36 +13,88 @@
  *
  * The tree is filled out in Phase 2 alongside the navigation data model, which
  * derives from the same source (§8.1).
+ *
+ * ## The addresses are the live site's
+ *
+ * Every page that exists on xlridelhi.ac.in keeps the address it has there —
+ * `/about-xlri/vision-mission`, `/resources/medical-facilities`, `/pgdm-bm` —
+ * so links, bookmarks and search results pointing at the current site keep
+ * working when this one replaces it (2026-10-16). WordPress writes them with a
+ * trailing slash; Next redirects `/pgdm-bm/` to `/pgdm-bm`, so both resolve.
+ * Where the live site has two addresses for a page, the one its menu links to
+ * is used here and the other redirects (`next.config.ts`). Pages the live site
+ * does not have keep this site's own addresses.
  */
+
+/** Pages whose address is not a pattern: an id in, the live site's address out. */
+const lookup =
+  <T extends Record<string, string>>(table: T, what: string) =>
+  (id: string): string => {
+    const path = (table as Record<string, string | undefined>)[id];
+    if (path === undefined) throw new Error(`routes: no ${what} "${id}"`);
+    return path;
+  };
+
+const PROGRAMMES = {
+  'pgdm-business-management': '/pgdm-bm',
+  'pgdm-innovation-entrepreneurship':
+    '/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development',
+} as const;
+
+const EXECUTIVE_PROGRAMMES = {
+  emdp: '/emdp-2',
+  'management-development-programmes': '/mdp',
+  'in-company-programmes': '/icp',
+} as const;
+
+const CENTRES = {
+  'gender-equality': '/centre-for-gender-equality-inclusive-leadership',
+  'public-policy': '/center-for-public-policy-and-public-affairs',
+  'design-of-automobiles': '/indian-school-for-design-of-automobiles',
+  'healthcare-management': '/xlri-center-for-healthcare-management',
+} as const;
+
+/** The library's own pages and e-resource collections, by id. */
+const LIBRARY_PAGES = {
+  services: '/library-services',
+  committee: '/committee-and-personnel',
+  gallery: '/gallery-library',
+  contact: '/contact-library',
+  edatabases: '/databases-library',
+  ejournals: '/ejournals-library',
+  ebooks: '/ebooks-and-elearning',
+  elearning: '/elearning',
+  enewspapers: '/e-newspaper-magazines',
+  etools: '/research-support-tools',
+} as const;
 
 export const routes = {
   home: '/',
 
   about: {
-    index: '/about',
-    accreditation: '/about/accreditation',
-    directorsDesk: '/about/directors-desk',
-    visionMission: '/about/vision-mission',
-    heritage: '/about/heritage',
-    foundingFathers: '/about/jesuit-founding-fathers',
-    boardOfGovernors: '/about/board-of-governors',
-    leadership: '/about/leadership',
-    mandatoryDisclosure: '/about/mandatory-disclosure',
+    index: '/about-xlri',
+    accreditation: '/about-xlri/accreditation',
+    directorsDesk: '/about-xlri/from-the-directors-desk',
+    visionMission: '/about-xlri/vision-mission',
+    heritage: '/heritage',
+    foundingFathers: '/about-xlri/jesuit-founding-fathers',
+    boardOfGovernors: '/about-xlri/board-of-governors',
+    leadership: '/about-xlri/leadership-administration',
+    mandatoryDisclosure: '/about-xlri/mandatory-disclosure',
   },
 
   academics: {
-    index: '/academics',
-    programme: (slug: string) => `/academics/programmes/${slug}` as const,
-    library: '/academics/library',
+    index: '/academic-programmes',
+    programme: lookup(PROGRAMMES, 'programme'),
   },
 
   executiveEducation: {
     index: '/executive-education',
-    programme: (slug: string) => `/executive-education/${slug}` as const,
+    programme: lookup(EXECUTIVE_PROGRAMMES, 'executive programme'),
   },
 
   /** Quick links for current students — the "Students" link in the utility row. */
-  students: '/students',
+  students: '/student-life',
 
   admissions: {
     index: '/admissions',
@@ -50,78 +102,76 @@ export const routes = {
 
   faculty: {
     index: '/faculty',
-    fullTime: '/faculty/full-time',
-    fullTimeProfile: (slug: string) => `/faculty/full-time/${slug}` as const,
-    adjunct: '/faculty/adjunct',
-    adjunctProfile: (slug: string) => `/faculty/adjunct/${slug}` as const,
-    visiting: '/faculty/visiting',
-    staff: '/faculty/staff',
-    profile: (slug: string) => `/faculty/${slug}` as const,
+    fullTime: '/core-faculty',
+    fullTimeProfile: (slug: string) => `/faculty/${slug}` as const,
+    adjunct: '/adjunct-faculty',
+    adjunctProfile: (slug: string) => `/adjunct-faculty/${slug}` as const,
+    visiting: '/visiting-faculty',
+    staff: '/staff-xlri-delhi',
   },
 
   research: {
-    index: '/research',
-    publications: '/research/publications',
-    centre: (slug: string) => `/research/centres/${slug}` as const,
+    publications: '/publication-research-articles-cases',
+    centre: lookup(CENTRES, 'centre'),
   },
 
   campusLife: {
-    index: '/campus-life',
-    campusTour: '/campus-life/campus-tour',
-    library: '/campus-life/library',
-    libraryPage: (slug: string) => `/campus-life/library/${slug}` as const,
-    mobility: '/campus-life/mobility-within-campus',
-    parking: '/campus-life/parking-areas',
-    medical: '/campus-life/medical-facilities',
-    counselling: '/campus-life/counselling-services',
-    sports: '/campus-life/sports-recreation',
-    gardens: '/campus-life/gardens-parks',
-    hostel: '/campus-life/students-hostel',
-    residences: '/campus-life/faculty-staff-residences',
-    guest: '/campus-life/guest-accommodation',
-    food: '/campus-life/food-courts',
-    store: '/campus-life/daily-needs-store',
-    laundry: '/campus-life/laundry-facilities',
-    classrooms: '/campus-life/classrooms',
-    labs: '/campus-life/computer-labs',
-    it: '/campus-life/it-infrastructure',
-    studio: '/campus-life/studio',
-    conference: '/campus-life/conference-rooms',
-    xavier: '/campus-life/xavier-hall',
-    xceed: '/campus-life/xceed-facilities',
-    societies: '/campus-life/societies',
-    internalCommittee: '/campus-life/internal-complaints-committee',
-    studentEvents: '/campus-life/student-events',
+    index: '/resources',
+    campusTour: '/campus-tour',
+    library: '/resources/library-home-new',
+    libraryPage: lookup(LIBRARY_PAGES, 'library page'),
+    mobility: '/resources/mobility-within-campus',
+    parking: '/resources/parking-areas',
+    medical: '/resources/medical-facilities',
+    counselling: '/resources/counselling-services',
+    sports: '/resources/sports-recreation',
+    gardens: '/resources/gardens-parks',
+    hostel: '/resources/students-hostel',
+    residences: '/resources/faculty-staff-residences',
+    guest: '/resources/guest-accomodations',
+    food: '/resources/food-courts',
+    store: '/resources/daily-needs-store',
+    laundry: '/resources/laundry-facilities',
+    classrooms: '/resources/classrooms',
+    labs: '/resources/computer-labs',
+    it: '/resources/it-infrastructure',
+    studio: '/resources/studio',
+    conference: '/resources/conference-rooms',
+    xavier: '/resources/xavier-hall',
+    xceed: '/resources/xceed-facilities',
+    societies: '/student-societies',
+    internalCommittee: '/internal-complaints-committee',
+    studentEvents: '/student-events',
   },
 
   placements: {
-    index: '/placements',
-    final: '/placements/final-placements',
-    summer: '/placements/summer-internships',
-    reports: '/placements/reports',
+    index: '/placement',
+    final: '/placement/final-placements',
+    summer: '/placement/summer-internships',
+    reports: '/placement/reports',
   },
 
   sustainability: {
     index: '/sustainability',
-    team: '/sustainability/team',
-    history: '/sustainability/history',
-    studentCommittees: '/sustainability/student-committees',
-    courses: '/sustainability/courses',
-    events: '/sustainability/events',
-    governmentCommittees: '/sustainability/government-committees',
-    ruralImmersion: '/sustainability/rural-immersion',
-    researchProjects: '/sustainability/research-projects',
-    researchPublications: '/sustainability/research-publications-cases',
+    team: '/sustainability-core-team-2',
+    history: '/sustainability-history',
+    studentCommittees: '/sustainability-student-committees',
+    courses: '/sustainability-courses',
+    events: '/sustainability-events',
+    governmentCommittees: '/sustainability-government-committees',
+    ruralImmersion: '/sustainability-rural-immersion',
+    researchProjects: '/sustainability-research-projects',
+    researchPublications: '/sustainability-research-publications',
   },
 
   news: {
-    index: '/news',
+    index: '/latest-news',
     article: (slug: string) => `/news/${slug}` as const,
   },
 
   events: {
-    index: '/events',
-    detail: (slug: string) => `/events/${slug}` as const,
+    index: '/latest-events',
+    detail: (slug: string) => `/event/${slug}` as const,
   },
 
   /** GIGW-mandated pages (§11.2). */

@@ -22,7 +22,7 @@ export function FacultyDirectoryPage({
   profileBase,
 }: {
   directory: FacultyDirectory;
-  /** The listing's path, e.g. `/faculty/adjunct`; profiles live under it. */
+  /** Where the profiles live: `/faculty` for Full Time (as on the live site), `/adjunct-faculty` for Adjunct. */
   profileBase: string;
 }) {
   return (

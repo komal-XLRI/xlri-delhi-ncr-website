@@ -40,6 +40,17 @@ const nextConfig: NextConfig = {
         destination: 'https://xlri.ac.in/faculty-research/innovation-in-teaching',
         permanent: true,
       },
+      // Pages keep the live site's addresses (constants/routes.ts). Where the
+      // live site has two addresses for one page, the one its menu uses is the
+      // page and these forward the other.
+      { source: '/faculty-index-2', destination: '/core-faculty', permanent: true },
+      {
+        source: '/sustainability-core-team',
+        destination: '/sustainability-core-team-2',
+        permanent: true,
+      },
+      { source: '/home-xlri', destination: '/', permanent: true },
+      { source: '/home-old-2', destination: '/', permanent: true },
     ];
   },
 };

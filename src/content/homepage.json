@@ -6,7 +6,7 @@
     ],
     "action": {
       "label": "Learn more",
-      "href": "/about"
+      "href": "/about-xlri"
     },
     "purpose": {
       "label": "Our purpose",
@@ -140,7 +140,7 @@
         },
         "action": {
           "label": "Learn more",
-          "href": "/academics/programmes/pgdm-business-management"
+          "href": "/pgdm-bm"
         }
       },
       {
@@ -172,7 +172,7 @@
         },
         "action": {
           "label": "Learn more",
-          "href": "/academics/programmes/mba"
+          "href": "/master-of-business-administration-mba"
         }
       },
       {
@@ -204,7 +204,7 @@
         },
         "action": {
           "label": "Learn more",
-          "href": "/academics/programmes/pgdm-working-professionals"
+          "href": "/pgdm-for-working-professionals"
         }
       },
       {
@@ -236,7 +236,7 @@
         },
         "action": {
           "label": "Learn more",
-          "href": "/academics/programmes/pgdm-innovation-entrepreneurship"
+          "href": "/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development"
         }
       },
       {
@@ -268,7 +268,7 @@
         },
         "action": {
           "label": "Learn more",
-          "href": "/academics/programmes/pgp-digital-hr-people-analytics"
+          "href": "/pgp-in-digital-hr-transformation-people-analytics"
         }
       },
       {
@@ -306,7 +306,7 @@
     ],
     "action": {
       "label": "Explore all programmes",
-      "href": "/academics"
+      "href": "/academic-programmes"
     }
   },
   "accreditations": {
@@ -319,7 +319,7 @@
         "description": "The global benchmark for excellence in business education.",
         "action": {
           "label": "Learn more",
-          "href": "/about/accreditation"
+          "href": "/about-xlri/accreditation"
         }
       },
       {
@@ -328,7 +328,7 @@
         "description": "The international standard for postgraduate management programmes.",
         "action": {
           "label": "Learn more",
-          "href": "/about/accreditation"
+          "href": "/about-xlri/accreditation"
         }
       },
       {
@@ -337,7 +337,7 @@
         "description": "Europe’s institutional accreditation for management schools.",
         "action": {
           "label": "Learn more",
-          "href": "/about/accreditation"
+          "href": "/about-xlri/accreditation"
         }
       }
     ]
@@ -347,7 +347,7 @@
     "intro": "Conferences, seminars, workshops, guest lectures and campus activities at XLRI Delhi-NCR.",
     "action": {
       "label": "View all events",
-      "href": "/events"
+      "href": "/latest-events"
     },
     "items": [
       {
@@ -355,7 +355,7 @@
         "title": "Staff Orientation Programme XLRI Delhi-NCR",
         "dateLabel": "08 Apr",
         "dateTime": "2026-04-08",
-        "href": "/events/staff-orientation-programme-xlri-delhi-ncr",
+        "href": "/event/staff-orientation-programme-xlri-delhi-ncr",
         "image": {
           "src": "/media/events/staff-orientation.jpg",
           "alt": "",
@@ -369,7 +369,7 @@
         "title": "5th Annual convocation – XLRI Delhi",
         "dateLabel": "06 Apr",
         "dateTime": "2026-04-06",
-        "href": "/events/5th-annual-convocation-xlri-delhi",
+        "href": "/event/5th-annual-convocation-xlri-delhi",
         "image": {
           "src": "/media/events/annual-convocation.jpg",
           "alt": "",
@@ -383,7 +383,7 @@
         "title": "Mega Book Exhibition at XLRI Delhi NCR Library",
         "dateLabel": "19 Mar",
         "dateTime": "2026-03-19",
-        "href": "/events/mega-book-exhibition-at-xlri-delhi-ncr-library",
+        "href": "/event/mega-book-exhibition-at-xlri-delhi-ncr-library",
         "image": {
           "src": "/media/events/book-exhibition.jpg",
           "alt": "",
@@ -397,7 +397,7 @@
         "title": "EvolvX – XLRI’s Premier Startup Conclave (Edition 4)",
         "dateLabel": "06 Mar",
         "dateTime": "2026-03-06",
-        "href": "/events/evolvx-xlris-premier-startup-conclave-edition-4",
+        "href": "/event/evolvx-xlris-premier-startup-conclave-edition-4",
         "image": {
           "src": "/media/events/evolvx.jpg",
           "alt": "",
@@ -411,7 +411,7 @@
         "title": "X-CELERATE 2026 — The XLRI Business Leadership Conclave",
         "dateLabel": "27 Feb",
         "dateTime": "2026-02-27",
-        "href": "/events/x-celerate-2026-the-xlri-business-leadership-conclave",
+        "href": "/event/x-celerate-2026-the-xlri-business-leadership-conclave",
         "image": {
           "src": "/media/events/x-celerate.jpg",
           "alt": "",
@@ -425,7 +425,7 @@
         "title": "MAXI Mela 2026",
         "dateLabel": "21 Feb",
         "dateTime": "2026-02-21",
-        "href": "/events/maxi-mela-2026",
+        "href": "/event/maxi-mela-2026",
         "image": {
           "src": "/media/events/maxi-mela.jpg",
           "alt": "",
@@ -447,42 +447,42 @@
         "id": "cred-legacy",
         "value": "1949",
         "label": "Founded — 77 years of teaching",
-        "href": "/about/heritage",
+        "href": "/heritage",
         "icon": "landmark"
       },
       {
         "id": "cred-ranking",
         "value": "Top 10",
         "label": "Management institute in India",
-        "href": "/about",
+        "href": "/about-xlri",
         "icon": "award"
       },
       {
         "id": "cred-accreditation",
         "value": "Triple",
         "label": "AACSB · AMBA · EQUIS accredited",
-        "href": "/about/accreditation",
+        "href": "/about-xlri/accreditation",
         "icon": "seal"
       },
       {
         "id": "cred-recruiters",
         "value": "100+",
         "label": "Recruiting organisations",
-        "href": "/placements",
+        "href": "/placement",
         "icon": "briefcase"
       },
       {
         "id": "cred-campus",
         "value": "Delhi-NCR",
         "label": "Jhajjar campus",
-        "href": "/campus-life",
+        "href": "/resources",
         "icon": "map-pin"
       },
       {
         "id": "cred-alumni",
         "value": "Global",
         "label": "Alumni network",
-        "href": "/about",
+        "href": "/about-xlri",
         "icon": "globe"
       }
     ],
@@ -499,21 +499,21 @@
         "eyebrow": "Placements",
         "title": "Final Placement Report 2024–26 published",
         "excerpt": "The full report covering roles, sectors, and compensation across both postgraduate programmes is now available.",
-        "href": "/placements/reports"
+        "href": "/placement/reports"
       },
       {
         "id": "spotlight-accreditation",
         "eyebrow": "Accreditation",
         "title": "Accredited by AACSB, AMBA and EQUIS",
         "excerpt": "XLRI holds all three international accreditations — a standard met by a small fraction of business schools worldwide.",
-        "href": "/about/accreditation"
+        "href": "/about-xlri/accreditation"
       },
       {
         "id": "spotlight-convocation",
         "eyebrow": "Campus",
         "title": "6th Annual Convocation — registration now open",
         "excerpt": "Graduands and their families can register for the convocation ceremony and view the schedule of events.",
-        "href": "/events/convocation"
+        "href": "/event/convocation"
       }
     ],
     "spotlightActionLabel": "Read more",
@@ -583,7 +583,7 @@
     "intro": "Announcements, admissions notices and events from the Delhi-NCR campus.",
     "action": {
       "label": "All news",
-      "href": "/news"
+      "href": "/latest-news"
     },
     "featured": [
       {
