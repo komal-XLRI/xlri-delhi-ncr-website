@@ -1,180 +1,274 @@
+import type { ReactNode } from 'react';
+
+import { ArrowRightIcon, MailIcon, MapPinIcon, PhoneIcon } from '@/components/ui/icon';
 import { Link } from '@/components/ui/link';
-import { POLICY_NAV, PRIMARY_NAV, UTILITY_NAV } from '@/config/navigation';
+import { POLICY_NAV, UTILITY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
 import { getFooterCopy } from '@/services/site';
+import type { FooterLinkGroup, SocialNetwork } from '@/types/site';
+
+/** The networks' marks, drawn to sit with the line icons in `components/ui/icon`. */
+const SOCIAL_GLYPHS: Record<SocialNetwork, ReactNode> = {
+  linkedin: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="3" />
+      <path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" />
+    </>
+  ),
+  instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M17.5 6.5v.01" />
+    </>
+  ),
+  youtube: (
+    <>
+      <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+      <path d="m10.5 9.5 4 2.5-4 2.5z" />
+    </>
+  ),
+  facebook: (
+    <path d="M14 21v-8h3l.5-3.5H14V7.8c0-1 .3-1.8 1.8-1.8h1.8V3.1A24 24 0 0 0 15 3c-2.6 0-4.4 1.6-4.4 4.5v2H8V13h2.6v8" />
+  ),
+  x: <path d="M4 4l16 16M20 4 4 20" />,
+};
+
+function LinkColumn({ group }: { group: FooterLinkGroup }) {
+  return (
+    <div>
+      <h2 className="footer-group-heading">{group.heading}</h2>
+      <span aria-hidden="true" className="mt-3 block h-0.5 w-8 bg-accent-surface" />
+      <ul className="mt-5 space-y-3">
+        {group.links.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href} siteUrl={site.url} variant="bare" className="footer-link">
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 /**
- * Site footer — derived from the same navigation tree as the header (§8.1).
+ * Site footer, on every page.
  *
- * This is the third of the tree's six consumers, and the reason the data-driven
- * model earns its keep: the footer sitemap cannot drift out of sync with the
- * menu, because there is nothing to keep in sync.
+ * Laid out after the XLRI Jamshedpur footer — a band of identity and one call
+ * to action, then Quick Links, Useful Links and Contact info in columns — and
+ * set in this site's own navy, lime and serif:
  *
- * ## What the redesign fixed
+ *  1. **Identity and a visit panel** — the name, a sentence on the campus, and
+ *     the two things a visitor most often wants next: the video campus tour
+ *     and directions to Jhajjar.
+ *  2. **Columns** — Quick Links (the section home pages), Useful Links, the
+ *     audience links ("For" students, alumni …) and Contact info with the
+ *     address, phone, email, directions and social accounts.
+ *  3. **Bottom bar** — copyright, the institute site, and the policy links.
  *
- * The previous footer measured **917px** — taller than most of the sections
- * above it — and roughly half of that was empty navy. Three things caused it:
+ * Jamshedpur's WhatsApp QR code and newsletter box are left out: the Delhi-NCR
+ * campus has neither a WhatsApp line nor a newsletter service to wire them to,
+ * and a form that goes nowhere is worse than no form.
  *
- *  1. **An orphaned identity block.** The wordmark, legal name and institute
- *     link sat alone in a full-width row with Quick Links and Policies pushed to
- *     the far right, leaving ~450px of bare ground between them.
- *  2. **Policies as a vertical column.** The mandated links stacked one per
- *     line set the height of the entire lower half on their own.
- *  3. **Eight nav groups in a four-column grid**, wrapping to two rows of
- *     uneven height with the gaps that implies.
- *
- * Now the identity is the first column *of the same grid* as the sitemap, so
- * there is no orphan row; the audience links run inline on one rule; and the
- * policies run inline in the bottom bar.
- *
- * ## The obligation this carries
- *
- * The policy links appear on every page, and laying them out horizontally is a
- * presentation change rather than a reduction. The list has since been shortened
- * on instruction — see the note on `POLICY_NAV` for what came out and why.
- *
- * (An earlier version of this note claimed the footer also carried a
- * full-colour accreditation strip. It does not, and has not since the marks
- * moved to the header's first layer.)
- *
- * The footer's own words — the institute link, the audience heading, the
- * rights line — are in `content/site.json`.
+ * The words and links are in `content/site.json` (`footer`); the audience and
+ * policy links are the menus in `config/navigation.json`.
  */
 export async function SiteFooter() {
   const copy = await getFooterCopy();
+  const { contact, visit } = copy;
+  const year = new Date().getFullYear();
 
   return (
     <footer className="footer-band mt-auto text-ink-inverse">
-      <div className="mx-auto w-full max-w-[80rem] px-6 py-14 md:px-8 md:py-16 lg:px-12">
-        {/* ================= identity + sitemap ================= */}
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-          {/*
-            The identity, as the first column of the grid rather than a row of
-            its own above it. That single change is most of the height saving:
-            as a row it had a full measure to itself and used a third of it.
-          */}
-          <div className="lg:col-span-3">
+      <div className="mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12">
+        {/* ================= identity + visit ================= */}
+        <div className="grid gap-8 border-b border-ink-inverse/15 py-12 md:py-14 lg:grid-cols-12 lg:items-center lg:gap-12">
+          <div className="lg:col-span-6">
             {/*
-              Set in type, not the wordmark.
-
-              I tried `brightness-0 invert` on the positive artwork first. It
-              does turn the mark white — including the shield, which is a blue
-              field carrying a white cross, so the whole emblem flattened into a
-              featureless white rectangle. The detail that makes it a crest was
-              gone.
-
-              `docs/brand/README.md` lists a reversed lockup as an outstanding
-              asset, and until one exists the honest treatment is the
-              institution's name in its own serif. A filtered logo is not a
-              reversed logo; it is a damaged one.
+              Set in type, not the wordmark: the positive artwork inverted with
+              a filter flattens the shield into a white rectangle, and no
+              reversed lockup exists yet (docs/brand/README.md).
             */}
-            <p className="font-serif text-2xl leading-tight text-ink-inverse">{site.name}</p>
-            <p className="mt-3 max-w-[22rem] text-sm leading-relaxed text-ink-inverse/70">
-              {site.legalName}
+            <p className="font-serif text-[2rem] leading-tight text-ink-inverse">{site.name}</p>
+            <p className="mt-1 text-sm font-semibold tracking-[0.14em] text-accent-surface uppercase">
+              {site.parentOrganization.name}
             </p>
+            <p className="mt-4 max-w-[34rem] text-[0.9375rem] leading-relaxed text-ink-inverse/70">
+              {copy.description}
+            </p>
+          </div>
 
-            <Link
-              href={site.parentOrganization.url}
-              siteUrl={site.url}
-              variant="bare"
-              className="mt-4 inline-flex items-center gap-1.5 text-sm text-ink-inverse/85 underline decoration-accent-surface decoration-2 underline-offset-4 hover:text-ink-inverse"
-            >
-              {copy.instituteLinkLabel}
-            </Link>
+          <div className="relative overflow-hidden rounded-[10px] border border-ink-inverse/15 bg-ink-inverse/5 p-6 md:p-7 lg:col-span-6">
+            {/* The site's triangle motif, small, in the corner. */}
+            <span
+              aria-hidden="true"
+              className="absolute -top-px -right-px size-16 bg-accent-surface/90 [clip-path:polygon(0_0,100%_0,100%_100%)]"
+            />
+            <p className="text-xs font-semibold tracking-[0.18em] text-accent-surface uppercase">
+              {visit.eyebrow}
+            </p>
+            <p className="mt-2 pr-10 font-serif text-2xl leading-snug text-ink-inverse">
+              {visit.heading}
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href={visit.tourHref}
+                siteUrl={site.url}
+                variant="bare"
+                className="group inline-flex items-center gap-2 rounded-full bg-accent-surface px-5 py-2.5 text-sm font-semibold text-brand-950 transition-colors duration-300 hover:bg-white"
+              >
+                {visit.tourLabel}
+                <ArrowRightIcon
+                  size={15}
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-0.5"
+                />
+              </Link>
+              <Link
+                href={contact.directionsHref}
+                siteUrl={site.url}
+                variant="bare"
+                className="inline-flex items-center gap-2 rounded-full border border-ink-inverse/30 px-5 py-2.5 text-sm font-semibold text-ink-inverse transition-colors duration-300 hover:border-ink-inverse hover:bg-ink-inverse/10"
+              >
+                <MapPinIcon size={15} aria-hidden="true" className="text-accent-surface" />
+                {visit.directionsLabel}
+              </Link>
+            </div>
+          </div>
+        </div>
 
-            {/*
-              The audience shortcuts live here rather than in a full-width row
-              of their own. The identity column is three of twelve beside a
-              two-row sitemap, so it had roughly 250px of empty ground beneath
-              it; these five links fill it, and removing the separate row takes
-              its divider and margins with it.
-            */}
-            <h2 className="mt-9 text-2xs font-semibold tracking-[0.22em] text-ink-inverse/55 uppercase">
-              {copy.audienceHeading}
-            </h2>
-            {/*
-              Inline and wrapped below `lg`, stacked above it. Five audience
-              links as a column cost five lines of a phone screen to say what
-              two wrapped lines say; on a desktop the column has room and reads
-              better beside the sitemap.
-            */}
-            {/*
-              Wrapped and separated by space, not by interpuncts. With a "·"
-              before every item but the first, a wrap put the dot at the *start*
-              of the second line, dangling in the margin with nothing before it.
-              Space does the same separating job and cannot land in the wrong
-              place.
-            */}
-            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 lg:block lg:space-y-2">
-              {UTILITY_NAV.map((item) => (
-                <li key={`f-${item.id}`}>
-                  <Link href={item.href} siteUrl={site.url} variant="bare" className="footer-link">
-                    {item.label}
+        {/* ================= columns ================= */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-12 md:py-14 lg:grid-cols-12 lg:gap-x-10">
+          <nav aria-label={copy.quickLinks.heading} className="lg:col-span-3">
+            <LinkColumn group={copy.quickLinks} />
+          </nav>
+          <nav aria-label={copy.usefulLinks.heading} className="lg:col-span-3">
+            <LinkColumn group={copy.usefulLinks} />
+          </nav>
+          <nav aria-label={copy.audienceHeading} className="col-span-2 sm:col-span-1 lg:col-span-2">
+            <LinkColumn
+              group={{
+                heading: copy.audienceHeading,
+                links: UTILITY_NAV.map(({ label, href }) => ({ label, href })),
+              }}
+            />
+          </nav>
+
+          <div className="col-span-2 sm:col-span-1 lg:col-span-4">
+            <h2 className="footer-group-heading">{contact.heading}</h2>
+            <span aria-hidden="true" className="mt-3 block h-0.5 w-8 bg-accent-surface" />
+            <ul className="mt-5 space-y-4 text-sm">
+              <li className="flex gap-3">
+                <PhoneIcon
+                  size={17}
+                  aria-hidden="true"
+                  className="mt-0.5 shrink-0 text-accent-surface"
+                />
+                <a
+                  href={`tel:${contact.phone.replace(/[^0-9+]/g, '')}`}
+                  className="footer-link text-base"
+                >
+                  {contact.phone}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <MailIcon
+                  size={17}
+                  aria-hidden="true"
+                  className="mt-0.5 shrink-0 text-accent-surface"
+                />
+                <a href={`mailto:${contact.email}`} className="footer-link text-base">
+                  {contact.email}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <MapPinIcon
+                  size={17}
+                  aria-hidden="true"
+                  className="mt-0.5 shrink-0 text-accent-surface"
+                />
+                <address className="leading-relaxed text-ink-inverse/75 not-italic">
+                  {contact.address.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                  <Link
+                    href={contact.directionsHref}
+                    siteUrl={site.url}
+                    variant="bare"
+                    hideOffsiteIndicator
+                    className="group mt-2 inline-flex items-center gap-1 font-semibold text-accent-surface hover:text-white"
+                  >
+                    {visit.directionsLabel}
+                    <ArrowRightIcon
+                      size={13}
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:translate-x-0.5"
+                    />
+                    <span className="sr-only"> (opens Google Maps)</span>
                   </Link>
+                </address>
+              </li>
+            </ul>
+
+            <h3 className="mt-7 text-xs font-semibold tracking-[0.18em] text-ink-inverse/60 uppercase">
+              {contact.followHeading}
+            </h3>
+            <ul className="mt-3 flex flex-wrap gap-2.5">
+              {contact.social.map((account) => (
+                <li key={account.network}>
+                  <a
+                    href={account.href}
+                    rel="noopener noreferrer"
+                    aria-label={account.label}
+                    className="flex size-10 items-center justify-center rounded-full border border-ink-inverse/20 text-ink-inverse/85 transition-[background-color,color,border-color,translate] duration-300 hover:border-accent-surface hover:bg-accent-surface hover:text-brand-950 motion-safe:hover:-translate-y-0.5"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      width={18}
+                      height={18}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={1.75}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      {SOCIAL_GLYPHS[account.network]}
+                    </svg>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/*
-            Four columns of the remaining nine, so the eight sections fall as
-            two even rows. `gap-y` is larger than `gap-x` because the second row
-            needs to read as a new row rather than as a continuation of the
-            column above it.
-          */}
-          <nav
-            aria-label="Footer"
-            className="grid grid-cols-2 gap-x-6 gap-y-8 lg:col-span-9 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-9"
-          >
-            {PRIMARY_NAV.map((item) => (
-              <div key={`f-${item.id}`}>
-                <h2 className="footer-group-heading">
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      siteUrl={site.url}
-                      variant="bare"
-                      className="hover:underline"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    item.label
-                  )}
-                </h2>
-                <ul className="mt-3 space-y-2">
-                  {item.children?.map((section) => (
-                    <li key={`f-${section.id}`}>
-                      <Link
-                        href={section.href ?? section.children?.[0]?.href ?? '#'}
-                        siteUrl={site.url}
-                        variant="bare"
-                        className="footer-link"
-                      >
-                        {section.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </nav>
         </div>
 
         {/* ================= bottom bar ================= */}
-        <div className="mt-8 flex flex-col gap-5 border-t border-ink-inverse/15 pt-8 lg:flex-row-reverse lg:items-baseline lg:justify-between lg:gap-10">
+        <div className="flex flex-col gap-4 border-t border-ink-inverse/15 py-7 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+          <p className="text-xs text-ink-inverse/60">
+            © {year} {site.name}. {copy.copyright}{' '}
+            <Link
+              href={site.parentOrganization.url}
+              siteUrl={site.url}
+              variant="bare"
+              className="ml-1 text-ink-inverse/80 underline decoration-accent-surface decoration-2 underline-offset-4 hover:text-ink-inverse"
+            >
+              {copy.instituteLinkLabel}
+            </Link>
+          </p>
           {/*
-            The policy links, inline — a wrapped row rather than a column, which
-            is what kept them out of the footer's height. The list itself is
-            `POLICY_NAV`; the separator is drawn before every item but the first,
-            so shortening the list leaves no dangling interpunct or gap.
+            Wrapped and separated by space-plus-dot drawn before every item but
+            the first, so a wrap never leaves a dot dangling at a line start.
           */}
           <nav aria-label="Policies">
             <ul className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
               {POLICY_NAV.map((item, index) => (
                 <li key={`f-${item.id}`} className="flex items-baseline gap-3">
                   {index > 0 ? (
-                    <span aria-hidden="true" className="text-ink-inverse/25">
+                    <span aria-hidden="true" className="text-accent-surface/60">
                       ·
                     </span>
                   ) : null}
@@ -190,10 +284,6 @@ export async function SiteFooter() {
               ))}
             </ul>
           </nav>
-
-          <p className="text-xs text-ink-inverse/55">
-            © {site.name}. {copy.copyright}
-          </p>
         </div>
       </div>
     </footer>
