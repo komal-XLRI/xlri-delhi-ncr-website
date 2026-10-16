@@ -41,6 +41,9 @@ export const routes = {
     programme: (slug: string) => `/executive-education/${slug}` as const,
   },
 
+  /** Quick links for current students — the "Students" link in the utility row. */
+  students: '/students',
+
   admissions: {
     index: '/admissions',
   },

@@ -1,0 +1,92 @@
+{
+  "eyebrow": "Website policies",
+  "updatedLabel": "Last updated {date}",
+  "tocHeading": "On this page",
+  "emptyNote": "This page is being prepared and will be published soon.",
+  "contact": {
+    "heading": "Questions about this website",
+    "text": "Write to us or call the campus — we will route your query to the right office.",
+    "address": "XLRI Delhi-NCR, Aurangpur, Dadri Toe, Jhajjar, Haryana 124 515, India",
+    "phone": "01251-271111",
+    "email": "info.delhi@xlri.ac.in"
+  },
+  "pages": {
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy",
+        "description": "How the XLRI Delhi-NCR website handles information about its visitors."
+      },
+      "title": "Privacy Policy"
+    },
+    "terms": {
+      "meta": {
+        "title": "Terms & Conditions",
+        "description": "The terms on which the XLRI Delhi-NCR website and its content are provided."
+      },
+      "title": "Terms & Conditions"
+    },
+    "copyright": {
+      "meta": {
+        "title": "Copyright Policy",
+        "description": "How the text, photographs and documents on the XLRI Delhi-NCR website may be reproduced."
+      },
+      "title": "Copyright Policy"
+    },
+    "help": {
+      "meta": {
+        "title": "Help",
+        "description": "How to find your way around the XLRI Delhi-NCR website, change the text size or contrast, and open its documents."
+      },
+      "title": "Help",
+      "updated": "2026-10-16",
+      "intro": "How to find your way around this website, make it easier to read, and open the documents it links to.",
+      "sections": [
+        {
+          "heading": "Finding your way",
+          "paragraphs": [
+            "The main menu at the top of every page lists the sections of the site; on a phone, open it with the menu button. Each section opens a panel of its pages.",
+            "Use Search at the top of the page to find a page, a programme or a person by name. The Sitemap lists every page of the site in one place."
+          ]
+        },
+        {
+          "heading": "Changing the text size",
+          "paragraphs": [
+            "Use the A, A+ and A++ buttons at the top of the page to make the text larger. Your choice is remembered on the pages you open next.",
+            "You can also zoom with your browser: press Ctrl and + (Cmd and + on a Mac) to zoom in, Ctrl and − to zoom out, and Ctrl and 0 to return to the normal size."
+          ]
+        },
+        {
+          "heading": "High contrast",
+          "paragraphs": [
+            "The contrast button switches the site to a high-contrast colour scheme, which can be easier to read. Press it again to return to the standard colours."
+          ]
+        },
+        {
+          "heading": "Using a keyboard or screen reader",
+          "paragraphs": [
+            "Every page can be used with a keyboard alone. Press Tab to move between links and buttons, Enter to follow a link, and Escape to close a menu or a dialog. The first Tab on a page shows a “Skip to main content” link that jumps past the menus.",
+            "Pages are built with headings, landmarks and text alternatives for images, so they can be read with screen readers such as NVDA, JAWS, VoiceOver and TalkBack."
+          ]
+        },
+        {
+          "heading": "Opening documents",
+          "points": [
+            "PDF documents — reports, policies, brochures — open in your browser. If yours does not show them, a free reader such as Adobe Acrobat Reader will.",
+            "Videos play on the page; some are hosted on YouTube.",
+            "Links that leave this website are marked with an arrow icon and open the other site."
+          ]
+        }
+      ]
+    }
+  },
+  "sitemap": {
+    "meta": {
+      "title": "Sitemap",
+      "description": "Every page of the XLRI Delhi-NCR website, by section."
+    },
+    "eyebrow": "Sitemap",
+    "title": "Sitemap",
+    "intro": "Every page of this website, by section — the same structure as the main menu.",
+    "otherHeading": "More pages"
+  }
+}

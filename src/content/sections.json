@@ -1,0 +1,267 @@
+{
+  "labels": {
+    "pageCount": {
+      "one": "{count} page",
+      "other": "{count} pages"
+    }
+  },
+  "hubs": {
+    "academics": {
+      "meta": {
+        "title": "Academics",
+        "description": "Postgraduate programmes at XLRI Delhi-NCR: PGDM (Business Management) and PGDM (Innovation, Entrepreneurship & Venture Development), and how to apply."
+      },
+      "eyebrow": "Academic Programmes",
+      "title": "Academics",
+      "intro": "Two full-time postgraduate programmes, each run by its own school on the Delhi-NCR campus — and the admission process that leads to them.",
+      "image": {
+        "src": "/media/campus-academic-block.jpg",
+        "alt": "The academic block of the XLRI Delhi-NCR campus",
+        "width": 1600,
+        "height": 1066
+      },
+      "nav": "academics",
+      "notes": {
+        "/academics/programmes/pgdm-business-management": "The two-year flagship postgraduate programme in business management.",
+        "/academics/programmes/pgdm-innovation-entrepreneurship": "Innovation, entrepreneurship and venture development — for founders and builders.",
+        "https://xlri.ac.in/academic-programmes/admission-procedure/overview": "How admission works, step by step.",
+        "https://xlri.ac.in/academic-programmes/xat-bulletin": "Dates, eligibility and the XAT test pattern.",
+        "https://xlri.ac.in/academic-programmes/admission-procedure/xat-bulletin": "Dates, eligibility and the XAT test pattern.",
+        "https://xlri.ac.in/academic-programmes/xat-question-papers": "Past XAT papers to practise with."
+      }
+    },
+    "executive-education": {
+      "meta": {
+        "title": "Executive Education",
+        "description": "XLEAD — XLRI Leadership Education and Development at Delhi-NCR: EMDP, Management Development Programmes and In-Company Programmes."
+      },
+      "eyebrow": "XLEAD",
+      "title": "Executive Education",
+      "intro": "Programmes for working professionals and organisations, from multi-month executive programmes to short management development courses and programmes designed for a single company.",
+      "image": {
+        "src": "/media/campus-gateway.jpg",
+        "alt": "The gateway to the XLRI Delhi-NCR campus",
+        "width": 1536,
+        "height": 1024
+      },
+      "nav": "executive-education",
+      "notes": {
+        "/executive-education/emdp": "Executive Management Development Programmes — upcoming and on-going batches.",
+        "/executive-education/management-development-programmes": "Short open programmes on campus, with the calendar and venues.",
+        "/executive-education/in-company-programmes": "Programmes designed for a single organisation, its people and its goals."
+      }
+    },
+    "faculty": {
+      "meta": {
+        "title": "Faculty & Research",
+        "description": "The faculty and staff of XLRI Delhi-NCR, and their research articles and cases."
+      },
+      "eyebrow": "Faculty & Research",
+      "title": "Faculty & Research",
+      "intro": "The people who teach, research and run the Delhi-NCR campus — and what they publish.",
+      "image": {
+        "src": "/media/campus-students.jpg",
+        "alt": "Students on the XLRI Delhi-NCR campus",
+        "width": 1600,
+        "height": 1067
+      },
+      "nav": "faculty-research",
+      "notes": {
+        "/faculty/full-time": "Profiles of the full-time faculty, by functional area.",
+        "/faculty/adjunct": "Practitioners and scholars who teach as adjunct faculty.",
+        "/faculty/visiting": "Visiting faculty from India and abroad.",
+        "/faculty/staff": "The administrative and support staff of the campus.",
+        "https://xlri.ac.in/faculty-research/innovation-in-teaching": "How XLRI faculty bring new methods into the classroom.",
+        "/research/publications": "Research articles and cases by the Delhi-NCR faculty."
+      }
+    },
+    "sustainability": {
+      "meta": {
+        "title": "Sustainability",
+        "description": "Sustainability at XLRI Delhi-NCR: the team, history, student committees, courses, events, government committees, rural immersion and research."
+      },
+      "eyebrow": "Sustainability",
+      "title": "Sustainability",
+      "intro": "How the campus teaches, researches and practises sustainability — through its courses, its students, its research and its work with government and communities.",
+      "image": {
+        "src": "/media/campus-life/gardens/lawn-xlri-sign.jpg",
+        "alt": "A wide lawn with the red “I ♥ XLRI” sign, the academic blocks behind",
+        "width": 1600,
+        "height": 1067
+      },
+      "nav": "sustainability",
+      "notes": {
+        "/sustainability/team": "The core team and committee who lead sustainability on campus.",
+        "/sustainability/history": "How sustainability became part of XLRI, year by year.",
+        "/sustainability/student-committees": "The student committees that run sustainability work.",
+        "/sustainability/courses": "Courses on sustainability in the programmes.",
+        "/sustainability/events": "Orations, talks and events on sustainability.",
+        "/sustainability/government-committees": "Faculty appointed to government committees and bodies.",
+        "/sustainability/rural-immersion": "Students living and learning in rural India.",
+        "/sustainability/research-projects": "Funded research projects and their partners.",
+        "/sustainability/research-publications-cases": "Publications and teaching cases on sustainability."
+      }
+    },
+    "campus-life": {
+      "meta": {
+        "title": "Campus Life",
+        "description": "Life on the XLRI Delhi-NCR campus: academic spaces, the library, living on campus, health and recreation, getting around, and student life."
+      },
+      "eyebrow": "Campus Life",
+      "title": "Campus Life",
+      "intro": "Where students study, live, eat, play and organise — everything on the Delhi-NCR campus at Jhajjar, in one place.",
+      "image": {
+        "src": "/media/campus-aerial.jpg",
+        "alt": "An aerial view of the XLRI Delhi-NCR campus",
+        "width": 1600,
+        "height": 900
+      },
+      "nav": "campus-life",
+      "notes": {
+        "/campus-life/library": "The Learning Resource Centre — books, e-resources, open 24×7.",
+        "/campus-life/classrooms": "Lecture theatres and discussion rooms.",
+        "/campus-life/computer-labs": "Computer labs for coursework and analytics.",
+        "/campus-life/it-infrastructure": "Campus network, Wi-Fi and IT support.",
+        "/campus-life/studio": "The recording studio for lectures and media.",
+        "/campus-life/conference-rooms": "Boardrooms, meeting rooms and lounges.",
+        "/campus-life/xavier-hall": "The auditorium for convocations and large events.",
+        "/campus-life/xceed-facilities": "Workspaces for the XLRI incubator’s start-ups.",
+        "/campus-life/students-hostel": "Student rooms and hostel life.",
+        "/campus-life/faculty-staff-residences": "Homes on campus for faculty and staff.",
+        "/campus-life/guest-accommodation": "Rooms for visitors and guests of the institute.",
+        "/campus-life/food-courts": "The mess, cafés and food courts.",
+        "/campus-life/daily-needs-store": "Groceries and everyday essentials on campus.",
+        "/campus-life/laundry-facilities": "Laundry services for residents.",
+        "/campus-life/medical-facilities": "The medical room, doctor and emergency care.",
+        "/campus-life/counselling-services": "Confidential counselling for students.",
+        "/campus-life/sports-recreation": "Courts, fields, the gym and games.",
+        "/campus-life/gardens-parks": "Lawns, gardens and green open spaces.",
+        "/campus-life/campus-tour": "A video tour of the campus, stop by stop.",
+        "/campus-life/mobility-within-campus": "Getting around the campus.",
+        "/campus-life/parking-areas": "Where to park on campus.",
+        "/campus-life/societies": "Student committees, clubs and societies.",
+        "/campus-life/student-events": "Fests, celebrations and events through the year.",
+        "/campus-life/internal-complaints-committee": "Reporting and redressal of sexual harassment complaints."
+      }
+    },
+    "students": {
+      "meta": {
+        "title": "Students",
+        "description": "Quick links for students of XLRI Delhi-NCR: programmes, the library, hostel and food, health and counselling, societies and events, and placements."
+      },
+      "eyebrow": "For students",
+      "title": "Students",
+      "intro": "The pages students use most, gathered in one place — from the library and the hostel to counselling, societies and placements.",
+      "image": {
+        "src": "/media/campus-student-life.jpg",
+        "alt": "Students together on the XLRI Delhi-NCR campus",
+        "width": 1537,
+        "height": 1023
+      },
+      "groups": [
+        {
+          "label": "Study",
+          "links": [
+            {
+              "label": "PGDM BM",
+              "href": "/academics/programmes/pgdm-business-management"
+            },
+            {
+              "label": "PGDM - IEV",
+              "href": "/academics/programmes/pgdm-innovation-entrepreneurship"
+            },
+            {
+              "label": "Library",
+              "href": "/campus-life/library"
+            },
+            {
+              "label": "Faculty directory",
+              "href": "/faculty/full-time"
+            }
+          ]
+        },
+        {
+          "label": "Living on campus",
+          "links": [
+            {
+              "label": "Student Hostel",
+              "href": "/campus-life/students-hostel"
+            },
+            {
+              "label": "Food Courts",
+              "href": "/campus-life/food-courts"
+            },
+            {
+              "label": "Daily Needs Store",
+              "href": "/campus-life/daily-needs-store"
+            },
+            {
+              "label": "Laundry Facilities",
+              "href": "/campus-life/laundry-facilities"
+            }
+          ]
+        },
+        {
+          "label": "Health & support",
+          "links": [
+            {
+              "label": "Medical Facilities",
+              "href": "/campus-life/medical-facilities"
+            },
+            {
+              "label": "Counselling Services",
+              "href": "/campus-life/counselling-services"
+            },
+            {
+              "label": "Internal Complaints Committee",
+              "href": "/campus-life/internal-complaints-committee"
+            },
+            {
+              "label": "Sports & Recreation",
+              "href": "/campus-life/sports-recreation"
+            }
+          ]
+        },
+        {
+          "label": "Student life & careers",
+          "links": [
+            {
+              "label": "Student Societies",
+              "href": "/campus-life/societies"
+            },
+            {
+              "label": "Student Events",
+              "href": "/campus-life/student-events"
+            },
+            {
+              "label": "Placements",
+              "href": "/placements"
+            },
+            {
+              "label": "Summer Internships",
+              "href": "/placements/summer-internships"
+            }
+          ]
+        }
+      ],
+      "notes": {
+        "/academics/programmes/pgdm-business-management": "The two-year flagship postgraduate programme.",
+        "/academics/programmes/pgdm-innovation-entrepreneurship": "Innovation, entrepreneurship and venture development.",
+        "/campus-life/library": "Books, e-resources and remote access, open 24×7.",
+        "/faculty/full-time": "Find a professor, their area and their email.",
+        "/campus-life/students-hostel": "Student rooms and hostel life.",
+        "/campus-life/food-courts": "The mess, cafés and food courts.",
+        "/campus-life/daily-needs-store": "Groceries and everyday essentials.",
+        "/campus-life/laundry-facilities": "Laundry services for residents.",
+        "/campus-life/medical-facilities": "The medical room, doctor and emergency care.",
+        "/campus-life/counselling-services": "Confidential counselling, when you need to talk.",
+        "/campus-life/internal-complaints-committee": "Reporting and redressal of sexual harassment complaints.",
+        "/campus-life/sports-recreation": "Courts, fields, the gym and games.",
+        "/campus-life/societies": "Student committees, clubs and societies.",
+        "/campus-life/student-events": "Fests, celebrations and events through the year.",
+        "/placements": "Placement outcomes and the placement process.",
+        "/placements/summer-internships": "Summer internship placements and recruiters."
+      }
+    }
+  }
+}

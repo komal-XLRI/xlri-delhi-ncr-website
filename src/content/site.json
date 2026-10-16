@@ -5,8 +5,113 @@
     "megaMenuFeaturedActionLabel": "Find out more"
   },
   "footer": {
-    "instituteLinkLabel": "Visit the institute site",
+    "description": "A campus of XLRI — Xavier School of Management, India’s oldest business school, founded in 1949. Postgraduate management education, executive programmes and research at Jhajjar, Haryana.",
+    "instituteLinkLabel": "Visit XLRI Jamshedpur campus",
+    "visit": {
+      "eyebrow": "Visit the campus",
+      "heading": "See XLRI Delhi-NCR for yourself",
+      "tourLabel": "Take the campus tour",
+      "tourHref": "/campus-life/campus-tour",
+      "directionsLabel": "Get directions"
+    },
+    "quickLinks": {
+      "heading": "Quick Links",
+      "links": [
+        {
+          "label": "About XLRI",
+          "href": "/about"
+        },
+        {
+          "label": "Academic Programmes",
+          "href": "/academics"
+        },
+        {
+          "label": "Executive Education",
+          "href": "/executive-education"
+        },
+        {
+          "label": "Faculty & Research",
+          "href": "/faculty"
+        },
+        {
+          "label": "Sustainability",
+          "href": "/sustainability"
+        },
+        {
+          "label": "Campus Life",
+          "href": "/campus-life"
+        },
+        {
+          "label": "Placements",
+          "href": "/placements"
+        }
+      ]
+    },
+    "usefulLinks": {
+      "heading": "Useful Links",
+      "links": [
+        {
+          "label": "Library",
+          "href": "/campus-life/library"
+        },
+        {
+          "label": "Campus Tour",
+          "href": "/campus-life/campus-tour"
+        },
+        {
+          "label": "Placement Reports",
+          "href": "/placements/reports"
+        },
+        {
+          "label": "Mandatory Disclosure",
+          "href": "/about/mandatory-disclosure"
+        },
+        {
+          "label": "Internal Complaints Committee",
+          "href": "/campus-life/internal-complaints-committee"
+        },
+        {
+          "label": "Grievance Redressal Policy",
+          "href": "https://xlridelhi.ac.in/wp-content/uploads/2024/09/Grievance-Redressal-Policy-XLRI-Delhi-NCR.pdf"
+        }
+      ]
+    },
     "audienceHeading": "For",
+    "contact": {
+      "heading": "Contact info",
+      "phone": "01251-271111",
+      "email": "info.delhi@xlri.ac.in",
+      "address": ["XLRI Delhi-NCR", "Aurangpur, Dadri Toe", "Jhajjar, Haryana 124 515", "India"],
+      "directionsHref": "https://www.google.com/maps/search/?api=1&query=XLRI+Delhi-NCR+Jhajjar",
+      "followHeading": "Follow us",
+      "social": [
+        {
+          "network": "linkedin",
+          "label": "LinkedIn",
+          "href": "https://in.linkedin.com/school/xlridelhincr/"
+        },
+        {
+          "network": "instagram",
+          "label": "Instagram",
+          "href": "https://www.instagram.com/xlridelhi/"
+        },
+        {
+          "network": "youtube",
+          "label": "YouTube",
+          "href": "https://www.youtube.com/@xlridelhi"
+        },
+        {
+          "network": "facebook",
+          "label": "Facebook",
+          "href": "https://www.facebook.com/xlridelhi/"
+        },
+        {
+          "network": "x",
+          "label": "X (Twitter)",
+          "href": "https://x.com/xlridelhi"
+        }
+      ]
+    },
     "copyright": "All rights reserved."
   },
   "search": {

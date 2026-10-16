@@ -1050,3 +1050,32 @@ Reader Access links were removed from the footer at the institute's request.
 The pages themselves and their entries in `routes.policies` are untouched, so
 the destinations still resolve — they are simply no longer surfaced here. If
 GIGW §11.2 conformance is re-audited, this is the list to restore.
+
+## policies.json
+
+**File**
+
+Privacy Policy, Terms & Conditions and Copyright Policy have no text yet, at
+the institute's instruction (2026-10-16): the pages exist so the footer
+links work, and each shows `emptyNote` until its text is supplied. To
+publish one, add `intro`, `updated` (an ISO date) and `sections` (each a
+`heading` with `paragraphs` and/or `points`) to its entry under `pages`, as
+the Help page has.
+
+The Help page describes what this site actually does (menu, search, text
+size, contrast, keyboard use, documents); it was written for this site.
+
+**contact**
+
+Address, phone and email are the Delhi-NCR site's own footer details
+(xlridelhi.ac.in), October 2026.
+
+## sections.json
+
+**File**
+
+Section home pages. Hubs with `nav` take their groups and links from the
+main menu (`config/navigation.json`), so adding a page to the menu adds it
+to the hub; only its one-line note needs adding here, under `notes`, keyed
+by the link's address. The Students page lists its own `groups`. The intros
+and notes are written for this site from each page's own content.

@@ -16,12 +16,53 @@ export interface HeaderCopy {
   readonly megaMenuFeaturedActionLabel: string;
 }
 
+export interface FooterLink {
+  readonly label: string;
+  readonly href: string;
+}
+
+export interface FooterLinkGroup {
+  readonly heading: string;
+  readonly links: readonly FooterLink[];
+}
+
+export type SocialNetwork = 'linkedin' | 'instagram' | 'youtube' | 'facebook' | 'x';
+
 export interface FooterCopy {
-  /** Link to the parent institute, beneath the legal name. */
+  /** Under the name, beside the "Visit the campus" panel. */
+  readonly description: string;
+  /** Link to the parent institute, in the bottom bar. */
   readonly instituteLinkLabel: string;
-  /** Heading above the audience links ("For" students, alumni …). */
+  /** The "Visit the campus" panel at the top of the footer. */
+  readonly visit: {
+    readonly eyebrow: string;
+    readonly heading: string;
+    readonly tourLabel: string;
+    readonly tourHref: string;
+    /** Uses `contact.directionsHref`. */
+    readonly directionsLabel: string;
+  };
+  readonly quickLinks: FooterLinkGroup;
+  readonly usefulLinks: FooterLinkGroup;
+  /** Heading above the audience links ("For" students, alumni …), from `config/navigation.json`. */
   readonly audienceHeading: string;
-  /** Follows "© {site name}." in the bottom bar. */
+  readonly contact: {
+    readonly heading: string;
+    readonly phone: string;
+    readonly email: string;
+    /** One line each. */
+    readonly address: readonly string[];
+    /** A map link to the campus. */
+    readonly directionsHref: string;
+    readonly followHeading: string;
+    readonly social: readonly {
+      readonly network: SocialNetwork;
+      /** The network's name, read out by screen readers. */
+      readonly label: string;
+      readonly href: string;
+    }[];
+  };
+  /** Follows "© {year} {site name}." in the bottom bar. */
   readonly copyright: string;
 }
 
