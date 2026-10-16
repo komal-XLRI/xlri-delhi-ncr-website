@@ -127,9 +127,13 @@ export function AccreditationPage({ content }: { content: AccreditationContent }
                       <span className="text-ink-muted"> — {item.body}</span>
                     </h3>
                     <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm md:text-base">
-                      <dt className="font-semibold text-ink-strong">Accredited</dt>
+                      <dt className="font-semibold text-ink-strong">
+                        {international.labels.accredited}
+                      </dt>
                       <dd className="text-ink">{item.scope}</dd>
-                      <dt className="font-semibold text-ink-strong">Awarded</dt>
+                      <dt className="font-semibold text-ink-strong">
+                        {international.labels.awarded}
+                      </dt>
                       <dd className="text-ink">{item.awarded}</dd>
                     </dl>
                     <p className="mt-5 text-base leading-[1.85] text-ink md:text-[1.0625rem]">
@@ -159,7 +163,7 @@ export function AccreditationPage({ content }: { content: AccreditationContent }
                       />
                     </span>
                     <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
-                      View certificate
+                      {international.labels.viewCertificate}
                       <span className="sr-only"> (opens in a new tab)</span>
                       <ArrowRightIcon
                         size={14}

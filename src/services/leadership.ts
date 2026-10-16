@@ -1,5 +1,8 @@
-import { leadership } from '@/content/leadership';
+import leadershipJson from '@/content/leadership.json';
 import type { Leadership } from '@/types/leadership';
+import { fromJson } from '@/lib/validation/json-content';
+
+const leadership = fromJson<Leadership>(leadershipJson);
 
 /**
  * "Leadership & Administration" repository — the same seam as

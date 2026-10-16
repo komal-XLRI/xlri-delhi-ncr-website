@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Sustainability Government Committees",
+    "description": "XLRI faculty on government, standards and board committees for sustainability — from the Bureau of Indian Standards’ ESG committee to the Jharkhand State Board for Wildlife."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Government Committees"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Government Committees",
+  "facts": {
+    "appointments": "Committee appointments",
+    "faculty": "Faculty members",
+    "current": "Currently serving"
+  },
+  "labels": {
+    "viewProfile": "View profile",
+    "current": "Current",
+    "concluded": "Concluded"
+  },
+  "members": [
+    {
+      "id": "pingali-venugopal",
+      "name": "Prof. Pingali Venugopal",
+      "appointments": [
+        {
+          "id": "tata-metaliks-csr",
+          "committee": "CSR Committee of the Board",
+          "role": "Member",
+          "organisation": "Tata Metaliks",
+          "sector": "Corporate board",
+          "period": "Till February 1, 2024, when Tata Metaliks merged with Tata Steel",
+          "current": false
+        },
+        {
+          "id": "jamipol-csr",
+          "committee": "CSR Committee of the Board",
+          "role": "Chairperson",
+          "organisation": "Jamipol",
+          "sector": "Corporate board",
+          "period": "Ongoing",
+          "current": true
+        }
+      ]
+    },
+    {
+      "id": "kalyan-bhaskar",
+      "name": "Prof. Kalyan Bhaskar",
+      "teamId": "kalyan-bhaskar",
+      "appointments": [
+        {
+          "id": "bis-esg",
+          "committee": "Committee on ESG",
+          "role": "Member, and Convenor of the Working Group on Circular Economy",
+          "organisation": "Bureau of Indian Standards (BIS)",
+          "sector": "Standards body",
+          "period": "August 2023 onwards",
+          "current": true
+        },
+        {
+          "id": "ulse-li-ion",
+          "committee": "Global Technical Committee",
+          "role": "Member",
+          "organisation": "ULSE (Underwriters Laboratories Standards & Engagement)",
+          "sector": "Standards body",
+          "detail": "Developing standards for Circular Economy in Li-ion battery recycling.",
+          "period": "July 2023 onwards",
+          "current": true
+        }
+      ]
+    },
+    {
+      "id": "tata-l-raghu-ram",
+      "name": "Prof. Tata L Raghu Ram",
+      "teamId": "tata-l-raghu-ram",
+      "appointments": [
+        {
+          "id": "jharkhand-wildlife-board",
+          "committee": "Jharkhand State Board for Wildlife",
+          "role": "Expert member",
+          "organisation": "Government of Jharkhand",
+          "sector": "State government",
+          "current": true
+        },
+        {
+          "id": "nh31-koderma",
+          "committee": "High-level committee on the four-laning of NH 31",
+          "role": "Member",
+          "sector": "Infrastructure",
+          "detail": "The Koderma–Meghatari segment (27.665 km to 47.700 km), which passes through Koderma Wildlife Sanctuary.",
+          "current": true
+        }
+      ]
+    }
+  ]
+}

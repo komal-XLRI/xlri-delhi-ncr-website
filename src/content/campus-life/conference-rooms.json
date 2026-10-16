@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Conference Rooms",
+    "description": "Boardrooms, meeting rooms and lounges on the XLRI Delhi-NCR campus."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Conference Rooms",
+  "intro": "Boardrooms for meetings with faculty, guests and recruiters, and quieter rooms and lounges for smaller conversations.",
+  "photos": [
+    {
+      "src": "/media/campus-life/conference/boardroom.jpg",
+      "alt": "A boardroom with a long oval table, executive chairs and portraits on the wall",
+      "width": 1600,
+      "height": 1069
+    },
+    {
+      "src": "/media/campus-life/conference/boardroom-2.jpg",
+      "alt": "The boardroom table from the other end, with a screen at the far wall",
+      "width": 1600,
+      "height": 1069
+    },
+    {
+      "src": "/media/campus-life/conference/meeting-room.jpg",
+      "alt": "A meeting room with a table, chairs and a television",
+      "width": 1600,
+      "height": 1069
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Meeting spaces",
+  "highlights": [
+    {
+      "icon": "users",
+      "title": "Boardrooms",
+      "text": "Long tables seating a full committee, with screens for presentations."
+    },
+    {
+      "icon": "briefcase",
+      "title": "Meeting rooms",
+      "text": "Smaller rooms for interviews, reviews and working sessions."
+    },
+    {
+      "icon": "home",
+      "title": "Lounges",
+      "text": "Sofas and coffee tables for informal conversations."
+    }
+  ],
+  "gallery": {
+    "eyebrow": "In pictures",
+    "title": "Lounges and meeting areas",
+    "photos": [
+      {
+        "src": "/media/campus-life/conference/lounge.jpg",
+        "alt": "A lounge with grey sofas, armchairs and plants",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/conference/lounge-2.jpg",
+        "alt": "Tables and leather chairs in a lounge",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/conference/cafe-corner.jpg",
+        "alt": "A corner with a small table and tan armchairs",
+        "width": 1600,
+        "height": 1069
+      }
+    ]
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Classrooms",
+      "description": "Tiered lecture theatres and case-discussion rooms.",
+      "href": "/campus-life/classrooms"
+    },
+    {
+      "label": "Xavier Hall",
+      "description": "A multipurpose hall for 200–250 people.",
+      "href": "/campus-life/xavier-hall"
+    },
+    {
+      "label": "XCEED Facilities",
+      "description": "The incubation centre for student entrepreneurs.",
+      "href": "/campus-life/xceed-facilities"
+    }
+  ]
+}

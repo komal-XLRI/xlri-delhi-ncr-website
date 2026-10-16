@@ -19,7 +19,7 @@
  */
 
 /** Layout hint for a mega-menu panel. Panels choose a shape, not pixel values. */
-export type PanelLayout = 'columns-2' | 'columns-3' | 'columns-4' | 'split-feature';
+export type PanelLayout = 'columns-2' | 'columns-3' | 'columns-4' | 'columns-5' | 'split-feature';
 
 /** Audience tags, reserved for audience-filtered views. Unused in Phase 2. */
 export type Audience = 'prospective' | 'student' | 'faculty' | 'alumni' | 'recruiter';

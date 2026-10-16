@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "Sustainability Core Team",
+    "description": "The faculty of XLRI Delhi-NCR’s Sustainability core team and the members of the Campus Sustainability Committee."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Team"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Sustainability Core Team",
+  "contactEmail": "sustainability.delhi@xlri.ac.in",
+  "contactLabel": "Contact us:",
+  "facts": {
+    "coreTeam": "Faculty in the core team",
+    "committee": "Members of the campus committee"
+  },
+  "labels": {
+    "viewProfile": "View profile",
+    "alsoInCoreTeam": "Also in the core team"
+  },
+  "coreTeam": {
+    "heading": "Core Team",
+    "members": [
+      {
+        "id": "himanshu-shekhar",
+        "name": "Dr. Himanshu Shekhar",
+        "designation": "Assistant Professor",
+        "focus": {
+          "label": "Functional Area",
+          "items": ["Strategic Management"]
+        },
+        "portrait": {
+          "src": "/media/sustainability/team/himanshu-shekhar.jpg",
+          "width": 512,
+          "height": 512
+        },
+        "profileHref": "https://xlri.ac.in/about/full-time-faculty/himanshu-shekhar"
+      },
+      {
+        "id": "kalyan-bhaskar",
+        "name": "Dr. Kalyan Bhaskar",
+        "designation": "Associate Professor",
+        "focus": {
+          "label": "Functional Area",
+          "items": ["Strategic Management"]
+        },
+        "portrait": {
+          "src": "/media/sustainability/team/kalyan-bhaskar.jpg",
+          "width": 512,
+          "height": 512
+        },
+        "profileHref": "https://xlri.ac.in/about/full-time-faculty/kalyan-bhaskar"
+      },
+      {
+        "id": "sanchayan-nath",
+        "name": "Dr. Sanchayan Nath",
+        "designation": "Assistant Professor",
+        "focus": {
+          "label": "Subjects",
+          "items": ["Sustainability", "Public policy", "Circular economy"]
+        },
+        "portrait": {
+          "src": "/media/sustainability/team/sanchayan-nath.jpg",
+          "width": 512,
+          "height": 512
+        },
+        "profileHref": "https://xlridelhi.ac.in/wps-members/dr-sanchayan-nath/",
+        "facultyId": "dr-sanchayan-nath"
+      },
+      {
+        "id": "smriti-das",
+        "name": "Dr. Smriti Das",
+        "designation": "Associate Professor",
+        "focus": {
+          "label": "Functional Area",
+          "items": ["Strategic Management"]
+        },
+        "portrait": {
+          "src": "/media/sustainability/team/smriti-das.jpg",
+          "width": 512,
+          "height": 512
+        },
+        "profileHref": "https://xlridelhi.ac.in/wps-members/dr-smriti-das/",
+        "facultyId": "dr-smriti-das"
+      },
+      {
+        "id": "tata-l-raghu-ram",
+        "name": "Dr. Tata L Raghu Ram",
+        "designation": "Professor",
+        "focus": {
+          "label": "Functional Area",
+          "items": ["Strategic Management"]
+        },
+        "portrait": {
+          "src": "/media/sustainability/team/tata-l-raghu-ram.jpg",
+          "width": 512,
+          "height": 512
+        },
+        "profileHref": "https://xlri.ac.in/about/full-time-faculty/tata-raghu-ram"
+      },
+      {
+        "id": "vinayak-ram-tripathi",
+        "name": "Dr. Vinayak Ram Tripathi",
+        "designation": "Associate Professor",
+        "focus": {
+          "label": "Functional Area",
+          "items": ["Strategic Management"]
+        },
+        "portrait": {
+          "src": "/media/sustainability/team/vinayak-ram-tripathi.jpg",
+          "width": 512,
+          "height": 512
+        },
+        "profileHref": "https://xlri.ac.in/about/full-time-faculty/vinayak"
+      }
+    ]
+  },
+  "committee": {
+    "heading": "Campus Sustainability Committee",
+    "members": [
+      {
+        "id": "sakshi-singhal",
+        "name": "Dr. Sakshi Singhal",
+        "role": "Convenor",
+        "facultyId": "dr-shakshi-singhal"
+      },
+      {
+        "id": "alwyn-rodrigues",
+        "name": "Fr. Alwyn Rodrigues, SJ",
+        "role": "Member",
+        "facultyId": "fr-alwyn-rodrigues-sj"
+      },
+      {
+        "id": "j-dayal",
+        "name": "Fr. J. Dayal, SJ",
+        "role": "Member"
+      },
+      {
+        "id": "smriti-das",
+        "name": "Dr. Smriti Das",
+        "role": "Member",
+        "coreTeamId": "smriti-das",
+        "facultyId": "dr-smriti-das"
+      },
+      {
+        "id": "madhu-mandal",
+        "name": "Dr. Madhu Mandal",
+        "role": "Member",
+        "facultyId": "dr-madhu-mandal"
+      },
+      {
+        "id": "sanchayan-nath",
+        "name": "Dr. Sanchayan Nath",
+        "role": "Member",
+        "coreTeamId": "sanchayan-nath",
+        "facultyId": "dr-sanchayan-nath"
+      },
+      {
+        "id": "sanjiv-bhatia",
+        "name": "Mr. Sanjiv Bhatia",
+        "role": "Member"
+      }
+    ]
+  }
+}

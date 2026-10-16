@@ -6,14 +6,13 @@ import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getIcp } from '@/services/executive-education';
 
-export const metadata: Metadata = buildMetadata(site, {
-  title: 'In-Company Programmes (ICP)',
-  description:
-    'In-Company Programmes XLRI Delhi-NCR has delivered for Mercedes-Benz R&D India, Hyundai Motors, Denso India, the Department of Income Tax and Air Headquarters.',
-  path: routes.executiveEducation.programme('in-company-programmes'),
-  image: '/media/executive-education/icp/icp-mdp-block.jpg',
-  imageAlt: 'The MDP Block at the XLRI Delhi-NCR campus',
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getIcp();
+  return buildMetadata(site, {
+    ...meta,
+    path: routes.executiveEducation.programme('in-company-programmes'),
+  });
+}
 
 export default async function IcpRoute() {
   const content = await getIcp();

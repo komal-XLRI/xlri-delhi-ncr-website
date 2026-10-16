@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Mandatory Disclosure",
+    "description": "The mandatory disclosure for XLRI Delhi-NCR (November 2025) — view online or download the PDF."
+  },
+  "title": "Mandatory Disclosure",
+  "subtitle": "XLRI Delhi - NCR",
+  "viewer": {
+    "openInNewTab": "Open in new tab",
+    "download": "Download",
+    "previewHeading": "Document preview",
+    "pagesSuffix": "pages · scroll to read",
+    "fullScreen": "Full screen"
+  },
+  "documents": [
+    {
+      "id": "november-2025",
+      "title": "Mandatory Disclosure – November 2025",
+      "src": "/documents/mandatory-disclosure/xlri-delhi-mandatory-disclosure-november-2025.pdf",
+      "sizeLabel": "2.1 MB",
+      "pages": 16
+    }
+  ]
+}

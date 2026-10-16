@@ -1,0 +1,708 @@
+{
+  "meta": {
+    "title": "Student Societies",
+    "description": "The Student Affairs Council and the committees and clubs of XLRI Delhi-NCR — academic, co-curricular, extra-curricular, functional and interest groups, and the Nova Exilaro fest team."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Student Societies",
+  "lead": "Life at XLRI is a vibrant blend of class lectures, study sessions, management fests and competitive sports meets. The unique XL culture springs from its closely knit student community. An environment of caring and sharing is what makes this B school different. Despite a highly competitive spirit amongst students to excel academically, the atmosphere outside the classroom is one of great comradeship.",
+  "hero": {
+    "src": "/media/campus-life/societies/campus-life-team.jpg",
+    "width": 1600,
+    "height": 1067,
+    "alt": "Students of XLRI Delhi-NCR gathered on the stairs of the atrium for a batch photograph"
+  },
+  "facts": [
+    {
+      "value": "35+",
+      "label": "Student committees"
+    },
+    {
+      "value": "25+",
+      "label": "Events at Nova Exilaro"
+    },
+    {
+      "value": "14,000+",
+      "label": "Alumni to connect with"
+    }
+  ],
+  "life": [
+    "Built into the curriculum are novel concepts like the Village Exposure Programme that develop social awareness by taking every student back to their roots. For an Xler there is something happening at XL all the time. There are conferences, seminars, guest lectures and workshops where a student is exposed to diverse views, and opinions of the greatest minds in the world of business. Yet, a good part of the XL life is much more than just academics. While the committee activities by the student body ensures your everyday life is much more than academics, there are also annual events that reiterate it. We have the annual management, cultural and sports fest Nova Exilaro, the marketing extravaganza MAXI fair and the northern brawl sports meet to name a few.",
+    "A fresher is greeted with warmth and is made a part of the student fraternity. Intense academic rigor and an incredible phenomenon called the XL culture together make up for a hectic yet heady concoction of work and play. As all programmes are residential, the seniors and juniors share an amicable relation. It is hence no surprise that XLRI has the most extensive alumni network among all Indian B schools. Teamwork is stressed throughout your tenure at XL. In fact, the environment of bitter rivalry among students that traditionally prevails in B schools has been removed through conscious efforts by the institute. Instead, an atmosphere of collaboration and cooperation has been carefully nurtured over the years and this makes XLers excellent team players and leaders in every organization that they become a part of.",
+    "In addition to this, XLRI lays great emphasis on ethics and on social responsibility. The institute is highly regarded in the corporate world for its efforts to instill these qualities in tomorrow’s business leaders.",
+    "A student, irrespective of her/his stream, always finds an opportunity to explore their interests. Innovation is religion at XL and a little initiative can take you a long way. The formal and informal committees at XLRI take full advantage of this freedom and involve the XLers in numerous activities that help one to experiment and explore new management avenues."
+  ],
+  "sections": {
+    "life": {
+      "eyebrow": "Campus Life @ XLRI",
+      "title": "Work and play, together"
+    },
+    "annualEvents": {
+      "title": "Annual events",
+      "items": [
+        {
+          "name": "Nova Exilaro",
+          "what": "The annual management, cultural and sports fest"
+        },
+        {
+          "name": "MAXI Fair",
+          "what": "The marketing extravaganza"
+        },
+        {
+          "name": "Northern Brawl",
+          "what": "The sports meet"
+        }
+      ]
+    },
+    "council": {
+      "eyebrow": "The apex student body"
+    },
+    "committees": {
+      "eyebrow": "Student Societies",
+      "title": "Committees & clubs",
+      "intro": "The formal and informal committees take full advantage of the freedom XLRI gives its students. Choose one to read what it does, who leads it and how to reach it."
+    }
+  },
+  "directory": {
+    "filterAll": "All",
+    "readMore": "Read about the committee",
+    "position": "{index} of {total}"
+  },
+  "council": {
+    "id": "sac",
+    "name": "Student Affairs Council",
+    "short": "SAC",
+    "lead": {
+      "name": "Mayank Shukla",
+      "role": "Joint General Secretary",
+      "photo": "/media/campus-life/societies/sac-lead.jpg"
+    },
+    "email": "sacdelhi@xlri.ac.in",
+    "body": [
+      "The Student Affairs Council (SAC) is the apex student governing body and the representative council of the students at XLRI Delhi-NCR. The council comprises two senior representatives—the Joint General Secretary & Head of Student Affairs and the Joint Principal Secretary (Internal Affairs) & Treasurer—elected by the batch, along with two members from the Junior Student Affairs Council (JSAC), selected by the senior SAC to ensure continuity of student governance. Working under the guidance of the Associate Dean – Student Affairs (ADSA), the SAC serves as the primary liaison between students and the administration while coordinating with the Jamshedpur campus on key institutional matters. The council provides governance, policy guidance, and administrative support to over 35 student committees, enabling activities across:"
+    ],
+    "areas": [
+      "Academics",
+      "Placements",
+      "Co-Curricular Activities",
+      "Extra-Curricular Activities",
+      "Functional Committees",
+      "Student Interest Groups",
+      "Regional Activities & Festival Celebrations"
+    ],
+    "photo": {
+      "src": "/media/campus-life/societies/sac-team.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": "The Student Affairs Council"
+    }
+  },
+  "categories": [
+    {
+      "id": "academic",
+      "label": "Academic"
+    },
+    {
+      "id": "co-curricular",
+      "label": "Co-Curricular"
+    },
+    {
+      "id": "extra-curricular",
+      "label": "Extra-Curricular"
+    },
+    {
+      "id": "functional",
+      "label": "Functional"
+    },
+    {
+      "id": "informal",
+      "label": "Informal & Interest Groups"
+    },
+    {
+      "id": "next",
+      "label": "Annual Fest"
+    },
+    {
+      "id": "placement-inclusion",
+      "label": "Placement & Inclusion"
+    }
+  ],
+  "committees": [
+    {
+      "id": "acadcom",
+      "name": "Acadcom",
+      "fullName": "Academic Committee",
+      "focus": "Academics",
+      "category": "academic",
+      "email": "acadcom@xlri.ac.in",
+      "body": [
+        "The Academic Committee of XLRI Delhi-NCR or Acadcom, as it is popularly known, is a formal student committee that serves as a bridge between the students, the faculty and the dean office. The members are also referred to as Class Representatives, while the official designation is Senior/Junior Executive Members. The primary responsibility of the members includes handling all academic and grading issues and being the Class Representatives; they also handle some issues of general concern to the batch. Acadcom organizes the fest XL-Utsav, some case study competitions and assists SAC on many occasions."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/acadcom-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The Acadcom team"
+      }
+    },
+    {
+      "id": "axiom",
+      "name": "AXIOM",
+      "fullName": "Association at XLRI for Industrial and Operations Management",
+      "focus": "Operations",
+      "category": "co-curricular",
+      "lead": {
+        "name": "Abhishek Pratap Singh Rajawat",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/axiom-lead.jpg"
+      },
+      "email": "axiom.delhi@xlri.ac.in",
+      "body": [
+        "AXIOM – Association at XLRI for Industrial and Operations Management, Delhi continued its commitment to experiential learning by organizing a series of initiatives that bridged classroom concepts with industry practice. The committee organized an industrial visit to a manufacturing facility in Bhiwadi, Rajasthan, where 60 students gained firsthand exposure to end-to-end manufacturing processes, quality management practices, Just-in-Time inventory systems, and supply chain operations.",
+        "AXIOM also conducted a Live Operations Problem-Solving Workshop, providing students with the opportunity to work through real-world operational challenges and understand how business and operations concepts are applied in practice. The interactive session encouraged analytical thinking while strengthening industry engagement and creating avenues for future collaborations. The committee organized Cygnus 2025, an operations-themed gaming and social event that brought together over 200 students through a series of interactive activities designed to foster teamwork and community engagement. AXIOM also hosted a national Article Writing Competition on contemporary Operations and Supply Chain Management themes, with selected entries featured in AXON, the committee's official newsletter, providing students with a platform to share their perspectives with the XLRI community. Through these initiatives, AXIOM continued to promote experiential learning, industry engagement, and student development in the field of operations management."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/axiom-team.jpg",
+        "width": 1600,
+        "height": 1205,
+        "alt": "The AXIOM team"
+      }
+    },
+    {
+      "id": "crux",
+      "name": "CRUX",
+      "fullName": "Consulting and Research Undertaking at XLRI",
+      "focus": "Consulting",
+      "category": "co-curricular",
+      "lead": {
+        "name": "Avdhi Mehta",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/crux-lead.jpg"
+      },
+      "email": "crux.delhi@xlri.ac.in",
+      "body": [
+        "CRUX - Consulting and Research Undertaking at XLRI is the exclusive committee for consulting on campus. The committee's vision is to promote XLRI as a premier consulting destination.",
+        "As consulting becomes one of the most sought after career options at XLRI and with many of our alumni holding leadership positions, CRUX is dedicated to honing current students' consulting skills and help them achieve their goals in this career path. Regular events , competitions and activities are organized by CRUX, to help equip students with the tactics and knowledge required to successfully convert opportunities in the consulting industry.",
+        "The committee aims to offer consultancy and research services to startups and organizations by leveraging the diverse and talented student base at XLRI, our access to knowledge resources and extensive faculty expertise.",
+        "With these objectives, the committee actively organizes several events throughout the year, which engage the students and help them prepare for success in a career in management consulting. The committee provides students with resources that refine their case analysis and interviewing skills through information sessions, interview workshops, case study competitions and strategy simulation games. The committee works actively to provide necessary opportunities to XLRI students for learning and interaction with the consulting industry."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/crux-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The CRUX team"
+      }
+    },
+    {
+      "id": "e-cell",
+      "name": "E-Cell",
+      "fullName": "Entrepreneurship Cell",
+      "focus": "Entrepreneurship",
+      "category": "co-curricular",
+      "lead": {
+        "name": "Aayushi Rana",
+        "role": "Treasurer",
+        "photo": "/media/campus-life/societies/e-cell-lead.jpg"
+      },
+      "email": "ecell@xlri.ac.in",
+      "body": [
+        "The Entrepreneurship Cell (E-Cell) of XLRI Delhi-NCR is a cross-campus committee dedicated to fostering an entrepreneurial mindset and nurturing a thriving startup ecosystem in collaboration with XLRI Jamshedpur. It serves as a dynamic platform that connects students with founders, investors, industry leaders, and practitioners, enabling them to explore entrepreneurship, innovation, and venture creation. Through a range of experiential initiatives, E-Cell transforms ideas into action. Its flagship events include EvolvX, a startup conclave featuring 15+ founders and industry leaders; The Dark Room, a live problem-solving challenge where students pitch solutions directly to startups such as Bla Bli Blu to secure live projects; and IgniteX, a social entrepreneurship initiative that cultivates problem-solving and entrepreneurial thinking among school students. By bridging classroom learning with real-world exposure, E-Cell empowers students to build practical business acumen, develop leadership and execution skills, and create meaningful impact - strengthening XLRI’s position as a hub for entrepreneurship, innovation, and community engagement."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/e-cell-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The E-Cell team"
+      }
+    },
+    {
+      "id": "maxi",
+      "name": "MAXI",
+      "fullName": "Marketing Association of XLRI",
+      "focus": "Marketing",
+      "category": "co-curricular",
+      "lead": {
+        "name": "Sarang Kawade",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/maxi-lead.jpg"
+      },
+      "email": "maxi.delhi@xlri.ac.in",
+      "body": [
+        "The Marketing Association of XLRI Delhi-NCR, fondly known as MAXI, is one of the most dynamic and legacy-driven committees on campus. Rooted in the ethos of its parent chapter established in 1971, MAXI Delhi carries forward the rich tradition of making marketing fun, experiential and insight-driven.",
+        "At MAXI, our core objective is to popularize marketing in its most engaging and applied form. From high-energy competitions to real-world learning experiences, every MAXI event is crafted to offer students a hands-on understanding of marketing principles beyond the classroom.",
+        "Our flagship event, MAXI Mela, is one of the biggest student-led marketing initiatives in the country. The event is centered around disguised market research, where we gamify consumer surveys to help brands uncover real, actionable insights from diverse demographics in a fun, engaging setup.",
+        "MAXI is not just a committee, it’s a movement that blends strategy, storytelling and spontaneity, making it one of the most respected and recognizable names across B-schools and industry alike."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/maxi-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The MAXI team"
+      }
+    },
+    {
+      "id": "finax",
+      "name": "FINAX",
+      "fullName": "The finance association at XLRI",
+      "focus": "Finance",
+      "category": "co-curricular",
+      "lead": {
+        "name": "Mayank Garg",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/finax-lead.jpg"
+      },
+      "email": "finax.delhi@xlri.ac.in",
+      "body": [
+        "FINAX, the finance association at XLRI, is the beating heart of finance that pumps passion and knowledge through the veins of students, propelling them towards a thriving career in the financial world. FINAX’s mandate is to popularize finance as a career option among students and provide them with a deep understanding of the finance domain. The committee conducts various events, workshops, and seminars to educate students about the various nuances of finance and financial markets.",
+        "FINAX serves as a launchpad for finance enthusiasts—whether seasoned or aspiring. From engaging sessions with industry stalwarts like Aswath Damodaran and Rashmi Mohanty to unique events like Midnight Mirage and FinXcel Week, FINAX blends learning with practical exposure. It also actively supports certifications and challenges like CFA Ethics, Zerodha Varsity, and ensuring students are industry-ready and future-focused."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/finax-team.jpg",
+        "width": 1600,
+        "height": 892,
+        "alt": "The FINAX team"
+      }
+    },
+    {
+      "id": "darvix",
+      "name": "DARVIX",
+      "fullName": "Data Analytics, Research and Visualization at XLRI",
+      "focus": "Analytics",
+      "category": "co-curricular",
+      "lead": {
+        "name": "Shivang Goria",
+        "role": "Secretary",
+        "photo": "/media/campus-life/societies/darvix-lead.jpg"
+      },
+      "email": "darvix.delhi@xlri.ac.in",
+      "body": [
+        "Founded in 2020, Data Analytics, Research and Visualization at XLRI is a cross campus committee that not only aims to equip the batch with skills of data analytics, visualization, artificial intelligence and automation but also uses it to improve the campus experience. The inception of this committee is deeply rooted through the feedback of managers during the summer internships on the growing need and importance of data analytical skill in the industry. DARVIX has also found an important role to play on campus as problem solvers. We have taken initiative to solve some common problems faced by students and/or admin using technology and automation. Our long term vision is not just act as liaisons between industry experts and students to understand the latest trends and skills required in the field of analytics but also give them hands on experience on the application and importance of analytics in the field of management"
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/darvix-team.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "The DARVIX team"
+      }
+    },
+    {
+      "id": "prometheus",
+      "name": "Prometheus",
+      "fullName": "Product Management and Technology Club",
+      "focus": "Product & tech",
+      "category": "co-curricular",
+      "lead": {
+        "name": "Vibhanshu Kumar",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/prometheus-lead.jpg"
+      },
+      "email": "prometheus.delhi@xlri.ac.in",
+      "body": [
+        "Prometheus is the official Product Management and Technology Club of XLRI. It was formed through the merger of SOCRATES, a legacy tech committee with over 36 years of history, and ProdUX, the Product Management Interest Group. The committee was institutionalized to address the growing relevance of BizTech and Product roles in modern management careers.",
+        "Prometheus aims to foster a culture of product thinking, technological fluency, and strategic problem-solving on campus. It plays a pivotal role in preparing the XLRI student community for leadership opportunities in Product Management and allied domains.",
+        "The committee conducts hands-on PM workshops, product teardown sessions, case competition prep, CV reviews, and speaker interactions with industry PM leaders to build practical, industry-aligned skills. Additionally, Prometheus drives digital enablement on campus by developing student-focused applications and internal IT infrastructure. It also organizes XLRI’s flagship inter-B-school eSports tournament, promoting collaboration, competition, and campus engagement."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/prometheus-team.jpg",
+        "width": 1600,
+        "height": 1212,
+        "alt": "The Prometheus team"
+      }
+    },
+    {
+      "id": "atom",
+      "name": "ATOM",
+      "focus": "Media & photography",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Aditya Atre",
+        "role": "Secretary",
+        "photo": "/media/campus-life/societies/atom-lead.jpg"
+      },
+      "email": "atom.delhi@xlri.ac.in",
+      "body": [
+        "ATOM is the center for all media requirements of the students & committees at XLRI Delhi-NCR. ATOM is a fantastic way for individuals to come together and share their passion for capturing the world through a lens. In terms of photography, the committee organizes workshops, photo walks, and competitions. Another aspect of the committee is movie and live sports streaming, where everyone comes together and enjoys. Lastly, the ATOM collaborates with committees by providing assistance for different events, such as taking photos or making videos.",
+        "Overall, ATOM as a committee encompasses photography, sports & movies streaming, and collaborations with committees, while building a community of individuals who share similar interests."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/atom-team.jpg",
+        "width": 1600,
+        "height": 1379,
+        "alt": "The ATOM team"
+      }
+    },
+    {
+      "id": "cii-yi",
+      "name": "CII Yi",
+      "fullName": "Young Indians, Confederation of Indian Industry",
+      "focus": "Events & outreach",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Janmejai S Minhas",
+        "role": "Joint General Secretary",
+        "photo": "/media/campus-life/societies/cii-yi-lead.jpg"
+      },
+      "email": "ciiyi.delhi@xlri.ac.in",
+      "body": [
+        "Young Indians (Yi) is an integral part of the Confederation of Indian Industries (CII), a non-government, not-for-profit, industry-led organization playing a proactive role in India’s development process. As a committee, CII Yi XLRI Delhi is proud to be recognized for its ability to organize events that have a meaningful impact. Our primary goal is to craft engaging events that blend entertainment with a business challenge.",
+        "During the academic year 2024-25, CII Yi XLRI Delhi organized the below events: PRAKAM 4.0, our flagship event, which consisted of three sub-events: “XLRI Model United Nations”, a platform for participants to take on the roles of different countries and learn the working of the United Nations through deliberation on world’s pressing topics, “Enigma”, a national-level business quiz that tested knowledge and application which saw participation of over 1500 students across multiple institutes, & “Silent Auction\", a student-led charity drive where over 300 items and experiences contributed by professors, alumni, committees and peers were auctioned and the funds raised, amounting to over ₹67,000, were donated to support children’s welfare. TEDxXLRI Delhi, which featured six speakers from different backgrounds who spoke about their personal journeys and how they challenged conventional thinking. The event was attended by over 100 students and created space for meaningful conversations on individual and societal change."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/cii-yi-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The CII Yi team"
+      }
+    },
+    {
+      "id": "dracula",
+      "name": "DRACULA",
+      "focus": "Culture & performing arts",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Aaron Byron Pereira",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/dracula-lead.jpg"
+      },
+      "email": "dracula.delhi@xlri.ac.in",
+      "body": [
+        "DRACULA is the pulsating heart of XLRI's cultural scene, responsible for organizing some of the most thrilling and memorable events on campus. As the committee in charge of all dance, drama, quizzing, and debate events, DRACULA ensures that XLRI students have ample opportunities to showcase their talents and engage in lively debates and discussions.",
+        "Two of DRACULA's flagship events, Weekender and Dracoween, have become synonymous with fun and frolic at XLRI. Weekender is a farewell party for the outgoing batch, a time to celebrate their achievements and bid them a fond farewell. Dracoween, on the other hand, is a Halloween party that is eagerly awaited by students every year, with its spooky theme, creative costumes, and lively music.",
+        "Under the able leadership of its dedicated members, DRACULA has become a dynamic and vibrant committee that plays a pivotal role in shaping the cultural landscape of XLRI. Whether it's organizing a literary fest, a dance competition, or a theater workshop, DRACULA always goes the extra mile to ensure that students have an enriching and unforgettable experience."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/dracula-team.jpg",
+        "width": 1200,
+        "height": 1600,
+        "alt": "The DRACULA team"
+      }
+    },
+    {
+      "id": "spicmacay",
+      "name": "SPICMACAY",
+      "fullName": "Society for Promotion of Indian Classical Music and Culture among Youth",
+      "focus": "Indian music & heritage",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Bhavana Narayan",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/spicmacay-lead.jpg"
+      },
+      "email": "spicmacay.delhi@xlri.ac.in",
+      "body": [
+        "The Society for Promotion of Indian Classical Music and Culture among Youth (SPICMACAY) is a prominent non-profit voluntary organization spread across educational institutions around the globe. With an objective to facilitate the exchange of traditional Indian values and to generate awareness amongst the youth about rich Indian cultural traditions. SPICMACAY XLRI aligns with the philosophy of enriching education, and life with the rich heritage and cultural artforms of India. The committee’s vision is to interlace the rigor, innovation, and forbearance of a management degree with the nuances and subtleties of art, music, poetry and India’s very expansive heritage.",
+        "It is our constant endeavor to introduce traditional Indian culture and Classical art forms to the youth of our institute with the hope that the wealth of knowledge and beauty that it encompasses would add further meaning to our lives.",
+        "SPICMACAY also facilitates celebrations of Indian festivals in authentic Indian style within the campus and also conducts numerous events for the people of Jamshedpur. Some of the major events conducted by the SPICMACAY XLRI chapter are Virasat, Hunar-e-XL, Anubhuti, Dandiya Night and many more such celebrations and events.",
+        "Our mission is to have everyone experience the inspiration and mysticism embodied in Indian culture and world heritage. We leave behind a legacy of artistic expression, the wisdom of our culture and a spirit of community."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/spicmacay-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The SPICMACAY team"
+      }
+    },
+    {
+      "id": "sigma-oikos",
+      "name": "SIGMA-oikos",
+      "fullName": "Social Initiatives Group for Managerial Assistance",
+      "focus": "Social initiatives",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Suraj Baranwal",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/sigma-oikos-lead.jpg"
+      },
+      "email": "sigma.delhi@xlri.ac.in",
+      "body": [
+        "The Social Initiatives Group for Managerial Assistance (SIGMA-oikos) is a student run body of XLRI that focuses on transformation and change in the social sector by contributing to the community and impoverished sections of the society under the able guidance of Prof. Tata L Raghu Ram. It is also a subsidiary of Switzerland based organization: oikos-international, a student organization that seeks to strengthen sustainability-oriented initiatives among tomorrow's leaders across the globe. One of the most well-known activities of SIGMA is the DaanUtsav, which brings together schools, colleges, corporates and citizens across Delhi-NCR to celebrate the joy of giving through initiatives spread over the entire week. During the Joy of Giving week, it conducts collection drives for necessities to be donated to local shelter homes for the underprivileged, visits to old age homes and orphanages, blood donation camps etc.",
+        "It also conducts learning programs like Basic Computer Learning Program, Basic English Learning Program, Pranyas and Extra-curricular classes like singing, dancing, chess and art to help students from less privileged backgrounds. Some of its environment-related initiatives include tree plantation & cleanliness drives.",
+        "SIGMA collaborates with NGOs like Goonj, SEEDS, Robin Hood Army, Helping Hearts Foundation and CHUK among others to increase the reach of its initiatives. It also helps NGOs working towards livelihood generation for the disabled and underprivileged to set up stalls for selling their products in campus from time to time.",
+        "SIGMA-oikos also works to cultivate and nourish the growing community of social entrepreneurship by providing a platform for information exchange, networking and discovery of rising figures in the field through events such as the Social Entrepreneurship Conclave wherein award-winning social entrepreneurs come and share their stories and make it a melting pot of ideas and collaboration."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/sigma-oikos-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The SIGMA-oikos team"
+      }
+    },
+    {
+      "id": "sportscom",
+      "name": "SportsCom",
+      "focus": "Sports",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Abhishek Kumar",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/sportscom-lead.jpg"
+      },
+      "email": "sportscom.delhi@xlri.ac.in",
+      "body": [
+        "SportsCom is the umbrella body for all Sports activities at XLRI. The committee is one of the most active ones on campus. Its members are people passionate about sports, committed to the cause of keeping the sporting spirit alive amidst the busy schedules that the B School life entails. The events organized by the committee consist of various inter and intra college sports events throughout the year, including participation from numerous institutions across India."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/sportscom-team.jpg",
+        "width": 1200,
+        "height": 1600,
+        "alt": "The SportsCom team"
+      }
+    },
+    {
+      "id": "xlanc",
+      "name": "XLANC",
+      "fullName": "XLRI Adventure and Nature Club",
+      "focus": "Adventure & outdoors",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Sahil Goyal",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/xlanc-lead.jpg"
+      },
+      "email": "xlanc.delhi@xlri.ac.in",
+      "body": [
+        "The XLRI Adventure and Nature Club (XLANC) is one of the most active clubs on campus providing students with the much needed adrenaline rush to cope with our heavy academic schedule. Our vision is to help students develop leadership skills and managerial acumen through outdoor activities. We help students develop spatial and environmental awareness along with textbook learning. We constantly strive to deliver new and innovative ways for students to relax and learn in sync with nature.",
+        "We provide the students with activities like Rifle Shooting, Archery, Horse riding and Wall Climbing to test their mettle. We organize a variety of outings for students to places ranging from the nearby Dalma Wildlife Sanctuary, to the Valley of Flowers in Uttarakhand, to The Everest Base Camp in Nepal. We also organize star gazing nights where students can marvel at the beauty of the heavens and Nature Photography workshops where they can capture the elegance of nature. The scope of our club is limitless and the world is our playground. All in all, we are the club which keeps the students sane and healthy to pursue excellence in every sphere for we strongly believe that a healthy body houses a healthy and productive mind."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/xlanc-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The XLANC team"
+      }
+    },
+    {
+      "id": "xplore",
+      "name": "XPLORE",
+      "fullName": "The CXO Club at XLRI",
+      "focus": "Industry leaders",
+      "category": "extra-curricular",
+      "lead": {
+        "name": "Faria Choudhry",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/xplore-lead.jpg"
+      },
+      "email": "xplore.studentsteam@xlri.ac.in",
+      "body": [
+        "The CXO Club at XLRI is where industry meets intellect. We bring together top leaders from tech, finance, consulting, healthcare, manufacturing, and retail to connect with XLRI’s brightest minds. Through power-packed events, thought-provoking sessions, and our flagship magazine Xplore, we spark conversations that inspire, collaborate, and shape the future."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/xplore-team.jpg",
+        "width": 1216,
+        "height": 875,
+        "alt": "The XPLORE team"
+      }
+    },
+    {
+      "id": "infracom",
+      "name": "INFRACOM",
+      "fullName": "Infrastructure Committee",
+      "focus": "Campus & mess",
+      "category": "functional",
+      "lead": {
+        "name": "Satyam Singh",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/infracom-lead.jpg"
+      },
+      "email": "infracom.delhi@xlri.ac.in",
+      "body": [
+        "The Infrastructure Committee - INFRACOM, is responsible for ensuring a comfortable and pleasant stay for the leaders of tomorrow. It is the sole point of liaison between the administration and the students regarding infrastructure maintenance, upgradation and grievance redressal. The Committee is also responsible for the maintenance and structuring of mess and the food menu for all the hostels in XLRI. The Committee stands together with the sole purpose of ensuring that the brightest minds in the country do not face any stay related grievances at XLRI, and hence the motto - Stand together to serve you better.",
+        "Apart from ensuring infrastructural maintenance and canteen structure, INFRACOM also organizes some exciting events and aids in some core functions:"
+      ],
+      "list": [
+        "Family Dinner for the entire XL Family!",
+        "Annual Welcome dinner for the Junior batches",
+        "Supplement the organization of Regional Dinners",
+        "Aid the placement support committee"
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/infracom-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The INFRACOM team"
+      }
+    },
+    {
+      "id": "isep",
+      "name": "ISEP Committee",
+      "fullName": "International Student Exchange Programme",
+      "focus": "Student exchange",
+      "category": "functional",
+      "lead": {
+        "name": "Udayini Gupta",
+        "role": "Treasurer",
+        "photo": "/media/campus-life/societies/isep-lead.jpg"
+      },
+      "email": "isep@xlri.ac.in",
+      "body": [
+        "ISEP Committee is a student-run committee that helps the International Student Exchange Program at XLRI. Currently, the ISEP Office has associations with universities across Europe (France, Germany, Spain, Greece, and UK), USA, and Southeast Asia. It also facilitates the alliances of XLRI with new foreign universities.",
+        "ISEP Committee is responsible for the cultural integration of students who come to XLRI for the student exchange program. The committee ensures that the students have a pleasant and comfortable stay at XLRI. It organizes various ice-breaker events for the foreign exchange students and XLRI students. It also organizes cultural activities to acquaint them with Indian culture."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/isep-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The ISEP Committee team"
+      }
+    },
+    {
+      "id": "alcom",
+      "name": "AlCom",
+      "fullName": "Alumni Committee",
+      "focus": "Alumni relations",
+      "category": "functional",
+      "lead": {
+        "name": "Ashish Kumar",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/alcom-lead.jpg"
+      },
+      "email": "alumnicommittee@xlri.ac.in",
+      "body": [
+        "XLRI Alumni Committee acts as a platform for the 14,000+ alumni of XLRI to connect with each other and the university.",
+        "AlCom endeavors to connect, engage and celebrate XLRI alumni across the globe to forge lifelong relationships.",
+        "The AlCom is responsible for"
+      ],
+      "list": [
+        "Organizing major annual events: Summer Alumni meets across 7 Indian Cities & 3 International Cities",
+        "The Homecoming, an Annual Alumni Reunion",
+        "Silver Jubilee Reunion (SJR)",
+        "Publishing the Alumni Newsletter 'XL Connect' and an yearly Alumni Magazine.",
+        "Maintaining the Alumni Portal a digital platform for Alumni Networking",
+        "Manage the PR & Outreach via Social Media & other initiatives",
+        "Conduct programs to increase the interaction among Alumni and Students at regular intervals",
+        "Organise XLEAP at XLRI Delhi NCR campus with panel discussions and other engagements.",
+        "Conduct Alumni Mentorship Program (AMP) for 300+ students with 150+ alumni."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/alcom-team.jpg",
+        "width": 960,
+        "height": 1280,
+        "alt": "The AlCom team"
+      }
+    },
+    {
+      "id": "exlink",
+      "name": "ExLink",
+      "fullName": "External Linkages",
+      "focus": "Brand & media",
+      "category": "functional",
+      "lead": {
+        "name": "Soumya Walia",
+        "role": "Joint Secretary",
+        "photo": "/media/campus-life/societies/exlink-lead.jpg"
+      },
+      "email": "exlink@xlri.ac.in",
+      "body": [
+        "ExLink, a student society, was founded in 1999 to coincide with XLRI's Golden Jubilee Celebrations. External Linkages (better known as ExLink) is entrusted with building the brand and handling media management of XLRI, Jamshedpur. It is also known as the face of XLRI."
+      ],
+      "list": [
+        "To represent XLRI as a B-school that nurtures management professionals who uphold core values of ethics, excellence, and integrity.",
+        "To discharge the dual responsibility of internal as well as external branding and communication by streamlining all committee and campus activities and channeling them to the media.",
+        "To act as the spokesperson for XLRI to the outside world, nurture the brand and utilize its synergies where appropriate.",
+        "To build cordial relations with media and draft media strategies for the numerous events taking place on campus.",
+        "Regularly updating the various platforms of external communication like blogs, Facebook, Twitter, YouTube, and LinkedIn accounts and contribute to keeping the student section on the website updated.",
+        "Encouraging students to contribute articles for the in-house magazine Magis."
+      ],
+      "listTitle": "ExLink mission",
+      "photo": {
+        "src": "/media/campus-life/societies/exlink-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The ExLink team"
+      }
+    },
+    {
+      "id": "bodhi-tree",
+      "name": "Bodhi Tree",
+      "fullName": "The official XLRI band",
+      "focus": "Music",
+      "category": "informal",
+      "email": "bodhitree.delhi@xlri.ac.in",
+      "body": [
+        "Bodhi Tree is a legacy that started in XLRI in the late 90's and has grown in stature over the years and has become more than just the official XLRI band. With all time hits like \"GMD\", \"XL ki kudiyan\" and \"XL Meri Jaan\" garnering over a million hits on Youtube and having a loyal fan base, BodhiTree is all about love, life and the much famed \"XL Culture\". The band performs at events happening at XLRI, be it Ensemble or our very own \"Bodhi Night\".",
+        "While mainstream rock and fusion forms a majority of the setlists, experimenting with other genres such as Alternative, Pop and Eastern has resulted in the band delivering a myriad range of performances, much appreciated by fellow colleagues as well as the local junta, in and around Jamshedpur. The band practices in the Bodhi practice pad in the XLRI campus, also called the Bodhi room, with fellow mates joining in on the fun. The band members keep rotating every year with the outgoing batch handing over the much coveted title to the junior members."
+      ],
+      "motto": "In God we trust, in Bodhi we must",
+      "photo": {
+        "src": "/media/campus-life/societies/bodhi-tree-team.jpg",
+        "width": 1600,
+        "height": 1066,
+        "alt": "Bodhi Tree and fellow students on campus"
+      }
+    },
+    {
+      "id": "toastmasters",
+      "name": "Toastmasters",
+      "fullName": "XLRI chapter of Toastmasters International",
+      "focus": "Public speaking",
+      "category": "informal",
+      "email": "toastmasters.delhi@xlri.ac.in",
+      "body": [
+        "The XLRI chapter of Toastmasters international provides XLers a platform to sharpen their communication skills. Through weekly meetings and various events spread across the academic year, Toastmasters equip students with effective speaking and leadership skills necessary to conquer the business world.",
+        "At XLRI Toastmasters , we passionately believe that a well told story has the power to reshape attitudes, lives, and ultimately , the world. The Club hence, in association with JTPL has its annual flagship event “Josh Talks” that covers a wide array of subjects with speakers from every conceivable background, including entrepreneurship, public policy, sports, entertainment and social initiatives.",
+        "Members or Toastmasters as we call them can keep track of their speaking progress through speaking levels and carry it forward by joining Toastmaster chapters anywhere in the world. Toastmaster community will help you interact with people who are passionate about speaking and the ones striving to achieve their own communication and leadership goals."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/toastmasters-team.jpg",
+        "width": 1200,
+        "height": 851,
+        "alt": "Portraits of members of the XLRI Toastmasters club"
+      }
+    },
+    {
+      "id": "next",
+      "name": "NEXT",
+      "fullName": "Nova Exilaro Core Team",
+      "focus": "Annual fest",
+      "category": "next",
+      "lead": {
+        "name": "Sadhvi Pandey",
+        "role": "Convenor",
+        "photo": "/media/campus-life/societies/next-lead.jpg"
+      },
+      "email": "next@xlri.ac.in",
+      "body": [
+        "Nova Exilaro Core Team (NEXT) is the committee responsible for organizing ‘Nova Exilaro’ (NX), the annual fest of XLRI Delhi-NCR Campus. The fest is a 3-5 day-long series of more than 25 management, cultural and sports events organized in conjunction with all the co-curricular & extra-curricular committees in the XLRI ecosystem, along with pro-shows featuring some of the top names in the Indian music & entertainment industry. It is one of the most awaited events at XLRI Delhi, welcoming participation & audience from top-tier B-schools & undergraduate colleges from across the country. We also host a panel of eminent speakers from the industry & entertainment.",
+        "Nova, in Latin, means ‘New’ while Exilaro is a take on ‘Exhilaro’, which represents ‘a feeling of exhilaration.’ This represents the overall aim of the fest – To renew & re-ignite the sense of exhilaration in our students, participants & audience. It’s a celebration of student life at its most extravagant.",
+        "Further, the team organizes the annual fest theme launch event, bringing forth a degree of joy & delight, high enough to brighten up even the night skies over XLRI’s northern campus and give its students a glimpse of the upcoming annual fest & its theme. It is named ‘Aurora’, after the ‘northern lights – Aurora Borealis."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/next-team.jpg",
+        "width": 1280,
+        "height": 960,
+        "alt": "The NEXT team"
+      }
+    },
+    {
+      "id": "crisp",
+      "name": "CRISP",
+      "focus": "Placement preparation",
+      "category": "placement-inclusion",
+      "body": [
+        "CRISP takes pride in preparing XLRI students for their placement processes. The team strategizes and mentors students through various activities such as CV preparation, domain-specific and industry-related sessions, mock GDs and personal interviews. They leverage the expertise of XLRI alumni network and work with external vendors to create high-quality study materials and sessions. Their aim is to provide XLRI students with the best possible preparation including company reports and latest industry trends to succeed in their placement processes."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/crisp-team.jpg",
+        "width": 770,
+        "height": 997,
+        "alt": "The CRISP team"
+      }
+    },
+    {
+      "id": "idea",
+      "name": "IDEA@XL",
+      "fullName": "Inclusion, Diversity and Empowerment Association at XLRI",
+      "focus": "Inclusion & equality",
+      "category": "placement-inclusion",
+      "body": [
+        "IDEA@XL (Inclusion, Diversity and Empowerment Association at XLRI) functions under the aegis of the institute’s faculty headed Committee Against Sexual Harassment (CASH) at XLRI, which has been constituted under the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013, to spread awareness about sexual harassment, discrimination and to promote equality and respect towards creating a harmonious environment in the campus."
+      ],
+      "photo": {
+        "src": "/media/campus-life/societies/idea-team.jpg",
+        "width": 1600,
+        "height": 1200,
+        "alt": "The IDEA@XL team"
+      }
+    }
+  ]
+}

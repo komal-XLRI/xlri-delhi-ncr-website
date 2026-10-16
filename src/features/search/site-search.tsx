@@ -15,6 +15,7 @@ import {
 
 import { CloseIcon, ExternalIcon, SearchIcon } from '@/components/ui/icon';
 import type { SearchEntry } from '@/types/search';
+import type { SearchCopy } from '@/types/site';
 
 /** Opens the header search from anywhere on the page (the 404 page uses it). */
 export const OPEN_SEARCH_EVENT = 'xlri:open-search';
@@ -27,23 +28,6 @@ const fold = (text: string) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
-
-/**
- * Shown before anything is typed — the institute's "Key Searches". Ids from
- * the index; any that are missing are skipped.
- */
-const KEY_SEARCHES = [
-  'page:/academics/programmes/pgdm-business-management',
-  'page:/academics/programmes/pgdm-innovation-entrepreneurship',
-  'page:/faculty/full-time',
-  'page:/placements',
-  'page:/placements/reports',
-  'page:/executive-education/emdp',
-  'page:/executive-education/management-development-programmes',
-  'page:/about/mandatory-disclosure',
-  'page:/about/directors-desk',
-  'page:/about/accreditation',
-];
 
 interface Prepared {
   entry: SearchEntry;
@@ -99,8 +83,13 @@ function highlight(text: string, words: readonly string[]): ReactNode {
  *  - Links to other XLRI sites open in a new tab and say so.
  *  - The panel is a disclosure (`aria-expanded` on the button), not a modal:
  *    the page behind stays usable.
+ *
+ * The visible copy — placeholder, the "Key Searches" heading and list, the
+ * empty state — arrives as `copy` from `content/site.json`. The Key Searches
+ * are shown before anything is typed: ids from the index, and any that are
+ * missing are skipped.
  */
-export function SiteSearch({ index }: { index: readonly SearchEntry[] }) {
+export function SiteSearch({ index, copy }: { index: readonly SearchEntry[]; copy: SearchCopy }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -123,8 +112,9 @@ export function SiteSearch({ index }: { index: readonly SearchEntry[] }) {
   );
 
   const keySearches = useMemo(
-    () => KEY_SEARCHES.map((id) => index.find((e) => e.id === id)).filter((e) => e !== undefined),
-    [index],
+    () =>
+      copy.keySearches.map((id) => index.find((e) => e.id === id)).filter((e) => e !== undefined),
+    [index, copy.keySearches],
   );
 
   const phrase = fold(query);
@@ -245,7 +235,7 @@ export function SiteSearch({ index }: { index: readonly SearchEntry[] }) {
               onChange={(event) => {
                 setQuery(event.target.value);
               }}
-              placeholder="Search"
+              placeholder={copy.placeholder}
               className="h-11 w-full rounded-[6px] border-[1.5px] border-ink-strong bg-surface pr-11 pl-4 text-[0.9375rem] text-ink-strong placeholder:text-ink-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/25 [&::-webkit-search-cancel-button]:hidden"
             />
             <button
@@ -268,7 +258,9 @@ export function SiteSearch({ index }: { index: readonly SearchEntry[] }) {
 
         {/* As on the institute site, the heading stays "Key Searches" while
             typing; the count is announced to screen readers only. */}
-        <p className="mt-4 text-[0.8125rem] font-semibold text-ink-strong">Key Searches</p>
+        <p className="mt-4 text-[0.8125rem] font-semibold text-ink-strong">
+          {copy.keySearchesHeading}
+        </p>
         <p aria-live="polite" className="sr-only">
           {phrase
             ? results.length > 0
@@ -292,7 +284,7 @@ export function SiteSearch({ index }: { index: readonly SearchEntry[] }) {
             ))}
           </ul>
         ) : (
-          <p className="mt-1.5 py-2 text-sm text-ink-muted">No results found</p>
+          <p className="mt-1.5 py-2 text-sm text-ink-muted">{copy.noResults}</p>
         )}
       </div>
     </div>

@@ -1143,7 +1143,8 @@
    * `site-header.tsx` and this has to change with it — hence the arithmetic
    * rather than the total.
    */
-  .site-header {
+  .site-header,
+  .library-subnav {
     --masthead-height: calc(2rem + 45px);
   }
 
@@ -1163,7 +1164,9 @@
   @media (min-width: 1024px) {
     @supports (animation-timeline: scroll()) {
       @media (prefers-reduced-motion: no-preference) {
-        .site-header {
+        /* A section submenu sticks under the header, so it rides up with it. */
+        .site-header,
+        .library-subnav {
           animation: header-compact linear both;
           animation-timeline: scroll(root block);
           /* Absolute lengths, not percentages: the range must depend on how far
@@ -2705,6 +2708,24 @@
     inset-inline-start: 0;
   }
 
+  /**
+   * Page hero — bottom-right of a full-width hero, in the right-hand margin
+   * below the figures, cut by the section that follows. Small enough to fit
+   * the margin beside the 80rem measure at 1440px.
+   */
+  [data-motif='hero']::before {
+    --motif-w: 6rem;
+    --motif-drift: 0 -0.5rem;
+    inset-block-end: -0.75rem;
+    inset-inline-end: 0;
+  }
+
+  @media (max-width: 1399.98px) {
+    [data-motif='hero']::before {
+      display: none;
+    }
+  }
+
   /* ---------------------------------------------------------------------------
      Motion.
      ------------------------------------------------------------------------ */
@@ -2762,6 +2783,10 @@
       [data-motif='profile']::before {
         --motif-drift-time: 10s;
         --motif-drift-offset: -3s;
+      }
+      [data-motif='hero']::before {
+        --motif-drift-time: 9s;
+        --motif-drift-offset: -6s;
       }
     }
   }

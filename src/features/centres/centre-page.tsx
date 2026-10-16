@@ -62,15 +62,15 @@ export function CentrePage({ centre }: { centre: Centre }) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Centres' },
-              { label: centre.shortName },
+              { label: centre.breadcrumb.section },
+              { label: centre.breadcrumb.page },
             ]}
           />
 
           <div className="mt-10 grid grid-cols-1 items-center gap-10 md:mt-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14">
             <div>
               <p className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
-                Centre of Excellence · {centre.shortName}
+                {centre.eyebrow} · {centre.shortName}
               </p>
               <h1
                 id="centre-heading"

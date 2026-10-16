@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Gardens & Parks",
+    "description": "The lawns, palm-lined avenues and walking paths of the 47-acre XLRI Delhi-NCR campus — a green campus with a platinum-level IGBC Green Building Certification."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Gardens & Parks",
+  "intro": "Lawns, palm-lined avenues and walking paths open up the 47-acre campus — room to walk, play and pause between classes.",
+  "photos": [
+    {
+      "src": "/media/campus-life/gardens/lawn-xlri-sign.jpg",
+      "alt": "A wide lawn with the red “I ♥ XLRI” sign, the academic blocks behind",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/media/campus-life/gardens/academic-lawn.jpg",
+      "alt": "The lawn in front of the academic block, with benches along its edge",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/media/campus-life/gardens/sports-field.jpg",
+      "alt": "A student kicking a ball on the open grass field beside a goalpost",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/media/campus-life/gardens/main-gate.jpg",
+      "alt": "Palms and a planted median at the campus main gate",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Green spaces on campus",
+  "highlights": [
+    {
+      "icon": "leaf",
+      "title": "A green campus",
+      "text": "The 47-acre campus was designed to promote eco-friendly living, and holds a platinum-level Green Building Certification to IGBC guidelines."
+    },
+    {
+      "icon": "tree",
+      "title": "Open lawns",
+      "text": "Wide lawns stretch between the academic blocks and the hostel, with space for an evening game of football."
+    },
+    {
+      "icon": "path",
+      "title": "Walking paths",
+      "text": "Paved paths wind through the grounds, lined with lamp posts and young trees."
+    }
+  ],
+  "gallery": {
+    "eyebrow": "In pictures",
+    "title": "Around the grounds",
+    "photos": [
+      {
+        "src": "/media/campus-life/gardens/entrance-gardens.jpg",
+        "alt": "Hedges and lawns along the approach to the main gate",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/media/campus-life/gardens/lawn-path.jpg",
+        "alt": "A curving path around a lawn at dusk",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/media/campus-life/gardens/walking-paths.jpg",
+        "alt": "Two paved paths meeting between lawns, lined with lamp posts",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/media/campus-life/gardens/central-lawn.jpg",
+        "alt": "Students gathered for a photograph on the central lawn",
+        "width": 1600,
+        "height": 1067
+      }
+    ]
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Sports & Recreation",
+      "description": "Courts, the gaming arena, the gym and Xavier’s Hall.",
+      "href": "/campus-life/sports-recreation"
+    },
+    {
+      "label": "Parking Areas",
+      "description": "Covered parking under rows of solar-panel canopies.",
+      "href": "/campus-life/parking-areas"
+    },
+    {
+      "label": "Campus Tour",
+      "description": "Walk the campus in 22 short videos.",
+      "href": "/campus-life/campus-tour"
+    }
+  ]
+}

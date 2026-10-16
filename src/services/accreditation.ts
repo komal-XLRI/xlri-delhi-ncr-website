@@ -1,5 +1,8 @@
-import { accreditation } from '@/content/accreditation';
+import accreditationJson from '@/content/accreditation.json';
 import type { AccreditationPage } from '@/types/accreditation';
+import { fromJson } from '@/lib/validation/json-content';
+
+const accreditation = fromJson<AccreditationPage>(accreditationJson);
 
 /**
  * "Accreditation" repository — the same seam as `services/homepage`.

@@ -1,5 +1,8 @@
-import { about } from '@/content/about';
+import aboutJson from '@/content/about.json';
 import type { AboutPage } from '@/types/about';
+import { fromJson } from '@/lib/validation/json-content';
+
+const about = fromJson<AboutPage>(aboutJson);
 
 /**
  * "About" landing page repository — the same seam as `services/homepage`.

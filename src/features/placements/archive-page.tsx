@@ -21,14 +21,14 @@ export function PlacementsArchivePage({ archive, final, summer }: Props) {
   const sections = [
     {
       id: 'final',
-      heading: 'Final Placements',
+      heading: archive.seasonHeadings.final,
       docs: archive.final,
       report: final,
       href: routes.placements.final,
     },
     {
       id: 'summer',
-      heading: 'Summer Internships',
+      heading: archive.seasonHeadings.summer,
       docs: archive.summer,
       report: summer,
       href: routes.placements.summer,
@@ -43,26 +43,25 @@ export function PlacementsArchivePage({ archive, final, summer }: Props) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Placements', href: routes.placements.index },
-              { label: 'Reports & Audits' },
+              { label: archive.breadcrumb.section, href: routes.placements.index },
+              { label: archive.breadcrumb.page },
             ]}
           />
           <p className="mt-8 text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase md:mt-10">
-            Placements
+            {archive.eyebrow}
           </p>
           <h1
             id="archive-heading"
             className="mt-3 font-serif text-[clamp(2.5rem,5vw,3.75rem)] leading-[1.02] tracking-[-0.035em] text-brand"
           >
-            Placement Reports &amp; Audits
+            {archive.title}
           </h1>
           <Rule className="rule-draw mt-6 origin-left" />
           <p
             className="rise-in mt-6 max-w-[44rem] text-base leading-[1.85] text-ink md:text-[1.0625rem]"
             style={{ ['--rise-delay' as string]: '150ms' }}
           >
-            {total} final placement and summer internship reports and placement audit reports, from
-            2014 to the latest season.
+            {archive.intro.replace('{count}', String(total))}
           </p>
           <nav
             aria-label="Seasons"
@@ -119,7 +118,7 @@ export function PlacementsArchivePage({ archive, final, summer }: Props) {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-1.5 text-ink-muted transition-colors duration-500 hover:text-brand"
                 >
-                  More details
+                  {archive.moreLabel}
                   <ExternalIcon
                     size={13}
                     aria-hidden="true"
@@ -140,7 +139,7 @@ export function PlacementsArchivePage({ archive, final, summer }: Props) {
                       : undefined
                   }
                 >
-                  <PdfCard doc={doc} />
+                  <PdfCard doc={doc} viewLabel={archive.viewPdfLabel} />
                 </li>
               ))}
             </ul>

@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Food Courts",
+    "description": "Food on the XLRI Delhi-NCR campus: a 24×7 cafeteria, The Daily Spot, an air-conditioned two-floor mess and NESCAFE Break Zone."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Food Courts",
+  "intro": "From full meals in the mess to a late-night coffee, there is somewhere to eat on campus at any hour.",
+  "facts": [
+    {
+      "value": "4",
+      "label": "Places to eat"
+    },
+    {
+      "value": "24×7",
+      "label": "Cafeteria"
+    },
+    {
+      "value": "2",
+      "label": "Floors of mess"
+    }
+  ],
+  "services": [
+    {
+      "id": "cafeteria",
+      "title": "Cafeteria",
+      "category": "Open 24×7",
+      "icon": "utensils",
+      "description": "The campus features a 24×7 cafeteria that offers a wide range of dining options, from full meals to quick snacks. This ensures that students have access to nutritious food at any time of day.",
+      "photos": [
+        {
+          "src": "/media/campus-life/food/cafeteria-counter.jpg",
+          "alt": "The cafeteria counter, with shelves of snacks and drinks behind it",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/food/cafeteria-seating.jpg",
+          "alt": "Tables and chairs in the cafeteria",
+          "width": 1600,
+          "height": 1069
+        }
+      ]
+    },
+    {
+      "id": "the-daily-spot",
+      "title": "The Daily Spot (PJ Cafeteria)",
+      "category": "New on campus",
+      "icon": "coffee",
+      "description": "Recently introduced, The Daily Spot (PJ Cafeteria) is a new cafeteria on campus offering a diverse menu. This adds to the variety of dining options available, catering to different tastes and preferences.",
+      "photos": [
+        {
+          "src": "/media/campus-life/food/daily-spot-night.jpg",
+          "alt": "The Daily Spot lit up at night, with arched windows and a terrace",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "src": "/media/campus-life/food/daily-spot-inside.jpg",
+          "alt": "Tables under hanging lamps inside The Daily Spot",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "src": "/media/campus-life/food/daily-spot-hall.jpg",
+          "alt": "The tiled hallway and arched windows of The Daily Spot",
+          "width": 1600,
+          "height": 896
+        },
+        {
+          "src": "/media/campus-life/food/daily-spot-outside.jpg",
+          "alt": "The Daily Spot building from above, with the campus beyond",
+          "width": 1600,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "id": "mess",
+      "title": "Mess Facility",
+      "category": "Daily meals",
+      "icon": "users",
+      "description": "The campus mess is a fully air-conditioned dining facility that spans two floors, providing a comfortable environment for students to enjoy their meals. The mess serves a range of nutritious dishes, ensuring students have access to balanced meals throughout their stay.",
+      "photos": [
+        {
+          "src": "/media/campus-life/food/mess.jpg",
+          "alt": "Long rows of tables in the air-conditioned mess",
+          "width": 1600,
+          "height": 1069
+        }
+      ]
+    },
+    {
+      "id": "nescafe-break-zone",
+      "title": "NESCAFE Break Zone",
+      "category": "Quick bites",
+      "icon": "coffee",
+      "description": "A refreshing café for quick bites! It’s the perfect spot for students to satisfy their late-night food cravings.",
+      "photos": [
+        {
+          "src": "/media/campus-life/food/break-zone-night.jpg",
+          "alt": "The NESCAFE Break Zone kiosk lit up at night",
+          "width": 898,
+          "height": 614
+        },
+        {
+          "src": "/media/campus-life/food/break-zone-day.jpg",
+          "alt": "The NESCAFE Break Zone kiosk by day",
+          "width": 1600,
+          "height": 1032
+        }
+      ]
+    }
+  ],
+  "tourLink": {
+    "eyebrow": "See it for yourself",
+    "title": "Take the Campus Tour — 22 short videos"
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Student Hostel",
+      "description": "Furnished rooms, a gym in the hostel, and the mess close by.",
+      "href": "/campus-life/students-hostel"
+    },
+    {
+      "label": "Daily Needs Store",
+      "description": "Fresh produce, groceries and personal care on campus.",
+      "href": "/campus-life/daily-needs-store"
+    },
+    {
+      "label": "Medical Facilities",
+      "description": "A qualified doctor on campus for everyday health concerns.",
+      "href": "/campus-life/medical-facilities"
+    }
+  ]
+}

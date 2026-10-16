@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Daily Needs Store",
+    "description": "The daily needs store on the XLRI Delhi-NCR campus: fresh produce, grocery essentials, packaged foods and personal care."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Daily Needs Store",
+  "intro": "This store aims to provide a wide range of everyday essentials, offering convenience to all members of our community.",
+  "photos": [
+    {
+      "src": "/media/campus-life/store/store.jpg",
+      "alt": "The glass-fronted daily needs store on campus",
+      "width": 1280,
+      "height": 963
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "What the store stocks",
+  "highlights": [
+    {
+      "icon": "leaf",
+      "title": "Fresh produce",
+      "text": "Fruit and vegetables for the day."
+    },
+    {
+      "icon": "basket",
+      "title": "Grocery essentials",
+      "text": "Staples and pantry basics."
+    },
+    {
+      "icon": "utensils",
+      "title": "Packaged & instant foods",
+      "text": "Snacks and quick meals for late nights."
+    },
+    {
+      "icon": "sparkle",
+      "title": "Personal care",
+      "text": "Toiletries and everyday personal-care items."
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Food Courts",
+      "description": "A 24×7 cafeteria, The Daily Spot, the mess and NESCAFE Break Zone.",
+      "href": "/campus-life/food-courts"
+    },
+    {
+      "label": "Laundry Facilities",
+      "description": "Washing, ironing and dry cleaning for students.",
+      "href": "/campus-life/laundry-facilities"
+    },
+    {
+      "label": "Mobility Within Campus",
+      "description": "The free student shuttle, banks, gym and salon.",
+      "href": "/campus-life/mobility-within-campus"
+    }
+  ]
+}

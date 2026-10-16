@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRightIcon, ExternalIcon, LeafIcon } from '@/components/ui/icon';
 import { routes } from '@/constants/routes';
+import { Avatar } from '@/features/sustainability/avatar';
 import type {
   ResolvedCommitteeMember,
   ResolvedCoreTeamMember,
@@ -18,15 +19,6 @@ const H2 =
 const LIFT =
   'transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1';
 const delay = (ms: number) => ({ ['--rise-delay' as string]: `${ms}ms` });
-
-/** "Dr. Sakshi Singhal" → "SS", "Fr. J. Dayal, SJ" → "JD": title and suffix dropped. */
-const initials = (name: string) => {
-  const parts = name
-    .replace(/,.*$/, '')
-    .split(/\s+/)
-    .filter((part) => !/^(Dr|Fr|Mr|Ms|Mrs|Prof)\.$/.test(part));
-  return `${parts[0]?.[0] ?? ''}${parts.length > 1 ? (parts.at(-1)?.[0] ?? '') : ''}`;
-};
 
 /**
  * Sustainability › Team.
@@ -52,10 +44,11 @@ const initials = (name: string) => {
  * the blocks rise in on load; cards lift on hover with a lime bar. None of it
  * plays under `prefers-reduced-motion`.
  *
+ * Content and page copy come from `content/sustainability-team.json`.
  * Server Component; no client JavaScript.
  */
 export function SustainabilityTeam({ content }: { content: ResolvedSustainabilityTeamPage }) {
-  const { coreTeam, committee } = content;
+  const { coreTeam, committee, labels } = content;
   const byId = new Map(coreTeam.members.map((member) => [member.id, member]));
   const [convenor, ...members] = committee.members;
 
@@ -67,8 +60,8 @@ export function SustainabilityTeam({ content }: { content: ResolvedSustainabilit
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Sustainability' },
-              { label: 'Team' },
+              { label: content.breadcrumb.section },
+              { label: content.breadcrumb.page },
             ]}
           />
 
@@ -76,7 +69,7 @@ export function SustainabilityTeam({ content }: { content: ResolvedSustainabilit
             <div>
               <p className="flex items-center gap-2.5 text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
                 <LeafIcon size={18} aria-hidden="true" />
-                Sustainability
+                {content.eyebrow}
               </p>
               <h1
                 id="team-heading"
@@ -97,7 +90,7 @@ export function SustainabilityTeam({ content }: { content: ResolvedSustainabilit
                   <ArrowRightIcon size={15} aria-hidden="true" />
                 </span>
                 <span>
-                  <span className="text-ink-muted">Contact us: </span>
+                  <span className="text-ink-muted">{`${content.contactLabel} `}</span>
                   <span className="font-semibold transition-colors duration-500 group-hover:text-brand">
                     {content.contactEmail}
                   </span>
@@ -110,11 +103,11 @@ export function SustainabilityTeam({ content }: { content: ResolvedSustainabilit
               style={delay(250)}
             >
               {[
-                { id: 'core', value: coreTeam.members.length, label: 'Faculty in the core team' },
+                { id: 'core', value: coreTeam.members.length, label: content.facts.coreTeam },
                 {
                   id: 'committee',
                   value: committee.members.length,
-                  label: 'Members of the campus committee',
+                  label: content.facts.committee,
                 },
               ].map((fact, index) => (
                 // Label first in the DOM (a <dt> must precede its <dd>), figure
@@ -151,7 +144,7 @@ export function SustainabilityTeam({ content }: { content: ResolvedSustainabilit
               // rise-in sits on the item, the hover lift on the card inside:
               // both use `translate`, so they cannot share an element.
               <li key={member.id} className="rise-in" style={delay(300 + index * 120)}>
-                <CoreTeamCard member={member} />
+                <CoreTeamCard member={member} viewProfile={labels.viewProfile} />
               </li>
             ))}
           </ul>
@@ -179,7 +172,9 @@ export function SustainabilityTeam({ content }: { content: ResolvedSustainabilit
                 <span className="mt-2 block text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
                   {convenor.role}
                 </span>
-                {convenor.href ? <ProfileCue name={convenor.name} /> : null}
+                {convenor.href ? (
+                  <ProfileCue name={convenor.name} label={labels.viewProfile} />
+                ) : null}
               </PersonLink>
             ) : null}
 
@@ -189,6 +184,7 @@ export function SustainabilityTeam({ content }: { content: ResolvedSustainabilit
                   <CommitteeRow
                     member={member}
                     inCore={Boolean(member.coreTeamId && byId.has(member.coreTeamId))}
+                    inCoreLabel={labels.alsoInCoreTeam}
                   />
                 </li>
               ))}
@@ -219,10 +215,10 @@ function PersonLink({
   );
 }
 
-function ProfileCue({ name }: { name: string }) {
+function ProfileCue({ name, label }: { name: string; label: string }) {
   return (
     <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
-      View profile
+      {label}
       <ArrowRightIcon
         size={13}
         aria-hidden="true"
@@ -233,7 +229,15 @@ function ProfileCue({ name }: { name: string }) {
   );
 }
 
-function CommitteeRow({ member, inCore }: { member: ResolvedCommitteeMember; inCore: boolean }) {
+function CommitteeRow({
+  member,
+  inCore,
+  inCoreLabel,
+}: {
+  member: ResolvedCommitteeMember;
+  inCore: boolean;
+  inCoreLabel: string;
+}) {
   return (
     <PersonLink
       href={member.href}
@@ -246,7 +250,7 @@ function CommitteeRow({ member, inCore }: { member: ResolvedCommitteeMember; inC
         </span>
         <span className="mt-0.5 block text-sm text-ink-muted">
           {member.role}
-          {inCore ? <span className="text-accent-700"> · Also in the core team</span> : null}
+          {inCore ? <span className="text-accent-700"> · {inCoreLabel}</span> : null}
         </span>
       </span>
       {member.href ? (
@@ -260,7 +264,13 @@ function CommitteeRow({ member, inCore }: { member: ResolvedCommitteeMember; inC
   );
 }
 
-function CoreTeamCard({ member }: { member: ResolvedCoreTeamMember }) {
+function CoreTeamCard({
+  member,
+  viewProfile,
+}: {
+  member: ResolvedCoreTeamMember;
+  viewProfile: string;
+}) {
   const className = `group relative grid h-full grid-cols-[7rem_minmax(0,1fr)] overflow-hidden rounded-[8px] border border-border bg-surface sm:flex sm:flex-col ${LIFT}`;
   const body = (
     <>
@@ -299,7 +309,7 @@ function CoreTeamCard({ member }: { member: ResolvedCoreTeamMember }) {
           ))}
         </span>
         <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-brand sm:pt-6">
-          View profile
+          {viewProfile}
           {member.internal ? (
             <ArrowRightIcon
               size={13}
@@ -327,40 +337,5 @@ function CoreTeamCard({ member }: { member: ResolvedCoreTeamMember }) {
     <a href={member.href} target="_blank" rel="noopener noreferrer" className={className}>
       {body}
     </a>
-  );
-}
-
-function Avatar({
-  name,
-  photo,
-  size,
-}: {
-  name: string;
-  photo: string | undefined;
-  size: 'sm' | 'lg';
-}) {
-  const box = size === 'lg' ? 'size-28 text-3xl ring-4' : 'size-14 text-lg ring-2';
-  if (photo) {
-    return (
-      <span
-        className={`relative block shrink-0 overflow-hidden rounded-full ring-accent-100 transition-shadow duration-500 group-hover:ring-accent-surface ${box}`}
-      >
-        <Image
-          src={photo}
-          alt=""
-          fill
-          sizes={size === 'lg' ? '112px' : '56px'}
-          className="object-cover object-[center_20%] transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.06]"
-        />
-      </span>
-    );
-  }
-  return (
-    <span
-      aria-hidden="true"
-      className={`flex shrink-0 items-center justify-center rounded-full bg-brand font-serif text-white ring-accent-100 transition-shadow duration-500 group-hover:ring-accent-surface ${box}`}
-    >
-      {initials(name)}
-    </span>
   );
 }

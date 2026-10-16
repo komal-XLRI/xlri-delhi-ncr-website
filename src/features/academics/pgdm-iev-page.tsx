@@ -39,19 +39,6 @@ const ICONS: Record<IevIcon, (props: IconProps) => React.ReactElement> = {
   network: GlobeIcon,
 };
 
-/** The in-page index, in page order. Each id is a section below. */
-const SECTIONS = [
-  { id: 'why-apply', label: 'Why apply' },
-  { id: 'admissions', label: 'Eligibility & selection' },
-  { id: 'important-dates', label: 'Important dates' },
-  { id: 'program-team', label: 'Program team' },
-  { id: 'xceed', label: 'XCEED incubator' },
-  { id: 'events', label: 'Events' },
-  { id: 'startups', label: 'Startups' },
-  { id: 'contact', label: 'Contact' },
-  { id: 'faq', label: 'FAQ' },
-] as const;
-
 /**
  * PGDM - IEV.
  *
@@ -108,14 +95,16 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Academics' },
-              { label: content.shortName },
+              { label: content.breadcrumb.section },
+              { label: content.breadcrumb.page },
             ]}
           />
 
           <div className="mt-10 grid grid-cols-1 items-center gap-10 md:mt-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-14">
             <div>
-              <p className={EYEBROW}>{content.school} · PGDMIEV</p>
+              <p className={EYEBROW}>
+                {content.school} · {content.programmeCode}
+              </p>
               <h1
                 id="programme-heading"
                 className="mt-3 font-serif text-[clamp(2.25rem,4.6vw,3.5rem)] leading-[1.04] tracking-[-0.03em] text-balance text-brand"
@@ -182,7 +171,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
 
           <nav aria-label="On this page" className="mt-12 border-t border-border pt-6 md:mt-14">
             <ul className="flex flex-wrap gap-2">
-              {SECTIONS.map((section) => (
+              {content.onThisPage.map((section) => (
                 <li key={section.id}>
                   <a
                     href={`#${section.id}`}
@@ -279,7 +268,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
               ))}
             </div>
-            <p className={`mt-6 ${EYEBROW}`}>Accepted entrance tests</p>
+            <p className={`mt-6 ${EYEBROW}`}>{eligibility.testsHeading}</p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {eligibility.tests.map((test) => (
                 <li
@@ -309,7 +298,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   </span>
                   <div className="pt-2.5">
                     <p className="text-xs font-semibold tracking-[0.14em] text-accent-700 uppercase">
-                      Round {index + 1}
+                      {selection.roundLabel.replace('{number}', String(index + 1))}
                     </p>
                     <p className="mt-1 font-serif text-xl leading-snug text-ink-strong">
                       {round.title}
@@ -324,7 +313,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
               ))}
             </ol>
             <div className="mt-8 rounded-[8px] border border-t-[3px] border-border border-t-accent-surface bg-surface-subtle p-5">
-              <p className="text-sm text-ink-muted">Application deadline</p>
+              <p className="text-sm text-ink-muted">{selection.deadlineLabel}</p>
               <p className="mt-1 font-serif text-xl text-ink-strong">{selection.deadline}</p>
               <p className="mt-3 text-[0.9375rem] leading-[1.7] text-ink">{selection.note}</p>
             </div>
@@ -356,7 +345,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   {item.value}
                 </p>
                 {item.tentative ? (
-                  <p className="mt-2 text-sm text-ink-muted italic">Tentative</p>
+                  <p className="mt-2 text-sm text-ink-muted italic">{dates.tentativeLabel}</p>
                 ) : null}
               </li>
             ))}
@@ -429,7 +418,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
                   rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-brand"
                 >
-                  LinkedIn
+                  {team.studentLinkLabel}
                   <ExternalIcon size={13} aria-hidden="true" className="text-accent-700" />
                   <span className="sr-only"> profile of {student.name} (opens in a new tab)</span>
                 </a>
@@ -597,7 +586,7 @@ export function PgdmIevPage({ content }: { content: IevContent }) {
               {startups.heading}
             </h2>
             <p className="text-sm text-ink-muted">
-              {startups.items.length} ventures from the programme
+              {startups.countLabel.replace('{count}', String(startups.items.length))}
             </p>
           </div>
           <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -1,0 +1,37 @@
+{
+  "header": {
+    "noticesHeading": "Notices",
+    "noticeNewBadge": "New",
+    "megaMenuFeaturedActionLabel": "Find out more"
+  },
+  "footer": {
+    "instituteLinkLabel": "Visit the institute site",
+    "audienceHeading": "For",
+    "copyright": "All rights reserved."
+  },
+  "search": {
+    "placeholder": "Search",
+    "keySearchesHeading": "Key Searches",
+    "noResults": "No results found",
+    "keySearches": [
+      "page:/academics/programmes/pgdm-business-management",
+      "page:/academics/programmes/pgdm-innovation-entrepreneurship",
+      "page:/faculty/full-time",
+      "page:/placements",
+      "page:/placements/reports",
+      "page:/executive-education/emdp",
+      "page:/executive-education/management-development-programmes",
+      "page:/about/mandatory-disclosure",
+      "page:/about/directors-desk",
+      "page:/about/accreditation"
+    ]
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "heading": "This page could not be found",
+    "intro": "The address may be mistyped, or the page may have been moved or retired. Everything below is a good place to pick the thread back up.",
+    "homeActionLabel": "Back to the homepage",
+    "searchActionLabel": "Search the site",
+    "sectionsHeading": "Main sections"
+  }
+}

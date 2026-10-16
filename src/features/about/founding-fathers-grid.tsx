@@ -35,7 +35,17 @@ import type { FoundingFather } from '@/types/founding-fathers';
  * Each card is a real `<button>`, so "Know More" is reachable by keyboard; on
  * Jamshedpur it is a `<div>` with a click handler and cannot be reached at all.
  */
-export function FoundingFathersGrid({ fathers }: { fathers: readonly FoundingFather[] }) {
+export function FoundingFathersGrid({
+  fathers,
+  cardLinkLabel,
+  dialogSubtitle,
+}: {
+  fathers: readonly FoundingFather[];
+  /** The link under each card, from the page's content. */
+  cardLinkLabel: string;
+  /** The line under the name in the dialog, from the page's content. */
+  dialogSubtitle: string;
+}) {
   const [selected, setSelected] = useState<FoundingFather | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
 
@@ -93,7 +103,7 @@ export function FoundingFathersGrid({ fathers }: { fathers: readonly FoundingFat
                 {father.cardLabel}
               </span>
               <span className="mt-2.5 inline-flex items-center gap-2 text-sm font-semibold text-brand md:mt-3">
-                Know More
+                {cardLinkLabel}
                 <span className="sr-only"> about {father.name}</span>
                 <ArrowRightIcon
                   size={14}
@@ -141,7 +151,7 @@ export function FoundingFathersGrid({ fathers }: { fathers: readonly FoundingFat
                 >
                   {selected.name}
                 </h2>
-                <p className="mt-1 font-semibold text-ink-muted">SJ</p>
+                <p className="mt-1 font-semibold text-ink-muted">{dialogSubtitle}</p>
                 <p className="mt-5 text-base leading-[1.8] text-ink">{selected.biography}</p>
               </div>
             </div>

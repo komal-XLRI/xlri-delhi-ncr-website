@@ -1,10 +1,11 @@
-import {
-  finalPlacements,
-  placementsArchive,
-  placementsOverview,
-  summerInternships,
-} from '@/content/placements';
+import placementsJson from '@/content/placements.json';
 import type { PlacementReport, PlacementsArchive, PlacementsOverview } from '@/types/placements';
+import { fromJson } from '@/lib/validation/json-content';
+
+const finalPlacements = fromJson<PlacementReport>(placementsJson.finalPlacements);
+const placementsArchive = fromJson<PlacementsArchive>(placementsJson.placementsArchive);
+const placementsOverview = fromJson<PlacementsOverview>(placementsJson.placementsOverview);
+const summerInternships = fromJson<PlacementReport>(placementsJson.summerInternships);
 
 /**
  * Placements repository — the same seam as `services/homepage`. Async so

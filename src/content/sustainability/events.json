@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "title": "Sustainability Events",
+    "description": "The J.R.D. Tata Ethics Oration, held at XLRI since 1991, and the Dr. Verghese Kurien Memorial Oration on Sustainable Development — every speaker and their talk."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Events"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Events",
+  "facts": {
+    "total": "Orations",
+    "series": "Annual lecture series",
+    "first": "First oration, by {speaker}"
+  },
+  "labels": {
+    "since": "Since {year}",
+    "count": "{count} orations"
+  },
+  "series": [
+    {
+      "id": "jrd-tata-ethics-oration",
+      "name": "J.R.D. Tata Ethics Oration",
+      "shortName": "J.R.D. Tata Ethics Oration",
+      "summary": "Delivered at XLRI since 1991, when J.R.D. Tata gave the first oration.",
+      "orations": [
+        {
+          "id": "2023-11-23-arun-maira",
+          "date": "2023-11-23",
+          "year": "2023",
+          "title": "Transforming Capitalism to Make the World Better for Everyone",
+          "speaker": "Mr. Arun Maira",
+          "bio": "Mr. Arun Maira, former member of India’s Planning Commission and ex-Chairman of BCG India, is a leading thinker on leadership and systems transformation. He is the author of books on ethics, institutional reform, and capitalism, including The Learning Factory and Shaping the Future."
+        },
+        {
+          "id": "2022-11-19-bhaskar-bhat",
+          "date": "2022-11-19",
+          "year": "2022",
+          "speaker": "Mr. Bhaskar Bhat",
+          "bio": "Mr. Bhaskar Bhat, former Managing Director of Titan Company Limited, led the company’s diversification and growth to a $13 billion market cap. A senior Tata Group executive, he serves on multiple boards and has received Distinguished Alumnus Awards from IIT Madras and IIM Ahmedabad."
+        },
+        {
+          "id": "2021-11-29-edward-freeman",
+          "date": "2021-11-29",
+          "year": "2021",
+          "title": "Business Ethics and Stakeholder Capitalism",
+          "speaker": "Dr. Edward Freeman",
+          "bio": "Dr. R. Edward Freeman is University Professor at the University of Virginia Darden School of Business and a pioneer of stakeholder theory. He is best known for his book Strategic Management: A Stakeholder Approach and has authored over 100 volumes and 200 articles in business ethics and strategy."
+        },
+        {
+          "id": "2021-02-06-stephen-rothlin",
+          "date": "2021-02-06",
+          "year": "2021",
+          "title": "China: The Emerging Superpower: The Ethical Underpinnings",
+          "speaker": "Dr. Stephen Rothlin",
+          "bio": "Dr. Stephen Rothlin, director of the Macau Ricci Institute and founder of Rothlin International Management Consulting Ltd., holds a PhD in moral theology. Fluent in six languages, he is an expert in international business ethics focused on China and corporate responsibility."
+        },
+        {
+          "id": "2018-11-29-jennifer-j-griffin",
+          "date": "2018-11-29",
+          "year": "2018",
+          "title": "Ethics in Action: Corporate Social Responsibility in the 21st Century",
+          "speaker": "Dr. Jennifer J. Griffin",
+          "bio": "Dr. Jennifer J. Griffin, professor of business ethics at Loyola University Chicago, is a global expert on CSR and strategic corporate impact and an award-winning academic and author."
+        },
+        {
+          "id": "2017-11-29-j-j-irani",
+          "date": "2017-11-29",
+          "year": "2017",
+          "title": "My Experiences with JRD and His Principles",
+          "speaker": "J.J. Irani",
+          "bio": "Dr. J.J. Irani, former Managing Director of Tata Steel, played a key role in modernizing India’s steel industry and chaired the committee advising on India’s Companies Act."
+        },
+        {
+          "id": "2016-11-26-frank-brennan",
+          "date": "2016-11-26",
+          "year": "2016",
+          "title": "The Place of International Law in Seeking Sustainable Development for India: Some Ethical Reflections",
+          "speaker": "Fr. Frank Brennan, SJ",
+          "bio": "Fr. Dr. Frank Brennan, SJ, Australian Jesuit and law professor, is a noted advocate for Indigenous rights, social justice, and ethical leadership in public life."
+        },
+        {
+          "id": "2015-11-24-shekhar-gupta",
+          "date": "2015-11-24",
+          "year": "2015",
+          "title": "Changing Role of Media in Today’s India",
+          "speaker": "Shekhar Gupta",
+          "bio": "Shekhar Gupta, veteran journalist and founder of Mediascape, is known for his fearless reporting and editorial leadership, with landmark coverage of key political and global events."
+        },
+        {
+          "id": "2014-11-29-d-shivakumar",
+          "date": "2014-11-29",
+          "year": "2014",
+          "title": "Building Trust",
+          "speaker": "D. Shivakumar",
+          "bio": "D. Shivakumar, former CEO of PepsiCo India and Nokia India, is a business leader and marketer known for growing global brands and mentoring young professionals."
+        },
+        {
+          "id": "2013-12-07-pallam-raju-mallipudi",
+          "date": "2013-12-07",
+          "year": "2013",
+          "title": "Ethical Challenges for India Today",
+          "speaker": "Pallam Raju Mallipudi",
+          "bio": "Dr. Pallam Raju Mallipudi, former HRD Minister of India, has advanced education reform, skill development, and innovation and represented India at major international forums."
+        },
+        {
+          "id": "2012-11-24-chris-lowney",
+          "date": "2012-11-24",
+          "year": "2012",
+          "title": "Heroic Leaders: Who They Are and How They Live",
+          "speaker": "Chris Lowney",
+          "bio": "Dr. Chris Lowney, former JP Morgan Managing Director and leadership author, advocates Jesuit-based leadership and founded initiatives supporting education in refugee communities."
+        },
+        {
+          "id": "2011-11-19-laxman-narasimhan",
+          "date": "2011-11-19",
+          "year": "2011",
+          "title": "Values and Ethics in a Volatile World",
+          "speaker": "Laxman Narasimhan",
+          "bio": "Laxman Narasimhan, former CEO of PepsiCo Latin America and McKinsey partner, is known for his leadership in global consumer markets and contributions to public policy and education."
+        },
+        {
+          "id": "2010-11-20-tarun-das",
+          "date": "2010-11-20",
+          "year": "2010",
+          "title": "Business Ethics",
+          "speaker": "Tarun Das",
+          "bio": "Tarun Das, former Director General of CII, shaped India’s industrial policy and international trade relations. He earned national and international honors including the Padma Bhushan and an honorary CBE."
+        },
+        {
+          "id": "2008-11-30-anil-kakodkar",
+          "date": "2008-11-30",
+          "year": "2008",
+          "title": "Atomic Energy in India – Emerging Scenario",
+          "speaker": "Anil Kakodkar",
+          "bio": "Dr. Anil Kakodkar, former Chairman of India’s Atomic Energy Commission, was instrumental in developing indigenous nuclear technology and played a key role in India’s nuclear tests and energy programs."
+        },
+        {
+          "id": "2008-01-09-steven-j-snyder",
+          "date": "2008-01-09",
+          "year": "2008",
+          "title": "21st Century Business Paradigm",
+          "speaker": "Steven J. Snyder",
+          "bio": "Steven J. Snyder, founder of Snyder Leadership Group and former Microsoft executive, co-developed collaborative filtering technology and pioneered online personalization as co-founder of Net Perceptions."
+        },
+        {
+          "id": "2006-12-01-subroto-bagchi",
+          "date": "2006-12-01",
+          "year": "2006",
+          "title": "All about Integrity, Values and Morals",
+          "speaker": "Subroto Bagchi",
+          "bio": "Subroto Bagchi, co-founder of Mindtree, is a respected entrepreneur and author, known for his work in leadership development and values-driven business practices within India’s IT sector."
+        },
+        {
+          "id": "2005-11-26-peter-eigen",
+          "date": "2005-11-26",
+          "year": "2005",
+          "title": "Corporate Ethics and the Bottom Line: Why Fighting Corruption Matters for Business",
+          "speaker": "Peter Eigen",
+          "bio": "Dr. Peter Eigen, founder of Transparency International, is a relentless global advocate against corruption. He has worked with the World Bank and led initiatives like the Extractive Industries Transparency Initiative."
+        },
+        {
+          "id": "2004-11-29-james-j-spillane",
+          "date": "2004-11-29",
+          "year": "2004",
+          "title": "Tourism in Developing Countries: Neocolonialism or Nation Builder",
+          "speaker": "Fr. James J. Spillane, SJ",
+          "bio": "Fr. Dr. James J. Spillane, SJ, American Jesuit priest and academic, has worked extensively in Indonesia on international economics and the ethical dimensions of tourism."
+        },
+        {
+          "id": "2004-02-09-telesphore-p-cardinal-toppo",
+          "date": "2004-02-09",
+          "year": "2004",
+          "title": "Corporate Governance and the Church’s Contribution",
+          "speaker": "Telesphore P. Cardinal Toppo",
+          "bio": "Telesphore P. Cardinal Toppo, the first Adivasi Indian Cardinal and Archbishop of Ranchi, was a key church leader and advocate of social work and education."
+        },
+        {
+          "id": "2002-12-17-mark-tully",
+          "date": "2002-12-17",
+          "year": "2002",
+          "title": "Ethics and Media",
+          "speaker": "Mark Tully",
+          "bio": "Sir Mark Tully, veteran BBC journalist, is celebrated for his profound reporting on South Asia and for authoring numerous books on India and religion."
+        },
+        {
+          "id": "2001-11-29-ramachandra-guha",
+          "date": "2001-11-29",
+          "year": "2001",
+          "title": "The Past and Future of the Environmental Movement: Its Social and Ethical Perspectives",
+          "speaker": "Ramachandra Guha",
+          "bio": "Dr. Ramachandra Guha, renowned historian and environmental thinker, has authored widely on India’s ecological and social history."
+        },
+        {
+          "id": "2000-12-21-robert-f-drinan",
+          "date": "2000-12-21",
+          "year": "2000",
+          "title": "Globalization and Corporate Ethics",
+          "speaker": "Fr. Robert F. Drinan, SJ",
+          "bio": "Dr. Robert F. Drinan, SJ, was a Jesuit priest, lawyer, U.S. Congressman, and Georgetown law professor known for his work on legal ethics and international human rights."
+        },
+        {
+          "id": "1999-10-10-amrita-patel",
+          "date": "1999-10-10",
+          "year": "1999",
+          "title": "Role of Business in Ecological Security: An Ethical Perspective",
+          "speaker": "Amrita Patel",
+          "bio": "Dr. Amrita Patel, former Chairman of the National Dairy Development Board, played a transformative role in Operation Flood and has been a dedicated environmentalist and development activist."
+        },
+        {
+          "id": "1998-10-16-suresh-krishna",
+          "date": "1998-10-16",
+          "year": "1998",
+          "title": "Business Ethics: The Bitter–Sweet Ambrosia",
+          "speaker": "Suresh Krishna",
+          "bio": "Suresh Krishna, Chairman and Managing Director of Sundram Fasteners Ltd., is a pioneering industrialist known for building a global manufacturing business from a modest start."
+        },
+        {
+          "id": "1998-01-17-chris-frost",
+          "date": "1998-01-17",
+          "year": "1998",
+          "title": "Ethics in Media",
+          "speaker": "Chris Frost",
+          "bio": "Prof. Chris Frost, former Head of Journalism at Liverpool John Moores University, is a media ethics expert and long-time member of the NUJ Ethics Council and UK Press Council."
+        },
+        {
+          "id": "1996-10-25-tarjani-vakil",
+          "date": "1996-10-25",
+          "year": "1996",
+          "title": "Business Ethics: Commandments of Truth, Sacrifice, Integrity and Trusteeship",
+          "speaker": "Tarjani Vakil",
+          "bio": "Tarjani Vakil, the first Indian woman to head a financial institution, revolutionized ethical standards in banking and held leadership roles across major development banks."
+        },
+        {
+          "id": "1995-10-18-peter-hans-kolvenbach",
+          "date": "1995-10-18",
+          "year": "1995",
+          "title": "Development and Ethics: A Jesuit Perspective",
+          "speaker": "Fr. Peter-Hans Kolvenbach, SJ",
+          "bio": "Fr. Peter-Hans Kolvenbach, SJ, 29th Superior General of the Jesuits, was a theologian and linguist who led the Society of Jesus for over two decades."
+        },
+        {
+          "id": "1994-02-11-kenneth-e-goodpaster",
+          "date": "1994-02-11",
+          "year": "1994",
+          "title": "An Interpretation of Conscience in Business Life",
+          "speaker": "Dr. Kenneth E. Goodpaster",
+          "bio": "Dr. Kenneth E. Goodpaster, business ethics professor at Harvard and the University of St. Thomas, contributed widely to ethical reasoning and corporate responsibility."
+        },
+        {
+          "id": "1993-01-27-bakhtavar-lentin",
+          "date": "1993-01-27",
+          "year": "1993",
+          "title": "Business Ethics – Some Reflections",
+          "speaker": "Justice Bakhtavar Lentin",
+          "bio": "Justice Bakhtavar Lentin, distinguished Bombay High Court judge, was renowned for exposing corruption in public health administration through landmark judicial inquiries."
+        },
+        {
+          "id": "1992-02-28-joseph-m-sciortino",
+          "date": "1992-02-28",
+          "year": "1992",
+          "title": "Establishing and Maintaining an Ethical Business Climate",
+          "speaker": "Joseph M. Sciortino",
+          "bio": "Joseph M. Sciortino, former CEO of Sysco Food Services, was a respected advocate for business ethics and an active philanthropist devoted to faith and community service."
+        },
+        {
+          "id": "1991-03-04-j-r-d-tata",
+          "date": "1991-03-04",
+          "year": "1991",
+          "title": "Ethics and Business Success",
+          "speaker": "J.R.D. Tata",
+          "bio": "J.R.D. Tata, Chairman Emeritus of Tata Sons Ltd., was a visionary industrialist who led the Tata Group for 50 years, championing ethical business practices and inclusive nation-building."
+        }
+      ]
+    },
+    {
+      "id": "verghese-kurien-oration",
+      "name": "Dr. Verghese Kurien Memorial Oration on Sustainable Development",
+      "shortName": "Verghese Kurien Oration",
+      "summary": "Instituted by XLRI-FACES in 2014.",
+      "orations": [
+        {
+          "id": "2024-jayen-mehta",
+          "year": "2024",
+          "title": "The AMUL Model: Transforming Lives of Millions",
+          "speaker": "Jayen Mehta",
+          "bio": "Jayen Mehta is Managing Director of Amul, Gujarat Cooperative Milk Marketing Federation Ltd (GCMMF), and a leader in cooperative-based rural development and dairy transformation."
+        },
+        {
+          "id": "2023-vaishali-nigam-sinha",
+          "year": "2023",
+          "title": "Empowering the Next Generation: Taking Action on Climate Change & Sustainability",
+          "speaker": "Vaishali Nigam Sinha",
+          "bio": "Vaishali Nigam Sinha is Chief Sustainability Officer at ReNew Power and Chair of the ReNew Foundation, advocating climate action and women’s leadership."
+        },
+        {
+          "id": "2022-suman-bery",
+          "year": "2022",
+          "title": "India’s SDG Localization Model",
+          "speaker": "Suman Bery",
+          "bio": "Suman Bery is Vice Chairperson of NITI Aayog and former Chief Economist at Royal Dutch Shell, with a strong background in policy research and sustainable development."
+        },
+        {
+          "id": "2021-shankar-venkateswaran",
+          "year": "2021",
+          "title": "Unpacking ESG – Putting ‘S’ at the Centre",
+          "speaker": "Shankar Venkateswaran",
+          "bio": "Shankar Venkateswaran, founding head of the Tata Sustainability Group, is a sustainability advisor and co-founder of ECube Investment Advisors."
+        },
+        {
+          "id": "2020-ashish-kothari",
+          "year": "2020",
+          "title": "Eco-Swaraj: Recovery towards Justice & Sustainability",
+          "speaker": "Ashish Kothari",
+          "bio": "Ashish Kothari, co-founder of Kalpavriksh, is a prominent environmentalist and advisor on conservation and sustainability initiatives."
+        },
+        {
+          "id": "2019-vandana-shiva",
+          "year": "2019",
+          "title": "Oneness vs. The 1%: Ecological Responses to the Threat for Planet and Humanity",
+          "speaker": "Vandana Shiva",
+          "bio": "Vandana Shiva, environmental activist and founder of Navdanya, is internationally recognized for advocating biodiversity and ecological sustainability."
+        },
+        {
+          "id": "2018-jean-dreze",
+          "year": "2018",
+          "title": "Economic Growth and Social Development",
+          "speaker": "Jean Drèze",
+          "bio": "Jean Drèze, development economist, is noted for his work on public policy and social rights in India."
+        },
+        {
+          "id": "2017-ashok-khosla",
+          "year": "2017",
+          "title": "The Machine Revolution: Fulfilling the Aspirations of Rural India",
+          "speaker": "Ashok Khosla",
+          "bio": "Ashok Khosla is Chairman of Development Alternatives Group and President of the Club of Rome, with extensive experience in environmental and sustainable development."
+        },
+        {
+          "id": "2016-ela-bhatt",
+          "year": "2016",
+          "title": "Living with Anubandh: A Way to Sustainability",
+          "speaker": "Ela Bhatt",
+          "bio": "Ela Bhatt, Gandhian and founder of SEWA, served as its general secretary and later as chancellor of Gujarat Vidyapith."
+        },
+        {
+          "id": "2015-bunker-roy",
+          "year": "2015",
+          "title": "The 21st Century Gandhian Model to Sustainability",
+          "speaker": "Bunker Roy",
+          "bio": "Sanjit “Bunker” Roy, founder of Barefoot College, is a social activist recognized for empowering rural communities through education."
+        },
+        {
+          "id": "2014-p-sainath",
+          "year": "2014",
+          "title": "Unequal is Unsustainable",
+          "speaker": "P. Sainath",
+          "bio": "P. Sainath, Founder Editor of the People’s Archive of Rural India (PARI), is an acclaimed rural journalist and Ramon Magsaysay Awardee."
+        }
+      ]
+    }
+  ]
+}

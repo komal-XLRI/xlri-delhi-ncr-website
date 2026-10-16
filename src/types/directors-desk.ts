@@ -1,3 +1,5 @@
+import type { PageMeta } from './page-copy';
+
 /**
  * "From the Director's Desk" content shape.
  *
@@ -28,6 +30,7 @@ export interface DirectorHallmark {
 }
 
 export interface DirectorsDesk {
+  readonly meta: PageMeta;
   readonly title: string;
   readonly director: {
     readonly name: string;

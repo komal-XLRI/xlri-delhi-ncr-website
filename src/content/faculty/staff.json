@@ -1,0 +1,368 @@
+{
+  "meta": {
+    "title": "Staff",
+    "description": "The staff of XLRI Delhi-NCR — administration, finance, IT, library, academic associates and campus support."
+  },
+  "breadcrumb": {
+    "section": "Faculty & Research",
+    "page": "Staff"
+  },
+  "title": "Staff",
+  "intro": [],
+  "labels": {
+    "showing": "Showing {shown} of {total} staff",
+    "clearSearch": "Clear search",
+    "searchPlaceholder": "Search name or role",
+    "noMatch": "No staff match your search."
+  },
+  "staff": [
+    {
+      "id": "fr-jaganathan-dayal",
+      "name": "Fr. Jaganathan Dayal",
+      "designation": "Administrator",
+      "photo": "/media/staff/fr-jaganathan-dayal.jpg"
+    },
+    {
+      "id": "fr-e-c-sebastian",
+      "name": "Fr. E.C. Sebastian",
+      "designation": "Finance Controller",
+      "photo": "/media/staff/fr-e-c-sebastian.jpg"
+    },
+    {
+      "id": "aayushi-arya",
+      "name": "Aayushi Arya",
+      "designation": "Executive Assistant to the Director",
+      "photo": "/media/staff/aayushi-arya.jpg"
+    },
+    {
+      "id": "ambika-moonka",
+      "name": "Ambika Moonka",
+      "designation": "Academic Administrative Officer",
+      "photo": "/media/staff/ambika-moonka.jpg"
+    },
+    {
+      "id": "ashwani-kumar",
+      "name": "Ashwani Kumar",
+      "designation": "Administrative Officer",
+      "photo": "/media/staff/ashwani-kumar.jpg"
+    },
+    {
+      "id": "abhinav-gupta",
+      "name": "Abhinav Gupta",
+      "designation": "Manager Corporate Relations",
+      "photo": "/media/staff/abhinav-gupta.jpg"
+    },
+    {
+      "id": "abhinav-masih",
+      "name": "Abhinav Masih",
+      "designation": "Chauffeur",
+      "photo": "/media/staff/abhinav-masih.jpg"
+    },
+    {
+      "id": "aman-wilmot-hilt",
+      "name": "Aman Wilmot Hilt",
+      "designation": "Accounts Executive",
+      "photo": "/media/staff/aman-wilmot-hilt.jpg"
+    },
+    {
+      "id": "ankit-giri",
+      "name": "Ankit Giri",
+      "designation": "IT Executive",
+      "photo": "/media/staff/ankit-giri.jpg"
+    },
+    {
+      "id": "anu-george",
+      "name": "Anu George",
+      "designation": "Research Coordinator (CGEIL)",
+      "photo": "/media/staff/anu-george.jpg"
+    },
+    {
+      "id": "abhijeet-singh",
+      "name": "Abhijeet Singh",
+      "designation": "Administrative Assistant",
+      "photo": "/media/staff/abhijeet-singh.jpg"
+    },
+    {
+      "id": "anil-kumar-dhankhar",
+      "name": "Anil Kumar Dhankhar",
+      "designation": "Accounts Assistant",
+      "photo": "/media/staff/anil-kumar-dhankhar.jpg"
+    },
+    {
+      "id": "akanksha-tripathi",
+      "name": "Akanksha Tripathi",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/akanksha-tripathi.jpg"
+    },
+    {
+      "id": "anil-kumar-t",
+      "name": "Anil Kumar T",
+      "designation": "Assistant Librarian",
+      "photo": "/media/staff/anil-kumar-t.jpg"
+    },
+    {
+      "id": "bishnu",
+      "name": "Bishnu",
+      "designation": "Assistant MEP Technician",
+      "photo": "/media/staff/bishnu.jpg"
+    },
+    {
+      "id": "chandraprakash-yadav",
+      "name": "Chandraprakash Yadav",
+      "designation": "IT Manager",
+      "photo": "/media/staff/chandraprakash-yadav.jpg"
+    },
+    {
+      "id": "chandrima-das-gupta",
+      "name": "Chandrima Das Gupta",
+      "designation": "Academic Associate cum Admin Support",
+      "photo": "/media/staff/chandrima-das-gupta.jpg"
+    },
+    {
+      "id": "divya-sarkar",
+      "name": "Divya Sarkar",
+      "designation": "Executive Assistant to the Dean (A&F)",
+      "photo": "/media/staff/divya-sarkar.jpg"
+    },
+    {
+      "id": "deepu-chandran",
+      "name": "Deepu Chandran",
+      "designation": "Hostel Maintenance Manager",
+      "photo": "/media/staff/deepu-chandran.jpg"
+    },
+    {
+      "id": "emmanuel",
+      "name": "Emmanuel",
+      "designation": "Chauffeur",
+      "photo": "/media/staff/emmanuel.jpg"
+    },
+    {
+      "id": "harbhajan-singh",
+      "name": "Harbhajan Singh",
+      "designation": "Chief Strategy & HR",
+      "photo": "/media/staff/harbhajan-singh.jpg"
+    },
+    {
+      "id": "indu-soren",
+      "name": "Indu Soren",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/indu-soren.jpg"
+    },
+    {
+      "id": "joshna-amarthala",
+      "name": "Joshna Amarthala",
+      "designation": "Assistant EA to the Director & HR Associate",
+      "photo": "/media/staff/joshna-amarthala.jpg"
+    },
+    {
+      "id": "james",
+      "name": "James",
+      "designation": "Fire & Safety In-Charge",
+      "photo": "/media/staff/james.jpg"
+    },
+    {
+      "id": "jyoti-jain",
+      "name": "Jyoti Jain",
+      "designation": "Admin & Exam Cell",
+      "photo": "/media/staff/jyoti-jain.jpg"
+    },
+    {
+      "id": "jyoti-gunjan",
+      "name": "Jyoti Gunjan",
+      "designation": "Accounts Assistant",
+      "photo": "/media/staff/jyoti-gunjan.jpg"
+    },
+    {
+      "id": "jerish-p-jose",
+      "name": "Jerish P Jose",
+      "designation": "Store Supervisor",
+      "photo": "/media/staff/jerish-p-jose.jpg"
+    },
+    {
+      "id": "jagmohan-yadav",
+      "name": "Jagmohan Yadav",
+      "designation": "Driver cum Gardener",
+      "photo": "/media/staff/jagmohan-yadav.jpg"
+    },
+    {
+      "id": "jasmine-mudgal",
+      "name": "Jasmine Mudgal",
+      "designation": "Programme Officer",
+      "photo": "/media/staff/jasmine-mudgal.jpg"
+    },
+    {
+      "id": "komal-sinha",
+      "name": "Komal Sinha",
+      "designation": "Full Stack Developer (Website & Digital platforms)",
+      "photo": "/media/staff/komal-sinha.jpg"
+    },
+    {
+      "id": "dr-k-p-singh",
+      "name": "Dr. K P Singh",
+      "designation": "Head Librarian",
+      "photo": "/media/staff/dr-k-p-singh.jpg"
+    },
+    {
+      "id": "mirza-reyaz-beg",
+      "name": "Mirza Reyaz Beg",
+      "designation": "IT Executive",
+      "photo": "/media/staff/mirza-reyaz-beg.jpg"
+    },
+    {
+      "id": "nupur-ghosh",
+      "name": "Nupur Ghosh",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/nupur-ghosh.jpg"
+    },
+    {
+      "id": "pravin-kumar-chauhan",
+      "name": "Pravin Kumar Chauhan",
+      "designation": "MEP Technician",
+      "photo": "/media/staff/pravin-kumar-chauhan.jpg"
+    },
+    {
+      "id": "piyush-ranjan-panigrahi",
+      "name": "Piyush Ranjan Panigrahi",
+      "designation": "IT Executive",
+      "photo": "/media/staff/piyush-ranjan-panigrahi.jpg"
+    },
+    {
+      "id": "prameela-merugu",
+      "name": "Prameela Merugu",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/prameela-merugu.jpg"
+    },
+    {
+      "id": "pritam-banerjee",
+      "name": "Pritam Banerjee",
+      "designation": "Research Associate",
+      "photo": "/media/staff/pritam-banerjee.jpg"
+    },
+    {
+      "id": "rishav-anand",
+      "name": "Rishav Anand",
+      "designation": "Head Finance & Accounts",
+      "photo": "/media/staff/rishav-anand.jpg"
+    },
+    {
+      "id": "rachna-tiwari",
+      "name": "Rachna Tiwari",
+      "designation": "Chief Operating Officer Entrepreneurship",
+      "photo": "/media/staff/rachna-tiwari.jpg"
+    },
+    {
+      "id": "rahul-sarkar",
+      "name": "Rahul Sarkar",
+      "designation": "Academic Administrative Officer",
+      "photo": "/media/staff/rahul-sarkar.jpg"
+    },
+    {
+      "id": "redhi-shaji-nair",
+      "name": "Redhi Shaji Nair",
+      "designation": "Nurse",
+      "photo": "/media/staff/redhi-shaji-nair.jpg"
+    },
+    {
+      "id": "sandeep-kumar",
+      "name": "Sandeep Kumar",
+      "designation": "Maintenance Manager",
+      "photo": "/media/staff/sandeep-kumar.jpg"
+    },
+    {
+      "id": "sagar-duggal",
+      "name": "Sagar Duggal",
+      "designation": "Office Boy",
+      "photo": "/media/staff/sagar-duggal.jpg"
+    },
+    {
+      "id": "shayan-e-mouzzam",
+      "name": "Shayan E Mouzzam",
+      "designation": "Program Coordinator (CGEIL)",
+      "photo": "/media/staff/shayan-e-mouzzam.jpg"
+    },
+    {
+      "id": "shikha-dhandhi",
+      "name": "Shikha Dhandhi",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/shikha-dhandhi.jpg"
+    },
+    {
+      "id": "swarna-kumari-pothuraju",
+      "name": "Swarna Kumari Pothuraju",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/swarna-kumari-pothuraju.jpg"
+    },
+    {
+      "id": "shera-masih",
+      "name": "Shera Masih",
+      "designation": "Supporting Staff",
+      "photo": "/media/staff/shera-masih.jpg"
+    },
+    {
+      "id": "surekha",
+      "name": "Surekha",
+      "designation": "Administrative Assistant & Academic Associate",
+      "photo": "/media/staff/surekha.jpg"
+    },
+    {
+      "id": "samatha-ekkirala",
+      "name": "Samatha Ekkirala",
+      "designation": "Hostel Administrator",
+      "photo": "/media/staff/samatha-ekkirala.jpg"
+    },
+    {
+      "id": "samuial",
+      "name": "Samuial",
+      "designation": "Supporting Staff",
+      "photo": "/media/staff/samuial.jpg"
+    },
+    {
+      "id": "steven-nitin-bara",
+      "name": "Steven Nitin Bara",
+      "designation": "Admission’s Office Assistant cum Administrative Assistant",
+      "photo": "/media/staff/steven-nitin-bara.jpg"
+    },
+    {
+      "id": "souparna-biswas",
+      "name": "Souparna Biswas",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/souparna-biswas.jpg"
+    },
+    {
+      "id": "shubham-kumar-singh",
+      "name": "Shubham Kumar Singh",
+      "designation": "Academic Associate",
+      "photo": "/media/staff/shubham-kumar-singh.jpg"
+    },
+    {
+      "id": "sourav-kumar-singh",
+      "name": "Sourav Kumar Singh",
+      "designation": "Accounts Executive",
+      "photo": "/media/staff/sourav-kumar-singh.jpg"
+    },
+    {
+      "id": "shivam-kumar-jha",
+      "name": "Shivam Kumar Jha",
+      "designation": "Media Executive",
+      "photo": "/media/staff/shivam-kumar-jha.jpg"
+    },
+    {
+      "id": "tuhina-nandi",
+      "name": "Tuhina Nandi",
+      "designation": "Teaching Assistant",
+      "photo": "/media/staff/tuhina-nandi.jpg"
+    },
+    {
+      "id": "vikrant-singh",
+      "name": "Vikrant Singh",
+      "designation": "Gym Trainer cum Admin Support",
+      "photo": "/media/staff/vikrant-singh.jpg"
+    },
+    {
+      "id": "vanshika-saluja",
+      "name": "Vanshika Saluja",
+      "designation": "Academic Associate cum PR Assistant",
+      "photo": "/media/staff/vanshika-saluja.jpg"
+    }
+  ]
+}

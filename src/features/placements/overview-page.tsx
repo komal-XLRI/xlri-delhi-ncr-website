@@ -47,7 +47,7 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
           <div className="mt-8 grid grid-cols-1 items-center gap-10 md:mt-10 lg:grid-cols-2 lg:gap-14">
             <div>
               <p className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
-                Corporate Relations &amp; Placement
+                {overview.eyebrow}
               </p>
               <h1
                 id="placements-heading"
@@ -88,7 +88,7 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
       <section aria-labelledby="seasons-heading" className="bg-surface-subtle">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <h2 id="seasons-heading" className={H2}>
-            Placement Reports
+            {overview.reportsHeading}
           </h2>
           <Rule className="mt-4" />
           <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -120,7 +120,7 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
                     ))}
                   </dl>
                   <span className="mt-auto inline-flex items-center gap-2 pt-7 font-semibold text-brand">
-                    Read the report
+                    {overview.readReportLabel}
                     <ArrowRightIcon
                       size={16}
                       aria-hidden="true"
@@ -144,7 +144,7 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-16">
             <div>
               <h2 id="recruiters-heading" className={H2}>
-                Recruiters
+                {overview.recruitersHeading}
               </h2>
               <Rule className="mt-4" />
               <p className="mt-6 leading-[1.75] text-ink">{overview.recruitersIntro}</p>
@@ -169,7 +169,7 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="latest-heading" className={H2}>
-                Recruitment Report &amp; Process
+                {overview.documentsHeading}
               </h2>
               <Rule className="mt-4" />
             </div>
@@ -177,14 +177,14 @@ export function PlacementsOverviewPage({ overview, final, summer, archive }: Pro
               href={routes.placements.reports}
               className="inline-flex items-center gap-2 font-semibold text-brand hover:text-brand-950"
             >
-              All {total} reports and audits
+              {overview.allDocumentsLabel.replace('{count}', String(total))}
               <ArrowRightIcon size={16} aria-hidden="true" />
             </Link>
           </div>
           <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
             {latest.map((doc) => (
               <li key={doc.id}>
-                <PdfCard doc={doc} />
+                <PdfCard doc={doc} viewLabel={overview.viewPdfLabel} />
               </li>
             ))}
           </ul>

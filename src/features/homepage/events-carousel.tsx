@@ -94,12 +94,15 @@ export function EventsCarousel({
   items,
   heading,
   intro,
+  itemActionLabel,
 }: {
   items: readonly EventItem[];
   /** The eyebrow and `h2`, server-rendered. Placed in the left column. */
   heading: ReactNode;
   /** The lead paragraph, server-rendered. Placed above the arrows on the right. */
   intro: ReactNode;
+  /** The decorative "read more" label at the foot of each card. */
+  itemActionLabel: string;
 }) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const [stopped, setStopped] = useState(false);
@@ -506,7 +509,7 @@ export function EventsCarousel({
                   aria-hidden="true"
                   className="events-more mt-auto flex items-center gap-2 pt-5 text-2xs font-semibold tracking-[0.16em] text-ink-muted uppercase"
                 >
-                  <span className="events-more-label">Read more</span>
+                  <span className="events-more-label">{itemActionLabel}</span>
                   <ArrowRightIcon size={14} className="events-arrow" />
                 </span>
               </div>

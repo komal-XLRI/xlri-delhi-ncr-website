@@ -42,8 +42,8 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Executive Education' },
-              { label: content.title },
+              { label: content.breadcrumb.section },
+              { label: content.breadcrumb.page },
             ]}
           />
 
@@ -76,16 +76,17 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
                   <span className="flex size-8 items-center justify-center rounded-full bg-accent-surface text-brand-950">
                     <ArrowRightIcon size={15} aria-hidden="true" className="rotate-90" />
                   </span>
-                  Explore programmes
+                  {content.exploreLabel}
                 </a>
                 <p className="flex items-center gap-4 text-sm text-ink-muted">
                   <span>
                     <span className="font-serif text-2xl text-brand">{upcoming.length}</span>{' '}
-                    upcoming
+                    {content.countLabels.upcoming}
                   </span>
                   <span aria-hidden="true" className="h-6 w-px bg-border-strong" />
                   <span>
-                    <span className="font-serif text-2xl text-brand">{ongoing}</span> on-going
+                    <span className="font-serif text-2xl text-brand">{ongoing}</span>{' '}
+                    {content.countLabels.ongoing}
                   </span>
                 </p>
               </div>
@@ -124,7 +125,7 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
       <section aria-labelledby="offerings-heading" className="bg-surface-subtle">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <h2 id="offerings-heading" className={H2}>
-            What we offer
+            {content.offeringsHeading}
           </h2>
           <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -157,11 +158,15 @@ export function EmdpPage({ content }: { content: EmdpContent }) {
       >
         <div className={`${MEASURE} py-14 md:py-20`}>
           <h2 id="programmes-heading" className={H2}>
-            Programmes
+            {content.programmesHeading}
           </h2>
           <span aria-hidden="true" className="mt-4 block h-[3px] w-10 bg-accent-surface" />
           <div className="mt-8">
-            <EmdpExplorer programmes={content.programmes} />
+            <EmdpExplorer
+              programmes={content.programmes}
+              tabLabels={content.tabs}
+              cardLabels={content.cardLabels}
+            />
           </div>
         </div>
       </section>

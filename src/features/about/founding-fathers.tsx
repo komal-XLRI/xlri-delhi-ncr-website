@@ -44,7 +44,11 @@ export function FoundingFathersPage({ content }: { content: FoundingFathers }) {
         </header>
 
         <div className="mt-8 md:mt-10">
-          <FoundingFathersGrid fathers={content.fathers} />
+          <FoundingFathersGrid
+            fathers={content.fathers}
+            cardLinkLabel={content.cardLinkLabel}
+            dialogSubtitle={content.dialogSubtitle}
+          />
         </div>
       </div>
     </article>

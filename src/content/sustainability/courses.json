@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "title": "Sustainability Courses",
+    "description": "Business and Sustainability — a core course at XLRI since 2007 — and the electives on the circular economy, responsible marketing, climate policy, grand challenges and sustainable finance."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Courses"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Courses",
+  "facts": [
+    { "value": "6", "label": "Courses on sustainability" },
+    { "value": "2007", "label": "Business and Sustainability taught since" },
+    { "value": "1st", "label": "In India to offer it as a core course" }
+  ],
+  "labels": {
+    "coreCourse": "Core course",
+    "since": "Since {year}"
+  },
+  "courses": [
+    {
+      "id": "business-and-sustainability",
+      "name": "Business and Sustainability",
+      "since": "2007",
+      "core": true,
+      "body": [
+        "The dynamics of global and national businesses are increasingly being influenced by sustainability concerns. Societies and businesses have become more aware about topics like environmental degradation, climate change, and resource scarcity in the last two decades.",
+        "The idea of ‘sustainability’ has emerged as an integrative principle that seeks to address challenges of human wellbeing while simultaneously ensuring that the capacity of natural environment to support life is not compromised. XLRI was first in India to offer it as a core course."
+      ]
+    },
+    {
+      "id": "circular-economy",
+      "name": "International Business Models for Circular Economy",
+      "body": [
+        "This course analyses the transformative impact of circular economy on international business models. As the world faces increasing environmental and resource scarcity challenges, the circular economy offers an alternative to the traditional linear “take, make, dispose” model by promoting resource efficiency, waste reduction, and closed-loop systems. This is not a course in economics; neither is it a course on ecosystem management.",
+        "In this course, students will gain an in-depth understanding of circular economy principles and how they can be integrated into business strategies across various industries and regions, including India. Students will analyze various strategies for developing more sustainable and resource-efficient business practices, fostering a shift towards circular economy models at the international level. Students will also learn about the future of lean thinking in the circular economy."
+      ]
+    },
+    {
+      "id": "marketing-for-a-sustainable-world",
+      "name": "Marketing for a Sustainable World",
+      "body": [
+        "The course aims to equip the students with the principles, frameworks, and real-world cases to practice responsible marketing and consumption. The focus is on understanding the broader societal, cultural, and individual implications of marketing activities while balancing for diversity, equity and inclusivity in marketing practices.",
+        "Students will critically analyze the impact of marketing practices on individuals, communities, and the broader societal context. We will explore key ethical considerations, consumer behavior, and the role of businesses in fostering responsible and equitable market practices."
+      ]
+    },
+    {
+      "id": "climate-change-and-environmental-policies",
+      "name": "Methods in Climate Change and Environmental Policies",
+      "body": [
+        "This course broadly touches upon at least five Sustainable Development Goals (SDGs):"
+      ],
+      "sdgs": [
+        { "goal": 13, "label": "Climate Action" },
+        { "goal": 7, "label": "Affordable and Clean Energy" },
+        { "goal": 8, "label": "Decent and Inclusive Work and Sustained Economic Growth" },
+        {
+          "goal": 9,
+          "label": "Build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation"
+        },
+        { "goal": 12, "label": "Responsible Consumption and Production" }
+      ]
+    },
+    {
+      "id": "strategies-for-grand-challenges",
+      "name": "Strategies for Grand Challenges",
+      "body": [
+        "This course is borne out of the belief and faith that understanding and resolving grand challenges will bring new learning to the future leaders. This entails a broader sense of strategy formulation and implementation as demonstrated through different forms of organizing.",
+        "For instance, how “inclusive and equitable quality education” (reflected in UN SDG 4) may require multiple strategies of resource provisioning, coordination and collaboration among stakeholders can be a critical source of learning and preparing managers for future challenges. Evidence suggests that such grand challenges extend scope of firms understood in traditional sense."
+      ]
+    },
+    {
+      "id": "sustainable-finance-and-climate-risk",
+      "name": "Sustainable Finance and Climate Risk",
+      "body": [
+        "This course introduces the concepts and principles of sustainable finance and climate risk, and helps learners develop the skills and knowledge to apply them in their professional or academic context.",
+        "Sustainable finance is the practice of incorporating environmental, social and governance (ESG) factors into financial decision-making, with the aim of enhancing long-term value creation, supporting social and environmental goals, and reducing negative externalities. Climate risk is the potential impact of climate change on the financial system, through physical and transition risks."
+      ]
+    }
+  ]
+}

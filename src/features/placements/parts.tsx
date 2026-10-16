@@ -48,7 +48,7 @@ export function Figure({ stat, className = '' }: { stat: PlacementStat; classNam
  * Process" tiles: the document kind set large and faint, the title, and the
  * action.
  */
-export function PdfCard({ doc }: { doc: PlacementDocument }) {
+export function PdfCard({ doc, viewLabel }: { doc: PlacementDocument; viewLabel: string }) {
   return (
     <a
       href={doc.href}
@@ -73,7 +73,7 @@ export function PdfCard({ doc }: { doc: PlacementDocument }) {
         {doc.title}
       </span>
       <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-brand">
-        View PDF
+        {viewLabel}
         <ArrowRightIcon
           size={14}
           aria-hidden="true"

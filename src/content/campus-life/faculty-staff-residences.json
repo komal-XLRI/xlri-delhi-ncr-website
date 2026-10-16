@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Faculty & Staff Residences",
+    "description": "Apartment blocks on the XLRI Delhi-NCR campus for faculty, staff and their families, among lawns, with a children’s play area."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Faculty & Staff Residences",
+  "intro": "Apartment blocks on campus are home to faculty, staff and their families, with open green space and a play area for children.",
+  "photos": [
+    {
+      "src": "/media/campus-life/residences/block-1.jpg",
+      "alt": "A residential apartment block on campus, with parking in front",
+      "width": 1200,
+      "height": 1216
+    },
+    {
+      "src": "/media/campus-life/residences/block-2.jpg",
+      "alt": "Residential blocks beside a landscaped lawn",
+      "width": 1200,
+      "height": 1216
+    },
+    {
+      "src": "/media/campus-life/residences/play-area.jpg",
+      "alt": "A children’s play area with slides and swings in front of the residences",
+      "width": 1600,
+      "height": 1069
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Living on campus",
+  "highlights": [
+    {
+      "icon": "home",
+      "title": "Apartments",
+      "text": "Multi-storey apartment blocks with bright, airy rooms and fitted kitchens."
+    },
+    {
+      "icon": "tree",
+      "title": "Green surroundings",
+      "text": "The blocks sit among lawns and young trees, within the 47-acre campus."
+    },
+    {
+      "icon": "users",
+      "title": "For families",
+      "text": "A children’s play area with slides and swings sits right outside the residences."
+    }
+  ],
+  "gallery": {
+    "eyebrow": "In pictures",
+    "title": "Inside the residences",
+    "photos": [
+      {
+        "src": "/media/campus-life/residences/living-room.jpg",
+        "alt": "A living room with marble floors and doors to the bedrooms",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/residences/kitchen.jpg",
+        "alt": "A fitted kitchen with granite counters and wooden cabinets",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/residences/bedroom.jpg",
+        "alt": "A bedroom with a large window",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/residences/wardrobe.jpg",
+        "alt": "A room with a built-in wardrobe and mirror",
+        "width": 1600,
+        "height": 1069
+      }
+    ]
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Gardens & Parks",
+      "description": "Lawns, avenues and walking paths across the 47-acre campus.",
+      "href": "/campus-life/gardens-parks"
+    },
+    {
+      "label": "Medical Facilities",
+      "description": "A qualified doctor on campus for everyday health concerns.",
+      "href": "/campus-life/medical-facilities"
+    },
+    {
+      "label": "Mobility Within Campus",
+      "description": "The free student shuttle, banks, gym and salon.",
+      "href": "/campus-life/mobility-within-campus"
+    }
+  ]
+}

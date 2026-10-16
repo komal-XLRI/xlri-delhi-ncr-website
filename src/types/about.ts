@@ -1,3 +1,5 @@
+import type { PageMeta } from './page-copy';
+
 /**
  * "About" landing page content shape. In `types/` so the feature can describe
  * its props without importing `content/` (§7).
@@ -35,6 +37,7 @@ export interface AboutLink {
 }
 
 export interface AboutPage {
+  readonly meta: PageMeta;
   readonly hero: {
     readonly title: string;
     readonly lead: string;
@@ -42,6 +45,8 @@ export interface AboutPage {
   };
   readonly intro: {
     readonly heading: string;
+    /** The link at the foot of each card, e.g. "Know More". */
+    readonly cardLinkLabel: string;
     readonly cards: readonly AboutIntroCard[];
   };
   readonly explore: {

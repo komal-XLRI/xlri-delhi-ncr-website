@@ -1,5 +1,8 @@
-import { visionMission } from '@/content/vision-mission';
+import visionMissionJson from '@/content/vision-mission.json';
 import type { VisionMission } from '@/types/vision-mission';
+import { fromJson } from '@/lib/validation/json-content';
+
+const visionMission = fromJson<VisionMission>(visionMissionJson);
 
 /**
  * "Vision & Mission" repository — the same seam as `services/homepage`.

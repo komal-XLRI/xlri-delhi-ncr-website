@@ -1,4 +1,4 @@
-import { about, academics, accreditations, events, hero, insights, news } from '@/content/homepage';
+import homepageJson from '@/content/homepage.json';
 import type {
   About,
   Academics,
@@ -8,6 +8,15 @@ import type {
   Insights,
   News,
 } from '@/types/homepage';
+import { fromJson } from '@/lib/validation/json-content';
+
+const about = fromJson<About>(homepageJson.about);
+const academics = fromJson<Academics>(homepageJson.academics);
+const accreditations = fromJson<Accreditations>(homepageJson.accreditations);
+const events = fromJson<Events>(homepageJson.events);
+const hero = fromJson<Hero>(homepageJson.hero);
+const insights = fromJson<Insights>(homepageJson.insights);
+const news = fromJson<News>(homepageJson.news);
 
 /**
  * Homepage repository.

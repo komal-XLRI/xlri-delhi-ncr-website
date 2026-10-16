@@ -1,3 +1,5 @@
+import type { PageMeta } from './page-copy';
+
 /**
  * "Heritage" content shape. In `types/` so the feature can describe its props
  * without importing `content/` (§7).
@@ -20,6 +22,7 @@ export interface TimelineEntry {
 }
 
 export interface Heritage {
+  readonly meta: PageMeta;
   readonly title: string;
   readonly founding: {
     /** The one-line fact, set in the green-ruled callout. */

@@ -35,7 +35,7 @@ export function MandatoryDisclosurePage({ content }: { content: MandatoryDisclos
         <p className="mt-4 text-lg font-semibold text-ink-strong md:text-xl">{content.subtitle}</p>
 
         <div className="mt-10 md:mt-12">
-          <DisclosureViewer documents={content.documents} />
+          <DisclosureViewer documents={content.documents} labels={content.viewer} />
         </div>
       </div>
     </article>

@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Campus Tour",
+    "description": "A video tour of the XLRI Delhi-NCR campus in 22 stops — the main gate, administration, classrooms, library, XCEED, Xavier Hall, hostel, mess and courts."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Campus Tour",
+  "intro": "Walk through XLRI Delhi-NCR in 22 short videos — from the main gate to the classrooms, library, hostel and courts.",
+  "channel": "https://www.youtube.com/@xlridelhi/videos",
+  "labels": {
+    "stopCaption": "Stop {number} · {area}",
+    "stopCount": "Stop {number} of {total}",
+    "youtube": "YouTube",
+    "upNext": "Up next",
+    "allStops": "Every stop",
+    "filterAll": "All",
+    "nowShowing": "Now showing",
+    "channelLink": "More videos on our YouTube channel"
+  },
+  "areas": [
+    {
+      "id": "arrival",
+      "label": "Arrival",
+      "stops": [
+        {
+          "youtubeId": "hIbCDtI54Ug",
+          "title": "Main Entrance Gate No. 1",
+          "poster": "/media/campus-tour/hIbCDtI54Ug.jpg"
+        },
+        {
+          "youtubeId": "Yk_zzN8FAMM",
+          "title": "Campus Outside",
+          "poster": "/media/campus-tour/Yk_zzN8FAMM.jpg"
+        }
+      ]
+    },
+    {
+      "id": "administration",
+      "label": "Administration",
+      "stops": [
+        {
+          "youtubeId": "ury7p39iZNg",
+          "title": "Administrative Block",
+          "poster": "/media/campus-tour/ury7p39iZNg.jpg"
+        },
+        {
+          "youtubeId": "E93RebCXxhU",
+          "title": "Administrative Building’s Entrance",
+          "poster": "/media/campus-tour/E93RebCXxhU.jpg"
+        },
+        {
+          "youtubeId": "VmW28erekZQ",
+          "title": "Director’s Office Area",
+          "poster": "/media/campus-tour/VmW28erekZQ.jpg"
+        },
+        {
+          "youtubeId": "vag9N0KLetU",
+          "title": "Syndicate Rooms",
+          "poster": "/media/campus-tour/vag9N0KLetU.jpg"
+        },
+        {
+          "youtubeId": "Pwwmhpu9FNU",
+          "title": "Administration Rooms",
+          "poster": "/media/campus-tour/Pwwmhpu9FNU.jpg"
+        },
+        {
+          "youtubeId": "rYn1Es0A75g",
+          "title": "Accounts Office",
+          "poster": "/media/campus-tour/rYn1Es0A75g.jpg"
+        }
+      ]
+    },
+    {
+      "id": "teaching-learning",
+      "label": "Teaching & Learning",
+      "stops": [
+        {
+          "youtubeId": "GVhitcAjONY",
+          "title": "Faculty Cabins",
+          "poster": "/media/campus-tour/GVhitcAjONY.jpg"
+        },
+        {
+          "youtubeId": "Q8W4Aey7no4",
+          "title": "Faculty Cabin Area",
+          "poster": "/media/campus-tour/Q8W4Aey7no4.jpg"
+        },
+        {
+          "youtubeId": "68NlWTEL6-A",
+          "title": "Classroom (MCR 07)",
+          "poster": "/media/campus-tour/68NlWTEL6-A.jpg"
+        },
+        {
+          "youtubeId": "NFwFglUhE5w",
+          "title": "Library",
+          "poster": "/media/campus-tour/NFwFglUhE5w.jpg"
+        },
+        {
+          "youtubeId": "5M1T_lqJ4O4",
+          "title": "XCEED",
+          "poster": "/media/campus-tour/5M1T_lqJ4O4.jpg"
+        },
+        {
+          "youtubeId": "19BmGyAZMsE",
+          "title": "Xavier Hall",
+          "poster": "/media/campus-tour/19BmGyAZMsE.jpg"
+        },
+        {
+          "youtubeId": "55b3i2Hgl-s",
+          "title": "Amphitheatre",
+          "poster": "/media/campus-tour/55b3i2Hgl-s.jpg"
+        }
+      ]
+    },
+    {
+      "id": "campus-living",
+      "label": "Campus Living",
+      "stops": [
+        {
+          "youtubeId": "gf-Q4h8z-pE",
+          "title": "Hostel Entrance",
+          "poster": "/media/campus-tour/gf-Q4h8z-pE.jpg"
+        },
+        {
+          "youtubeId": "29EaxpYfMN0",
+          "title": "Mess",
+          "poster": "/media/campus-tour/29EaxpYfMN0.jpg"
+        },
+        {
+          "youtubeId": "cAYwiWnKFAU",
+          "title": "Tennis Court",
+          "poster": "/media/campus-tour/cAYwiWnKFAU.jpg"
+        },
+        {
+          "youtubeId": "EU_UFRT7VRg",
+          "title": "Volleyball Court",
+          "poster": "/media/campus-tour/EU_UFRT7VRg.jpg"
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "label": "Campus Infrastructure",
+      "stops": [
+        {
+          "youtubeId": "UB65dKPK7dg",
+          "title": "Rooftop Solar Panels",
+          "poster": "/media/campus-tour/UB65dKPK7dg.jpg"
+        },
+        {
+          "youtubeId": "aZc7syYxJ_A",
+          "title": "Sewage Treatment Plant (STP)",
+          "poster": "/media/campus-tour/aZc7syYxJ_A.jpg"
+        },
+        {
+          "youtubeId": "79DmZW0NtDQ",
+          "title": "LT Room & DG",
+          "poster": "/media/campus-tour/79DmZW0NtDQ.jpg"
+        }
+      ]
+    }
+  ]
+}

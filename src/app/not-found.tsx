@@ -7,6 +7,7 @@ import { Link } from '@/components/ui/link';
 import { PRIMARY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
 import { OpenSearchButton } from '@/features/search/site-search';
+import { getNotFoundCopy } from '@/services/site';
 
 /**
  * 404.
@@ -51,8 +52,15 @@ import { OpenSearchButton } from '@/features/search/site-search';
  * Next serves this with a genuine HTTP 404 — it is `not-found.tsx`, not a route
  * called `/404`. That distinction matters for search engines: a "soft 404"
  * returning 200 gets the missing URL indexed as a real page.
+ *
+ * ## Copy
+ *
+ * The words are in `content/site.json` under `notFound`. The ghost "404"
+ * numeral stays here: it is decoration, hidden from assistive technology.
  */
-export default function NotFound() {
+export default async function NotFound() {
+  const copy = await getNotFoundCopy();
+
   /* Four is enough to be useful and few enough to scan. The tree's order is
      the institution's own priority, so the first four are the right four. */
   const destinations = PRIMARY_NAV.slice(0, 4);
@@ -74,18 +82,17 @@ export default function NotFound() {
 
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
           <div className="lg:col-span-7">
-            <p className="section-eyebrow">Error 404</p>
+            <p className="section-eyebrow">{copy.eyebrow}</p>
 
-            <h1 className="section-heading mt-5">This page could not be found</h1>
+            <h1 className="section-heading mt-5">{copy.heading}</h1>
 
             <p className="prose-justify mt-6 max-w-[34rem] text-lg leading-relaxed text-ink-muted">
-              The address may be mistyped, or the page may have been moved or retired. Everything
-              below is a good place to pick the thread back up.
+              {copy.intro}
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <NextLink href="/" className="cta-split">
-                <span className="cta-split-label">Back to the homepage</span>
+                <span className="cta-split-label">{copy.homeActionLabel}</span>
                 <span aria-hidden="true" className="cta-split-icon">
                   <ArrowRightIcon size={18} className="cta-split-arrow" />
                 </span>
@@ -93,7 +100,7 @@ export default function NotFound() {
 
               <OpenSearchButton className="inline-flex h-12 items-center gap-2 rounded-full border border-border-strong px-5 text-sm font-medium text-ink-strong transition-colors hover:border-brand hover:text-brand">
                 <SearchIcon size={18} aria-hidden="true" />
-                Search the site
+                {copy.searchActionLabel}
               </OpenSearchButton>
             </div>
           </div>
@@ -116,7 +123,7 @@ export default function NotFound() {
 
         {/* ---------------- where to go instead ---------------- */}
         <div className="mt-16 border-t border-border pt-10">
-          <h2 className="font-serif text-xl text-ink-strong">Main sections</h2>
+          <h2 className="font-serif text-xl text-ink-strong">{copy.sectionsHeading}</h2>
 
           <ul className="mt-7 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
             {destinations.map((item) => (

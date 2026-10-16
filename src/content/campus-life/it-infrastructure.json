@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "IT Infrastructure",
+    "description": "IT at XLRI Delhi-NCR: a gigabit fibre backbone, 1500 Mbps WAN, round-the-clock access from every room, SAP and video conferencing."
+  },
+  "eyebrow": "Campus Life",
+  "title": "IT Infrastructure",
+  "intro": "Information Technology is unarguably the defining force of this millennium, and XLRI is poised to break new ground as the most e-enabled Business School in India.",
+  "photos": [
+    {
+      "src": "/media/campus-life/it/workstations.jpg",
+      "alt": "Rows of networked workstations in a computer lab",
+      "width": 569,
+      "height": 379
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "At a glance",
+  "highlights": [
+    {
+      "icon": "path",
+      "title": "1500 Mbps",
+      "text": "Total WAN bandwidth, on a gigabit fibre backbone across the campus."
+    },
+    {
+      "icon": "home",
+      "title": "In every room",
+      "text": "Every student has a laptop or desktop in their room, with round-the-clock intranet and internet."
+    },
+    {
+      "icon": "sparkle",
+      "title": "SAP and more",
+      "text": "Web-hosted SAP for hands-on ERP, with SAS, Oracle, DB2 and other software."
+    },
+    {
+      "icon": "users",
+      "title": "Video conferencing",
+      "text": "The institute has its own video conferencing facility."
+    }
+  ],
+  "about": {
+    "eyebrow": "In detail",
+    "title": "Computing at XLRI",
+    "paragraphs": [
+      "The initial focus of being system friendly has now resulted in a virtual flood of e-initiatives. Beginning with the upgradation of infrastructure like marching towards Wi-Fi campus, supplemented by the introduction of new courses, workshops, seminars, live projects and setting up a Centre for e-Business that aims to facilitate industry-academia interface. Thus enabling the creation of whole new batch of tech-savvy managers with the skills to integrate technology solutions to the workplace environment has begun.",
+      "The computing resources at XLRI include latest servers and workstations, a state-of-the-art campus network and 1500 MBPS total bandwidth WAN connectivity. There are high-end servers, which host the XLRI web page, Mail and SNTP server, Oracle, Lotus notes, SAS, DB2 and other software.",
+      "Apart from value added learning of different packages, access to various database, electronic journal and software, XLRI is providing Web hosted SAP solution for hands on ERP through University Alliance programme.",
+      "XLRI has GIGABIT Fiber backbone throughout the campus to support the Institute’s local area network. Every student is equipped with a laptop/desktop in his/her room and has round the clock access to intranet as well as internet. Entire academic activities such as e-bulletin board, e-discussion forum, grades and feedback, on line leave application, course outline, electives, handouts, class schedule are made available to the faculty, students and the administration on their desktop. Apart from the individual nodes, more than 500 units of latest Pentium workstation, scanners, laser printers or desk jet printers, close circuit camera, multimedia projectors, digital camera to serve the desk need of faculty, student’s computer centre, classrooms, examination hall, auditorium, library and various administrative offices. The institute also has its own video conferencing facility through dedicated ISDN lines."
+    ]
+  },
+  "documentsTitle": "Policies",
+  "documents": [
+    {
+      "title": "XLRI IT Policy",
+      "href": "https://xlridelhi.ac.in/wp-content/uploads/2025/06/XLRI-IT-Policy.pdf"
+    },
+    {
+      "title": "XLRI Delhi-NCR CCTV Policy",
+      "href": "https://xlridelhi.ac.in/wp-content/uploads/2025/06/XLRI-Delhi-NCR-CCTV-Policy.pdf"
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Computer Labs",
+      "description": "Rows of workstations for hands-on work with business software.",
+      "href": "/campus-life/computer-labs"
+    },
+    {
+      "label": "Classrooms",
+      "description": "Tiered lecture theatres and case-discussion rooms.",
+      "href": "/campus-life/classrooms"
+    },
+    {
+      "label": "Studio",
+      "description": "A branded studio set for photos, videos and recordings.",
+      "href": "/campus-life/studio"
+    }
+  ]
+}

@@ -35,11 +35,11 @@ interface Props {
  * Server Component; no client JavaScript.
  */
 export function PlacementReportPage({ report, documents }: Props) {
-  const { headline, highlights, sectors, quote } = report;
-  const other =
-    report.season === 'final'
-      ? { label: 'Summer Internships 2025', href: routes.placements.summer }
-      : { label: 'Final Placements 2024–26', href: routes.placements.final };
+  const { headline, highlights, sectors, quote, documentsSection } = report;
+  const other = {
+    label: documentsSection.otherSeasonLabel,
+    href: report.season === 'final' ? routes.placements.summer : routes.placements.final,
+  };
 
   return (
     <article aria-labelledby="report-heading">
@@ -49,8 +49,8 @@ export function PlacementReportPage({ report, documents }: Props) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Placements', href: routes.placements.index },
-              { label: report.eyebrow },
+              { label: report.breadcrumb.section, href: routes.placements.index },
+              { label: report.breadcrumb.page },
             ]}
           />
 
@@ -141,14 +141,14 @@ export function PlacementReportPage({ report, documents }: Props) {
                     aria-hidden="true"
                     className="flex h-12 w-10 shrink-0 items-center justify-center rounded-[4px] bg-brand text-[0.6875rem] font-bold tracking-[0.06em] text-white"
                   >
-                    PDF
+                    {report.document.badge}
                   </span>
                   <span className="flex-1">
                     <span className="block text-xs font-semibold tracking-[0.14em] text-accent-700 uppercase">
-                      Full report
+                      {report.document.kicker}
                     </span>
                     <span className="mt-0.5 block text-base font-semibold text-ink-strong transition-colors duration-500 group-hover:text-brand">
-                      Download the report
+                      {report.document.action}
                     </span>
                   </span>
                   <span
@@ -239,13 +239,13 @@ export function PlacementReportPage({ report, documents }: Props) {
       <section aria-labelledby="documents-heading" className="bg-surface-subtle">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <h2 id="documents-heading" className={`${H2} text-center`}>
-            Recruitment Report &amp; Process
+            {documentsSection.heading}
           </h2>
           <Rule className="mx-auto mt-4" />
           <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
             {byYear(documents).map((doc) => (
               <li key={doc.id}>
-                <PdfCard doc={doc} />
+                <PdfCard doc={doc} viewLabel={documentsSection.viewPdfLabel} />
               </li>
             ))}
           </ul>
@@ -268,7 +268,7 @@ export function PlacementReportPage({ report, documents }: Props) {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-500 hover:border-accent-surface hover:text-brand"
             >
-              More details
+              {documentsSection.moreLabel}
               <ExternalIcon
                 size={14}
                 aria-hidden="true"

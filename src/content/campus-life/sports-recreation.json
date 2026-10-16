@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "Sports & Recreation",
+    "description": "Sports and recreation at XLRI Delhi-NCR: a gaming arena for table tennis, pool, carrom and chess; basketball, tennis and badminton courts; an air-conditioned gym; and Xavier’s Hall."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Sports & Recreation",
+  "intro": "The XLRI Delhi campus offers a variety of sports and recreational facilities, ensuring that students have ample opportunities to stay active and unwind.",
+  "facts": [
+    {
+      "value": "4",
+      "label": "Facilities"
+    },
+    {
+      "value": "4",
+      "label": "Indoor games"
+    },
+    {
+      "value": "200–250",
+      "label": "Seats in Xavier’s Hall"
+    }
+  ],
+  "services": [
+    {
+      "id": "gaming-arena",
+      "title": "Gaming Arena",
+      "category": "Indoor games",
+      "icon": "gamepad",
+      "description": "The gaming arena is equipped with several indoor game options, including a Table Tennis setup, a Pool Table, Carrom boards, and Chess boards. These facilities provide students with a space to relax and engage in recreational activities that suit a range of interests.",
+      "photos": [
+        {
+          "src": "/media/campus-life/sports/pool-table.jpg",
+          "alt": "Students around the pool table in the gaming arena",
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    },
+    {
+      "id": "sports-facilities",
+      "title": "Sports Facilities",
+      "category": "Courts",
+      "icon": "ball",
+      "description": "Outdoor courts for basketball and tennis sit between the campus buildings, a few steps from the hostel.",
+      "photos": [
+        {
+          "src": "/media/campus-life/sports/basketball-1.jpg",
+          "alt": "Students on the outdoor basketball court between the hostel blocks",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "src": "/media/campus-life/sports/basketball-2.jpg",
+          "alt": "A game of basketball under the hoop in front of the hostel",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "src": "/media/campus-life/sports/tennis.jpg",
+          "alt": "The outdoor tennis court at dusk, beside the academic block",
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    },
+    {
+      "id": "gymnasium",
+      "title": "Gymnasium",
+      "category": "Fitness",
+      "icon": "dumbbell",
+      "description": "The campus houses a fully functional, air-conditioned gymnasium. It is equipped with modern exercise equipment, allowing students to maintain their fitness routines through strength training, cardio exercises, and more.",
+      "photos": [
+        {
+          "src": "/media/campus-life/mobility/gym-1.jpg",
+          "alt": "Weight machines, benches and a dumbbell rack in the gym",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/mobility/gym-2.jpg",
+          "alt": "A row of treadmills and cross-trainers by the gym windows",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/mobility/gym-3.jpg",
+          "alt": "A leg-press machine and cable station in the gym",
+          "width": 1600,
+          "height": 1069
+        }
+      ]
+    },
+    {
+      "id": "xaviers-hall",
+      "title": "Xavier’s Hall",
+      "category": "Events & culture",
+      "icon": "users",
+      "description": "Xavier’s Hall is a large multipurpose venue with a seating capacity of 200-250 people. It serves as a central location for various events, including seminars, workshops, and cultural activities, enhancing the campus's vibrant community life.",
+      "photos": [
+        {
+          "src": "/media/campus-life/sports/badminton.jpg",
+          "alt": "Students playing badminton on the court laid out in Xavier’s Hall",
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    }
+  ],
+  "tourLink": {
+    "eyebrow": "See it for yourself",
+    "title": "Take the Campus Tour — 22 short videos"
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "SportsCom",
+      "description": "The umbrella body for all sports activities at XLRI — Northern Brawl, Ratanjee and more.",
+      "href": "/campus-life/societies#sportscom"
+    },
+    {
+      "label": "XLANC",
+      "description": "The XLRI Adventure and Nature Club, for the outdoors and an adrenaline rush.",
+      "href": "/campus-life/societies#xlanc"
+    },
+    {
+      "label": "Student Events",
+      "description": "Fests, tournaments and celebrations through the year.",
+      "href": "/campus-life/student-events"
+    }
+  ]
+}

@@ -7,6 +7,8 @@
  * describe its props without importing `content/` (§7).
  */
 
+import type { PageBreadcrumb, PageMeta } from './page-copy';
+
 export interface HealthcarePhoto {
   readonly id: string;
   readonly src: string;
@@ -20,6 +22,12 @@ export interface HealthcarePhoto {
 export type HealthcareActivityIcon = 'academic' | 'executive' | 'skills' | 'research';
 
 export interface HealthcareCentre {
+  /** The page's `<title>`, description and share image. */
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
+  /** Shown above the title. */
+  readonly eyebrow: string;
   readonly shortName: string;
   readonly title: string;
   readonly lead: string;
@@ -31,7 +39,12 @@ export interface HealthcareCentre {
     readonly ecosystem: {
       readonly heading: string;
       readonly traditional: { readonly label: string; readonly items: readonly string[] };
-      readonly growing: { readonly label: string; readonly items: readonly string[] };
+      readonly growing: {
+        readonly label: string;
+        readonly items: readonly string[];
+        /** A closing line after the list. */
+        readonly more: string;
+      };
     };
   };
   readonly vision: { readonly heading: string; readonly paragraphs: readonly string[] };

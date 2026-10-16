@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Classrooms",
+    "description": "Classrooms at XLRI Delhi-NCR: tiered lecture theatres for the case method and discussion rooms, each with projectors and boards."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Classrooms",
+  "intro": "Tiered lecture theatres for the case method, and rooms laid out around tables for group discussion — every one with projectors and boards at the front.",
+  "photos": [
+    {
+      "src": "/media/campus-life/classrooms/lecture-theatre.jpg",
+      "alt": "A tiered lecture theatre with curved desks facing twin projector screens and a green board",
+      "width": 1600,
+      "height": 1069
+    },
+    {
+      "src": "/media/campus-life/classrooms/tiered-rows.jpg",
+      "alt": "Rows of curved desks and leather chairs rising toward the back of a classroom",
+      "width": 1600,
+      "height": 1069
+    },
+    {
+      "src": "/media/campus-life/classrooms/discussion-room.jpg",
+      "alt": "A discussion room with round tables and chairs in front of a board and screen",
+      "width": 1600,
+      "height": 1069
+    },
+    {
+      "src": "/media/campus-life/classrooms/side-view.jpg",
+      "alt": "A classroom from the side, desks curving around the front",
+      "width": 1600,
+      "height": 1069
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Rooms for learning",
+  "highlights": [
+    {
+      "icon": "users",
+      "title": "Tiered lecture theatres",
+      "text": "Curved, rising rows keep every seat facing the front — built for the discussion of the case method."
+    },
+    {
+      "icon": "home",
+      "title": "Discussion rooms",
+      "text": "Round tables for group work, syndicate discussions and smaller classes."
+    },
+    {
+      "icon": "briefcase",
+      "title": "Teaching technology",
+      "text": "Twin projector screens, whiteboards and green boards in every room."
+    }
+  ],
+  "gallery": {
+    "eyebrow": "In pictures",
+    "title": "Around the classrooms",
+    "photos": [
+      {
+        "src": "/media/campus-life/classrooms/desks.jpg",
+        "alt": "Curved desks with ergonomic chairs",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/classrooms/front.jpg",
+        "alt": "The front of a classroom: green boards and a projector screen",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/classrooms/round-tables.jpg",
+        "alt": "Round tables in a discussion room",
+        "width": 1600,
+        "height": 1069
+      },
+      {
+        "src": "/media/campus-life/classrooms/back-rows.jpg",
+        "alt": "The back rows of a lecture theatre",
+        "width": 1600,
+        "height": 1069
+      }
+    ]
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Computer Labs",
+      "description": "Rows of workstations for hands-on work with business software.",
+      "href": "/campus-life/computer-labs"
+    },
+    {
+      "label": "IT Infrastructure",
+      "description": "A gigabit fibre backbone, 1500 Mbps of bandwidth and campus-wide access.",
+      "href": "/campus-life/it-infrastructure"
+    },
+    {
+      "label": "Conference Rooms",
+      "description": "Boardrooms and meeting spaces for faculty, guests and committees.",
+      "href": "/campus-life/conference-rooms"
+    }
+  ]
+}

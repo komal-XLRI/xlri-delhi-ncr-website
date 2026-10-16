@@ -1,3 +1,6 @@
+import noticesJson from '@/config/notices.json';
+import { fromJson } from '@/lib/validation/json-content';
+
 /**
  * Notices for the header ticker.
  *
@@ -9,6 +12,9 @@
  * Phase 6 moves this to a Payload `Notice` collection with `publishedAt` and
  * `expiresAt`; the shape below is deliberately the shape that collection will
  * have, so `services/` can swap the source without touching the component.
+ *
+ * The notices themselves are in `config/notices.json` — newest first; add,
+ * edit or remove entries there.
  *
  * Editorial guidance, worth enforcing in the CMS later:
  *   • keep labels under ~90 characters — a ticker is a headline, not a paragraph
@@ -26,36 +32,4 @@ export interface Notice {
   readonly isNew?: boolean;
 }
 
-export const notices: readonly Notice[] = [
-  {
-    id: 'notice-admissions-2027',
-    label: 'Admissions open for the 2027–29 postgraduate cohort',
-    href: '/admissions',
-    date: '2026-07-20',
-    isNew: true,
-  },
-  {
-    id: 'notice-placement-report',
-    label: 'Final Placement Report 2024–26 published',
-    href: '/placements/reports',
-    date: '2026-07-12',
-  },
-  {
-    id: 'notice-convocation',
-    label: '6th Annual Convocation — registration now open',
-    href: '/events/convocation',
-    date: '2026-07-05',
-  },
-  {
-    id: 'notice-mandatory-disclosure',
-    label: 'AICTE Mandatory Disclosure updated',
-    href: '/about/mandatory-disclosure',
-    date: '2026-06-28',
-  },
-  {
-    id: 'notice-edp-healthcare',
-    label: 'Executive Development Programme in Healthcare Strategy — applications close 30 August',
-    href: '/executive-education/healthcare-strategy-leadership',
-    date: '2026-06-15',
-  },
-];
+export const notices = fromJson<readonly Notice[]>(noticesJson);

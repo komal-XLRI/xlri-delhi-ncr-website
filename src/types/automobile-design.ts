@@ -8,6 +8,8 @@
  * importing `content/` (§7).
  */
 
+import type { PageBreadcrumb, PageMeta } from './page-copy';
+
 export interface IndeaImage {
   readonly src: string;
   readonly width: number;
@@ -47,6 +49,12 @@ export interface IndeaPressItem {
 }
 
 export interface AutomobileDesignCentre {
+  /** The page's `<title>`, description and share image. */
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
+  /** Shown before the short name above the title. */
+  readonly eyebrow: string;
   readonly shortName: string;
   readonly title: string;
   readonly statement: string;
@@ -63,7 +71,11 @@ export interface AutomobileDesignCentre {
     readonly ceremonyImage: IndeaImage;
     readonly pillar: { readonly caption: string; readonly image: IndeaImage };
     readonly paragraphs: readonly string[];
-    readonly studio: { readonly text: string; readonly activities: readonly string[] };
+    readonly studio: {
+      readonly heading: string;
+      readonly text: string;
+      readonly activities: readonly string[];
+    };
   };
   readonly academics: {
     readonly heading: string;

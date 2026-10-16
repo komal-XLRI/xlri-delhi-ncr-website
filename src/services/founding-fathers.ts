@@ -1,5 +1,8 @@
-import { foundingFathers } from '@/content/founding-fathers';
+import foundingFathersJson from '@/content/founding-fathers.json';
 import type { FoundingFathers } from '@/types/founding-fathers';
+import { fromJson } from '@/lib/validation/json-content';
+
+const foundingFathers = fromJson<FoundingFathers>(foundingFathersJson);
 
 /**
  * "Jesuit Founding Fathers" repository — the same seam as `services/homepage`.

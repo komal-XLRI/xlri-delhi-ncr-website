@@ -1,6 +1,7 @@
 import { Link } from '@/components/ui/link';
 import { POLICY_NAV, PRIMARY_NAV, UTILITY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
+import { getFooterCopy } from '@/services/site';
 
 /**
  * Site footer — derived from the same navigation tree as the header (§8.1).
@@ -35,8 +36,13 @@ import { site } from '@/config/site';
  * (An earlier version of this note claimed the footer also carried a
  * full-colour accreditation strip. It does not, and has not since the marks
  * moved to the header's first layer.)
+ *
+ * The footer's own words — the institute link, the audience heading, the
+ * rights line — are in `content/site.json`.
  */
-export function SiteFooter() {
+export async function SiteFooter() {
+  const copy = await getFooterCopy();
+
   return (
     <footer className="footer-band mt-auto text-ink-inverse">
       <div className="mx-auto w-full max-w-[80rem] px-6 py-14 md:px-8 md:py-16 lg:px-12">
@@ -73,7 +79,7 @@ export function SiteFooter() {
               variant="bare"
               className="mt-4 inline-flex items-center gap-1.5 text-sm text-ink-inverse/85 underline decoration-accent-surface decoration-2 underline-offset-4 hover:text-ink-inverse"
             >
-              Visit the institute site
+              {copy.instituteLinkLabel}
             </Link>
 
             {/*
@@ -84,7 +90,7 @@ export function SiteFooter() {
               its divider and margins with it.
             */}
             <h2 className="mt-9 text-2xs font-semibold tracking-[0.22em] text-ink-inverse/55 uppercase">
-              For
+              {copy.audienceHeading}
             </h2>
             {/*
               Inline and wrapped below `lg`, stacked above it. Five audience
@@ -185,7 +191,9 @@ export function SiteFooter() {
             </ul>
           </nav>
 
-          <p className="text-xs text-ink-inverse/55">© {site.name}. All rights reserved.</p>
+          <p className="text-xs text-ink-inverse/55">
+            © {site.name}. {copy.copyright}
+          </p>
         </div>
       </div>
     </footer>

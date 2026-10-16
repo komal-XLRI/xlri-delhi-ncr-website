@@ -57,6 +57,7 @@ export function EventsSection({ events }: { events: Events }) {
         <div className="reveal">
           <EventsCarousel
             items={events.items}
+            itemActionLabel={events.itemActionLabel}
             heading={
               /*
                 The heading alone. The eyebrow above it read "Latest events" —

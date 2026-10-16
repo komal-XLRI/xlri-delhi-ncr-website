@@ -1,0 +1,671 @@
+{
+  "about": {
+    "heading": "About XLRI",
+    "body": [
+      "For over 75 years XLRI, India’s first B-School founded in 1949, has had just one campus at Jamshedpur. With India slated to become the fifth largest economy in the world in the near future, there is a concomitant need for more responsible business leaders. Hence, a few years ago, XLRI took a strategic decision to expand its footprint across the country and decided to set up new campuses in North, West and Southern parts of India."
+    ],
+    "action": {
+      "label": "Learn more",
+      "href": "/about"
+    },
+    "purpose": {
+      "label": "Our purpose",
+      "lead": "Preparing students to make meaningful contributions to society",
+      "emphasis": "as engaged citizens."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be an institution of excellence nurturing responsible global leaders for the greater common good and a sustainable future."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "items": [
+        {
+          "text": "To disseminate knowledge in management through a portfolio of educational programs and publications",
+          "icon": "book"
+        },
+        {
+          "text": "To extend frontiers of knowledge through relevant and contextual research",
+          "icon": "compass"
+        },
+        {
+          "text": "To nurture responsive ethical leaders sensitive to environment and society",
+          "icon": "leaf"
+        },
+        {
+          "text": "To encourage critical thinking and continuous improvement",
+          "icon": "lightbulb"
+        },
+        {
+          "text": "To inculcate a culture of innovation and entrepreneurship",
+          "icon": "spark"
+        }
+      ]
+    },
+    "motto": [
+      {
+        "word": "For The",
+        "text": "Excellence with Integrity is the guiding motto of XLRI."
+      },
+      {
+        "word": "Greater",
+        "text": "Inspiring future business leaders to respond to the unmet needs of the society."
+      },
+      {
+        "word": "Good",
+        "text": "Translating dreams into reality and empowering sustainable careers."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/media/campus-academic-block.jpg",
+        "alt": "The academic block seen across the campus lawn.",
+        "caption": "The academic block, Jhajjar.",
+        "width": 1600,
+        "height": 1066,
+        "placeholder": false
+      },
+      {
+        "src": "/media/campus-gateway.jpg",
+        "alt": "The main entrance to the campus, seen along the landscaped approach road.",
+        "caption": "The main entrance, Jhajjar.",
+        "width": 1536,
+        "height": 1024,
+        "placeholder": false
+      },
+      {
+        "src": "/media/campus-students.jpg",
+        "alt": "Students gathered on the lawn outside the MDP block.",
+        "caption": "Between classes at the MDP block.",
+        "width": 1600,
+        "height": 1067,
+        "placeholder": false
+      },
+      {
+        "src": "/media/campus-dusk.jpg",
+        "alt": "The academic and residential blocks lit at dusk across the central lawn.",
+        "caption": "The campus at dusk.",
+        "width": 1448,
+        "height": 1086,
+        "placeholder": false
+      },
+      {
+        "src": "/media/campus-student-life.jpg",
+        "alt": "Students gathered at the XLRI lettering on the central lawn.",
+        "caption": "Students on the central lawn.",
+        "width": 1537,
+        "height": 1023,
+        "placeholder": false
+      },
+      {
+        "src": "/media/campus-aerial.jpg",
+        "alt": "Aerial view of the Jhajjar campus and its playing field.",
+        "caption": "The Jhajjar campus from the air.",
+        "width": 1600,
+        "height": 900,
+        "placeholder": false
+      }
+    ]
+  },
+  "academics": {
+    "eyebrow": "Our academics",
+    "heading": "Academic Programmes",
+    "programmes": [
+      {
+        "id": "programme-pgdm-bm",
+        "name": "PGDM (Business Management)",
+        "shortName": "PGDM–BM",
+        "category": "Postgraduate",
+        "description": "General management, for graduates entering the profession.",
+        "highlights": [
+          {
+            "id": "pgdm-bm-level",
+            "label": "Postgraduate diploma"
+          },
+          {
+            "id": "pgdm-bm-mode",
+            "label": "Full-time"
+          },
+          {
+            "id": "pgdm-bm-campus",
+            "label": "Jhajjar campus"
+          }
+        ],
+        "image": {
+          "src": "/media/campus-academic-block.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1066,
+          "placeholder": true
+        },
+        "action": {
+          "label": "Learn more",
+          "href": "/academics/programmes/pgdm-business-management"
+        }
+      },
+      {
+        "id": "programme-mba",
+        "name": "MBA",
+        "shortName": "MBA",
+        "category": "Postgraduate",
+        "description": "The Master of Business Administration, taught at Delhi-NCR.",
+        "highlights": [
+          {
+            "id": "mba-level",
+            "label": "Master’s degree"
+          },
+          {
+            "id": "mba-mode",
+            "label": "Full-time"
+          },
+          {
+            "id": "mba-campus",
+            "label": "Jhajjar campus"
+          }
+        ],
+        "image": {
+          "src": "/media/campus-students.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": true
+        },
+        "action": {
+          "label": "Learn more",
+          "href": "/academics/programmes/mba"
+        }
+      },
+      {
+        "id": "programme-pgdm-wp",
+        "name": "PGDM for Working Professionals",
+        "shortName": "PGDM–WP",
+        "category": "Postgraduate",
+        "description": "The postgraduate diploma, structured around a working week.",
+        "highlights": [
+          {
+            "id": "pgdm-wp-level",
+            "label": "Postgraduate diploma"
+          },
+          {
+            "id": "pgdm-wp-mode",
+            "label": "For working professionals"
+          },
+          {
+            "id": "pgdm-wp-campus",
+            "label": "Jhajjar campus"
+          }
+        ],
+        "image": {
+          "src": "/media/campus-dusk.jpg",
+          "alt": "",
+          "width": 1448,
+          "height": 1086,
+          "placeholder": true
+        },
+        "action": {
+          "label": "Learn more",
+          "href": "/academics/programmes/pgdm-working-professionals"
+        }
+      },
+      {
+        "id": "programme-pgdm-ie",
+        "name": "PGDM (Innovation & Entrepreneurship)",
+        "shortName": "PGDM–I&E",
+        "category": "Postgraduate",
+        "description": "Management for founders and those building new ventures.",
+        "highlights": [
+          {
+            "id": "pgdm-ie-level",
+            "label": "Postgraduate diploma"
+          },
+          {
+            "id": "pgdm-ie-focus",
+            "label": "Innovation & entrepreneurship"
+          },
+          {
+            "id": "pgdm-ie-campus",
+            "label": "Jhajjar campus"
+          }
+        ],
+        "image": {
+          "src": "/media/campus-student-life.jpg",
+          "alt": "",
+          "width": 1537,
+          "height": 1023,
+          "placeholder": true
+        },
+        "action": {
+          "label": "Learn more",
+          "href": "/academics/programmes/pgdm-innovation-entrepreneurship"
+        }
+      },
+      {
+        "id": "programme-pgp-hr",
+        "name": "PGP (Digital HR & People Analytics)",
+        "shortName": "PGP–HR",
+        "category": "Postgraduate",
+        "description": "Human resources where the discipline meets data.",
+        "highlights": [
+          {
+            "id": "pgp-hr-level",
+            "label": "Postgraduate programme"
+          },
+          {
+            "id": "pgp-hr-focus",
+            "label": "Digital HR & analytics"
+          },
+          {
+            "id": "pgp-hr-campus",
+            "label": "Jhajjar campus"
+          }
+        ],
+        "image": {
+          "src": "/media/campus-gateway.jpg",
+          "alt": "",
+          "width": 1536,
+          "height": 1024,
+          "placeholder": true
+        },
+        "action": {
+          "label": "Learn more",
+          "href": "/academics/programmes/pgp-digital-hr-people-analytics"
+        }
+      },
+      {
+        "id": "programme-fpm",
+        "name": "Fellow Programme (FPM)",
+        "shortName": "FPM",
+        "category": "Doctoral",
+        "description": "The doctoral programme, for those who intend to research and teach.",
+        "highlights": [
+          {
+            "id": "fpm-level",
+            "label": "Doctoral"
+          },
+          {
+            "id": "fpm-focus",
+            "label": "Research-led"
+          },
+          {
+            "id": "fpm-campus",
+            "label": "Jhajjar campus"
+          }
+        ],
+        "image": {
+          "src": "/media/campus-aerial.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 900,
+          "placeholder": true
+        },
+        "action": {
+          "label": "Learn more",
+          "href": "/academics/programmes/fpm"
+        }
+      }
+    ],
+    "action": {
+      "label": "Explore all programmes",
+      "href": "/academics"
+    }
+  },
+  "accreditations": {
+    "heading": "Our Accreditations",
+    "intro": "Recognised by the world’s leading accreditation bodies, reflecting our commitment to excellence in management education.",
+    "items": [
+      {
+        "id": "accreditation-aacsb",
+        "markId": "aacsb",
+        "description": "The global benchmark for excellence in business education.",
+        "action": {
+          "label": "Learn more",
+          "href": "/about/accreditation"
+        }
+      },
+      {
+        "id": "accreditation-amba",
+        "markId": "amba",
+        "description": "The international standard for postgraduate management programmes.",
+        "action": {
+          "label": "Learn more",
+          "href": "/about/accreditation"
+        }
+      },
+      {
+        "id": "accreditation-equis",
+        "markId": "equis",
+        "description": "Europe’s institutional accreditation for management schools.",
+        "action": {
+          "label": "Learn more",
+          "href": "/about/accreditation"
+        }
+      }
+    ]
+  },
+  "events": {
+    "heading": "Latest Events",
+    "intro": "Conferences, seminars, workshops, guest lectures and campus activities at XLRI Delhi-NCR.",
+    "action": {
+      "label": "View all events",
+      "href": "/events"
+    },
+    "items": [
+      {
+        "id": "event-staff-orientation",
+        "title": "Staff Orientation Programme XLRI Delhi-NCR",
+        "dateLabel": "08 Apr",
+        "dateTime": "2026-04-08",
+        "href": "/events/staff-orientation-programme-xlri-delhi-ncr",
+        "image": {
+          "src": "/media/events/staff-orientation.jpg",
+          "alt": "",
+          "width": 1024,
+          "height": 720,
+          "placeholder": false
+        }
+      },
+      {
+        "id": "event-annual-convocation",
+        "title": "5th Annual convocation – XLRI Delhi",
+        "dateLabel": "06 Apr",
+        "dateTime": "2026-04-06",
+        "href": "/events/5th-annual-convocation-xlri-delhi",
+        "image": {
+          "src": "/media/events/annual-convocation.jpg",
+          "alt": "",
+          "width": 1024,
+          "height": 733,
+          "placeholder": false
+        }
+      },
+      {
+        "id": "event-book-exhibition",
+        "title": "Mega Book Exhibition at XLRI Delhi NCR Library",
+        "dateLabel": "19 Mar",
+        "dateTime": "2026-03-19",
+        "href": "/events/mega-book-exhibition-at-xlri-delhi-ncr-library",
+        "image": {
+          "src": "/media/events/book-exhibition.jpg",
+          "alt": "",
+          "width": 1024,
+          "height": 1024,
+          "placeholder": false
+        }
+      },
+      {
+        "id": "event-evolvx",
+        "title": "EvolvX – XLRI’s Premier Startup Conclave (Edition 4)",
+        "dateLabel": "06 Mar",
+        "dateTime": "2026-03-06",
+        "href": "/events/evolvx-xlris-premier-startup-conclave-edition-4",
+        "image": {
+          "src": "/media/events/evolvx.jpg",
+          "alt": "",
+          "width": 969,
+          "height": 959,
+          "placeholder": false
+        }
+      },
+      {
+        "id": "event-x-celerate",
+        "title": "X-CELERATE 2026 — The XLRI Business Leadership Conclave",
+        "dateLabel": "27 Feb",
+        "dateTime": "2026-02-27",
+        "href": "/events/x-celerate-2026-the-xlri-business-leadership-conclave",
+        "image": {
+          "src": "/media/events/x-celerate.jpg",
+          "alt": "",
+          "width": 1024,
+          "height": 819,
+          "placeholder": false
+        }
+      },
+      {
+        "id": "event-maxi-mela",
+        "title": "MAXI Mela 2026",
+        "dateLabel": "21 Feb",
+        "dateTime": "2026-02-21",
+        "href": "/events/maxi-mela-2026",
+        "image": {
+          "src": "/media/events/maxi-mela.jpg",
+          "alt": "",
+          "width": 724,
+          "height": 1024,
+          "placeholder": false
+        }
+      }
+    ],
+    "itemActionLabel": "Read more"
+  },
+  "hero": {
+    "eyebrow": "Xavier School of Management",
+    "headline": "Welcome to",
+    "headlineEmphasis": "XLRI Delhi-NCR",
+    "lead": "Join us in shaping the future with excellence in education, leadership, and innovation. Explore our world-class programmes and vibrant campus life, designed to inspire and empower tomorrow’s leaders.",
+    "credentials": [
+      {
+        "id": "cred-legacy",
+        "value": "1949",
+        "label": "Founded — 77 years of teaching",
+        "href": "/about/heritage",
+        "icon": "landmark"
+      },
+      {
+        "id": "cred-ranking",
+        "value": "Top 10",
+        "label": "Management institute in India",
+        "href": "/about",
+        "icon": "award"
+      },
+      {
+        "id": "cred-accreditation",
+        "value": "Triple",
+        "label": "AACSB · AMBA · EQUIS accredited",
+        "href": "/about/accreditation",
+        "icon": "seal"
+      },
+      {
+        "id": "cred-recruiters",
+        "value": "100+",
+        "label": "Recruiting organisations",
+        "href": "/placements",
+        "icon": "briefcase"
+      },
+      {
+        "id": "cred-campus",
+        "value": "Delhi-NCR",
+        "label": "Jhajjar campus",
+        "href": "/campus-life",
+        "icon": "map-pin"
+      },
+      {
+        "id": "cred-alumni",
+        "value": "Global",
+        "label": "Alumni network",
+        "href": "/about",
+        "icon": "globe"
+      }
+    ],
+    "spotlight": [
+      {
+        "id": "spotlight-admissions",
+        "eyebrow": "Admissions 2027–29",
+        "title": "Applications open for the postgraduate cohort",
+        "excerpt": "Applications for the two-year postgraduate programmes are now open, with the first round of shortlisting scheduled for November.",
+        "href": "/admissions"
+      },
+      {
+        "id": "spotlight-placements",
+        "eyebrow": "Placements",
+        "title": "Final Placement Report 2024–26 published",
+        "excerpt": "The full report covering roles, sectors, and compensation across both postgraduate programmes is now available.",
+        "href": "/placements/reports"
+      },
+      {
+        "id": "spotlight-accreditation",
+        "eyebrow": "Accreditation",
+        "title": "Accredited by AACSB, AMBA and EQUIS",
+        "excerpt": "XLRI holds all three international accreditations — a standard met by a small fraction of business schools worldwide.",
+        "href": "/about/accreditation"
+      },
+      {
+        "id": "spotlight-convocation",
+        "eyebrow": "Campus",
+        "title": "6th Annual Convocation — registration now open",
+        "excerpt": "Graduands and their families can register for the convocation ceremony and view the schedule of events.",
+        "href": "/events/convocation"
+      }
+    ],
+    "spotlightActionLabel": "Read more",
+    "media": {
+      "src": "/media/hero-campus.jpg",
+      "width": 1280,
+      "height": 720,
+      "alt": "",
+      "placeholder": false,
+      "video": {
+        "mp4": "/media/hero-campus.mp4"
+      }
+    }
+  },
+  "insights": {
+    "testimonials": {
+      "eyebrow": "Student testimonials",
+      "heading": "Hear from our students",
+      "items": [
+        {
+          "id": "testimonial-dhruv-aggarwal",
+          "name": "Dhruv Aggarwal",
+          "quote": "Coming to XLRI was a completely different experience. Moving from an engineering background into the world of management, business discussions, and problem-solving was exciting and challenging at the same time.",
+          "photo": {
+            "src": "/media/testimonials/dhruv-aggarwal.jpg",
+            "alt": "Dhruv Aggarwal",
+            "width": 360,
+            "height": 480,
+            "placeholder": false
+          }
+        },
+        {
+          "id": "testimonial-ramanpreet-kaur",
+          "name": "Ramanpreet Kaur",
+          "quote": "If someone asked me today what life at XLRI has meant to me, I wouldn’t describe it as two years of management education.",
+          "photo": {
+            "src": "/media/testimonials/ramanpreet-kaur.jpg",
+            "alt": "Ramanpreet Kaur",
+            "width": 337,
+            "height": 480,
+            "placeholder": false
+          }
+        },
+        {
+          "id": "testimonial-ishita-delish",
+          "name": "Ishita Delish",
+          "quote": "The peer group here is genuinely something else. Everyone’s motivated, everyone’s trying and that energy is contagious.",
+          "photo": {
+            "src": "/media/testimonials/ishita-delish.jpg",
+            "alt": "Ishita Delish",
+            "width": 360,
+            "height": 480,
+            "placeholder": false
+          }
+        },
+        {
+          "id": "testimonial-ankita-kumari",
+          "name": "Ankita Kumari",
+          "quote": "I came in having already started a business but without really understanding what I was building. XLRI filled those gaps",
+          "truncated": true
+        }
+      ]
+    }
+  },
+  "news": {
+    "heading": "Latest News",
+    "intro": "Announcements, admissions notices and events from the Delhi-NCR campus.",
+    "action": {
+      "label": "All news",
+      "href": "/news"
+    },
+    "featured": [
+      {
+        "id": "jrd-tata-oration-32",
+        "category": "Events",
+        "title": "32nd JRD Tata Oration on Business Ethics",
+        "excerpt": "Mr Harish Bhat, Advisor and Director at the Tata Group, has agreed to deliver the Oration.",
+        "href": "/news/jrd-tata-oration-32",
+        "date": "2024-11-13",
+        "image": {
+          "src": "/media/campus-gateway.jpg",
+          "alt": "",
+          "width": 1536,
+          "height": 1024,
+          "placeholder": true
+        }
+      },
+      {
+        "id": "xat-2026-cutoffs",
+        "category": "Admissions",
+        "title": "XLRI Announces XAT 2026 Cutoffs Following Scorecard Release",
+        "href": "/news/xat-2026-cutoffs",
+        "date": "2026-01-30",
+        "image": {
+          "src": "/media/campus-students.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": true
+        }
+      },
+      {
+        "id": "global-banking-finance-2026",
+        "category": "Conferences",
+        "title": "Global Banking & Finance Conference — 2026",
+        "href": "/news/global-banking-finance-2026",
+        "date": "2025-08-31",
+        "image": {
+          "src": "/media/campus-academic-block.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1066,
+          "placeholder": true
+        }
+      }
+    ],
+    "items": [
+      {
+        "id": "edhrm-batch-21",
+        "category": "Admissions",
+        "title": "EDHRM — Batch 21 Admissions Open",
+        "href": "/news/edhrm-batch-21",
+        "date": "2026-05-26"
+      },
+      {
+        "id": "mdp-2026-27",
+        "category": "Executive Education",
+        "title": "MDP 2026–27 Registrations Open",
+        "href": "/news/mdp-2026-27",
+        "date": "2026-06-05"
+      },
+      {
+        "id": "aom-xlri-doctoral-colloquium-2026",
+        "category": "Research",
+        "title": "Submit your paper — AOM-XLRI Doctoral Colloquium 2026",
+        "href": "/news/aom-xlri-doctoral-colloquium-2026",
+        "date": "2026-02-01"
+      },
+      {
+        "id": "global-banking-finance-2026-list",
+        "category": "Conferences",
+        "title": "Global Banking & Finance Conference — 2026",
+        "href": "/news/global-banking-finance-2026",
+        "date": "2025-08-31"
+      },
+      {
+        "id": "xat-2026-cutoffs-list",
+        "category": "Admissions",
+        "title": "XLRI Announces XAT 2026 Cutoffs Following Scorecard Release",
+        "href": "/news/xat-2026-cutoffs",
+        "date": "2026-01-30"
+      }
+    ]
+  }
+}

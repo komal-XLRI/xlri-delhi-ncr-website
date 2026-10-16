@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Parking Areas",
+    "description": "Covered parking for cars and two-wheelers on the XLRI Delhi-NCR campus, under rows of solar-panel canopies."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Parking Areas",
+  "intro": "Covered parking for cars and two-wheelers, under long rows of solar-panel canopies that keep vehicles in the shade.",
+  "photos": [
+    {
+      "src": "/media/campus-life/parking/parking-1.jpg",
+      "alt": "Cars and scooters parked under two long rows of solar-panel canopies, with a bench beside the drive",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/media/campus-life/parking/parking-2.jpg",
+      "alt": "The drive between the solar canopies, with parked cars and motorbikes in the shade on both sides",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Parking on campus",
+  "highlights": [
+    {
+      "icon": "sun",
+      "title": "Under solar canopies",
+      "text": "Rows of solar panels roof the parking bays, shading the vehicles beneath them."
+    },
+    {
+      "icon": "car",
+      "title": "Cars and two-wheelers",
+      "text": "Cars, scooters and motorbikes park side by side under the same cover."
+    },
+    {
+      "icon": "leaf",
+      "title": "Part of a green campus",
+      "text": "The campus holds a platinum-level Green Building Certification, designed to IGBC guidelines."
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Mobility Within Campus",
+      "description": "The free student shuttle, banks, gym and salon.",
+      "href": "/campus-life/mobility-within-campus"
+    },
+    {
+      "label": "Campus Tour",
+      "description": "Walk the campus in 22 short videos.",
+      "href": "/campus-life/campus-tour"
+    },
+    {
+      "label": "Sustainability",
+      "description": "How XLRI Delhi-NCR has built sustainability into campus life.",
+      "href": "/sustainability/history"
+    }
+  ]
+}

@@ -6,15 +6,10 @@ import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getHealthcareCentre } from '@/services/centres';
 
-export const metadata: Metadata = buildMetadata(site, {
-  title: 'XLRI Centre for Healthcare Management',
-  description:
-    'XLRI’s Centre for Healthcare Management partners with CMC Vellore, SRIHER, St. John’s and other leading institutions on academic, executive education and skill development programmes and collaborative research in healthcare management.',
-  path: routes.research.centre('healthcare-management'),
-  image: '/media/centres/healthcare-management/cmc-vellore.jpg',
-  imageAlt:
-    'XLRI and Christian Medical College Vellore representatives with the signed partnership documents',
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getHealthcareCentre();
+  return buildMetadata(site, { ...meta, path: routes.research.centre('healthcare-management') });
+}
 
 export default async function HealthcareCentreRoute() {
   const centre = await getHealthcareCentre();

@@ -176,7 +176,7 @@ export function AcademicsCarousel({ programmes }: { programmes: readonly Academi
                     aria-hidden="true"
                     className="mt-4 flex items-center gap-2 text-2xs font-semibold tracking-[0.12em] text-brand uppercase"
                   >
-                    Learn more
+                    {programme.action.label}
                     <ArrowRightIcon
                       size={15}
                       className="transition-transform duration-300 group-hover:translate-x-1"

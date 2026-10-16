@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "Sustainability Research Projects",
+    "description": "Sustainability research by XLRI faculty — the Dalma eco-sensitive zone plan, circular economy work with MeitY and GIZ, sustainable dairy and agriculture, and organisational ethics culture."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Research Projects"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Research Projects",
+  "facts": {
+    "projects": "Research projects",
+    "researchers": "Faculty researchers",
+    "partners": "Sponsors and partners"
+  },
+  "labels": {
+    "profile": "Profile"
+  },
+  "projects": [
+    {
+      "id": "dalma-zonal-master-plan",
+      "title": "Zonal Master Plan for the Eco-sensitive Zone of the Dalma Wildlife Sanctuary",
+      "theme": "Biodiversity",
+      "summary": "To prepare a Zonal Master Plan for the Eco-sensitive Zone of the Dalma Wildlife Sanctuary.",
+      "partners": { "label": "Sponsored by", "names": ["Government of Jharkhand", "MoEFCC"] },
+      "lead": { "teamId": "tata-l-raghu-ram", "role": "Principal investigator" }
+    },
+    {
+      "id": "meity-circular-economy-action-plan",
+      "title": "Action Plan for Circular Economy in the Electronics and Electrical Sector",
+      "theme": "Circular economy",
+      "summary": "Technical support to the Ministry of Electronics and Information Technology for the implementation of the Action Plan for Circular Economy in the Electronics and Electrical Sector under the EU Resource Efficiency Initiative.",
+      "partners": {
+        "label": "For",
+        "names": [
+          "Ministry of Electronics and Information Technology (MeitY)",
+          "EU Resource Efficiency Initiative"
+        ]
+      },
+      "lead": { "teamId": "kalyan-bhaskar", "role": "Principal investigator" }
+    },
+    {
+      "id": "sustainable-dairy-and-agriculture",
+      "title": "Sustainable dairy farming and sustainable agriculture",
+      "theme": "Agriculture",
+      "summary": "Several multi-year projects with partners from other Indian and Canadian universities.",
+      "period": "Multi-year",
+      "partners": { "label": "Funded by", "names": ["ICSSR", "IC-IMPACTS"] },
+      "lead": { "teamId": "sanchayan-nath", "role": "Researcher" }
+    },
+    {
+      "id": "critical-minerals-eee",
+      "title": "Critical minerals and the circular economy in the EEE sector in India",
+      "theme": "Circular economy",
+      "summary": "A project on critical minerals and the circular economy in the EEE (Electrical and Electronics) sector in India.",
+      "period": "October 2022 – October 2023",
+      "partners": { "label": "For", "names": ["GIZ India", "MeitY"] },
+      "lead": { "teamId": "kalyan-bhaskar", "role": "Researcher" }
+    },
+    {
+      "id": "organizational-ethics-culture",
+      "title": "Unfolding Organizational Ethics Culture (OEC)",
+      "theme": "Business ethics",
+      "summary": "A research project on Unfolding Organizational Ethics Culture (OEC) at Tata Hitachi in 2016, and a similar project with the Tinplate Company of India Ltd (TCIL) in 2019.",
+      "period": "2016 and 2019",
+      "partners": {
+        "label": "With",
+        "names": ["Tata Hitachi", "Tinplate Company of India Ltd (TCIL)"]
+      },
+      "lead": {
+        "name": "JRD Tata Chair of Business Ethics and Tata XLRI Ethics Research Centre (TXLERC)",
+        "role": "Completed by"
+      }
+    }
+  ]
+}
