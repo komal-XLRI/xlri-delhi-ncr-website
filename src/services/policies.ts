@@ -5,7 +5,7 @@ import type { Policies, PolicyId, ResolvedPolicyPage } from '@/types/policies';
 const stored = fromJson<Policies>(policiesJson);
 
 /**
- * Website policies repository — Privacy, Terms & Conditions, Copyright, Help
+ * Website policies repository — Privacy, Terms & Conditions, Help
  * and the Sitemap's copy, from `content/policies.json`.
  */
 export async function getPolicy(id: PolicyId): Promise<ResolvedPolicyPage> {

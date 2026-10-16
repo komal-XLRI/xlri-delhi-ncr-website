@@ -64,7 +64,7 @@ export interface FooterCopy {
       readonly href: string;
     }[];
   };
-  /** Follows "© {year} {site name}." in the bottom bar. */
+  /** The bottom bar's notice: "Copyright @ {year}, XLRI. All rights reserved." */
   readonly copyright: string;
 }
 

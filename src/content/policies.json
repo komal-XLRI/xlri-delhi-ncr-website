@@ -14,23 +14,250 @@
     "privacy": {
       "meta": {
         "title": "Privacy Policy",
-        "description": "How the XLRI Delhi-NCR website handles information about its visitors."
+        "description": "How XLRI – Xavier School of Management collects, uses and protects personal information: log data, cookies, service providers, security and children’s privacy."
       },
-      "title": "Privacy Policy"
+      "title": "Privacy Policy",
+      "preamble": [
+        "XLRI - Xavier School of Management built the XLRI app as a Free app. This SERVICE is provided by XLRI - Xavier School of Management at no cost and is intended for use as is.",
+        "This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.",
+        "If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.",
+        "The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at XLRI unless otherwise defined in this Privacy Policy."
+      ],
+      "sections": [
+        {
+          "heading": "Information Collection and Use",
+          "paragraphs": [
+            "For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to Name, Email, SID, FID, NTS ID. The information that we request will be retained by us and used as described in this privacy policy.",
+            "The app does use third-party services that may collect information used to identify you.",
+            "Link to the privacy policy of third-party service providers used by the app"
+          ]
+        },
+        {
+          "heading": "Log Data",
+          "paragraphs": [
+            "We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics."
+          ]
+        },
+        {
+          "heading": "Cookies",
+          "paragraphs": [
+            "Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.",
+            "This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service."
+          ]
+        },
+        {
+          "heading": "Service Providers",
+          "blocks": [
+            {
+              "kind": "p",
+              "text": "We may employ third-party companies and individuals due to the following reasons:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "To facilitate our Service;",
+                "To provide the Service on our behalf;",
+                "To perform Service-related services; or",
+                "To assist us in analyzing how our Service is used."
+              ]
+            },
+            {
+              "kind": "p",
+              "text": "We want to inform users of this Service that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose."
+            }
+          ]
+        },
+        {
+          "heading": "Security",
+          "paragraphs": [
+            "We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security."
+          ]
+        },
+        {
+          "heading": "Links to Other Sites",
+          "paragraphs": [
+            "This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services."
+          ]
+        },
+        {
+          "heading": "Children’s Privacy",
+          "paragraphs": [
+            "These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do the necessary actions."
+          ]
+        },
+        {
+          "heading": "Changes to This Privacy Policy",
+          "paragraphs": [
+            "We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.",
+            "This policy is effective as of 2022-12-01"
+          ]
+        },
+        {
+          "heading": "Contact Us",
+          "paragraphs": [
+            "If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at abin@xlri.ac.in."
+          ]
+        }
+      ]
     },
     "terms": {
       "meta": {
         "title": "Terms & Conditions",
-        "description": "The terms on which the XLRI Delhi-NCR website and its content are provided."
+        "description": "XLRI’s terms for online payments: the billing entity, refunds, cancellation, batch transfers, receipts, the data collected in a transaction, and disclaimer."
       },
-      "title": "Terms & Conditions"
-    },
-    "copyright": {
-      "meta": {
-        "title": "Copyright Policy",
-        "description": "How the text, photographs and documents on the XLRI Delhi-NCR website may be reproduced."
-      },
-      "title": "Copyright Policy"
+      "title": "Terms & Conditions",
+      "preamble": [
+        "The online payment gateway is introduced solely to ease the payment process. While transacting through the online payment gateway, Xavier Labour Relations Institute (XLRI) and XLEAD – XLRI Leadership Education and Development (hereinafter collectively referred to as “XLRI”) do not charge any extra amount nor derive any additional benefit from such transactions. XLRI only charges the requisite fees and applicable taxes. Any kind of service, processing, or transaction charges imposed by the bank or payment gateway shall be borne entirely by the student/participant."
+      ],
+      "sections": [
+        {
+          "heading": "Billing Entity",
+          "paragraphs": [
+            "Please note that all payments made through the portal shall reflect under the legal and billing names:"
+          ],
+          "points": [
+            "Xavier Labour Relations Institute (XLRI)",
+            "XLEAD – XLRI Leadership Education and Development"
+          ]
+        },
+        {
+          "heading": "Refund Policy",
+          "blocks": [
+            {
+              "kind": "h",
+              "text": "1. Refunds in Case of Excess or Duplicate Payments"
+            },
+            {
+              "kind": "p",
+              "text": "In case of excess or multiple payments made due to connectivity or technical issues, the extra amount, if any, will be refunded to the originating account after proper verification and bank confirmation. This process may take up to 30 working days, provided the student/applicant submits a formal request with transaction details within 2 working days of the transaction. Transaction or bank charges, if any, shall be borne by the payee."
+            },
+            {
+              "kind": "h",
+              "text": "2. Refund on Cancellation of Enrollment"
+            },
+            {
+              "kind": "p",
+              "text": "Refunds for cancellation of enrolment in a program will be considered only if the request is made:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Before the closure of registration, or",
+                "At least 14 working days before the date of course commencement,"
+              ]
+            },
+            {
+              "kind": "p",
+              "text": "whichever is earlier."
+            },
+            {
+              "kind": "p",
+              "text": "In such cases:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "A processing fee of ₹5,000 + applicable taxes (for Indian participants) or",
+                "USD 125 + applicable taxes (for international participants) will be deducted."
+              ]
+            },
+            {
+              "kind": "p",
+              "text": "No refund will be entertained after the program has started."
+            },
+            {
+              "kind": "p",
+              "text": "Note: If the payment was made on a partner portal and not yet transferred to XLRI, XLRI shall have no role in the refund process."
+            },
+            {
+              "kind": "h",
+              "text": "3. Refund in Case of XLRI-Initiated Cancellation"
+            },
+            {
+              "kind": "p",
+              "text": "If XLRI cancels a program due to insufficient enrolment, faculty unavailability, or unforeseen reasons, the entire fee will be refunded to the participant within 20 working days of a valid refund request."
+            },
+            {
+              "kind": "h",
+              "text": "4. Refund Due to Rescheduling"
+            },
+            {
+              "kind": "p",
+              "text": "If the program schedule is changed after a participant has paid and registered, and the new schedule is not acceptable to the participant, a full fee refund will be processed within 20 working days upon a valid request."
+            },
+            {
+              "kind": "p",
+              "text": "Exceptional Cases: In rare, exceptional scenarios, refund requests may be considered on a case-by-case basis, subject to the approval of the Associate Dean of VIL and the Program Director."
+            }
+          ]
+        },
+        {
+          "heading": "Cancellation Policy",
+          "paragraphs": [
+            "As an educational institution, XLRI does not permit cancellation of registration once a candidate has enrolled in a program and the course has commenced.",
+            "Cancellation-related refund requests will only be entertained if they meet the criteria outlined in the Refund Policy above."
+          ]
+        },
+        {
+          "heading": "Batch Transfer Policy",
+          "paragraphs": [
+            "Requests for batch transfer will be entertained under the following conditions:"
+          ],
+          "points": [
+            "The same program must be scheduled again through the same technical partner within the next 6 months of the last session of the current program.",
+            "Requests must be made within 4 weeks of the program start date and approved by the Program Director.",
+            "Only one batch transfer is permitted per participant.",
+            "A non-refundable administrative fee of ₹15,000 + applicable taxes will apply.",
+            "Any increase in program fees for the new batch must be borne by the participant.",
+            "If a participant has already availed a batch transfer, no refund or additional transfer shall be permitted."
+          ]
+        },
+        {
+          "heading": "Receipts & Acknowledgments",
+          "paragraphs": [
+            "XLRI does not issue hard copies of payment receipts for online transactions. Students/participants can:"
+          ],
+          "points": [
+            "Download the money receipt using their login credentials, once the payment is verified and credited to the XLRI account.",
+            "In case of difficulty, request an electronic copy by contacting the concerned authority via email."
+          ]
+        },
+        {
+          "heading": "Privacy Policy",
+          "blocks": [
+            {
+              "kind": "p",
+              "text": "This privacy policy is designed to protect the individual's privacy and outlines the data XLRI collects during the online transaction process."
+            },
+            {
+              "kind": "h",
+              "text": "Information Collected"
+            },
+            {
+              "kind": "p",
+              "text": "XLRI collects technical and routing information, including but not limited to:"
+            },
+            {
+              "kind": "list",
+              "items": ["Candidate Name", "Email ID", "Mobile Number", "Program Enrolled"]
+            },
+            {
+              "kind": "p",
+              "text": "This information is used solely for verification, authentication, and transaction reconciliation. XLRI does not store credit/debit card or net banking details. These are handled securely by the payment gateway and banking partner."
+            },
+            {
+              "kind": "p",
+              "text": "This policy is subject to change. Please check this page periodically for updates."
+            }
+          ]
+        },
+        {
+          "heading": "Disclaimer",
+          "paragraphs": [
+            "XLRI is not responsible for failed or incomplete transactions due to connectivity issues or technical errors on the part of the user or bank. All disputes are subject to the jurisdiction of Jamshedpur courts only."
+          ]
+        }
+      ]
     },
     "help": {
       "meta": {

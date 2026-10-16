@@ -209,7 +209,6 @@ export const routes = {
   policies: {
     privacy: '/policies/privacy',
     terms: '/policies/terms',
-    copyright: '/policies/copyright',
     hyperlinking: '/policies/hyperlinking',
     disclaimer: '/policies/disclaimer',
     accessibility: '/policies/accessibility',
