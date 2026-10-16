@@ -1064,7 +1064,7 @@
     "committee": {
       "meta": {
         "title": "Committee & Personnel · Library",
-        "description": "The XLRI Delhi-NCR Library Committee and library personnel."
+        "description": "The XLRI Delhi-NCR Library Committee and library staff — who oversees the library’s collections and services, and who to ask for help."
       },
       "title": "Committee & Personnel",
       "intro": "The Library Committee, and the librarians who run the Learning Resource Centre.",
@@ -1082,7 +1082,7 @@
     "contact": {
       "meta": {
         "title": "Contact · Library",
-        "description": "How to reach the XLRI Delhi-NCR Library."
+        "description": "How to reach the XLRI Delhi-NCR Library: opening hours, email and phone, and the library team at the Jhajjar campus."
       },
       "title": "Contact",
       "intro": "Write to the library, call from a campus phone, or come in — the ground floor is open 24×7.",
@@ -1095,7 +1095,8 @@
     "collection": {
       "meta": {
         "title": "{label} · Library",
-        "description": "{label} at the XLRI Delhi-NCR Library: {items}."
+        "description": "{label} at the XLRI Delhi-NCR Library: {items}.",
+        "andMore": "and more"
       },
       "countLabel": "resources",
       "signInNote": "opens with your XLRI account (OpenAthens), on or off campus",

@@ -7,8 +7,13 @@ import { buildMetadata } from '@/lib/seo/metadata';
 import { getPolicy } from '@/services/policies';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { meta } = await getPolicy('copyright');
-  return buildMetadata(site, { ...meta, path: routes.policies.copyright });
+  const { meta, sections } = await getPolicy('copyright');
+  // Not listed in search while it has no text yet (see `emptyNote`).
+  return buildMetadata(site, {
+    ...meta,
+    path: routes.policies.copyright,
+    noIndex: !sections?.length,
+  });
 }
 
 export default async function CopyrightPolicyRoute() {

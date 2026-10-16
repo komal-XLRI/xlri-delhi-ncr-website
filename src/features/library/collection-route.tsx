@@ -22,9 +22,18 @@ export async function collectionMetadata(id: string): Promise<Metadata> {
   if (!collection) throw new Error(`library.json: no collection "${id}"`);
   // The title and description are templates in `pages.collection.meta`.
   const { meta } = content.pages.collection;
+  // As many names as fit a search result's description, then "and more".
+  const names: string[] = [];
+  for (const item of collection.items) {
+    if ([...names, item.name].join(', ').length > 80) break;
+    names.push(item.name);
+  }
   const values = {
     label: collection.label,
-    items: collection.items.map((item) => item.name).join(', '),
+    items:
+      names.length < collection.items.length
+        ? `${names.join(', ')} ${meta.andMore}`
+        : names.join(', '),
   };
   return buildMetadata(site, {
     title: fill(meta.title, values),

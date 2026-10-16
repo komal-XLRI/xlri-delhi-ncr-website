@@ -1,8 +1,11 @@
 import Image from 'next/image';
 
+import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRightIcon } from '@/components/ui/icon';
+import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
+import { person } from '@/lib/seo/structured-data';
 import type { BiographyBlock, FacultyProfile } from '@/types/faculty';
 
 const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
@@ -58,6 +61,20 @@ export function FacultyProfilePage({
       data-motif="profile"
       className="relative isolate overflow-clip bg-surface"
     >
+      <JsonLd
+        data={person(site.url, {
+          name: member.name,
+          path:
+            listing.href === routes.faculty.adjunct
+              ? routes.faculty.adjunctProfile(member.id)
+              : routes.faculty.fullTimeProfile(member.id),
+          jobTitle: member.designation,
+          image: member.photo,
+          email: member.email,
+          knowsAbout: member.areas,
+          sameAs: links.map((link) => link.href),
+        })}
+      />
       <div className={`${MEASURE} pt-8 pb-16 md:pt-10 md:pb-24`}>
         <Breadcrumbs
           items={[

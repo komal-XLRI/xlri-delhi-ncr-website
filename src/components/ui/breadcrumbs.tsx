@@ -1,6 +1,9 @@
 import NextLink from 'next/link';
 
+import { JsonLd } from '@/components/seo/json-ld';
+import { SITE_ORIGIN } from '@/constants/site-origin';
 import { cn } from '@/lib/cn';
+import { breadcrumbList } from '@/lib/seo/structured-data';
 
 export interface Crumb {
   label: string;
@@ -17,9 +20,9 @@ export interface Crumb {
  * pattern that wastes a tab stop.
  *
  * Separators are `aria-hidden`; a screen reader announcing "slash" between every
- * item is noise. The corresponding `BreadcrumbList` JSON-LD (§6.3) is emitted
- * separately from the same navigation tree, so the visual trail and the
- * structured data cannot disagree.
+ * item is noise. The trail is also written out as `BreadcrumbList` structured
+ * data (§6.3), from the same items, so what search engines show and what the
+ * page shows cannot disagree.
  */
 export function Breadcrumbs({
   items,
@@ -34,6 +37,7 @@ export function Breadcrumbs({
 
   return (
     <nav aria-label={label} className={cn('text-sm', className)}>
+      <JsonLd data={breadcrumbList(SITE_ORIGIN, items)} />
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;

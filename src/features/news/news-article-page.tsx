@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRightIcon, CalendarIcon, ExternalIcon } from '@/components/ui/icon';
+import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
 import { fill } from '@/lib/format/template';
+import { newsArticle } from '@/lib/seo/structured-data';
 import type { NewsArticlePage, NewsBlock } from '@/types/news';
 
 import { MarkedText } from './marked-text';
@@ -100,6 +103,15 @@ export function NewsArticle({ content }: { content: NewsArticlePage }) {
 
   return (
     <article aria-labelledby="story-heading">
+      <JsonLd
+        data={newsArticle(site.url, {
+          headline: story.title,
+          path: story.href,
+          datePublished: story.date,
+          images: [story.image.src, ...gallery.map((image) => image.src)],
+          ...(story.excerpt ? { description: story.excerpt } : {}),
+        })}
+      />
       {/* ---------------- head ---------------- */}
       <section data-motif="hero" className="relative isolate overflow-hidden bg-surface">
         <div className={`${MEASURE} pt-8 pb-12 md:pt-10 md:pb-16`}>

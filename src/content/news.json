@@ -22,7 +22,7 @@
     "readMore": "Read More"
   },
   "article": {
-    "metaDescription": "{title} — news from XLRI Delhi-NCR, {date}.",
+    "metaDescription": "{title}: news and photographs from XLRI Delhi-NCR, the Jhajjar campus of XLRI – Xavier School of Management, published {date}.",
     "eyebrow": "News",
     "galleryHeading": "Photographs",
     "galleryAlt": "{title}: photograph {n} of {count}",

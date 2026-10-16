@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { AboutSection } from '@/features/homepage/about-section';
 import { AcademicsSection } from '@/features/homepage/academics-section';
 import { AccreditationsSection } from '@/features/homepage/accreditations-section';
@@ -11,9 +13,18 @@ import {
   getAccreditations,
   getEvents,
   getHero,
+  getHomeMeta,
   getInsights,
   getNews,
 } from '@/services/homepage';
+import { site } from '@/config/site';
+import { routes } from '@/constants/routes';
+import { buildMetadata } from '@/lib/seo/metadata';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { title, description } = await getHomeMeta();
+  return buildMetadata(site, { fullTitle: title, description, path: routes.home });
+}
 
 /**
  * The homepage.

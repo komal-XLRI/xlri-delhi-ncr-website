@@ -1,11 +1,14 @@
 import type { Metadata, Viewport } from 'next';
 import { Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 
+import { JsonLd } from '@/components/seo/json-ld';
 import { SiteFooter } from '@/features/navigation/site-footer';
 import { SiteHeader } from '@/features/navigation/site-header';
 import { PREFERENCES_SCRIPT } from '@/features/preferences/preferences';
 import { site } from '@/config/site';
 import { buildMetadata } from '@/lib/seo/metadata';
+import { organization, website } from '@/lib/seo/structured-data';
+import { getFooterCopy } from '@/services/site';
 import { brand } from '@/styles/tokens';
 import '@/styles/globals.css';
 
@@ -50,7 +53,28 @@ export const viewport: Viewport = {
   themeColor: brand[800],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // The campus and the site, described once for every page; the contact
+  // details and social accounts are the footer's own.
+  const { contact } = await getFooterCopy();
+  const structuredData = [
+    organization({
+      origin: site.url,
+      name: site.name,
+      legalName: site.legalName,
+      alternateName: site.shortName,
+      description: site.description,
+      logo: site.logo,
+      image: site.shareImage.src,
+      email: contact.email,
+      telephone: contact.phone,
+      address: site.postalAddress,
+      sameAs: contact.social.map((account) => account.href),
+      parent: site.parentOrganization,
+    }),
+    website(site.url, site.name, site.description),
+  ];
+
   return (
     /*
      * The font variable classes MUST be on <html>, not <body className="flex min-h-screen flex-col">. This is not a
@@ -94,6 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           features/preferences/preferences.ts for why.
         */}
         <script dangerouslySetInnerHTML={{ __html: PREFERENCES_SCRIPT }} />
+        <JsonLd data={structuredData} />
         {/* WCAG 2.4.1 Bypass Blocks. First focusable element on every page. */}
         <a href="#main" className="skip-link">
           Skip to main content

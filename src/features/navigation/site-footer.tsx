@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 
 import { ArrowRightIcon, MailIcon, MapPinIcon, PhoneIcon } from '@/components/ui/icon';
 import { Link } from '@/components/ui/link';
-import { wordmarkReversed } from '@/config/brand';
+import { wordmark } from '@/config/brand';
 import { POLICY_NAV, UTILITY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
@@ -89,18 +89,18 @@ export async function SiteFooter() {
         {/* ================= identity + visit ================= */}
         <div className="grid gap-8 border-b border-ink-inverse/15 py-12 md:py-14 lg:grid-cols-12 lg:items-center lg:gap-12">
           <div className="lg:col-span-6">
-            {/* The reversed lockup — see `wordmarkReversed` in config/brand. */}
+            {/* The masthead's lockup, on a white plate so its blue holds against navy. */}
             <NextLink
               href={routes.home}
               aria-label={`${site.name} — home`}
-              className="inline-flex rounded-xs"
+              className="inline-flex rounded-md bg-white px-5 py-3"
             >
               <Image
-                src={wordmarkReversed.src}
+                src={wordmark.src}
                 alt=""
-                width={Math.round((wordmarkReversed.width / wordmarkReversed.height) * 72)}
-                height={72}
-                style={{ width: 'auto', height: '72px' }}
+                width={Math.round((wordmark.width / wordmark.height) * 64)}
+                height={64}
+                style={{ width: 'auto', height: '64px' }}
               />
             </NextLink>
             {/* The lockup carries no campus; the footer names it. */}

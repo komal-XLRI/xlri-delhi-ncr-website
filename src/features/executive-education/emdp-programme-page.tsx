@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import {
   ArrowRightIcon,
@@ -14,7 +15,9 @@ import {
   GlobeIcon,
   UsersIcon,
 } from '@/components/ui/icon';
+import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
+import { course } from '@/lib/seo/structured-data';
 import type {
   EmdpFact,
   EmdpProgramme,
@@ -511,6 +514,14 @@ export function EmdpProgrammePage({ content }: { content: EmdpProgramme }) {
 
   return (
     <article aria-labelledby="programme-heading">
+      <JsonLd
+        data={course(site.url, {
+          name: content.batch ? `${content.title} (${content.batch})` : content.title,
+          path: routes.executiveEducation.emdpProgramme(content.id),
+          description: content.meta.description,
+          image: content.poster.src,
+        })}
+      />
       {/* ---------------- hero ---------------- */}
       <section data-motif="hero" className="relative isolate overflow-hidden bg-surface">
         <div className={`${MEASURE} pt-8 pb-14 md:pt-10 md:pb-20`}>

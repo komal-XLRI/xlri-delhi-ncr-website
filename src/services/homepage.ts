@@ -9,8 +9,10 @@ import type {
   News,
 } from '@/types/homepage';
 import { fromJson } from '@/lib/validation/json-content';
+import type { PageMeta } from '@/types/page-copy';
 import { getRecentEvents } from '@/services/events';
 
+const meta = fromJson<PageMeta & { readonly title: string }>(homepageJson.meta);
 const about = fromJson<About>(homepageJson.about);
 const academics = fromJson<Academics>(homepageJson.academics);
 const accreditations = fromJson<Accreditations>(homepageJson.accreditations);
@@ -32,6 +34,11 @@ const news = fromJson<News>(homepageJson.news);
  * be, and making callers `await` now means the migration is not a signature
  * change rippling through every page.
  */
+/** The homepage's title and description in search results. */
+export async function getHomeMeta(): Promise<PageMeta> {
+  return Promise.resolve(meta);
+}
+
 export async function getHero(): Promise<Hero> {
   return Promise.resolve(hero);
 }
