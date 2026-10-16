@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { LibraryLayout } from '@/features/library/library-layout';
 import { LibraryCommittee } from '@/features/library/library-pages';
+import { LibrarySection } from '@/features/library/library-section';
 import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
@@ -16,14 +17,16 @@ export default async function LibraryCommitteeRoute() {
   const content = await getLibrary();
 
   return (
-    <main id="main">
-      <LibraryLayout
-        content={content}
-        title={content.pages.committee.title}
-        intro={content.pages.committee.intro}
-      >
-        <LibraryCommittee content={content} />
-      </LibraryLayout>
-    </main>
+    <LibrarySection content={content}>
+      <main id="main">
+        <LibraryLayout
+          content={content}
+          title={content.pages.committee.title}
+          intro={content.pages.committee.intro}
+        >
+          <LibraryCommittee content={content} />
+        </LibraryLayout>
+      </main>
+    </LibrarySection>
   );
 }

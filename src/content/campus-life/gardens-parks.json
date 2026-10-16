@@ -89,17 +89,17 @@
     {
       "label": "Sports & Recreation",
       "description": "Courts, the gaming arena, the gym and Xavier’s Hall.",
-      "href": "/campus-life/sports-recreation"
+      "href": "/resources/sports-recreation"
     },
     {
       "label": "Parking Areas",
       "description": "Covered parking under rows of solar-panel canopies.",
-      "href": "/campus-life/parking-areas"
+      "href": "/resources/parking-areas"
     },
     {
       "label": "Campus Tour",
       "description": "Walk the campus in 22 short videos.",
-      "href": "/campus-life/campus-tour"
+      "href": "/campus-tour"
     }
   ]
 }

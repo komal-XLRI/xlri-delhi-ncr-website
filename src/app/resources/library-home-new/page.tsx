@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { LibraryHome } from '@/features/library/library-home';
+import { LibrarySection } from '@/features/library/library-section';
 import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
@@ -15,8 +16,10 @@ export default async function LibraryRoute() {
   const content = await getLibrary();
 
   return (
-    <main id="main">
-      <LibraryHome content={content} />
-    </main>
+    <LibrarySection content={content}>
+      <main id="main">
+        <LibraryHome content={content} />
+      </main>
+    </LibrarySection>
   );
 }

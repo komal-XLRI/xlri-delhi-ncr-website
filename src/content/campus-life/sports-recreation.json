@@ -118,17 +118,17 @@
     {
       "label": "SportsCom",
       "description": "The umbrella body for all sports activities at XLRI — Northern Brawl, Ratanjee and more.",
-      "href": "/campus-life/societies#sportscom"
+      "href": "/student-societies#sportscom"
     },
     {
       "label": "XLANC",
       "description": "The XLRI Adventure and Nature Club, for the outdoors and an adrenaline rush.",
-      "href": "/campus-life/societies#xlanc"
+      "href": "/student-societies#xlanc"
     },
     {
       "label": "Student Events",
       "description": "Fests, tournaments and celebrations through the year.",
-      "href": "/campus-life/student-events"
+      "href": "/student-events"
     }
   ]
 }

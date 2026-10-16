@@ -1,3 +1,6 @@
+import { readdirSync } from 'node:fs';
+import { join, sep } from 'node:path';
+
 import { describe, expect, it } from 'vitest';
 
 import { PRIMARY_NAV, POLICY_NAV, UTILITY_NAV, allNavLinks } from '@/config/navigation';
@@ -145,36 +148,53 @@ describe('footer policy links', () => {
   });
 });
 
-describe('internal links match the typed route map', () => {
-  it('uses only paths the route map knows about at the section level', () => {
-    // Guards against a nav entry pointing at a section that does not exist.
-    // Deep pages are added as content lands; the section roots must be real.
-    const knownRoots = new Set(
-      [
-        routes.home,
-        routes.about.index,
-        routes.academics.index,
-        routes.executiveEducation.index,
-        routes.admissions.index,
-        routes.faculty.index,
-        routes.research.index,
-        routes.campusLife.index,
-        routes.placements.index,
-        routes.sustainability.index,
-        routes.news.index,
-        routes.events.index,
-        routes.contact,
-        routes.sitemap,
-        '/students',
-        '/policies',
-      ].map((path) => path.split('/')[1] ?? ''),
-    );
+describe('internal links lead to real pages', () => {
+  /**
+   * Every page in `src/app`, as a pattern its addresses match. The addresses
+   * are the live site's slugs, mostly one segment deep (`/pgdm-bm`,
+   * `/sustainability-history`), so checking a link's first segment against a
+   * list of sections no longer says anything; checking it against the pages
+   * that exist does.
+   */
+  const pages = readdirSync(join(process.cwd(), 'src/app'), { recursive: true, encoding: 'utf8' })
+    .map((file) => file.split(sep).join('/'))
+    .filter((file) => file === 'page.tsx' || file.endsWith('/page.tsx'))
+    .map((file) => {
+      const path = `/${file.replace(/\/?page\.tsx$/, '')}`.replace(/\/\([^)]+\)/g, '');
+      return new RegExp(`^${path.replace(/\[[^\]]+\]/g, '[^/]+')}$`);
+    });
 
-    for (const node of allNavLinks()) {
+  /** Menu entries whose page is not built yet — each one a known broken link. */
+  const NOT_YET_BUILT = new Set(['/about-xlri/committees']);
+
+  it('points every internal menu link at a page that exists', () => {
+    const links = [...allNavLinks(), ...UTILITY_NAV, ...POLICY_NAV];
+    for (const node of links) {
       const href = node.href ?? '';
       if (classifyHref(href, SITE) !== 'internal') continue;
-      const root = href.split(/[?#]/)[0]?.split('/')[1] ?? '';
-      expect(knownRoots, `"${node.id}" points at an unknown section: ${href}`).toContain(root);
+      const path = href.split(/[?#]/)[0] ?? '';
+      if (NOT_YET_BUILT.has(path)) continue;
+      expect(
+        pages.some((page) => page.test(path)),
+        `"${node.id}" points at a page that does not exist: ${href}`,
+      ).toBe(true);
+    }
+  });
+
+  it('uses the route map for the section roots', () => {
+    for (const root of [
+      routes.about.index,
+      routes.academics.index,
+      routes.faculty.index,
+      routes.campusLife.index,
+      routes.placements.index,
+      routes.sustainability.index,
+      routes.students,
+    ]) {
+      expect(
+        pages.some((page) => page.test(root)),
+        root,
+      ).toBe(true);
     }
   });
 });

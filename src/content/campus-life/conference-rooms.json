@@ -77,17 +77,17 @@
     {
       "label": "Classrooms",
       "description": "Tiered lecture theatres and case-discussion rooms.",
-      "href": "/campus-life/classrooms"
+      "href": "/resources/classrooms"
     },
     {
       "label": "Xavier Hall",
       "description": "A multipurpose hall for 200–250 people.",
-      "href": "/campus-life/xavier-hall"
+      "href": "/resources/xavier-hall"
     },
     {
       "label": "XCEED Facilities",
       "description": "The incubation centre for student entrepreneurs.",
-      "href": "/campus-life/xceed-facilities"
+      "href": "/resources/xceed-facilities"
     }
   ]
 }

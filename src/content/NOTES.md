@@ -527,7 +527,7 @@ One sentence, down from two, down from four.
 The cut copy explained that accreditation is an external audit rather than
 a self-assessment — true, and the strongest thing that could be said here,
 but it was preamble standing between the reader and the marks. It belongs
-on `/about/accreditation`, where someone has already chosen to read about
+on `/about-xlri/accreditation`, where someone has already chosen to read about
 it.
 
 **items**

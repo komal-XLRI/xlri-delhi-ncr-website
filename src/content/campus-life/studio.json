@@ -53,17 +53,17 @@
     {
       "label": "Student Societies",
       "description": "E-Cell and the other committees and clubs at XL.",
-      "href": "/campus-life/societies#e-cell"
+      "href": "/student-societies#e-cell"
     },
     {
       "label": "XCEED Facilities",
       "description": "The incubation centre for student entrepreneurs.",
-      "href": "/campus-life/xceed-facilities"
+      "href": "/resources/xceed-facilities"
     },
     {
       "label": "Student Events",
       "description": "Fests, talks and competitions through the year.",
-      "href": "/campus-life/student-events"
+      "href": "/student-events"
     }
   ]
 }

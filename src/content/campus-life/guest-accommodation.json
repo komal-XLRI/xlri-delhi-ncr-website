@@ -89,17 +89,17 @@
     {
       "label": "Food Courts",
       "description": "A 24×7 cafeteria, The Daily Spot, the mess and NESCAFE Break Zone.",
-      "href": "/campus-life/food-courts"
+      "href": "/resources/food-courts"
     },
     {
       "label": "Campus Tour",
       "description": "Walk the campus in 22 short videos.",
-      "href": "/campus-life/campus-tour"
+      "href": "/campus-tour"
     },
     {
       "label": "Gardens & Parks",
       "description": "Lawns, avenues and walking paths across the 47-acre campus.",
-      "href": "/campus-life/gardens-parks"
+      "href": "/resources/gardens-parks"
     }
   ]
 }

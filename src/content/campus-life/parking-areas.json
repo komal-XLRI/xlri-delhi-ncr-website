@@ -47,17 +47,17 @@
     {
       "label": "Mobility Within Campus",
       "description": "The free student shuttle, banks, gym and salon.",
-      "href": "/campus-life/mobility-within-campus"
+      "href": "/resources/mobility-within-campus"
     },
     {
       "label": "Campus Tour",
       "description": "Walk the campus in 22 short videos.",
-      "href": "/campus-life/campus-tour"
+      "href": "/campus-tour"
     },
     {
       "label": "Sustainability",
       "description": "How XLRI Delhi-NCR has built sustainability into campus life.",
-      "href": "/sustainability/history"
+      "href": "/sustainability-history"
     }
   ]
 }

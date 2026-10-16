@@ -88,17 +88,17 @@
     {
       "label": "Medical Facilities",
       "description": "A qualified doctor on campus for everyday health concerns.",
-      "href": "/campus-life/medical-facilities"
+      "href": "/resources/medical-facilities"
     },
     {
       "label": "Internal Complaints Committee",
       "description": "Confidential support and guidance on concerns about sexual harassment.",
-      "href": "/campus-life/internal-complaints-committee"
+      "href": "/internal-complaints-committee"
     },
     {
       "label": "Student Societies",
       "description": "The committees and clubs that make up life at XL.",
-      "href": "/campus-life/societies"
+      "href": "/student-societies"
     }
   ]
 }

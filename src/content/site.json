@@ -5,13 +5,14 @@
     "megaMenuFeaturedActionLabel": "Find out more"
   },
   "footer": {
+    "campusLabel": "Delhi-NCR Campus",
     "description": "A campus of XLRI — Xavier School of Management, India’s oldest business school, founded in 1949. Postgraduate management education, executive programmes and research at Jhajjar, Haryana.",
     "instituteLinkLabel": "Visit XLRI Jamshedpur campus",
     "visit": {
       "eyebrow": "Visit the campus",
       "heading": "See XLRI Delhi-NCR for yourself",
       "tourLabel": "Take the campus tour",
-      "tourHref": "/campus-life/campus-tour",
+      "tourHref": "/campus-tour",
       "directionsLabel": "Get directions"
     },
     "quickLinks": {
@@ -19,11 +20,11 @@
       "links": [
         {
           "label": "About XLRI",
-          "href": "/about"
+          "href": "/about-xlri"
         },
         {
           "label": "Academic Programmes",
-          "href": "/academics"
+          "href": "/academic-programmes"
         },
         {
           "label": "Executive Education",
@@ -39,11 +40,11 @@
         },
         {
           "label": "Campus Life",
-          "href": "/campus-life"
+          "href": "/resources"
         },
         {
           "label": "Placements",
-          "href": "/placements"
+          "href": "/placement"
         }
       ]
     },
@@ -52,23 +53,23 @@
       "links": [
         {
           "label": "Library",
-          "href": "/campus-life/library"
+          "href": "/resources/library-home-new"
         },
         {
           "label": "Campus Tour",
-          "href": "/campus-life/campus-tour"
+          "href": "/campus-tour"
         },
         {
           "label": "Placement Reports",
-          "href": "/placements/reports"
+          "href": "/placement/reports"
         },
         {
           "label": "Mandatory Disclosure",
-          "href": "/about/mandatory-disclosure"
+          "href": "/about-xlri/mandatory-disclosure"
         },
         {
           "label": "Internal Complaints Committee",
-          "href": "/campus-life/internal-complaints-committee"
+          "href": "/internal-complaints-committee"
         },
         {
           "label": "Grievance Redressal Policy",
@@ -119,16 +120,16 @@
     "keySearchesHeading": "Key Searches",
     "noResults": "No results found",
     "keySearches": [
-      "page:/academics/programmes/pgdm-business-management",
-      "page:/academics/programmes/pgdm-innovation-entrepreneurship",
-      "page:/faculty/full-time",
-      "page:/placements",
-      "page:/placements/reports",
-      "page:/executive-education/emdp",
-      "page:/executive-education/management-development-programmes",
-      "page:/about/mandatory-disclosure",
-      "page:/about/directors-desk",
-      "page:/about/accreditation"
+      "page:/pgdm-bm",
+      "page:/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development",
+      "page:/core-faculty",
+      "page:/placement",
+      "page:/placement/reports",
+      "page:/emdp-2",
+      "page:/mdp",
+      "page:/about-xlri/mandatory-disclosure",
+      "page:/about-xlri/from-the-directors-desk",
+      "page:/about-xlri/accreditation"
     ]
   },
   "notFound": {

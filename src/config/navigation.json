@@ -3,7 +3,7 @@
     {
       "id": "about",
       "label": "About",
-      "href": "/about",
+      "href": "/about-xlri",
       "layout": "columns-3",
       "children": [
         {
@@ -13,27 +13,27 @@
             {
               "id": "about-overview",
               "label": "Overview",
-              "href": "/about"
+              "href": "/about-xlri"
             },
             {
               "id": "about-vision",
               "label": "Vision & Mission",
-              "href": "/about/vision-mission"
+              "href": "/about-xlri/vision-mission"
             },
             {
               "id": "about-heritage",
               "label": "Heritage",
-              "href": "/about/heritage"
+              "href": "/heritage"
             },
             {
               "id": "about-founders",
               "label": "Jesuit Founding Fathers",
-              "href": "/about/jesuit-founding-fathers"
+              "href": "/about-xlri/jesuit-founding-fathers"
             },
             {
               "id": "about-accreditation",
               "label": "Accreditation",
-              "href": "/about/accreditation"
+              "href": "/about-xlri/accreditation"
             }
           ]
         },
@@ -44,27 +44,27 @@
             {
               "id": "about-director",
               "label": "From the Director's Desk",
-              "href": "/about/directors-desk"
+              "href": "/about-xlri/from-the-directors-desk"
             },
             {
               "id": "about-leadership",
               "label": "Leadership & Administration",
-              "href": "/about/leadership"
+              "href": "/about-xlri/leadership-administration"
             },
             {
               "id": "about-board",
               "label": "Board of Governors",
-              "href": "/about/board-of-governors"
+              "href": "/about-xlri/board-of-governors"
             },
             {
               "id": "about-committees",
               "label": "Committees & Personnel",
-              "href": "/about/committees"
+              "href": "/about-xlri/committees"
             },
             {
               "id": "about-disclosure",
               "label": "Mandatory Disclosure",
-              "href": "/about/mandatory-disclosure",
+              "href": "/about-xlri/mandatory-disclosure",
               "description": "AICTE regulatory publication"
             }
           ]
@@ -74,7 +74,7 @@
     {
       "id": "academics",
       "label": "Academics",
-      "href": "/academics",
+      "href": "/academic-programmes",
       "layout": "columns-3",
       "children": [
         {
@@ -84,7 +84,7 @@
             {
               "id": "programme-pgdm-bm",
               "label": "PGDM BM",
-              "href": "/academics/programmes/pgdm-business-management"
+              "href": "/pgdm-bm"
             }
           ]
         },
@@ -95,7 +95,7 @@
             {
               "id": "programme-pgdm-ie",
               "label": "PGDM - IEV",
-              "href": "/academics/programmes/pgdm-innovation-entrepreneurship"
+              "href": "/post-graduate-diploma-in-management-innovation-entrepreneurship-venture-development"
             }
           ]
         },
@@ -140,17 +140,17 @@
             {
               "id": "exec-emdp",
               "label": "EMDP",
-              "href": "/executive-education/emdp"
+              "href": "/emdp-2"
             },
             {
               "id": "exec-mdp",
               "label": "Management Development Programmes",
-              "href": "/executive-education/management-development-programmes"
+              "href": "/mdp"
             },
             {
               "id": "exec-in-company",
               "label": "In-Company Programmes",
-              "href": "/executive-education/in-company-programmes"
+              "href": "/icp"
             }
           ]
         }
@@ -169,22 +169,22 @@
             {
               "id": "faculty-full-time",
               "label": "Full Time Faculty",
-              "href": "/faculty/full-time"
+              "href": "/core-faculty"
             },
             {
               "id": "faculty-adjunct",
               "label": "Adjunct Faculty",
-              "href": "/faculty/adjunct"
+              "href": "/adjunct-faculty"
             },
             {
               "id": "faculty-visiting",
               "label": "Visiting Faculty",
-              "href": "/faculty/visiting"
+              "href": "/visiting-faculty"
             },
             {
               "id": "faculty-staff",
               "label": "Staff",
-              "href": "/faculty/staff"
+              "href": "/staff-xlri-delhi"
             },
             {
               "id": "faculty-innovation-teaching",
@@ -194,7 +194,7 @@
             {
               "id": "research-publications",
               "label": "Publication – Research Articles & Cases",
-              "href": "/research/publications"
+              "href": "/publication-research-articles-cases"
             }
           ]
         }
@@ -212,7 +212,7 @@
             {
               "id": "centre-gender",
               "label": "Centre for Gender Equality & Inclusive Leadership",
-              "href": "/research/centres/gender-equality"
+              "href": "/centre-for-gender-equality-inclusive-leadership"
             },
             {
               "id": "centre-xceed",
@@ -222,17 +222,17 @@
             {
               "id": "centre-public-policy",
               "label": "Centre for Public Policy & Public Affairs",
-              "href": "/research/centres/public-policy"
+              "href": "/center-for-public-policy-and-public-affairs"
             },
             {
               "id": "centre-automobiles",
               "label": "Indian School for Design of Automobiles",
-              "href": "/research/centres/design-of-automobiles"
+              "href": "/indian-school-for-design-of-automobiles"
             },
             {
               "id": "centre-healthcare",
               "label": "Centre for Healthcare Management",
-              "href": "/research/centres/healthcare-management"
+              "href": "/xlri-center-for-healthcare-management"
             }
           ]
         }
@@ -251,47 +251,47 @@
             {
               "id": "sustainability-team",
               "label": "Team",
-              "href": "/sustainability/team"
+              "href": "/sustainability-core-team-2"
             },
             {
               "id": "sustainability-history",
               "label": "History",
-              "href": "/sustainability/history"
+              "href": "/sustainability-history"
             },
             {
               "id": "sustainability-student-committees",
               "label": "Student Committees",
-              "href": "/sustainability/student-committees"
+              "href": "/sustainability-student-committees"
             },
             {
               "id": "sustainability-courses",
               "label": "Courses",
-              "href": "/sustainability/courses"
+              "href": "/sustainability-courses"
             },
             {
               "id": "sustainability-events",
               "label": "Events",
-              "href": "/sustainability/events"
+              "href": "/sustainability-events"
             },
             {
               "id": "sustainability-government-committees",
               "label": "Government Committees",
-              "href": "/sustainability/government-committees"
+              "href": "/sustainability-government-committees"
             },
             {
               "id": "sustainability-rural-immersion",
               "label": "Rural Immersion",
-              "href": "/sustainability/rural-immersion"
+              "href": "/sustainability-rural-immersion"
             },
             {
               "id": "sustainability-research-projects",
               "label": "Research Projects",
-              "href": "/sustainability/research-projects"
+              "href": "/sustainability-research-projects"
             },
             {
               "id": "sustainability-research-publications-cases",
               "label": "Research Publications & Cases",
-              "href": "/sustainability/research-publications-cases"
+              "href": "/sustainability-research-publications"
             }
           ]
         }
@@ -300,7 +300,7 @@
     {
       "id": "campus-life",
       "label": "Campus Life",
-      "href": "/campus-life",
+      "href": "/resources",
       "layout": "columns-5",
       "children": [
         {
@@ -310,42 +310,42 @@
             {
               "id": "campus-library",
               "label": "Library",
-              "href": "/campus-life/library"
+              "href": "/resources/library-home-new"
             },
             {
               "id": "campus-classrooms",
               "label": "Classrooms",
-              "href": "/campus-life/classrooms"
+              "href": "/resources/classrooms"
             },
             {
               "id": "campus-computer-labs",
               "label": "Computer Labs",
-              "href": "/campus-life/computer-labs"
+              "href": "/resources/computer-labs"
             },
             {
               "id": "campus-it-infrastructure",
               "label": "IT Infrastructure",
-              "href": "/campus-life/it-infrastructure"
+              "href": "/resources/it-infrastructure"
             },
             {
               "id": "campus-studio",
               "label": "Studio",
-              "href": "/campus-life/studio"
+              "href": "/resources/studio"
             },
             {
               "id": "campus-conference-rooms",
               "label": "Conference Rooms",
-              "href": "/campus-life/conference-rooms"
+              "href": "/resources/conference-rooms"
             },
             {
               "id": "campus-xavier-hall",
               "label": "Xavier Hall",
-              "href": "/campus-life/xavier-hall"
+              "href": "/resources/xavier-hall"
             },
             {
               "id": "campus-xceed",
               "label": "XCEED Facilities",
-              "href": "/campus-life/xceed-facilities"
+              "href": "/resources/xceed-facilities"
             }
           ]
         },
@@ -356,32 +356,32 @@
             {
               "id": "campus-hostel",
               "label": "Student Hostel",
-              "href": "/campus-life/students-hostel"
+              "href": "/resources/students-hostel"
             },
             {
               "id": "campus-residences",
               "label": "Faculty & Staff Residences",
-              "href": "/campus-life/faculty-staff-residences"
+              "href": "/resources/faculty-staff-residences"
             },
             {
               "id": "campus-guest",
               "label": "Guest Accommodation",
-              "href": "/campus-life/guest-accommodation"
+              "href": "/resources/guest-accomodations"
             },
             {
               "id": "campus-food",
               "label": "Food Courts",
-              "href": "/campus-life/food-courts"
+              "href": "/resources/food-courts"
             },
             {
               "id": "campus-store",
               "label": "Daily Needs Store",
-              "href": "/campus-life/daily-needs-store"
+              "href": "/resources/daily-needs-store"
             },
             {
               "id": "campus-laundry",
               "label": "Laundry Facilities",
-              "href": "/campus-life/laundry-facilities"
+              "href": "/resources/laundry-facilities"
             }
           ]
         },
@@ -392,22 +392,22 @@
             {
               "id": "campus-medical",
               "label": "Medical Facilities",
-              "href": "/campus-life/medical-facilities"
+              "href": "/resources/medical-facilities"
             },
             {
               "id": "campus-counselling",
               "label": "Counselling Services",
-              "href": "/campus-life/counselling-services"
+              "href": "/resources/counselling-services"
             },
             {
               "id": "campus-sports",
               "label": "Sports & Recreation",
-              "href": "/campus-life/sports-recreation"
+              "href": "/resources/sports-recreation"
             },
             {
               "id": "campus-gardens",
               "label": "Gardens & Parks",
-              "href": "/campus-life/gardens-parks"
+              "href": "/resources/gardens-parks"
             }
           ]
         },
@@ -418,17 +418,17 @@
             {
               "id": "campus-tour",
               "label": "Campus Tour",
-              "href": "/campus-life/campus-tour"
+              "href": "/campus-tour"
             },
             {
               "id": "campus-mobility",
               "label": "Mobility Within Campus",
-              "href": "/campus-life/mobility-within-campus"
+              "href": "/resources/mobility-within-campus"
             },
             {
               "id": "campus-parking",
               "label": "Parking Areas",
-              "href": "/campus-life/parking-areas"
+              "href": "/resources/parking-areas"
             }
           ]
         },
@@ -439,17 +439,17 @@
             {
               "id": "student-societies",
               "label": "Student Societies",
-              "href": "/campus-life/societies"
+              "href": "/student-societies"
             },
             {
               "id": "student-events",
               "label": "Student Events",
-              "href": "/campus-life/student-events"
+              "href": "/student-events"
             },
             {
               "id": "student-complaints",
               "label": "Internal Complaints Committee",
-              "href": "/campus-life/internal-complaints-committee"
+              "href": "/internal-complaints-committee"
             }
           ]
         }
@@ -458,7 +458,7 @@
     {
       "id": "placements",
       "label": "Placements",
-      "href": "/placements",
+      "href": "/placement",
       "layout": "columns-2",
       "children": [
         {
@@ -468,17 +468,17 @@
             {
               "id": "placements-overview",
               "label": "Overview",
-              "href": "/placements"
+              "href": "/placement"
             },
             {
               "id": "placements-final",
               "label": "Final Placements 2024–26",
-              "href": "/placements/final-placements"
+              "href": "/placement/final-placements"
             },
             {
               "id": "placements-summer",
               "label": "Summer Internships 2025",
-              "href": "/placements/summer-internships"
+              "href": "/placement/summer-internships"
             }
           ]
         },
@@ -489,12 +489,12 @@
             {
               "id": "placements-reports",
               "label": "Placement Reports & Audits",
-              "href": "/placements/reports"
+              "href": "/placement/reports"
             },
             {
               "id": "placements-recruiters",
               "label": "Our Recruiters",
-              "href": "/placements#recruiters"
+              "href": "/placement#recruiters"
             }
           ]
         }
@@ -548,7 +548,7 @@
     {
       "id": "utility-students",
       "label": "Students",
-      "href": "/students"
+      "href": "/student-life"
     },
     {
       "id": "utility-faculty-staff",
@@ -563,7 +563,7 @@
     {
       "id": "utility-recruiters",
       "label": "Recruiters",
-      "href": "/placements#recruiters"
+      "href": "/placement#recruiters"
     },
     {
       "id": "utility-giving",

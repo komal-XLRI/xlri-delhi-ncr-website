@@ -41,17 +41,17 @@
     {
       "label": "IT Infrastructure",
       "description": "A gigabit fibre backbone, 1500 Mbps of bandwidth and campus-wide access.",
-      "href": "/campus-life/it-infrastructure"
+      "href": "/resources/it-infrastructure"
     },
     {
       "label": "Classrooms",
       "description": "Tiered lecture theatres and case-discussion rooms.",
-      "href": "/campus-life/classrooms"
+      "href": "/resources/classrooms"
     },
     {
       "label": "Studio",
       "description": "A branded studio set for photos, videos and recordings.",
-      "href": "/campus-life/studio"
+      "href": "/resources/studio"
     }
   ]
 }

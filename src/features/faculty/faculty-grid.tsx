@@ -30,7 +30,7 @@ const initial = (name: string) =>
  * A short listing (fewer than `FILTER_FROM` people, e.g. Adjunct Faculty)
  * shows the cards alone: an A–Z for two names is noise.
  *
- * `profileBase` is the listing's path; each card links to `${profileBase}/${id}`.
+ * `profileBase` is where the profiles live; each card links to `${profileBase}/${id}`.
  * The visible words come from the listing's JSON (`labels`).
  */
 export function FacultyGrid({

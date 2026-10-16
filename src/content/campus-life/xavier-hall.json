@@ -53,17 +53,17 @@
     {
       "label": "Student Events",
       "description": "Fests, talks and competitions through the year.",
-      "href": "/campus-life/student-events"
+      "href": "/student-events"
     },
     {
       "label": "Sports & Recreation",
       "description": "Courts, the gaming arena and the gym.",
-      "href": "/campus-life/sports-recreation"
+      "href": "/resources/sports-recreation"
     },
     {
       "label": "Conference Rooms",
       "description": "Boardrooms and meeting spaces for faculty, guests and committees.",
-      "href": "/campus-life/conference-rooms"
+      "href": "/resources/conference-rooms"
     }
   ]
 }

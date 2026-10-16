@@ -83,17 +83,17 @@
     {
       "label": "Gardens & Parks",
       "description": "Lawns, avenues and walking paths across the 47-acre campus.",
-      "href": "/campus-life/gardens-parks"
+      "href": "/resources/gardens-parks"
     },
     {
       "label": "Medical Facilities",
       "description": "A qualified doctor on campus for everyday health concerns.",
-      "href": "/campus-life/medical-facilities"
+      "href": "/resources/medical-facilities"
     },
     {
       "label": "Mobility Within Campus",
       "description": "The free student shuttle, banks, gym and salon.",
-      "href": "/campus-life/mobility-within-campus"
+      "href": "/resources/mobility-within-campus"
     }
   ]
 }

@@ -76,6 +76,21 @@ export const wordmark: BrandAsset = {
 };
 
 /**
+ * The same lockup for dark grounds — the footer. Not a filter: a filtered logo
+ * flattens the shield into a white rectangle. This is the artwork with only
+ * its type recoloured — "XLRI" and "Xavier School of Management" in white,
+ * "Excellence & Integrity" in pale blue, "For the greater good" in the lime of
+ * the accent — and a white keyline round the shield so its blue field holds
+ * against navy. The crest itself is untouched.
+ */
+export const wordmarkReversed: BrandAsset = {
+  src: '/brand/xlri-logo-reversed.svg',
+  width: 5547,
+  height: 2300,
+  placeholder: false,
+};
+
+/**
  * Triple-crown accreditation. Genuine trust signals for a business school, and
  * the reason for the three-tier treatment in §2.3 — a quiet monochrome lockup in
  * the header, full colour below the hero and in the footer.

@@ -1,9 +1,13 @@
+import Image from 'next/image';
+import NextLink from 'next/link';
 import type { ReactNode } from 'react';
 
 import { ArrowRightIcon, MailIcon, MapPinIcon, PhoneIcon } from '@/components/ui/icon';
 import { Link } from '@/components/ui/link';
+import { wordmarkReversed } from '@/config/brand';
 import { POLICY_NAV, UTILITY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
+import { routes } from '@/constants/routes';
 import { getFooterCopy } from '@/services/site';
 import type { FooterLinkGroup, SocialNetwork } from '@/types/site';
 
@@ -59,7 +63,7 @@ function LinkColumn({ group }: { group: FooterLinkGroup }) {
  * to action, then Quick Links, Useful Links and Contact info in columns — and
  * set in this site's own navy, lime and serif:
  *
- *  1. **Identity and a visit panel** — the name, a sentence on the campus, and
+ *  1. **Identity and a visit panel** — the logo, the campus, a sentence on it, and
  *     the two things a visitor most often wants next: the video campus tour
  *     and directions to Jhajjar.
  *  2. **Columns** — Quick Links (the section home pages), Useful Links, the
@@ -85,14 +89,24 @@ export async function SiteFooter() {
         {/* ================= identity + visit ================= */}
         <div className="grid gap-8 border-b border-ink-inverse/15 py-12 md:py-14 lg:grid-cols-12 lg:items-center lg:gap-12">
           <div className="lg:col-span-6">
-            {/*
-              Set in type, not the wordmark: the positive artwork inverted with
-              a filter flattens the shield into a white rectangle, and no
-              reversed lockup exists yet (docs/brand/README.md).
-            */}
-            <p className="font-serif text-[2rem] leading-tight text-ink-inverse">{site.name}</p>
-            <p className="mt-1 text-sm font-semibold tracking-[0.14em] text-accent-surface uppercase">
-              {site.parentOrganization.name}
+            {/* The reversed lockup — see `wordmarkReversed` in config/brand. */}
+            <NextLink
+              href={routes.home}
+              aria-label={`${site.name} — home`}
+              className="inline-flex rounded-xs"
+            >
+              <Image
+                src={wordmarkReversed.src}
+                alt=""
+                width={Math.round((wordmarkReversed.width / wordmarkReversed.height) * 72)}
+                height={72}
+                style={{ width: 'auto', height: '72px' }}
+              />
+            </NextLink>
+            {/* The lockup carries no campus; the footer names it. */}
+            <p className="mt-4 flex items-center gap-3 text-sm font-semibold tracking-[0.18em] text-accent-surface uppercase">
+              <span aria-hidden="true" className="h-px w-8 bg-accent-surface" />
+              {copy.campusLabel}
             </p>
             <p className="mt-4 max-w-[34rem] text-[0.9375rem] leading-relaxed text-ink-inverse/70">
               {copy.description}
