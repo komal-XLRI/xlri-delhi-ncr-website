@@ -622,61 +622,9 @@ Cut off at source, and no portrait exists — see the note above.
 
 **events**
 
-Latest events.
-
-#### Provenance — everything here was fetched, nothing was written
-
-The six events below were taken from **xlridelhi.ac.in** on 28 July 2026: the
-homepage "Latest Events" strip supplied the titles, links and banner images in
-this order, and `/latest-events/` supplied the dates. No title has been
-rewritten, shortened or tidied. Two consequences are worth knowing before
-anyone "fixes" them:
-
-• **"5th Annual convocation – XLRI Delhi"** has a lower-case _c_. That is how
-the institution published it. Correcting it here would put the homepage out
-of step with the event page it links to.
-• The dash characters differ between titles — an en dash in the convocation
-and EvolvX titles, an em dash in X-CELERATE. Also as published.
-
-The homepage strip renders titles through a CSS `capitalize`, which is why the
-first event reads "Xlri Delhi-NCR" there. The underlying title is "XLRI
-Delhi-NCR", which is what is stored.
-
-#### The year in `dateTime` is inferred
-
-The source prints day and month only — "08 Apr" — and that string is what
-`dateLabel` carries and what the section displays. `dateTime` adds a year so
-the date is machine-readable, and **that year is an inference**: each event's
-banner sits in a WordPress upload path whose month and year match the printed
-month exactly (`/2026/04/` for 08 Apr, `/2026/02/` for 21 Feb, and so on for
-all six). It is a sound inference and it is still an inference. If the
-communications team can confirm the years, these become facts; if any is
-wrong, only the `datetime` attribute is affected, never the visible text.
-
-#### Links
-
-The slugs are the live ones. The origin is not: `/event/maxi-mela-2026/` on
-xlridelhi.ac.in becomes `/events/maxi-mela-2026` here, matching how `news`
-points at `/news/<slug>` and how the navigation already declares `/events`.
-This repository _is_ that site being rebuilt, so pointing the homepage at the
-old origin would be linking a site to itself. Swap the `href` values for the
-absolute URLs if these pages are not migrating.
-
-#### Images
-
-The institution's own event banners, downloaded rather than hot-linked — a
-homepage that depends on another origin for six above-the-fold images inherits
-that origin's uptime and caching. They arrived as 4.1 MB of PNG, which is what
-happens when photographic posters are exported from a design tool without a
-second thought; re-encoded to JPEG at q82 with the long edge capped at 1200px
-they are 908 kB, and the cap is still 3× the largest size any card renders.
-
-`placeholder: false` — unlike the news and programme imagery, these are the
-real thing.
-
-`alt` is empty because the title is set immediately beneath each banner and is
-itself the link. A poster whose text repeats the headline beside it would be
-announced twice.
+The strip's heading, intro and links only, and `count`, how many events it
+shows: the events themselves are the newest `count` from `events.json`,
+whose section below has their provenance.
 
 **heading**
 
@@ -1079,3 +1027,183 @@ main menu (`config/navigation.json`), so adding a page to the menu adds it
 to the hub; only its one-line note needs adding here, under `notes`, keyed
 by the link's address. The Students page lists its own `groups`. The intros
 and notes are written for this site from each page's own content.
+
+## executive-education/emdp-programmes.json
+
+**File**
+
+One entry per EMDP programme with a page of its own — all fifteen cards on
+the EMDP page — keyed by the programme's card id in `emdp.json`. The live
+pages are not built alike (one has a syllabus, another two certificates,
+another its faculty with biographies), so a programme is an ordered list of
+`sections`, each with a `kind` the page knows how to set, in the live page's
+order:
+
+- `text` — prose; `features` are titled points beneath it (Applied Business
+  Finance's "Holistic new-age curriculum" …).
+- `checklist` — ticked cards (why XLRI, who it is for). Points longer than a
+  short phrase are set as sentences rather than bold labels.
+- `bullets` — a plain list in one card (pedagogy, eligibility, technical
+  requirements).
+- `highlights` — the blue grid; a `value` is the large figure ("120+").
+- `fees` — fee cards (`items`), or the fee as a sentence (`text`) or list
+  (`points`) where the live page gives it so.
+- `immersion` — campus immersion or visit: `lead`, `paragraphs`, `points`.
+- `certificate` — `text` and/or `images`.
+- `panel` — a blue panel: alumni status.
+- `modules` — a syllabus, one module to a row, opened one at a time.
+- `people` — directors or faculty, under the live page's own heading; a
+  person has qualifications, a biography, or both.
+
+A section of an unknown kind fails the build. `facts` are the cards in the
+right-hand column (`icon`: `clock`, `calendar` or `online`); the one or two
+with a `headline` also appear in the hero, as that line. A fact line ending
+in a colon ("First Year (Tentative):") is set as a small heading over the
+lines after it. An `apply` with no `href` is a closed application: its
+`label` ("Application Closed", as on Strategic HR Batch 7) shows where Apply
+Now would be, as a notice rather than a link. Where the live page's Apply Now
+goes nowhere (`#respond`: Digital HR Batch 7, Strategy & Leadership Batch 3,
+Strategic HR Batch 6) there is no `apply`, and where its brochure does
+(Global Strategy for Healthcare) there is no `brochure`.
+
+To add another programme: add its entry here, its address to
+`EMDP_PROGRAMMES` in `constants/routes.ts`, and a route folder at that
+address (copy any programme's and change its `ID`); its EMDP card then links
+to the new page by itself.
+
+**Text**
+
+Each live page's own, verbatim (October 2026), including its slips, which are
+left for the programme office to correct rather than silently changed:
+
+- Digital HR (Batches 7 and 8): "but to l participate", "skills.Accelerate",
+  "strategy,people".
+- Strategy & Leadership (Batches 3 and 4): "leadership and, integrating",
+  "insights.Through", "academicians,industry".
+- Strategic HR Leadership (Batches 6 and 7): "long-term,multi-modal",
+  "leadership.The".
+- Global Strategy for Healthcare: under "Why This Programme?" the C-Suite
+  point reads "Experience a cross-contGain expertise …" — a sentence pasted
+  into the middle of another — and the rest of the broken one, "inental
+  learning journey …", stands as a seventh point; under "Who Should Enroll?"
+  six groups run together into three lines.
+- DBA: "INR 13,20000 + GST"; the "Program Highlights - Doctor of Business
+  Administration" heading.
+- Strategic HR Leadership (Cohort 5): the syllabus's "Cha11enges and
+  Stragies", "staffng", "leaming", "Govemance", "Develoment"; the
+  "\*Alumni Status" heading.
+- Strategy & Leadership (Cohort 2): Module 14's last point stops mid-sentence
+  ("… collaboratively brainstorm innovative").
+
+Line breaks inside a point on the live page are joined, and runs of spaces
+closed up. Commencement dates are listed in date order (several live pages
+put the inauguration first). Batch labels for General Management (Batch 5),
+Digital HR (Batch 6) and the two Accredian cohorts come from their posters;
+the live pages' text does not give them.
+
+**meta**
+
+Most live pages carry the General Management programme's meta description
+("Enhance your leadership skills with XLRI's Executive Program in General
+Management …"), so it is used only on General Management's own page; the
+others have one written from the page's own facts. Global Strategy for
+Healthcare, Applied Business Finance and the two Accredian cohorts have their
+own, used verbatim.
+
+**people**
+
+Names, designations, qualifications and biographies are as the live page
+gives them; `facultyId` (Dr. Ankit, Dr. Faisal Ahsan, Dr. Munish Kumar
+Thakur) supplies only the photograph and the profile link. Where the live
+page gives a name with "(XLRI)" or "(SRIHER)" after it, that is the
+designation line. Fr. PT Joseph is "Dr. PT Joseph, SJ" on the live pages and
+is named here in the house style for Jesuits; his email is left out. The
+DBA's and MBA's directors are images with the name and role written on them
+(Dr. Santoshkumar Prakash Sangem, Faculty of Finance, XLRI Jamshedpur; Dr.
+Ashwani Kumar Goel, Director, French Consortium); the text is typed out here
+and the photograph cropped from the image. Photographs of people who are not
+on the Full Time Faculty list are in
+`public/media/executive-education/emdp-programmes/`.
+
+**Images**
+
+Posters are the EMDP cards' own. The XLEAD VIL certificate is one image
+shared by the programmes that show it; the DBA and MBA, Digital
+Transformation in Healthcare (XLRI and SRIHER), Applied Business Finance
+(XLRI and KPMG) and Global Strategy for Healthcare (XLRI and IAE Paris –
+Sorbonne) have their own. The DBA and MBA show the same two certificates as
+on the live pages, the second an IPAG MBA degree on both.
+
+## events.json
+
+**File**
+
+Latest Events at `/latest-events`, each event's page at `/event/<slug>` (both
+the live site's addresses), and the homepage strip, which shows the newest
+few. `page` is the listing's copy, `detail` the event page's, `items` the
+events, newest first as the live listing orders them.
+
+**items**
+
+All fourteen events on xlridelhi.ac.in/latest-events (October 2026), titles
+verbatim, with one exception: the live listing has "Staff Orientation
+Programme Xlri Delhi-NCR"; it is stored as "XLRI", as the homepage strip had
+it. `dateLabel` is the date as the listing prints it ("08 Apr"); `dateTime`
+adds the year, which the listing does not show. For the six the homepage had,
+the year came from the picture's upload folder; for the other eight, from the
+publication date of the event's own page on the live site — the same day as
+the listing's date for most, a few days off for two. One is worth checking:
+the Parliament House visit is published 17 January 2024, and is dated 16
+January 2024 here, but its photograph's file name says 23 December 2024 and
+it sits in the December 2024 upload folder; if the visit was in January
+2025, change its `dateTime` and it moves to the 2025 group.
+
+The live event pages hold only the title — no text and no picture — so the
+event page here is the title, the date and the picture whole, with links back
+to the list and on to three more events.
+
+**Images**
+
+In `public/media/events/`, downloaded rather than hot-linked, re-encoded to
+JPEG with the long edge at most 1024px, turned upright from their EXIF
+orientation. `alt` is empty: each picture sits beside its title, which is the
+link.
+
+## news.json
+
+**File**
+
+Latest News at `/latest-news`, and each story at the site root
+(`/corporate-confluence-2025`), as on the live site. The story route is
+`app/[slug]`: every page with a fixed address takes precedence over it, and
+only the stories listed here are built, so any other one-segment address is
+still a 404. `page` is the listing's copy, `article` the story page's, `items`
+the stories, newest first as the live listing orders them.
+
+**items**
+
+All ten stories on xlridelhi.ac.in/latest-news (October 2026). Titles are the
+listing's, capitals and all ("GLOBAL BANKING & FINANCE CONFERENCE 2026",
+"CORPORATE CONFLUENCE 2025"); the text is the live story's, verbatim, slips
+included ("Ceremony , marking", "( Market Solutions)", "degrees diplomas",
+"VIsit", "Amitava Banerjee Governance Consultant)", and three MAXI Mela
+highlights that stop mid-sentence). The live listing shows no dates; `date`
+is each story's publication date. In `p`, `list` and `quote` text,
+`**bold**` and `[text](url)` keep the live story's bold and links; links leave
+the site and open in a new tab. Where the live story's bold markup was
+tangled (the 4th convocation's Chief Guest sentence), the words are kept and
+the bold is tidied. The 4th convocation's quotation from Fr. Casimir is set as
+a quotation, after the live story's own lead-in. Three stories — Corporate
+Confluence 2024, Welcome batch 2024-2026, Convocation 2024 — are a picture
+and a title on the live site too, so their pages have no text. ElevateX's is
+an excerpt that links to the full article on BW Education.
+
+The homepage's "Latest News" section is not from this file: it still has
+its own placeholder stories (`homepage.json`, `news`), linking to `/news/…`
+addresses that do not exist.
+
+**Images**
+
+In `public/media/news/`, downloaded rather than hot-linked, re-encoded to
+JPEG with the long edge at most 1600px. The first is the listing's picture
+and the story's lead; `gallery` holds the rest, in the live story's order.

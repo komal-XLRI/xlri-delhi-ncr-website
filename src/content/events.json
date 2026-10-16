@@ -1,0 +1,215 @@
+{
+  "page": {
+    "meta": {
+      "title": "Latest Events",
+      "description": "XLRI Delhi-NCR hosts a range of events fostering academia-industry collaboration, innovation, & leadership development."
+    },
+    "section": "Campus Life",
+    "eyebrow": "Campus Life · Events",
+    "title": "Latest Events",
+    "intro": "Conferences, seminars, workshops, guest lectures and campus activities at XLRI Delhi-NCR.",
+    "facts": {
+      "events": "Events",
+      "years": "Years on record",
+      "latest": "Most recent"
+    },
+    "spotlightBadge": "Most recent",
+    "yearsNav": "Events by year",
+    "yearCount": {
+      "one": "{count} event",
+      "other": "{count} events"
+    },
+    "moreDetails": "More Details"
+  },
+  "detail": {
+    "metaDescription": "{title} — an event at XLRI Delhi-NCR, {date}.",
+    "eyebrow": "Event",
+    "back": "All events",
+    "more": "More events",
+    "posterLabel": "Event poster"
+  },
+  "items": [
+    {
+      "slug": "staff-orientation-programme-xlri-delhi-ncr",
+      "title": "Staff Orientation Programme XLRI Delhi-NCR",
+      "dateLabel": "08 Apr",
+      "dateTime": "2026-04-08",
+      "image": {
+        "src": "/media/events/staff-orientation.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 720,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "5th-annual-convocation-xlri-delhi",
+      "title": "5th Annual convocation – XLRI Delhi",
+      "dateLabel": "06 Apr",
+      "dateTime": "2026-04-06",
+      "image": {
+        "src": "/media/events/annual-convocation.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 733,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "mega-book-exhibition-at-xlri-delhi-ncr-library",
+      "title": "Mega Book Exhibition at XLRI Delhi NCR Library",
+      "dateLabel": "19 Mar",
+      "dateTime": "2026-03-19",
+      "image": {
+        "src": "/media/events/book-exhibition.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 1024,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "evolvx-xlris-premier-startup-conclave-edition-4",
+      "title": "EvolvX – XLRI’s Premier Startup Conclave (Edition 4)",
+      "dateLabel": "06 Mar",
+      "dateTime": "2026-03-06",
+      "image": {
+        "src": "/media/events/evolvx.jpg",
+        "alt": "",
+        "width": 969,
+        "height": 959,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "x-celerate-2026-the-xlri-business-leadership-conclave",
+      "title": "X-CELERATE 2026 — The XLRI Business Leadership Conclave",
+      "dateLabel": "27 Feb",
+      "dateTime": "2026-02-27",
+      "image": {
+        "src": "/media/events/x-celerate.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 819,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "maxi-mela-2026",
+      "title": "MAXI Mela 2026",
+      "dateLabel": "21 Feb",
+      "dateTime": "2026-02-21",
+      "image": {
+        "src": "/media/events/maxi-mela.jpg",
+        "alt": "",
+        "width": 724,
+        "height": 1024,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "tedxxlri-delhi-ncr-2026",
+      "title": "TEDxXLRI Delhi NCR 2026",
+      "dateLabel": "20 Feb",
+      "dateTime": "2026-02-20",
+      "image": {
+        "src": "/media/events/tedx-2026.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 576,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "up-scale-by-xl4w-accelerating-the-leadership-journey-of-mid-career-women",
+      "title": "up! SCALE by XL4W: Accelerating the Leadership Journey of Mid-Career Women",
+      "dateLabel": "05 Dec",
+      "dateTime": "2025-12-05",
+      "image": {
+        "src": "/media/events/up-scale.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 683,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "up-swing-a-transformative-journey-of-clarity-courage-and-career-ownership",
+      "title": "up! SWING: A Transformative Journey of Clarity, Courage, and Career Ownership",
+      "dateLabel": "05 Dec",
+      "dateTime": "2025-12-05",
+      "image": {
+        "src": "/media/events/up-swing.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 683,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "nova-exilaro-5-0-the-annual-cultural-fest-of-xlri-delhi-ncr-copy",
+      "title": "Nova Exilaro 5.0, the annual cultural fest of XLRI Delhi-NCR",
+      "dateLabel": "08 Nov",
+      "dateTime": "2025-11-08",
+      "image": {
+        "src": "/media/events/nova-exilaro.jpg",
+        "alt": "",
+        "width": 819,
+        "height": 1024,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "xlri-delhi-ncr-celebrates-4th-convocation-amid-rising-industry-trust-and-exceptional-placements",
+      "title": "XLRI Delhi-NCR Celebrates 4th Convocation Amid Rising Industry Trust and Exceptional Placements",
+      "dateLabel": "12 Apr",
+      "dateTime": "2025-04-12",
+      "image": {
+        "src": "/media/events/fourth-convocation.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 551,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "elevatex-xlris-premier-startup-conclave",
+      "title": "ElevateX: XLRI’s Premier Startup Conclave",
+      "dateLabel": "29 Nov",
+      "dateTime": "2024-11-29",
+      "image": {
+        "src": "/media/events/elevatex.jpg",
+        "alt": "",
+        "width": 830,
+        "height": 596,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "xlri-connect-bridging-academia-and-industry-for-greater-good",
+      "title": "XLRI Connect: Bridging Academia and Industry for Greater Good",
+      "dateLabel": "16 Oct",
+      "dateTime": "2024-10-16",
+      "image": {
+        "src": "/media/events/xlri-connect.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 576,
+        "placeholder": false
+      }
+    },
+    {
+      "slug": "xlri-delhi-ncr-students-visit-the-new-parliament-house",
+      "title": "Select XLRI Delhi-NCR Students Visit the New Parliament House",
+      "dateLabel": "16 Jan",
+      "dateTime": "2024-01-16",
+      "image": {
+        "src": "/media/events/parliament-visit.jpg",
+        "alt": "",
+        "width": 1024,
+        "height": 768,
+        "placeholder": false
+      }
+    }
+  ]
+}

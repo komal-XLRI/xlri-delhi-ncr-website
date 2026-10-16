@@ -7,6 +7,7 @@ import { PRIMARY_NAV, POLICY_NAV, UTILITY_NAV, allNavLinks } from '@/config/navi
 import { findNavTreeProblems, walkNavTree } from '@/lib/validation/navigation';
 import { classifyHref } from '@/lib/url';
 import { routes } from '@/constants/routes';
+import news from '@/content/news.json';
 
 /**
  * The navigation tree drives six surfaces (§8.1), so a defect here is six
@@ -159,13 +160,17 @@ describe('internal links lead to real pages', () => {
   const pages = readdirSync(join(process.cwd(), 'src/app'), { recursive: true, encoding: 'utf8' })
     .map((file) => file.split(sep).join('/'))
     .filter((file) => file === 'page.tsx' || file.endsWith('/page.tsx'))
+    // News stories sit at the site root (`[slug]/page.tsx`); as a pattern it
+    // would match every one-segment address, so the stories are listed instead.
+    .filter((file) => file !== '[slug]/page.tsx')
     .map((file) => {
       const path = `/${file.replace(/\/?page\.tsx$/, '')}`.replace(/\/\([^)]+\)/g, '');
       return new RegExp(`^${path.replace(/\[[^\]]+\]/g, '[^/]+')}$`);
-    });
+    })
+    .concat(news.items.map((story) => new RegExp(`^${routes.news.article(story.slug)}$`)));
 
   /** Menu entries whose page is not built yet — each one a known broken link. */
-  const NOT_YET_BUILT = new Set(['/about-xlri/committees']);
+  const NOT_YET_BUILT = new Set<string>([]);
 
   it('points every internal menu link at a page that exists', () => {
     const links = [...allNavLinks(), ...UTILITY_NAV, ...POLICY_NAV];

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 
 import { ArrowRightIcon, ExternalIcon } from '@/components/ui/icon';
@@ -215,10 +216,9 @@ function ProgrammeCard({
               <span className="sr-only"> for {programme.title} (opens in a new tab)</span>
             </a>
           ) : null}
-          <a
+          {/* Same tab: it is the programme's own page here, or its page on the live site. */}
+          <Link
             href={programme.knowMore}
-            target="_blank"
-            rel="noopener noreferrer"
             className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-brand"
           >
             {labels.knowMore}
@@ -227,8 +227,8 @@ function ProgrammeCard({
               aria-hidden="true"
               className="text-accent-700 transition-transform duration-200 group-hover/link:translate-x-1"
             />
-            <span className="sr-only"> about {programme.title} (opens in a new tab)</span>
-          </a>
+            <span className="sr-only"> about {programme.title}</span>
+          </Link>
         </div>
       </div>
     </article>

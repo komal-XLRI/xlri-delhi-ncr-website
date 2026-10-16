@@ -1,0 +1,427 @@
+{
+  "page": {
+    "meta": {
+      "title": "Latest News",
+      "description": "Stay informed with the latest announcements and developments and media appearances from XLRI Delhi-NCR's newsroom."
+    },
+    "section": "Campus Life",
+    "eyebrow": "Campus Life · Newsroom",
+    "title": "Latest News",
+    "intro": "Stay informed with the latest announcements and developments and media appearances from XLRI Delhi-NCR's newsroom.",
+    "facts": {
+      "stories": "Stories",
+      "years": "Years on record",
+      "latest": "Most recent"
+    },
+    "spotlightBadge": "Latest story",
+    "yearsNav": "News by year",
+    "yearCount": {
+      "one": "{count} story",
+      "other": "{count} stories"
+    },
+    "readMore": "Read More"
+  },
+  "article": {
+    "metaDescription": "{title} — news from XLRI Delhi-NCR, {date}.",
+    "eyebrow": "News",
+    "galleryHeading": "Photographs",
+    "galleryAlt": "{title}: photograph {n} of {count}",
+    "back": "All news",
+    "more": "More news",
+    "opensNewTab": "(opens in a new tab)"
+  },
+  "items": [
+    {
+      "slug": "xlri-delhi-ncr-celebrates-5th-annual-convocation",
+      "title": "XLRI Delhi-NCR Celebrates 5th Annual convocation",
+      "date": "2026-04-13",
+      "image": {
+        "src": "/media/news/c5-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 1067,
+        "placeholder": false
+      },
+      "body": [
+        {
+          "kind": "p",
+          "text": "Delhi-NCR, April 06, 2026: XLRI Delhi-NCR held its **5th Annual Convocation** Ceremony, marking a significant milestone in the institute’s journey to shape responsible and future-ready leaders. The event was presided over by **Mr. Suresh Narayanan**, Former Chairman & Managing Director, Nestle India Ltd., as the Chief Guest, who delivered the convocation address. As a special highlight of the ceremony, Chairman **Mr. T.V. Narendran** presented the prestigious Fr. E. Abraham Medal for Management & Industrial Development to Mr. Narayanan in recognition of his outstanding contributions to the field."
+        },
+        {
+          "kind": "p",
+          "text": "A total of 207 students received their diplomas at the convocation ceremony – 177 from the Post Graduate Diploma in Management – Business Management (PGDM-BM) and 30 from the Post Graduate Diploma in Management – Innovation, Entrepreneurship & Venture Creation Development (PGDM-IEV). The solemn ceremony was held at the XLRI Delhi-NCR campus in Jhajjar, Haryana, in the presence of distinguished faculty, staff, and families of the graduating students."
+        },
+        {
+          "kind": "p",
+          "text": "As part of the convocation proceedings, exceptional students were honoured for their academic excellence and holistic development. From the PGDM-BM batch, Kunal Bhardwaj was awarded the XLRI Delhi-NCR Medal for Best All-round Student, while Shivangi Joshi received the Medal for Highest CQPI among Women Students. Madhav Sharma was conferred both the Medal for Highest CQPI – BM and the Medal for Highest CQPI – Economics and Finance. From the PGDM-IEV cohort, Poorva Sharma was recognized as the Best All-round Student, and Shubhankar Dekhane received the Medal for Highest CQPI – IEV. These recognitions underscore the institute’s commitment to fostering academic rigour and leadership potential across disciplines."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/media/news/c5-02.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-03.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-04.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-05.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-06.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-07.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-08.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-09.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-10.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-11.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-12.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c5-13.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slug": "global-banking-finance-conference",
+      "title": "GLOBAL BANKING & FINANCE CONFERENCE 2026",
+      "date": "2026-02-07",
+      "image": {
+        "src": "/media/news/gbf-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 1000,
+        "placeholder": false
+      },
+      "body": [
+        {
+          "kind": "p",
+          "text": "XLRI, India’s first and leading business school, is proud to host the inaugural Global Banking and Finance Conference during February 5-7, 2026. We warmly invite researchers, academics, and industry professionals to present original research and participate in insightful discussions aimed at advancing the frontiers of knowledge and research excellence in banking and finance. The conference serves as a platform for sharing cutting-edge research, innovative ideas, and novel perspectives across all areas of finance."
+        },
+        {
+          "kind": "link",
+          "label": "Know More",
+          "href": "https://xlridelhi.ac.in/gbf2026/"
+        }
+      ]
+    },
+    {
+      "slug": "indias-aim-to-achieve-net-zero-corporate-stance-on-esg",
+      "title": "India’s Aim to Achieve Net Zero & Corporate Stance on ESG",
+      "date": "2025-12-11",
+      "image": {
+        "src": "/media/news/esg-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 1067,
+        "placeholder": false
+      },
+      "body": [
+        {
+          "kind": "p",
+          "text": "XLRI Delhi-NCR, in collaboration with the PEACE committee, recently hosted a thought-provoking panel discussion on \"India's Aim to Achieve Net Zero & Corporate Stance on ESG.\""
+        },
+        {
+          "kind": "p",
+          "text": "The session brought together an esteemed panel of leaders and experts: Mr. [Bharat Gupta](https://www.linkedin.com/in/bharat-gupta-45273819/) (Director, Weldpath International), Mr. [Sanjeev Sharan](https://www.linkedin.com/in/sanjeev-sharan-99258613/) (CHRO, ZTE Technology), [Er. Dr. S P Sharma](https://www.linkedin.com/in/er-dr-s-p-sharma-a2998011/) (Chairman, Harihar Energy & Ex-NTPC GM), Mr. [Amitava Banerjee](https://www.linkedin.com/in/a-banerjee-nfcg/) Governance Consultant), and Mr. [Rajnish Kapur](https://www.linkedin.com/in/rajnish-kapur-col/) (Founder, Accelarena & Ex-COO, JK Cement Ltd.)"
+        },
+        {
+          "kind": "p",
+          "text": "Their insights on India’s journey toward Net Zero, the evolving ESG landscape, and corporate responsibility sparked meaningful conversations and deep reflections among our students."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/media/news/esg-02.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1067,
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slug": "corporate-confluence-2025",
+      "title": "CORPORATE CONFLUENCE 2025",
+      "date": "2025-12-11",
+      "image": {
+        "src": "/media/news/cc25-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 1067,
+        "placeholder": false
+      },
+      "body": [
+        {
+          "kind": "p",
+          "text": "[XLRI Delhi-NCR](https://www.linkedin.com/company/xlridelhincr/) is thrilled to have successfully hosted Corporate Confluence - a powerful platform that brought academia and industry together to reimagine the future of HR capability and leadership."
+        },
+        {
+          "kind": "p",
+          "text": "The conversations spanned three big themes: leveraging data and technology in talent decisions, viewing AI as an enabler rather than a replacement, and recognising culture–fit as a key driver of employee success."
+        },
+        {
+          "kind": "p",
+          "text": "Proud to have collaborated with [Humanlinks Learning](https://www.linkedin.com/company/humanlinks-learning/) and [InvokHR Solutions](https://www.linkedin.com/company/invokhr/) with [Vipin Arora](https://www.linkedin.com/in/aroravip/), and grateful to the HR leaders and practitioners who made this dialogue truly meaningful and excited for what lies ahead with [HR Simulathon 2025](https://www.linkedin.com/company/hrsimulathon/)."
+        }
+      ]
+    },
+    {
+      "slug": "xlri-delhi-ncr-celebrates-4th-convocation-amid-rising-industry-trust-and-exceptional-placements",
+      "title": "XLRI Delhi-NCR Celebrates 4th Convocation Amid Rising Industry Trust and Exceptional Placements",
+      "date": "2025-04-15",
+      "image": {
+        "src": "/media/news/c4-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 1064,
+        "placeholder": false
+      },
+      "standfirst": "221 diplomas awarded as placements reflect rising employer confidence",
+      "body": [
+        {
+          "kind": "p",
+          "text": "**Delhi-NCR, April 14, 2025:** XLRI Delhi-NCR held its 4th Annual Convocation Ceremony , marking a significant milestone in the institute’s journey to shape responsible and future-ready leaders. The event was presided over by **Mr. Bhargav Dasgupta, Vice President ( Market Solutions), Asian Development Bank, Manila, as the Chief Guest and who** delivered the convocation address. As a special highlight of the ceremony, **Vice Chairman Fr. S. George** presented the prestigious **Fr. E. Abraham Medal** for **Management & Industrial Development** to Mr. Dasgupta in recognition of his outstanding contributions to the field."
+        },
+        {
+          "kind": "p",
+          "text": "A total of **221 students** received their diplomas at the convocation ceremony – **178** from the **Post Graduate Diploma in Management – Business Management (PGDM-BM)** and **43** from the **Post Graduate Diploma in Management – Innovation, Entrepreneurship & Venture Creation Development (PGDM-IEV)**. The solemn ceremony was held at the XLRI Delhi-NCR campus in Jhajjar, Haryana, in the presence of distinguished faculty, staff and families of the graduating students."
+        },
+        {
+          "kind": "p",
+          "text": "Delivering the convocation address, Mr. Dasgupta emphasized the role of responsible leadership and innovation in shaping the future of businesses and societies. He encouraged the graduates to remain rooted in values while embracing change, disruption and global opportunities."
+        },
+        {
+          "kind": "p",
+          "text": "Speaking on the occasion, **Fr. Dr. K. S. Casimir, Director, XLRI Delhi-NCR**, said,"
+        },
+        {
+          "kind": "quote",
+          "text": "The convocation is not just a ceremony — it’s a celebration of purpose, perseverance, and potential. Each graduate carries forward the XLRI legacy of ethical leadership, innovation, and service to society. As they step into a complex and fast-changing world, we are confident they will lead with clarity, compassion, and conviction, making meaningful contributions across industries and communities. I wholeheartedly congratulate the graduating class and wish them continued success in their journey ahead."
+        },
+        {
+          "kind": "p",
+          "text": "XLRI Delhi-NCR continues to build on its legacy of academic excellence and industry relevance. This year, the placement season witnessed remarkable success with **591 students** across both campuses participating in the recruitment process. Over **172 recruiters** extended more than **600 domestic and 2 international offers**. Prestigious firms from consulting, BFSI, FMCG, technology, and e-commerce sectors actively participated, while **34.17%** of the cohort received **Pre-Placement Offers (PPOs)**, reflecting the growing trust of industry leaders in the institute’s talent pool."
+        },
+        {
+          "kind": "p",
+          "text": "As part of the convocation proceedings, outstanding students were recognized for their academic excellence and holistic development. From the PGDM-BM batch, **Ishaan Shekhar** received the **XLRI Delhi-NCR Medal for Best All-round Student**, while **Divija Maddela** was awarded the **Medal for Highest CQPI among Women Students**. The **Medal for Highest CQPI – BM** was conferred upon **Arpan Roy**. From the PGDM-IEV cohort, **Akash Subramanian** was honoured as the **Best All-round Student**, and **Sree Manjari Gumireddy** received the **Medal for Highest CQPI – IEV**. These awards reflect the institute’s commitment to nurturing academic rigor and leadership potential across disciplines."
+        },
+        {
+          "kind": "p",
+          "text": "XLRI Delhi-NCR’s commitment to providing a world-class management education is evident in the success of its alumni, who have gone on to hold prominent positions in leading organizations across various sectors. The institute’s focus on fostering a holistic learning environment, nurturing innovation, and instilling ethical values has been instrumental in shaping the careers of its graduates."
+        },
+        {
+          "kind": "p",
+          "text": "The event concluded with the conferring of degrees diplomas to the batch and medals to academic toppers, symbolizing a proud moment for the entire XLRI community."
+        },
+        {
+          "kind": "h",
+          "text": "About XLRI Delhi-NCR:"
+        },
+        {
+          "kind": "p",
+          "text": "XLRI, known for its academic excellence and ethical leadership in India, is dedicated to nurturing responsible business leaders. With two campuses, common faculty, common admission process and common placement, XLRI has been one of the most prestigious institutes in India. XLRI Delhi-NCR, strategically situated near Delhi and the key business hubs of Gurugram, boasts a modern, eco-friendly 47-acre campus designed with sustainability and climate awareness at its core. XLRI Delhi-NCR upholds the tradition of excellence in education, facilitated by seasoned faculty and flagship programs like the celebrated XLRI PGDM-BM. These programs prepare students to excel in today’s fast-evolving business environment. XLRI Delhi-NCR has garnered international recognition, achieving accreditation from prestigious organizations such as AACSB International and AMBA, marking its commitment to providing a world-class education."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/media/news/c4-02.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1064,
+          "placeholder": false
+        },
+        {
+          "src": "/media/news/c4-03.jpg",
+          "alt": "",
+          "width": 1600,
+          "height": 1064,
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slug": "maxi-mela-2025-set-to-dazzle-dlf-cyberhub-with-marketing-innovation-and-entertainment",
+      "title": "MAXI Mela 2025 Set to Dazzle DLF CyberHub with Marketing Innovation and Entertainment",
+      "date": "2025-02-06",
+      "image": {
+        "src": "/media/news/maxi-01.jpg",
+        "alt": "",
+        "width": 1131,
+        "height": 1600,
+        "placeholder": false
+      },
+      "body": [
+        {
+          "kind": "p",
+          "text": "**Gurgaon, India, February 6, 2025:** The Marketing Association of XLRI Delhi (MAXI) is proud to announce the return of MAXI Mela on February 8 and 9, 2025, at DLF CyberHub, Gurgaon. The highly anticipated event, now in its second edition, is poised to captivate attendees with an exciting mix of marketing ingenuity, community engagement, and unforgettable entertainment."
+        },
+        {
+          "kind": "p",
+          "text": "The inauguration will take place on **February 8 at 11:00 AM**, with **Father P.T. Joseph (Dean of Accounts & Finance)** and **Dr. Sharad Sarin**, the founding faculty in charge of MAXI Mela, officiating the opening ceremony."
+        },
+        {
+          "kind": "h",
+          "text": "MAXI Mela Highlights:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "**Disguised Marketing in Action:** A pioneering initiative that tackles real-world brand challenges through consumer research, providing insightful strategies for enhanced",
+            "**Interactive Activities:** Mini-games, competitions, a dance showdown, a photography contest, and an arcade zone, all designed to entertain and involve attendees of all",
+            "**Live Performances:** Surprise musical acts to keep the energy high and the crowd",
+            "**Exciting Brands on Show**: We are collaborating with jewelry brands such as Aura Studios and SilverHub Jewellery, as well as clothing brands like Arya Clothing and Kaari Ghar that participants can explore, bringing together the Mela vibe."
+          ]
+        },
+        {
+          "kind": "h",
+          "text": "Event Details:"
+        },
+        {
+          "kind": "list",
+          "items": [
+            "**Venue:** DLF CyberHub, Gurgaon",
+            "**Dates:** February 8-9, 2025",
+            "**Time:** 11:00 AM onwards"
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "MAXI Mela offers a unique opportunity for marketing enthusiasts, consumers, and community members to witness cutting-edge brand activations, participate in interactive entertainment, and enjoy a memorable weekend experience. From its research-driven foundation to its dynamic events, MAXI Mela continues to shine as one of the premier experiential marketing events in the Delhi-NCR region."
+        },
+        {
+          "kind": "p",
+          "text": "**About MAXI Mela:** Initiated by the Marketing Association of XLRI, MAXI Mela combines in-depth consumer research with engaging, community-oriented activities. It serves as a vibrant platform to experiment, innovate, and bring brands and consumers closer through impactful marketing strategies and fun-filled events."
+        },
+        {
+          "kind": "p",
+          "text": "VIsit the MAXI Mela website – [https://maxidelhi-xlri.com/](https://maxidelhi-xlri.com/)"
+        }
+      ]
+    },
+    {
+      "slug": "xlri-delhi-ncr-concludes-third-edition-of-elevatex",
+      "title": "XLRI Delhi-NCR Concludes Third Edition Of ElevateX",
+      "date": "2024-12-06",
+      "image": {
+        "src": "/media/news/elevatex-01.jpg",
+        "alt": "",
+        "width": 800,
+        "height": 650,
+        "placeholder": false
+      },
+      "body": [
+        {
+          "kind": "p",
+          "text": "XLRI Delhi-NCR hosted the much-awaited third edition of ElevateX-XLRI’s Premier Startup Conclave on November 29-30, 2024, marking another milestone in its commitment to fostering innovation and entrepreneurship. The conclave, organised by XLRI Delhi-NCR, brought together an eclectic mix of emerging entrepreneurs, industry leaders…"
+        },
+        {
+          "kind": "link",
+          "label": "Read Article",
+          "href": "https://bweducation.com/article/xlri-delhi-ncr-concludes-third-edition-of-elevatex-541438"
+        }
+      ]
+    },
+    {
+      "slug": "corporate-confluence-2024",
+      "title": "Corporate Confluence 2024",
+      "date": "2024-07-21",
+      "image": {
+        "src": "/media/news/cc24-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 1068,
+        "placeholder": false
+      },
+      "body": []
+    },
+    {
+      "slug": "welcome-batch-2024-2026",
+      "title": "Welcome batch 2024-2026",
+      "date": "2024-06-10",
+      "image": {
+        "src": "/media/news/welcome-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 651,
+        "placeholder": false
+      },
+      "body": []
+    },
+    {
+      "slug": "convocation-2024",
+      "title": "Convocation 2024",
+      "date": "2024-03-04",
+      "image": {
+        "src": "/media/news/c24-01.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 1067,
+        "placeholder": false
+      },
+      "body": []
+    }
+  ]
+}

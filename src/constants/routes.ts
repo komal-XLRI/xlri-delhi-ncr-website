@@ -47,6 +47,35 @@ const EXECUTIVE_PROGRAMMES = {
   'in-company-programmes': '/icp',
 } as const;
 
+/** EMDP programmes with a page of their own, by their card id in emdp.json. */
+const EMDP_PROGRAMMES = {
+  'digital-hr-people-analytics-batch-8':
+    '/executive-development-program-in-digital-hr-leadership-people-analytics-batch-8',
+  'strategy-leadership-batch-4': '/executive-development-program-in-strategy-leadership-batch-4',
+  'strategic-hr-leadership-batch-7':
+    '/executive-development-programme-in-strategic-hr-leadership-batch-7',
+  'global-strategy-healthcare-batch-1':
+    '/executive-development-programme-in-global-strategy-leadership-for-healthcare-professionals',
+  'dba-ipag': '/doctor-of-business-administration-dba',
+  'digital-hr-people-analytics-batch-7':
+    '/executive-development-program-in-digital-hr-leadership-people-analytics-batch-7',
+  'mba-ipag': '/master-of-business-administration-mba',
+  'strategy-leadership-batch-3': '/executive-development-program-in-strategy-leadership-batch-3',
+  'strategic-hr-leadership-batch-6':
+    '/executive-development-programme-in-strategic-hr-leadership-batch-6',
+  'digital-transformation-healthcare-batch-1':
+    '/executive-development-program-in-digital-transformation-and-business-models-in-healthcare-batch-1-4',
+  'general-management-batch-5': '/executive-program-in-general-management-2',
+  'digital-hr-people-analytics-batch-6':
+    '/executive-development-program-in-digital-hr-leadership-people-analytics',
+  'applied-business-finance': '/executive-development-programme-in-applied-business-finance',
+  'strategic-hr-leadership-cohort-5': '/executive-development-program-in-strategic-hr-leadership',
+  'strategy-leadership-cohort-2': '/executive-program-in-strategy-leadership',
+} as const;
+
+/** Whether an EMDP programme has its own page here. */
+export const hasEmdpProgrammePage = (id: string): boolean => id in EMDP_PROGRAMMES;
+
 const CENTRES = {
   'gender-equality': '/centre-for-gender-equality-inclusive-leadership',
   'public-policy': '/center-for-public-policy-and-public-affairs',
@@ -91,6 +120,7 @@ export const routes = {
   executiveEducation: {
     index: '/executive-education',
     programme: lookup(EXECUTIVE_PROGRAMMES, 'executive programme'),
+    emdpProgramme: lookup(EMDP_PROGRAMMES, 'EMDP programme'),
   },
 
   /** Quick links for current students — the "Students" link in the utility row. */
@@ -166,7 +196,8 @@ export const routes = {
 
   news: {
     index: '/latest-news',
-    article: (slug: string) => `/news/${slug}` as const,
+    /** Stories sit at the site root, as on the live site: `/corporate-confluence-2025`. */
+    article: (slug: string) => `/${slug}` as const,
   },
 
   events: {
