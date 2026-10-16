@@ -1,5 +1,8 @@
-import { directorsDesk } from '@/content/directors-desk';
+import directorsDeskJson from '@/content/directors-desk.json';
 import type { DirectorsDesk } from '@/types/directors-desk';
+import { fromJson } from '@/lib/validation/json-content';
+
+const directorsDesk = fromJson<DirectorsDesk>(directorsDeskJson);
 
 /**
  * "From the Director's Desk" repository — the same seam as `services/homepage`.

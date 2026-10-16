@@ -67,8 +67,8 @@ export function MdpPage({ content }: { content: MdpContent }) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Executive Education' },
-              { label: content.abbreviation },
+              { label: content.breadcrumb.section },
+              { label: content.breadcrumb.page },
             ]}
           />
 
@@ -106,7 +106,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
                   href="#contact"
                   className="inline-flex items-center rounded-full border border-border-strong px-5 py-3 text-[0.9375rem] font-semibold text-ink-strong transition-colors duration-200 hover:border-brand hover:text-brand"
                 >
-                  Contact the MDP office
+                  {content.contactLinkLabel}
                 </a>
               </div>
             </div>
@@ -175,7 +175,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
         <div className={`${MEASURE} py-14 md:py-20`}>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-16">
             <div>
-              <p className={EYEBROW}>At a glance</p>
+              <p className={EYEBROW}>{calendar.eyebrow}</p>
               <h2 id="calendar-heading" className={`${H2} mt-2`}>
                 {calendar.heading}
               </h2>
@@ -206,14 +206,14 @@ export function MdpPage({ content }: { content: MdpContent }) {
                 rel="noopener"
                 className="mt-6 inline-flex items-center gap-2 font-semibold text-brand hover:text-brand-950"
               >
-                Download the calendar
+                {calendar.downloadLabel}
                 <span className="font-normal text-ink-muted">{calendar.meta}</span>
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
 
             <div className="self-start rounded-[8px] border border-border bg-surface p-6 md:p-8">
-              <h3 className={EYEBROW}>Where the programmes ran</h3>
+              <h3 className={EYEBROW}>{calendar.venuesHeading}</h3>
               <ul className="mt-6 space-y-5">
                 {calendar.venues.map((venue) => (
                   <li key={venue.id}>
@@ -221,7 +221,9 @@ export function MdpPage({ content }: { content: MdpContent }) {
                       <span className="font-serif text-lg text-ink-strong">{venue.name}</span>
                       <span className="text-sm text-ink-muted">
                         <span className="font-serif text-2xl text-brand">{venue.count}</span>{' '}
-                        {venue.count === 1 ? 'programme' : 'programmes'}
+                        {venue.count === 1
+                          ? calendar.venueCountLabels.one
+                          : calendar.venueCountLabels.other}
                       </span>
                     </div>
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-subtle">
@@ -276,7 +278,9 @@ export function MdpPage({ content }: { content: MdpContent }) {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-sm text-ink-muted italic">Note: {stay.taxNote}</p>
+              <p className="mt-5 text-sm text-ink-muted italic">
+                {stay.taxNoteLabel} {stay.taxNote}
+              </p>
             </div>
 
             <div className="space-y-6">
@@ -297,7 +301,7 @@ export function MdpPage({ content }: { content: MdpContent }) {
                         {tier.discount}
                       </span>
                       <span className="text-[0.9375rem] leading-snug text-ink">
-                        off Professional Fees for{' '}
+                        {discounts.tierText}{' '}
                         <strong className="text-ink-strong">{tier.participants}</strong>
                       </span>
                     </li>
@@ -315,11 +319,15 @@ export function MdpPage({ content }: { content: MdpContent }) {
                 </h2>
                 <dl className="mt-5 space-y-3 text-[0.9375rem]">
                   <div>
-                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Phone</dt>
+                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">
+                      {contact.phoneLabel}
+                    </dt>
                     <dd className="font-semibold text-ink-strong">{contact.phone}</dd>
                   </div>
                   <div>
-                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Email</dt>
+                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">
+                      {contact.emailLabel}
+                    </dt>
                     <dd>
                       <a
                         href={`mailto:${contact.email}`}
@@ -330,7 +338,9 @@ export function MdpPage({ content }: { content: MdpContent }) {
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Website</dt>
+                    <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">
+                      {contact.websiteLabel}
+                    </dt>
                     <dd>
                       <a
                         href={contact.website}

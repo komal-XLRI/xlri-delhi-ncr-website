@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Student Hostel",
+    "description": "Student hostel at XLRI Delhi-NCR: furnished rooms in a fully residential campus, with a gym in the hostel and the mess, laundry and store close by."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Student Hostel",
+  "intro": "All programmes at XLRI are residential, so the hostel is home for the length of the course — a furnished room of your own, with the gym, the mess and everyday services a short walk away.",
+  "photos": [
+    {
+      "src": "/media/campus-life/hostel/room-1.jpg",
+      "alt": "A hostel room with a bed, study desk and chair, and a wardrobe by the window",
+      "width": 1300,
+      "height": 1600
+    },
+    {
+      "src": "/media/campus-life/hostel/room-2.jpg",
+      "alt": "A hostel room with a single bed, wardrobe and shelves",
+      "width": 1245,
+      "height": 1600
+    },
+    {
+      "src": "/media/campus-life/hostel/campus.jpg",
+      "alt": "The academic and hostel blocks of the XLRI Delhi-NCR campus across the lawn",
+      "width": 1600,
+      "height": 788
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Living in the hostel",
+  "highlights": [
+    {
+      "icon": "bed",
+      "title": "Furnished rooms",
+      "text": "Each room comes with a bed, a study desk and chair, a wardrobe and shelves."
+    },
+    {
+      "icon": "dumbbell",
+      "title": "A gym in the hostel",
+      "text": "In the hostel itself there is a large gym available for all students to use."
+    },
+    {
+      "icon": "users",
+      "title": "A residential community",
+      "text": "Seniors and juniors live on the same campus, and the XL culture grows out of that closely knit community."
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Food Courts",
+      "description": "A 24×7 cafeteria, The Daily Spot, the mess and NESCAFE Break Zone.",
+      "href": "/campus-life/food-courts"
+    },
+    {
+      "label": "Laundry Facilities",
+      "description": "Washing, ironing and dry cleaning for students.",
+      "href": "/campus-life/laundry-facilities"
+    },
+    {
+      "label": "Daily Needs Store",
+      "description": "Fresh produce, groceries and personal care on campus.",
+      "href": "/campus-life/daily-needs-store"
+    }
+  ]
+}

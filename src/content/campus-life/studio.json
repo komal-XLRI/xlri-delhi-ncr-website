@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Studio",
+    "description": "The XLRI Delhi-NCR studio, a branded set for videos, recordings and group photographs."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Studio",
+  "intro": "The campus studio, with its #shootforthestars XLRI wall, is where committees and teams record videos, take photographs and gather for group portraits.",
+  "photos": [
+    {
+      "src": "/media/campus-life/studio/set.jpg",
+      "alt": "The studio set: an XLRI #shootforthestars wall above a wooden bench with cushions",
+      "width": 1600,
+      "height": 1069
+    },
+    {
+      "src": "/media/campus-life/studio/group.jpg",
+      "alt": "A large group of students posed in front of the studio wall",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "src": "/media/campus-life/studio/gathering.jpg",
+      "alt": "Students gathered for a group photograph in a hall",
+      "width": 1600,
+      "height": 1200
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "The studio",
+  "highlights": [
+    {
+      "icon": "sparkle",
+      "title": "A branded set",
+      "text": "The XLRI wall and the #shootforthestars line make a ready backdrop."
+    },
+    {
+      "icon": "users",
+      "title": "Room for a crowd",
+      "text": "Space for a whole committee or batch in one photograph."
+    },
+    {
+      "icon": "briefcase",
+      "title": "For every committee",
+      "text": "Used across campus for recordings, interviews and portraits."
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Student Societies",
+      "description": "E-Cell and the other committees and clubs at XL.",
+      "href": "/campus-life/societies#e-cell"
+    },
+    {
+      "label": "XCEED Facilities",
+      "description": "The incubation centre for student entrepreneurs.",
+      "href": "/campus-life/xceed-facilities"
+    },
+    {
+      "label": "Student Events",
+      "description": "Fests, talks and competitions through the year.",
+      "href": "/campus-life/student-events"
+    }
+  ]
+}

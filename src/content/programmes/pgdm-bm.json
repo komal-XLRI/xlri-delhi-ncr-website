@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "PGDM BM — Postgraduate Diploma in Business Management",
+    "description": "XLRI’s two-year, full-time programme in Business Management, leading to the Postgraduate Diploma in Business Management (PGDBM). Curriculum, programme design and course outlines.",
+    "image": "/media/academics/pgdm-bm/pgdm-bm-batch.jpg",
+    "imageAlt": "A PGDM BM batch at XLRI Delhi-NCR"
+  },
+  "breadcrumb": {
+    "section": "Academics",
+    "page": "PGDM BM"
+  },
+  "school": "School of Business",
+  "shortName": "PGDM BM",
+  "title": "Postgraduate Diploma in Business Management (PGDBM)",
+  "intro": "XLRI offers a two-year full time programme on Business Management, on the completion of which, candidates are conferred with Postgraduate diploma in Business Management (PGDBM). This programme is extremely prestigious and is rated as one of the finest of its kind in the country. The alumni of this programme currently occupy very significant positions in various industries, both in India and abroad.",
+  "image": {
+    "src": "/media/academics/pgdm-bm/pgdm-bm-batch.jpg",
+    "width": 1430,
+    "height": 648,
+    "alt": "A PGDM BM batch at XLRI Delhi-NCR, gathered for a group photograph in formal dress"
+  },
+  "facts": [
+    {
+      "id": "duration",
+      "value": "Two years",
+      "label": "Duration"
+    },
+    {
+      "id": "format",
+      "value": "Full time",
+      "label": "Format"
+    },
+    {
+      "id": "award",
+      "value": "PGDBM",
+      "label": "Postgraduate Diploma in Business Management"
+    }
+  ],
+  "actions": {
+    "courses": {
+      "label": "BM Courses",
+      "href": "/documents/academics/pgdm-bm-courses-2024-26.pdf",
+      "meta": "PDF · 2024–26 · 3.2 MB",
+      "documentLabel": "BM Courses document"
+    },
+    "moreInfo": {
+      "label": "For more information",
+      "href": "https://xlri.ac.in/academic-programmes/school-of-business/pgdbm"
+    }
+  },
+  "curriculum": {
+    "eyebrow": "The curriculum",
+    "text": "The curriculum lays the foundation for a conceptual and analytical understanding of Indian and international business. XLRI’s BM programme is designed to closely integrate current management theory and practice. The course imparts knowledge and fosters attitudes essential for the growth of students into competent, responsible managers. The course has an evolving programme content and is constantly updated to be in tune with the emerging trends."
+  },
+  "design": {
+    "heading": "Programme Design and Requirements",
+    "areas": [
+      {
+        "id": "economics",
+        "name": "Economics",
+        "courses": ["Macroeconomic Theory and Policy", "Managerial Economics"]
+      },
+      {
+        "id": "environment-society-governance",
+        "name": "Environment, Society and Governance",
+        "courses": []
+      },
+      {
+        "id": "finance",
+        "name": "Finance",
+        "courses": [
+          "Financial Management-I",
+          "Financial Management-II",
+          "Management Accounting-I",
+          "Management Accounting-II"
+        ]
+      },
+      {
+        "id": "general-management",
+        "name": "General Management",
+        "courses": [
+          "Business Law",
+          "Business Research Methods",
+          "Managerial Communication",
+          "Managerial Ethics"
+        ]
+      },
+      {
+        "id": "human-resource-management",
+        "name": "Human Resource Management",
+        "courses": ["Human Resource Management"]
+      },
+      {
+        "id": "information-systems",
+        "name": "Information Systems",
+        "courses": ["Management Information Systems"]
+      },
+      {
+        "id": "marketing",
+        "name": "Marketing",
+        "courses": ["Principles of Marketing", "Marketing Planning and Implementation"]
+      },
+      {
+        "id": "organisational-behaviour",
+        "name": "Organisational Behaviour",
+        "courses": [
+          "Individual and Group Behaviour in Organization",
+          "Organizational Structure, Design & Change"
+        ]
+      },
+      {
+        "id": "operations",
+        "name": "Production, Operations & Decision Sciences",
+        "courses": [
+          "Operations Management - I",
+          "Operations Management - II",
+          "Operations Research",
+          "Quantitative Techniques - I",
+          "Quantitative Techniques - II"
+        ]
+      },
+      {
+        "id": "strategic-management",
+        "name": "Strategic Management",
+        "courses": ["Business and Sustainability", "Strategic Management"]
+      }
+    ],
+    "emptyAreaNote": "Courses in this area are listed in the",
+    "outlinesNote": "The full course outlines are in the"
+  },
+  "related": {
+    "heading": "Related Programmes",
+    "items": [
+      {
+        "id": "pgdm-iev",
+        "school": "XLRI – Entrepreneurship",
+        "name": "PGDM - IEV",
+        "href": "/academics/programmes/pgdm-innovation-entrepreneurship"
+      }
+    ]
+  }
+}

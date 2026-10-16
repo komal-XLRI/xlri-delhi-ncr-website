@@ -1,0 +1,489 @@
+{
+  "meta": {
+    "title": "Student Events",
+    "description": "Fests, talks, competitions, sports and celebrations run by the student committees of XLRI Delhi-NCR in 2025–26 — with dates, venues and organisers."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Student Events",
+  "intro": "Fests, talks, competitions and celebrations run by the student committees of XLRI Delhi-NCR through the 2025–26 academic year.",
+  "facts": {
+    "events": "Events",
+    "committees": "Organising committees",
+    "year": {
+      "value": "2025–26",
+      "label": "Academic year"
+    }
+  },
+  "spotlight": {
+    "badge": "Most recent",
+    "organisers": "By {names}",
+    "link": "View the poster"
+  },
+  "board": {
+    "eyebrow": "On campus this year",
+    "title": "Every event, month by month",
+    "intro": "Choose a poster to see it in full, with the date, venue and the committee behind it.",
+    "labels": {
+      "filterAll": "All events",
+      "undated": "Date not given",
+      "count": {
+        "one": "{count} event",
+        "other": "{count} events"
+      },
+      "date": "Date",
+      "time": "Time",
+      "venue": "Venue",
+      "organisedBy": "Organised by",
+      "position": "{index} of {total}"
+    }
+  },
+  "kinds": [
+    {
+      "id": "culture",
+      "label": "Culture & celebrations"
+    },
+    {
+      "id": "talks",
+      "label": "Talks & workshops"
+    },
+    {
+      "id": "competitions",
+      "label": "Competitions"
+    },
+    {
+      "id": "sports",
+      "label": "Sports & esports"
+    },
+    {
+      "id": "community",
+      "label": "Community & social"
+    }
+  ],
+  "events": [
+    {
+      "id": "the-silicon-ceiling",
+      "title": "The Silicon Ceiling",
+      "kind": "competitions",
+      "organisers": ["cii-yi"],
+      "summary": "Breaking the Silicon Ceiling — a semiconductor strategy challenge with ALMUS, powered by CaseQuest.",
+      "poster": {
+        "src": "/media/campus-life/events/the-silicon-ceiling.jpg",
+        "width": 526,
+        "height": 740,
+        "alt": "Poster for The Silicon Ceiling"
+      }
+    },
+    {
+      "id": "pathmakers-by-cgeil",
+      "title": "Pathmakers by CGEIL",
+      "kind": "talks",
+      "organisers": ["idea"],
+      "start": "2026-02-25",
+      "time": "4:00 PM",
+      "venue": "LCR01, XLRI Delhi-NCR Campus",
+      "summary": "Shri Sumit Arora, Partner at Pvalue Analytics and Project Leader of NARI 2025, on “Data to Action: Building India’s First N.A.R.I. (National Annual Report & Index) on Women’s Safety Index”.",
+      "poster": {
+        "src": "/media/campus-life/events/pathmakers-by-cgeil.jpg",
+        "width": 933,
+        "height": 1400,
+        "alt": "Poster for Pathmakers by CGEIL"
+      }
+    },
+    {
+      "id": "blurring-lines",
+      "title": "Blurring Lines",
+      "kind": "talks",
+      "organisers": ["cii-yi"],
+      "start": "2026-02-20",
+      "summary": "TEDx XLRI Delhi, on the theme “Blurring Lines”.",
+      "poster": {
+        "src": "/media/campus-life/events/blurring-lines.jpg",
+        "width": 596,
+        "height": 744,
+        "alt": "Poster for Blurring Lines"
+      }
+    },
+    {
+      "id": "qawwali-night",
+      "title": "Qawwali Night",
+      "kind": "culture",
+      "organisers": ["sigma-oikos"],
+      "start": "2026-02-19",
+      "time": "8 PM onwards",
+      "venue": "MPH, XLRI",
+      "summary": "A live qawwali performance by Kashif Nizami.",
+      "poster": {
+        "src": "/media/campus-life/events/qawwali-night.jpg",
+        "width": 1000,
+        "height": 1250,
+        "alt": "Poster for Qawwali Night"
+      }
+    },
+    {
+      "id": "xpl",
+      "title": "XPL",
+      "kind": "sports",
+      "start": "2026-02-16",
+      "end": "2026-02-18",
+      "summary": "XLRI Premier League, Season 3 — box cricket and dodgeball.",
+      "poster": {
+        "src": "/media/campus-life/events/xpl.jpg",
+        "width": 990,
+        "height": 1400,
+        "alt": "Poster for XPL"
+      }
+    },
+    {
+      "id": "night-under-the-stars",
+      "title": "Night Under the Stars",
+      "kind": "community",
+      "start": "2026-02-12",
+      "venue": "Aurora Garden",
+      "summary": "Bonfire, barbecue, music and good vibes — “moments that won’t fit into stories”.",
+      "poster": {
+        "src": "/media/campus-life/events/night-under-the-stars.jpg",
+        "width": 933,
+        "height": 1400,
+        "alt": "Poster for Night Under the Stars"
+      }
+    },
+    {
+      "id": "anubhuti",
+      "title": "Anubhuti",
+      "kind": "culture",
+      "organisers": ["spicmacay"],
+      "start": "2026-02-10",
+      "time": "8:00 PM",
+      "venue": "MPH, XLRI Delhi-NCR",
+      "summary": "Sveta Hattangdi Kilpady, with Saptak Sharma on tabla and Lalit Sisodia on harmonium. Theme: traditional.",
+      "poster": {
+        "src": "/media/campus-life/events/anubhuti.jpg",
+        "width": 531,
+        "height": 754,
+        "alt": "Poster for Anubhuti"
+      }
+    },
+    {
+      "id": "omnia-2026",
+      "title": "OMNIA 2026",
+      "kind": "competitions",
+      "organisers": ["idea"],
+      "start": "2026-02-04",
+      "summary": "Where strategy meets inclusion — a multi-round, boardroom-level case competition. Prizes of ₹12,500, ₹7,500 and ₹5,000.",
+      "poster": {
+        "src": "/media/campus-life/events/omnia-2026.jpg",
+        "width": 990,
+        "height": 1400,
+        "alt": "Poster for OMNIA 2026"
+      }
+    },
+    {
+      "id": "anugrah-2026",
+      "title": "Anugrah ’26",
+      "kind": "community",
+      "organisers": ["sigma-oikos"],
+      "start": "2026-02-03",
+      "venue": "MPH, XLRI Delhi",
+      "summary": "A career counselling workshop for students of Classes 9 and 11 from Navodaya Vidyalaya and St. Mary School.",
+      "poster": {
+        "src": "/media/campus-life/events/anugrah-2026.jpg",
+        "width": 1000,
+        "height": 1250,
+        "alt": "Poster for Anugrah ’26"
+      }
+    },
+    {
+      "id": "retribution",
+      "title": "Retribution",
+      "kind": "sports",
+      "organisers": ["prometheus"],
+      "start": "2026-02-03",
+      "end": "2026-02-04",
+      "venue": "2nd & 3rd Floor Common Room",
+      "summary": "Seniors vs juniors, one last time — Valorant, BGMI, bullet chess, Call of Duty and FIFA.",
+      "poster": {
+        "src": "/media/campus-life/events/retribution.jpg",
+        "width": 395,
+        "height": 556,
+        "alt": "Poster for Retribution"
+      }
+    },
+    {
+      "id": "isep-fight-club",
+      "title": "Fight Club 2.0",
+      "kind": "community",
+      "organisers": ["isep"],
+      "start": "2026-02-02",
+      "venue": "MPH",
+      "summary": "Epic fights, strategy, fun games and much more.",
+      "poster": {
+        "src": "/media/campus-life/events/isep-fight-club.jpg",
+        "width": 529,
+        "height": 747,
+        "alt": "Poster for Fight Club 2.0"
+      }
+    },
+    {
+      "id": "xlutsav",
+      "title": "XL Utsav 2026",
+      "kind": "culture",
+      "organisers": ["acadcom"],
+      "start": "2026-01-29",
+      "end": "2026-01-30",
+      "summary": "A celebration of the spirit of gratitude — two nights of unwinding, enjoyment and fun.",
+      "poster": {
+        "src": "/media/campus-life/events/xlutsav.jpg",
+        "width": 521,
+        "height": 742,
+        "alt": "Poster for XL Utsav 2026"
+      }
+    },
+    {
+      "id": "international-mens-day",
+      "title": "International Men’s Day",
+      "kind": "community",
+      "organisers": ["idea"],
+      "start": "2025-12-10",
+      "venue": "Aurora Gardens & MPH",
+      "summary": "A bonfire night “celebrating men on campus”, with games, food and drinks.",
+      "poster": {
+        "src": "/media/campus-life/events/international-mens-day.jpg",
+        "width": 396,
+        "height": 566,
+        "alt": "Poster for International Men’s Day"
+      }
+    },
+    {
+      "id": "silent-auction",
+      "title": "Silent Auction ’25",
+      "kind": "community",
+      "organisers": ["cii-yi"],
+      "start": "2025-12-04",
+      "time": "8 PM",
+      "summary": "Bid for a cause, with charity partner CRY.",
+      "poster": {
+        "src": "/media/campus-life/events/silent-auction.jpg",
+        "width": 397,
+        "height": 567,
+        "alt": "Poster for Silent Auction ’25"
+      }
+    },
+    {
+      "id": "ignitex",
+      "title": "IgniteX",
+      "kind": "community",
+      "organisers": ["e-cell", "sigma-oikos"],
+      "start": "2025-12-03",
+      "venue": "Cambridge School, Rewari",
+      "summary": "A hands-on social entrepreneurship workshop to empower young minds to think boldly.",
+      "poster": {
+        "src": "/media/campus-life/events/ignitex.jpg",
+        "width": 1000,
+        "height": 1250,
+        "alt": "Poster for IgniteX"
+      }
+    },
+    {
+      "id": "xluminate-2025",
+      "title": "XLuminate 2025",
+      "kind": "talks",
+      "organisers": ["alcom"],
+      "start": "2025-11-29",
+      "time": "1:30 – 4:30",
+      "summary": "Where experience meets aspiration — career conversations, industry insights and networking with alumni.",
+      "poster": {
+        "src": "/media/campus-life/events/xluminate-2025.jpg",
+        "width": 990,
+        "height": 1400,
+        "alt": "Poster for XLuminate 2025"
+      }
+    },
+    {
+      "id": "ragnarok-2025",
+      "title": "Ragnarok ’25",
+      "kind": "sports",
+      "organisers": ["prometheus"],
+      "start": "2025-11-21",
+      "end": "2025-11-23",
+      "venue": "3rd & 4th Floor Common Rooms",
+      "summary": "The esports championship — this is Rocket League.",
+      "poster": {
+        "src": "/media/campus-life/events/ragnarok-2025.jpg",
+        "width": 525,
+        "height": 752,
+        "alt": "Poster for Ragnarok ’25"
+      }
+    },
+    {
+      "id": "northern-brawl",
+      "title": "Northern Brawl ’25",
+      "kind": "sports",
+      "organisers": ["sportscom"],
+      "start": "2025-11-21",
+      "end": "2025-11-23",
+      "summary": "Many will answer the call; only one can rule them all.",
+      "poster": {
+        "src": "/media/campus-life/events/northern-brawl.jpg",
+        "width": 523,
+        "height": 736,
+        "alt": "Poster for Northern Brawl ’25"
+      }
+    },
+    {
+      "id": "maelstrom-2025",
+      "title": "Maelstrom ’25",
+      "kind": "sports",
+      "organisers": ["xlanc", "next"],
+      "start": "2025-11-09",
+      "time": "11 AM",
+      "venue": "Football Ground",
+      "summary": "XLANC’s event at Nova Exilaro 5.0.",
+      "poster": {
+        "src": "/media/campus-life/events/maelstrom-2025.jpg",
+        "width": 905,
+        "height": 1280,
+        "alt": "Poster for Maelstrom ’25"
+      }
+    },
+    {
+      "id": "splash",
+      "title": "Splash",
+      "kind": "culture",
+      "organisers": ["idea", "next"],
+      "start": "2025-11-08",
+      "time": "11:00 AM",
+      "summary": "The tie & dye event, at Nova Exilaro 5.0.",
+      "poster": {
+        "src": "/media/campus-life/events/splash.jpg",
+        "width": 795,
+        "height": 772,
+        "alt": "Poster for Splash"
+      }
+    },
+    {
+      "id": "rhetora",
+      "title": "Rhetora",
+      "kind": "talks",
+      "organisers": ["prometheus"],
+      "start": "2025-11-02",
+      "time": "10:30 AM onwards",
+      "venue": "XCEED Amphitheatre",
+      "summary": "A Prod Talk on “The AI Revolution in Product Management: Navigating New Frontiers”, with Balmukund Lakhani (Principal Product Manager, Microsoft), Subbu Swaminathan (SVP – Product & Engineering, Rakuten) and Ankur Mishra (Head of Product Management, GreyOrange).",
+      "poster": {
+        "src": "/media/campus-life/events/rhetora.jpg",
+        "width": 397,
+        "height": 658,
+        "alt": "Poster for Rhetora"
+      }
+    },
+    {
+      "id": "dandiya-night",
+      "title": "Dandiya Night",
+      "kind": "culture",
+      "organisers": ["spicmacay"],
+      "start": "2025-10-27",
+      "time": "7 PM onwards",
+      "venue": "Aurora Garden",
+      "summary": "Jalsa ’25 — music, dance, food and fun. Dress code: traditional or colourful ethnic wear.",
+      "poster": {
+        "src": "/media/campus-life/events/dandiya-night.jpg",
+        "width": 529,
+        "height": 745,
+        "alt": "Poster for Dandiya Night"
+      }
+    },
+    {
+      "id": "daan-utsav",
+      "title": "Daan Utsav",
+      "kind": "community",
+      "organisers": ["sigma-oikos"],
+      "start": "2025-10-16",
+      "time": "8:00 PM onwards",
+      "venue": "MPH, XLRI Delhi",
+      "summary": "Shaam-e-khaas, with a special performance by Bodhi Tree — a night of games, food and drinks.",
+      "poster": {
+        "src": "/media/campus-life/events/daan-utsav.jpg",
+        "width": 1000,
+        "height": 1250,
+        "alt": "Poster for Daan Utsav"
+      }
+    },
+    {
+      "id": "welcome-dinner",
+      "title": "Welcome Dinner",
+      "kind": "community",
+      "organisers": ["infracom"],
+      "start": "2025-10-15",
+      "time": "8:00 PM onwards",
+      "venue": "Aurora Garden",
+      "summary": "The senior batch welcomes Batch ’27 — “from strangers to family, let the journey begin”. Theme: Indian ethnic.",
+      "poster": {
+        "src": "/media/campus-life/events/welcome-dinner.jpg",
+        "width": 990,
+        "height": 1400,
+        "alt": "Poster for Welcome Dinner"
+      }
+    },
+    {
+      "id": "blood-donation-drive",
+      "title": "Blood Donation Drive",
+      "kind": "community",
+      "organisers": ["sigma-oikos"],
+      "start": "2025-10-14",
+      "time": "9 AM – 6 PM",
+      "venue": "MPH, XLRI Delhi",
+      "summary": "Donate blood, save lives.",
+      "poster": {
+        "src": "/media/campus-life/events/blood-donation-drive.jpg",
+        "width": 1000,
+        "height": 1250,
+        "alt": "Poster for Blood Donation Drive"
+      }
+    },
+    {
+      "id": "ratanjee-2025",
+      "title": "Ratanjee 2025",
+      "kind": "sports",
+      "organisers": ["sportscom"],
+      "start": "2025-10-10",
+      "end": "2025-10-12",
+      "summary": "Seniors vs juniors — “the harder the battle, the sweeter the victory”.",
+      "poster": {
+        "src": "/media/campus-life/events/ratanjee-2025.jpg",
+        "width": 990,
+        "height": 1400,
+        "alt": "Poster for Ratanjee 2025"
+      }
+    },
+    {
+      "id": "hunar-e-xl",
+      "title": "Hunar-e-XL",
+      "kind": "culture",
+      "organisers": ["spicmacay"],
+      "start": "2025-08-21",
+      "summary": "The first event of the 2025–27 batch.",
+      "poster": {
+        "src": "/media/campus-life/events/hunar-e-xl.jpg",
+        "width": 531,
+        "height": 751,
+        "alt": "Poster for Hunar-e-XL"
+      }
+    },
+    {
+      "id": "thread-talk",
+      "title": "Thread Talk",
+      "kind": "competitions",
+      "organisers": ["cii-yi"],
+      "start": "2025-07-04",
+      "time": "4 PM",
+      "venue": "MPH",
+      "summary": "₹5K cash and CV points to be won.",
+      "poster": {
+        "src": "/media/campus-life/events/thread-talk.jpg",
+        "width": 798,
+        "height": 791,
+        "alt": "Poster for Thread Talk"
+      }
+    }
+  ]
+}

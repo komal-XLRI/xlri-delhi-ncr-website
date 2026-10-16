@@ -4,7 +4,12 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 import { ArrowRightIcon, CloseIcon } from '@/components/ui/icon';
-import type { BiographyBlock, CentrePerson } from '@/types/centre';
+import type {
+  BiographyBlock,
+  CentreAdvisors,
+  CentreChairperson,
+  CentrePerson,
+} from '@/types/centre';
 
 /**
  * The Chairperson and the Board of Advisors, each with "Know More" opening a
@@ -19,8 +24,8 @@ export function CentrePeople({
   chairperson,
   advisors,
 }: {
-  chairperson: { heading: string; person: CentrePerson };
-  advisors: { heading: string; people: readonly CentrePerson[] };
+  chairperson: CentreChairperson;
+  advisors: CentreAdvisors;
 }) {
   const [selected, setSelected] = useState<CentrePerson | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -69,7 +74,7 @@ export function CentrePeople({
               aria-haspopup="dialog"
               className="group mt-5 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-brand"
             >
-              Read full profile
+              {chairperson.profileLabel}
               <span className="sr-only"> of {chair.name}</span>
               <ArrowRightIcon
                 size={14}
@@ -115,7 +120,7 @@ export function CentrePeople({
                   {person.role}
                 </span>
                 <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
-                  Know More
+                  {advisors.profileLabel}
                   <span className="sr-only"> about {person.name}</span>
                   <ArrowRightIcon
                     size={13}

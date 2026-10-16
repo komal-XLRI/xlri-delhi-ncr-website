@@ -1,4 +1,5 @@
 import { env } from '@/config/env';
+import siteJson from '@/config/site.json';
 
 /**
  * Institutional facts used by metadata, JSON-LD, and the footer.
@@ -7,22 +8,26 @@ import { env } from '@/config/env';
  * present: structured data must model this as a campus of XLRI rather than as
  * the institute itself, or the two sites compete in search for the same entity.
  *
+ * The names and the default description — the words a visitor reads, in the
+ * footer and in search results — are in `config/site.json`, so they can be
+ * edited without touching code. URLs and machine values stay here.
+ *
  * TODO(Q4): confirm the legal entity name, full postal address, and the
  * official social profile list with the communications team before launch.
  */
 export const site = {
-  name: 'XLRI Delhi-NCR',
-  legalName: 'XLRI — Xavier School of Management, Delhi-NCR Campus',
-  shortName: 'XLRI Delhi',
-  description:
-    'XLRI Delhi-NCR — Xavier School of Management. Postgraduate management education, executive programmes, and research at the Jhajjar campus.',
+  name: siteJson.name,
+  legalName: siteJson.legalName,
+  shortName: siteJson.shortName,
+  /** Default meta description — every page that does not set its own. */
+  description: siteJson.description,
   url: env.SITE_URL,
   locale: 'en_IN',
   /** Single-locale by decision D6. Kept as a named constant so the assumption is greppable. */
   languages: ['en'] as const,
 
   parentOrganization: {
-    name: 'XLRI — Xavier School of Management',
+    name: siteJson.parentOrganizationName,
     url: 'https://xlri.ac.in',
   },
 

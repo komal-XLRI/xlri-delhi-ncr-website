@@ -1,0 +1,756 @@
+{
+  "meta": {
+    "title": "Sustainability Research Publications & Cases",
+    "description": "Research publications and teaching cases on sustainability by XLRI faculty — green finance, electric mobility, circular economy, sustainable supply chains and more — searchable by title, author and journal."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Research Publications & Cases"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Research Publications & Cases",
+  "contactEmail": "sustainability.delhi@xlri.ac.in",
+  "contactLabel": "Contact us:",
+  "facts": {
+    "publications": "Research publications",
+    "cases": "Teaching cases",
+    "span": "Years covered"
+  },
+  "sections": {
+    "publications": {
+      "heading": "Research Publications",
+      "list": {
+        "allYears": "All years",
+        "searchPlaceholder": "Search title, author or journal",
+        "showing": "Showing {shown} of {total} publications",
+        "clearFilters": "Clear filters",
+        "noMatch": "No publications match your search.",
+        "doi": "DOI",
+        "isbn": "ISBN {isbn}"
+      }
+    },
+    "cases": {
+      "heading": "Cases",
+      "tag": "Case",
+      "doi": "DOI"
+    }
+  },
+  "periods": [
+    {
+      "id": "2024-2025",
+      "label": "2024–2025",
+      "publications": [
+        {
+          "id": "2024-banerjee-environmental-sustainability-and-the",
+          "authors": "Banerjee, Ameet Kumar",
+          "year": "2024",
+          "title": "Environmental sustainability and the time-varying changing dynamics of green and brown energy ETFs",
+          "source": "Finance Research Letters 62, p. 105148",
+          "doi": "10.1016/j.frl.2024.105148"
+        },
+        {
+          "id": "2024-banerjee-climate-policy-initiatives-green",
+          "authors": "Banerjee, Ameet Kumar; Boubaker, Sabri; Al-Nassar, Nassar S.",
+          "year": "2024",
+          "title": "Climate policy initiatives, green finance, and carbon risk interconnectedness",
+          "source": "Finance Research Letters 67, p. 105776",
+          "doi": "10.1016/j.frl.2024.105776"
+        },
+        {
+          "id": "2024-banerjee-how-does-the-time",
+          "authors": "Banerjee, Ameet Kumar; Özer, Zeynep Sueda; Rahman, Molla Ramizur; Sensoy, Ahmet",
+          "year": "2024",
+          "title": "How does the time-varying dynamics of spillover between clean and brown energy ETFs change with the intervention of climate risk and climate policy uncertainty?",
+          "source": "International Review of Economics & Finance 93, pp. 442–468",
+          "doi": "10.1016/j.iref.2024.03.046"
+        },
+        {
+          "id": "2024-banerjee-commonality-in-volatility-among",
+          "authors": "Banerjee, Ameet Kumar; Sensoy, Ahmet; Rahman, Molla Ramizur; Palma, Alessia",
+          "year": "2024",
+          "title": "Commonality in volatility among green, brown, and sustainable energy indices",
+          "source": "Finance Research Letters 64, p. 105384",
+          "doi": "10.1016/j.frl.2024.105384"
+        },
+        {
+          "id": "2024-banerjee-connectivity-and-spillover-during",
+          "authors": "Banerjee, Ameet Kumar; Sensoy, Ahmet; Goodell, John W.",
+          "year": "2024",
+          "title": "Connectivity and spillover during crises: Highlighting the prominent and growing role of green energy",
+          "source": "Energy Economics 129, p. 107224",
+          "doi": "10.1016/j.eneco.2023.107224"
+        },
+        {
+          "id": "2025-bharti-flipping-the-script-harnessing",
+          "authors": "Bharti, Megha; Bharti, Mehak",
+          "year": "2025",
+          "title": "Flipping the Script: Harnessing Consumer Knowledge, Message Order and Refutation for Effective Two‐Sided Green Advertising",
+          "source": "Psychology and Marketing 42 (5), pp. 1361–1378",
+          "doi": "10.1002/mar.22184"
+        },
+        {
+          "id": "2024-bharti-is-it-benefiting-me",
+          "authors": "Bharti, Megha; Suneja, Vivek",
+          "year": "2024",
+          "title": "Is It Benefiting Me or the Environment? How Context Nudges Green Product Choices",
+          "source": "Int J Consumer Studies 48 (6), Article e13102",
+          "doi": "10.1111/ijcs.13102"
+        },
+        {
+          "id": "2025-bharti-nudging-green-product-adoption",
+          "authors": "Bharti, Megha; Suneja, Vivek",
+          "year": "2025",
+          "title": "Nudging green product adoption: leveraging context effects to ease trade-offs in online green buying",
+          "source": "JCM ahead-of-print (ahead-of-print)",
+          "doi": "10.1108/JCM-07-2024-7034"
+        },
+        {
+          "id": "2024-bhattarai-determinants-of-adolescents-pro",
+          "authors": "Bhattarai, Prakash C.; Shrestha, Richan; Ray, Subhasis; Knez, Rajna",
+          "year": "2024",
+          "title": "Determinants of adolescents’ pro-sustainable behavior: a systematic literature review using PRISMA",
+          "source": "Discov Sustain 5 (1), pp. 1–11",
+          "doi": "10.1007/s43621-024-00291-6"
+        },
+        {
+          "id": "2024-das-of-climate-communities-and",
+          "authors": "Das, Smriti",
+          "year": "2024",
+          "title": "Of Climate, Communities and Commons: A Gendered Perspective",
+          "source": "Bikkina, N., Turaga, R.M.R. (eds) Climate Change Adaptation",
+          "doi": "10.1007/978-981-97-1076-8_5"
+        },
+        {
+          "id": "2024-das-perspectives-on-inequalities-in",
+          "authors": "Das, Smriti",
+          "year": "2024",
+          "title": "Perspectives on inequalities in social science research and environmental sustainability in India",
+          "source": "Environmental Science & Policy 161, p. 103891",
+          "doi": "10.1016/j.envsci.2024.103891"
+        },
+        {
+          "id": "2024-ghosh-analysis-of-green-supply",
+          "authors": "Ghosh, Soumita; Chakraborty, Abhishek; Raj, Alok",
+          "year": "2024",
+          "title": "Analysis of green supply chains under fairness concern and differential power structure",
+          "source": "JBIM 39 (10), pp. 2088–2103",
+          "doi": "10.1108/JBIM-10-2023-0593"
+        },
+        {
+          "id": "2024-jhawar-impact-of-materialism-on",
+          "authors": "Jhawar, Anand; Kumar, Prashant; Israel, Duraipandian",
+          "year": "2024",
+          "title": "Impact of materialism on tourists’ green purchase behavior: Extended norm activation model perspective",
+          "source": "Journal of Vacation Marketing 30 (4), pp. 841–855"
+        },
+        {
+          "id": "2024-kumar-driving-electric-mobility-considering",
+          "authors": "Kumar, Rajeev Ranjan; Chan, Felix T. S.; Chakraborty, Abhishek; Goswami, Mohit",
+          "year": "2024",
+          "title": "Driving Electric Mobility Considering Manufacturers’ Power Asymmetry in Presence of the Government’s Policy Instruments",
+          "source": "IEEE Trans. Eng. Manage. 71, pp. 9906–9919",
+          "doi": "10.1109/TEM.2023.3290944"
+        },
+        {
+          "id": "2025-kumar-green-ad-stories-characteristics",
+          "authors": "Kumar, Prashant; Jhawar, Anand; Shetty, Khyati; Varshney, Sanjeev",
+          "year": "2025",
+          "title": "Green ad stories’ characteristics and green brand trust: examining the moderating role of consumer expertise through the elaboration likelihood model lens",
+          "source": "Journal of Marketing Theory and Practice, pp. 1–14",
+          "doi": "10.1080/10696679.2025.2463080"
+        },
+        {
+          "id": "2024-kumar-heterogeneity-in-electric-vehicle",
+          "authors": "Kumar, Rajeev Ranjan; Raj, Alok; Sharma, Prateek",
+          "year": "2024",
+          "title": "Heterogeneity in Electric Vehicle Adoption: Indian Consumer Preferences",
+          "source": "IEEE Trans. Eng. Manage. 71, pp. 10833–10845",
+          "doi": "10.1109/TEM.2024.3404787"
+        },
+        {
+          "id": "2025-kumar-the-energy-efficiency-paradox",
+          "authors": "Kumar, Rajeev Ranjan; Raj, Alok; Ajith Kumar, J.",
+          "year": "2025",
+          "title": "The energy efficiency paradox in electric vehicle adoption: Estimating the internal discount rate and the influences of behavioural factors",
+          "source": "Transportation Research Part A: Policy and Practice 192, p. 104367",
+          "doi": "10.1016/j.tra.2024.104367"
+        },
+        {
+          "id": "2024-lalwani-climate-risks-corporate-bonds",
+          "authors": "Lalwani, Vaibhav",
+          "year": "2024",
+          "title": "Climate risks, corporate bonds, and economic uncertainty",
+          "source": "Economics Letters 244, p. 111984",
+          "doi": "10.1016/j.econlet.2024.111984"
+        },
+        {
+          "id": "2025-mondal-a-configurational-analysis-of",
+          "authors": "Mondal, Arindam; Sinha, Indrani",
+          "year": "2025",
+          "title": "A configurational analysis of digital technology, environmental, and social concerns on the internationalization of entrepreneurial ventures",
+          "source": "MD ahead-of-print (ahead-of-print)",
+          "doi": "10.1108/MD-01-2024-0165"
+        },
+        {
+          "id": "2025-nath-adaptive-capacity-and-attainment",
+          "authors": "Nath, Sanchayan; Arrawatia, Rakesh",
+          "year": "2025",
+          "title": "Adaptive capacity and attainment of the sustainable development goals in local communities of India",
+          "source": "Journal of Environmental Management 373, p. 123850",
+          "doi": "10.1016/j.jenvman.2024.123850"
+        },
+        {
+          "id": "2025-nath-quantitative-analysis-to-identify",
+          "authors": "Nath, Sanchayan; Pillai, Arya A.; Ram, Aswin; Gayathri, A.N; Viswanath, N.; Tanjeri, Purusotham et al.",
+          "year": "2025",
+          "title": "Quantitative analysis to identify circular economy concepts incorporated in Indian policy documents regulating waste management by the Indian Healthcare sector",
+          "source": "Resources, Conservation and Recycling 214, p. 108037",
+          "doi": "10.1016/j.resconrec.2024.108037"
+        },
+        {
+          "id": "2024-pachpore-the-new-ecological-paradigm",
+          "authors": "Pachpore, Pranjal; Kumar, Prashant; Israel, D.; Patro, Sanjay; Maji, Sumit Kumar",
+          "year": "2024",
+          "title": "The new ecological paradigm and consideration of future consequences; an integrated approach",
+          "source": "APJML 36 (5), pp. 1211–1229",
+          "doi": "10.1108/APJML-02-2023-0143"
+        },
+        {
+          "id": "2024-pattanaik-a-study-of-the",
+          "authors": "Pattanaik, Prasanta; Himanshu, Urmii; Bhushan, Bharat; Thakur, Munish; Pani, Ashis K.",
+          "year": "2024",
+          "title": "A study of the adoption behaviour of an Electronic Health Information Exchange System for a Green economy",
+          "source": "International Journal of Logistics Research and Applications 27 (4), pp. 512–537",
+          "doi": "10.1080/13675567.2021.2008336"
+        },
+        {
+          "id": "2025-polonsky-how-meaningless-and-substantive",
+          "authors": "Polonsky, Michael Jay; Rotman, Jeffrey; Weber, Virginia; Kumar, Prashant",
+          "year": "2025",
+          "title": "How meaningless and substantive green claims jointly determine product environmental perceptions",
+          "source": "International Journal of Advertising 44 (3), pp. 396–427"
+        },
+        {
+          "id": "2024-quadir-manufacturers-choice-of-greening",
+          "authors": "Quadir, Abdul",
+          "year": "2024",
+          "title": "Manufacturers’ choice of greening level in competitive environment",
+          "source": "OPSEARCH, pp. 1–29",
+          "doi": "10.1007/s12597-024-00853-2"
+        },
+        {
+          "id": "2024-quadir-information-sharing-in-a",
+          "authors": "Quadir, Abdul; Raj, Alok; Agrawal, Anupam",
+          "year": "2024",
+          "title": "Information sharing in a green supply chain: a bane or a boon?",
+          "source": "JBIM ahead-of-print (ahead-of-print)",
+          "doi": "10.1108/JBIM-10-2023-0621"
+        },
+        {
+          "id": "2025-quadir-sharing-demand-information-in",
+          "authors": "Quadir, Abdul; Raj, Alok; Foropon, Cyril R. H.",
+          "year": "2025",
+          "title": "Sharing demand information in competing supply chains with greening efforts",
+          "source": "Journal of Environmental Management 373, p. 123626",
+          "doi": "10.1016/j.jenvman.2024.123626"
+        },
+        {
+          "id": "2024-raj-understanding-and-enhancing-electric",
+          "authors": "Raj, Alok; Kumar, Rajeev Ranjan",
+          "year": "2024",
+          "title": "Understanding and Enhancing Electric Vehicle Adoption in India: A Practice-Oriented Approach",
+          "source": "IEEE Eng. Manag. Rev. 52 (6), pp. 19–22",
+          "doi": "10.1109/EMR.2024.3453554"
+        },
+        {
+          "id": "2024-saggurthi-ecozoic-leadership-the-next",
+          "authors": "Saggurthi, Suneetha; Farias, Gerard; Thakur, Munish Kumar",
+          "year": "2024",
+          "title": "Ecozoic Leadership: The Next Adjacent Possible for a Flourishing Earth Community",
+          "source": "Journal of Management, Spirituality & Religion 21 (6), pp. 712–731",
+          "doi": "10.51327/FIBM7605"
+        },
+        {
+          "id": "2024-sharma-strengthening-organizational-resilience-role",
+          "authors": "Sharma, Varun; Vijayaraghavan, T.A.S.; Tata, Raghu Ram; Raj, Alok",
+          "year": "2024",
+          "title": "Strengthening organizational resilience: role of sustainable supply chain, digitalization and business model adaptation",
+          "source": "JBIM 39 (11), pp. 2420–2437",
+          "doi": "10.1108/JBIM-06-2023-0332"
+        },
+        {
+          "id": "2024-singh-examining-the-effects-of",
+          "authors": "Singh, Suruchi; Banerjee, Shubhomoy",
+          "year": "2024",
+          "title": "Examining the effects of fear of missing out on sustainable food consumption: a social identity perspective",
+          "source": "APJML 36 (10), pp. 2726–2743",
+          "doi": "10.1108/APJML-10-2023-0969"
+        },
+        {
+          "id": "2024-srivastava-eco-green-mirage-investigating",
+          "authors": "Srivastava, Shalini; Saxena, Anubhuti; Sarkar, Ayatakshee",
+          "year": "2024",
+          "title": "Eco-green mirage: investigating turnover intention as organizational turbulence through perceived greenwashing, cynicism and alienation",
+          "source": "SRJ 20 (8), pp. 1535–1557",
+          "doi": "10.1108/SRJ-10-2023-0599"
+        },
+        {
+          "id": "2024-tiwari-antecedents-and-consequents-of",
+          "authors": "Tiwari, Gourav; Kumar, Rajeev Ranjan; Raj, Alok; Foropon, Cyril R. H.",
+          "year": "2024",
+          "title": "Antecedents and consequents of circular economy adoption: A meta-Analytic Investigation",
+          "source": "Journal of Environmental Management 367, p. 121912",
+          "doi": "10.1016/j.jenvman.2024.121912"
+        },
+        {
+          "id": "2024-wani-criterion-for-evaluating-used",
+          "authors": "Wani, Tahir; Chhabra, Sakhhi; Saji, Smitha",
+          "year": "2024",
+          "title": "Criterion for Evaluating Used Car Purchases in India using MCDM",
+          "source": "IJLEG 11 (2), Article 10066572",
+          "doi": "10.1504/IJLEG.2024.10066572"
+        }
+      ]
+    },
+    {
+      "id": "2020-2023",
+      "label": "2020–2023",
+      "publications": [
+        {
+          "id": "2022-akhtaruzzaman-is-greenness-an-optimal",
+          "authors": "Akhtaruzzaman, Md; Banerjee, Ameet Kumar; Ghardallou, Wafa; Umar, Zaghum",
+          "year": "2022",
+          "title": "Is greenness an optimal hedge for sectoral stock indices?",
+          "source": "Economic Modelling 117, p. 106030",
+          "doi": "10.1016/j.econmod.2022.106030"
+        },
+        {
+          "id": "2023-akhtaruzzaman-does-green-improve-portfolio",
+          "authors": "Akhtaruzzaman, Md; Banerjee, Ameet Kumar; Boubaker, Sabri; Moussa, Faten",
+          "year": "2023",
+          "title": "Does green improve portfolio optimisation?",
+          "source": "Energy Economics 124, p. 106831",
+          "doi": "10.1016/j.eneco.2023.106831"
+        },
+        {
+          "id": "2022-ballabh-replenishing-indian-soils-through",
+          "authors": "Ballabh, Vishwa; Dubey, Aman",
+          "year": "2022",
+          "title": "Replenishing Indian Soils through Industrial Waste Management: Need for Interlinking Industry and Agriculture",
+          "source": "Indian Journal of Agricultural Economics 777 (3), pp. 468–479",
+          "doi": "10.22004/ag.econ.345208"
+        },
+        {
+          "id": "2021-bansal-willingness-to-pay-and",
+          "authors": "Bansal, Prateek; Kumar, Rajeev Ranjan; Raj, Alok; Dubey, Subodh; Graham, Daniel J.",
+          "year": "2021",
+          "title": "Willingness to pay and attitudinal preferences of Indian consumers for electric vehicles",
+          "source": "Energy Economics 100, p. 105340",
+          "doi": "10.1016/j.eneco.2021.105340"
+        },
+        {
+          "id": "2022-basu-customer-reciprocity-in-greening",
+          "authors": "Basu, Debarati; Chakraborty, Kamalika; Mitra, Shabana; Verma, Nishant Kumar",
+          "year": "2022",
+          "title": "Customer reciprocity in greening: the role of service quality",
+          "source": "IJQSS 14 (2), pp. 238–257",
+          "doi": "10.1108/IJQSS-08-2021-0116"
+        },
+        {
+          "id": "2021-chakraborty-a-game-theoretic-approach",
+          "authors": "Chakraborty, Abhishek; Kumar, Rajeev Ranjan; Bhaskar, Kalyan",
+          "year": "2021",
+          "title": "A game-theoretic approach for electric vehicle adoption and policy decisions under different market structures",
+          "source": "Journal of the Operational Research Society 72 (3), pp. 594–611",
+          "doi": "10.1080/01605682.2019.1678407"
+        },
+        {
+          "id": "2023-haldar-towards-achieving-sustainable-development",
+          "authors": "Haldar, Anasuya; Sethi, Narayan; Jena, Pabitra Kumar; Padhan, Purna Chandra",
+          "year": "2023",
+          "title": "Towards achieving Sustainable Development Goal 7 in sub‐Saharan Africa: Role of governance and renewable energy",
+          "source": "Sustainable Development 31 (4), pp. 2446–2463",
+          "doi": "10.1002/sd.2521"
+        },
+        {
+          "id": "2023-haldar-the-effects-of-ict",
+          "authors": "Haldar, Anasuya; Sucharita, Sanhita; Dash, Devi Prasad; Sethi, Narayan; Chandra Padhan, Purna",
+          "year": "2023",
+          "title": "The effects of ICT, electricity consumption, innovation and renewable power generation on economic growth: An income level analysis for the emerging economies",
+          "source": "Journal of Cleaner Production 384, p. 135607",
+          "doi": "10.1016/j.jclepro.2022.135607"
+        },
+        {
+          "id": "2022-jain-what-drives-adoption-intention",
+          "authors": "Jain, Nikunj Kumar; Bhaskar, Kalyan; Jain, Sourabh",
+          "year": "2022",
+          "title": "What drives adoption intention of electric vehicles in India? An integrated UTAUT model with environmental concerns, perceived risk and government support",
+          "source": "Research in Transportation Business & Management 42, p. 100730",
+          "doi": "10.1016/j.rtbm.2021.100730"
+        },
+        {
+          "id": "2020-jain-construction-and-demolition-waste",
+          "authors": "Jain, Sourabh; Singhal, Shaleen; Jain, Nikunj Kumar; Bhaskar, Kalyan",
+          "year": "2020",
+          "title": "Construction and demolition waste recycling: Investigating the role of theory of planned behavior, institutional pressures and environmental consciousness",
+          "source": "Journal of Cleaner Production 263, p. 121405",
+          "doi": "10.1016/j.jclepro.2020.121405"
+        },
+        {
+          "id": "2023-kapoor-greenfluencers-as-agents-of",
+          "authors": "Kapoor, Payal S.; Balaji, M. S.; Jiang, Yangyang",
+          "year": "2023",
+          "title": "Greenfluencers as agents of social change: the effectiveness of sponsored messages in driving sustainable consumption",
+          "source": "EJM 57 (2), pp. 533–561",
+          "doi": "10.1108/EJM-10-2021-0776"
+        },
+        {
+          "id": "2023-kapoor-social-media-influencer-promoted",
+          "authors": "Kapoor, Payal S.; Tagore, Abhinav; Dua, Sahil",
+          "year": "2023",
+          "title": "Social Media Influencer Promoted Sustainable Fashion: Effects of Sponsorship and Benefit Association",
+          "source": "Journal of Promotion Management 29 (4), pp. 461–490",
+          "doi": "10.1080/10496491.2022.2163034"
+        },
+        {
+          "id": "2023-khatua-institutional-enablers-of-electric",
+          "authors": "Khatua, Apalak; Ranjan Kumar, Rajeev; Kumar De, Supriya",
+          "year": "2023",
+          "title": "Institutional enablers of electric vehicle market: Evidence from 30 countries",
+          "source": "Transportation Research Part A: Policy and Practice 170, p. 103612",
+          "doi": "10.1016/j.tra.2023.103612"
+        },
+        {
+          "id": "2021-kuanr-can-we-anti-consume",
+          "authors": "Kuanr, Abhisek; Israel, Duraipandian; Pradhan, Debasis; Roy Chaudhuri, Himadri",
+          "year": "2021",
+          "title": "Can we anti‐consume our way to sustainability? Finding answers at the intersection of cultural values",
+          "source": "J of Consumer Behaviour 20 (5), pp. 1051–1064",
+          "doi": "10.1002/cb.1914"
+        },
+        {
+          "id": "2020-kumar-adoption-of-electric-vehicle",
+          "authors": "Kumar, Rajeev Ranjan; Alok, Kumar",
+          "year": "2020",
+          "title": "Adoption of electric vehicle: A literature review and prospects for sustainability",
+          "source": "Journal of Cleaner Production 253, p. 119911",
+          "doi": "10.1016/j.jclepro.2019.119911"
+        },
+        {
+          "id": "2021-kumar-promoting-electric-vehicle-adoption",
+          "authors": "Kumar, Rajeev Ranjan; Chakraborty, Abhishek; Mandal, Prasenjit",
+          "year": "2021",
+          "title": "Promoting electric vehicle adoption: Who should invest in charging infrastructure?",
+          "source": "Transportation Research Part E: Logistics and Transportation Review 149, p. 102295",
+          "doi": "10.1016/j.tre.2021.102295"
+        },
+        {
+          "id": "2022-kumar-comparative-assessment-and-selection",
+          "authors": "Kumar, Rajeev Ranjan; Guha, Pritha; Chakraborty, Abhishek",
+          "year": "2022",
+          "title": "Comparative assessment and selection of electric vehicle diffusion models: A global outlook",
+          "source": "Energy 238, p. 121932",
+          "doi": "10.1016/j.energy.2021.121932"
+        },
+        {
+          "id": "2023-kuruvilla-pandikattu-green-growth-and-regrowth",
+          "authors": "Kuruvilla Pandikattu, S. J.",
+          "year": "2023",
+          "title": "Green Growth and Regrowth: Pleading for Progress With Sustainability and Responsibility",
+          "source": "Gupta, A.D. (Ed.) Strategic Corporate Responsibility and Green Management (Critical Studies on Corporate Responsibility, Governance and Sustainability 16), pp. 117-141",
+          "doi": "10.1108/S2043-905920230000016009"
+        },
+        {
+          "id": "2021-malhotra-water-and-carbon-footprint",
+          "authors": "Malhotra, Smitu; Chayanam, Divya Saroja",
+          "year": "2021",
+          "title": "WATER AND CARBON FOOTPRINT OF PIZZA CRUST WASTAGE: A CASE IN AN EMERGING ECONOMY",
+          "source": "Academy of Marketing Studies Journal 25 (5), pp. 1–14"
+        },
+        {
+          "id": "2022-mangaraj-sustainable-supply-chain-resilience",
+          "authors": "Mangaraj, B. K.",
+          "year": "2022",
+          "title": "Sustainable Supply Chain Resilience – A Decision Framework to Manage Disruptions and Retain Sustainability",
+          "source": "Making Complex Decisions toward Revamping Supply Chains amid COVID-19 Outbreak",
+          "doi": "10.1201/9781003150084-3",
+          "isbn": "9781003150084"
+        },
+        {
+          "id": "2020-padhan-renewable-energy-consumption-and",
+          "authors": "Padhan, Hemachandra; Padhang, Purna Chandra; Tiwari, Aviral Kumar; Ahmed, Rizwan; Hammoudeh, Shawkat",
+          "year": "2020",
+          "title": "Renewable energy consumption and robust globalization(s) in OECD countries: Do oil, carbon emissions and economic activity matter?",
+          "source": "Energy Strategy Reviews 32, p. 100535",
+          "doi": "10.1016/j.esr.2020.100535"
+        },
+        {
+          "id": "2020-pingali-framework-for-responsible-sustainable",
+          "authors": "Pingali, Venugopal",
+          "year": "2020",
+          "title": "Framework for responsible (sustainable) marketing",
+          "source": "Corporate Governance and Sustainability Review 4 (2), pp. 50–55"
+        },
+        {
+          "id": "2022-prasad-a-multi-objective-competitive",
+          "authors": "Prasad, Sanjeev K.; Mangaraj, B. K.",
+          "year": "2022",
+          "title": "A multi-objective competitive-design framework for fuel procurement planning in coal-fired power plants for sustainable operations",
+          "source": "Energy Economics 108, p. 105914",
+          "doi": "10.1016/j.eneco.2022.105914"
+        },
+        {
+          "id": "2023-quadir-information-sharing-in-a",
+          "authors": "Quadir, Abdul; Raj, Alok",
+          "year": "2023",
+          "title": "Information Sharing in a Green Supply Chain with a Common Retailer",
+          "source": "American Business Review 26 (2), pp. 458–474",
+          "doi": "10.37625/abr.26.2.458-474"
+        },
+        {
+          "id": "2022-r-v-understanding-consumer-preference-between",
+          "authors": "R.V., ShabbirHusain; Varshney, Sanjeev; Venugopal, Pingali; Thakur, Munish",
+          "year": "2022",
+          "title": "Understanding consumer preference between bundled and unbundled green offering",
+          "source": "Journal of Nonprofit & Public Sector Marketing 34 (5), pp. 527–552",
+          "doi": "10.1080/10495142.2021.1941497"
+        },
+        {
+          "id": "2020-raj-do-pressures-foster-sustainable",
+          "authors": "Raj, Alok; Agrahari, Amit; Srivastava, Samir K.",
+          "year": "2020",
+          "title": "Do pressures foster sustainable public procurement? An empirical investigation comparing developed and developing economies",
+          "source": "Journal of Cleaner Production 266, p. 122055",
+          "doi": "10.1016/j.jclepro.2020.122055"
+        },
+        {
+          "id": "2023-randev-promoting-decent-work-in",
+          "authors": "Randev, Kadumbri Kriti; Jha, Jatinder Kumar",
+          "year": "2023",
+          "title": "Promoting decent work in organisations: a sustainable HRD perspective",
+          "source": "Human Resource Development International 26 (4), pp. 471–484",
+          "doi": "10.1080/13678868.2022.2097823"
+        },
+        {
+          "id": "2020-sarkar-manufacturer-competition-and-collusion",
+          "authors": "Sarkar, Sumit; Bhadouriya, Akash",
+          "year": "2020",
+          "title": "Manufacturer competition and collusion in a two-echelon green supply chain with production trade-off between non-green and green quality",
+          "source": "Journal of Cleaner Production 253, p. 119904",
+          "doi": "10.1016/j.jclepro.2019.119904"
+        },
+        {
+          "id": "2023-sarkar-developing-responsible-consumption-behaviours",
+          "authors": "Sarkar, Juhi Gahlot; Sarkar, Abhigyan; Sreejesh, S.",
+          "year": "2023",
+          "title": "Developing responsible consumption behaviours through social media platforms: sustainable brand practices as message cues",
+          "source": "ITP 36 (2), pp. 532–563",
+          "doi": "10.1108/ITP-01-2021-0044"
+        },
+        {
+          "id": "2023-sharma-resolving-operational-paradox-of",
+          "authors": "Sharma, Varun; Vijayaraghavan, T.A.S.; Raghu Ram, Tata L.",
+          "year": "2023",
+          "title": "Resolving operational paradox of sustainable supply chain: A decision framework approach",
+          "source": "Socio-Economic Planning Sciences 87, p. 101565",
+          "doi": "10.1016/j.seps.2023.101565"
+        },
+        {
+          "id": "2022-srivastava-role-of-power-imbalance",
+          "authors": "Srivastava, Abhishek; Chakraborty, Abhishek; Mateen, Arqum",
+          "year": "2022",
+          "title": "Role of power imbalance on channel coordination under greening investments",
+          "source": "OPSEARCH 59 (4), pp. 1522–1554",
+          "doi": "10.1007/s12597-022-00589-x"
+        },
+        {
+          "id": "2022-srivastava-design-and-selection-of",
+          "authors": "Srivastava, Abhishek; Kumar, Rajeev Ranjan; Chakraborty, Abhishek; Mateen, Arqum; Narayanamurthy, Gopalakrishnan",
+          "year": "2022",
+          "title": "Design and selection of government policies for electric vehicles adoption: A global perspective",
+          "source": "Transportation Research Part E: Logistics and Transportation Review 161, p. 102726",
+          "doi": "10.1016/j.tre.2022.102726"
+        },
+        {
+          "id": "2021-tata-biodiversity-impact-assessment-of",
+          "authors": "Tata, L. Raghu Ram",
+          "year": "2021",
+          "title": "Biodiversity impact assessment of two large dam projects in India under long term multi-scenarios simulation",
+          "source": "Impact Assessment and Project Appraisal 39 (4), pp. 335–347",
+          "doi": "10.1080/14615517.2021.1916263"
+        },
+        {
+          "id": "2020-venugopal-incorporating-sustainability-in-the",
+          "authors": "Venugopal, Pingali",
+          "year": "2020",
+          "title": "Incorporating sustainability in the realm of marketing: a theoretical framework",
+          "source": "Academy of Marketing Studies Journal 24 (3), pp. 1–8"
+        },
+        {
+          "id": "2021-venugopal-integrating-the-circular-economy",
+          "authors": "Venugopal, Pingali; Kour, Harwinder",
+          "year": "2021",
+          "title": "Integrating the circular economy into engineering programs in India: A study of students’ familiarity with the concept",
+          "source": "Industry and Higher Education 35 (3), pp. 264–269",
+          "doi": "10.1177/0950422220967542"
+        },
+        {
+          "id": "2022-vyas-planning-and-developing-large",
+          "authors": "Vyas, Brijesh Kumar; Adhwaryu, Ambuj; Bhaskar, Kalyan",
+          "year": "2022",
+          "title": "Planning and developing large solar power plants: A case study of 750 MW Rewa Solar Park in India",
+          "source": "Cleaner Engineering and Technology 6, p. 100396",
+          "doi": "10.1016/j.clet.2022.100396"
+        }
+      ]
+    },
+    {
+      "id": "2012-2019",
+      "label": "2012–2019",
+      "publications": [
+        {
+          "id": "2013-agrawal-nm-inclusiveness-sustainability-and-human",
+          "authors": "Agrawal NM, MG Jomon, Biju Varkkey and Chandrima Banerjee (Ed.)",
+          "year": "2013",
+          "title": "Inclusiveness, sustainability and Human Resource Development",
+          "source": "McGraw Hill Education (India) Pvt Ltd, Delhi"
+        },
+        {
+          "id": "2018-bhaskar-global-trade-solar-energy",
+          "authors": "Bhaskar, Kalyan",
+          "year": "2018",
+          "title": "Global Trade & Solar Energy: A Potential Concern for India?",
+          "source": "Energy, Peace and Global Governance, Article",
+          "isbn": "978-81-932256-5-3"
+        },
+        {
+          "id": "2018-bhaskar-conceptualizing-a-resilient-supply",
+          "authors": "Bhaskar, Kalyan; Jain, Nikunj Kumar",
+          "year": "2018",
+          "title": "Conceptualizing a Resilient Supply Chain for Single-fuel Biomass Power Plant",
+          "source": "Journal of Operations and Strategic Planning 1 (1), pp. 3–14",
+          "doi": "10.1177/2516600X18769121"
+        },
+        {
+          "id": "2019-bhaskar-electronic-waste-management-and",
+          "authors": "Bhaskar, Kalyan; Kumar, Bipul",
+          "year": "2019",
+          "title": "Electronic waste management and sustainable development goals",
+          "source": "JIBR 11 (2), pp. 120–137",
+          "doi": "10.1108/JIBR-01-2018-0051"
+        },
+        {
+          "id": "2018-bhaskar-india-s-e-waste",
+          "authors": "Bhaskar, Kalyan; Turaga, Rama Mohana Rao",
+          "year": "2018",
+          "title": "India’s E‐Waste Rules and Their Impact on E‐Waste Management Practices: A Case Study",
+          "source": "J of Industrial Ecology 22 (4), pp. 930–942",
+          "doi": "10.1111/jiec.12619"
+        },
+        {
+          "id": "2019-bose-india-s-e-reverse",
+          "authors": "Bose, A. S.; Sarkar, S.",
+          "year": "2019",
+          "title": "India’s e-reverse auctions (2017–2018) for allocating renewable energy capacity: An evaluation",
+          "source": "Renewable and Sustainable Energy Reviews 112, pp. 762–774",
+          "doi": "10.1016/j.rser.2019.06.025"
+        },
+        {
+          "id": "2012-raghavendran-green-purchasing-practices-a",
+          "authors": "Raghavendran, P. Sabari; Xavier, M. J.; Israel, D.",
+          "year": "2012",
+          "title": "Green purchasing practices: a study of eprocurement in B2B buying in Indian small and medium enterprises",
+          "source": "Journal of supply Chain and operations Management 10 (1), pp. 13–23"
+        },
+        {
+          "id": "2019-shabbirhusain-is-current-way-of",
+          "authors": "ShabbirHusain, R. V.; Varshney, Sanjeev",
+          "year": "2019",
+          "title": "Is current way of promoting sustainability, sustainable?",
+          "source": "Journal of Nonprofit & Public Sector Marketing 31 (1), pp. 84–113"
+        },
+        {
+          "id": "2018-thomas-developing-a-capstone-course",
+          "authors": "Thomas, Manoj T.",
+          "year": "2018",
+          "title": "Developing a capstone course on ecological and social sustainability in business education",
+          "source": "Business Horizons 61 (6), pp. 949–958",
+          "doi": "10.1016/j.bushor.2018.07.013"
+        },
+        {
+          "id": "2019-turaga-e-waste-management-in",
+          "authors": "Turaga, Rama Mohana R.; Bhaskar, Kalyan; Sinha, Satish; Hinchliffe, Daniel; Hemkhaus, Morton; Arora, Rachna et al.",
+          "year": "2019",
+          "title": "E-Waste Management in India: Issues and Strategies",
+          "source": "Vikalpa: The Journal for Decision Makers 44 (3), pp. 127–162",
+          "doi": "10.1177/0256090919880655"
+        },
+        {
+          "id": "2018-venugopal-the-determinants-for-sustainability",
+          "authors": "Venugopal, Pingali; Malhotra, Ritu; Annamalai, Balamurugan",
+          "year": "2018",
+          "title": "The determinants for sustainability in a low-technology SME textile cluster in an emerging economy",
+          "source": "IJBIR 15 (3), Article 89752, p. 340",
+          "doi": "10.1504/IJBIR.2018.089752"
+        },
+        {
+          "id": "2015-venugopal-concern-for-global-warming",
+          "authors": "Venugopal, Pingali; Rajkumar, Narasimham; Ram, T. RaghuL.",
+          "year": "2015",
+          "title": "Concern for Global Warming among Professionals in Urban India",
+          "source": "Management and Labour Studies 40 (3-4), pp. 325–332",
+          "doi": "10.1177/0258042X15624991"
+        },
+        {
+          "id": "2012-vishwa-challenges-of-water-governance",
+          "authors": "Vishwa, Ballabh",
+          "year": "2012",
+          "title": "Challenges of Water Governance: Experiences of Two Decades of Reform",
+          "source": "Management of natural resources and Environment in India, pp. 3–16"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "bandhan-bank-valuation",
+      "author": "Trilochan Tripathy",
+      "title": "Bandhan Bank’s Valuation and Sustainability – Beyond the IPO",
+      "reference": "Case No. FINC/165",
+      "publisher": "IBS Center for Management Research",
+      "date": "January 2020"
+    },
+    {
+      "id": "barry-callebaut-forever-chocolate",
+      "author": "Trilochan Tripathy",
+      "title": "Can Barry Callebaut Attract Sustainable Investment With Its “Forever Chocolate” Strategy?",
+      "reference": "Case reference no. 118-0035-1",
+      "publisher": "IBS Center for Management Research"
+    },
+    {
+      "id": "gewel-zambia",
+      "author": "Trilochan Tripathy",
+      "title": "GEWEL – Sustainable Solutions for Empowering Girls and Women in Zambia",
+      "reference": "Case Registration No. XL-CRSDC-005/ID/2023",
+      "publisher": "XL-CRSDC",
+      "date": "2023"
+    },
+    {
+      "id": "nilkamal-wello-water-wheel",
+      "author": "Kalyan Bhaskar",
+      "title": "Rolling Drops – Nilkamal Wello Water Wheel",
+      "reference": "Vol. 9 No. 2",
+      "publisher": "Emerald Emerging Markets Case Studies",
+      "date": "October 2019",
+      "doi": "10.1108/EEMCS-06-2018-0122"
+    },
+    {
+      "id": "debre-birhan-sanitation",
+      "author": "Trilochan Tripathy",
+      "title": "Sustainable Sanitation Solutions in Debre Birhan: The Learning Alliance Collaborative Approach",
+      "reference": "Case Registration No. XL-CRSDC-007/SUS/2022",
+      "publisher": "XL-CRSDC",
+      "date": "September 2022"
+    }
+  ]
+}

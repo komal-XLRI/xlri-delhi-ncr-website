@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Laundry Facilities",
+    "description": "Laundry services for XLRI Delhi-NCR students: washing, ironing and dry cleaning."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Laundry Facilities",
+  "intro": "Laundry services are available to students including washing, ironing as well as dry cleaning.",
+  "photos": [
+    {
+      "src": "/media/campus-life/laundry/laundry.jpg",
+      "alt": "Two pairs of hands holding stacks of freshly folded clothes",
+      "width": 1380,
+      "height": 921
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Laundry services",
+  "highlights": [
+    {
+      "icon": "shirt",
+      "title": "Washing",
+      "text": "Clothes washed for students on campus."
+    },
+    {
+      "icon": "sparkle",
+      "title": "Ironing",
+      "text": "Pressed and ready to wear."
+    },
+    {
+      "icon": "briefcase",
+      "title": "Dry cleaning",
+      "text": "For suits, formals and delicate fabrics."
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Student Hostel",
+      "description": "Furnished rooms, a gym in the hostel, and the mess close by.",
+      "href": "/campus-life/students-hostel"
+    },
+    {
+      "label": "Daily Needs Store",
+      "description": "Fresh produce, groceries and personal care on campus.",
+      "href": "/campus-life/daily-needs-store"
+    },
+    {
+      "label": "Mobility Within Campus",
+      "description": "The free student shuttle, banks, gym and salon.",
+      "href": "/campus-life/mobility-within-campus"
+    }
+  ]
+}

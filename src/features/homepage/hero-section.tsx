@@ -54,7 +54,11 @@ export function HeroSection({ hero }: { hero: Hero }) {
           />
         </div>
 
-        <HeroMotion video={hero.media.video} spotlight={hero.spotlight}>
+        <HeroMotion
+          video={hero.media.video}
+          spotlight={hero.spotlight}
+          spotlightActionLabel={hero.spotlightActionLabel}
+        >
           <p className="text-2xs font-semibold tracking-[0.22em] text-white/85 uppercase">
             {hero.eyebrow}
           </p>

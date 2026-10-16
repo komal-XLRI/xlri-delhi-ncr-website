@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "Internal Complaints Committee",
+    "description": "The Internal Committee at XLRI Delhi-NCR prevents, supports and resolves concerns about sexual harassment — how to reach it, how a complaint is handled, its members and the policy documents."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Internal Complaints Committee",
+  "headline": "A safe, respectful and accountable campus for everyone",
+  "standfirst": "The Internal Committee exists to prevent, support and resolve concerns about sexual harassment — fairly, confidentially, and without delay.",
+  "intro": "At XLRI Delhi-NCR, we are committed to fostering an academic and work environment built on dignity, respect, equality, safety and inclusion. The Internal Committee is constituted to prevent, prohibit and address sexual harassment, and to provide an accessible, fair and confidential mechanism for addressing complaints.",
+  "email": "icc_convenor.delhi@xlri.ac.in",
+  "hero": {
+    "contactButton": "Contact the IC",
+    "processLink": "See how a complaint is handled",
+    "writeTitle": "Write to the IC",
+    "convenerRole": "{role}, Internal Committee"
+  },
+  "responsibilities": {
+    "eyebrow": "What the IC does",
+    "title": "One committee, three responsibilities",
+    "note": "Shown as a single continuous thread, because it's genuinely one journey — from prevention through to resolution.",
+    "items": [
+      {
+        "label": "Prevent",
+        "title": "Awareness & sensitisation",
+        "text": "Building awareness and promoting respectful conduct across the campus."
+      },
+      {
+        "label": "Support",
+        "title": "Support & guidance",
+        "text": "Providing a safe, sensitive and confidential mechanism for guidance and assistance."
+      },
+      {
+        "label": "Redress",
+        "title": "Fair & impartial redressal",
+        "text": "Addressing complaints through a fair, impartial and confidential process."
+      }
+    ]
+  },
+  "harassment": {
+    "eyebrow": "Know it when you see it",
+    "title": "What is sexual harassment?",
+    "note": "It may include, but is not limited to, the following.",
+    "items": [
+      "Unwelcome physical contact or advances",
+      "Requests or demands for sexual favours",
+      "Unwelcome flirtations, propositions, suggestive remarks or taunts",
+      "Sexually explicit jokes, gestures, sounds or communications",
+      "Displaying pornography or sexually explicit material",
+      "Unwelcome visual, verbal or physical conduct of a sexual nature"
+    ]
+  },
+  "process": {
+    "eyebrow": "The process, at a glance",
+    "title": "The inquiry process, at a glance",
+    "text": "A visual guide to the complaint process — from reporting an incident to inquiry and resolution.",
+    "start": "Incidence of workplace sexual harassment to be reported within 3 months",
+    "informal": {
+      "label": "Informal",
+      "step": "Conciliation",
+      "outcomes": [
+        "The respondent fulfils his obligations as agreed upon: the case is closed",
+        "The respondent fails to fulfil his obligations as agreed upon: an inquiry will commence"
+      ]
+    },
+    "formal": {
+      "label": "Formal",
+      "routes": ["ICC", "Nodal Officer → LCC"],
+      "steps": [
+        "One copy of the complaint to be submitted to the respondent, to which the respondent needs to reply within 10 days",
+        "Inquiry report to be completed within 90 days by the ICC/LCC",
+        "Report of the findings to be submitted to the employer or district officer (DO) and concerned parties within 10 days of completion of the inquiry"
+      ],
+      "outcomes": [
+        {
+          "label": "Complaint upheld",
+          "text": "Recommendations to be implemented by the employer/DO within 60 days on receipt of the report"
+        },
+        {
+          "label": "Complaint not upheld: inconclusive",
+          "text": "Recommend to employer/DO that no action is required to be taken"
+        }
+      ],
+      "appealLabel": "Appeal",
+      "appeal": "If not satisfied by the recommendations or non-implementation of such recommendations, the complainant and the respondent can appeal to a tribunal/court within 90 days"
+    },
+    "source": "Handbook on Sexual Harassment of Women at Workplace",
+    "sourceLine": "Source: {source}.",
+    "diagram": {
+      "src": "/media/campus-life/icc/inquiry-process.webp",
+      "alt": "Flowchart of the inquiry process from the Handbook on Sexual Harassment of Women at Workplace",
+      "width": 1088,
+      "height": 1298
+    },
+    "diagramLink": "View full-size diagram",
+    "handbook": "https://xlridelhi.ac.in/wp-content/uploads/2026/08/Handbook-on-Sexual-Harassment-of-Women-at-Workplace-Eng.pdf",
+    "handbookLink": "Download the handbook (PDF)"
+  },
+  "sessions": {
+    "eyebrow": "Prevention in practice",
+    "title": "Awareness sessions, on campus",
+    "text": "Glimpses from recent awareness and sensitisation sessions held across the Institute.",
+    "photos": [
+      {
+        "src": "/media/campus-life/icc/session-1.jpg",
+        "alt": "Students in a tiered classroom listening to a speaker at an awareness session",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/media/campus-life/icc/session-2.jpg",
+        "alt": "A sensitisation session for faculty and staff around a boardroom table",
+        "width": 1600,
+        "height": 1067
+      }
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Open to the whole community",
+    "title": "Who can approach the IC?",
+    "items": [
+      {
+        "title": "Students",
+        "text": "May approach the IC for guidance, support, or to report concerns related to sexual harassment."
+      },
+      {
+        "title": "Faculty & staff",
+        "text": "May approach the IC for guidance, support, or to report concerns related to sexual harassment or inappropriate conduct."
+      },
+      {
+        "title": "Other members",
+        "text": "Other members of the XLRI community may seek assistance regarding concerns related to sexual harassment."
+      }
+    ]
+  },
+  "filing": {
+    "eyebrow": "Ready to report?",
+    "title": "How to file a complaint",
+    "steps": [
+      {
+        "title": "Submit your complaint",
+        "text": "In writing to the IC, with relevant details of the incident and persons involved."
+      },
+      {
+        "title": "IC reviews the complaint",
+        "text": "The IC takes necessary steps in accordance with the applicable policy and procedure."
+      },
+      {
+        "title": "Resolution & support",
+        "text": "A fair, confidential and documented process, with support for the complainant."
+      }
+    ]
+  },
+  "faqs": {
+    "eyebrow": "Reference & policy",
+    "title": "FAQs",
+    "text": "Powers, rights, timelines and applicability — all in one place.",
+    "items": [
+      {
+        "question": "When should a complaint be filed?",
+        "answer": [
+          "Ordinarily within three months of the incident, or the last incident in a series. Where more time is needed, the IC can consider the circumstances and decide accordingly."
+        ]
+      },
+      {
+        "question": "What happens after a complaint is filed?",
+        "answer": [
+          "The IC acknowledges the complaint, reviews the matter, and conducts the inquiry fairly and confidentially where applicable. Appropriate action follows based on the findings, with support provided throughout."
+        ]
+      },
+      {
+        "question": "Powers of the IC",
+        "list": [
+          "Summoning and requiring attendance of relevant persons",
+          "Examining persons as part of the inquiry",
+          "Requiring discovery and production of documents",
+          "Seeking information or material necessary for the inquiry"
+        ]
+      },
+      {
+        "question": "Your rights during the process",
+        "list": [
+          "Confidentiality of complaints and proceedings",
+          "Protection from retaliation or victimisation",
+          "Interim measures where appropriate, to support safety and wellbeing"
+        ]
+      },
+      {
+        "question": "Where does the policy apply?",
+        "answer": [
+          "Institute premises, Institute-related activities, and other spaces where XLRI community members interact in connection with the Institute — classrooms, offices, hostels, libraries, transportation, field visits, internships, seminars, social and sporting events, and online/digital spaces."
+        ]
+      },
+      {
+        "question": "If you need immediate assistance",
+        "answer": [
+          "If you feel unsafe or need immediate assistance, contact appropriate campus authorities or emergency services, as applicable."
+        ]
+      }
+    ]
+  },
+  "membersSection": {
+    "eyebrow": "Meet the committee",
+    "title": "Composition of the Internal Committee",
+    "convenerLink": "Write to the Convener"
+  },
+  "members": [
+    {
+      "name": "Dr. Smriti Das",
+      "role": "Convener"
+    },
+    {
+      "name": "Dr. N. Rajkumar",
+      "role": "Member"
+    },
+    {
+      "name": "Dr. Sakhhi Chhabra",
+      "role": "Member"
+    },
+    {
+      "name": "Mr. Harbhajan Singh",
+      "role": "Member"
+    },
+    {
+      "name": "Ms. Rachna Tiwari",
+      "role": "Member"
+    },
+    {
+      "name": "Ms. Ambika Moonka",
+      "role": "Member"
+    },
+    {
+      "name": "Ms. Saloni Nazare",
+      "role": "Student Member",
+      "programme": "BM(F)"
+    },
+    {
+      "name": "Mr. Yovel P Mathews",
+      "role": "Student Member",
+      "programme": "BM(M)"
+    },
+    {
+      "name": "Ms. Anushka Aggarwal",
+      "role": "Student Member",
+      "programme": "IEV(F)"
+    },
+    {
+      "name": "Sr. Asha Paul",
+      "role": "Advocate"
+    },
+    {
+      "name": "Sr. Thressiamma K P",
+      "role": "NGO Representative"
+    }
+  ],
+  "documentsSection": {
+    "eyebrow": "Read the policy",
+    "title": "Documents & references"
+  },
+  "documents": [
+    {
+      "title": "XLRI Delhi-NCR Policy",
+      "href": "https://xlridelhi.ac.in/wp-content/uploads/2024/08/XLRI-Anti-Sexual-Harassment-Policy-Delhi-NCR-2.pdf"
+    },
+    {
+      "title": "POSH Act, 2013",
+      "href": "https://xlridelhi.ac.in/wp-content/uploads/2024/08/POSH-Act-2013.pdf"
+    },
+    {
+      "title": "POSH Rules, 2013",
+      "href": "https://xlridelhi.ac.in/wp-content/uploads/2024/08/POSH-Rules-2013.pdf"
+    },
+    {
+      "title": "AICTE Regulation, 2016",
+      "href": "https://xlridelhi.ac.in/wp-content/uploads/2024/08/AICTE-Regulation-2016.pdf"
+    }
+  ],
+  "contact": {
+    "title": "Need to talk to someone?",
+    "text": "Write to the IC, or approach any listed member. If you need help putting a complaint in writing, the IC will assist."
+  }
+}

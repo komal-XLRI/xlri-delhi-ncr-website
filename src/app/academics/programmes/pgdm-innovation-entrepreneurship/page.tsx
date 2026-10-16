@@ -6,14 +6,13 @@ import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getPgdmIev } from '@/services/programmes';
 
-export const metadata: Metadata = buildMetadata(site, {
-  title: 'PGDM - IEV — Innovation, Entrepreneurship & Venture Development',
-  description:
-    'A two-year, full-time, AICTE-approved PGDM in entrepreneurship at XLRI Delhi-NCR, combining management education with incubation at XCEED. Eligibility, selection, dates, startups and FAQs.',
-  path: routes.academics.programme('pgdm-innovation-entrepreneurship'),
-  image: '/media/academics/pgdm-iev/xceed-cohort.jpg',
-  imageAlt: 'A PGDM - IEV cohort at the XCEED incubator',
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getPgdmIev();
+  return buildMetadata(site, {
+    ...meta,
+    path: routes.academics.programme('pgdm-innovation-entrepreneurship'),
+  });
+}
 
 export default async function PgdmIevRoute() {
   const content = await getPgdmIev();

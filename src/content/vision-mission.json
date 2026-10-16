@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Vision & Mission",
+    "description": "The vision, mission, values and Program Education Objectives of XLRI Delhi-NCR — nurturing responsible global leaders for the greater common good and a sustainable future.",
+    "image": "/media/vision-mission/campus-lawn.jpg",
+    "imageAlt": "The XLRI Delhi-NCR campus"
+  },
+  "title": "Vision & Mission",
+  "headline": "Nurturing responsible global leaders for a better tomorrow.",
+  "heroImage": {
+    "src": "/media/vision-mission/campus-dusk-blocks.jpg",
+    "width": 1448,
+    "height": 1086,
+    "alt": "The Academic and Administrative Blocks of the XLRI Delhi-NCR campus at dusk"
+  },
+  "vision": {
+    "heading": "Vision",
+    "body": "To be an institution of excellence nurturing responsible global leaders for the greater common good and a sustainable future."
+  },
+  "mission": {
+    "heading": "Mission",
+    "points": [
+      "To disseminate knowledge in management through a portfolio of educational programs and publications",
+      "To extend frontiers of knowledge through relevant and contextual research",
+      "To nurture responsive ethical leaders sensitive to environment and society",
+      "To encourage critical thinking and continuous improvement",
+      "To inculcate a culture of innovation and entrepreneurship"
+    ]
+  },
+  "values": {
+    "heading": "Our Values",
+    "intro": "Inspired by the Jesuit spirit of “Magis”, XLRI will be guided by the following values:",
+    "items": [
+      {
+        "id": "ethical-conduct",
+        "title": "Ethical Conduct",
+        "image": {
+          "src": "/media/vision-mission/campus-lawn.jpg",
+          "width": 1536,
+          "height": 1024,
+          "alt": ""
+        }
+      },
+      {
+        "id": "integrity-trust",
+        "title": "Integrity and Trust",
+        "image": {
+          "src": "/media/vision-mission/campus-i-love-xlri.jpg",
+          "width": 1537,
+          "height": 1023,
+          "alt": ""
+        }
+      },
+      {
+        "id": "passion-excellence",
+        "title": "Passion for Excellence",
+        "image": {
+          "src": "/media/vision-mission/campus-dusk-blocks.jpg",
+          "width": 1448,
+          "height": 1086,
+          "alt": ""
+        }
+      },
+      {
+        "id": "social-conscience",
+        "title": "Sensitive Social Conscience",
+        "image": {
+          "src": "/media/vision-mission/campus-lawn.jpg",
+          "width": 1536,
+          "height": 1024,
+          "alt": ""
+        }
+      },
+      {
+        "id": "inclusiveness",
+        "title": "Inclusiveness and Tolerance",
+        "image": {
+          "src": "/media/vision-mission/campus-i-love-xlri.jpg",
+          "width": 1537,
+          "height": 1023,
+          "alt": ""
+        }
+      },
+      {
+        "id": "creativity",
+        "title": "Creativity and Innovation",
+        "image": {
+          "src": "/media/vision-mission/campus-dusk-blocks.jpg",
+          "width": 1448,
+          "height": 1086,
+          "alt": ""
+        }
+      },
+      {
+        "id": "global-mindset",
+        "title": "Global Mindset",
+        "image": {
+          "src": "/media/vision-mission/campus-lawn.jpg",
+          "width": 1536,
+          "height": 1024,
+          "alt": ""
+        }
+      }
+    ]
+  },
+  "objectives": {
+    "heading": "Program Education Objectives (PEOs)",
+    "items": [
+      {
+        "id": "peo-1",
+        "label": "PEO 1",
+        "body": "Graduates shall apply rigorous, contextual management to deliver results with integrity and inclusion."
+      },
+      {
+        "id": "peo-2",
+        "label": "PEO 2",
+        "body": "Graduates shall create data-driven/evidence-based solutions that solve real business and social challenges."
+      },
+      {
+        "id": "peo-3",
+        "label": "PEO 3",
+        "body": "Graduates shall champion innovative and ethical solutions to generate sustainable, stakeholder value."
+      }
+    ]
+  }
+}

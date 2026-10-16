@@ -8,6 +8,8 @@
  * `content/` (§7).
  */
 
+import type { PageBreadcrumb, PageMeta } from './page-copy';
+
 export interface CentreImage {
   readonly src: string;
   readonly width: number;
@@ -54,7 +56,27 @@ export interface CentreNewsItem {
   readonly fit?: 'contain';
 }
 
+export interface CentreChairperson {
+  readonly heading: string;
+  /** The button that opens the biography. */
+  readonly profileLabel: string;
+  readonly person: CentrePerson;
+}
+
+export interface CentreAdvisors {
+  readonly heading: string;
+  /** On each advisor's card; opens the biography. */
+  readonly profileLabel: string;
+  readonly people: readonly CentrePerson[];
+}
+
 export interface Centre {
+  /** The page's `<title>`, description and share image. */
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
+  /** Shown before the short name above the title. */
+  readonly eyebrow: string;
   readonly shortName: string;
   readonly title: string;
   readonly lead: string;
@@ -77,14 +99,8 @@ export interface Centre {
     readonly heading: string;
     readonly paragraphs: readonly string[];
   };
-  readonly chairperson: {
-    readonly heading: string;
-    readonly person: CentrePerson;
-  };
-  readonly advisors: {
-    readonly heading: string;
-    readonly people: readonly CentrePerson[];
-  };
+  readonly chairperson: CentreChairperson;
+  readonly advisors: CentreAdvisors;
 }
 
 /**
@@ -95,12 +111,17 @@ export interface Centre {
  * not the same page with holes in it.
  */
 export interface CentreBrief {
+  /** The page's `<title>`, description and share image. */
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
   readonly shortName: string;
   readonly title: string;
   readonly image: CentreImage;
   /** CSS `object-position` for the banner crop, e.g. `center 62%`. */
   readonly imagePosition?: string;
   readonly paragraphs: readonly string[];
+  readonly factsHeading: string;
   /** Facts the paragraphs state, lifted out beside them. */
   readonly facts: readonly CentreFact[];
   readonly related: {

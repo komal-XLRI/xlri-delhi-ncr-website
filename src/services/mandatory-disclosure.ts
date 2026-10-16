@@ -1,5 +1,8 @@
-import { mandatoryDisclosure } from '@/content/mandatory-disclosure';
+import mandatoryDisclosureJson from '@/content/mandatory-disclosure.json';
 import type { MandatoryDisclosure } from '@/types/mandatory-disclosure';
+import { fromJson } from '@/lib/validation/json-content';
+
+const mandatoryDisclosure = fromJson<MandatoryDisclosure>(mandatoryDisclosureJson);
 
 /**
  * "Mandatory Disclosure" repository — the same seam as `services/homepage`.

@@ -126,7 +126,7 @@ export function AboutLanding({ content }: { content: AboutPage }) {
                       href={card.href}
                       className="group mt-5 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-brand"
                     >
-                      Know More
+                      {intro.cardLinkLabel}
                       <span className="sr-only"> about {card.title}</span>
                       <ArrowRightIcon
                         size={14}

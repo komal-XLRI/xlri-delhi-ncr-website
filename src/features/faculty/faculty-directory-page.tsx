@@ -14,17 +14,25 @@ const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
  * the biography.
  *
  * The people come from a JSON file in `content/faculty/`, so a new joiner or
- * a changed designation is an edit to that file alone.
+ * a changed designation is an edit to that file alone. Used for Full Time and
+ * Adjunct Faculty alike.
  */
-export function FacultyDirectoryPage({ directory }: { directory: FacultyDirectory }) {
+export function FacultyDirectoryPage({
+  directory,
+  profileBase,
+}: {
+  directory: FacultyDirectory;
+  /** The listing's path, e.g. `/faculty/adjunct`; profiles live under it. */
+  profileBase: string;
+}) {
   return (
     <article aria-labelledby="faculty-heading" className="bg-surface">
       <div className={`${MEASURE} pt-8 pb-16 md:pt-10 md:pb-24`}>
         <Breadcrumbs
           items={[
             { label: 'Home', href: routes.home },
-            { label: 'Faculty & Research' },
-            { label: directory.title },
+            { label: directory.breadcrumb.section },
+            { label: directory.breadcrumb.page },
           ]}
         />
 
@@ -54,7 +62,11 @@ export function FacultyDirectoryPage({ directory }: { directory: FacultyDirector
         </div>
 
         <div className="mt-6 md:mt-8">
-          <FacultyGrid faculty={directory.faculty} />
+          <FacultyGrid
+            faculty={directory.faculty}
+            labels={directory.labels}
+            profileBase={profileBase}
+          />
         </div>
       </div>
     </article>

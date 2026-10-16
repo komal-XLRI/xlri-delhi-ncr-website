@@ -5,11 +5,12 @@ import NextLink from 'next/link';
 import { useId, useMemo, useState } from 'react';
 
 import { ArrowRightIcon, ChevronDownIcon, SearchIcon } from '@/components/ui/icon';
-import { routes } from '@/constants/routes';
+import { fillNodes } from '@/components/ui/fill-nodes';
 import { cn } from '@/lib/cn';
-import type { FacultyMember } from '@/types/faculty';
+import type { FacultyDirectoryLabels, FacultyMember } from '@/types/faculty';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const FILTER_FROM = 8;
 
 /** "Dr. Faisal Ahsan" → "F": the first name decides the letter, not the title. */
 const initial = (name: string) =>
@@ -25,8 +26,22 @@ const initial = (name: string) =>
  * so the row keeps its shape and still tells the visitor there is no one there.
  *
  * Without JavaScript every card is still in the HTML; the filters only hide.
+ *
+ * A short listing (fewer than `FILTER_FROM` people, e.g. Adjunct Faculty)
+ * shows the cards alone: an A–Z for two names is noise.
+ *
+ * `profileBase` is the listing's path; each card links to `${profileBase}/${id}`.
+ * The visible words come from the listing's JSON (`labels`).
  */
-export function FacultyGrid({ faculty }: { faculty: readonly FacultyMember[] }) {
+export function FacultyGrid({
+  faculty,
+  labels,
+  profileBase,
+}: {
+  faculty: readonly FacultyMember[];
+  labels: FacultyDirectoryLabels;
+  profileBase: string;
+}) {
   const [letter, setLetter] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [area, setArea] = useState('');
@@ -62,100 +77,112 @@ export function FacultyGrid({ faculty }: { faculty: readonly FacultyMember[] }) 
   return (
     <div>
       {/* ---------------- filters ---------------- */}
-      <div className="rise-in flex flex-col gap-4" style={{ ['--rise-delay' as string]: '300ms' }}>
-        <div role="group" aria-label="Filter by first letter" className="flex flex-wrap gap-1.5">
-          <button
-            type="button"
-            aria-pressed={letter === null}
-            onClick={() => {
-              setLetter(null);
-            }}
-            className={letterButton(letter === null)}
-          >
-            All
-          </button>
-          {LETTERS.map((l) => (
+      {faculty.length >= FILTER_FROM ? (
+        <div
+          className="rise-in flex flex-col gap-4"
+          style={{ ['--rise-delay' as string]: '300ms' }}
+        >
+          <div role="group" aria-label="Filter by first letter" className="flex flex-wrap gap-1.5">
             <button
-              key={l}
               type="button"
-              aria-pressed={letter === l}
-              disabled={!present.has(l)}
+              aria-pressed={letter === null}
               onClick={() => {
-                setLetter(letter === l ? null : l);
+                setLetter(null);
               }}
-              className={letterButton(letter === l)}
+              className={letterButton(letter === null)}
             >
-              {l}
+              {labels.allLetters}
             </button>
-          ))}
-        </div>
-
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p aria-live="polite" className="order-last text-sm text-ink-muted sm:order-first">
-            Showing <span className="font-semibold text-ink-strong">{shown.length}</span> of{' '}
-            {faculty.length} faculty
-            {filtered ? (
-              <>
-                {' · '}
-                <button
-                  type="button"
-                  onClick={reset}
-                  className="font-semibold text-brand underline decoration-accent-surface decoration-2 underline-offset-4 hover:text-brand-950"
-                >
-                  Clear filters
-                </button>
-              </>
-            ) : null}
-          </p>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <label htmlFor={searchId} className="relative block">
-              <span className="sr-only">Search by name</span>
-              <SearchIcon
-                size={17}
-                aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 left-3.5 -translate-y-1/2 text-ink-muted"
-              />
-              <input
-                id={searchId}
-                type="search"
-                value={query}
-                onChange={(event) => {
-                  setQuery(event.target.value);
+            {LETTERS.map((l) => (
+              <button
+                key={l}
+                type="button"
+                aria-pressed={letter === l}
+                disabled={!present.has(l)}
+                onClick={() => {
+                  setLetter(letter === l ? null : l);
                 }}
-                placeholder="Search name"
-                className="h-11 w-full rounded-[4px] border border-border-strong bg-surface pr-4 pl-10 text-[0.9375rem] text-ink-strong transition-colors duration-300 placeholder:text-ink-muted hover:border-brand focus:border-brand sm:w-60"
-              />
-            </label>
-            <label htmlFor={areaId} className="relative block">
-              <span className="sr-only">Functional area</span>
-              <select
-                id={areaId}
-                value={area}
-                onChange={(event) => {
-                  setArea(event.target.value);
-                }}
-                className="h-11 w-full appearance-none rounded-[4px] border border-border-strong bg-surface pr-10 pl-4 text-[0.9375rem] text-ink-strong transition-colors duration-300 hover:border-brand focus:border-brand sm:w-72"
+                className={letterButton(letter === l)}
               >
-                <option value="">All functional areas</option>
-                {areas.map((a) => (
-                  <option key={a} value={a}>
-                    {a}
-                  </option>
-                ))}
-              </select>
-              <ChevronDownIcon
-                size={16}
-                aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 right-3.5 -translate-y-1/2 text-ink-muted"
-              />
-            </label>
+                {l}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p aria-live="polite" className="order-last text-sm text-ink-muted sm:order-first">
+              {fillNodes(labels.showing, {
+                shown: <span className="font-semibold text-ink-strong">{shown.length}</span>,
+                total: faculty.length,
+              })}
+              {filtered ? (
+                <>
+                  {' · '}
+                  <button
+                    type="button"
+                    onClick={reset}
+                    className="font-semibold text-brand underline decoration-accent-surface decoration-2 underline-offset-4 hover:text-brand-950"
+                  >
+                    {labels.clearFilters}
+                  </button>
+                </>
+              ) : null}
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <label htmlFor={searchId} className="relative block">
+                <span className="sr-only">Search by name</span>
+                <SearchIcon
+                  size={17}
+                  aria-hidden="true"
+                  className="pointer-events-none absolute top-1/2 left-3.5 -translate-y-1/2 text-ink-muted"
+                />
+                <input
+                  id={searchId}
+                  type="search"
+                  value={query}
+                  onChange={(event) => {
+                    setQuery(event.target.value);
+                  }}
+                  placeholder={labels.searchPlaceholder}
+                  className="h-11 w-full rounded-[4px] border border-border-strong bg-surface pr-4 pl-10 text-[0.9375rem] text-ink-strong transition-colors duration-300 placeholder:text-ink-muted hover:border-brand focus:border-brand sm:w-60"
+                />
+              </label>
+              <label htmlFor={areaId} className="relative block">
+                <span className="sr-only">Functional area</span>
+                <select
+                  id={areaId}
+                  value={area}
+                  onChange={(event) => {
+                    setArea(event.target.value);
+                  }}
+                  className="h-11 w-full appearance-none rounded-[4px] border border-border-strong bg-surface pr-10 pl-4 text-[0.9375rem] text-ink-strong transition-colors duration-300 hover:border-brand focus:border-brand sm:w-72"
+                >
+                  <option value="">{labels.allAreas}</option>
+                  {areas.map((a) => (
+                    <option key={a} value={a}>
+                      {a}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDownIcon
+                  size={16}
+                  aria-hidden="true"
+                  className="pointer-events-none absolute top-1/2 right-3.5 -translate-y-1/2 text-ink-muted"
+                />
+              </label>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
 
       {/* ---------------- cards ---------------- */}
       {shown.length > 0 ? (
-        <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <ul
+          className={cn(
+            'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8',
+            faculty.length >= FILTER_FROM && 'mt-8',
+          )}
+        >
           {shown.map((member, index) => (
             <li
               key={member.id}
@@ -166,19 +193,19 @@ export function FacultyGrid({ faculty }: { faculty: readonly FacultyMember[] }) 
                   : { ['--rise-delay' as string]: `${400 + Math.min(index, 5) * 100}ms` }
               }
             >
-              <FacultyCard member={member} />
+              <FacultyCard member={member} labels={labels} href={`${profileBase}/${member.id}`} />
             </li>
           ))}
         </ul>
       ) : (
         <div className="mt-10 rounded-[8px] border border-dashed border-border-strong px-6 py-14 text-center">
-          <p className="font-serif text-xl text-ink-strong">No faculty match these filters.</p>
+          <p className="font-serif text-xl text-ink-strong">{labels.noMatch}</p>
           <button
             type="button"
             onClick={reset}
             className="mt-4 text-[0.9375rem] font-semibold text-brand underline decoration-accent-surface decoration-2 underline-offset-4 hover:text-brand-950"
           >
-            Clear filters
+            {labels.clearFilters}
           </button>
         </div>
       )}
@@ -186,7 +213,15 @@ export function FacultyGrid({ faculty }: { faculty: readonly FacultyMember[] }) 
   );
 }
 
-function FacultyCard({ member }: { member: FacultyMember }) {
+function FacultyCard({
+  member,
+  labels,
+  href,
+}: {
+  member: FacultyMember;
+  labels: FacultyDirectoryLabels;
+  href: string;
+}) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-[8px] border border-border bg-surface transition-[translate,box-shadow,border-color] duration-500 ease-out hover:border-brand/40 hover:shadow-raised motion-safe:hover:-translate-y-1">
       <div className="relative aspect-[5/4] overflow-hidden bg-surface-subtle">
@@ -213,16 +248,16 @@ function FacultyCard({ member }: { member: FacultyMember }) {
           {member.qualification}
         </p>
 
-        <p className="mt-4 text-sm text-ink-muted">Functional Area:</p>
+        <p className="mt-4 text-sm text-ink-muted">{labels.functionalArea}</p>
         <p className="mt-1 text-sm leading-relaxed text-ink-strong">{member.areas.join(', ')}</p>
 
         {/* The link stretches over the whole card (after:inset-0), so the photo and name click through too. */}
         <NextLink
-          href={routes.faculty.fullTimeProfile(member.id)}
+          href={href}
           className="group/bio mt-auto inline-flex items-center gap-1.5 self-start pt-5 text-[0.9375rem] font-semibold text-ink-strong after:absolute after:inset-0"
         >
           <span className="border-b-2 border-accent-surface pb-0.5 transition-colors duration-300 group-hover:border-brand group-hover:text-brand">
-            Biography
+            {labels.biography}
           </span>
           <ArrowRightIcon
             size={14}

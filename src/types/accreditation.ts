@@ -1,3 +1,5 @@
+import type { PageMeta } from './page-copy';
+
 /**
  * "Accreditation" content shape. In `types/` so the feature can describe its
  * props without importing `content/` (§7).
@@ -26,11 +28,18 @@ export interface Accreditation {
 }
 
 export interface AccreditationPage {
+  readonly meta: PageMeta;
   readonly title: string;
   readonly banner: AccreditationImage;
   readonly intro: string;
   readonly international: {
     readonly heading: string;
+    /** The words around each row's details and certificate link. */
+    readonly labels: {
+      readonly accredited: string;
+      readonly awarded: string;
+      readonly viewCertificate: string;
+    };
     readonly items: readonly Accreditation[];
   };
 }

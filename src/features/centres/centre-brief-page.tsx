@@ -44,8 +44,8 @@ export function CentreBriefPage({ centre }: { centre: CentreBrief }) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Centres' },
-              { label: centre.shortName },
+              { label: centre.breadcrumb.section },
+              { label: centre.breadcrumb.page },
             ]}
           />
 
@@ -112,7 +112,7 @@ export function CentreBriefPage({ centre }: { centre: CentreBrief }) {
                 id="glance-heading"
                 className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase"
               >
-                At a glance
+                {centre.factsHeading}
               </h2>
               <dl className="mt-5 divide-y divide-border">
                 {centre.facts.map((fact) => (

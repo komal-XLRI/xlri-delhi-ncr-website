@@ -1,3 +1,5 @@
+import type { PageMeta } from './page-copy';
+
 /**
  * "Board of Governors" content shape. In `types/` so the feature can describe
  * its props without importing `content/` (§7).
@@ -22,6 +24,7 @@ export interface OfficeBearer {
 }
 
 export interface BoardOfGovernors {
+  readonly meta: PageMeta;
   readonly title: string;
   readonly officeBearers: readonly OfficeBearer[];
   readonly members: {

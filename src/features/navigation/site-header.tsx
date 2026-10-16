@@ -13,6 +13,7 @@ import { PrimaryNav } from '@/features/navigation/primary-nav';
 import { SiteSearch } from '@/features/search/site-search';
 import { SiteWordmark } from '@/features/navigation/site-wordmark';
 import { getSearchIndex } from '@/services/search';
+import { getHeaderCopy, getSearchCopy } from '@/services/site';
 import type { NavNode } from '@/types/navigation';
 
 /**
@@ -156,13 +157,26 @@ function MobileNavSheet() {
 
 export async function SiteHeader() {
   // Built once at build time; searched in the browser (see services/search).
-  const searchIndex = await getSearchIndex();
+  const [searchIndex, headerCopy, searchCopy] = await Promise.all([
+    getSearchIndex(),
+    getHeaderCopy(),
+    getSearchCopy(),
+  ]);
   const entries = PRIMARY_NAV.map((item) => ({
     id: item.id,
     label: item.label,
     ...(item.href ? { href: item.href } : {}),
     // Server-rendered here, passed as a prop. Never enters the client bundle.
-    ...(item.children ? { panel: <MegaMenuPanel item={item} /> } : {}),
+    ...(item.children
+      ? {
+          panel: (
+            <MegaMenuPanel
+              item={item}
+              featuredActionLabel={headerCopy.megaMenuFeaturedActionLabel}
+            />
+          ),
+        }
+      : {}),
   }));
 
   return (
@@ -191,7 +205,7 @@ export async function SiteHeader() {
               disappear on a phone. It opens a panel beneath it, as on the
               institute site; there is no results page.
             */}
-            <SiteSearch index={searchIndex} />
+            <SiteSearch index={searchIndex} copy={searchCopy} />
 
             <MobileNavSheet />
             <MobileNavEnhancer detailsId="mobile-nav" />
@@ -220,7 +234,7 @@ export async function SiteHeader() {
       </div>
 
       {/* ---------- Layer 3: notices ticker ---------- */}
-      <NoticeMarquee />
+      <NoticeMarquee heading={headerCopy.noticesHeading} newBadge={headerCopy.noticeNewBadge} />
     </header>
   );
 }

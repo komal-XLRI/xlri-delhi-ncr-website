@@ -37,7 +37,7 @@ const baseNodeSchema = z.object({
   label: z.string().min(1),
   href: z.string().min(1).optional(),
   description: z.string().min(1).optional(),
-  layout: z.enum(['columns-2', 'columns-3', 'columns-4', 'split-feature']).optional(),
+  layout: z.enum(['columns-2', 'columns-3', 'columns-4', 'columns-5', 'split-feature']).optional(),
   featured: featuredSchema.optional(),
   audience: z
     .array(z.enum(['prospective', 'student', 'faculty', 'alumni', 'recruiter']))

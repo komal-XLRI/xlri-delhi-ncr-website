@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Visiting Faculty",
+    "description": "The visiting faculty of XLRI Delhi-NCR — academics, founders and industry leaders who teach on its programmes."
+  },
+  "breadcrumb": {
+    "section": "Faculty & Research",
+    "page": "Visiting Faculty"
+  },
+  "title": "Visiting Faculty",
+  "intro": [],
+  "faculty": [
+    {
+      "id": "mr-asimabha-bhowmick",
+      "name": "Mr. Asimabha Bhowmick",
+      "designation": "Assistant Professor",
+      "organisation": "Institute of Engineering and Management Kolkata",
+      "photo": "/media/faculty/visiting/mr-asimabha-bhowmick.jpg"
+    },
+    {
+      "id": "mr-atanu-ghosh",
+      "name": "Mr. Atanu Ghosh",
+      "designation": "Founder",
+      "organisation": "Salt n Soap Kolkata",
+      "photo": "/media/faculty/visiting/mr-atanu-ghosh.jpg"
+    },
+    {
+      "id": "mr-balachandran-ramachandran",
+      "name": "Mr. Balachandran Ramachandran",
+      "designation": "Former Senior Vice-President",
+      "organisation": "Temenos India",
+      "photo": "/media/faculty/visiting/mr-balachandran-ramachandran.jpg"
+    },
+    {
+      "id": "dr-john-george-chiramel",
+      "name": "Dr. John George Chiramel",
+      "designation": "Consultant",
+      "organisation": "Kerala",
+      "photo": "/media/faculty/visiting/dr-john-george-chiramel.jpg"
+    },
+    {
+      "id": "dr-premlata-poonia",
+      "name": "Dr. Premlata Poonia",
+      "designation": "Founder & Director",
+      "organisation": "Hamari Laado Foundation, India Jaipur, Rajasthan",
+      "photo": "/media/faculty/visiting/dr-premlata-poonia.jpg"
+    },
+    {
+      "id": "dr-snigdha-pattnaik",
+      "name": "Dr. Snigdha Pattnaik",
+      "designation": "Adjunct Faculty",
+      "organisation": "XLRI Delhi-NCR",
+      "photo": "/media/faculty/visiting/dr-snigdha-pattnaik.jpg"
+    }
+  ]
+}

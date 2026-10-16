@@ -122,6 +122,8 @@ export interface Hero {
   readonly media: HeroMedia;
   /** Rotating spotlight card. Omit to render the hero without one. */
   readonly spotlight?: readonly HeroSpotlightItem[];
+  /** Visible label on each spotlight item's link ("Read more"). */
+  readonly spotlightActionLabel: string;
   /** Credentials strip across the foot of the hero. */
   readonly credentials?: readonly HeroCredential[];
 }
@@ -417,6 +419,8 @@ export interface Events {
   readonly heading: string;
   readonly intro: string;
   readonly items: readonly EventItem[];
+  /** Label at the foot of each event card ("Read more"). */
+  readonly itemActionLabel: string;
   readonly action: HeroAction;
 }
 

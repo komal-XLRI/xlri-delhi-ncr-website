@@ -1,3 +1,5 @@
+import type { PageMeta } from './page-copy';
+
 /**
  * "Leadership & Administration" content shape. In `types/` so the feature can
  * describe its props without importing `content/` (§7).
@@ -38,6 +40,7 @@ export interface CommitteeGroup {
 }
 
 export interface Leadership {
+  readonly meta: PageMeta;
   readonly title: string;
   readonly coreTeam: {
     readonly heading: string;

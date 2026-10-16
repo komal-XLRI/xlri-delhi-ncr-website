@@ -42,12 +42,12 @@ import { notices, type Notice } from '@/config/notices';
  *   • the whole strip is a labelled region containing a real list of real links
  */
 
-function NoticeItem({ notice }: { notice: Notice }) {
+function NoticeItem({ notice, newBadge }: { notice: Notice; newBadge: string }) {
   return (
     <li className="flex shrink-0 items-center gap-2 px-6">
       {notice.isNew ? (
         <span className="rounded-xs bg-accent-surface px-1.5 py-0.5 text-2xs font-semibold text-ink-strong">
-          New
+          {newBadge}
         </span>
       ) : null}
       <NextLink
@@ -68,10 +68,13 @@ function NoticeItem({ notice }: { notice: Notice }) {
   );
 }
 
-export function NoticeMarquee() {
+/** `heading` and `newBadge` are the visible copy, from `content/site.json`. */
+export function NoticeMarquee({ heading, newBadge }: { heading: string; newBadge: string }) {
   if (notices.length === 0) return null;
 
-  const items = notices.map((notice) => <NoticeItem key={notice.id} notice={notice} />);
+  const items = notices.map((notice) => (
+    <NoticeItem key={notice.id} notice={notice} newBadge={newBadge} />
+  ));
 
   return (
     <section aria-labelledby="notices-heading" className="border-t border-border bg-notice-surface">
@@ -80,7 +83,7 @@ export function NoticeMarquee() {
           id="notices-heading"
           className="mr-5 shrink-0 py-2.5 text-2xs font-semibold tracking-widest text-notice-label uppercase"
         >
-          Notices
+          {heading}
         </h2>
 
         {/*

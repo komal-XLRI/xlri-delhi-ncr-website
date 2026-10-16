@@ -1,0 +1,782 @@
+{
+  "meta": {
+    "title": "Publication – Research Articles & Cases",
+    "description": "Research articles and cases by XLRI Delhi-NCR faculty, by academic year — searchable by title, author and journal, with DOI links."
+  },
+  "breadcrumb": {
+    "section": "Faculty & Research",
+    "page": "Publication"
+  },
+  "eyebrow": "Publication",
+  "title": "Research Articles & Cases",
+  "facts": {
+    "total": "Research articles and cases",
+    "years": "Academic years",
+    "latest": "In {period}"
+  },
+  "list": {
+    "allYears": "All years",
+    "searchPlaceholder": "Search title, author or journal",
+    "showing": "Showing {shown} of {total} publications",
+    "clearFilters": "Clear filters",
+    "noMatch": "No publications match your search.",
+    "doi": "DOI",
+    "isbn": "ISBN {isbn}"
+  },
+  "periods": [
+    {
+      "id": "2025-2026",
+      "label": "2025–2026",
+      "publications": [
+        {
+          "id": "2025-chhabra-lakshya-food-india-limited",
+          "authors": "Chhabra, S., Chhikara, R., & Garg, R.",
+          "year": "2025",
+          "title": "Lakshya Food India Limited (LFIL): Finding the Right Position in Dairy Business",
+          "source": "Asian Journal of Management Cases, 22(1), 112-121",
+          "doi": "10.1177/09728201221080711"
+        },
+        {
+          "id": "2025-dimple-high-performance-work-system",
+          "authors": "Dimple, & Kuriakose, V.",
+          "year": "2025",
+          "title": "High-performance work system in service sector: review and framework development",
+          "source": "The Service Industries Journal, 45(3-4), 374-406",
+          "doi": "10.1080/02642069.2023.2240721"
+        },
+        {
+          "id": "2025-chhatwani-financial-awareness-risk-aversion",
+          "authors": "Chhatwani, M.",
+          "year": "2025",
+          "title": "Financial awareness, risk aversion and portfolio choice",
+          "source": "Applied Economics, 57(30), 4279-4294",
+          "doi": "10.1080/00036846.2024.2356896"
+        },
+        {
+          "id": "2025-chhabra-determining-the-causes-of",
+          "authors": "Chhabra, S., Kaushal, V., & Girija, S.",
+          "year": "2025",
+          "title": "Determining the causes of user frustration in the case of conversational chatbots",
+          "source": "Behaviour & Information Technology, 44(8), 1557-1575",
+          "doi": "10.1080/0144929X.2024.2362956"
+        },
+        {
+          "id": "2025-chhabra-criterion-for-evaluating-used",
+          "authors": "Chhabra, S., Wani, T., & Girija, S.",
+          "year": "2025",
+          "title": "Criterion for evaluating used car purchases in India using MCDM: an automobile solution towards a circular economy",
+          "source": "International Journal of Logistics Economics and Globalisation, 11(2), 99-121",
+          "doi": "10.1504/IJLEG.2025.146823"
+        },
+        {
+          "id": "2025-lalwani-forecasting-equity-returns-with",
+          "authors": "Lalwani, V., & Sharma, U.",
+          "year": "2025",
+          "title": "Forecasting equity returns with oil prices: addressing model choice uncertainty",
+          "source": "Applied Economics, 57(5), 566-582",
+          "doi": "10.1080/00036846.2024.2440654"
+        },
+        {
+          "id": "2025-bharti-flipping-the-script-harnessing",
+          "authors": "Bharti, M., & Bharti, M.",
+          "year": "2025",
+          "title": "Flipping the Script: Harnessing Consumer Knowledge, Message Order and Refutation for Effective Two‐Sided Green Advertising",
+          "source": "Psychology & Marketing, 42(5), 1361-1378",
+          "doi": "10.1002/mar.22184"
+        },
+        {
+          "id": "2025-nath-quantitative-analysis-to-identify",
+          "authors": "Nath, S., Pillai, A. A., Ram, A., Gayathri, A. N., Viswanath, N., Tanjeri, P., … & Arulprasad, R.",
+          "year": "2025",
+          "title": "Quantitative analysis to identify circular economy concepts incorporated in Indian policy documents regulating waste management by the Indian Healthcare sector",
+          "source": "Resources, Conservation and Recycling, 214, 108037",
+          "doi": "10.1016/j.resconrec.2024.108037"
+        },
+        {
+          "id": "2025-nath-adaptive-capacity-and-attainment",
+          "authors": "Nath, S., & Arrawatia, R.",
+          "year": "2025",
+          "title": "Adaptive capacity and attainment of the sustainable development goals in local communities of India",
+          "source": "Journal of Environmental Management, 373, 123850",
+          "doi": "10.1016/j.jenvman.2024.123850"
+        },
+        {
+          "id": "2025-mandal-indian-adolescents-customer-relationship",
+          "authors": "Mandal, M., & Dash, S.",
+          "year": "2025",
+          "title": "Indian adolescents’ customer relationship with food brands: exploring the role of brand love",
+          "source": "South Asian Journal of Business Studies",
+          "doi": "10.1108/SAJBS-05-2024-0174"
+        },
+        {
+          "id": "2025-chhabra-micro-or-meso-do",
+          "authors": "Chhabra, S., Wani, T. A., & Kaushal, V.",
+          "year": "2025",
+          "title": "Micro or Meso: Do influencers influence veganism?",
+          "source": "Journal of Marketing Communications, 1-22",
+          "doi": "10.1080/13527266.2025.2470982"
+        },
+        {
+          "id": "2025-chhabra-i-am-not-sure",
+          "authors": "Chhabra, S., & Kaushal, V.",
+          "year": "2025",
+          "title": "I am not Sure if I’ll try-Barriers & Drivers of Consumption of Plant-Based Meat Alternative among Indian Consumers",
+          "source": "Journal of Macromarketing, 02761467251332514",
+          "doi": "10.1177/02761467251332514"
+        },
+        {
+          "id": "2025-lalwani-mean-variance-optimization-and",
+          "authors": "Lalwani, V.",
+          "year": "2025",
+          "title": "Mean-variance optimization and the cross-section of stock returns",
+          "source": "Global Finance Journal, 101130",
+          "doi": "10.1016/j.gfj.2025.101130"
+        },
+        {
+          "id": "2025-singhal-investigating-diffusion-dynamics-of",
+          "authors": "Singhal, S., Bano, Y., & Singh, O.",
+          "year": "2025",
+          "title": "Investigating diffusion dynamics of disruptive technologies: leapfrogging, cannibalisation and coexistence",
+          "source": "Benchmarking: An International Journal",
+          "doi": "10.1108/BIJ-12-2024-1093"
+        },
+        {
+          "id": "2025-singhal-investigating-the-role-of",
+          "authors": "Singhal, S., Bano, Y., & Singh, O.",
+          "year": "2025",
+          "title": "Investigating the role of customer’s disadoption and dynamic shifts in mobile cellular diffusion: Evidence from emerging economies",
+          "source": "Technological Forecasting and Social Change, 219, 124252",
+          "doi": "10.1016/j.techfore.2025.124252"
+        },
+        {
+          "id": "2025-johny-optimising-coordination-mechanisms-for",
+          "authors": "Johny, D., Padhi, S. S., & Mukherjee, S.",
+          "year": "2025",
+          "title": "Optimising coordination mechanisms for a sustainable ethanol-blended fuel supply chain in India’s transportation sector",
+          "source": "International Journal of Production Research, 1-27",
+          "doi": "10.1080/00207543.2025.2541026"
+        },
+        {
+          "id": "2025-lalwani-finfluencer-recommendations",
+          "authors": "Lalwani, V.",
+          "year": "2025",
+          "title": "Finfluencer recommendations",
+          "source": "Economics Letters, 112511",
+          "doi": "10.1016/j.econlet.2025.112511"
+        },
+        {
+          "id": "2025-mukherjee-enhancing-health-care-service",
+          "authors": "Mukherjee, S., Mukherjee, S., Ferraris, A., & Stehlikova, B.",
+          "year": "2025",
+          "title": "Enhancing health-care service delivery through AI-integrated knowledge management systems",
+          "source": "Journal of Knowledge Management",
+          "doi": "10.1108/JKM-01-2025-0119"
+        },
+        {
+          "id": "2025-mukherjee-balancing-fairness-and-efficiency",
+          "authors": "Mukherjee, S., & Mukherjee, S.",
+          "year": "2025",
+          "title": "Balancing fairness and efficiency in policing: A mean-variance utility and data envelopment analysis approach to arrest practices in US cities",
+          "source": "Socio-Economic Planning Sciences, 102311",
+          "doi": "10.1016/j.seps.2025.102311"
+        },
+        {
+          "id": "2026-singhal-changepoint-model-for-energy",
+          "authors": "Singhal, S., Bano, Y., & Gautam, P.",
+          "year": "2026",
+          "title": "Changepoint model for energy-efficient technology diffusion: A comparative evaluation of empirical models",
+          "source": "Technovation, 149, 103352",
+          "doi": "10.1016/j.technovation.2025.103352"
+        },
+        {
+          "id": "2025-lalwani-does-economic-complexity-tame",
+          "authors": "Lalwani, V., & Saxena, K.",
+          "year": "2025",
+          "title": "Does economic complexity tame the stock markets? International evidence",
+          "source": "Applied Economics, 1-17",
+          "doi": "10.1080/00036846.2025.2563917"
+        },
+        {
+          "id": "2025-lalwani-empirical-asset-pricing-via",
+          "authors": "Lalwani, V., Meshram, V., & Jindal, V.",
+          "year": "2025",
+          "title": "Empirical Asset Pricing via Machine Learning: The Role of Research Design Choices",
+          "source": "European Financial Management",
+          "doi": "10.1111/eufm.70033"
+        },
+        {
+          "id": "2025-chhatwani-relative-deprivation-and-financial",
+          "authors": "Chhatwani, M.",
+          "year": "2025",
+          "title": "Relative deprivation and financial literacy in times of economic uncertainty: exploring income satisfaction across demographic groups",
+          "source": "Applied Economics, 1-15",
+          "doi": "10.1080/00036846.2025.2541086"
+        },
+        {
+          "id": "2025-chhatwani-girls-will-be-girls",
+          "authors": "Chhatwani, M.",
+          "year": "2025",
+          "title": "Girls will be girls? The gendered effect of financial overconfidence on credit card delinquency",
+          "source": "Journal of Behavioral and Experimental Finance, 101086",
+          "doi": "10.1016/j.jbef.2025.101086"
+        },
+        {
+          "id": "2025-chhatwani-wealth-gender-or-personality",
+          "authors": "Chhatwani, M.",
+          "year": "2025",
+          "title": "Wealth, gender or personality: What shapes financial well-being among the elderly?",
+          "source": "International Journal of Bank Marketing, 1-26",
+          "doi": "10.1108/IJBM-05-2024-0288"
+        },
+        {
+          "id": "2025-agarwal-do-mutual-funds-make",
+          "authors": "Agarwal, P. K., Pradhan, H. K., & Saxena, K.",
+          "year": "2025",
+          "title": "Do Mutual Funds Make Active and Skilled Liquidity Choices in Portfolio Management? Evidence from India",
+          "source": "Emerging Markets Finance and Trade, 1-15",
+          "doi": "10.1080/1540496X.2025.2566224"
+        },
+        {
+          "id": "2025-agarwal-free-float-stock-liquidity",
+          "authors": "Agarwal, P. K., & Pradhan, H. K.",
+          "year": "2025",
+          "title": "Free Float, Stock Liquidity, and Stock Price Discounts: Evidence from India",
+          "source": "Journal of Emerging Market Finance, 09726527251387790",
+          "doi": "10.1177/09726527251387790"
+        }
+      ]
+    },
+    {
+      "id": "2024-2025",
+      "label": "2024–2025",
+      "publications": [
+        {
+          "id": "2024-jose-hrm-practices-and-employee",
+          "authors": "Jose, G., PM, N., & Kuriakose, V.",
+          "year": "2024",
+          "title": "HRM practices and employee engagement: Role of personal resources-a study among nurses",
+          "source": "International Journal of Productivity and Performance Management, 73(1), 1-17",
+          "doi": "10.1108/IJPPM-04-2021-0212"
+        },
+        {
+          "id": "2024-lalwani-are-factor-investing-strategies",
+          "authors": "Lalwani, V.",
+          "year": "2024",
+          "title": "Are factor investing strategies successful out-of sample: evidence from the nifty indices",
+          "source": "Applied Finance Letters, 11, 94-108",
+          "doi": "10.24135/afl.v11i.604"
+        },
+        {
+          "id": "2024-kini-acceptance-of-location-based",
+          "authors": "Kini, R. B., Bolar, K., Rofin, T. M., Mukherjee, S., & Bhattacharjee, S.",
+          "year": "2024",
+          "title": "Acceptance of location-based advertising by young consumers: A stimulus-organism-response (SOR) model perspective",
+          "source": "Information Systems Management, 41(2), 132-150",
+          "doi": "10.1080/10580530.2023.2214843"
+        },
+        {
+          "id": "2024-tripathi-self-control-and-emotional",
+          "authors": "Tripathi, P., Ankit, & Priyadarshi, P.",
+          "year": "2024",
+          "title": "Self-control and emotional exhaustion: mediating role of effort-reward imbalance and emotional demands",
+          "source": "International Journal of Organizational Analysis, 32(8), 1464-1482",
+          "doi": "10.1108/IJOA-03-2023-3690"
+        },
+        {
+          "id": "2024-padhi-optimal-investment-decision-for",
+          "authors": "Padhi, S. S., Mukherjee, S., & Cheng, T. E.",
+          "year": "2024",
+          "title": "Optimal investment decision for industry 4.0 under uncertainties of capability and competence building for managing supply chain risks",
+          "source": "International Journal of Production Economics, 267, 109067",
+          "doi": "10.1016/j.ijpe.2023.109067"
+        },
+        {
+          "id": "2024-mandal-platform-financing-vs-bank",
+          "authors": "Mandal, P., Basu, P., Choi, T. M., & Rath, S. B.",
+          "year": "2024",
+          "title": "Platform financing vs. bank financing: Strategic choice of financing mode under seller competition",
+          "source": "European Journal of Operational Research, 315(1), 130-146",
+          "doi": "10.1016/j.ejor.2023.11.025"
+        },
+        {
+          "id": "2024-lalwani-incorporating-green-assets-in",
+          "authors": "Lalwani, V.",
+          "year": "2024",
+          "title": "Incorporating green assets in equity portfolios",
+          "source": "Finance Research Letters, 59, 104815",
+          "doi": "10.1016/j.frl.2023.104815"
+        },
+        {
+          "id": "2024-tarafdar-understanding-the-impact-of",
+          "authors": "Tarafdar, P., Leung, A. C. M., Yue, W. T., & Bose, I.",
+          "year": "2024",
+          "title": "Understanding the impact of augmented reality product presentation on diagnosticity, cognitive load, and product sales",
+          "source": "International Journal of Information Management, 75, 102744",
+          "doi": "10.1016/j.ijinfomgt.2023.102744"
+        },
+        {
+          "id": "2024-rodgers-solving-business-problems-the",
+          "authors": "Rodgers, M., Mukherjee, S., Melamed, B., Baveja, A., & Kapoor, A.",
+          "year": "2024",
+          "title": "Solving business problems: the business-driven data-supported process",
+          "source": "Annals of Operations Research, 332(1), 705-741"
+        },
+        {
+          "id": "2024-kuriakose-family-incivility-and-organisational",
+          "authors": "Kuriakose, V., & Bishwas, S. K.",
+          "year": "2024",
+          "title": "Family incivility and organisational citizenship behaviour: roles of negative rumination, workplace friendship and optimism",
+          "source": "In Evidence-based HRM: a Global Forum for Empirical Scholarship (Vol. 12, No. 4, pp. 782-798). Emerald Publishing Limited",
+          "doi": "10.1108/EBHRM-09-2022-0220"
+        },
+        {
+          "id": "2024-popli-springboarding-and-activity-load",
+          "authors": "Popli, M., & Ahsan, F. M.",
+          "year": "2024",
+          "title": "Springboarding and activity load: Constraints on managerial attention and dependency on advisory firms in cross-border acquisitions",
+          "source": "Journal of International Management, 30(2), 101121",
+          "doi": "10.1016/j.intman.2024.101121"
+        },
+        {
+          "id": "2024-rath-platform-vs-3pl-financing",
+          "authors": "Rath, S. B., Basu, P., Govindan, K., & Mandal, P.",
+          "year": "2024",
+          "title": "Platform vs. 3PL financing: Strategic choice of lending model for an e-tailer under operational risk",
+          "source": "Transportation Research Part E: Logistics and Transportation Review, 184, 103459",
+          "doi": "10.1016/j.tre.2024.103459"
+        },
+        {
+          "id": "2024-tripathi-exploring-quantum-computing-paradigm",
+          "authors": "Tripathi, M., Cherukuri, A. K., Bhasin, A., & Jammalamadaka, S.",
+          "year": "2024",
+          "title": "Exploring quantum computing paradigm: from conceptualisation, initial Adoption to development",
+          "source": "Journal of information & knowledge management, 23(02), 2450029",
+          "doi": "10.1142/S0219649224500291"
+        },
+        {
+          "id": "2024-lalwani-the-value-relevance-of",
+          "authors": "Lalwani, V., & Chakraborty, M.",
+          "year": "2024",
+          "title": "The Value Relevance of Earnings for Factor Investors",
+          "source": "IUP Journal of Accounting Research & Audit Practices, 23(1)",
+          "doi": "10.2139/ssrn.4753367"
+        },
+        {
+          "id": "2024-singhal-demand-forecasting-of-technological",
+          "authors": "Singhal, S., Bano, Y., & Singh, O.",
+          "year": "2024",
+          "title": "Demand forecasting of technological products considering re-purchasing and dynamic pricing: a modified diffusion model",
+          "source": "International Journal of System Assurance Engineering and Management, 15(5), 1981-1998",
+          "doi": "10.1007/s13198-023-02222-6"
+        },
+        {
+          "id": "2024-banerjee-the-role-of-online",
+          "authors": "Banerjee, S., Shaikh, A., & Sharma, A.",
+          "year": "2024",
+          "title": "The role of online retail website experience on brand happiness and willingness to share personal information: an SOR perspective",
+          "source": "Marketing Intelligence & Planning, 42(3), 553-575",
+          "doi": "10.1108/MIP-08-2023-0413"
+        },
+        {
+          "id": "2024-singh-examining-the-effects-of",
+          "authors": "Singh, S., & Banerjee, S.",
+          "year": "2024",
+          "title": "Examining the effects of fear of missing out on sustainable food consumption: a social identity perspective",
+          "source": "Asia Pacific Journal of Marketing and Logistics, 36(10), 2726-2743",
+          "doi": "10.1108/APJML-10-2023-0969"
+        },
+        {
+          "id": "2024-mukherjee-urban-unemployment-duration-analysis",
+          "authors": "Mukherjee, S., & Roy, S.",
+          "year": "2024",
+          "title": "Urban Unemployment Duration Analysis in Post-Reform China",
+          "source": "American Business Review, 27(1), 11",
+          "doi": "10.37625/abr.27.1.302-325"
+        },
+        {
+          "id": "2024-kumar-what-fosters-shippers-rail",
+          "authors": "Kumar, J. A., Mukherjee, S., Baveja, A., Narayan, K., & Misra, R.",
+          "year": "2024",
+          "title": "What fosters shippers’ rail dispreference? Insights from Indian steel-makers with disparate output volumes",
+          "source": "Journal of Rail Transport Planning & Management, 30, 100447",
+          "doi": "10.1016/j.jrtpm.2024.100447"
+        },
+        {
+          "id": "2024-chhabra-assessing-loss-due-to",
+          "authors": "Chhabra, S., & Padhy, R.",
+          "year": "2024",
+          "title": "Assessing Loss Due to COVID-19 in the Homestay Sector and Comprehending Resilience Strategies",
+          "source": "In Promoting Responsible Tourism With Digital Platforms (pp. 231-250). IGI Global Scientific Publishing",
+          "doi": "10.4018/979-8-3693-3286-3.ch013"
+        },
+        {
+          "id": "2024-ahsan-formal-institutions-and-cross",
+          "authors": "Ahsan, F. M., Popli, M., & Kumar, V.",
+          "year": "2024",
+          "title": "Formal institutions and cross-border mergers and acquisitions: A systematic literature review and research agenda",
+          "source": "International Business Review, 33(5), 102306",
+          "doi": "10.1016/j.ibusrev.2024.102306"
+        },
+        {
+          "id": "2024-mukherjee-optimal-employment-decisions-in",
+          "authors": "Mukherjee, S., Padhi, S. S., & Jayaram, J.",
+          "year": "2024",
+          "title": "Optimal employment decisions in the hospitality sector under uncertain productivity loss due to catastrophe: A mean-variance utility approach",
+          "source": "International Journal of Hospitality Management, 122, 103850",
+          "doi": "10.1016/j.ijhm.2024.103850"
+        },
+        {
+          "id": "2024-das-of-climate-communities-and",
+          "authors": "Das, S.",
+          "year": "2024",
+          "title": "Of Climate, Communities and Commons: A Gendered Perspective",
+          "source": "In Climate Change Adaptation: Traditional Wisdom and Cross-Scale Understanding (pp. 49-58). Singapore: Springer Nature Singapore",
+          "doi": "10.1007/978-981-97-1076-8_5"
+        },
+        {
+          "id": "2024-das-perspectives-on-inequalities-in",
+          "authors": "Das, S.",
+          "year": "2024",
+          "title": "Perspectives on inequalities in social science research and environmental sustainability in India",
+          "source": "Environmental Science & Policy, 161, 103891",
+          "doi": "10.1016/j.envsci.2024.103891"
+        },
+        {
+          "id": "2024-lalwani-climate-risks-corporate-bonds",
+          "authors": "Lalwani, V.",
+          "year": "2024",
+          "title": "Climate risks, corporate bonds, and economic uncertainty",
+          "source": "Economics Letters, 244, 111984",
+          "doi": "10.1016/j.econlet.2024.111984"
+        },
+        {
+          "id": "2024-parija-how-does-bank-opacity",
+          "authors": "Parija, A. K., & Chhatwani, M.",
+          "year": "2024",
+          "title": "How does bank opacity affect credit growth and return predictability?",
+          "source": "Journal of Empirical Finance, 79, 101553",
+          "doi": "10.1016/j.jempfin.2024.101553"
+        },
+        {
+          "id": "2024-mukherjee-optimal-investment-in-artificial",
+          "authors": "Mukherjee, S., Nawazish, M., Padhi, S. S., & Jayaram, J.",
+          "year": "2024",
+          "title": "Optimal investment in artificial intelligence-driven production activities considering socio-economic concerns",
+          "source": "International Journal of Production Research, 1-25",
+          "doi": "10.1080/00207543.2024.2424971"
+        },
+        {
+          "id": "2024-bharti-is-it-benefiting-me",
+          "authors": "Bharti, M., & Suneja, V.",
+          "year": "2024",
+          "title": "Is it benefiting me or the environment? How context nudges green product choices",
+          "source": "International Journal of Consumer Studies, 48(6), e13102",
+          "doi": "10.1111/ijcs.13102"
+        },
+        {
+          "id": "2024-saggurthi-ecozoic-leadership-the-next",
+          "authors": "Saggurthi, S., Farias, G., & Thakur, M. K.",
+          "year": "2024",
+          "title": "Ecozoic Leadership: The Next Adjacent Possible for a Flourishing Earth Community",
+          "source": "Journal of Management, Spirituality & Religion, 21(6), 712-731",
+          "doi": "10.51327/FIBM7605"
+        },
+        {
+          "id": "2024-patrick-attachment-and-attractiveness-towards",
+          "authors": "Patrick, W. S., Thakur, M., & Jha, J. K.",
+          "year": "2024",
+          "title": "Attachment and attractiveness towards organizations: reinforcing the intention to stay amidst the “great resignation”",
+          "source": "In Evidence-based HRM: a Global Forum for Empirical Scholarship (Vol. 12, No. 3, pp. 611-629). Emerald Publishing Limited",
+          "doi": "10.1108/EBHRM-03-2023-0067"
+        },
+        {
+          "id": "2024-mascarenhas-ecozoic-critical-thinking-applied",
+          "authors": "Mascarenhas, O. A., Thakur, M., & Kumar, P.",
+          "year": "2024",
+          "title": "Ecozoic Critical Thinking Applied to Cosmic Sustainability and Developmental Goals",
+          "source": "In A Primer on Critical Thinking and Business Ethics (pp. 47-87). Emerald Publishing Limited",
+          "doi": "10.1108/978-1-83753-346-620241002"
+        },
+        {
+          "id": "2024-mascarenhas-on-assumptions-presumptions-suppositions",
+          "authors": "Mascarenhas, O. A., Thakur, M., & Kumar, P.",
+          "year": "2024",
+          "title": "On Assumptions, Presumptions, Suppositions, and Presuppositions",
+          "source": "In A Primer on Critical Thinking and Business Ethics (pp. 223-253). Emerald Publishing Limited",
+          "doi": "10.1108/978-1-83753-346-620241008"
+        },
+        {
+          "id": "2024-mascarenhas-critical-thinking-to-restore",
+          "authors": "Mascarenhas, O. A., Thakur, M., & Kumar, P.",
+          "year": "2024",
+          "title": "Critical Thinking to Restore Human Dignity Compromised by Global Poverty",
+          "source": "In A Primer on Critical Thinking and Business Ethics (pp. 1-46). Emerald Publishing Limited",
+          "doi": "10.1108/978-1-83753-346-620241001"
+        },
+        {
+          "id": "2024-mascarenhas-critical-thinking-applied-to",
+          "authors": "Mascarenhas, O. A., Thakur, M., & Kumar, P.",
+          "year": "2024",
+          "title": "Critical Thinking Applied to Animal Ethics, Animal Rights, and Animal Welfare",
+          "source": "In A Primer on Critical Thinking and Business Ethics (pp. 119-147). Emerald Publishing Limited",
+          "doi": "10.1108/978-1-83753-346-620241004"
+        },
+        {
+          "id": "2024-mascarenhas-natural-sustainability-space-ethics",
+          "authors": "Mascarenhas, O. A., Thakur, M., & Kumar, P.",
+          "year": "2024",
+          "title": "Natural sustainability space ethics and critical thinking for assessing outer space advances",
+          "source": "In A Primer on Critical Thinking and Business Ethics (pp. 149-188). Emerald Publishing Limited",
+          "doi": "10.1108/978-1-83753-346-620241005"
+        },
+        {
+          "id": "2024-mascarenhas-epilogue-aesthetic-rationality-spiritual",
+          "authors": "Mascarenhas, O. A., Thakur, M., & Kumar, P.",
+          "year": "2024",
+          "title": "Epilogue: Aesthetic Rationality, Spiritual Capital, and Human Mindfulness to Support Global Social Well-Being",
+          "source": "In A Primer on Critical Thinking and Business Ethics: Critical Thinking in Unpredictable Corporate Business Contexts (Volume 3) (pp. 189-221). Emerald Publishing Limited",
+          "doi": "10.1108/978-1-83753-346-620241006"
+        },
+        {
+          "id": "2024-mascarenhas-critical-thinking-applied-to-2",
+          "authors": "Mascarenhas, O. A., Thakur, M., & Kumar, P.",
+          "year": "2024",
+          "title": "Critical Thinking Applied to Ecofeminism",
+          "source": "In A Primer on Critical Thinking and Business Ethics (pp. 89-118). Emerald Publishing Limited",
+          "doi": "10.1108/978-1-83753-346-620241003"
+        },
+        {
+          "id": "2024-meshram-inflation-hedging-via-tracking",
+          "authors": "Meshram, V., & Lalwani, V.",
+          "year": "2024",
+          "title": "Inflation hedging via tracking portfolios in the BRICS markets",
+          "source": "Cogent Economics & Finance, 12(1), 2431525",
+          "doi": "10.1080/23322039.2024.2431525"
+        }
+      ]
+    },
+    {
+      "id": "2023-2024",
+      "label": "2023–2024",
+      "publications": [
+        {
+          "id": "2023-kuriakose-behavioural-conflict-on-employee",
+          "authors": "Kuriakose, V., & S, S.",
+          "year": "2023",
+          "title": "Behavioural conflict on employee wellbeing: role of negative affect state and workplace fun",
+          "source": "Benchmarking: An International Journal, 30(8), 2634-2654",
+          "doi": "10.1108/BIJ-08-2021-0455"
+        },
+        {
+          "id": "2023-kapoor-social-media-influencer-promoted",
+          "authors": "Kapoor, P. S., Tagore, A., & Dua, S.",
+          "year": "2023",
+          "title": "Social media influencer promoted sustainable fashion: Effects of sponsorship and benefit association",
+          "source": "Journal of promotion management, 29(4), 461-490",
+          "doi": "10.1080/10496491.2022.2163034"
+        },
+        {
+          "id": "2023-paul-vincent-family-incivility-and-workplace",
+          "authors": "Paul Vincent, M. T., PM, N., Jose, G., John, A., & Kuriakose, V.",
+          "year": "2023",
+          "title": "Family incivility and workplace bullying: mediating and moderating model of psychological safety, optimism and organization-based self-esteem",
+          "source": "International Journal of Conflict Management, 34(2), 234-252",
+          "doi": "10.1108/IJCMA-04-2022-0085"
+        },
+        {
+          "id": "2023-kapoor-greenfluencers-as-agents-of",
+          "authors": "Kapoor, P. S., Balaji, M. S., & Jiang, Y.",
+          "year": "2023",
+          "title": "Greenfluencers as agents of social change: The effectiveness of sponsored messages in driving sustainable consumption",
+          "source": "European Journal of Marketing, 57(2), 533-561",
+          "doi": "10.1108/EJM-10-2021-0776"
+        },
+        {
+          "id": "2023-kuriakose-examining-the-pathway-linking",
+          "authors": "Kuriakose, V., Paul V, M. T., & Bishwas, S. K.",
+          "year": "2023",
+          "title": "Examining the pathway linking workplace incivility and employee well-being: a study among frontline hotel employees in India",
+          "source": "International Journal of Contemporary Hospitality Management, 35(7), 2465-2480",
+          "doi": "10.1108/IJCHM-01-2022-0142"
+        },
+        {
+          "id": "2023-uppal-imr-7th-indam-conference",
+          "authors": "Uppal, N.",
+          "year": "2023",
+          "title": "IMR–7th INDAM CONFERENCE PAPER: Narcissus walking the extra mile: A moderated mediation model",
+          "source": "IIMB Management Review, 35(4), 307-316",
+          "doi": "10.1016/j.iimb.2023.02.001"
+        },
+        {
+          "id": "2023-chakravarty-new-online-delivery-methods",
+          "authors": "Chakravarty, S.",
+          "year": "2023",
+          "title": "New online delivery methods beyond the era of the pandemic: varied blended models to meet the COVID-19 challenges",
+          "source": "In Digital Teaching, Learning and Assessment (pp. 221-239). Chandos Publishing",
+          "doi": "10.1016/B978-0-323-95500-3.00014-6"
+        },
+        {
+          "id": "2023-kuriakose-family-incivility-and-service",
+          "authors": "Kuriakose, V., TS, D., & Hycinth, F.",
+          "year": "2023",
+          "title": "Family incivility and service delivery of frontline hotel employees: roles of negative rumination, psychological capital and perceived organisational support",
+          "source": "International Journal of Conflict Management, 34(4), 692-716",
+          "doi": "10.1108/IJCMA-12-2022-0207"
+        },
+        {
+          "id": "2023-chhabra-tbl-myanmar-understanding-the",
+          "authors": "Chhabra, S.",
+          "year": "2023",
+          "title": "TBL Myanmar: Understanding the Barriers to Sale of Dehumidifiers in Emerging Markets",
+          "source": "Asian Journal of Management Cases, 09728201231153212",
+          "doi": "10.1177/09728201231153212"
+        },
+        {
+          "id": "2023-kuriakose-does-bullying-among-students",
+          "authors": "Kuriakose, V., Bishwas, S. K., & Mohandas, N. P.",
+          "year": "2023",
+          "title": "Does bullying among students hamper their well-being? Roles of helplessness and psychological capital",
+          "source": "International Journal of Educational Management, 37(5), 1104-1123",
+          "doi": "10.1108/IJEM-10-2022-0437"
+        },
+        {
+          "id": "2023-kuriakose-co-worker-and-customer",
+          "authors": "Kuriakose, V., & Sreejesh, S.",
+          "year": "2023",
+          "title": "Co-worker and customer incivility on employee well-being: Roles of helplessness, social support at work and psychological detachment-a study among frontline hotel employees",
+          "source": "Journal of Hospitality and Tourism Management, 56, 443-453",
+          "doi": "10.1016/j.jhtm.2023.07.009"
+        },
+        {
+          "id": "2023-chhabra-understanding-privacy-paradox-an",
+          "authors": "Chhabra, S., Mukherjee, J., & N Agarwal, M.",
+          "year": "2023",
+          "title": "Understanding privacy paradox: An experimental approach to study privacy concerns and actual disclosure among app users",
+          "source": "Journal of Organizational Computing and Electronic Commerce, 33(3-4), 97-116",
+          "doi": "10.1080/10919392.2023.2251328"
+        },
+        {
+          "id": "2023-ahsan-do-board-interlocks-affect",
+          "authors": "Ahsan, F. M., Gubbi, S. R., & Popli, M.",
+          "year": "2023",
+          "title": "Do board interlocks affect the frequency and pace of cross-border acquisitions by emerging market firms?",
+          "source": "Long Range Planning, 56(6), 102346",
+          "doi": "10.1016/j.lrp.2023.102346"
+        },
+        {
+          "id": "2023-joseph-e-commerce-an-indian",
+          "authors": "Joseph, P. T.",
+          "year": "2023",
+          "title": "E-commerce: An Indian perspective",
+          "source": "PHI Learning Pvt. Ltd."
+        },
+        {
+          "id": "2023-chhatwani-financial-behavior-and-financial",
+          "authors": "Chhatwani, M., & Sen, S.",
+          "year": "2023",
+          "title": "Financial behavior and financial fragility",
+          "source": "In A research agenda for consumer financial behavior (pp. 273-286). Edward Elgar Publishing",
+          "doi": "10.4337/9781803922652.00029"
+        },
+        {
+          "id": "2023-chhatwani-who-invests-in-cryptocurrency",
+          "authors": "Chhatwani, M., & Parija, A. K.",
+          "year": "2023",
+          "title": "Who invests in cryptocurrency? The role of overconfidence among American investors",
+          "source": "Journal of Behavioral and Experimental Economics, 107, 102107",
+          "doi": "10.1016/j.socec.2023.102107"
+        },
+        {
+          "id": "2023-joshy-future-educational-environment-identification",
+          "authors": "Joshy, K. X., Thakurta, R., & Sekh, A. A.",
+          "year": "2023",
+          "title": "Future educational environment–Identification of smart campus topic trends using text mining",
+          "source": "International Journal of Educational Management, 37(4), 884-906",
+          "doi": "10.1108/IJEM-01-2023-0005"
+        }
+      ]
+    },
+    {
+      "id": "2022-2023",
+      "label": "2022–2023",
+      "publications": [
+        {
+          "id": "2022-chhabra-factors-affecting-the-adoption",
+          "authors": "Chhabra, S., Sindhi, S., & Nandy, M.",
+          "year": "2022",
+          "title": "Factors affecting the adoption of slow fashion–an exploratory study of multiple stakeholders",
+          "source": "Journal of Macromarketing, 42(4), 492-509",
+          "doi": "10.1177/02761467221116294"
+        },
+        {
+          "id": "2022-chhabra-yardstick-in-search-of",
+          "authors": "Chhabra, S., & Elembilassery, V.",
+          "year": "2022",
+          "title": "Yardstick: in search of segment and strategy in the education industry"
+        },
+        {
+          "id": "2022-popli-upper-echelons-and-firm",
+          "authors": "Popli, M., Ahsan, F. M., & Mukherjee, D.",
+          "year": "2022",
+          "title": "Upper echelons and firm internationalization: A critical review and future directions",
+          "source": "Journal of Business Research, 152, 505-521",
+          "doi": "10.1016/j.jbusres.2022.07.048"
+        },
+        {
+          "id": "2022-dhaigude-prestige-management-consulting-making",
+          "authors": "Dhaigude, A. S., Mukherjee, S., & Kaushik, K.",
+          "year": "2022",
+          "title": "Prestige Management Consulting: Making the Supply Chain Transparent",
+          "source": "Communications of the Association for Information Systems, 51(1), 11",
+          "doi": "10.17705/1CAIS.05124"
+        },
+        {
+          "id": "2022-chhabra-conceptual-review-of-technology",
+          "authors": "Chhabra, S.",
+          "year": "2022",
+          "title": "Conceptual Review of Technology Enabled Marketing",
+          "source": "Handbook of Research on Digital Transformation Management and Tools, 453-468",
+          "doi": "10.4018/978-1-7998-9764-4.ch020"
+        },
+        {
+          "id": "2022-dhar-understanding-the-evolution-of",
+          "authors": "Dhar, S., Tarafdar, P., & Bose, I.",
+          "year": "2022",
+          "title": "Understanding the evolution of an emerging technological paradigm and its impact: The case of Digital Twin",
+          "source": "Technological Forecasting and Social Change, 185, 122098",
+          "doi": "10.1016/j.techfore.2022.122098"
+        },
+        {
+          "id": "2022-joshy-what-s-next-connecting",
+          "authors": "Joshy, K. X., & Thakurta, R.",
+          "year": "2022",
+          "title": "What’s Next? Connecting the Past and Future of Business-IT Alignment Research",
+          "source": "Asia pacific journal of information systems, 32(2), 395-434",
+          "doi": "10.14329/apjis.2022.32.2.395"
+        }
+      ]
+    },
+    {
+      "id": "2021-2022",
+      "label": "2021–2022",
+      "publications": [
+        {
+          "id": "2021-tarafdar-how-should-mydbots-manage",
+          "authors": "Tarafdar, P., & Bose, I.",
+          "year": "2021",
+          "title": "How Should Mydbots Manage Innovations in Consumer Robotics?",
+          "source": "Communications of the Association for Information Systems, 49(1), 13",
+          "doi": "10.17705/1CAIS.04911"
+        },
+        {
+          "id": "2021-rajkumar-investigating-consumers-path-to",
+          "authors": "Rajkumar, N., Vishwakarma, P., & Gangwani, K. K.",
+          "year": "2021",
+          "title": "Investigating consumers’ path to showrooming: a perceived value-based perspective",
+          "source": "International Journal of Retail & Distribution Management, 49(2), 299-316",
+          "doi": "10.1108/IJRDM-05-2020-0184"
+        }
+      ]
+    }
+  ]
+}

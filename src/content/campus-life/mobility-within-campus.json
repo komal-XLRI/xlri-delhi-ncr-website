@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "Mobility Within Campus",
+    "description": "Everyday services on the XLRI Delhi-NCR campus: the hostel gymnasium, an ICICI e-lobby and SBI branch, a free student shuttle and XL Salon."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Mobility Within Campus",
+  "intro": "The everyday services students need are on campus, a short walk from class and the hostel — a gym, two banks, a salon and a free shuttle.",
+  "facts": [
+    {
+      "value": "5",
+      "label": "Services on campus"
+    },
+    {
+      "value": "2",
+      "label": "Banking facilities"
+    },
+    {
+      "value": "Free",
+      "label": "Student shuttle"
+    }
+  ],
+  "services": [
+    {
+      "id": "gymnasium",
+      "title": "Gymnasium",
+      "category": "Fitness",
+      "icon": "dumbbell",
+      "description": "In the hostel itself there is a large Gym available to use for all students.",
+      "location": "Student hostel",
+      "photos": [
+        {
+          "src": "/media/campus-life/mobility/gym-1.jpg",
+          "alt": "Weight machines, benches and a dumbbell rack in the hostel gym",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/mobility/gym-2.jpg",
+          "alt": "A row of treadmills and cross-trainers by the gym windows",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/mobility/gym-3.jpg",
+          "alt": "A leg-press machine and cable station in the gym",
+          "width": 1600,
+          "height": 1069
+        }
+      ]
+    },
+    {
+      "id": "icici-e-lobby",
+      "title": "ICICI E-Lobby",
+      "category": "Banking",
+      "icon": "bank",
+      "description": "There are 2 banking facilities on campus, one of them is the ICICI E-Lobby.",
+      "photos": [
+        {
+          "src": "/media/campus-life/mobility/icici-1.jpg",
+          "alt": "The campus building that houses the ICICI Bank e-lobby and the XL Salon",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "/media/campus-life/mobility/icici-2.jpg",
+          "alt": "Inside the ICICI Bank e-lobby",
+          "width": 724,
+          "height": 565
+        }
+      ]
+    },
+    {
+      "id": "shuttle-service",
+      "title": "Shuttle Service",
+      "category": "Transport",
+      "icon": "bus",
+      "description": "XLRI Delhi NCR Campus provides a complimentary shuttle service for students.",
+      "photos": [
+        {
+          "src": "/media/campus-life/mobility/shuttle-1.jpg",
+          "alt": "The white XLRI campus shuttle van",
+          "width": 1530,
+          "height": 1032
+        }
+      ]
+    },
+    {
+      "id": "xl-salon",
+      "title": "XL Salon",
+      "category": "Grooming",
+      "icon": "scissors",
+      "description": "The XLRI Delhi campus offers a comprehensive range of grooming services to ensure that students can maintain their personal appearance with ease and convenience.",
+      "photos": [
+        {
+          "src": "/media/campus-life/mobility/salon-1.jpg",
+          "alt": "Salon chairs facing mirrors and shelves of products at XL Salon",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/mobility/salon-2.jpg",
+          "alt": "The length of the salon, with styling stations along one wall",
+          "width": 591,
+          "height": 723
+        },
+        {
+          "src": "/media/campus-life/mobility/salon-3.jpg",
+          "alt": "Two styling chairs under ring lights at XL Salon",
+          "width": 602,
+          "height": 597
+        }
+      ]
+    },
+    {
+      "id": "sbi-bank-branch",
+      "title": "SBI Bank Branch",
+      "category": "Banking",
+      "icon": "bank",
+      "description": "A full State Bank of India branch, with its own ATM, on the campus.",
+      "location": "XLRI Delhi-NCR, Aurangpur, M.E.T Dadri Toe, Jhajjar, Haryana 124 515",
+      "photos": [
+        {
+          "src": "/media/campus-life/mobility/sbi-1.jpg",
+          "alt": "Counters and the waiting area inside the campus SBI branch",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/mobility/sbi-2.jpg",
+          "alt": "The SBI branch's front desk and glass entrance",
+          "width": 1600,
+          "height": 1069
+        },
+        {
+          "src": "/media/campus-life/mobility/sbi-3.jpg",
+          "alt": "The SBI ATM on campus",
+          "width": 581,
+          "height": 551
+        }
+      ]
+    }
+  ],
+  "tourLink": {
+    "eyebrow": "See it for yourself",
+    "title": "Take the Campus Tour — 22 short videos"
+  }
+}

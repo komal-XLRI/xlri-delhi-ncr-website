@@ -1,6 +1,41 @@
 {
+  "meta": {
+    "title": "Full Time Faculty",
+    "description": "The full-time faculty of XLRI Delhi-NCR — designations, qualifications and functional areas, with links to each biography."
+  },
+  "breadcrumb": {
+    "section": "Faculty & Research",
+    "page": "Full Time Faculty"
+  },
   "title": "Full Time Faculty",
   "intro": [],
+  "labels": {
+    "allLetters": "All",
+    "showing": "Showing {shown} of {total} faculty",
+    "clearFilters": "Clear filters",
+    "searchPlaceholder": "Search name",
+    "allAreas": "All functional areas",
+    "noMatch": "No faculty match these filters.",
+    "functionalArea": "Functional Area:",
+    "biography": "Biography"
+  },
+  "profile": {
+    "metaDescription": "{name}, {designation}, XLRI Delhi-NCR — {areas}. Qualifications, experience, research and publications.",
+    "campus": "XLRI Delhi-NCR",
+    "links": {
+      "linkedin": "LinkedIn",
+      "scholar": "Google Scholar",
+      "orcid": "ORCID"
+    },
+    "briefProfile": {
+      "heading": "Brief Profile",
+      "designation": "Designation",
+      "qualification": "Qualification",
+      "functionalArea": "Functional Area",
+      "email": "Email"
+    },
+    "noBiography": "A detailed biography will be added soon."
+  },
   "faculty": [
     {
       "id": "fr-antony-uvari-s-j",

@@ -51,10 +51,13 @@ const ROTATION_MS = 3200;
 export function HeroMotion({
   video,
   spotlight,
+  spotlightActionLabel,
   children,
 }: {
   video?: HeroVideoSource | undefined;
   spotlight?: readonly HeroSpotlightItem[] | undefined;
+  /** Visible label on each spotlight link. */
+  spotlightActionLabel: string;
   children: ReactNode;
 }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -237,7 +240,7 @@ export function HeroMotion({
                       href={item.href}
                       className="group/link mt-7 inline-flex items-center gap-2.5 rounded-full border border-white/30 py-2 pr-4 pl-5 text-sm font-medium text-white transition-colors duration-200 hover:border-white hover:bg-white/10"
                     >
-                      Read more
+                      {spotlightActionLabel}
                       <span className="sr-only"> about {item.title}</span>
                       <ArrowRightIcon
                         size={16}

@@ -1,6 +1,12 @@
 import { z } from 'zod';
 
-import type { FacultyBiography, FacultyDirectory } from '@/types/faculty';
+import { breadcrumbSchema, metaSchema } from '@/lib/validation/publications';
+import type {
+  FacultyBiography,
+  FacultyDirectory,
+  StaffDirectory,
+  VisitingFacultyDirectory,
+} from '@/types/faculty';
 
 /**
  * Runtime validation for the faculty JSON files in `content/faculty/`.
@@ -20,9 +26,36 @@ const memberSchema = z.object({
   photo: z.string().startsWith('/', 'photo must be a path under public/, starting with /'),
 });
 
+const text = z.string().min(1);
+
 const directorySchema = z.object({
-  title: z.string().min(1),
-  intro: z.array(z.string().min(1)),
+  meta: metaSchema,
+  breadcrumb: breadcrumbSchema,
+  title: text,
+  intro: z.array(text),
+  labels: z.object({
+    allLetters: text,
+    showing: text,
+    clearFilters: text,
+    searchPlaceholder: text,
+    allAreas: text,
+    noMatch: text,
+    functionalArea: text,
+    biography: text,
+  }),
+  profile: z.object({
+    metaDescription: text,
+    campus: text,
+    links: z.object({ linkedin: text, scholar: text, orcid: text }),
+    briefProfile: z.object({
+      heading: text,
+      designation: text,
+      qualification: text,
+      functionalArea: text,
+      email: text,
+    }),
+    noBiography: text,
+  }),
   faculty: z.array(memberSchema).min(1),
 });
 
@@ -96,4 +129,69 @@ export function parseFacultyBiographies(
       },
     ]),
   );
+}
+
+const visitingSchema = z.object({
+  meta: metaSchema,
+  breadcrumb: breadcrumbSchema,
+  title: z.string().min(1),
+  intro: z.array(z.string().min(1)),
+  faculty: z
+    .array(
+      z.object({
+        id: z.string().regex(/^[a-z0-9-]+$/, 'ids must be lowercase kebab-case — they are anchors'),
+        name: z.string().min(1),
+        designation: z.string().min(1),
+        organisation: z.string().min(1),
+        photo: z.string().startsWith('/', 'photo must be a path under public/, starting with /'),
+      }),
+    )
+    .min(1),
+});
+
+/** Validates `content/faculty/visiting.json`: the fields, and that ids are unique. */
+export function parseVisitingFaculty(input: unknown, source: string): VisitingFacultyDirectory {
+  const result = visitingSchema.safeParse(input);
+  if (!result.success) throw fail(source, result.error);
+  const seen = new Set<string>();
+  for (const member of result.data.faculty) {
+    if (seen.has(member.id)) throw new Error(`Duplicate faculty id "${member.id}" in ${source}`);
+    seen.add(member.id);
+  }
+  return result.data;
+}
+
+const staffSchema = z.object({
+  meta: metaSchema,
+  breadcrumb: breadcrumbSchema,
+  title: z.string().min(1),
+  intro: z.array(z.string().min(1)),
+  labels: z.object({
+    showing: text,
+    clearSearch: text,
+    searchPlaceholder: text,
+    noMatch: text,
+  }),
+  staff: z
+    .array(
+      z.object({
+        id: z.string().regex(/^[a-z0-9-]+$/, 'ids must be lowercase kebab-case — they are anchors'),
+        name: z.string().min(1),
+        designation: z.string().min(1),
+        photo: z.string().startsWith('/', 'photo must be a path under public/, starting with /'),
+      }),
+    )
+    .min(1),
+});
+
+/** Validates `content/faculty/staff.json`: the fields, and that ids are unique. */
+export function parseStaff(input: unknown, source: string): StaffDirectory {
+  const result = staffSchema.safeParse(input);
+  if (!result.success) throw fail(source, result.error);
+  const seen = new Set<string>();
+  for (const member of result.data.staff) {
+    if (seen.has(member.id)) throw new Error(`Duplicate staff id "${member.id}" in ${source}`);
+    seen.add(member.id);
+  }
+  return result.data;
 }

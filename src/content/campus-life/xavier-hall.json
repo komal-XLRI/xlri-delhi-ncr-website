@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Xavier Hall",
+    "description": "Xavier Hall, the multipurpose venue at XLRI Delhi-NCR for 200–250 people — seminars, workshops, cultural activities and badminton."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Xavier Hall",
+  "intro": "Xavier’s Hall is a large multipurpose venue with a seating capacity of 200-250 people. It serves as a central location for various events, including seminars, workshops, and cultural activities, enhancing the campus’s vibrant community life.",
+  "photos": [
+    {
+      "src": "/media/campus-life/xavier/event.jpg",
+      "alt": "A full Xavier Hall at an inauguration, the audience standing in front of the screen",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/media/campus-life/xavier/badminton.jpg",
+      "alt": "Students playing badminton on the court laid out in Xavier Hall",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/media/campus-life/xavier/badminton-2.jpg",
+      "alt": "A badminton game in Xavier Hall, seen from the side",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "One hall, many uses",
+  "highlights": [
+    {
+      "icon": "users",
+      "title": "200–250 seats",
+      "text": "Room for a whole batch at seminars, inaugurations and guest talks."
+    },
+    {
+      "icon": "sparkle",
+      "title": "Cultural activities",
+      "text": "A central venue for workshops, performances and celebrations."
+    },
+    {
+      "icon": "dumbbell",
+      "title": "Indoor sport",
+      "text": "A badminton court is laid out across the hall floor."
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Student Events",
+      "description": "Fests, talks and competitions through the year.",
+      "href": "/campus-life/student-events"
+    },
+    {
+      "label": "Sports & Recreation",
+      "description": "Courts, the gaming arena and the gym.",
+      "href": "/campus-life/sports-recreation"
+    },
+    {
+      "label": "Conference Rooms",
+      "description": "Boardrooms and meeting spaces for faculty, guests and committees.",
+      "href": "/campus-life/conference-rooms"
+    }
+  ]
+}

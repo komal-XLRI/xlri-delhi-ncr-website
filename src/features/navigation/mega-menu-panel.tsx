@@ -28,6 +28,8 @@ const layoutColumns = {
   'columns-2': 'md:grid-cols-2',
   'columns-3': 'md:grid-cols-3',
   'columns-4': 'md:grid-cols-2 lg:grid-cols-4',
+  // Narrower gaps so five columns keep a readable measure inside 80rem.
+  'columns-5': 'md:grid-cols-3 lg:grid-cols-5 lg:gap-x-8',
   'split-feature': 'md:grid-cols-3',
 } as const;
 
@@ -88,7 +90,14 @@ function DropdownColumn({ section, index }: { section: NavNode; index: number })
   );
 }
 
-export function MegaMenuPanel({ item }: { item: PrimaryNavItem }) {
+export function MegaMenuPanel({
+  item,
+  featuredActionLabel,
+}: {
+  item: PrimaryNavItem;
+  /** Link label on the featured card, from `content/site.json`. */
+  featuredActionLabel: string;
+}) {
   if (!item.children) return null;
 
   return (
@@ -127,7 +136,7 @@ export function MegaMenuPanel({ item }: { item: PrimaryNavItem }) {
                 variant="standalone"
                 className="text-sm"
               >
-                Find out more
+                {featuredActionLabel}
               </Link>
             </div>
           ) : null}

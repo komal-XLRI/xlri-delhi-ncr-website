@@ -4,7 +4,7 @@ import { useRef, useState, type KeyboardEvent } from 'react';
 
 import { ArrowRightIcon, ExternalIcon } from '@/components/ui/icon';
 import { cn } from '@/lib/cn';
-import type { DisclosureDocument } from '@/types/mandatory-disclosure';
+import type { DisclosureDocument, DisclosureViewerLabels } from '@/types/mandatory-disclosure';
 
 /**
  * The disclosure documents — Jamshedpur's layout: a tab per document, the
@@ -36,7 +36,14 @@ import type { DisclosureDocument } from '@/types/mandatory-disclosure';
  *
  * Tabs follow the WAI-ARIA pattern (Left/Right, Home/End, roving tabindex).
  */
-export function DisclosureViewer({ documents }: { documents: readonly DisclosureDocument[] }) {
+export function DisclosureViewer({
+  documents,
+  labels,
+}: {
+  documents: readonly DisclosureDocument[];
+  /** The visible words on the card and the frame, from the page's content. */
+  labels: DisclosureViewerLabels;
+}) {
   const [active, setActive] = useState(0);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
   const frame = useRef<HTMLDivElement>(null);
@@ -142,7 +149,7 @@ export function DisclosureViewer({ documents }: { documents: readonly Disclosure
                 rel="noopener"
                 className="group inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface px-5 py-2.5 text-sm font-semibold text-ink-strong transition-colors duration-300 hover:border-brand hover:text-brand"
               >
-                Open in new tab
+                {labels.openInNewTab}
                 <span className="sr-only"> (PDF)</span>
                 <ExternalIcon
                   size={15}
@@ -155,7 +162,7 @@ export function DisclosureViewer({ documents }: { documents: readonly Disclosure
                 download
                 className="group inline-flex items-center gap-2.5 rounded-full bg-brand py-1.5 pr-1.5 pl-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-brand-950"
               >
-                Download
+                {labels.download}
                 <span className="sr-only">
                   {' '}
                   {doc.title}, PDF, {doc.sizeLabel}
@@ -183,10 +190,12 @@ export function DisclosureViewer({ documents }: { documents: readonly Disclosure
               <div className="flex items-center justify-between gap-4 border-b border-border bg-surface px-5 py-3">
                 <p className="flex items-center gap-3 text-sm">
                   <span className="font-semibold tracking-[0.14em] text-accent-700 uppercase">
-                    Document preview
+                    {labels.previewHeading}
                   </span>
                   <span aria-hidden="true" className="h-4 w-px bg-border-strong" />
-                  <span className="text-ink-muted">{doc.pages} pages · scroll to read</span>
+                  <span className="text-ink-muted">
+                    {doc.pages} {labels.pagesSuffix}
+                  </span>
                 </p>
                 <button
                   type="button"
@@ -206,7 +215,7 @@ export function DisclosureViewer({ documents }: { documents: readonly Disclosure
                   >
                     <path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" />
                   </svg>
-                  Full screen
+                  {labels.fullScreen}
                 </button>
               </div>
               {/* In full screen the frame fills the display, so the sheet grows with it. */}

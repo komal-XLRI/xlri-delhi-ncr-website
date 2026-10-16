@@ -1,0 +1,601 @@
+{
+  "primary": [
+    {
+      "id": "about",
+      "label": "About",
+      "href": "/about",
+      "layout": "columns-3",
+      "children": [
+        {
+          "id": "about-institute",
+          "label": "The Institute",
+          "children": [
+            {
+              "id": "about-overview",
+              "label": "Overview",
+              "href": "/about"
+            },
+            {
+              "id": "about-vision",
+              "label": "Vision & Mission",
+              "href": "/about/vision-mission"
+            },
+            {
+              "id": "about-heritage",
+              "label": "Heritage",
+              "href": "/about/heritage"
+            },
+            {
+              "id": "about-founders",
+              "label": "Jesuit Founding Fathers",
+              "href": "/about/jesuit-founding-fathers"
+            },
+            {
+              "id": "about-accreditation",
+              "label": "Accreditation",
+              "href": "/about/accreditation"
+            }
+          ]
+        },
+        {
+          "id": "about-governance",
+          "label": "Leadership & Governance",
+          "children": [
+            {
+              "id": "about-director",
+              "label": "From the Director's Desk",
+              "href": "/about/directors-desk"
+            },
+            {
+              "id": "about-leadership",
+              "label": "Leadership & Administration",
+              "href": "/about/leadership"
+            },
+            {
+              "id": "about-board",
+              "label": "Board of Governors",
+              "href": "/about/board-of-governors"
+            },
+            {
+              "id": "about-committees",
+              "label": "Committees & Personnel",
+              "href": "/about/committees"
+            },
+            {
+              "id": "about-disclosure",
+              "label": "Mandatory Disclosure",
+              "href": "/about/mandatory-disclosure",
+              "description": "AICTE regulatory publication"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "academics",
+      "label": "Academics",
+      "href": "/academics",
+      "layout": "columns-3",
+      "children": [
+        {
+          "id": "academics-business",
+          "label": "School of Business",
+          "children": [
+            {
+              "id": "programme-pgdm-bm",
+              "label": "PGDM BM",
+              "href": "/academics/programmes/pgdm-business-management"
+            }
+          ]
+        },
+        {
+          "id": "academics-entrepreneurship",
+          "label": "XLRI – Entrepreneurship",
+          "children": [
+            {
+              "id": "programme-pgdm-ie",
+              "label": "PGDM - IEV",
+              "href": "/academics/programmes/pgdm-innovation-entrepreneurship"
+            }
+          ]
+        },
+        {
+          "id": "academics-admission-process",
+          "label": "XLRI Admission Process",
+          "children": [
+            {
+              "id": "admission-process-overview",
+              "label": "Overview",
+              "href": "https://xlri.ac.in/academic-programmes/admission-procedure/overview"
+            },
+            {
+              "id": "admission-process-prospectus",
+              "label": "Admission Prospectus",
+              "href": "https://firebasestorage.googleapis.com/v0/b/xlri-firebase-e5d2d.appspot.com/o/CMS_MediaLibrary%2FAdmissions%20e-Prospectus%202026.pdf2025-11-21T06%3A05%3A55.041Z?alt=media&token=7a67a83e-b077-4dd4-a16e-a7fa02df3875"
+            },
+            {
+              "id": "admission-process-xat-bulletin",
+              "label": "XAT Bulletin",
+              "href": "https://xlri.ac.in/academic-programmes/admission-procedure/xat-bulletin"
+            },
+            {
+              "id": "admission-process-xat-papers",
+              "label": "XAT Question Papers",
+              "href": "https://xlri.ac.in/academic-programmes/xat-question-papers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "executive-education",
+      "label": "Executive Education",
+      "href": "/executive-education",
+      "layout": "columns-2",
+      "children": [
+        {
+          "id": "exec-xlead",
+          "label": "XLEAD – XLRI Leadership Education and Development",
+          "children": [
+            {
+              "id": "exec-emdp",
+              "label": "EMDP",
+              "href": "/executive-education/emdp"
+            },
+            {
+              "id": "exec-mdp",
+              "label": "Management Development Programmes",
+              "href": "/executive-education/management-development-programmes"
+            },
+            {
+              "id": "exec-in-company",
+              "label": "In-Company Programmes",
+              "href": "/executive-education/in-company-programmes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faculty-research",
+      "label": "Faculty & Research",
+      "href": "/faculty",
+      "layout": "columns-2",
+      "children": [
+        {
+          "id": "faculty-research-group",
+          "label": "Faculty & Research",
+          "children": [
+            {
+              "id": "faculty-full-time",
+              "label": "Full Time Faculty",
+              "href": "/faculty/full-time"
+            },
+            {
+              "id": "faculty-adjunct",
+              "label": "Adjunct Faculty",
+              "href": "/faculty/adjunct"
+            },
+            {
+              "id": "faculty-visiting",
+              "label": "Visiting Faculty",
+              "href": "/faculty/visiting"
+            },
+            {
+              "id": "faculty-staff",
+              "label": "Staff",
+              "href": "/faculty/staff"
+            },
+            {
+              "id": "faculty-innovation-teaching",
+              "label": "Faculty Innovation in Teaching",
+              "href": "https://xlri.ac.in/faculty-research/innovation-in-teaching"
+            },
+            {
+              "id": "research-publications",
+              "label": "Publication – Research Articles & Cases",
+              "href": "/research/publications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "centres",
+      "label": "Centres",
+      "layout": "columns-2",
+      "children": [
+        {
+          "id": "centres-group",
+          "label": "Centres of Excellence",
+          "children": [
+            {
+              "id": "centre-gender",
+              "label": "Centre for Gender Equality & Inclusive Leadership",
+              "href": "/research/centres/gender-equality"
+            },
+            {
+              "id": "centre-xceed",
+              "label": "XCEED – XLRI Incubator",
+              "href": "https://xceed.xlri.ac.in/"
+            },
+            {
+              "id": "centre-public-policy",
+              "label": "Centre for Public Policy & Public Affairs",
+              "href": "/research/centres/public-policy"
+            },
+            {
+              "id": "centre-automobiles",
+              "label": "Indian School for Design of Automobiles",
+              "href": "/research/centres/design-of-automobiles"
+            },
+            {
+              "id": "centre-healthcare",
+              "label": "Centre for Healthcare Management",
+              "href": "/research/centres/healthcare-management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sustainability",
+      "label": "Sustainability",
+      "layout": "columns-2",
+      "children": [
+        {
+          "id": "sustainability-group",
+          "label": "Sustainability",
+          "href": "/sustainability",
+          "children": [
+            {
+              "id": "sustainability-team",
+              "label": "Team",
+              "href": "/sustainability/team"
+            },
+            {
+              "id": "sustainability-history",
+              "label": "History",
+              "href": "/sustainability/history"
+            },
+            {
+              "id": "sustainability-student-committees",
+              "label": "Student Committees",
+              "href": "/sustainability/student-committees"
+            },
+            {
+              "id": "sustainability-courses",
+              "label": "Courses",
+              "href": "/sustainability/courses"
+            },
+            {
+              "id": "sustainability-events",
+              "label": "Events",
+              "href": "/sustainability/events"
+            },
+            {
+              "id": "sustainability-government-committees",
+              "label": "Government Committees",
+              "href": "/sustainability/government-committees"
+            },
+            {
+              "id": "sustainability-rural-immersion",
+              "label": "Rural Immersion",
+              "href": "/sustainability/rural-immersion"
+            },
+            {
+              "id": "sustainability-research-projects",
+              "label": "Research Projects",
+              "href": "/sustainability/research-projects"
+            },
+            {
+              "id": "sustainability-research-publications-cases",
+              "label": "Research Publications & Cases",
+              "href": "/sustainability/research-publications-cases"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "campus-life",
+      "label": "Campus Life",
+      "href": "/campus-life",
+      "layout": "columns-5",
+      "children": [
+        {
+          "id": "campus-academic-spaces",
+          "label": "Academic Spaces",
+          "children": [
+            {
+              "id": "campus-library",
+              "label": "Library",
+              "href": "/campus-life/library"
+            },
+            {
+              "id": "campus-classrooms",
+              "label": "Classrooms",
+              "href": "/campus-life/classrooms"
+            },
+            {
+              "id": "campus-computer-labs",
+              "label": "Computer Labs",
+              "href": "/campus-life/computer-labs"
+            },
+            {
+              "id": "campus-it-infrastructure",
+              "label": "IT Infrastructure",
+              "href": "/campus-life/it-infrastructure"
+            },
+            {
+              "id": "campus-studio",
+              "label": "Studio",
+              "href": "/campus-life/studio"
+            },
+            {
+              "id": "campus-conference-rooms",
+              "label": "Conference Rooms",
+              "href": "/campus-life/conference-rooms"
+            },
+            {
+              "id": "campus-xavier-hall",
+              "label": "Xavier Hall",
+              "href": "/campus-life/xavier-hall"
+            },
+            {
+              "id": "campus-xceed",
+              "label": "XCEED Facilities",
+              "href": "/campus-life/xceed-facilities"
+            }
+          ]
+        },
+        {
+          "id": "campus-living",
+          "label": "Living on Campus",
+          "children": [
+            {
+              "id": "campus-hostel",
+              "label": "Student Hostel",
+              "href": "/campus-life/students-hostel"
+            },
+            {
+              "id": "campus-residences",
+              "label": "Faculty & Staff Residences",
+              "href": "/campus-life/faculty-staff-residences"
+            },
+            {
+              "id": "campus-guest",
+              "label": "Guest Accommodation",
+              "href": "/campus-life/guest-accommodation"
+            },
+            {
+              "id": "campus-food",
+              "label": "Food Courts",
+              "href": "/campus-life/food-courts"
+            },
+            {
+              "id": "campus-store",
+              "label": "Daily Needs Store",
+              "href": "/campus-life/daily-needs-store"
+            },
+            {
+              "id": "campus-laundry",
+              "label": "Laundry Facilities",
+              "href": "/campus-life/laundry-facilities"
+            }
+          ]
+        },
+        {
+          "id": "campus-wellbeing",
+          "label": "Health & Recreation",
+          "children": [
+            {
+              "id": "campus-medical",
+              "label": "Medical Facilities",
+              "href": "/campus-life/medical-facilities"
+            },
+            {
+              "id": "campus-counselling",
+              "label": "Counselling Services",
+              "href": "/campus-life/counselling-services"
+            },
+            {
+              "id": "campus-sports",
+              "label": "Sports & Recreation",
+              "href": "/campus-life/sports-recreation"
+            },
+            {
+              "id": "campus-gardens",
+              "label": "Gardens & Parks",
+              "href": "/campus-life/gardens-parks"
+            }
+          ]
+        },
+        {
+          "id": "campus-getting-around",
+          "label": "Getting Around",
+          "children": [
+            {
+              "id": "campus-tour",
+              "label": "Campus Tour",
+              "href": "/campus-life/campus-tour"
+            },
+            {
+              "id": "campus-mobility",
+              "label": "Mobility Within Campus",
+              "href": "/campus-life/mobility-within-campus"
+            },
+            {
+              "id": "campus-parking",
+              "label": "Parking Areas",
+              "href": "/campus-life/parking-areas"
+            }
+          ]
+        },
+        {
+          "id": "campus-student",
+          "label": "Student Life",
+          "children": [
+            {
+              "id": "student-societies",
+              "label": "Student Societies",
+              "href": "/campus-life/societies"
+            },
+            {
+              "id": "student-events",
+              "label": "Student Events",
+              "href": "/campus-life/student-events"
+            },
+            {
+              "id": "student-complaints",
+              "label": "Internal Complaints Committee",
+              "href": "/campus-life/internal-complaints-committee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "placements",
+      "label": "Placements",
+      "href": "/placements",
+      "layout": "columns-2",
+      "children": [
+        {
+          "id": "placements-outcomes",
+          "label": "Placements",
+          "children": [
+            {
+              "id": "placements-overview",
+              "label": "Overview",
+              "href": "/placements"
+            },
+            {
+              "id": "placements-final",
+              "label": "Final Placements 2024–26",
+              "href": "/placements/final-placements"
+            },
+            {
+              "id": "placements-summer",
+              "label": "Summer Internships 2025",
+              "href": "/placements/summer-internships"
+            }
+          ]
+        },
+        {
+          "id": "placements-archive",
+          "label": "Reports",
+          "children": [
+            {
+              "id": "placements-reports",
+              "label": "Placement Reports & Audits",
+              "href": "/placements/reports"
+            },
+            {
+              "id": "placements-recruiters",
+              "label": "Our Recruiters",
+              "href": "/placements#recruiters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alumni-portal",
+      "label": "Alumni Portal",
+      "href": "https://xlrialumni.xlri.ac.in/"
+    },
+    {
+      "id": "giving",
+      "label": "Giving to XLRI",
+      "layout": "columns-2",
+      "children": [
+        {
+          "id": "giving-group",
+          "label": "Giving to XLRI",
+          "children": [
+            {
+              "id": "giving-donation",
+              "label": "Donation",
+              "href": "https://xlri.ac.in/donation"
+            },
+            {
+              "id": "giving-scholarship-fund",
+              "label": "Scholarship Fund",
+              "href": "https://xlri.ac.in/scholarships"
+            },
+            {
+              "id": "giving-endowment-fund",
+              "label": "Endowment Fund",
+              "href": "https://xlri.ac.in/giving-to-xlri/endowment-fund"
+            },
+            {
+              "id": "giving-committee",
+              "label": "Committee",
+              "href": "https://xlri.ac.in/giving-to-xlri/committee"
+            },
+            {
+              "id": "giving-future-plans",
+              "label": "Future Plans",
+              "href": "https://xlri.ac.in/giving-to-xlri/future-plans"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "utility": [
+    {
+      "id": "utility-students",
+      "label": "Students",
+      "href": "/students"
+    },
+    {
+      "id": "utility-faculty-staff",
+      "label": "Faculty & Staff",
+      "href": "/faculty"
+    },
+    {
+      "id": "utility-alumni",
+      "label": "Alumni",
+      "href": "https://xlrialumni.xlri.ac.in/"
+    },
+    {
+      "id": "utility-recruiters",
+      "label": "Recruiters",
+      "href": "/placements#recruiters"
+    },
+    {
+      "id": "utility-giving",
+      "label": "Giving",
+      "href": "https://xlri.ac.in/giving-to-xlri"
+    }
+  ],
+  "policy": [
+    {
+      "id": "policy-privacy",
+      "label": "Privacy Policy",
+      "href": "/policies/privacy"
+    },
+    {
+      "id": "policy-terms",
+      "label": "Terms & Conditions",
+      "href": "/policies/terms"
+    },
+    {
+      "id": "policy-copyright",
+      "label": "Copyright Policy",
+      "href": "/policies/copyright"
+    },
+    {
+      "id": "policy-sitemap",
+      "label": "Sitemap",
+      "href": "/sitemap"
+    },
+    {
+      "id": "policy-help",
+      "label": "Help",
+      "href": "/policies/help"
+    }
+  ]
+}

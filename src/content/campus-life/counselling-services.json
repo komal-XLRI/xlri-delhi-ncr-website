@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Counselling Services",
+    "description": "Confidential counselling for XLRI Delhi-NCR students — an in-house professional counsellor on campus, and anonymous 24/7 online support through YourDOST."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Counselling Services",
+  "headline": "Counseling Services at XLRI Delhi-NCR",
+  "intro": "At XLRI Delhi-NCR, we are committed to the holistic well-being of our students and offer comprehensive counseling support through two complementary channels: internal and external.",
+  "counsellorCard": {
+    "label": "Your counsellor",
+    "profileLink": "Profile"
+  },
+  "channelsHeading": {
+    "eyebrow": "Internal and external",
+    "title": "Two complementary channels"
+  },
+  "channels": [
+    {
+      "id": "internal",
+      "icon": "users",
+      "label": "On campus, in person",
+      "title": "Internal Counseling Services",
+      "text": "Our in-house professional counselor provides confidential, one-on-one support to students dealing with a range of concerns, including stress, anxiety, academic pressure, relationship difficulties, adjustment challenges, self-esteem issues, and personal decision-making. Guided by XLRI’s Jesuit ethos of cura personalis (care for the whole person), the internal counseling service offers a safe and supportive space where students can explore their emotions, strengthen resilience, enhance emotional intelligence, and develop healthier ways of coping and growing.",
+      "pointsTitle": "Support with",
+      "points": [
+        "Stress",
+        "Anxiety",
+        "Academic pressure",
+        "Relationship difficulties",
+        "Adjustment challenges",
+        "Self-esteem issues",
+        "Personal decision-making"
+      ]
+    },
+    {
+      "id": "external",
+      "icon": "chat",
+      "label": "Online, anytime",
+      "title": "External Counseling Support – YourDOST",
+      "text": "To ensure wider access and flexibility, XLRI has partnered with YourDOST, a nationally recognized online counseling and mental-wellness platform. Through YourDOST, students can access anonymous, 24/7 professional support, including chat-based counseling, scheduled video/phone sessions, and a range of mental health resources. This channel allows students to seek help privately and at their convenience from qualified mental health professionals outside the institute.",
+      "pointsTitle": "Through YourDOST",
+      "points": [
+        "Anonymous",
+        "Available 24/7",
+        "Chat-based counseling",
+        "Video and phone sessions",
+        "Mental health resources"
+      ],
+      "link": {
+        "label": "Visit YourDOST",
+        "href": "https://yourdost.com/"
+      }
+    }
+  ],
+  "closing": "Together, these two channels ensure that every student at XLRI can find the right kind of support—whether they prefer in-person guidance within the campus community or flexible online counseling accessible anytime, anywhere. At XLRI, seeking support is viewed as a sign of strength, and our counseling services are here to walk with students as they navigate the challenges and opportunities of their academic journey.",
+  "quote": "At XLRI, seeking support is viewed as a sign of strength.",
+  "quoteCaption": {
+    "before": "Guided by ",
+    "emphasis": "cura personalis",
+    "after": " — care for the whole person"
+  },
+  "counsellor": {
+    "facultyId": "dr-vincent-pereppadan-sj",
+    "role": "Faculty and Counselor"
+  },
+  "notice": {
+    "title": "If you need help right now",
+    "text": "If you are in distress or feel unsafe, please don’t wait — reach out straight away.",
+    "contacts": [
+      {
+        "label": "Tele-MANAS mental health helpline",
+        "value": "14416",
+        "href": "tel:14416"
+      },
+      {
+        "label": "Emergency services",
+        "value": "112",
+        "href": "tel:112"
+      }
+    ]
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Medical Facilities",
+      "description": "A qualified doctor on campus for everyday health concerns.",
+      "href": "/campus-life/medical-facilities"
+    },
+    {
+      "label": "Internal Complaints Committee",
+      "description": "Confidential support and guidance on concerns about sexual harassment.",
+      "href": "/campus-life/internal-complaints-committee"
+    },
+    {
+      "label": "Student Societies",
+      "description": "The committees and clubs that make up life at XL.",
+      "href": "/campus-life/societies"
+    }
+  ]
+}

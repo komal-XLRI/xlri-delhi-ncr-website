@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Computer Labs",
+    "description": "Computer labs at XLRI Delhi-NCR, with networked workstations and business software including SAS and SAP."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Computer Labs",
+  "intro": "Computer labs with rows of workstations give students hands-on time with the software and databases their courses use.",
+  "photos": [
+    {
+      "src": "/media/campus-life/labs/lab.jpg",
+      "alt": "Rows of computer workstations in a lab",
+      "width": 569,
+      "height": 379
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "In the labs",
+  "highlights": [
+    {
+      "icon": "briefcase",
+      "title": "Workstations",
+      "text": "Rows of networked desktop computers, with printers and scanners close by."
+    },
+    {
+      "icon": "sparkle",
+      "title": "Business software",
+      "text": "Packages such as SAS and Oracle, and web-hosted SAP for hands-on ERP through the University Alliance programme."
+    },
+    {
+      "icon": "path",
+      "title": "Always connected",
+      "text": "On the campus gigabit fibre network, with round-the-clock intranet and internet access."
+    }
+  ],
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "IT Infrastructure",
+      "description": "A gigabit fibre backbone, 1500 Mbps of bandwidth and campus-wide access.",
+      "href": "/campus-life/it-infrastructure"
+    },
+    {
+      "label": "Classrooms",
+      "description": "Tiered lecture theatres and case-discussion rooms.",
+      "href": "/campus-life/classrooms"
+    },
+    {
+      "label": "Studio",
+      "description": "A branded studio set for photos, videos and recordings.",
+      "href": "/campus-life/studio"
+    }
+  ]
+}

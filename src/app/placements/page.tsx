@@ -11,14 +11,10 @@ import {
   getSummerInternships,
 } from '@/services/placements';
 
-export const metadata: Metadata = buildMetadata(site, {
-  title: 'Placements',
-  description:
-    'Final placement and summer internship outcomes for XLRI’s two-year PGDM programmes: median salaries and stipends, recruiters, sectors, and every report and audit since 2014.',
-  path: routes.placements.index,
-  image: '/media/placements/batch-2024-26.jpg',
-  imageAlt: 'Students of the 2024–26 batch at XLRI',
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getPlacementsOverview();
+  return buildMetadata(site, { ...meta, path: routes.placements.index });
+}
 
 export default async function PlacementsRoute() {
   const [overview, final, summer, archive] = await Promise.all([

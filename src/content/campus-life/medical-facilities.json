@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Medical Facilities",
+    "description": "Medical care on the XLRI Delhi-NCR campus: a qualified doctor for basic health concerns such as fever and minor illnesses, with medication when needed."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Medical Facilities",
+  "intro": "XLRI Delhi NCR Campus is equipped with essential medical facilities to ensure the well-being of its students, faculty, and staff.",
+  "photos": [
+    {
+      "src": "/media/campus-life/medical/medical-1.jpg",
+      "alt": "The campus doctor at the desk in the medical room, beside the screened examination areas",
+      "width": 1244,
+      "height": 828
+    },
+    {
+      "src": "/media/campus-life/medical/medical-2.jpg",
+      "alt": "The medical room's screened examination area, an IV stand and medicine cabinets",
+      "width": 1290,
+      "height": 820
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Medical care",
+  "highlights": [
+    {
+      "icon": "stethoscope",
+      "title": "A doctor on campus",
+      "text": "A qualified doctor is available on campus to address basic health concerns."
+    },
+    {
+      "icon": "pill",
+      "title": "Everyday illnesses",
+      "text": "Fever and minor illnesses are treated on campus, and the doctor can provide medications if necessary."
+    },
+    {
+      "icon": "users",
+      "title": "For everyone on campus",
+      "text": "The medical facilities look after the well-being of students, faculty and staff."
+    }
+  ],
+  "notice": {
+    "title": "In an emergency",
+    "text": "The campus medical room is for basic health concerns. If you feel unwell beyond that, or need help urgently, contact the campus or emergency services.",
+    "contacts": [
+      {
+        "label": "XLRI Delhi-NCR",
+        "value": "01251-271111",
+        "href": "tel:+911251271111"
+      },
+      {
+        "label": "Emergency services",
+        "value": "112",
+        "href": "tel:112"
+      }
+    ]
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Mobility Within Campus",
+      "description": "The hostel gym, banks, salon and the free student shuttle.",
+      "href": "/campus-life/mobility-within-campus"
+    },
+    {
+      "label": "Internal Complaints Committee",
+      "description": "Confidential support and guidance on concerns about sexual harassment.",
+      "href": "/campus-life/internal-complaints-committee"
+    },
+    {
+      "label": "Counselling Services",
+      "description": "Confidential support from the campus counsellor, and 24/7 online help through YourDOST.",
+      "href": "/campus-life/counselling-services"
+    }
+  ]
+}

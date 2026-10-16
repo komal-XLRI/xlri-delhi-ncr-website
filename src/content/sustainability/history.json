@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Sustainability History",
+    "description": "How sustainability became part of XLRI — from ratifying UN-PRME in 2007 to FACES, the Sustainability Policy and a programme in CSR leadership."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "History"
+  },
+  "eyebrow": "Sustainability",
+  "title": "History",
+  "facts": [
+    {
+      "value": "2007",
+      "label": "First management institute from India to ratify UN-PRME"
+    },
+    {
+      "value": "150+",
+      "label": "Executive programmes that include corporate sustainability"
+    },
+    {
+      "value": "2011",
+      "label": "FACES, the centre for ecology and sustainability, established"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "2007-un-prme",
+      "year": "2007",
+      "title": "First Indian management institute to ratify UN-PRME",
+      "body": [
+        "XLRI became the first management institute from India to ratify UN-PRME and started offering a core course on Corporate Sustainability.",
+        "Ever since, corporate sustainability has been offered in all flagship programmes and has been included in over 150 executive training/education programmes."
+      ]
+    },
+    {
+      "id": "2007-business-and-sustainability",
+      "year": "2007",
+      "title": "Business and Sustainability",
+      "body": [
+        "The dynamics of global and national businesses are increasingly being influenced by sustainability concerns. Societies and businesses have become more aware about topics like environmental degradation, climate change, and resource scarcity in the last two decades.",
+        "The idea of ‘sustainability’ has emerged as an integrative principle that seeks to address challenges of human wellbeing while simultaneously ensuring that the capacity of natural environment to support life is not compromised."
+      ]
+    },
+    {
+      "id": "2011-faces",
+      "year": "2011",
+      "title": "Fr Arrupe Centre for Ecology & Sustainability (FACES)",
+      "body": [
+        "Fr Arrupe Centre for Ecology & Sustainability (FACES) was established as a multi-disciplinary centre which aims to promote policies, practices, and dialogue that have an impact on the holistic and sustainable development of society and enterprises."
+      ]
+    },
+    {
+      "id": "2012-social-entrepreneurship-conclave",
+      "year": "2012",
+      "title": "Annual Social Entrepreneurship Conclave",
+      "body": [
+        "The Annual Social Entrepreneurship Conclave was initiated by a students’ committee, SIGMA, under the aegis of FACES to help develop skills required by small-scale social entrepreneurs."
+      ]
+    },
+    {
+      "id": "2014-kurien-oration",
+      "year": "2014",
+      "title": "Dr Verghese Kurien Oration on Sustainable Development",
+      "body": [
+        "XLRI-FACES instituted the annual Dr Verghese Kurien Oration on Sustainable Development.",
+        "Some of the past speakers were Dr Jean Dreze, eminent development economist and social activist; Ms Ela Bhatt, Magsaysay Awardee and Padma Bhushan; and Dr Ashok Khosla, eminent environmentalist."
+      ]
+    },
+    {
+      "id": "2014-jrd-tata-chair",
+      "year": "2014",
+      "title": "JRD Tata Chair Professorship and the XLRI Ethics Research Centre",
+      "body": [
+        "The JRD Tata Chair Professorship in Business and the XLRI Ethics Research Centre were established.",
+        "Fr. Ozzie Mascarenhas, SJ was the first Chair Professor, and it is currently held by Fr. Kuruvilla, SJ."
+      ]
+    },
+    {
+      "id": "2014-gold-medal",
+      "year": "2014",
+      "title": "XLRI Gold Medal for the Best Socially Responsible Activity",
+      "body": [
+        "XLRI constituted the XLRI Gold Medal for the Best Socially Responsible Activity (sponsored by the State Bank of India) to inculcate a spirit of socially relevant volunteerism among the students."
+      ]
+    },
+    {
+      "id": "2017-cppr",
+      "year": "2017",
+      "title": "Committee for Public Policy Research",
+      "body": [
+        "The Committee for Public Policy Research (CPPR) was created to conduct research on government policies on sustainable development.",
+        "In 2018, CPPR collaborated with a national daily for a 2-month project to present a comparative analysis on the state of development in the three new states formed in 2000 and their parent states. The research spanned sectors like agriculture, education, forest, transport, and industry, with special emphasis on employment, law & order, pro-industry policies, power distribution, etc. The study was published as a series of articles in 20 editions of the newspaper.",
+        "CPPR released a paper on e-waste awareness-based research conducted during the MAXI Fair 2018. CPPR also conducted disguised research on the topic of “Penalties or Conviction: What Drives Compliance.”",
+        "TXLERC compiled the first twenty-five JRD Tata Ethics Orations in one volume: J.R.D. Tata: Orations on Business Ethics, which was released during the Ethics Oration in 2017."
+      ]
+    },
+    {
+      "id": "2019-xceed",
+      "year": "2019",
+      "title": "XCEED — an ecosystem for entrepreneurship",
+      "body": [
+        "XLRI began developing an ecosystem to promote and support entrepreneurship.",
+        "At the core of this ecosystem, an incubator, XCEED (XLRI Council for Entrepreneurship Excellence and Development), has been set up to help students, alumni, and faculty launch high-impact new ventures."
+      ]
+    },
+    {
+      "id": "2020-sustainability-policy",
+      "year": "2020",
+      "title": "XLRI Sustainability Policy",
+      "body": [
+        "XLRI created its Sustainability Policy to address decarbonization, water and waste management, biodiversity enhancement, and community engagement in rural and urban areas.",
+        "With the maxim of “Collaborate to Co-create Value”, XLRI will co-opt external stakeholders (alumni network, NGOs, Jesuit networks, local communities) and internal stakeholders (student groups, faculty, researchers, centres of excellence) to create research, learning, assimilation, and dissemination opportunities to bring about a social-environmental-economic transformation within and outside the campus."
+      ]
+    },
+    {
+      "id": "2024-csr-leadership",
+      "year": "2024",
+      "title": "Postgraduate Certificate Program in CSR Leadership",
+      "body": [
+        "XLRI, in collaboration with Tata Steel Foundation, has launched an AICTE-approved, one-year Postgraduate Certificate Program in CSR Leadership."
+      ]
+    }
+  ],
+  "onward": {
+    "text": "The people taking this work forward on campus today.",
+    "linkLabel": "Meet the Sustainability team"
+  }
+}

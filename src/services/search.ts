@@ -3,8 +3,17 @@ import { join } from 'node:path';
 
 import { PRIMARY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
+import { routes } from '@/constants/routes';
 import { classifyHref, destinationLabel } from '@/lib/url';
-import { getFullTimeFaculty } from '@/services/faculty';
+import { fill } from '@/lib/format/template';
+import { getStudentEvents, getStudentSocieties } from '@/services/campus-life';
+import { getLibrary } from '@/services/library';
+import {
+  getAdjunctFaculty,
+  getFullTimeFaculty,
+  getStaff,
+  getVisitingFaculty,
+} from '@/services/faculty';
 import type { NavNode } from '@/types/navigation';
 import type { SearchEntry } from '@/types/search';
 
@@ -130,16 +139,114 @@ export async function getSearchIndex(): Promise<readonly SearchEntry[]> {
     });
   });
 
-  const directory = await getFullTimeFaculty();
-  for (const member of directory.faculty) {
+  const listings = [
+    { directory: await getFullTimeFaculty(), base: '/faculty/full-time' },
+    { directory: await getAdjunctFaculty(), base: '/faculty/adjunct' },
+  ];
+  for (const { directory, base } of listings) {
+    for (const member of directory.faculty) {
+      entries.push({
+        id: `person:${member.id}`,
+        kind: 'person',
+        title: member.name,
+        href: `${base}/${member.id}`,
+        trail: directory.title,
+        summary: `${member.designation} · ${member.areas.join(', ')}`,
+        keywords: `${member.qualification} ${member.email} faculty professor`,
+      });
+    }
+  }
+
+  // Visiting faculty have no profile page; the result opens their card.
+  const visiting = await getVisitingFaculty();
+  for (const member of visiting.faculty) {
     entries.push({
       id: `person:${member.id}`,
       kind: 'person',
       title: member.name,
-      href: `/faculty/full-time/${member.id}`,
-      trail: directory.title,
-      summary: `${member.designation} · ${member.areas.join(', ')}`,
-      keywords: `${member.qualification} ${member.email} faculty professor`,
+      href: `/faculty/visiting#${member.id}`,
+      trail: visiting.title,
+      summary: `${member.designation} · ${member.organisation}`,
+      keywords: 'visiting faculty',
+    });
+  }
+
+  // Staff likewise: the result opens their card on the Staff page.
+  const staff = await getStaff();
+  for (const member of staff.staff) {
+    entries.push({
+      id: `staff:${member.id}`,
+      kind: 'person',
+      title: member.name,
+      href: `/faculty/staff#${member.id}`,
+      trail: staff.title,
+      summary: member.designation,
+      keywords: 'staff',
+    });
+  }
+
+  // Student committees: the result opens the committee on Student Societies.
+  const societies = await getStudentSocieties();
+  for (const committee of societies.committees) {
+    entries.push({
+      id: `society:${committee.id}`,
+      kind: 'page',
+      title: committee.name,
+      href: `${routes.campusLife.societies}#${committee.id}`,
+      trail: `Campus Life › ${societies.title}`,
+      summary: committee.fullName ?? committee.focus,
+      keywords: [
+        'committee club society student',
+        committee.focus,
+        committee.lead?.name ?? '',
+      ].join(' '),
+    });
+  }
+
+  // The library's own pages, which sit under its menu rather than the main one.
+  // Titles are the pages' own browser-tab titles, from library.json.
+  const library = await getLibrary();
+  const { pages } = library;
+  const libraryPages: readonly (readonly [string, string, string])[] = [
+    [
+      'services',
+      pages.services.meta.title,
+      'circulation borrowing reprography photocopy reference cases textbooks turnitin',
+    ],
+    ['committee', pages.committee.meta.title, 'librarian committee'],
+    ...library.collections.map(
+      (collection) =>
+        [
+          collection.id,
+          fill(pages.collection.meta.title, { label: collection.label }),
+          collection.items.map((item) => item.name).join(' '),
+        ] as const,
+    ),
+    ['gallery', pages.gallery.meta.title, 'photos'],
+    ['contact', pages.contact.meta.title, 'email phone hours'],
+  ];
+  for (const [slug, title, keywords] of libraryPages) {
+    entries.push({
+      id: `library:${slug}`,
+      kind: 'page',
+      title,
+      href: routes.campusLife.libraryPage(slug),
+      trail: `Campus Life › ${library.title}`,
+      keywords: `library ${keywords}`,
+    });
+  }
+
+  // Student events: the result opens the event's poster on Student Events.
+  const studentEvents = await getStudentEvents();
+  for (const event of studentEvents.events) {
+    entries.push({
+      id: `event:${event.id}`,
+      kind: 'page',
+      title: event.title,
+      href: `${routes.campusLife.studentEvents}#${event.id}`,
+      trail: `Campus Life › ${studentEvents.title}`,
+      summary: event.summary,
+      keywords: ['event', ...event.organisers.map((organiser) => organiser.name)].join(' '),
     });
   }
 

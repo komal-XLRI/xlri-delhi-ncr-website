@@ -72,8 +72,8 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Academics' },
-              { label: content.shortName },
+              { label: content.breadcrumb.section },
+              { label: content.breadcrumb.page },
             ]}
           />
 
@@ -177,10 +177,10 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
         <div className={`${MEASURE} py-14 md:py-20`}>
           <figure className="mx-auto max-w-[60rem] border-l-[3px] border-accent-surface pl-6 md:pl-10">
             <p className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
-              The curriculum
+              {content.curriculum.eyebrow}
             </p>
             <blockquote className="mt-4 font-serif text-xl leading-[1.6] text-ink-strong md:text-[1.625rem]">
-              {content.curriculum}
+              {content.curriculum.text}
             </blockquote>
           </figure>
         </div>
@@ -234,14 +234,14 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
                     // The institute lists this area without its courses; point to
                     // the document that has them rather than leave the card empty.
                     <p className="mt-5 border-t border-border pt-5 text-[0.9375rem] leading-snug text-ink-muted">
-                      Courses in this area are listed in the{' '}
+                      {design.emptyAreaNote}{' '}
                       <a
                         href={actions.courses.href}
                         target="_blank"
                         rel="noopener"
                         className="font-semibold text-brand underline underline-offset-[3px] hover:text-brand-950"
                       >
-                        {actions.courses.label} document
+                        {actions.courses.documentLabel}
                         <span className="sr-only"> (PDF, opens in a new tab)</span>
                       </a>
                       .
@@ -253,14 +253,14 @@ export function ProgrammePage({ content }: { content: ProgrammeContent }) {
           </ul>
 
           <p className="mt-8 text-[0.9375rem] text-ink-muted">
-            The full course outlines are in the{' '}
+            {design.outlinesNote}{' '}
             <a
               href={actions.courses.href}
               target="_blank"
               rel="noopener"
               className="font-semibold text-brand underline underline-offset-[3px] hover:text-brand-950"
             >
-              {actions.courses.label} document
+              {actions.courses.documentLabel}
               <span className="sr-only"> (PDF, opens in a new tab)</span>
             </a>
             .

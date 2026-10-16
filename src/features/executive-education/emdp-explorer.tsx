@@ -4,12 +4,10 @@ import Image from 'next/image';
 import { useRef, useState } from 'react';
 
 import { ArrowRightIcon, ExternalIcon } from '@/components/ui/icon';
-import type { EmdpProgramme, EmdpStatus } from '@/types/emdp';
+import type { EmdpCardLabels, EmdpProgramme, EmdpStatus } from '@/types/emdp';
 
-const TABS: readonly { readonly id: EmdpStatus; readonly label: string }[] = [
-  { id: 'upcoming', label: 'Upcoming programmes' },
-  { id: 'ongoing', label: 'On-going programmes' },
-];
+/** The tabs, in order; their labels come from the page content. */
+const TABS: readonly EmdpStatus[] = ['upcoming', 'ongoing'];
 
 /**
  * Upcoming and on-going programmes as WAI-ARIA tabs.
@@ -19,10 +17,18 @@ const TABS: readonly { readonly id: EmdpStatus; readonly label: string }[] = [
  * reader with scripts off. Roving tabindex and arrow keys, as on the
  * leadership committees. The sliding pill is a transform on one element.
  */
-export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramme[] }) {
+export function EmdpExplorer({
+  programmes,
+  tabLabels,
+  cardLabels,
+}: {
+  programmes: readonly EmdpProgramme[];
+  tabLabels: Readonly<Record<EmdpStatus, string>>;
+  cardLabels: EmdpCardLabels;
+}) {
   const [active, setActive] = useState<EmdpStatus>('upcoming');
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
-  const index = TABS.findIndex((tab) => tab.id === active);
+  const index = TABS.indexOf(active);
 
   const onKeyDown = (event: React.KeyboardEvent) => {
     const keys: Record<string, number> = {
@@ -36,7 +42,7 @@ export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramm
     event.preventDefault();
     const tab = TABS[next];
     if (!tab) return;
-    setActive(tab.id);
+    setActive(tab);
     tabs.current[next]?.focus();
   };
 
@@ -54,27 +60,27 @@ export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramm
           style={{ transform: `translateX(${String(index * 100)}%)` }}
         />
         {TABS.map((tab, i) => {
-          const count = programmes.filter((p) => p.status === tab.id).length;
-          const selected = tab.id === active;
+          const count = programmes.filter((p) => p.status === tab).length;
+          const selected = tab === active;
           return (
             <button
-              key={tab.id}
+              key={tab}
               ref={(el) => {
                 tabs.current[i] = el;
               }}
               type="button"
               role="tab"
-              id={`emdp-tab-${tab.id}`}
+              id={`emdp-tab-${tab}`}
               aria-selected={selected}
-              aria-controls={`emdp-panel-${tab.id}`}
+              aria-controls={`emdp-panel-${tab}`}
               tabIndex={selected ? 0 : -1}
-              onClick={() => setActive(tab.id)}
+              onClick={() => setActive(tab)}
               onKeyDown={onKeyDown}
               className={`relative z-10 flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition-colors duration-300 sm:px-6 sm:text-[0.9375rem] ${
                 selected ? 'text-white' : 'text-ink-muted hover:text-ink-strong'
               }`}
             >
-              {tab.label}
+              {tabLabels[tab]}
               <span
                 className={`rounded-full px-2 py-0.5 text-xs ${
                   selected ? 'bg-accent-surface text-brand-950' : 'bg-surface-subtle text-ink-muted'
@@ -88,15 +94,15 @@ export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramm
       </div>
 
       {TABS.map((tab) => {
-        const list = programmes.filter((p) => p.status === tab.id);
-        const upcoming = tab.id === 'upcoming';
+        const list = programmes.filter((p) => p.status === tab);
+        const upcoming = tab === 'upcoming';
         return (
           <div
-            key={tab.id}
+            key={tab}
             role="tabpanel"
-            id={`emdp-panel-${tab.id}`}
-            aria-labelledby={`emdp-tab-${tab.id}`}
-            hidden={tab.id !== active}
+            id={`emdp-panel-${tab}`}
+            aria-labelledby={`emdp-tab-${tab}`}
+            hidden={tab !== active}
             className="mt-10"
           >
             <ul
@@ -106,7 +112,7 @@ export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramm
             >
               {list.map((programme) => (
                 <li key={programme.id}>
-                  <ProgrammeCard programme={programme} featured={upcoming} />
+                  <ProgrammeCard programme={programme} featured={upcoming} labels={cardLabels} />
                 </li>
               ))}
             </ul>
@@ -117,7 +123,15 @@ export function EmdpExplorer({ programmes }: { programmes: readonly EmdpProgramm
   );
 }
 
-function ProgrammeCard({ programme, featured }: { programme: EmdpProgramme; featured: boolean }) {
+function ProgrammeCard({
+  programme,
+  featured,
+  labels,
+}: {
+  programme: EmdpProgramme;
+  featured: boolean;
+  labels: EmdpCardLabels;
+}) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-[10px] border border-border bg-surface transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-brand/40 hover:shadow-raised">
       {/* A brand-to-accent rule that draws across the top on hover. */}
@@ -146,7 +160,7 @@ function ProgrammeCard({ programme, featured }: { programme: EmdpProgramme; feat
             <span aria-hidden="true" className="relative flex size-2">
               <span className="relative size-2 rounded-full bg-accent-700" />
             </span>
-            Admissions open
+            {labels.admissionsOpen}
           </p>
         ) : null}
         {programme.batch ? (
@@ -185,7 +199,7 @@ function ProgrammeCard({ programme, featured }: { programme: EmdpProgramme; feat
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-950"
             >
-              Apply Now
+              {labels.apply}
               <ExternalIcon size={13} aria-hidden="true" />
               <span className="sr-only"> for {programme.title} (opens in a new tab)</span>
             </a>
@@ -197,7 +211,7 @@ function ProgrammeCard({ programme, featured }: { programme: EmdpProgramme; feat
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-brand px-4 py-2 text-sm font-semibold text-brand transition-colors duration-200 hover:bg-brand hover:text-white"
             >
-              Pay Now
+              {labels.pay}
               <span className="sr-only"> for {programme.title} (opens in a new tab)</span>
             </a>
           ) : null}
@@ -207,7 +221,7 @@ function ProgrammeCard({ programme, featured }: { programme: EmdpProgramme; feat
             rel="noopener noreferrer"
             className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-brand"
           >
-            Know More
+            {labels.knowMore}
             <ArrowRightIcon
               size={14}
               aria-hidden="true"

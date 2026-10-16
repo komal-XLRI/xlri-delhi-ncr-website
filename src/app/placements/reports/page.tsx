@@ -10,12 +10,10 @@ import {
   getSummerInternships,
 } from '@/services/placements';
 
-export const metadata: Metadata = buildMetadata(site, {
-  title: 'Placement Reports & Audits',
-  description:
-    'Every XLRI final placement and summer internship report and placement audit report since 2014.',
-  path: routes.placements.reports,
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getPlacementsArchive();
+  return buildMetadata(site, { ...meta, path: routes.placements.reports });
+}
 
 export default async function PlacementReportsRoute() {
   const [archive, final, summer] = await Promise.all([

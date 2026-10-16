@@ -3,6 +3,8 @@
  * its props without importing `content/` (§7).
  */
 
+import type { PageBreadcrumb, PageMeta } from './page-copy';
+
 export interface CoreTeamMember {
   readonly id: string;
   readonly name: string;
@@ -48,9 +50,26 @@ export interface ResolvedCommitteeMember extends CommitteeMember {
   readonly href?: string;
 }
 
-export interface ResolvedSustainabilityTeamPage {
+/** The page's own wording, shared by the content and the resolved page. */
+export interface SustainabilityTeamCopy {
+  readonly meta: PageMeta;
+  readonly breadcrumb: PageBreadcrumb;
+  /** The kicker above the title. */
+  readonly eyebrow: string;
   readonly title: string;
   readonly contactEmail: string;
+  /** Before the address on the contact link. */
+  readonly contactLabel: string;
+  /** Labels for the two group sizes beside the title. */
+  readonly facts: { readonly coreTeam: string; readonly committee: string };
+  readonly labels: {
+    readonly viewProfile: string;
+    /** After the role of a committee member who is also in the core team. */
+    readonly alsoInCoreTeam: string;
+  };
+}
+
+export interface ResolvedSustainabilityTeamPage extends SustainabilityTeamCopy {
   readonly coreTeam: {
     readonly heading: string;
     readonly members: readonly ResolvedCoreTeamMember[];
@@ -61,9 +80,7 @@ export interface ResolvedSustainabilityTeamPage {
   };
 }
 
-export interface SustainabilityTeamPage {
-  readonly title: string;
-  readonly contactEmail: string;
+export interface SustainabilityTeamPage extends SustainabilityTeamCopy {
   readonly coreTeam: { readonly heading: string; readonly members: readonly CoreTeamMember[] };
   readonly committee: { readonly heading: string; readonly members: readonly CommitteeMember[] };
 }

@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Sustainability Student Committees",
+    "description": "PEACE and SIGMA, the student committees taking XLRI’s sustainability and social outreach work forward, and their student representatives."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Student Committees"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Student Committees",
+  "facts": {
+    "committees": "Student committees",
+    "people": "Student representatives",
+    "since": "Serving the community since"
+  },
+  "labels": {
+    "since": "Since {year}",
+    "representatives": "Student Representatives"
+  },
+  "committees": [
+    {
+      "id": "peace",
+      "name": "PEACE",
+      "founded": "2020",
+      "body": [
+        "PEACE was created to leverage the students’ potential to foster a sustainability driven social transformation.",
+        "Working with FACES, an MOU is signed with the alumni batch of 1985-87 to have an annual national debate, “Fr. McGrath Memorial Debate on Responsible Leadership for the Greater Good”. The 4th edition was held in March 2024."
+      ],
+      "representatives": [
+        { "name": "Dr. Kujala Harini", "role": "Convenor" },
+        { "name": "Mitesh Deodhar", "role": "Treasurer" },
+        { "name": "Sahana Setia", "role": "Sr. Executive Member" },
+        { "name": "Ramanathan Kumar", "role": "Sr. Executive Member" },
+        { "name": "Aditi Tiwari", "role": "Sr. Executive Member" }
+      ]
+    },
+    {
+      "id": "sigma-okios",
+      "name": "SIGMA OKIOS",
+      "founded": "2004",
+      "body": [
+        "SIGMA undertakes periodic activities to help both the rural and urban poor.",
+        "Several activities like providing computers to rural schools, raising funds for several NGOs, and volunteering work to teach in schools are regular activities."
+      ],
+      "representatives": [
+        { "name": "Raunak Sanghavi", "role": "Joint Secretary" },
+        { "name": "Shubham Goel", "role": "Treasurer" },
+        { "name": "Shambhavi Garg", "role": "Senior Executive Member" },
+        { "name": "Pears Goyal", "role": "Senior Executive Member" },
+        { "name": "Rahul Ranjan", "role": "Senior Executive Member" },
+        { "name": "Jayaditya Malik", "role": "Senior Executive Member" },
+        { "name": "Akhil Cherian", "role": "Senior Executive Member" }
+      ]
+    }
+  ]
+}

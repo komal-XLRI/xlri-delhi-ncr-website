@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "Rural Immersion",
+    "description": "XLRI’s Rural Immersion Module — part of every full-time residential programme — its purpose, objectives, the DPSIR model of intervention and the learning outcomes it is assessed against."
+  },
+  "breadcrumb": {
+    "section": "Sustainability",
+    "page": "Rural Immersion"
+  },
+  "eyebrow": "Sustainability",
+  "title": "Rural Immersion",
+  "facts": [
+    { "value": "4", "label": "Full-time residential programmes" },
+    { "value": "2 of 4", "label": "Program Learning Outcomes it is aligned with" },
+    { "value": "5", "label": "Stages in the DPSIR model of intervention" }
+  ],
+  "programmesLabel": "Part of",
+  "programmes": ["BM", "HRM", "FPM", "Ex-PGDM"],
+  "about": {
+    "eyebrow": "About the module",
+    "heading": "Rural Immersion Module"
+  },
+  "intro": [
+    "Rural Immersion Module is a unique component of all the full-time, residential programs (BM, HRM, FPM, and Ex-PGDM) of XLRI Jamshedpur. It has been designed to provide exposure to students to life in rural or urban areas, including sensitization to, and understanding of, the several economic, social, and environmental issues faced by the people, mostly those from the disadvantaged social strata. The module is further meant to help students ideate on how appropriate interventions (e.g., modern technology, management concepts, and policy instruments) can improve the overall well-being of the disadvantaged social strata.",
+    "The Rural Immersion Module is also in consonance with XLRI’s vision to nurture responsible global leaders for the greater common good and a sustainable future, and XLRI’s mission to nurture responsive, ethical leaders sensitive to the environment and society.",
+    "The module is specifically aligned with two out of the four Program Learning Outcomes (PLOs) as part of Assurance of Learning (AoL). PLOs describe the competencies that must be cultivated through the various courses and modules a student enrolled in various full-time, residential programs of XLRI Jamshedpur undertakes on the way to meeting the goals of the program and fulfilling the requirements to attain the degree."
+  ],
+  "purpose": {
+    "heading": "The purpose of the XLRI Student Immersion Module",
+    "items": [
+      "To strengthen students’ understanding of various inequities in India through immersion and Assurance of Learning.",
+      "To help students value and appreciate what they have (e.g., family, friends, society, etc.) as individuals."
+    ]
+  },
+  "objectives": {
+    "heading": "The objectives of the immersion module",
+    "items": [
+      "To provide students with an opportunity to understand the multi-dimensional inequities that exist in society and relate them with relevant United Nations Sustainable Development Goals (SDGs) and relevant government policies and programs.",
+      "To provide students with an opportunity to deep dive into the inequities through interactions with disadvantaged communities; data collection, collation, and analysis.",
+      "To enable students to come up with innovative solution(s) to an identified problem through the DPSIR (Drivers, Pressures, State, Impact, and Response) model of intervention.",
+      "To ensure Assurance of Learning (AoL) in terms of two PLOs: decision-making (visualization of the problem, analysis of the information, narrowing of the solution) and sustainability (understanding sustainable development, stakeholder analysis)."
+    ]
+  },
+  "model": {
+    "eyebrow": "Model of intervention",
+    "heading": "The {name} model",
+    "name": "DPSIR",
+    "summary": "The model of intervention students use to work from an identified problem to an innovative solution.",
+    "stages": ["Drivers", "Pressures", "State", "Impact", "Response"]
+  },
+  "outcomesHeading": "Program Learning Outcomes",
+  "outcomes": [
+    {
+      "name": "Decision-making",
+      "parts": [
+        "Visualization of the problem",
+        "Analysis of the information",
+        "Narrowing of the solution"
+      ]
+    },
+    {
+      "name": "Sustainability",
+      "parts": ["Understanding sustainable development", "Stakeholder analysis"]
+    }
+  ]
+}

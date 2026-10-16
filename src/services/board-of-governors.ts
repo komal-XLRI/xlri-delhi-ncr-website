@@ -1,5 +1,8 @@
-import { boardOfGovernors } from '@/content/board-of-governors';
+import boardOfGovernorsJson from '@/content/board-of-governors.json';
 import type { BoardOfGovernors } from '@/types/board-of-governors';
+import { fromJson } from '@/lib/validation/json-content';
+
+const boardOfGovernors = fromJson<BoardOfGovernors>(boardOfGovernorsJson);
 
 /**
  * "Board of Governors" repository — the same seam as `services/homepage`.

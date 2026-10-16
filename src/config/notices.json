@@ -1,0 +1,33 @@
+[
+  {
+    "id": "notice-admissions-2027",
+    "label": "Admissions open for the 2027–29 postgraduate cohort",
+    "href": "/admissions",
+    "date": "2026-07-20",
+    "isNew": true
+  },
+  {
+    "id": "notice-placement-report",
+    "label": "Final Placement Report 2024–26 published",
+    "href": "/placements/reports",
+    "date": "2026-07-12"
+  },
+  {
+    "id": "notice-convocation",
+    "label": "6th Annual Convocation — registration now open",
+    "href": "/events/convocation",
+    "date": "2026-07-05"
+  },
+  {
+    "id": "notice-mandatory-disclosure",
+    "label": "AICTE Mandatory Disclosure updated",
+    "href": "/about/mandatory-disclosure",
+    "date": "2026-06-28"
+  },
+  {
+    "id": "notice-edp-healthcare",
+    "label": "Executive Development Programme in Healthcare Strategy — applications close 30 August",
+    "href": "/executive-education/healthcare-strategy-leadership",
+    "date": "2026-06-15"
+  }
+]

@@ -6,14 +6,10 @@ import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getHeritage } from '@/services/heritage';
 
-export const metadata: Metadata = buildMetadata(site, {
-  title: 'Heritage',
-  description:
-    'Founded in 1949 by Fr. Quinn Enright, S.J., XLRI is India’s oldest management school. The story of XLRI and its journey to the Delhi-NCR campus.',
-  path: routes.about.heritage,
-  image: '/media/heritage/fr-quinn-enright.jpg',
-  imageAlt: 'Fr. Quinn Enright, S.J., founder of XLRI',
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getHeritage();
+  return buildMetadata(site, { ...meta, path: routes.about.heritage });
+}
 
 export default async function HeritageRoute() {
   const content = await getHeritage();

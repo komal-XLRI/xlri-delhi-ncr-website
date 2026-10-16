@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Guest Accommodation",
+    "description": "Guest rooms on the XLRI Delhi-NCR campus for visiting faculty, speakers and parents — double and twin rooms with sitting and work areas."
+  },
+  "eyebrow": "Campus Life",
+  "title": "Guest Accommodation",
+  "intro": "Guest rooms on campus for visiting faculty, speakers, parents and other guests of the institute — comfortable, quiet and a short walk from everything.",
+  "photos": [
+    {
+      "src": "/media/campus-life/guest/sitting-area.jpg",
+      "alt": "A guest room’s sitting area with a sofa, rug and dining table",
+      "width": 1600,
+      "height": 1069
+    },
+    {
+      "src": "/media/campus-life/guest/double-room.jpg",
+      "alt": "A guest room with a double bed",
+      "width": 1069,
+      "height": 1600
+    },
+    {
+      "src": "/media/campus-life/guest/twin-room.jpg",
+      "alt": "A guest room with twin beds",
+      "width": 1069,
+      "height": 1600
+    },
+    {
+      "src": "/media/campus-life/guest/work-desk.jpg",
+      "alt": "A work desk with a chair and a wall-mounted television",
+      "width": 1069,
+      "height": 1600
+    }
+  ],
+  "highlightsEyebrow": "At a glance",
+  "highlightsTitle": "Staying on campus",
+  "highlights": [
+    {
+      "icon": "bed",
+      "title": "Double and twin rooms",
+      "text": "Rooms with a double bed or twin beds, with wardrobes and dressing tables."
+    },
+    {
+      "icon": "home",
+      "title": "Room to relax",
+      "text": "Sitting areas with a sofa and a dining table, for a longer stay."
+    },
+    {
+      "icon": "briefcase",
+      "title": "Room to work",
+      "text": "A work desk and chair, and a television, in the rooms."
+    }
+  ],
+  "gallery": {
+    "eyebrow": "In pictures",
+    "title": "The guest rooms",
+    "photos": [
+      {
+        "src": "/media/campus-life/guest/lounge.jpg",
+        "alt": "A sofa and side table in a guest room",
+        "width": 1069,
+        "height": 1600
+      },
+      {
+        "src": "/media/campus-life/guest/wardrobe.jpg",
+        "alt": "A built-in wardrobe in a guest room",
+        "width": 1069,
+        "height": 1600
+      },
+      {
+        "src": "/media/campus-life/guest/corridor.jpg",
+        "alt": "The corridor of the guest wing",
+        "width": 1069,
+        "height": 1600
+      },
+      {
+        "src": "/media/campus-life/guest/dressing-table.jpg",
+        "alt": "A dressing table with a mirror",
+        "width": 1069,
+        "height": 1600
+      }
+    ]
+  },
+  "relatedHeading": {
+    "eyebrow": "More on campus",
+    "title": "Explore more of the campus"
+  },
+  "related": [
+    {
+      "label": "Food Courts",
+      "description": "A 24×7 cafeteria, The Daily Spot, the mess and NESCAFE Break Zone.",
+      "href": "/campus-life/food-courts"
+    },
+    {
+      "label": "Campus Tour",
+      "description": "Walk the campus in 22 short videos.",
+      "href": "/campus-life/campus-tour"
+    },
+    {
+      "label": "Gardens & Parks",
+      "description": "Lawns, avenues and walking paths across the 47-acre campus.",
+      "href": "/campus-life/gardens-parks"
+    }
+  ]
+}

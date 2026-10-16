@@ -1,10 +1,16 @@
-import { automobileDesignCentre } from '@/content/centres/design-of-automobiles';
-import { genderEqualityCentre } from '@/content/centres/gender-equality';
-import { healthcareCentre } from '@/content/centres/healthcare-management';
-import { publicPolicyCentre } from '@/content/centres/public-policy';
+import designOfAutomobilesJson from '@/content/centres/design-of-automobiles.json';
+import genderEqualityJson from '@/content/centres/gender-equality.json';
+import healthcareManagementJson from '@/content/centres/healthcare-management.json';
+import publicPolicyJson from '@/content/centres/public-policy.json';
 import type { AutomobileDesignCentre } from '@/types/automobile-design';
 import type { Centre, CentreBrief } from '@/types/centre';
 import type { HealthcareCentre } from '@/types/healthcare-centre';
+import { fromJson } from '@/lib/validation/json-content';
+
+const automobileDesignCentre = fromJson<AutomobileDesignCentre>(designOfAutomobilesJson);
+const genderEqualityCentre = fromJson<Centre>(genderEqualityJson);
+const healthcareCentre = fromJson<HealthcareCentre>(healthcareManagementJson);
+const publicPolicyCentre = fromJson<CentreBrief>(publicPolicyJson);
 
 /**
  * Centres of Excellence repository — the same seam as `services/homepage`.

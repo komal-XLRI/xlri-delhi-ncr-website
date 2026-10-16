@@ -1,0 +1,1110 @@
+{
+  "meta": {
+    "title": "Library",
+    "description": "The XLRI Delhi-NCR Library — Learning Resource Centre: 6,691+ books, 2,659+ eJournals and 36 databases and eTools, open 24×7 on the ground floor."
+  },
+  "title": "Library",
+  "subtitle": "Learning Resource Centre",
+  "intro": "The aim of the Library is to cater to the information needs of our Faculty, Research Scholars, Students, and its other Members. It is the heart of the institution and acts as a center for the collection of literature predominantly related to management, labour relations, and its allied subjects. And, intends to develop a comprehensive collection of information that is useful for teaching, research and learning purpose. To keep pace with the modern developments in the arena of library, the library has been automated with Liberty from Softlink Asia. XLRI Delhi library is well-equipped with a vast collection of study and reference material.",
+  "photos": [
+    {
+      "src": "/media/campus-life/library/gallery/library-11.jpg",
+      "alt": "The reading area, with bookshelves along the far wall",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-10.jpg",
+      "alt": "Students browsing the open-access shelves",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-20.jpg",
+      "alt": "The eResource Centre, with computers along the windows",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-03.jpg",
+      "alt": "The library front desk with the XLRI logo",
+      "width": 1400,
+      "height": 934
+    }
+  ],
+  "facts": [
+    {
+      "value": "6691+",
+      "label": "Books"
+    },
+    {
+      "value": "1609+",
+      "label": "eBooks"
+    },
+    {
+      "value": "2659+",
+      "label": "eJournals"
+    },
+    {
+      "value": "18",
+      "label": "Print magazines"
+    },
+    {
+      "value": "05",
+      "label": "Newspapers"
+    },
+    {
+      "value": "36",
+      "label": "Databases & eTools"
+    }
+  ],
+  "floors": [
+    {
+      "badge": "G",
+      "level": "Ground floor",
+      "title": "Reading, front desk and eResources",
+      "text": "The ground floor is for light readings like Newspapers and Magazines, and for Front Desk Operations like Circulation, Reference Service and the Help Desk. This is also connected with a eResource Centre which has high end computers and high speed internet connectivity to access all the subscribed contents with the Reprographic Facility. Print Magazines/Journals are displayed and dedicated to all Research Collaborations."
+    },
+    {
+      "badge": "1",
+      "level": "First floor",
+      "title": "Books and the Reading Room",
+      "text": "The First Floor is housed with all the library Books and has a Reading Room."
+    },
+    {
+      "badge": "2–3",
+      "level": "Second & third floors",
+      "title": "Incubation Centre",
+      "text": "The Incubation Centre, located on the second and third floors, is designed to foster innovation, entrepreneurship, and research-driven initiatives among students, faculty members, and external startups. This dedicated space provides a collaborative environment that supports the development of early-stage ideas into scalable and sustainable ventures."
+    }
+  ],
+  "hours": {
+    "always": "The Library (Ground floor) is open 24×7 hours — convenient and user friendly access.",
+    "week": [
+      {
+        "days": "Monday – Friday",
+        "time": "7:00 AM – 10:00 PM"
+      },
+      {
+        "days": "Saturday",
+        "time": "7:00 AM – 4:30 PM"
+      },
+      {
+        "days": "Sunday",
+        "time": "8:00 AM – 5:00 PM"
+      }
+    ]
+  },
+  "arrangements": [
+    "The Library follows an Open Access System, allowing users to browse the shelves directly and select books and other resources freely. This system is one of the key features that enhances the user experience and promotes independent access to Knowledge.",
+    "The Library collection is systematically organized into Subject-wise Sections, including Fiction, Non-Fiction, and Reference Collections, to facilitate easy location of materials.",
+    "Newly acquired books are classified, catalogued, and displayed in the New Arrivals Section, located opposite the Circulation Counter, for a period of 10 days. During this time, users may browse these new titles and place reservations. After the display period, the books become available for regular Circulation.",
+    "All books are arranged on the shelves based on their Call Numbers, which are assigned according to the Dewey Decimal Classification (DDC) system. To locate a specific book, users must refer to the Online Public Access Catalogue (OPAC), accessible near the Circulation Counter. The OPAC provides essential details such as the Call Number and Accession Number, which guide users to the exact location of the book on the shelves."
+  ],
+  "newspapers": [
+    "The Economic Times",
+    "The Times of India",
+    "The Hindu",
+    "The Tribune",
+    "Hindustan Times"
+  ],
+  "magazines": [
+    {
+      "title": "Business Today",
+      "frequency": "Fortnightly",
+      "issues": 26
+    },
+    {
+      "title": "Dalal Street",
+      "frequency": "Fortnightly",
+      "issues": 26
+    },
+    {
+      "title": "Digit (India)",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "Down To Earth",
+      "frequency": "Fortnightly",
+      "issues": 26
+    },
+    {
+      "title": "Economic & Political Weekly",
+      "frequency": "Weekly",
+      "issues": 50
+    },
+    {
+      "title": "The Economist",
+      "frequency": "Weekly",
+      "issues": 51
+    },
+    {
+      "title": "Entrepreneur",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "Forbes India",
+      "frequency": "Fortnightly",
+      "issues": 27
+    },
+    {
+      "title": "Fortune (India)",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "Harvard Business Review",
+      "frequency": "Bi-monthly",
+      "issues": 6
+    },
+    {
+      "title": "Outlook",
+      "frequency": "Fortnightly",
+      "issues": 36
+    },
+    {
+      "title": "Outlook Business",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "Outlook Money",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "PC Quest",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "Reader’s Digest",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "Smart Photography",
+      "frequency": "Monthly",
+      "issues": 12
+    },
+    {
+      "title": "Time",
+      "frequency": "Fortnightly",
+      "issues": 26
+    },
+    {
+      "title": "Voice & Data",
+      "frequency": "Monthly",
+      "issues": 12
+    }
+  ],
+  "newArrivals": [
+    {
+      "title": "Bank Valuation Demystified",
+      "author": "Hamza Zargui",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-1.jpg",
+        "alt": "Cover of Bank Valuation Demystified",
+        "width": 400,
+        "height": 600
+      }
+    },
+    {
+      "title": "Integrated Bank Analysis & Valuation",
+      "author": "Sandy Chen",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-2.jpg",
+        "alt": "Cover of Integrated Bank Analysis & Valuation",
+        "width": 400,
+        "height": 600
+      }
+    },
+    {
+      "title": "Valuing Banks: A New Corporate Finance Approach",
+      "author": "Federico Beltrame, Daniele Previtali",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-3.jpg",
+        "alt": "Cover of Valuing Banks: A New Corporate Finance Approach",
+        "width": 400,
+        "height": 565
+      }
+    },
+    {
+      "title": "The Valuation of Financial Companies",
+      "author": "Mario Massari, Gianfranco Gianfrate, Laura Zanetti",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-4.jpg",
+        "alt": "Cover of The Valuation of Financial Companies",
+        "width": 400,
+        "height": 636
+      }
+    },
+    {
+      "title": "Basel III: The Three Pillars, Capital Adequacy, Liquidity and Leverage Ratios Explained",
+      "author": "Carl Olsson",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-5.jpg",
+        "alt": "Cover of Basel III: The Three Pillars, Capital Adequacy, Liquidity and Leverage Ratios Explained",
+        "width": 400,
+        "height": 600
+      }
+    },
+    {
+      "title": "Industry 4.0 and Circular Economy",
+      "author": "Antonis Mavropoulos, Anders Waage Nilsen",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-6.jpg",
+        "alt": "Cover of Industry 4.0 and Circular Economy",
+        "width": 400,
+        "height": 610
+      }
+    },
+    {
+      "title": "The Circular Economy Handbook",
+      "author": "Peter Lacy, Jessica Long, Wesley Spindler",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-7.jpg",
+        "alt": "Cover of The Circular Economy Handbook",
+        "width": 400,
+        "height": 602
+      }
+    },
+    {
+      "title": "Business Models for the Circular Economy",
+      "author": "Viktor Prokop, Jan Stejskal, Jens Horbach, Wolfgang Gerstlberger (eds.)",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-8.jpg",
+        "alt": "Cover of Business Models for the Circular Economy",
+        "width": 400,
+        "height": 603
+      }
+    },
+    {
+      "title": "Strategic Management and the Circular Economy",
+      "author": "Marcello Tonelli, Nicolò Cristoni",
+      "cover": {
+        "src": "/media/campus-life/library/new-arrivals/book-9.jpg",
+        "alt": "Cover of Strategic Management and the Circular Economy",
+        "width": 350,
+        "height": 533
+      }
+    }
+  ],
+  "services": [
+    {
+      "title": "Circulation Service",
+      "text": "Library provides issue and return of books: PGDM students can borrow 2 books at a time for 15 days. Faculties and staff are entitled to 05 books at a time for 2 months. Borrowed books can be renewed up to two times."
+    },
+    {
+      "title": "Reprographic Service",
+      "text": "The Reprographic Counter of the library makes photocopies and prints of documents available to users, adhering to copyright laws. The Library has a High-Speed Photocopier cum Printing Machine."
+    },
+    {
+      "title": "Content Page Service",
+      "text": "The Library circulates Content Pages of journals subscribed by the library amongst the faculty members of the Institute."
+    },
+    {
+      "title": "Harvard and Other Cases",
+      "text": "Harvard and other cases recommended by faculty for a programme/term are procured and distributed from the library."
+    },
+    {
+      "title": "Reference Services",
+      "points": [
+        "Assistance in locating books, e-resources, and reference materials.",
+        "Support for using library databases and catalogues.",
+        "Help with citation and referencing guidance.",
+        "Subject-specific research support.",
+        "Ready reference assistance through email, phone, or in person."
+      ]
+    },
+    {
+      "title": "Research Assistance Service",
+      "text": "The Feedback Studio (from Turnitin) is subscribed, and users can take the help of the library staff with it."
+    },
+    {
+      "title": "Textbook Distribution Service",
+      "text": "Textbooks recommended by faculty for a programme/term are procured and distributed from the library."
+    },
+    {
+      "title": "Remote Access Facility",
+      "text": "Users can access subscribed e-resources off-campus through OpenAthens authentication."
+    }
+  ],
+  "otherServices": [
+    "New Arrivals",
+    "Current Content Services",
+    "Trainings and Orientations",
+    "Compilation of Bibliographies on selected topics on demand",
+    "Other Documentation and Information Services as and when required",
+    "DTDC Service – the library assists in sending official couriers through this service"
+  ],
+  "circulation": [
+    {
+      "who": "PGDM students",
+      "books": "2 books",
+      "period": "15 days"
+    },
+    {
+      "who": "Faculty & staff",
+      "books": "5 books",
+      "period": "2 months"
+    }
+  ],
+  "committee": [
+    {
+      "kind": "faculty",
+      "id": "dr-pankaj-kumar-agarwal",
+      "role": "Convenor",
+      "email": "pankaj@xlri.ac.in"
+    },
+    {
+      "kind": "faculty",
+      "id": "fr-alwyn-rodrigues-sj",
+      "role": "Member",
+      "email": "alwynsj@xlri.ac.in"
+    },
+    {
+      "kind": "staff",
+      "id": "fr-jaganathan-dayal",
+      "role": "Member",
+      "email": "dayalsj@xlri.ac.in"
+    },
+    {
+      "kind": "faculty",
+      "id": "dr-shakshi-singhal",
+      "role": "Member",
+      "email": "sakshi@xlri.ac.in"
+    },
+    {
+      "kind": "faculty",
+      "id": "dr-vincent-pereppadan-sj",
+      "role": "Member",
+      "email": "vincent@xlri.ac.in"
+    },
+    {
+      "kind": "faculty",
+      "id": "dr-sanchayan-nath",
+      "role": "Member",
+      "email": "sanchayan@xlri.ac.in"
+    },
+    {
+      "kind": "staff",
+      "id": "dr-k-p-singh",
+      "role": "Member",
+      "email": "kpsingh@xlri.ac.in"
+    },
+    {
+      "kind": "staff",
+      "id": "anil-kumar-t",
+      "role": "Member",
+      "email": "anilkumar.t@xlri.ac.in"
+    }
+  ],
+  "personnel": [
+    {
+      "kind": "staff",
+      "id": "dr-k-p-singh",
+      "role": "Head Librarian",
+      "email": "kpsingh@xlri.ac.in"
+    },
+    {
+      "kind": "staff",
+      "id": "anil-kumar-t",
+      "role": "Assistant Librarian",
+      "email": "anilkumar.t@xlri.ac.in"
+    }
+  ],
+  "collections": [
+    {
+      "id": "edatabases",
+      "label": "eDatabases",
+      "intro": "Company, industry, market and economic data for research and coursework.",
+      "items": [
+        {
+          "name": "Bloomberg",
+          "description": "Financial markets data, news and analytics.",
+          "access": "open",
+          "href": "https://www.bloomberg.com/asia"
+        },
+        {
+          "name": "CMIE",
+          "description": "Prowess — financial performance data on Indian companies.",
+          "access": "open",
+          "href": "https://prowess.cmie.com/"
+        },
+        {
+          "name": "CMIE Prowess dx",
+          "description": "The Prowess company database, with data export and analysis.",
+          "access": "sign-in",
+          "href": "https://proxy.openathens.net/login?qurl=https%3A%2F%2Fprowessdx.cmie.com%2F&entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&_oafollow=false"
+        },
+        {
+          "name": "EBSCO",
+          "description": "Business Source and other full-text research databases.",
+          "access": "sign-in",
+          "href": "https://search.ebscohost.com/login.aspx?authtype=ip,sso&custid=ns301743&groupid=main&profile=ehost"
+        },
+        {
+          "name": "EMIS",
+          "description": "Company, industry and country information on emerging markets.",
+          "access": "sign-in",
+          "href": "https://proxy.openathens.net/login?qurl=https%3A%2F%2Fcas.emis.com%2Flogin&entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&_oafollow=false"
+        },
+        {
+          "name": "EUROMONITOR INTERNATIONAL Passport",
+          "description": "Market research on industries, companies and consumers worldwide.",
+          "access": "sign-in",
+          "href": "https://connect.openathens.net/euromonitor.com/9c8fb40c-3924-42f3-ad32-4adce1176636/login?entity=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&target=passport"
+        },
+        {
+          "name": "Statista",
+          "description": "Statistics and market data across industries and countries.",
+          "access": "sign-in",
+          "href": "https://proxy.openathens.net/login?qurl=https%3A%2F%2Fwww.statista.com%2F&entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&_oafollow=false"
+        },
+        {
+          "name": "Tracxn",
+          "description": "Data on startups, private companies and investors.",
+          "access": "open",
+          "href": "https://tracxn.com/login"
+        },
+        {
+          "name": "DELNET – Library Network & Union Catalogue",
+          "description": "A network of libraries across India and their union catalogue.",
+          "access": "open",
+          "href": "https://delnet.in/"
+        },
+        {
+          "name": "India Data Portal 2.0",
+          "description": "Open public data on India, for exploration and download.",
+          "access": "open",
+          "href": "https://indiadataportal.com/"
+        },
+        {
+          "name": "VIDWAN",
+          "description": "INFLIBNET’s database of experts and researchers in India.",
+          "access": "open",
+          "href": "https://vidwan.inflibnet.ac.in/"
+        }
+      ]
+    },
+    {
+      "id": "ejournals",
+      "label": "eJournals",
+      "intro": "Peer-reviewed journals from the major academic publishers.",
+      "items": [
+        {
+          "name": "American Economic Association",
+          "description": "The AEA’s journals, including the American Economic Review.",
+          "access": "sign-in",
+          "href": "https://pubs.aeaweb.org/action/ssostart?idp=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&redirectUri=https%3A%2F%2Fwww.aeaweb.org/journals&_oafollow=false"
+        },
+        {
+          "name": "ScienceDirect - ELSEVIER",
+          "description": "Elsevier’s journals and book chapters across the sciences and social sciences.",
+          "access": "sign-in",
+          "href": "https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&appReturnURL=https%3A%2F%2Fwww.sciencedirect.com%2F&_oafollow=false"
+        },
+        {
+          "name": "Emerald Publishing",
+          "description": "Management, business and social-science journals.",
+          "access": "sign-in",
+          "href": "https://www.emerald.com/start-session?idp=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&return=https%3A%2F%2Fwww.emerald.com%2F&_oafollow=false"
+        },
+        {
+          "name": "Informs",
+          "description": "Journals in operations research and the management sciences.",
+          "access": "sign-in",
+          "href": "https://pubsonline.informs.org/action/ssostart?idp=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&redirectUri=https%3A%2F%2Fpubsonline.informs.org&_oafollow=false"
+        },
+        {
+          "name": "JSTOR",
+          "description": "Back issues of journals, books and primary sources across disciplines.",
+          "access": "sign-in",
+          "href": "https://shibbolethsp.jstor.org/start?entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&dest=https%3A%2F%2Fwww.jstor.org%2F&site=jstor"
+        },
+        {
+          "name": "OXFORD University Press",
+          "description": "Oxford Academic journals.",
+          "access": "sign-in",
+          "href": "https://oup-sp.sams-sigma.com/Shibboleth.sso/Login?entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&target=https://oup-sp.sams-sigma.com/shib?dest=https://academic.oup.com/SHIBBOLETH?dest=https%3A%2F%2Facademic.oup.com%2F&_oafollow=false"
+        },
+        {
+          "name": "Springer",
+          "description": "SpringerLink journals and books.",
+          "access": "sign-in",
+          "href": "https://fsso.springer.com/saml/login?idp=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&targetUrl=https%3A%2F%2Flink.springer.com%2F&_oafollow=false"
+        },
+        {
+          "name": "Taylor & Francis",
+          "description": "Taylor & Francis Online journals.",
+          "access": "sign-in",
+          "href": "https://www.tandfonline.com/action/ssostart?idp=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&redirectUri=https%3A%2F%2Fwww.tandfonline.com%2Fjournals&_oafollow=false"
+        },
+        {
+          "name": "WILEY",
+          "description": "Wiley Online Library journals.",
+          "access": "sign-in",
+          "href": "https://onlinelibrary.wiley.com/action/ssostart?idp=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&redirectUri=https%3A%2F%2Fonlinelibrary.wiley.com&_oafollow=false"
+        }
+      ]
+    },
+    {
+      "id": "ebooks",
+      "label": "eBooks",
+      "intro": "Electronic books to read online.",
+      "items": [
+        {
+          "name": "EBSCO OA Collection",
+          "description": "EBSCO’s open-access eBook collection.",
+          "access": "open",
+          "href": "https://research.ebsco.com/c/umixh4/search?defaultdb=e001mww"
+        },
+        {
+          "name": "Emerald Collection",
+          "description": "The list of Emerald eBook titles available to XLRI.",
+          "access": "open",
+          "href": "https://docs.google.com/spreadsheets/d/1aOtAZz04TH5tnF_W45zriUfZ7stXYC7wILWQ-tEs0fA/edit?gid=0#gid=0"
+        },
+        {
+          "name": "Project Gutenberg",
+          "description": "Free eBooks of classic literature whose copyright has expired.",
+          "access": "open",
+          "href": "https://www.gutenberg.org/"
+        }
+      ]
+    },
+    {
+      "id": "elearning",
+      "label": "eLearning",
+      "intro": "Online courses and learning platforms.",
+      "items": [
+        {
+          "name": "Coursera",
+          "description": "Online courses and certificates from universities and companies.",
+          "access": "open",
+          "href": "https://www.coursera.org/"
+        },
+        {
+          "name": "National Digital Library of India",
+          "description": "A national repository of learning resources.",
+          "access": "open",
+          "href": "https://www.ndl.gov.in/"
+        },
+        {
+          "name": "SWAYAM",
+          "description": "The Government of India’s platform for free online courses.",
+          "access": "open",
+          "href": "https://swayam.gov.in/"
+        },
+        {
+          "name": "IBM SkillsBuild",
+          "description": "Free courses in technology and workplace skills from IBM.",
+          "access": "open",
+          "href": "https://skillsbuild.org/"
+        }
+      ]
+    },
+    {
+      "id": "enewspapers",
+      "label": "eNewspapers & eMagazines",
+      "intro": "Newspapers, magazines and business journalism online.",
+      "items": [
+        {
+          "name": "ET Prime",
+          "description": "In-depth business stories from The Economic Times.",
+          "access": "open",
+          "href": "https://economictimes.indiatimes.com/login.cms"
+        },
+        {
+          "name": "Pressreader",
+          "description": "Thousands of newspapers and magazines from around the world.",
+          "access": "sign-in",
+          "href": "https://www.pressreader.com/externalauth/RequestOpenAthensAuthorization/?entityId=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&returnUrl=https%3A%2F%2Fwww.pressreader.com%2F"
+        },
+        {
+          "name": "The KEN for staff",
+          "description": "Business and technology reporting — the staff subscription.",
+          "access": "sign-in",
+          "href": "https://proxy.openathens.net/login?qurl=https%3A%2F%2Fthe-ken.com%2F%3Fsubscription%3Dcorporate%26company%3Dxlri.ac.in%26domain_group%3DGR-499228&entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&_oafollow=false"
+        },
+        {
+          "name": "The KEN for students",
+          "description": "Business and technology reporting — the student subscription.",
+          "access": "sign-in",
+          "href": "https://proxy.openathens.net/login?qurl=https%3A%2F%2Fthe-ken.com%2Fall-stories%2F%3Fsubscription%3Dcorporate%26company%3Dastra.xlri.ac.in%26domain_group%3DGR-429625&entityID=https%3A%2F%2Fidp.xlridelhi.ac.in%2Fentity&_oafollow=false"
+        },
+        {
+          "name": "Dot",
+          "description": "News and stories, on the Dot app.",
+          "access": "open",
+          "href": "https://www.dot.news/get"
+        }
+      ]
+    },
+    {
+      "id": "etools",
+      "label": "eTools",
+      "intro": "Software for writing, analysis, presentation and research integrity.",
+      "items": [
+        {
+          "name": "Grammarly",
+          "description": "Writing assistance for grammar, clarity and tone.",
+          "access": "open",
+          "href": "https://www.grammarly.com/"
+        },
+        {
+          "name": "Harvard Business Publishing Education",
+          "description": "Cases, simulations and course materials.",
+          "access": "open",
+          "href": "https://hbsp.harvard.edu/home/"
+        },
+        {
+          "name": "STATA",
+          "description": "Statistical software for data analysis.",
+          "access": "open",
+          "href": "https://download.stata.com/download/"
+        },
+        {
+          "name": "Turnitin",
+          "description": "Similarity checking for research and assignments.",
+          "access": "open",
+          "href": "https://in.turnitin.com/"
+        },
+        {
+          "name": "Researcher Academy - Elsevier",
+          "description": "Free training modules on research and publishing.",
+          "access": "open",
+          "href": "https://researcheracademy.elsevier.com/"
+        },
+        {
+          "name": "Efficient Elements",
+          "description": "PowerPoint tools for consulting-style slides.",
+          "access": "open",
+          "href": "https://www.efficient-elements.com/education/"
+        },
+        {
+          "name": "Think-Cell",
+          "description": "Charts and slide layouts in PowerPoint.",
+          "access": "open",
+          "href": "https://www.think-cell.com/"
+        },
+        {
+          "name": "IBM SPSS",
+          "description": "Statistical analysis software, on campus.",
+          "access": "on-campus"
+        },
+        {
+          "name": "IBM SPSS Amos",
+          "description": "Structural equation modelling, on campus.",
+          "access": "on-campus"
+        },
+        {
+          "name": "NVIVO",
+          "description": "Qualitative data analysis, on campus.",
+          "access": "on-campus"
+        }
+      ]
+    }
+  ],
+  "catalogue": {
+    "label": "Online Public Access Catalogue (OPAC)",
+    "href": "http://10.1.39.16:8380/liberty/libraryHome.do",
+    "note": "On the campus network"
+  },
+  "remote": {
+    "label": "XL-LibRemote",
+    "href": "https://xl-libremote.xlridelhi.ac.in/login",
+    "note": "Access e-resources from off campus"
+  },
+  "gallery": [
+    {
+      "src": "/media/campus-life/library/gallery/library-01.jpg",
+      "alt": "The glass entrance to the library and the incubation centre",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-02.jpg",
+      "alt": "The library entrance seen through its glass doors",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-03.jpg",
+      "alt": "The library front desk with the XLRI logo",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-04.jpg",
+      "alt": "Lighting the lamp at the library inauguration",
+      "width": 1051,
+      "height": 700
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-05.jpg",
+      "alt": "Guests gathered around the ceremonial lamp at the inauguration",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-06.jpg",
+      "alt": "Guests at the library inauguration",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-07.jpg",
+      "alt": "Guests looking over a display of new books",
+      "width": 876,
+      "height": 584
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-08.jpg",
+      "alt": "A student browsing tall bookshelves",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-09.jpg",
+      "alt": "A student picking a book from the shelves",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-10.jpg",
+      "alt": "Students browsing the open-access shelves",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-11.jpg",
+      "alt": "The reading area, with bookshelves along the far wall",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-12.jpg",
+      "alt": "The reprographic corner with a high-speed photocopier",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-13.jpg",
+      "alt": "Tables of books laid out for a book exhibition",
+      "width": 1400,
+      "height": 1039
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-14.jpg",
+      "alt": "Students browsing books at the book exhibition",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-15.jpg",
+      "alt": "Students looking through books at the exhibition",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-16.jpg",
+      "alt": "Students and staff at the book exhibition",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-17.jpg",
+      "alt": "Visitors at the book exhibition entrance",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-18.jpg",
+      "alt": "The reading room, with workstations and shelves",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-19.jpg",
+      "alt": "Study desks between rows of bookshelves",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-20.jpg",
+      "alt": "The eResource Centre, with computers along the windows",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-21.jpg",
+      "alt": "A student working at a computer in the eResource Centre",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-22.jpg",
+      "alt": "A long aisle between full bookshelves",
+      "width": 1400,
+      "height": 2492
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-23.jpg",
+      "alt": "A training session for students in a classroom",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-24.jpg",
+      "alt": "A prize being presented at a library event",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-25.jpg",
+      "alt": "Faculty at the registration desk of a library event",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-26.jpg",
+      "alt": "A busy book fair in the library hall",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-27.jpg",
+      "alt": "The help desk at a library event",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-28.jpg",
+      "alt": "Two visitors reading at the book fair",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-29.jpg",
+      "alt": "Faculty browsing a book stall",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-30.jpg",
+      "alt": "A visitor at a publisher’s stall",
+      "width": 840,
+      "height": 560
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-31.jpg",
+      "alt": "Students reading at the book fair",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-32.jpg",
+      "alt": "A visitor holding up a book at the fair",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-33.jpg",
+      "alt": "Book stalls at the fair, including Feelbooks",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-34.jpg",
+      "alt": "Students smiling with the books they found",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-35.jpg",
+      "alt": "A visitor browsing a table of books",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-36.jpg",
+      "alt": "Faculty browsing books at the fair",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-37.jpg",
+      "alt": "Visitors crowding the stalls at the book fair",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-38.jpg",
+      "alt": "A speaker at the lectern",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-39.jpg",
+      "alt": "A speaker addressing the audience",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/media/campus-life/library/gallery/library-40.jpg",
+      "alt": "The library hall during the book fair",
+      "width": 1400,
+      "height": 934
+    }
+  ],
+  "contact": {
+    "email": "lrc@xlri.ac.in",
+    "extensions": ["1282", "1283"]
+  },
+  "nav": {
+    "searchCatalogue": "Search catalogue",
+    "menuButton": "Library menu",
+    "menuCounter": "Menu",
+    "linkCount": {
+      "one": "link in this group",
+      "other": "links in this group"
+    },
+    "groups": {
+      "about": {
+        "label": "About the library",
+        "note": "Services, borrowing, and the people who run the library.",
+        "links": {
+          "services": "Library Services",
+          "committee": "Committee & Personnel"
+        }
+      },
+      "eresources": {
+        "label": "eResources",
+        "note": "Databases, journals, books, courses, news and research tools."
+      },
+      "access": {
+        "label": "Access",
+        "note": "The catalogue on campus, and e-resources from anywhere.",
+        "links": {
+          "catalogue": "eCatalogue (OPAC)",
+          "remote": "XL-LibRemote"
+        }
+      },
+      "more": {
+        "label": "More",
+        "note": "Photographs, and how to reach the library.",
+        "links": {
+          "gallery": "Gallery",
+          "contact": "Contact"
+        }
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "catalogueButton": "Search the catalogue",
+      "remoteButton": "Remote access",
+      "accessNote": "The catalogue opens on the campus network; {remote} works from anywhere."
+    },
+    "glance": {
+      "title": "Collection at a glance"
+    },
+    "floors": {
+      "eyebrow": "Inside",
+      "title": "Three floors, three purposes"
+    },
+    "hours": {
+      "badge": "24×7",
+      "title": "Library opening hours"
+    },
+    "arrangements": {
+      "eyebrow": "Arrangements",
+      "title": "Finding a book"
+    },
+    "print": {
+      "eyebrow": "In print",
+      "title": "Newspapers & magazines",
+      "newspapers": "Daily newspapers",
+      "magazines": "Magazines",
+      "perYear": "{issues}/yr"
+    },
+    "newArrivals": {
+      "eyebrow": "Just in",
+      "title": "New arrival books",
+      "countLabel": "new titles",
+      "note": "On display in the New Arrivals Section, opposite the Circulation Counter, for 10 days — browse them and place a reservation before they go into regular circulation.",
+      "badge": "New"
+    },
+    "gallery": {
+      "eyebrow": "Gallery",
+      "title": "The library in pictures",
+      "allLink": "All {count} photos"
+    }
+  },
+  "pages": {
+    "services": {
+      "meta": {
+        "title": "Library Services · Library",
+        "description": "Library services at XLRI Delhi-NCR: circulation, reprography, reference and research assistance, textbooks, cases and remote access."
+      },
+      "title": "Library Services",
+      "intro": "Borrowing, copying, reference help, cases and textbooks — what the library does for its users.",
+      "borrowing": {
+        "title": "Borrowing books",
+        "perLoan": "at a time, for {period}",
+        "note": "Borrowed books can be renewed up to two times."
+      },
+      "servicesTitle": "Services",
+      "otherTitle": "Other services"
+    },
+    "committee": {
+      "meta": {
+        "title": "Committee & Personnel · Library",
+        "description": "The XLRI Delhi-NCR Library Committee and library personnel."
+      },
+      "title": "Committee & Personnel",
+      "intro": "The Library Committee, and the librarians who run the Learning Resource Centre.",
+      "committeeTitle": "Library Committee",
+      "personnelTitle": "Library Personnel"
+    },
+    "gallery": {
+      "meta": {
+        "title": "Gallery · Library",
+        "description": "Photographs of the XLRI Delhi-NCR Library — its spaces, its inauguration and its book fairs."
+      },
+      "title": "Gallery",
+      "intro": "The library’s spaces, its inauguration and its book fairs. Choose a photo to see it full size."
+    },
+    "contact": {
+      "meta": {
+        "title": "Contact · Library",
+        "description": "How to reach the XLRI Delhi-NCR Library."
+      },
+      "title": "Contact",
+      "intro": "Write to the library, call from a campus phone, or come in — the ground floor is open 24×7.",
+      "email": "Email",
+      "phone": "Phone extensions",
+      "phoneNote": "From a campus phone",
+      "hours": "Opening hours",
+      "remoteLink": "Off campus? Sign in to {remote}"
+    },
+    "collection": {
+      "meta": {
+        "title": "{label} · Library",
+        "description": "{label} at the XLRI Delhi-NCR Library: {items}."
+      },
+      "countLabel": "resources",
+      "signInNote": "opens with your XLRI account (OpenAthens), on or off campus",
+      "access": {
+        "open": "Open access",
+        "sign-in": "XLRI sign-in",
+        "on-campus": "On campus"
+      },
+      "installed": "Installed on campus computers"
+    }
+  }
+}

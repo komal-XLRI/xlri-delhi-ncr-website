@@ -3,6 +3,8 @@
  * props without importing `content/` (§7).
  */
 
+import type { PageBreadcrumb, PageMeta } from './page-copy';
+
 export type PlacementSeason = 'final' | 'summer';
 
 export interface PlacementStat {
@@ -15,6 +17,9 @@ export interface PlacementStat {
 }
 
 export interface PlacementReport {
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
   readonly season: PlacementSeason;
   readonly eyebrow: string;
   readonly title: string;
@@ -56,6 +61,21 @@ export interface PlacementReport {
     readonly label: string;
     readonly href: string;
     readonly meta: string;
+    /** The tile's short mark. */
+    readonly badge: string;
+    /** The small line above the action. */
+    readonly kicker: string;
+    readonly action: string;
+  };
+  /** The closing band: this season's PDFs and the links under them. */
+  readonly documentsSection: {
+    readonly heading: string;
+    /** The action on each PDF tile. */
+    readonly viewPdfLabel: string;
+    /** Link to the other season's report. */
+    readonly otherSeasonLabel: string;
+    /** Link to `more`. */
+    readonly moreLabel: string;
   };
   /** The same season's page on the Jamshedpur site. */
   readonly more: string;
@@ -73,18 +93,41 @@ export interface PlacementDocument {
 }
 
 export interface PlacementsArchive {
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
+  readonly eyebrow: string;
+  readonly title: string;
+  /** `{count}` becomes the number of documents. */
+  readonly intro: string;
+  readonly seasonHeadings: Readonly<Record<PlacementSeason, string>>;
+  /** Link to each season's page on the Jamshedpur site. */
+  readonly moreLabel: string;
+  /** The action on each PDF tile. */
+  readonly viewPdfLabel: string;
   readonly final: readonly PlacementDocument[];
   readonly summer: readonly PlacementDocument[];
 }
 
 export interface PlacementsOverview {
+  readonly meta: PageMeta;
+  readonly eyebrow: string;
   readonly title: string;
   readonly intro: string;
-  readonly recruitersIntro: string;
   readonly image: {
     readonly src: string;
     readonly width: number;
     readonly height: number;
     readonly alt: string;
   };
+  readonly reportsHeading: string;
+  /** The action on each season's card. */
+  readonly readReportLabel: string;
+  readonly recruitersHeading: string;
+  readonly recruitersIntro: string;
+  readonly documentsHeading: string;
+  /** Link to the archive; `{count}` becomes the number of documents. */
+  readonly allDocumentsLabel: string;
+  /** The action on each PDF tile. */
+  readonly viewPdfLabel: string;
 }

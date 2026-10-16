@@ -6,14 +6,10 @@ import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { getVisionMission } from '@/services/vision-mission';
 
-export const metadata: Metadata = buildMetadata(site, {
-  title: 'Vision & Mission',
-  description:
-    'The vision, mission, values and Program Education Objectives of XLRI Delhi-NCR — nurturing responsible global leaders for the greater common good and a sustainable future.',
-  path: routes.about.visionMission,
-  image: '/media/vision-mission/campus-lawn.jpg',
-  imageAlt: 'The XLRI Delhi-NCR campus',
-});
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getVisionMission();
+  return buildMetadata(site, { ...meta, path: routes.about.visionMission });
+}
 
 export default async function VisionMissionRoute() {
   const content = await getVisionMission();

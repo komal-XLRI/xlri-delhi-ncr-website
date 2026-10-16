@@ -5,6 +5,8 @@
  * feature can describe its props without importing `content/` (§7).
  */
 
+import type { PageBreadcrumb, PageMeta } from './page-copy';
+
 export interface IevImage {
   readonly src: string;
   readonly width: number;
@@ -66,13 +68,21 @@ export interface IevVideo {
 }
 
 export interface PgdmIevPage {
+  /** The page's `<title>`, description and share image. */
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
   readonly school: string;
+  /** Shown after the school in the hero eyebrow. */
+  readonly programmeCode: string;
   readonly shortName: string;
   readonly title: string;
   readonly subtitle: string;
   readonly heroImage: IevImage;
   readonly apply: { readonly label: string; readonly href: string };
   readonly brochure: { readonly label: string; readonly href: string; readonly meta: string };
+  /** The in-page index, in page order. Each id is a section's anchor. */
+  readonly onThisPage: readonly { readonly id: string; readonly label: string }[];
   readonly intro: string;
   readonly facts: readonly {
     readonly id: string;
@@ -93,20 +103,26 @@ export interface PgdmIevPage {
   readonly eligibility: {
     readonly heading: string;
     readonly paragraphs: readonly string[];
+    readonly testsHeading: string;
     readonly tests: readonly string[];
   };
   readonly selection: {
     readonly heading: string;
+    /** `{number}` becomes the round's number. */
+    readonly roundLabel: string;
     readonly rounds: readonly {
       readonly id: string;
       readonly title: string;
       readonly detail?: string;
     }[];
+    readonly deadlineLabel: string;
     readonly deadline: string;
     readonly note: string;
   };
   readonly dates: {
     readonly heading: string;
+    /** Shown under a date marked `tentative`. */
+    readonly tentativeLabel: string;
     readonly items: readonly {
       readonly id: string;
       readonly label: string;
@@ -118,6 +134,8 @@ export interface PgdmIevPage {
     readonly heading: string;
     readonly people: readonly IevPerson[];
     readonly studentsHeading: string;
+    /** Text of each student representative's profile link. */
+    readonly studentLinkLabel: string;
     readonly students: readonly IevStudentRep[];
   };
   readonly xceed: {
@@ -158,7 +176,12 @@ export interface PgdmIevPage {
       readonly image: IevImage;
     }[];
   };
-  readonly startups: { readonly heading: string; readonly items: readonly IevStartup[] };
+  readonly startups: {
+    readonly heading: string;
+    /** `{count}` becomes the number of startups. */
+    readonly countLabel: string;
+    readonly items: readonly IevStartup[];
+  };
   readonly alumni: {
     readonly heading: string;
     readonly lead: string;

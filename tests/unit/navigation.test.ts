@@ -50,7 +50,9 @@ describe('tree integrity', () => {
   it('keeps every panel to a workable number of columns', () => {
     for (const item of PRIMARY_NAV) {
       if (!item.children) continue;
-      expect(item.children.length, `${item.id} panel`).toBeLessThanOrEqual(4);
+      // Five since Campus Life took in the 21 Resources pages (2026-10-15):
+      // four categories and Student Life, each a short column (`columns-5`).
+      expect(item.children.length, `${item.id} panel`).toBeLessThanOrEqual(5);
     }
   });
 });
@@ -84,7 +86,7 @@ describe('agreed information architecture', () => {
   it('surfaces the two orphaned legacy sections found in the audit (§16 F4)', () => {
     const ids = walkNavTree(PRIMARY_NAV).map((n) => n.id);
     expect(ids).toContain('sustainability-group'); // 15 orphaned legacy pages
-    expect(ids).toContain('campus-library'); // ~10 scattered legacy pages
+    expect(ids).toContain('campus-library'); // the Library, now under Campus Life › Academic Spaces
   });
 });
 

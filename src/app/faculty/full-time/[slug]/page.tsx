@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { FacultyProfilePage } from '@/features/faculty/faculty-profile-page';
+import { fill } from '@/lib/format/template';
 import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
 import { buildMetadata } from '@/lib/seo/metadata';
@@ -26,7 +27,11 @@ export async function generateMetadata({
   const { member } = profile;
   return buildMetadata(site, {
     title: member.name,
-    description: `${member.name}, ${member.designation}, XLRI Delhi-NCR — ${member.areas.join(', ')}. Qualifications, experience, research and publications.`,
+    description: fill(profile.copy.metaDescription, {
+      name: member.name,
+      designation: member.designation,
+      areas: member.areas.join(', '),
+    }),
     path: routes.faculty.fullTimeProfile(slug),
   });
 }
@@ -42,7 +47,10 @@ export default async function FullTimeFacultyProfileRoute({
 
   return (
     <main id="main">
-      <FacultyProfilePage profile={profile} />
+      <FacultyProfilePage
+        profile={profile}
+        listing={{ label: profile.breadcrumb.page, href: routes.faculty.fullTime }}
+      />
     </main>
   );
 }

@@ -4,16 +4,11 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRightIcon, BriefcaseIcon, LandmarkIcon } from '@/components/ui/icon';
 import { routes } from '@/constants/routes';
-import type { IcpPage as IcpContent, IcpSector } from '@/types/icp';
+import type { IcpPage as IcpContent } from '@/types/icp';
 
 const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
 const H2 =
   'font-serif text-[clamp(1.75rem,3.2vw,2.5rem)] leading-tight tracking-[-0.02em] text-ink-strong';
-
-const SECTOR_LABEL: Record<IcpSector, string> = {
-  industry: 'Industry',
-  government: 'Government',
-};
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -45,15 +40,15 @@ function Rule({ className = '' }: { className?: string }) {
  * plays on scroll, and none of it under `prefers-reduced-motion`.
  */
 export function IcpPage({ content }: { content: IcpContent }) {
-  const { clients, programmes, related, contact } = content;
+  const { clients, programmes, related, contact, factLabels, sectorLabels } = content;
   const clientById = new Map(clients.map((client) => [client.id, client]));
   const countFor = (id: string) => programmes.items.filter((item) => item.client === id).length;
   const sectors = new Set(clients.map((client) => client.sector)).size;
 
   const facts = [
-    { id: 'programmes', value: programmes.items.length, label: 'Past programmes' },
-    { id: 'clients', value: clients.length, label: 'Organisations' },
-    { id: 'sectors', value: sectors, label: 'Sectors: industry and government' },
+    { id: 'programmes', value: programmes.items.length, label: factLabels.programmes },
+    { id: 'clients', value: clients.length, label: factLabels.clients },
+    { id: 'sectors', value: sectors, label: factLabels.sectors },
   ];
 
   return (
@@ -64,8 +59,8 @@ export function IcpPage({ content }: { content: IcpContent }) {
           <Breadcrumbs
             items={[
               { label: 'Home', href: routes.home },
-              { label: 'Executive Education' },
-              { label: content.abbreviation },
+              { label: content.breadcrumb.section },
+              { label: content.breadcrumb.page },
             ]}
           />
 
@@ -135,7 +130,7 @@ export function IcpPage({ content }: { content: IcpContent }) {
       <section aria-labelledby="clients-heading" className="bg-surface-subtle">
         <div className={`${MEASURE} py-14 md:py-20`}>
           <h2 id="clients-heading" className={H2}>
-            Organisations we have worked with
+            {content.clientsHeading}
           </h2>
           <Rule className="mt-4" />
 
@@ -155,10 +150,12 @@ export function IcpPage({ content }: { content: IcpContent }) {
                     {client.name}
                   </h3>
                   <p className="mt-auto flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 pt-5 text-sm text-ink-muted">
-                    <span>{SECTOR_LABEL[client.sector]}</span>
+                    <span>{sectorLabels[client.sector]}</span>
                     <span className="whitespace-nowrap">
                       <span className="font-serif text-lg text-brand">{count}</span>{' '}
-                      {count === 1 ? 'programme' : 'programmes'}
+                      {count === 1
+                        ? content.programmeCountLabels.one
+                        : content.programmeCountLabels.other}
                     </span>
                   </p>
                 </li>
@@ -201,7 +198,7 @@ export function IcpPage({ content }: { content: IcpContent }) {
                   <ul className="col-start-2 flex flex-wrap gap-2 md:col-start-3 md:justify-end">
                     {client ? (
                       <li className="rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-700">
-                        {SECTOR_LABEL[client.sector]}
+                        {sectorLabels[client.sector]}
                       </li>
                     ) : null}
                     {item.details.map((detail) => (
@@ -232,7 +229,9 @@ export function IcpPage({ content }: { content: IcpContent }) {
               <p className="mt-6 leading-[1.75] text-ink">{contact.text}</p>
               <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-4 text-[0.9375rem]">
                 <div>
-                  <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Phone</dt>
+                  <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">
+                    {contact.phoneLabel}
+                  </dt>
                   <dd>
                     <a
                       href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
@@ -243,7 +242,9 @@ export function IcpPage({ content }: { content: IcpContent }) {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">Email</dt>
+                  <dt className="text-xs tracking-[0.14em] text-ink-muted uppercase">
+                    {contact.emailLabel}
+                  </dt>
                   <dd>
                     <a
                       href={`mailto:${contact.email}`}
@@ -258,7 +259,7 @@ export function IcpPage({ content }: { content: IcpContent }) {
 
             <div>
               <h3 className="text-sm font-semibold tracking-[0.18em] text-accent-700 uppercase">
-                More from XLEAD
+                {content.relatedHeading}
               </h3>
               <ul className="mt-5 space-y-4">
                 {related.map((link) => (

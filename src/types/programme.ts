@@ -4,6 +4,8 @@
  * without importing `content/` (§7).
  */
 
+import type { PageBreadcrumb, PageMeta } from './page-copy';
+
 export interface ProgrammeArea {
   readonly id: string;
   readonly name: string;
@@ -11,6 +13,9 @@ export interface ProgrammeArea {
 }
 
 export interface ProgrammePage {
+  readonly meta: PageMeta;
+  /** The trail after “Home”: the section, then this page. */
+  readonly breadcrumb: PageBreadcrumb;
   readonly school: string;
   readonly shortName: string;
   readonly title: string;
@@ -27,11 +32,24 @@ export interface ProgrammePage {
     readonly label: string;
   }[];
   readonly actions: {
-    readonly courses: { readonly label: string; readonly href: string; readonly meta: string };
+    readonly courses: {
+      readonly label: string;
+      readonly href: string;
+      readonly meta: string;
+      /** Link text where the notes point to the document. */
+      readonly documentLabel: string;
+    };
     readonly moreInfo: { readonly label: string; readonly href: string };
   };
-  readonly curriculum: string;
-  readonly design: { readonly heading: string; readonly areas: readonly ProgrammeArea[] };
+  readonly curriculum: { readonly eyebrow: string; readonly text: string };
+  readonly design: {
+    readonly heading: string;
+    readonly areas: readonly ProgrammeArea[];
+    /** Shown on an area with no courses listed, before the document link. */
+    readonly emptyAreaNote: string;
+    /** Under the grid, before the document link. */
+    readonly outlinesNote: string;
+  };
   readonly related: {
     readonly heading: string;
     readonly items: readonly {

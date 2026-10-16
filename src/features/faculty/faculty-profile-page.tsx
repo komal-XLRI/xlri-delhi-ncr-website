@@ -20,15 +20,23 @@ const MEASURE = 'mx-auto w-full max-w-[80rem] px-6 md:px-8 lg:px-12';
  *    profile gives them, lists marked with the institute's lime plus.
  *
  * Everything comes from `content/faculty/full-time.json` (the card data) and
- * `content/faculty/full-time-biographies.json` (the long form). Server
- * Component; no client JavaScript.
+ * `content/faculty/full-time-biographies.json` (the long form); the fixed
+ * wording — labels, the empty-biography note — from the listing's `profile`
+ * block. Server Component; no client JavaScript.
  */
-export function FacultyProfilePage({ profile }: { profile: FacultyProfile }) {
-  const { member, biography } = profile;
+export function FacultyProfilePage({
+  profile,
+  listing,
+}: {
+  profile: FacultyProfile;
+  /** The listing the person belongs to, for the breadcrumb: "Full Time Faculty", "Adjunct Faculty". */
+  listing: { label: string; href: string };
+}) {
+  const { member, biography, copy } = profile;
   const links = [
-    { label: 'LinkedIn', href: biography.links.linkedin },
-    { label: 'Google Scholar', href: biography.links.scholar },
-    { label: 'ORCID', href: biography.links.orcid },
+    { label: copy.links.linkedin, href: biography.links.linkedin },
+    { label: copy.links.scholar, href: biography.links.scholar },
+    { label: copy.links.orcid, href: biography.links.orcid },
   ].filter((l): l is { label: string; href: string } => Boolean(l.href));
 
   // The left column fits a screen 880px tall or more with the four standard rows and a
@@ -37,9 +45,9 @@ export function FacultyProfilePage({ profile }: { profile: FacultyProfile }) {
   const sticks = (biography.facts?.length ?? 0) === 0 && biography.qualification.length <= 140;
 
   const facts = [
-    { label: 'Designation', value: member.designation },
-    { label: 'Qualification', value: biography.qualification },
-    { label: 'Functional Area', value: member.areas.join(', ') },
+    { label: copy.briefProfile.designation, value: member.designation },
+    { label: copy.briefProfile.qualification, value: biography.qualification },
+    { label: copy.briefProfile.functionalArea, value: member.areas.join(', ') },
     ...(biography.facts ?? []),
   ];
 
@@ -54,8 +62,8 @@ export function FacultyProfilePage({ profile }: { profile: FacultyProfile }) {
         <Breadcrumbs
           items={[
             { label: 'Home', href: routes.home },
-            { label: 'Faculty & Research' },
-            { label: 'Full Time Faculty', href: routes.faculty.fullTime },
+            { label: profile.breadcrumb.section },
+            listing,
             { label: member.name },
           ]}
         />
@@ -97,7 +105,7 @@ export function FacultyProfilePage({ profile }: { profile: FacultyProfile }) {
               >
                 {member.name}
               </h1>
-              <p className="mt-1.5 text-sm text-ink-muted">XLRI Delhi-NCR</p>
+              <p className="mt-1.5 text-sm text-ink-muted">{copy.campus}</p>
 
               {links.length > 0 ? (
                 <ul className="mt-5 flex flex-col items-start gap-3">
@@ -125,7 +133,9 @@ export function FacultyProfilePage({ profile }: { profile: FacultyProfile }) {
               ) : null}
 
               <div className="mt-6 border-t border-border pt-6">
-                <h2 className="font-serif text-2xl leading-tight text-ink-strong">Brief Profile</h2>
+                <h2 className="font-serif text-2xl leading-tight text-ink-strong">
+                  {copy.briefProfile.heading}
+                </h2>
                 <span aria-hidden="true" className="mt-3 block h-[3px] w-10 bg-accent-surface" />
                 <dl className="mt-5 space-y-3.5 text-sm">
                   {facts.map((fact) => (
@@ -137,7 +147,7 @@ export function FacultyProfilePage({ profile }: { profile: FacultyProfile }) {
                     </div>
                   ))}
                   <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-3">
-                    <dt className="text-ink-muted">Email</dt>
+                    <dt className="text-ink-muted">{copy.briefProfile.email}</dt>
                     <dd className="font-semibold">
                       <a
                         href={`mailto:${member.email}`}
@@ -174,7 +184,7 @@ export function FacultyProfilePage({ profile }: { profile: FacultyProfile }) {
                 ))}
               </div>
             ) : (
-              <p className="text-base text-ink-muted">A detailed biography will be added soon.</p>
+              <p className="text-base text-ink-muted">{copy.noBiography}</p>
             )}
           </div>
         </div>

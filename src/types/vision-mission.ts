@@ -1,3 +1,5 @@
+import type { PageMeta } from './page-copy';
+
 /**
  * "Vision & Mission" content shape. In `types/` so the feature can describe its
  * props without importing `content/` (§7).
@@ -30,7 +32,8 @@ export interface EducationObjective {
 }
 
 export interface VisionMission {
-  /** The page's name — breadcrumb and `<title>`. */
+  readonly meta: PageMeta;
+  /** The page's name, shown in the breadcrumb; the `<title>` is `meta.title`. */
   readonly title: string;
   /** The tagline set as the h1 above the photograph. */
   readonly headline: string;
