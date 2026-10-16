@@ -20,8 +20,8 @@ for it. Two lengths matter:
   shown without the site's name rather than cut. A `meta.title` may be shorter
   than the page's heading (the EMDP programmes' are).
 
-A policy page with no text yet (privacy, terms, copyright) asks search engines
-not to list it, and is left out of `/sitemap.xml`, until its text is added.
+A policy page with no text yet asks search engines not to list it, and is
+left out of `/sitemap.xml`, until its text is added.
 The sitemap, `robots.txt`, the share card (`public/brand/share-default.jpg`)
 and the structured data search engines read are all built from the content,
 so there is nothing else to update when a page is added.
@@ -1036,12 +1036,19 @@ GIGW §11.2 conformance is re-audited, this is the list to restore.
 
 **File**
 
-Privacy Policy, Terms & Conditions and Copyright Policy have no text yet, at
-the institute's instruction (2026-10-16): the pages exist so the footer
-links work, and each shows `emptyNote` until its text is supplied. To
-publish one, add `intro`, `updated` (an ISO date) and `sections` (each a
-`heading` with `paragraphs` and/or `points`) to its entry under `pages`, as
-the Help page has.
+Privacy Policy and Terms & Conditions are the institute's, copied word for
+word from xlri.ac.in/privacy-policy and xlri.ac.in/terms-n-conditions on
+2026-10-16 (only a doubled space was removed). They were written for the
+Jamshedpur campus and the institute's app and payment portal, so they name
+abin@xlri.ac.in as the privacy contact and Jamshedpur courts for disputes.
+If Delhi-NCR publishes its own versions, replace them here. The Copyright
+Policy page was removed the same day; the footer's notice reads "Copyright @
+{year}, XLRI. All rights reserved." (`footer.copyright` in site.json).
+
+A page's text is `preamble` (opening paragraphs with no heading), then
+`sections`, each a `heading` with `paragraphs` and/or `points`, or with
+`blocks` (subheadings, paragraphs and lists in order) where it mixes them.
+A page with no `sections` shows `emptyNote`.
 
 The Help page describes what this site actually does (menu, search, text
 size, contrast, keyboard use, documents); it was written for this site.

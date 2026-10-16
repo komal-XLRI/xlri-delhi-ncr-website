@@ -8,6 +8,7 @@ import { wordmark } from '@/config/brand';
 import { POLICY_NAV, UTILITY_NAV } from '@/config/navigation';
 import { site } from '@/config/site';
 import { routes } from '@/constants/routes';
+import { fill } from '@/lib/format/template';
 import { getFooterCopy } from '@/services/site';
 import type { FooterLinkGroup, SocialNetwork } from '@/types/site';
 
@@ -263,7 +264,7 @@ export async function SiteFooter() {
         {/* ================= bottom bar ================= */}
         <div className="flex flex-col gap-4 border-t border-ink-inverse/15 py-7 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
           <p className="text-xs text-ink-inverse/60">
-            © {year} {site.name}. {copy.copyright}{' '}
+            {fill(copy.copyright, { year })}{' '}
             <Link
               href={site.parentOrganization.url}
               siteUrl={site.url}

@@ -113,7 +113,7 @@
         }
       ]
     },
-    "copyright": "All rights reserved."
+    "copyright": "Copyright @ {year}, XLRI. All rights reserved."
   },
   "search": {
     "placeholder": "Search",

@@ -13,7 +13,7 @@ const slug = (text: string) =>
     .replace(/^-|-$/g, '');
 
 /**
- * A website policy — Privacy, Terms & Conditions, Copyright, Help: a compact
+ * A website policy — Privacy, Terms & Conditions, Help: a compact
  * hero, the text in numbered sections with an "On this page" index beside it
  * on large screens, and how to reach the campus at the end.
  *
@@ -96,6 +96,18 @@ export function PolicyPageView({ content }: { content: ResolvedPolicyPage }) {
               </p>
             ) : (
               <div className="rounded-[8px] border border-border bg-surface px-6 py-2 md:px-10 md:py-4">
+                {content.preamble ? (
+                  <div className="border-b border-border py-8">
+                    {content.preamble.map((paragraph) => (
+                      <p
+                        key={paragraph.slice(0, 40)}
+                        className="mt-4 text-[1.0625rem] leading-[1.8] text-ink first:mt-0"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                ) : null}
                 {sections.map((section, index) => (
                   <section
                     key={section.id}
@@ -120,23 +132,26 @@ export function PolicyPageView({ content }: { content: ResolvedPolicyPage }) {
                         {paragraph}
                       </p>
                     ))}
-                    {section.points ? (
-                      <ul className="mt-4 flex flex-col gap-3">
-                        {section.points.map((point) => (
-                          <li
-                            key={point.slice(0, 40)}
-                            className="flex gap-3 text-[1.0625rem] leading-[1.7] text-ink"
-                          >
-                            <CheckIcon
-                              size={18}
-                              aria-hidden="true"
-                              className="mt-1 shrink-0 text-accent-700"
-                            />
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
+                    {section.points ? <PointList points={section.points} /> : null}
+                    {section.blocks?.map((block) =>
+                      block.kind === 'h' ? (
+                        <h3
+                          key={`h-${block.text}`}
+                          className="mt-7 text-[1.125rem] font-semibold text-ink-strong"
+                        >
+                          {block.text}
+                        </h3>
+                      ) : block.kind === 'p' ? (
+                        <p
+                          key={`p-${block.text.slice(0, 40)}`}
+                          className="mt-4 text-[1.0625rem] leading-[1.8] text-ink"
+                        >
+                          {block.text}
+                        </p>
+                      ) : (
+                        <PointList key={`list-${block.items[0] ?? ''}`} points={block.items} />
+                      ),
+                    )}
                   </section>
                 ))}
               </div>
@@ -192,5 +207,18 @@ export function PolicyPageView({ content }: { content: ResolvedPolicyPage }) {
         </div>
       </div>
     </article>
+  );
+}
+
+function PointList({ points }: { points: readonly string[] }) {
+  return (
+    <ul className="mt-4 flex flex-col gap-3">
+      {points.map((point) => (
+        <li key={point.slice(0, 40)} className="flex gap-3 text-[1.0625rem] leading-[1.7] text-ink">
+          <CheckIcon size={18} aria-hidden="true" className="mt-1 shrink-0 text-accent-700" />
+          {point}
+        </li>
+      ))}
+    </ul>
   );
 }

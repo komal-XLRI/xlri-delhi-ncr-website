@@ -1,11 +1,23 @@
 import type { PageMeta } from './page-copy';
 
-/** Website policy pages — Privacy, Terms & Conditions, Copyright, Help — and the Sitemap. */
+/** Website policy pages — Privacy, Terms & Conditions, Help — and the Sitemap. */
 
+/** A run of a section's text, in order: a subheading, a paragraph or a list. */
+export type PolicyBlock =
+  | { readonly kind: 'h'; readonly text: string }
+  | { readonly kind: 'p'; readonly text: string }
+  | { readonly kind: 'list'; readonly items: readonly string[] };
+
+/**
+ * A numbered section. A short one gives `paragraphs`, then `points`; one that
+ * mixes subheadings, paragraphs and lists gives `blocks`, shown in order after
+ * them.
+ */
 export interface PolicySection {
   readonly heading: string;
   readonly paragraphs?: readonly string[];
   readonly points?: readonly string[];
+  readonly blocks?: readonly PolicyBlock[];
 }
 
 /**
@@ -18,6 +30,8 @@ export interface PolicyPage {
   /** ISO date the text last changed. */
   readonly updated?: string;
   readonly intro?: string;
+  /** Paragraphs that open the text, before the first numbered section. */
+  readonly preamble?: readonly string[];
   readonly sections?: readonly PolicySection[];
 }
 
@@ -29,7 +43,7 @@ export interface PolicyContact {
   readonly email: string;
 }
 
-export type PolicyId = 'privacy' | 'terms' | 'copyright' | 'help';
+export type PolicyId = 'privacy' | 'terms' | 'help';
 
 export interface Policies {
   readonly eyebrow: string;

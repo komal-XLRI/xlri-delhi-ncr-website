@@ -125,7 +125,6 @@ describe('footer policy links', () => {
     for (const required of [
       routes.policies.privacy,
       routes.policies.terms,
-      routes.policies.copyright,
       routes.policies.help,
       routes.sitemap,
     ]) {

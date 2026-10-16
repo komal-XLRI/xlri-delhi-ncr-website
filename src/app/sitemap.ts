@@ -42,7 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     getAdjunctFacultyIds(),
     getLatestEvents(),
     getLatestNews(),
-    ...(['privacy', 'terms', 'copyright', 'help'] as const).map(async (id) => ({
+    ...(['privacy', 'terms', 'help'] as const).map(async (id) => ({
       path: routes.policies[id],
       empty: !(await getPolicy(id)).sections?.length,
     })),
