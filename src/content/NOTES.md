@@ -26,6 +26,21 @@ The sitemap, `robots.txt`, the share card (`public/brand/share-default.jpg`)
 and the structured data search engines read are all built from the content,
 so there is nothing else to update when a page is added.
 
+## Files (PDFs and videos)
+
+Every document and video the site links to is served from `public/`:
+documents under `public/documents/<section>/`, videos under `public/media/`,
+with lowercase-kebab names. Link them by their path ("/documents/…"), not
+by a full URL.
+
+Nothing is linked from the WordPress site's `/wp-content/uploads/` any more.
+Those files were downloaded on 16 October 2026. The two PGDM-IEV videos were
+re-encoded to 1080p for the web (the ElevateX recap was 103 MB, over GitHub's
+100 MB limit; it is now 19 MB). Old `/wp-content/uploads/…` addresses forward
+to the copies: the list is `src/config/legacy-uploads.json`, read by
+`next.config.ts`. When a file is replaced, keep its entry there pointing at
+the new one.
+
 ## about.json
 
 **about**

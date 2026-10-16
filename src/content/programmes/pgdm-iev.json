@@ -26,7 +26,7 @@
   },
   "brochure": {
     "label": "Download Brochure",
-    "href": "https://xlridelhi.ac.in/wp-content/uploads/2025/11/Admission-Prospectus-2025_PGDM-IEV.pdf",
+    "href": "/documents/academics/pgdm-iev-admission-prospectus-2025.pdf",
     "meta": "PDF · 20 MB"
   },
   "onThisPage": [
@@ -92,9 +92,9 @@
   ],
   "introVideo": {
     "title": "IEV Intro",
-    "src": "https://xlridelhi.ac.in/wp-content/uploads/2026/03/IEV-Intro_1.mp4",
+    "src": "/media/academics/pgdm-iev/iev-intro.mp4",
     "poster": "/media/academics/pgdm-iev/xceed-cohort.jpg",
-    "size": "45 MB"
+    "size": "7 MB"
   },
   "whyApply": {
     "heading": "Why Should You Apply To The Program?",
@@ -452,9 +452,9 @@
     ],
     "recap": {
       "title": "ElevateX Recap",
-      "src": "https://xlridelhi.ac.in/wp-content/uploads/2026/03/ElevateX-Recap-Video.mp4",
+      "src": "/media/academics/pgdm-iev/events/elevatex-recap.mp4",
       "poster": "/media/academics/pgdm-iev/events/elevatex.jpg",
-      "size": "103 MB"
+      "size": "19 MB"
     }
   },
   "activities": {

@@ -1,0 +1,80 @@
+{
+  "redirects": [
+    {
+      "source": "/wp-content/uploads/2026/08/Handbook-on-Sexual-Harassment-of-Women-at-Workplace-Eng.pdf",
+      "destination": "/documents/campus-life/internal-complaints-committee/handbook-on-sexual-harassment-of-women-at-workplace.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2024/08/XLRI-Anti-Sexual-Harassment-Policy-Delhi-NCR-2.pdf",
+      "destination": "/documents/campus-life/internal-complaints-committee/xlri-anti-sexual-harassment-policy-delhi-ncr.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2024/08/POSH-Act-2013.pdf",
+      "destination": "/documents/campus-life/internal-complaints-committee/posh-act-2013.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2024/08/POSH-Rules-2013.pdf",
+      "destination": "/documents/campus-life/internal-complaints-committee/posh-rules-2013.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2024/08/AICTE-Regulation-2016.pdf",
+      "destination": "/documents/campus-life/internal-complaints-committee/aicte-regulation-2016.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2025/06/XLRI-IT-Policy.pdf",
+      "destination": "/documents/campus-life/it-infrastructure/xlri-it-policy.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2025/06/XLRI-Delhi-NCR-CCTV-Policy.pdf",
+      "destination": "/documents/campus-life/it-infrastructure/xlri-delhi-ncr-cctv-policy.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2024/09/Grievance-Redressal-Policy-XLRI-Delhi-NCR.pdf",
+      "destination": "/documents/policies/grievance-redressal-policy-xlri-delhi-ncr.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2025/11/Admission-Prospectus-2025_PGDM-IEV.pdf",
+      "destination": "/documents/academics/pgdm-iev-admission-prospectus-2025.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2026/08/XLRI-Executive-Development-Program-in-Digital-HR-Leadership-People-Analytics-Batch-8.pdf",
+      "destination": "/documents/executive-education/emdp/digital-hr-people-analytics-batch-8.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2026/04/XLRI-Delhi-NCR-Executive-Development-Program-in-Strategy-Leadership-Batch-4.pdf",
+      "destination": "/documents/executive-education/emdp/strategy-leadership-batch-4.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2026/04/XLRI-Executive-Development-Program-in-Strategic-HR-Leadership-Batch-7.pdf",
+      "destination": "/documents/executive-education/emdp/strategic-hr-leadership-batch-7.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2026/01/XLRI-DHRL-Batch-7-1.pdf",
+      "destination": "/documents/executive-education/emdp/digital-hr-people-analytics-batch-7.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2025/07/XLRI-Strategy-Leadership.pdf",
+      "destination": "/documents/executive-education/emdp/strategy-leadership-batch-3.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2025/07/XLRI-Strategic-HR-Leadership.pdf",
+      "destination": "/documents/executive-education/emdp/strategic-hr-leadership-batch-6.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2025/06/XLRI-DT-2025-June-1.pdf",
+      "destination": "/documents/executive-education/emdp/digital-transformation-healthcare-batch-1.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2025/05/DHRL-1-1.pdf",
+      "destination": "/documents/executive-education/emdp/digital-hr-people-analytics-batch-6.pdf"
+    },
+    {
+      "source": "/wp-content/uploads/2026/03/IEV-Intro_1.mp4",
+      "destination": "/media/academics/pgdm-iev/iev-intro.mp4"
+    },
+    {
+      "source": "/wp-content/uploads/2026/03/ElevateX-Recap-Video.mp4",
+      "destination": "/media/academics/pgdm-iev/events/elevatex-recap.mp4"
+    }
+  ]
+}
